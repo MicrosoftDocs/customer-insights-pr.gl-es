@@ -1,0 +1,226 @@
+- name: Dynamics 365 Customer Insights
+  href: index.yml
+- name: Visión xeral do produto
+  href: overview.md
+- name: Acceder ao seu ambiente
+  href: 'https://home.ci.ai.dynamics.com/'
+- name: Información do público
+  items:
+    - name: Plataforma común de axuda
+      href: audience-insights/index.yml
+    - name: Visión xeral da capacidade
+      href: audience-insights/overview.md
+    - name: Proba gratuíta
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
+    - name: Funcionalidades novas e actualizadas
+      href: audience-insights/whats-new-audience-insights.md
+    - name: Introdución
+      items:
+        - name: Crear un novo ambiente
+          href: audience-insights/home.md
+        - name: Inxerir datos
+          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+        - name: Crear un perfil de cliente unificado
+          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+        - name: Traballar coa aplicación
+          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+        - name: Enriquecer datos e predicións
+          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+    - name: Orixes de datos
+      items:
+        - name: Visión xeral de orixes de datos
+          href: audience-insights/data-sources.md
+        - name: Engadir orixes de datos a través de conectores de Power Query.
+          href: audience-insights/connect-power-query.md
+        - name: Engadir un cartafol de Common Data Model como orixe de datos
+          href: audience-insights/connect-common-data-model.md
+        - name: Engadir lago de datos xestionado de Common Data Service
+          href: audience-insights/connect-common-data-service-lake.md
+        - name: Actualización incremental para orixes de datos
+          href: audience-insights/incremental-refresh-data-sources.md
+        - name: Inxestión de datos en tempo real
+          href: audience-insights/real-time-data-ingestion.md
+        - name: Comprender as entidades e os conxuntos de datos
+          href: audience-insights/entities.md
+    - name: Unificación de datos
+      items:
+        - name: Visión xeral da unificación
+          href: audience-insights/data-unification.md
+        - name: Entidades e atributos do mapa
+          href: audience-insights/map-entities.md
+        - name: Buscar coincidencias das entidades
+          href: audience-insights/match-entities.md
+        - name: Combinar entidades
+          href: audience-insights/merge-entities.md
+        - name: Revisar os perfís de cliente unificado
+          href: audience-insights/customer-profiles.md
+        - name: Filtrar os perfís de cliente unificado
+          href: audience-insights/search-filter-index.md
+        - name: Construír relacións e entidades conectadas
+          href: audience-insights/relationships.md
+        - name: Enumerar actividades do cliente
+          href: audience-insights/activities.md
+    - name: Enriquecemento de información
+      items:
+        - name: Enriquecer perfís de clientes
+          href: audience-insights/enrichment-hub.md
+        - name: Afinidades de marca e interese
+          href: audience-insights/enrichment-microsoft-graph.md
+        - name: Enriquecer con HERE Technologies
+          href: audience-insights/enrichment-here.md
+        - name: Enriquecer con Leadspace
+          href: audience-insights/enrichment-leadspace.md
+        - name: Enriquecer con Experian
+          href: audience-insights/enrichment-experian.md
+        - name: Enriquecer con importación personalizada de SFTP
+          href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Segmentos e medidas
+      items:
+        - name: Crear segmentos e grupos de clientes
+          href: audience-insights/segments.md
+        - name: Obter información sobre segmentos
+          href: audience-insights/segment-insights.md
+        - name: Buscar clientes semellantes
+          href: audience-insights/find-similar-customer-segments.md
+        - name: Definir medidas e KPI
+          href: audience-insights/measures.md
+    - name: Predicións
+      items:
+        - name: Completar datos empregando predicións de valor
+          href: audience-insights/predictions.md
+        - name: Prever a renovación de subscricións
+          href: audience-insights/predict-subscription-churn.md
+        - name: Guía de mostra da predición do abandono da subscrición
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: Predicir o abandono transaccional
+          href: audience-insights/predict-transactional-churn.md
+        - name: Guía de mostra da predición do abandono transaccional
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Implementar modelos personalizados de aprendizaxe automático
+          href: audience-insights/custom-models.md
+        - name: Experimentos con Aprendizaxe automática de Azure
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Experimentos de Azure Machine Learning Studio
+          href: audience-insights/machine-learning-studio-experiments.md
+    - name: Exportar opcións
+      items:
+        - name: Descubrir destinos de exportación
+          href: audience-insights/export-destinations.md
+        - name: Almacenamento de BLOB de Azure
+          href: audience-insights/export-azure-blob-storage.md
+        - name: DotDigital
+          href: audience-insights/export-dotdigital.md
+        - name: Dynamics 365 Customer Service (complemento)
+          href: audience-insights/customer-card-add-in.md
+        - name: Dynamics 365 Marketing
+          href: audience-insights/export-dynamics365-marketing.md
+        - name: "Dynamics\_365 Sales"
+          href: audience-insights/export-dynamics365-sales.md
+        - name: Plataforma común de Dynamics 365 Sales (complemento)
+          href: audience-insights/customer-card-add-in.md
+        - name: Xestor de anuncios de Facebook
+          href: audience-insights/export-facebook.md
+        - name: Google Ads
+          href: audience-insights/export-google-ads.md
+        - name: LiveRamp
+          href: audience-insights/export-liveramp.md
+        - name: Mailchimp
+          href: audience-insights/export-mailchimp.md
+        - name: Microsoft Teams (bot)
+          href: audience-insights/export-teams-bot.md
+        - name: Marketo
+          href: audience-insights/export-marketo.md
+        - name: Power BI
+          href: audience-insights/export-power-bi.md
+        - name: Power Apps
+          href: audience-insights/export-power-apps.md
+        - name: Power Automate
+          href: audience-insights/export-power-automate.md
+        - name: SFTP
+          href: audience-insights/export-sftp.md
+    - name: Administración
+      items:
+        - name: Configurar a configuración do sistema
+          href: audience-insights/system.md
+        - name: Atribuír permisos de usuario
+          href: audience-insights/permissions.md
+        - name: Xestionar varios ambientes
+          href: audience-insights/manage-environments.md
+        - name: Conectar cunha conta de almacenamento de ADLS mediante unha entidade de seguranza do servizo
+          href: audience-insights/connect-service-principal.md
+        - name: Idiomas compatibles
+          href: audience-insights/supported-languages.md
+    - name: Extensibilidade
+      items:
+        - name: Revisar esquemas de entidades no Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Traballar con API
+          href: audience-insights/apis.md
+        - name: Referencias das API
+          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Límites de servizo
+      href: audience-insights/service-limits.md
+    - name: Solicitudes de DSR conforme a RXPD
+      href: audience-insights/gdpr.md
+- name: Información de interacción (previsualización)
+  items:
+    - name: Plataforma común de axuda
+      href: engagement-insights/index.yml
+    - name: Visión xeral da capacidade
+      href: engagement-insights/overview.md
+    - name: Proba gratuíta
+      href: 'https://pi.dynamics.com/'
+    - name: Inicio rápido
+      items:
+        - name: Inicio rápido para a vista previa pública
+          href: engagement-insights/quickstart.md
+    - name: Introdución
+      items:
+        - name: Introdución
+          href: engagement-insights/get-started.md
+        - name: Crear unha área de traballo
+          href: engagement-insights/create-workspace.md
+        - name: Equipar o seu sitio web
+          href: engagement-insights/instrument-website.md
+        - name: Conceptos e terminoloxía
+          href: engagement-insights/glossary.md
+    - name: Eventos
+      items:
+        - name: Crear e modificar eventos
+          href: engagement-insights/refined-events.md
+        - name: Exportar eventos
+          href: engagement-insights/export-events.md
+    - name: Informes
+      items:
+        - name: Visualizar informes
+          href: engagement-insights/view-reports.md
+        - name: Crear informes personalizados
+          href: engagement-insights/custom-reports.md
+        - name: Crear informes de perfís unificados
+          href: engagement-insights/profile-reports.md
+    - name: Recursos para programadores
+      items:
+        - name: Visión xeral de recursos para programadores
+          href: engagement-insights/developer-resources.md
+        - name: Titorial de SDK web
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Exemplo de SDK web
+          href: engagement-insights/websdk-sample.md
+    - name: Administración
+      items:
+        - name: Roles e permisos
+          href: engagement-insights/user-roles.md
+        - name: Xestionar ambientes e espazos de traballo
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: Configurar conexións
+          href: engagement-insights/configure-connections.md
+        - name: Xestionar as cookies e o consentimento do usuario
+          href: engagement-insights/user-consent-storage.md
+    - name: RXPD
+      items:
+        - name: Eliminar e exportar datos persoais
+          href: engagement-insights/delete-export-personal-data.md
+    - name: Límites de servizo
+      href: engagement-insights/quotas.md
+- name: Póñase en contacto coa asistencia técnica
+  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
