@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653978"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269834"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guía de mostra (previsualización) da predición do abandono da subscrición
 
@@ -46,10 +46,9 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
    - **DateOfBirth**: data
    - **CreatedOn**: data/hora/fuso
 
-   [!div class="mx-imgBorder"]
-   ![Transformar DoB en data](media/ecommerce-dob-date.PNG "transformar data de nacemento en data")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transforme a data de nacemento en data.":::
 
-1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
+1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
 
 1. Garde a orixe de datos.
 
@@ -67,7 +66,7 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
    - **RewardsPoints**: número enteiro
    - **CreatedOn**: data/hora
 
-1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **loyCustomers**.
+1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **loyCustomers**.
 
 1. Garde a orixe de datos.
 
@@ -90,7 +89,7 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
    - **Is_auto_renew**: verdadeiro/falso
    - **RecurringFrequencyInMonths**: número enteiro
 
-1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **SubscriptionHistory**.
+1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **SubscriptionHistory**.
 
 1. Garde a orixe de datos.
 
@@ -230,3 +229,6 @@ Pode crear un novo segmento baseado na entidade creada polo modelo.
 Agora ten un segmento que se actualiza dinámicamente para identificar clientes con alto risco de abandono para este negocio da subscrición.
 
 Para ver máis información, consulte: [Creación e xestión de segmentos](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

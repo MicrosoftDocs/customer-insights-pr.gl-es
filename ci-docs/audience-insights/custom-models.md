@@ -1,21 +1,21 @@
 ---
-title: Modelos de aprendizaxe automático personalizados | Microsoft Docs
+title: Modelos de aprendizaxe automática personalizados | Microsoft Docs
 description: Traballe con modelos personalizados de Azure Machine Learning en Dynamics 365 Customer Insights.
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668901"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267232"
 ---
-# <a name="custom-machine-learning-models"></a>Modelos de aprendizaxe automático personalizados
+# <a name="custom-machine-learning-models"></a>Modelos de aprendizaxe automática personalizados
 
 **Intelixencia** > **Modelos personalizados** permítelle xestionar fluxos de traballo baseados en modelos de Azure Machine Learning. Os fluxos de traballo axúdanlle a escoller os datos dos que queres xerar información e asignar os resultados aos datos dos seus clientes unificados. Para obter máis información sobre a creación de modelos de aprendizaxe automática personalizados, consulte [Usar modelos baseados en Azure Machine Learning](azure-machine-learning-experiments.md).
 
@@ -46,15 +46,15 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 
 1. Escolla o servizo web de Machine Learning Studio (clásico) ou a canle de Azure Machine Learning no menú despregable **Servizo web que contén o seu modelo**. despois, seleccione **Seguinte**.
    - Máis información sobre a [publicación dun servizo web en Machine Learning Studio (clásico)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Máis información sobre a [Publicación dunha canle en Azure Machine Learning usando o deseñador](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > A canle debe publicarse nun [extremo de canle](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Máis información sobre a [Publicación dunha canle en Azure Machine Learning usando o deseñador](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). A canle debe publicarse nun [extremo de canle](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Para cada **Entrada do servizo web**, seleccione a **Entidade** coincidente da información sobre o público e seleccione **Seguinte**.
+   > [!NOTE]
+   > O fluxo de traballo do modelo personalizado aplicará a heurística para asignar os campos de entrada do servizo web aos atributos da entidade en función do nome e do tipo de datos do campo. Verá un erro se un campo de servizo web non se pode asignar a unha entidade.
 
    > [!div class="mx-imgBorder"]
    > ![Configurar un fluxo de traballo](media/intelligence-screen2-updated.png "Configurar un fluxo de traballo")
-
+   
 1. No paso **Parámetros de saída do modelo**, configure as seguintes propiedades:
    - Machine Learning Studio (clásico)
       1. Introduza o **Nome da entidade** de saída á quere que flúan os resultados de saída do servizo web.
@@ -112,3 +112,6 @@ O seu fluxo de traballo tamén se executa automaticamente con todas as actualiza
 1. Seleccione **Eliminar** e confirme a eliminación.
 
 Eliminarase o seu fluxo de traballo. A [entidade](entities.md) que se creou cando creou o fluxo de traballo continuará e poderá verse desde a páxina **Entidades**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

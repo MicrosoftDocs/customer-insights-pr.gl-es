@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689173"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270278"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Inxestión de datos en tempo real (vista previa)
 
@@ -83,6 +83,7 @@ Os detalles desta API, incluídos parámetros e respostas, pódense atopar na se
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprender o seu uso en tempo real coa telemetría
 
-Obteña unha visión xeral do volume de solicitudes á API en tempo real e información sobre problemas que pode atopar o sistema. Pode [acceder á telemetría en tempo real](system.md#api-usage-tab) indo a **Administrador** > **Sistema** > **Uso da API**. Na táboa **Operacións**, as filas das operacións da API que usan os métodos en tempo real conteñen un botón para ver o uso da API en tempo real. O botón visualízase cun símbolo de binocular. Seleccione o botón para abrir un panel lateral que conteña detalles de uso para o uso da API en tempo real no contorno actual.
+Obteña unha visión xeral do volume de solicitudes á API en tempo real e información sobre problemas que pode atopar o sistema. Pode [acceder á telemetría en tempo real](system.md#api-usage-tab). 
 
-Use o selector **Agrupar por** para escoller como presentar mellor as súas interaccións en tempo real nunha liña de tempo que vai desde as últimas 24 horas ata os últimos 30 días. Pode agrupar os datos por método de API, nome cualificado de entidade (entidade inxerida), autor (orixe do evento), resultado (éxito ou fracaso) ou códigos de erro. Os datos están dispoñibles como gráfico de historial e como táboa.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

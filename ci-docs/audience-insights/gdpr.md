@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405724"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268684"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitudes de dereitos do titular dos datos (DSR) baixo RXPD
 
@@ -75,3 +75,6 @@ Un administrador de arrendatarios pode seguir estes pasos para exportar datos:
 1. Envíe un correo electrónico a D365CI@microsoft.com especificando o enderezo de correo electrónico do usuario na solicitude. O equipo de Customer Insights enviará un correo electrónico ao enderezo de correo electrónico do administrador do arrendatario rexistrado e pedirá confirmación para exportar datos.
 2. Recoñeza a confirmación para exportar os datos do usuario solicitado.
 3. Reciba os datos exportados a través do enderezo de correo electrónico do administrador do arrendatario.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

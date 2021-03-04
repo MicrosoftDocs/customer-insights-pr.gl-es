@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643951"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269696"
 ---
-# <a name="overview-about-data-sources"></a>Visión xeral sobre as orixes de datos
+# <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -47,9 +47,9 @@ Verá o nome de cada orixe de datos inxerida, o seu estado e a última vez que s
 |Correcto   |A orixe de datos inxeriuse con éxito se se menciona unha hora na columna **Actualizado**.
 |Sen iniciar   |O orixe de datos aínda non ten datos inxeridos ou aínda está en modo borrador.         |
 |Actualizando    |Inxestión de datos en curso. Pode cancelar esta operación seleccionando **Deixar de actualizar** na columna **Accións**. Deter a actualización dunha orixe de datos provocará que se restableza o seu estado da última actualización.       |
-|Produciuse un erro     |A inxestión de datos tivo erros.         |
+|Ero     |A inxestión de datos tivo erros.         |
 
-Seleccione **Actualizar o estado** para revisar máis detalles sobre o estado de actualización, incluídos os detalles de erros e as actualizacións de procesos posteriores.
+Seleccione o valor na columna **Estado** de calquera orixe de datos para revisar máis detalles. No panel **Detalles do progreso**, expanda as **Fontes de datos**. Seleccione **Ver detalles** para ver máis información sobre o estado de actualización, incluídos os detalles de erros e as actualizacións de procesos posteriores.
 
 A carga de datos pode levar un tempo. Despois dunha actualización con éxito, os datos inxeridos poden revisarse desde a páxina **Entidades**. Para obter máis información, consulte [Entidades](entities.md).
 
@@ -76,3 +76,6 @@ Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
 2. Seleccione os tres puntos verticais xunto á orixe de datos que desexa eliminar e seleccione **Eliminar** no menú despregable.
 
 3. Confirme a eliminación.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

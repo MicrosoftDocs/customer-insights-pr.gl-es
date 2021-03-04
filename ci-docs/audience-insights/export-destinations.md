@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643861"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477131"
 ---
-# <a name="export-destinations-preview"></a>Destinos de exportación (previsualización)
+# <a name="export-destinations-preview-overview"></a>Visión xeral dos destinos de exportación (versión preliminar)
 
 A páxina **Exportar destinos** móstralle todas as situacións que configurou ás que exportar datos. Tamén pode engadir novos destinos para a exportación. Ademais, mostra as opcións de exportación dispoñibles actualmente. Obteña unha visión xeral rápida e descrición e descubra o que pode facer con cada opción de extensibilidade. Exporte perfís, medidas e segmentos unificados a aplicacións compatibles relevantes para a súa empresa.
 
@@ -27,10 +27,13 @@ Vaia a **Administrador** > **Exportar destinos** para atopar as seguintes opció
 - [Conector de Power Automate](export-power-automate.md)
 - [Conector de Power Apps](export-power-apps.md)
 - [Conector de Power BI](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Almacenamento de BLOB de Azure](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Conector de LiveRamp&reg;](export-liveramp.md)
 - [Bot para Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Para eliminar un destino de exportación, comece pola páxina **Destinos de expo
 2. Seleccione **Eliminar** do menú despregable.
 
 3. Confirme a eliminación seleccionando **Eliminar** na pantalla de confirmación.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

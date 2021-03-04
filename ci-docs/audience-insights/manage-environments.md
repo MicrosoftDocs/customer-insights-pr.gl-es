@@ -1,20 +1,20 @@
 ---
 title: Crear e xestionar ambientes
 description: Aprenda a rexistrarse no servizo e a xestionar contornos.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644131"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270110"
 ---
 # <a name="manage-environments"></a>Xestionar ambientes
 
@@ -46,9 +46,9 @@ Existen dúas formas de crear un ambiente novo. Pode especificar unha configurac
 
 Para crear un ambiente:
 
-1. Seleccione o símbolo **Configuración** na cabeceira da aplicación.
+1. Seleccione o selector de **ambiente** na cabeceira da aplicación.
 
-1. Seleccione **Novo ambiente**.
+1. Seleccione **Nova**.
 
    > [!div class="mx-imgBorder"]
    > ![Configuración de ambientes](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Para crear un ambiente:
 
    - Para a opción de Azure Data Lake Storage Gen2, pode escoller entre unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). O nome do **contedor** non se pode cambiar e será "customerinsights".
    
-   - Se quere usar [predicións](predictions.md), introduza o URL da instancia de Common Data Service no campo **Enderezo do servidor** en **Usa predicións**.
+   - Se quere usar [predicións](predictions.md) ou configurar o intercambio de datos con aplicacións e solucións baseadas en Microsoft Dataverse, forneza o URL do ambiente de Microsoft Dataverse en **Configurar o uso compartido de datos con Microsoft Dataverse e habilitar capacidades adicionais**. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun Data Lake xestionado de Microsoft Dataverse.
+
+     > [!NOTE]
+     > - Compartir datos cun Data Lake xestionado Microsoft Dataverse actualmente non é compatible cando garda todos os datos no seu propio Azure Data Lake Storage.
+     > - A [predición de valores que faltan nunha entidade](predictions.md) non se admite actualmente cando habilita o uso compartido de datos cun Data Lake xestionado de Microsoft Dataverse.
+
+     > [!div class="mx-imgBorder"]
+     > ![Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Cando execute procesos, como a inxestión de datos ou a creación de segmentos, crearanse os cartafoles correspondentes na conta de almacenamento que especificou anteriormente. Os ficheiros de datos e os ficheiros model.json crearanse e engadiranse aos respectivos subcartafoles en función do proceso que execute.
 
@@ -86,7 +93,7 @@ Para crear un ambiente:
 Copiaranse os seguintes axustes de configuración:
 
 - Configuracións de funcións
-- Orixes de datos importadas/incorporadas
+- Fontes de datos inxeridas ou importadas
 - Configuración da unificación de datos (mapa, coincidencia, combinación)
 - Segmentos
 - Medidas
@@ -120,11 +127,11 @@ Cando a unificación de datos estea completa, diríxase a **Medidas** e **Segmen
 
 Pode editar algúns detalles dos contornos existentes.
 
-1. Vaia a **Administración** > **Sistema** > **Acerca de**.
+1.  Seleccione o selector de **ambiente** na cabeceira da aplicación.
 
-2. Seleccione **Editar**.
+2.  Seleccione a icona de **edición**.
 
-3. Pode actualizar o **Nome para mostrar** do ambiente, pero non pode cambiar a **Rexión** ou o **Tipo**.
+3. Na caixa **Editar contorno**, pode actualizar o **Nome de visualización** do contorno, pero non pode cambiar a **Rexión** nin o **Tipo**.
 
 4. Se un ambiente está configurado para almacenar datos en Azure Data Lake Storage Gen2, pode actualizar a **Clave da conta**. Non obstante, non podes cambiar o **Nome da conta** nin o nome do **Contedor**.
 
@@ -132,19 +139,27 @@ Pode editar algúns detalles dos contornos existentes.
 
 ## <a name="reset-an-existing-environment"></a>Restablecer ambiente existente
 
-Pode restablecer un ambiente a un estado baleiro se quere eliminar todas as configuracións e eliminar os datos inxeridos.
+Como administrador, pode restablecer un ambiente a un estado baleiro se quere eliminar todas as configuracións e eliminar os datos inxeridos.
 
-1.  Vaia a **Administración** > **Sistema** > **Acerca de**.
+1.  Seleccione o selector de **ambiente** na cabeceira da aplicación. 
 
-2.  Seleccione **Restablecer**. 
+2.  Seleccione o ambiente que desexa restablecer e seleccione os puntos suspensivos **...**. 
 
-3.  Para confirmar a eliminación, introduza o nome do contorno e seleccione **Restablecer**.
+3. Escolla a opción **Restablecer**. 
+
+4.  Para confirmar a eliminación, introduza o nome do contorno e seleccione **Restablecer**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Eliminar un ambiente existente (dispoñible só para administradores)
+
+Como administrador, pode eliminar un ambiente que administra.
+
+1.  Seleccione o selector de **ambiente** na cabeceira da aplicación.
+
+2.  Seleccione o ambiente que desexa restablecer e seleccione os puntos suspensivos **...**. 
+
+3. Escolla a opción **Eliminar**. 
+
+4.  Para confirmar a eliminación, insira o nome do ambiente e seleccione **Eliminar**.
 
 
-## <a name="delete-an-existing-environment"></a>Eliminar un ambiente existente
-
-1. Vaia a **Administración** > **Sistema** > **Acerca de**.
-
-1. Seleccione **Eliminar**.
-
-1. Para confirmar a eliminación, insira o nome do ambiente e seleccione **Eliminar**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

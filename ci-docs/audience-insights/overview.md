@@ -1,30 +1,26 @@
 ---
-title: Capacidade de información do público
-description: Visión xeral da dapacidade de información do público de Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Visión xeral da información do público para Dynamics 365 Customer Insights
+description: Visión xeral da información do público para Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405727"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476993"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Capacidade de información do público de Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Visión xeral da información do público para Dynamics 365 Customer Insights
 
-A experiencia do cliente está no núcleo das ambicións de transformación dixital de cada organización. Para competir no mercado actual, as organizacións necesitan establecer relacións significativas cos seus clientes a nivel persoal. A capacidade de personalizar eficazmente a escala require unha visión completa e unificada dos clientes.
+A información do público axúdalle a comprender máis profundamente os seus clientes. Conecte datos de varias fontes transaccionais, de comportamento e de observación para crear unha vista dos clientes integral. Use estes datos para dirixir experiencias e procesos centrados nos clientes. Unifique e comprenda os datos dos clientes e aproveiteos para obter información e accións intelixentes.
 
-A información do público axúdalle a comprender máis profundamente os seus clientes. Conecte datos de varias fontes transaccionais, de comportamento e de observación para crear unha vista dos clientes integral. Use estes datos para dirixir experiencias e procesos centrados nos clientes.
-
-**Unifique e comprenda os datos dos clientes e aproveiteos para obter información e accións intelixentes.**
-
-Coa información do público, as organizacións poden:  
+## <a name="main-benefits"></a>Principais beneficios 
 
 - **Eliminar os silos de datos e unificar os datos dos clientes**
 
@@ -33,15 +29,15 @@ Coa información do público, as organizacións poden:
 
 - **Enriquecer con intelixencia da audiencia contida en Microsoft Graph**
 
-  - Constrúe perfís de clientes máis ricos incorporando intelixencia sobre a audiencia contida en Microsoft Graph.  
+  - Constrúa perfís de clientes máis ricos [incorporando intelixencia sobre a audiencia contida en Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Potencie os seus procesos de negocio e experiencias de cliente personalizadas**
 
   - Promova o compromiso personalizado nas canles (impulse os profesionais de márketing, vendas e servizos con información sobre clientes contextual e lista para usar e tarxetas de perfil de clientes adaptadas nas aplicacións empresariais que xa utilizan todos os días).
   - Automatice experiencias e procesos centrados nos clientes baseados en perfís, medidas de negocio e segmentos personalizables.
-  - Activar e ampliar as experiencias da liña de negocio integradas en Microsoft Power Platform. Cree rápidamente aplicacións con información incrustada usando un poderoso enfoque de pouco código de PowerApps.  
+  - Activar e ampliar as experiencias da liña de negocio integradas en [Microsoft Power Platform](https://powerplatform.microsoft.com/). Cree rápidamente aplicacións con información incrustada usando un poderoso enfoque de pouco código de PowerApps.  
 
-A información do público inclúe funcións para os seguintes usuarios clave:
+## <a name="key-audiences"></a>Públicos clave
 
 - **Analistas/administradores de datos:**
 
@@ -58,5 +54,8 @@ A información do público inclúe funcións para os seguintes usuarios clave:
 
 - **Analistas empresariais:**
 
-  - Cree perfís personalizables, defina medidas e crea segmentos para obter unha visión de 360 graos do seu cliente, específica da súa organización.  
-  - Utilice conectores listos para usar para PowerApps ou Microsoft Power BI ou as API para aflorar información nas súas aplicacións empresariais ou solucións de BI.  
+  - Cree perfís personalizables, defina medidas e crea segmentos e aproveite a análise preditiva para obter unha visión de 360 graos do seu cliente, específica da súa organización.  
+  - Use conectores listos para usar para varias aplicacións ou API de Microsoft e de terceiros para procesar aínda máis a información.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

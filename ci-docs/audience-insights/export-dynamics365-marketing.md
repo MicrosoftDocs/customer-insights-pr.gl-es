@@ -1,20 +1,20 @@
 ---
 title: Exportar datos de Customer Insights a Dynamics 365 Marketing
 description: Aprenda a configurar a conexión con Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643771"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269052"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Conector para Dynamics 365 Marketing (previsualización)
 
@@ -24,7 +24,10 @@ Use os [segmentos](segments.md) para xerar campañas e contactar con grupos espe
 
 ## <a name="prerequisite"></a>Requisito previo
 
-Rexistros de contactos [de Dynamics 365 Marketing inxeridos en Common Data Service](connect-power-query.md).
+- Os rexistros de contacto deben estar presentes en Dynamics 365 Marketing antes de poder exportar un segmento de Customer Insights a Marketing. Lea máis sobre como inxerir contactos en [Dynamics 365 Marketing usando Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > A exportación de segmentos de información de audiencia a Marketing non creará novos rexistros de contacto nas instancias de Marketing. Os rexistros de contacto de Marketing deben ser inxeridos na información do público e utilizados como orixe de datos. Tamén deben incluírse na entidade de cliente unificada para asignar os ID de clientes a ID de contacto antes de que os segmentos poidan ser exportados.
 
 ## <a name="configure-the-connector-for-marketing"></a>Configurar o conector para márketing
 
@@ -49,3 +52,6 @@ Rexistros de contactos [de Dynamics 365 Marketing inxeridos en Common Data Serv
 ## <a name="export-the-data"></a>Exportar os datos
 
 Pode [exportar datos baixo demanda](export-destinations.md). A exportación tamén se executará con todas as [actualizacións programadas](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

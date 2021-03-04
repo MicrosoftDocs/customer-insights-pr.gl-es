@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405717"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267767"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conéctarse a unha orixe de datos Power Query
 
@@ -28,7 +28,10 @@ Power Query ofrece un amplo conxunto de conectores para inxerir datos. A maiorí
 
 1. Escolla o método de **Importar datos** e seleccione **Seguinte**.
 
-1. Escriba un **Nome** para a orixe de datos e seleccione **Seguinte** para crear o orixe de datos.
+1. Escriba un **Nome** para a orixe de datos e seleccione **Seguinte** para crear o orixe de datos. Dea nome ás instrucións: 
+   - Comece por unha letra.
+   - Use só letras e números. Non se permiten caracteres especiais nin espazos.
+   - Empregue entre 3 e 64 caracteres.
 
 1. Escolla un dos [conectores dispoñibles](#available-power-query-data-sources). Para este exemplo, seleccionamos o conector **Texto / CSV**.
 
@@ -77,3 +80,6 @@ Os conectores cunha marca de verificación na columna **Customer Insights (fluxo
 3. Aplique os seus cambios e transformacións no diálogo **Power Query - Editar consultas** como se describe na sección [Crea unha nova orixe de datos](#create-a-new-data-source).
 
 4. Seleccione **Gardar** en Power Query despois de completar as edicións para gardar os cambios.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

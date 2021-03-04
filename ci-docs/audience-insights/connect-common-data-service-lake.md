@@ -4,17 +4,17 @@ description: Importar datos dun lago de datos xestionado de Common Data Service.
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643396"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267812"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Conectar cos datos dun lago de datos xestionado de Common Data Service
 
@@ -34,7 +34,10 @@ Os datos almacenados nos servizos en liña como Azure Data Lake Storage poden al
 
 3. Seleccione **Conectar a Common Data Service** e seleccione **Seguinte**.
 
-4. Escriba un **Nome** para a orixe de datos e seleccione **Seguinte**.
+4. Escriba un **Nome** para a orixe de datos e seleccione **Seguinte**. Dea nome ás instrucións: 
+   - Comece por unha letra.
+   - Use só letras e números. Non se permiten caracteres especiais nin espazos.
+   - Empregue entre 3 e 64 caracteres.
 
 5. Proporcione o **Enderezo do servidor** da súa organización de Common Data Service e seleccione **Iniciar sesión**.
 
@@ -65,3 +68,6 @@ Para conectar cun Common Data Service diferente, [cree unha orixe de datos nova]
 3. Seleccione a opción **Editar** da lista.
 
 4. Seleccione entidades adicionais da lista de entidades dispoñibles e seleccione **Gardar**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

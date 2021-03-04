@@ -1,20 +1,20 @@
 ---
 title: Conectar cunha conta de Azure Data Lake Storage Gen2 cunha entidade de seguranza do servizo
 description: Use unha entidade de seguranza do servizo de Azure para obter información sobre a audiencia para conectarse ao seu propio lago de datos ao anexalo á información sobre a audiencia.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644086"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267720"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectarse a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure para obter información sobre o público
 
@@ -22,7 +22,9 @@ As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter per
 
 Pode usar a entidade de seguranza do servizo para, de forma segura, [engadir ou editar un cartafol de Common Data Model como orixe de datos](connect-common-data-model.md) ou [crear un novo ambiente ou actualizar un existente](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Precisa permisos de administrador para a súa subscrición a Azure para crear a entidade de seguranza do servizo.
+> [!IMPORTANT]
+> - A conta de almacenamento de Azure Data Lake Gen2 que pretenda utilizar a entidade de seguranza do servizo debe ter o [Espazo de nomes xerárquicos (HNS) activado](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Precisa permisos de administrador para a súa subscrición a Azure para crear a entidade de seguranza do servizo.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Crear a entidade de seguranza do servizo de Azure para obter información sobre o público
 
@@ -83,7 +85,7 @@ Anexe unha conta de almacenamento de Azure Data Lake na información sobre a aud
 
 Siga os pasos seguintes para proporcionar a información requirida sobre o enfoque seleccionado.
 
-### <a name="resounce-based-storage-account-connection"></a>Conexión de conta de almacenamento baseada en recursos
+### <a name="resource-based-storage-account-connection"></a>Conexión de conta de almacenamento baseada en recursos
 
 1. Vaia ao [Portal de administración de Azure](https://portal.azure.com), inicie sesión na súa subscrición e abra a conta de almacenamento.
 
@@ -108,7 +110,8 @@ Siga os pasos seguintes para proporcionar a información requirida sobre o enfoq
 1. Revise a **Subscrición**, o **Grupo de recursos** e o **Nome** da conta de almacenamento para asegurarse de que selecciona os valores correctos nas estatísticas do público.
 
 1. En estatísticas de audiencia, escolla os valores ou os campos correspondentes ao anexar a conta de almacenamento.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Insira a información do ID do recurso da conta de almacenamento.":::
    
 1. Continúe cos pasos restantes nas estatísticas do público para anexar a conta de almacenamento.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644401"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268316"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predición de abandono transaccional (previsualización)
 
@@ -96,6 +96,8 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
 1. Opcionalmente, seleccione **Engadir datos** para **Actividades do cliente**. Escolla a entidade que proporciona a información da actividade do cliente como se describe nos requisitos previos.
 
 1. Asigne os campos semánticos aos atributos da súa entidade de actividade do cliente e seleccione **Seguinte**. Para obter descricións dos campos, bótelle unha ollada aos [requisitos previos](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Asignar campos de clientes para datos transacionais.":::
 
 1. Seleccione un tipo de actividade que coincida co tipo de actividade do cliente que está configurando. Seleccione **Crear novo** e elixa un tipo de actividade dispoñible ou cree un novo tipo.
 
@@ -185,3 +187,6 @@ Eliminar unha predición tamén elimina a súa entidade de saída.
 1. Seleccione os tres puntos verticais xunto á predición que quere eliminar.
 
 1. Seleccione **Eliminar**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

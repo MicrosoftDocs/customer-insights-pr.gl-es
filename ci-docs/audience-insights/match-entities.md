@@ -4,17 +4,17 @@ description: Busque coincidencias de entidades para crear perfís de clientes un
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405734"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267476"
 ---
 # <a name="match-entities"></a>Buscar coincidencias das entidades
 
@@ -22,7 +22,7 @@ Despois de completar a fase de asignación, xa está preparado para atopar a coi
 
 ## <a name="specify-the-match-order"></a>Especificar a orde de coincidencia
 
-Vaia a **Unificar** > **Coincidencia** e seleccione **Establecer orde** para iniciar a fase de coincidencia.
+Vaia a **Datos** > **Unificar** > **Buscar coincidencias** e seleccione **Establecer orde** para comezar a fase de busca de coincidencias.
 
 Cada coincidencia unifica dous ou máis entidades nunha única entidade, mentres continuará cada rexistro de cliente único. No seguinte exemplo, seleccionamos tres entidades: **ContactCSV: TestData** como entidade **Primaria**, **WebAccountCSV: TestData** como **Entidade 2** e **CallRecordSmall: TestData** como **Entidade 3**. O diagrama situado sobre as seleccións ilustra como se executará a orde de coincidencia.
 
@@ -136,7 +136,7 @@ Despois de identificar un rexistro desduplicado, este utilizarase no proceso de 
 
 1. Executar o proceso de busca de coincidencias agora agrupa os rexistros en función das condicións definidas nas regras de desduplicación. Despois de agrupar os rexistros, aplícase a política de combinación para identificar o rexistro gañador.
 
-1. Este rexistro gañador pásase despois á busca de coincidencias entre entidades.
+1. Este rexistro gañador pásase á busca de coincidencias entre entidades, xunto cos rexistros non gañadores (por exemplo, ID alternativos) para mellorar a calidade das coincidencias.
 
 1. Calquera regra de busca de coincidencias personalizada definida para buscar coincidencias sempre e nunca invalida as regras de desduplicación. Se unha regra de desduplicación identifica rexistros coincidentes e se establece unha regra de busca de coincidencias personalizada para que nunca busque coincidencias neses rexistros, entón neses dous rexistros non se buscarán coincidencias.
 
@@ -157,6 +157,17 @@ O primeiro proceso de coincidencia dá como resultado a creación dunha entidade
 
 > [!TIP]
 > Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies). Pode seleccionar o estado dun proceso para ver detalles sobre o progreso de todo o traballo. Despois de seleccionar **Ver detalles** para unha das tarefas do traballo, atopará información adicional: o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa.
+
+## <a name="deduplication-output-as-an-entity"></a>Saída de desduplicación como entidade
+Ademais da entidade principal unificada creada como parte da busca de coincidencias entre entidades, o proceso de desduplicación tamén xera unha nova entidade para cada entidade a partir da orde de busca de coincidencias para identificar os rexistros desduplicados. Estas entidades pódense atopar xunto con **ConflationMatchPairs:CustomerInsights** na sección **Sistema** da páxina **Entidades**, co nome **Deduplication_Datasource_Entity**.
+
+Unha entidade de saída de desduplicación contén a seguinte información:
+- Identificadores ou claves
+  - Campo de clave primaria e o seu campo de ID alternativos. O campo ID alternativos consiste en todos os ID alternativos identificados para un rexistro.
+  - O campo Deduplication_GroupId mostra o grupo ou clúster identificado dentro dunha entidade que agrupa todos os rexistros similares en función dos campos de desduplicación especificados. Isto úsase con fins de procesamento do sistema. Se non hai regras de desduplicación manual especificadas e se aplican regras de desduplicación definidas polo sistema, é posible que non atope este campo na entidade de saída da desduplicación.
+  - Deduplication_WinnerId: este campo contén o ID gañador dos grupos ou clústeres identificados. Se o Deduplication_WinnerId é o mesmo que o valor da clave primaria para un rexistro, significa que o rexistro é o rexistro gañador.
+- Campos empregados para definir as regras de desduplicación.
+- Campos Regra e Puntuación para indicar cal das regras de desduplicación se aplicou e a puntuación devolta polo algoritmo de correspondencia.
 
 ## <a name="review-and-validate-your-matches"></a>Revisar e validar as súas coincidencias
 
@@ -200,6 +211,11 @@ Aumente a calidade reconfigurando algúns dos parámetros da coincidencia:
   > [!div class="mx-imgBorder"]
   > ![Duplicar unha regra](media/configure-data-duplicate-rule.png "Duplicar unha regra")
 
+- **Desactivar unha regra** para manter unha regra de busca de coincidencias mentres a exclúe do proceso de busca de coincidencias.
+
+  > [!div class="mx-imgBorder"]
+  > ![Desactivar unha regra](media/configure-data-deactivate-rule.png "Desactivar unha regra")
+
 - **Edite as súas regras** seleccionando o símbolo **Editar**. Pode aplicar as seguintes modificacións:
 
   - Cambiar atributos para unha condición: seleccione novos atributos dentro da fila da condición específica.
@@ -229,6 +245,8 @@ Pode especificar condicións que determinados rexistros deben coincidir sempre o
     - Entity2Key: 34567
 
    O mesmo ficheiro de modelo pode especificar rexistros de coincidencia personalizados de varias entidades.
+   
+   Se desexa especificar a busca de coincidencias personalizada para a desduplicación nunha entidade, proporcione a mesma entidade que Entidade1 e Entidade2 e estableza os diferentes valores da clave primaria.
 
 5. Despois de engadir todas as substitucións que desexa aplicar, garde o ficheiro de modelo.
 
@@ -250,3 +268,6 @@ Pode especificar condicións que determinados rexistros deben coincidir sempre o
 ## <a name="next-step"></a>Seguinte paso
 
 Despois de completar o proceso de coincidencia durante polo menos unha par de coincidencias, pode resolver as posibles contradicións dos seus datos a través do tema [**Combinar**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Traballe con datos de Common Data Model usando Azure Data Lake Stor
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643456"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267858"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar cun cartafol de Common Data Model cunha conta de Azure Data Lake
 
@@ -38,17 +38,25 @@ Este artigo ofrece información sobre como inxerir datos desde un cartafol de Co
 
 1. Seleccione **Engadir orixe de datos**.
 
-1. Seleccione **Conectarse a un cartafol de Common Data Model**, introduza un **Nome** para a orixe de datos e seleccione **Seguinte**.
+1. Seleccione **Conectarse a un cartafol de Common Data Model**, introduza un **Nome** para a orixe de datos e seleccione **Seguinte**. Dea nome ás instrucións: 
+   - Comece por unha letra.
+   - Use só letras e números. Non se permiten caracteres especiais nin espazos.
+   - Empregue entre 3 e 64 caracteres.
 
 1. Pode escoller entre usar unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Introduza a información do **contedor** e seleccione **Seguinte**.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para introducir os detalles da conexión para Azure Data Lake](media/enter-new-storage-details.png)
-
-1. No diálogo **Seleccionar un cartafol de Contedor**, seleccione o ficheiro model.json desde o que importar datos e seleccione **Seguinte**.
+   > ![Cadro de diálogo para introducir novos detalles de conexión para Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Calquera ficheiro model.json asociado a outra orixe de datos do contorno non aparecerá na lista.
+   > Precisa unha das seguintes funcións no contedor ou na conta de almacenamento mencionada anteriormente para poder conectarse e crear unha orixe de datos:
+   >  - Lector de datos do BLOB de almacenamento
+   >  - Propietario dos datos do BLOB de almacenamento
+   >  - Colaborador de datos do BLOB de almacenamento
 
-1. Obterá unha lista de entidades dispoñibles no ficheiro model.json seleccionado. Pode revisar e seleccionar na lista de entidades dispoñibles e seleccionar **Gardar**. Todas as entidades seleccionadas inxeriranse a partir da orixe de datos nova.
+1. No diálogo **Seleccionar un cartafol de Common Data Model**, seleccione o ficheiro model.json ou manifest.json desde o que importar datos e seleccione **Seguinte**.
+   > [!NOTE]
+   > Calquera ficheiro model.json ou manifest.json asociado a outra orixe de datos do contorno non aparecerá na lista.
+
+1. Obterá unha lista de entidades dispoñibles no ficheiro model.json ou manifest.json seleccionado. Pode revisar e seleccionar na lista de entidades dispoñibles e seleccionar **Gardar**. Todas as entidades seleccionadas inxeriranse a partir da orixe de datos nova.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo que mostra unha lista de entidades dun ficheiro model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Este artigo ofrece información sobre como inxerir datos desde un cartafol de Co
 9. Despois de gardar as súas seleccións, abrirase a páxina **Fontes de datos**. Agora debe ver a conexión do cartafol Common Data Model como orixe de datos.
 
 > [!NOTE]
-> Un ficheiro model.json só pode asociarse cunha orixe de datos no mesmo ambiente. Non obstante, o mesmo ficheiro model.json pode usarse para fontes de datos en múltiples contornos.
+> Un ficheiro model.json ou manifest.json só pode asociarse cunha orixe de datos no mesmo ambiente. Non obstante, o mesmo ficheiro model.json ou manifest.json pode usarse para fontes de datos en múltiples contornos.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Editar unha orixe de datos do cartafol de Common Data Model
 
-Pode actualizar a clave de acceso da conta de almacenamento que contén o cartafol de Common Data Model. Tamén pode cambiar o ficheiro model.json. Para conectarse a un contedor diferente da súa conta de almacenamento ou cambiar o nome da conta, [cree unha nova conexión de orixe de datos](#connect-to-a-common-data-model-folder).
+Pode actualizar a clave de acceso da conta de almacenamento que contén o cartafol de Common Data Model. Tamén pode cambiar o ficheiro model.json ou manifest.json. Para conectarse a un contedor diferente da súa conta de almacenamento ou cambiar o nome da conta, [cree unha nova conexión de orixe de datos](#connect-to-a-common-data-model-folder).
 
 1. Na información do público, vaia a **Datos** > **Orixes de datos**.
 
@@ -77,13 +85,24 @@ Pode actualizar a clave de acceso da conta de almacenamento que contén o cartaf
 
 5. Opcionalmente, pode actualizar desde unha conexión de clave de conta a unha conexión baseada en recursos ou baseada nunha subscrición. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Non pode cambiar a información do **contedor** ao actualizar a conexión.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para introducir os detalles da conexión para Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Tamén pode escoller un ficheiro model.json diferente cun conxunto de entidades diferentes do contedor.
+   > ![Cadro de diálogo para introducir os detalles da conexión de Azure Data Lake nunha conta de almacenamento existente](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Precisa unha das seguintes funcións no contedor ou na conta de almacenamento mencionada anteriormente para poder conectarse e crear unha orixe de datos:
+   >  - Lector de datos do BLOB de almacenamento
+   >  - Propietario dos datos do BLOB de almacenamento
+   >  - Colaborador de datos do BLOB de almacenamento
+
+
+6. Opcionalmente, escolla un ficheiro model.json ou manifest.json diferente cun conxunto diferente de entidades do contedor.
 
 7. Opcionalmente, pode seleccionar entidades adicionais para inxerir. Tamén pode eliminar calquera entidade xa seleccionada se non hai dependencias.
 
    > [!IMPORTANT]
-   > Se hai dependencias no ficheiro model.json existente e no conxunto de entidades, verá unha mensaxe de erro e non poderá seleccionar outro ficheiro model.json. Elimine esas dependencias antes de cambiar o ficheiro model.json ou cree unha nova orixe de datos co ficheiro model.json que desexa usar para evitar eliminar as dependencias.
+   > Se hai dependencias no ficheiro model.json ou manifest.json existente e no conxunto de entidades, verá unha mensaxe de erro e non poderá seleccionar un ficheiro model.json ou manifest.json diferente. Elimine esas dependencias antes de cambiar o ficheiro model.json ou manifest.json ou cree unha nova orixe de datos co ficheiro model.json ou manifest.json que desexe usar para evitar eliminar as dependencias.
 
 8. Opcionalmente, pode seleccionar atributos ou entidades adicionais para habilitar a creación de perfís de datos ou desactivar os xa seleccionados.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

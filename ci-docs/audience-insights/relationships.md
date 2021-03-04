@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405739"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269873"
 ---
 # <a name="relationships-between-entities"></a>Relacións entre entidades
 
@@ -28,8 +28,8 @@ Durante os procesos de combinación e localización de coincidencias, as relaci�
 > ![Creación de relacións](media/relationships-entities-merge.png "Creación de relacións")
 
 - A **relación *CustomerToContact*** creouse entre a entidade cliente e a entidade de contacto. A entidade de cliente recibe o campo clave **Contact_contactId** para relacionarse co campo clave da entidade de contacto **contactId**.
-- A **relación _CustomerToAccount_** creouse entre a entidade cliente e a entidade da conta. A entidade de cliente recibe o campo clave **Account_accountId** para relacionarse co campo clave da entidade da conta **accountId**.
-- A **relación _CustomerToWebAccount_** creouse entre a entidade cliente e a entidade WebAccount. A entidade de cliente recibe o campo clave **WebAccount_webaccountId** para relacionarse co campo clave da entidade WebAccount **webaccountId**.
+- A **relación *CustomerToAccount*** creouse entre a entidade cliente e a entidade da conta. A entidade de cliente recibe o campo clave **Account_accountId** para relacionarse co campo clave da entidade da conta **accountId**.
+- A **relación *CustomerToWebAccount*** creouse entre a entidade cliente e a entidade WebAccount. A entidade de cliente recibe o campo clave **WebAccount_webaccountId** para relacionarse co campo clave da entidade WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Crear unha relación
 
@@ -69,3 +69,6 @@ Defina relacións personalizadas na páxina **Relacións**. Cada relación está
 ## <a name="next-step"></a>Seguinte paso
 
 As relacións do sistema e personalizadas úsanse para crear segmentos baseados en varias orixes de datos que xa non están gardadas en silos. Para obter máis información, consulte [Segmentos](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

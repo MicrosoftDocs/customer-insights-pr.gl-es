@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643591"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269788"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guía de mostra (previsualización) da predición do abandono transaccional
 
@@ -49,7 +49,7 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
    [!div class="mx-imgBorder"]
    ![Transformar DoB en data](media/ecommerce-dob-date.PNG "transformar data de nacemento en data")
 
-1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
+1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
 
 1. Garde a orixe de datos.
 
@@ -66,7 +66,7 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
    - **PurchasedOn**: data/hora
    - **TotalPrice**: moeda
    
-1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommercePurchases**.
+1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommercePurchases**.
 
 1. Garde a orixe de datos.
 
@@ -84,7 +84,7 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
    - **RewardsPoints**: número enteiro
    - **CreatedOn**: data/hora
 
-1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **loyCustomers**.
+1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **loyCustomers**.
 
 1. Garde a orixe de datos.
 
@@ -166,7 +166,7 @@ Cos perfís de clientes unificados no seu lugar, agora podemos executar a predic
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Seleccione as opcións do modelo Ventá de predición e Definición de abandono.":::
 
-1. Seleccione **Historial de compras (obrigatorio)** e seleccione **Engadir datos** para o historial de subscricións.
+1. Seleccione **Historial de compras (obrigatorio)** e seleccione **Engadir datos** para o historial de compras.
 
 1. Engada a entidade **eCommercePurchases : eCommerce** e asigne os campos de comercio electrónico aos campos correspondentes requiridos polo modelo.
 
@@ -204,3 +204,6 @@ Pode crear un novo segmento baseado na entidade creada polo modelo.
 Agora ten un segmento que se actualiza dinámicamente para identificar clientes con alto risco de abandono para este negocio da subscrición.
 
 Para ver máis información, consulte: [Creación e xestión de segmentos](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

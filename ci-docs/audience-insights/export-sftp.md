@@ -1,20 +1,20 @@
 ---
 title: Exportar datos de Customer Insights a servidores SFTP
 description: Aprenda a configurar a conexión a un servidor SFTP.
-ms.date: 06/05/2020
+ms.date: 01/27/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c2529744d7a26a06324b79cad6a8001d75903545
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: ddba55b3ca159c0095371e46385dcf1d3ed4a63d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643501"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267996"
 ---
 # <a name="connector-for-sftp-preview"></a>Conector de SFTP (vista previa)
 
@@ -22,7 +22,7 @@ Use os datos de cliente nas aplicacións de terceiros mediante a súa exportaci�
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Dispoñibilidade dun servidor SFTP e correspondentes credenciais.
+- Dispoñibilidade dun servidor SFTP e as credenciais correspondentes.
 
 ## <a name="connect-to-sftp"></a>Conectar con SFTP
 
@@ -32,23 +32,22 @@ Use os datos de cliente nas aplicacións de terceiros mediante a súa exportaci�
 
 1. Déalle ao seu destino un nome recoñecible no campo **Nome para mostrar**.
 
-1. Proporcione un **Nome de usuario**, **Contrasinal** e **Nome de servidor** para a súa conta de SFTP. Exemplo: se o cartafol raíz do seu servidor SFTP é /root/folder e desexa que os datos se exporten a /root/folder/ci_export_destination_folder, o servidor debería ser sftp://<server_address>/ci_export_destination_folder".
+1. Proporcione un **Nome de usuario**, **Contrasinal**, **Nome de servidor** e **Cartafol de exportación** para a súa conta de SFTP.
 
 1. Seleccionar **Verificar** para probar a conexión.
 
-1. Despois de verificar con éxito, escolla se desexa exportar os seus datos **comprimidos** ou **descompromidos** e selecciona o **delimitador de campos** para os ficheiros exportados.
+1. Despois de verificar correctamente, escolla se desexa exportar os seus datos **Comprimidos con gzip** ou **Descomprimidos** e seleccione o **delimitador de campo** para os ficheiros exportados.
 
 1. Seleccione **Estou de acordo** para confirmar a **Privacidade e cumprimento dos datos**.
 
 1. Seleccione **Seguinte** para comezar a configurar a exportación.
 
-## <a name="configure-the-connection"></a>Configurar a conexión
+## <a name="configure-the-export"></a>Configurar a exportación
 
-1. Seleccione os **atributos do cliente** que quere exportar. Pode exportar un ou varios atributos.
+1. Seleccione as entidades, por exemplo, segmentos que desexa exportar.
 
-1. Seleccione **Seguinte**.
-
-1. Seleccione os segmentos que desexa exportar.
+   > [!NOTE]
+   > Cada entidade seleccionada terá ata cinco ficheiros de saída cando se exporten. 
 
 1. Seleccione **Gardar**.
 
@@ -56,7 +55,15 @@ Use os datos de cliente nas aplicacións de terceiros mediante a súa exportaci�
 
 Pode [exportar datos baixo demanda](export-destinations.md). A exportación tamén se executará con todas as [actualizacións programadas](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Limitacións coñecidas
+
+- O tempo de execución dunha exportación depende do rendemento do seu sistema. Recomendamos dous núcleos de CPU e 1 Gb de memoria como configuración mínima do seu servidor. 
+- As entidades exportadoras con ata 100 millóns de perfís de clientes poden tardar 90 minutos cando se usa a configuración mínima recomendada de dous núcleos de CPU e 1 Gb de memoria. 
+
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 
 Cando habilita Dynamics 365 Customer Insights para transmitir datos a SFTP, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de garantir que o destino de exportación cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O administrador de Dynamics 365 Customer Insights pode eliminar este destino de exportación en calquera momento para interromper o uso desta funcionalidade.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

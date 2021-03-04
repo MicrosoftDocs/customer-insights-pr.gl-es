@@ -1,20 +1,20 @@
 ---
 title: Enriquecemento co enriquecemento de terceiros de Experian
 description: Información xeral sobre o enriquecemento de terceiros de Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668810"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269558"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquecer os perfís de clientes con datos demográficos de Experian (previsualización)
 
@@ -41,7 +41,9 @@ Para configurar Experian, deben cumprirse os seguintes requisitos previos:
 
 ## <a name="map-your-fields"></a>Asignar os campos
 
-1. Seleccione **Engadir datos** e escolla os seus identificadores clave de **Nome e enderezo**, **Correo electrónico** ou **Teléfono** que se envían a Experian para a resolución de identidade.
+1.  Seleccione **Engadir datos** e escolla o **conxunto de datos de cliente** que desexa enriquecer cos datos demográficos de Experian. Pode seleccionar a entidade **Cliente** para enriquecer todos os seus perfís de clientes ou seleccione unha entidade de segmento para enriquecer só os perfís de clientes contidos nese segmento.
+
+1. Seleccione os seus identificadores clave de **Nome e enderezo**, **Correo electrónico** ou **Teléfono** para enviar a Experian para a resolución de identidade.
 
    > [!TIP]
    > É probable que máis atributos de identificadores clave enviados a Experian produzan unha maior taxa de coincidencia.
@@ -52,8 +54,8 @@ Para configurar Experian, deben cumprirse os seguintes requisitos previos:
 
 1.  Seleccione **Gardar** para completar a asignación de campos.
 
-   > [!div class="mx-imgBorder"]
-   > ![Asignación de campos de Experian](media/experian-field-mapping.png "Asignación de campos de Experian")
+    > [!div class="mx-imgBorder"]
+    > ![Asignación de campos de Experian](media/experian-field-mapping.png "Asignación de campos de Experian")
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
 
@@ -71,3 +73,6 @@ Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md
 
 Cando habilita Dynamics 365 Customer Insights para transmitir datos a Experian, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de garantir que Experian cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

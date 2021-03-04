@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405698"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477086"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector de Power BI (vista previa)
 
@@ -31,7 +31,7 @@ Cree visualizacións para os seus datos con Power BI Desktop. Xere información 
 
 1. Seleccione **Ver máis** e busque **Dynamics 365 Customer Insights**
 
-1. Seleccione o resultado e **Conectar**.
+1. Seleccione **Conectar**.
 
 1. **Inicie sesión** coa mesma conta organizativa que usa para Customer Insights e seleccione **Conectar**.
    > [!NOTE]
@@ -52,3 +52,22 @@ O conector Customer Insights para Power BI está deseñado para funcionar con co
 ### <a name="work-with-a-subset-of-data"></a>Traballar cun subconxunto de datos
 
 Considere traballar cun subconxunto dos seus datos. Por exemplo, pode crear [segmentos](segments.md) en vez de exportar todos os rexistros de clientes a Power BI.
+
+## <a name="troubleshooting"></a>Resolución de problemas
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>O contorno de Customer Insights non aparece en Power BI
+
+Contornos que teñen máis dunha [relación](relationships.md) definida entre dúas entidades idénticas nas estatísticas de audiencia non estarán dispoñibles no conector de Power BI.
+
+Pode identificar e eliminar as relacións duplicadas.
+
+1. Na información do público, vaia a **Datos** > **Relacións** no ambiente que lle falta en Power BI.
+2. Identificar relacións duplicadas:
+   - Comprobe se hai máis dunha relación definida entre as mesmas dúas entidades.
+   - Comprobe se hai unha relación creada entre dúas entidades que están incluídas no proceso de unificación. Hai unha relación implícita definida entre todas as entidades incluídas no proceso de unificación.
+3. Elimine as relacións duplicadas identificadas.
+
+Despois de eliminar as relacións duplicadas, intente configurar o conector de Power BI de novo. O ambiente debería estar dispoñible agora.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+
