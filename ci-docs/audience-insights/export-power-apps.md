@@ -2,19 +2,19 @@
 title: Conector de Power Apps
 description: Conecte con Power Apps e Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268914"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598153"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector de Microsoft Power Apps (vista previa)
 
@@ -22,9 +22,9 @@ Consiga perfís de clientes unificados ás súas aplicacións personalizadas con
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Conectar Power Apps e Dynamics 365 Customer Insights
 
-Customer Insights é unha das moitas [orixes dispoñibles para datos en Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights é unha das moitas [orixes dispoñibles para datos en Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Consulte a documentación de Power Apps para aprender a [engadir unha conexión de datos a unha aplicación](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Recomendamos que revise tamén [como Power Apps usa a delegación para xestionar grandes conxuntos de datos en aplicacións de lenzo](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Consulte a documentación de Power Apps para aprender a [engadir unha conexión de datos a unha aplicación](/powerapps/maker/canvas-apps/add-data-connection). Recomendamos que revise tamén [como Power Apps usa a delegación para xestionar grandes conxuntos de datos en aplicacións de lenzo](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Entidades dispoñibles
 
@@ -47,11 +47,11 @@ A delegación funciona para a entidade de cliente e a entidade UnifiedActivity.
 
 - Delegación para **UnifiedActivity**: a delegación para esta entidade só funciona para os campos **ActivityId** e **ID de cliente**.  
 
-- Para obter máis información sobre a delegación, consulte [Funcións e operacións delegables de Power Apps](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Para obter máis información sobre a delegación, consulte [Funcións e operacións delegables de Power Apps](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Exemplo de control de galería
 
-Por exemplo, engada perfís de clientes a un [control da galería](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Por exemplo, engada perfís de clientes a un [control da galería](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Engada un control de **Galería** a unha aplicación que estea a crear.
 

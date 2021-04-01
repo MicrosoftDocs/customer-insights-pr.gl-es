@@ -2,19 +2,19 @@
 title: Predición do valor de duración do cliente (VDC)
 description: Prediga o potencial de ingresos para os clientes activos no futuro.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268592"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595806"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predición do valor de duración do cliente (VDC) (versión preliminar)
 
@@ -194,11 +194,11 @@ Hai tres seccións principais de datos dentro da páxina de resultados.
   
   - **Taxa de éxito ao predicir os clientes valiosos**
 
-  Vexa a diferenza na predición de clientes de alto valor mediante o modelo IA en comparación co modelo de base. Por exemplo, unha da taxa de éxito do 84 % significa que de todos os clientes de alto valor dos datos de adestramento, o modelo IA foi capaz de captar con precisión o 84 %. Despois comparamos esta taxa de éxito coa taxa de éxito do modelo de base para informar do cambio relativo. Este valor úsase para asignar unha cualificación ao modelo.
+    Vexa a diferenza na predición de clientes de alto valor mediante o modelo IA en comparación co modelo de base. Por exemplo, unha da taxa de éxito do 84 % significa que de todos os clientes de alto valor dos datos de adestramento, o modelo IA foi capaz de captar con precisión o 84 %. Despois comparamos esta taxa de éxito coa taxa de éxito do modelo de base para informar do cambio relativo. Este valor úsase para asignar unha cualificación ao modelo.
 
   - **Métricas de erro**
     
-  Outra métrica permítelle revisar o rendemento xeral do modelo en termos de erro na predición de valores futuros. Usamos a métrica global de erro do valor cuadrático medio (RMSE) para avaliar este erro. O RMSE é un xeito estándar de medir o erro dun modelo na predición de datos cuantitativos. O RMSE do modelo AI compárase co RMSE do modelo de base e infórmase da diferenza relativa.
+    Outra métrica permítelle revisar o rendemento xeral do modelo en termos de erro na predición de valores futuros. Usamos a métrica global de erro do valor cuadrático medio (RMSE) para avaliar este erro. O RMSE é un xeito estándar de medir o erro dun modelo na predición de datos cuantitativos. O RMSE do modelo AI compárase co RMSE do modelo de base e infórmase da diferenza relativa.
 
   O modelo IA prioriza a clasificación precisa dos clientes segundo o valor que aportan ao seu negocio. Polo tanto, só se usa a taxa de éxito de predición de clientes de alto valor para obter a nota do modelo final. A métrica do RMSE é sensible aos valores atípicos. Nos escenarios nos que teña unha pequena porcentaxe de clientes con valores de compra extraordinariamente altos, a métrica do RMSE xeral pode non dar a imaxe completa do rendemento do modelo.   
 

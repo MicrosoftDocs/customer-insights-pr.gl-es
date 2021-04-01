@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267720"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596497"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectarse a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure para obter información sobre o público
 
@@ -23,7 +23,7 @@ As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter per
 Pode usar a entidade de seguranza do servizo para, de forma segura, [engadir ou editar un cartafol de Common Data Model como orixe de datos](connect-common-data-model.md) ou [crear un novo ambiente ou actualizar un existente](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - A conta de almacenamento de Azure Data Lake Gen2 que pretenda utilizar a entidade de seguranza do servizo debe ter o [Espazo de nomes xerárquicos (HNS) activado](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - A conta de almacenamento de Azure Data Lake Gen2 que pretenda utilizar a entidade de seguranza do servizo debe ter o [Espazo de nomes xerárquicos (HNS) activado](/azure/storage/blobs/data-lake-storage-namespace).
 > - Precisa permisos de administrador para a súa subscrición a Azure para crear a entidade de seguranza do servizo.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Crear a entidade de seguranza do servizo de Azure para obter información sobre o público
@@ -48,7 +48,7 @@ Antes de crear unha nova entidade de seguranza do servizo para obter informació
 
 ### <a name="create-a-new-service-principal"></a>Crear unha entidade de seguranza do servizo nova
 
-1. Instale a última versión de **Azure Active Directory PowerShell para Graph**. Para obter máis información, consulte [Instalar Azure Active Directory PowerShell para Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Instale a última versión de **Azure Active Directory PowerShell para Graph**. Para obter máis información, consulte [Instalar Azure Active Directory PowerShell para Graph](/powershell/azure/active-directory/install-adv2).
    - No seu PC, seleccione a tecla Windows do teclado e busque **Windows PowerShell** e **Executar como administrador**.
    
    - Na xanela de PowerShell que se abre, introduza `Install-Module AzureAD`.

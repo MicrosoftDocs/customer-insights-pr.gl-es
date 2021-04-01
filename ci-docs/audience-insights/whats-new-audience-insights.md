@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e futuras
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270430"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598429"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcionalidades a longo prazo, vexa os [plans de versións de Dynamics 365 e Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcionalidades a longo prazo, vexa os [plans de versións de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
 Tamén pode ver o seguinte vídeo para obter máis información sobre as capacidades previstas nos últimos seis meses.
 
@@ -30,6 +30,40 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Actualizacións de febreiro de 2021
+
+As actualizacións de febreiro de 2021 inclúen varias características, actualizacións de rendemento e correccións de erros.
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Exportar segmentos a AdRoll**
+
+  Ampliamos os nosos destinos de exportación para incluír AdRoll. Agora pode exportar segmentos de Customer Insights a públicos de AdRoll e usalos como base para a súa publicidade. Para obter máis información, consulte [Conector para AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmentos
+ 
+- **Duplicar un segmento**
+  
+  Para crear un novo segmento baseado nun xa existente, agora pode duplicar un segmento e editalo para melloralo. 
+
+- **Engadir atributos adicionais a un segmento**
+
+  Agora pode incluír atributos na saída do seu segmento, aínda que estes atributos non formen parte do perfil do cliente. Por exemplo, inclúa ID de subscrición nun segmento aínda que formen parte da entidade de subscrición que ten unha relación M: 1 coa entidade cliente. Sempre que o atributo pertenza a unha entidade relacionada coa entidade cliente, agora pode incluír estes atributos.  
+
+#### <a name="predictions"></a>Predicións
+
+- **Crear recomendacións preditivas de produtos**
+
+  Comprender o que os clientes están interesados en mercar é un dos primeiros pasos necesarios para mellorar os ingresos empresariais e fidelizar aos clientes a través da personalización e o compromiso. Proporcionar recomendacións para produtos que non están aliñados cos intereses do seu cliente pode crear unha sensación de desconexión entre o cliente e a súa empresa e, en definitiva, limitar os ingresos e a experiencia potencial para un cliente. 
+
+  Usando os seus propios datos, agora pode crear predicións sobre os produtos que probablemente adquirirán os seus clientes no futuro. Para obter máis información, consulte [Predición da recomendación de produto](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Administración do sistema
+
+- **O entorno de copia admite máis tipos de fontes de datos**
+
+  Os administradores poden copiar as configuracións de contorno a un novo contorno da mesma organización. Esta funcionalidade amplía a funcionalidade do contorno de copia para casos en que se usan as fontes de datos baseadas nun data lake de Common Data Service ou un cartafol de Common Data Model.
 
 ## <a name="january-2021-updates"></a>Actualizacións de xaneiro de 2021
 
