@@ -1,19 +1,20 @@
 ---
 title: Modelos de aprendizaxe automática personalizados | Microsoft Docs
 description: Traballe con modelos personalizados de Azure Machine Learning en Dynamics 365 Customer Insights.
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267232"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700666"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizaxe automática personalizados
 
@@ -21,13 +22,18 @@ ms.locfileid: "5267232"
 
 ## <a name="responsible-ai"></a>IA responsable
 
-As predicións ofrecen capacidades para crear mellores experiencias de cliente, mellorar as capacidades comerciais e os fluxos de ingresos. Recomendamos encarecidamente que equilibre o valor da súa predición co impacto que ten e os prexuízos que se poden introducir de xeito ético. Máis información sobre como Microsoft está [abordando a IA responsable](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Tamén pode aprender sobre [técnicas e procesos de aprendizaxe automática responsable](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) específicos para Azure Machine Learning.
+As predicións ofrecen capacidades para crear mellores experiencias de cliente, mellorar as capacidades comerciais e os fluxos de ingresos. Recomendamos encarecidamente que equilibre o valor da súa predición co impacto que ten e os prexuízos que se poden introducir de xeito ético. Máis información sobre como Microsoft está [abordando a IA responsable](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Tamén pode aprender sobre [técnicas e procesos de aprendizaxe automática responsable](/azure/machine-learning/concept-responsible-ml) específicos para Azure Machine Learning.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Actualmente, esta función admite servizos web publicados a través de [Machine Learning Studio (clásico)](https://studio.azureml.net) e [ canles de lotes de Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines).
+- Actualmente, esta función admite servizos web publicados a través de [Machine Learning Studio (clásico)](https://studio.azureml.net) e [ canles de lotes de Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
 
-- Necesita unha conta de almacenamento de Azure Data Lake Gen2 asociada á súa instancia de Azure Studio para usar esta función. Para obter máis información, consulte [Crear unha conta de almacenamento de Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- Necesita unha conta de almacenamento de Azure Data Lake Gen2 asociada á súa instancia de Azure Studio para usar esta función. Para obter máis información, consulte [Crear unha conta de almacenamento de Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+- Para os espazos de traballo de aprendizaxe automático de Azure con canalizacións, necesitará permisos de propietario ou administrador de acceso de usuarios ao espazo de traballo de aprendizaxe automático de Azure.
+
+   > [!NOTE]
+   > Os datos transfírense entre as instancias de Customer Insights e os servizos web ou canalizacións de Azure seleccionados no fluxo de traballo. Cando transfira datos a algún servizo de Azure, asegúrese de que este estea configurado para procesar os datos co sistema e na localización necesarios para cumprir todos os requisitos legais ou normativos que se apliquen ditos datos da organización.
 
 ## <a name="add-a-new-workflow"></a>Engadir un novo fluxo de traballo
 
@@ -45,8 +51,8 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 1. Seleccione os **espazos de traballo** asociados ao seu servizo web. Enumeráronse dúas seccións, unha para Azure Machine Learning v.1 (Machine Learning Studio [clásico]) e Azure Machine Learning v.2 (Azure Machine Learning). Se non está seguro de cal é o espazo de traballo adecuado para o seu servizo web de Machine Learning Studio (clásico), seleccione **Calquera**.
 
 1. Escolla o servizo web de Machine Learning Studio (clásico) ou a canle de Azure Machine Learning no menú despregable **Servizo web que contén o seu modelo**. despois, seleccione **Seguinte**.
-   - Máis información sobre a [publicación dun servizo web en Machine Learning Studio (clásico)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Máis información sobre a [Publicación dunha canle en Azure Machine Learning usando o deseñador](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). A canle debe publicarse nun [extremo de canle](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Máis información sobre a [publicación dun servizo web en Machine Learning Studio (clásico)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
+   - Máis información sobre a [Publicación dunha canle en Azure Machine Learning usando o deseñador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). A canle debe publicarse nun [extremo de canle](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Para cada **Entrada do servizo web**, seleccione a **Entidade** coincidente da información sobre o público e seleccione **Seguinte**.
    > [!NOTE]
@@ -54,7 +60,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 
    > [!div class="mx-imgBorder"]
    > ![Configurar un fluxo de traballo](media/intelligence-screen2-updated.png "Configurar un fluxo de traballo")
-   
+
 1. No paso **Parámetros de saída do modelo**, configure as seguintes propiedades:
    - Machine Learning Studio (clásico)
       1. Introduza o **Nome da entidade** de saída á quere que flúan os resultados de saída do servizo web.
@@ -62,12 +68,12 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
       1. Introduza o **Nome da entidade** de saída á quere que flúan os resultados de saída da canle.
       1. Seleccione o **nome do parámetro do almacén de datos de saída** da súa canle de lotes desde o menú despregable.
       1. Seleccione o **nome do parámetro do camiño de saída** da súa canle de lotes desde o menú despregable.
-      
+
       > [!div class="mx-imgBorder"]
       > ![Panel de parámetros de saída do modelo](media/intelligence-screen3-outputparameters.png "Panel de parámetros de saída do modelo")
 
 1. Seleccione o atributo coincidente na lista despregable **Identificador de cliente nos resultados** que identifica os clientes e seleccione **Gardar**.
-   
+
    > [!div class="mx-imgBorder"]
    > ![Relacionar resultados co panel de datos do cliente](media/intelligence-screen4-relatetocustomer.png "Relacionar resultados co panel de datos do cliente")
 
@@ -95,7 +101,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
       1. Seleccione o **Nome do parámetro do camiño de saída** para a súa canle de proba.
 
 1. Seleccione o atributo coincidente na lista despregable **Identificador de cliente nos resultados** que identifica os clientes e seleccione **Gardar**.
-   Debe escoller un atributo da saída de inferencia con valores similares á columna ID de cliente da entidade Cliente. Se non ten esa columna no seu conxunto de datos, escolla un atributo que identifique de xeito único a fila.
+   Escolla un atributo da saída de inferencia con valores similares á columna ID de cliente da entidade Cliente. Se non ten esa columna no seu conxunto de datos, escolla un atributo que identifique de xeito único a fila.
 
 ## <a name="run-a-workflow"></a>Executar un fluxo de traballo
 
@@ -113,5 +119,28 @@ O seu fluxo de traballo tamén se executa automaticamente con todas as actualiza
 
 Eliminarase o seu fluxo de traballo. A [entidade](entities.md) que se creou cando creou o fluxo de traballo continuará e poderá verse desde a páxina **Entidades**.
 
+## <a name="results"></a>Resultados
+
+Os resultados dun fluxo de traballo almacénanse na entidade configurada durante a fase do parámetro de saída do modelo. Pode acceder a estes datos desde a [páxina de entidades](entities.md) ou con [Acceso á API](apis.md).
+
+### <a name="api-access"></a>Acceso á API
+
+Para que a consulta específica de OData obteña datos dunha entidade de modelo personalizada, use o seguinte formato:
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. Substitúa `<your instance id>` polo ID do seu contorno de Customer Insights, que se atopa na barra de enderezos do seu navegador ao acceder a Customer Insights.
+
+1. Substitúa `<custom model output entity>` polo nome da entidade que proporcionou durante o paso Parámetros de saída do modelo da configuración do modelo personalizado.
+
+1. Substitúa `<guid value>` polo ID de cliente do cliente para o que desexa acceder ao rexistro. Normalmente pode atopar este ID na [páxina de perfís de clientes](customer-profiles.md) no campo CustomerID.
+
+## <a name="frequently-asked-questions"></a>Preguntas máis frecuentes
+
+- Por que non podo ver a miña canalización ao configurar un fluxo de traballo de modelo personalizado?    
+  Este problema é frecuentemente causado por un problema de configuración na canalización. Asegúrese de que [o parámetro de entrada estea configurado](azure-machine-learning-experiments.md#dataset-configuration) e que o [almacén de datos de saída e os parámetros de camiño](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) tamén están configurados.
+
+- Que significa o erro "Non se puido gardar o fluxo de traballo de intelixencia"?    
+  Os usuarios adoitan ver esta mensaxe de erro se non teñen privilexios de propietario ou de acceso de usuario no espazo de traballo. O usuario precisa un nivel máis alto de permisos para permitir a Customer Insights procesar o fluxo de traballo como un servizo en lugar de usar as credenciais de usuario para as posteriores execucións do fluxo de traballo.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
