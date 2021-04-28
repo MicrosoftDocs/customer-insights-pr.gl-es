@@ -1,7 +1,7 @@
 ---
 title: Usar fontes de datos para inxerir datos
 description: Aprenda a importar datos de varias orixes.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595945"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887892"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
@@ -32,8 +32,15 @@ Podes engadir unha orixe de datos de tres xeitos principais:
 - [Desde un cartafol de Common Data Model](connect-common-data-model.md)
 - [Desde o seu propio lago de Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Aínda non pode engadir datos das orixes de datos locais.
+## <a name="add-data-from-on-premises-data-sources"></a>Engadir datos de fontes de datos locais
+
+Admite datos interesantes de orixes de datos locais da Información do público en función dos fluxos de datos de Power Platform. Os fluxos de datos pódense activar en Customer Insights [proporcionando o URL do contorno de Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) ao configurar o ambiente.
+
+As fontes de datos que se creen despois de asociar un contorno de Dataverse con Customer Insights usarán [fluxos de datos e Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante as pasarelas de datos. Elimine e recree fontes de datos que existían antes de que un ambiente de Dataverse estivese asociado para usar as pasarelas de datos locais.
+
+As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Power Platform onde pode ver e configurar pasarelas de datos locais.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de pantalla da páxina de fontes de datos que mostra ligazóns que apuntan ao ambiente de Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Revisa os datos inxeridos
 
@@ -65,7 +72,7 @@ Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
 
 2. Seleccione os puntos suspensivos verticais xunto á orixe de datos que desexa actualizar e seleccione **Actualizar** da lista despregable.
 
-3. A orixe de datos agora está activada para unha actualización manual. Se actualiza unha orixe de datos, actualizaranse tanto o esquema de entidades como os datos de todas as entidades especificadas na orixe de datos.
+3. A orixe de datos agora está activada para unha actualización manual. Actualizar unha orixe de datos actualizá tanto o esquema de entidade como os datos de todas as entidades especificadas na orixe de datos.
 
 4. Seleccione **Deixar de actualizar** se quere cancelar unha actualización existente e a orixe de datos volverá ao seu último estado de actualización.
 

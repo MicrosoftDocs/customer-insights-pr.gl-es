@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598628"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896463"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Visión xeral da información do público para Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ A información do público axúdalle a comprender máis profundamente os seus cl
   - Conéctese e unifique os seus datos con facilidade e traia datos transaccionais, observacionais e de comportamento de [orixes de datos populares aproveitando os conectores construídos previamente](data-sources.md).
   - Transforme os datos dos clientes de forma intelixente cree perfís de clientes unificados conforme ao [Modelo común de datos](/common-data-model/). Resolva as identidades dos clientes con recomendacións baseadas en AI/ML.
 
-- **Enriquecer con intelixencia da audiencia contida en Microsoft Graph**
+- **Enriquecer con intelixencia de audiencia**
 
-  - Constrúa perfís de clientes máis ricos [incorporando intelixencia sobre a audiencia contida en Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Cree perfís de clientes máis ricos [incorporando datos enriquecidos](enrichment-hub.md).  
 
 - **Potencie os seus procesos de negocio e experiencias de cliente personalizadas**
 
@@ -43,7 +43,7 @@ A información do público axúdalle a comprender máis profundamente os seus cl
 
   - Acceso a unha rica colección de conectores para inxerir todos os seus datos de clientes.
   - Posibilidade de unificar datos de clientes e transformalos en formato [Common Data Model](/common-data-model/).
-  - Enriquecer a información dos clientes con información de a intelixencia da audiencia contida en Microsoft Graph, como a afinidade da marca e intereses.
+  - Enriqueza a información dos clientes con información da intelixencia da audiencia, como a afinidade de marcas e intereses.
   - Experiencia de configuración e depuración "Clics-non-código" para axudar a configurar facilmente a información do público e a identificar posibles problemas.
   - Limpa e estandariza os datos dos clientes en fontes dispares con recomendacións de IA.  
 

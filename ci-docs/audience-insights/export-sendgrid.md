@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a SendGrid
-description: Aprenda a configurar a conexión a SendGrid.
-ms.date: 12/08/2020
+description: Aprenda a configurar a conexión e exportar a SendGrid.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,57 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 1a1f679fa42d47d524ebfdd6e931ae2822565f77
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a4c64cf77c682e07f3d0759c43355336b5806fc8
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597279"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759763"
 ---
-# <a name="connector-for-sendgrid-preview"></a>Conector para SendGrid (versión preliminar)
+# <a name="export-segments-to-sendgrid-preview"></a>Exportar segmentos a SendGrid (versión preliminar)
 
 Exporte segmentos de perfís de clientes unificados a listas de contactos de SendGrid e utilíceos para campañas e mercadotecnia por correo electrónico en SendGrid. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites-for-a-connection"></a>Requisitos previos para unha conexión
 
 -   Ten unha [Conta de SendGrid](https://sendgrid.com/) e as correspondentes credenciais de administrador.
 -   Existen listas de contacto en SendGrid e os ID correspondentes. Para obter máis información, consulte [SendGrid: xestionar contactos](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
 -   Ten [segmentos configurados](segments.md) na información do público.
 -   Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico.
-
-## <a name="connect-to-sendgrid"></a>Conectar con SendGrid
-
-1. Vaia a **Administrador** > **Exportar destinos**.
-
-1. En **SendGrid**, seleccione **Configurar**.
-
-1. Déalle ao seu destino da exploración un nome recoñecible no campo **Nome para mostrar**.
-
-   :::image type="content" source="media/export-sendgrid.PNG" alt-text="Panel de configuración de exportación de SendGrid.":::
-
-1. Introduza a súa **Clave da API de SendGrid** [Clave da API de SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
-
-1. Introduza o seu **[ID de lista de SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
-
-1. Seleccione **Estou de acordo** para confirmar a **Privacidade e cumprimento dos datos**.
-
-1. Seleccione **Conectar** para inicializar a conexión a SendGrid.
-
-1. Seleccione **Autoengadirse como usuario de exportación** e proporcione as súas credenciais de Customer Insights.
-
-1. Seleccione **Seguinte** para configurar a exportación.
-
-## <a name="configure-the-connector"></a>Configurar o conector
-
-1. Na sección **Coincidencia de datos**, no campo **Correo electrónico**, seleccione o campo do seu perfil de cliente unificado que representa o enderezo de correo electrónico dun cliente. Repita os mesmos pasos para outros campos opcionais como **nome**, **apelidos**, **país/rexión**, **estado**, **cidade** e **código postal**.
-
-1. Seleccione os segmentos que desexa exportar. Nós fortemente **recomendamos non exportar máis de 100.000 perfís de clientes en total** a SendGrid. 
-
-1. Seleccione **Gardar**.
-
-## <a name="export-the-data"></a>Exportar os datos
-
-Pode [exportar datos baixo demanda](export-destinations.md). A exportación tamén se executará con todas as [actualizacións programadas](system.md#schedule-tab).
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
@@ -67,6 +33,48 @@ Pode [exportar datos baixo demanda](export-destinations.md). A exportación tam�
 - A exportación a SendGrid está limitada a segmentos.
 - Exportar ata 100.000 perfís a SendGrid pode tardar unhas horas en completarse. 
 - O número de perfís que pode exportar a SendGrid depende e está limitado no seu contrato con SendGrid.
+
+## <a name="set-up-connection-to-sendgrid"></a>Configurar conexión a SendGrid
+
+1. Vaia a **Administrar** > **Conexións**.
+
+1. Seleccione **Engadir conexión** e elixa **SendGrid** para configurar a conexión.
+
+1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
+
+1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Introduza a súa **Clave da API de SendGrid** [Clave da API de SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
+
+1. Seleccione **Estou de acordo** para confirmar a **Privacidade e cumprimento dos datos**.
+
+1. Seleccione **Conectar** para inicializar a conexión a SendGrid.
+
+1. Seleccione **Autoengadirse como usuario de exportación** e proporcione as súas credenciais de Customer Insights.
+
+1. Seleccione **Gardar** para completar a conexión.
+
+## <a name="configure-an-export"></a>Configurar unha exportación
+
+Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Para obter máis información, consulte [Permisos necesarios para configurar unha exportación](export-destinations.md#set-up-a-new-export).
+
+1. Vaia a **Datos** > **Exportacións**.
+
+1. Seleccione **Engadir destino** para crear unha nova exportación.
+
+1. No campo **Conexión da exportación** escolla unha conexión da sección SendGrid. Se non ve o nome desta sección, non hai conexións deste tipo dispoñibles para vostede.
+
+1. Introduza o seu **[ID de lista de SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
+
+1. Na sección **Coincidencia de datos**, no campo **Correo electrónico**, seleccione o campo do seu perfil de cliente unificado que representa o enderezo de correo electrónico dun cliente. Repita os mesmos pasos para outros campos opcionais como **nome**, **apelidos**, **país/rexión**, **estado**, **cidade** e **código postal**.
+
+1. Seleccione os segmentos que desexa exportar. Nós fortemente **recomendamos non exportar máis de 100.000 perfís de clientes en total** a SendGrid. 
+
+1. Seleccione **Gardar**.
+
+Ao gardar unha exportación non se executa a exportación inmediatamente.
+
+A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 

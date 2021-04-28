@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597187"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906854"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predición de abandono transaccional (previsualización)
 
@@ -46,6 +46,14 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
         - **Marca de tempo:** a data e a hora do evento identificadas pola clave principal.
         - **Evento:** o nome do evento que desexa usar. Por exemplo, un campo chamado "UserAction" nunha tenda de ultramarinos pode ser un cupón utilizado polo cliente.
         - **Detalles:** información detallada sobre o evento. Por exemplo, un campo chamado "CouponValue" nunha tenda de alimentación pode ser o valor en moeda do cupón.
+- Características datos suxeridas:
+    - Datos históricos suficientes: datos de transaccións durante polo menos o dobre da xanela de tempo seleccionada. Preferiblemente, de dous a tres anos de datos de subscrición. 
+    - Compras múltiples por cliente: idealmente polo menos dúas transaccións por cliente.
+    - Número de clientes: polo menos 10 perfís clientes, preferentemente máis de 1.000 clientes únicos. O modelo fallará con menos de 10 clientes e con datos históricos insuficientes.
+    - Integridade dos datos: menos do 20 % dos valores que faltan no campo de datos da entidade proporcionada.
+
+> [!NOTE]
+> Para unha empresa con alta frecuencia de compra de clientes (cada poucas semanas), recoméndase seleccionar unha ventá predición máis curta e definir o abandono. Para unha frecuencia de compra baixa (cada poucos meses ou unha vez ao ano), elixa unha fiestra máis longa de predición e defina o abandono.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Crear unha predición de abandono transaccional
 
@@ -129,7 +137,9 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
 1. Seleccione a predición que desexa revisar.
    - **Nome da predición:** Nome da predición proporcionado ao creala.
    - **Tipo de predición:** Tipo de modelo usado para a predición
-   - **Entidade de saída:** nome da entidade para almacenar a saída da predición. Pode atopar unha entidade con este nome en **Datos** > **Entidades**.
+   - **Entidade de saída:** nome da entidade para almacenar a saída da predición. Pode atopar unha entidade con este nome en **Datos** > **Entidades**.    
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é unha etiqueta binaria baseada en *ChurnScore* cun limiar de 0,5. É posible que o limiar predeterminado non funcione no seu escenario. [Cree un novo segmento](segments.md#create-a-new-segment) co seu limiar preferido.
+     Non todos os clientes son necesariamente clientes activos. É posible que algúns deles non tivesen ningunha actividade durante moito tempo e xa se consideran perdidos, segundo a definición de abandono. Non é útil predicir o risco de abandono para os clientes que xa abandonaron porque non son o público de interese.
    - **Campo previsto:** Este campo só se completa con algúns tipos de predicións e non se usa na predición do abandono.
    - **Estado:** Estado da execución da predición.
         - **En cola:** a predición está á espera de que se executen outros procesos.

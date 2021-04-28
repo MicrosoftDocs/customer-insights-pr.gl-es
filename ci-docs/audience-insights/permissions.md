@@ -1,7 +1,7 @@
 ---
 title: Xestionar permisos de usuario
 description: Máis información acerca de permisos e roles de usuario.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595700"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760371"
 ---
 # <a name="user-permissions"></a>Permisos de usuario
 
@@ -31,7 +31,7 @@ Existen tres tipos de roles:
 - Visualice e explore a páxina **Enriquecemento**.
 - Explore e exporte as entidades usando a páxina **Entidades**.
 - Visualice o estado dos procesos do sistema mediante a páxina **Sistema**.
-- Exportar segmentos desde a páxina **Segmentos**.
+- Ver exportacións na páxina **Exportacións**.
 - Instale e use o panel de **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Colaborador
@@ -43,6 +43,7 @@ Existen tres tipos de roles:
 - Cree segmentos usando a páxina **Segmentos**.
 - Crear medidas empregando a páxina **Medidas**.
 - Xestione a configuración e enriqueza os perfís de clientes desde a páxina **Enriquecemento** (só para enriquecementos de primeiras partes).
+- Xestione e cree exportacións baseadas en conexións compartidas cos colaboradores. [Máis información sobre como os administradores permiten aos colaboradores usar unha conexión para exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrador
 
@@ -50,8 +51,9 @@ Existen tres tipos de roles:
 - Cambie a configuración na páxina **Sistema**, incluído o idioma de traballo e as programacións de actualización dos procesos do sistema.
 - Visualice e engada permisos usando a páxina **Permisos**.
 - Estableza as definicións de busca e filtro para a páxina de clientes mediante a páxina **Índice de busca e filtro** (accesible a través da páxina **Clientes**).
-- Defina os destinos do segmento de Dynamics 365 Sales mediante a páxina **Exportar destinos**.
+- Xestione as conexións e permítaas para outras funcións de usuario na páxina **Conexións**.
 - Xestione a configuración e enriqueza os perfís de clientes desde a páxina **Enriquecemento** (para todos os enriquecementos).
+- Xestione e cree exportacións na páxina **Exportacións**.
 - Instale e use o **complemento do cartón do cliente**.
 - Engada e use o **conector de Power Apps**.
 - Active o uso das [API de Customer Insights](apis.md).
@@ -64,7 +66,7 @@ Existen tres tipos de roles:
 
 1. Use o campo **Buscar** para atopar o usuario ou o grupo de Azure Active Directory cuxos permisos desexa axustar. Seleccione un **Papel** para asignar a ese usuario ou grupo.
 
-1. Seleccione **Gardar**. O entorno actual compartirase automaticamente co usuario ou os membros do grupo cuxos permisos cambiou. Os usuarios poden acceder á aplicación Customer Insights e traballar de acordo co seu papel especificado.
+1. Seleccione **Gardar**. O contorno actual compartirase automaticamente co usuario ou os membros do grupo cuxos permisos cambiou. Os usuarios poden acceder á aplicación Customer Insights e traballar de acordo co seu papel especificado.
 
 ## <a name="view-current-permissions"></a>Ver permisos actuais
 

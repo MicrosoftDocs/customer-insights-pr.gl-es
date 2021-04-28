@@ -1,7 +1,7 @@
 ---
 title: Enriquecemento co enriquecemento de terceiros de HERE Technologies
 description: Información xeral sobre o enriquecemento de terceiros de HERE Technologies.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597739"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896049"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecemento de perfís de clientes con HERE Technologies (vista previa)
 
@@ -26,35 +26,54 @@ Para configurar os enriquecementos de HERE Technologies, deben cumprirse os segu
 
 - Ten unha subscrición activa de HERE Technologies. Para obter unha subscrición, pode [inscribirse aquí](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ou [poñerse en contacto con HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) directamente. [Obteña máis información sobre o enriquecemento de localización de HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Ten a clave da API de HERE Technologies.
+- Hai unha [conexión](connections.md) de HERE dispoñible *ou* ten permisos de [administrador](permissions.md#administrator) e a clave da API de HERE Technologies.
 
-- Ten permisos de [administrador](permissions.md#administrator).
+## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 
-## <a name="configuration"></a>Configuración
+1. Vaia a **Datos** > **Enriquecemento**. 
 
-1. Vaia a **Datos** > **Enriquecemento**.
-
-1. No mosaico de HERE Technologies, seleccione **Enriquecer os meus datos**.
+1. No mosaico de HERE Technologies, seleccione **Enriquecer os meus datos** e logo seleccione **Comezar**.
 
    > [!div class="mx-imgBorder"]
    > ![Mosaico de HERE Technologies](media/HERE-tile.png "Mosaico de HERE Technologies")
 
-1. Insira unha **clave da API de HERE Technologies** activa. Revise e proporcione o seu consentimento para a **Privacidade e cumprimento dos datos** seleccionando a caixa de verificación **Estou de acordo**. 
+1. Seleccione unha [conexión](connections.md) da lista despregable. Póñase en contacto cun administrador se non hai conexión dispoñible. Se é administrador, pode crear unha conexión seleccionando **Engadir conexión**. Escolla **HERE Technologies** desde o menú despregable. 
 
-1. Confirme ambas as entradas seleccionando **Conectarse a HERE**.
+1. Seleccione **Conectar con HERE Technologies** para confirmar a selección.
 
-1.  Seleccione **Engadir datos** e escolla o **conxunto de datos de cliente** que desexa enriquecer coa localización de HERE Technologies. Pode seleccionar a entidade **Cliente** para enriquecer todos os seus perfís de clientes ou seleccione unha entidade de segmento para enriquecer só os perfís de clientes contidos nese segmento.
+1.  Seleccione **Seguinte** e escolla o **Conxunto de datos do cliente** que quere enriquecer cos datos de localización de HERE Technologies. Pode seleccionar a entidade **Cliente** para enriquecer todos os seus perfís de clientes ou seleccione unha entidade de segmento para enriquecer só os perfís de clientes contidos nese segmento.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Captura de pantalla ao escoller o conxunto de datos do cliente.":::
 
-1. Escolla se desexa asignar campos ao enderezo principal e/ou secundario. Pode especificar unha asignación de campo para ambos os enderezos (por exemplo, un enderezo de casa e un de empresa) e enriquecer os perfís de ambos os enderezos por separado. Seleccione **Seguinte**.
+1. Escolla se desexa asignar campos ao enderezo principal e/ou secundario. Pode especificar unha asignación de campos para ambos os enderezos e enriquecer os perfís de ambos os enderezos por separado. Por exemplo, se hai un domicilio e un enderezo comercial. Seleccione **Seguinte**.
 
 1. Defina os campos dos perfís unificados que se deben empregar para buscar datos de localización coincidentes de HERE Technologies. Os campos **Rúa 1** e **Código postal** son obrigatorios para o enderezo primario e/ou secundario seleccionado. Para unha maior precisión de coincidencia, pódense engadir máis campos.
 
    > [!div class="mx-imgBorder"]
    > ![Páxina de configuración de enriquecemento de HERE Technologies](media/enrichment-HERE-configuration.png "Páxina de configuración de enriquecemento de HERE Technologies")
 
-1. Seleccione **Aplicar** para completar a asignación de campos.
+1. Seleccione **Seguinte** para concluír a asignación do campo.
+
+1. Proporcione un nome para o enriquecemento. 
+
+1. Seleccione **Gardar enriquecemento** despois de revisar as súas opcións.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Configurar a conexión para HERE Technologies 
+
+Debe ser administrador para configurar as conexións. Seleccione **Engadir conexión** ao configurar un enriquecemento *ou* vaia a **Administrar** > **Conexións** e seleccione **Configurar** no mosaico de HERE Technologies.
+
+1. Introduza un nome para a conexión na caixa **Nome de visualización**.
+
+1. Proporcione unha clave de API de HERE Technologies válida.
+
+1. Revise e proporcione o seu consentimento para a **Privacidade de datos e cumprimento** seleccionando a caixa de verificación **Estou de acordo**
+
+1. Seleccione **Verificar** para validar a configuración.
+
+1. Despois de completar a verificación, seleccione **Gardar**.
+
+> [!div class="mx-imgBorder"]
+   > ![Páxina de configuración da conexión de HERE Technologies](media/enrichment-HERE-connection.png "Páxina de configuración da conexión de HERE Technologies")
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
 

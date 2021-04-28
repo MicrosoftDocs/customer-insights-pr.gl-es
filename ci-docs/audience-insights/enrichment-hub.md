@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfís de clientes unificados
 description: Use capacidades para enriquecer os datos dos seus clientes.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597693"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896003"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -27,8 +27,8 @@ Debe ter permisos de colaborador ou administrador para crear ou editar enriquece
 
 No separador **Descubrir**, atopará os seguintes enriquecementos:
 
-- [Marcas](enrichment-microsoft-graph.md) fornecidas por Microsoft Graph
-- [Intereses](enrichment-microsoft-graph.md) fornecidos por Microsoft Graph
+- [Marcas](enrichment-microsoft.md) fornecidas por Microsoft
+- [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
 - [Datos da empresa](enrichment-leadspace.md) proporcionados por Leadspace
 - [Datos demográficos](enrichment-experian.md) proporcionados por Experian
 - [Datos de localización](enrichment-here.md) subministrados por HERE Technologies
@@ -52,5 +52,12 @@ Seleccione un enriquecemento para ver as opcións dispoñibles. Tamén pode sele
 
 Pode executar ou desactivar varios enriquecementos á vez seleccionándoos na lista. As opcións de visualización e edición non están dispoñibles como acción masiva e só funcionan para un enriquecemento á vez.
 
+## <a name="enrichments-and-connections"></a>Enriquecementos e conexións
+
+Os enriquecementos de terceiros configúranse usando [conexións](connections.md), que un administrador configura con credenciais e proporciona o consentimento para as transferencias de datos. A conexión pode ser usada para configurar enriquecementos por administradores e colaboradores.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Enriquecementos múltiples do mesmo tipo
+
+A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueza os datos só dun segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver na páxina **Enriquecemento**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

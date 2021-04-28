@@ -1,7 +1,7 @@
 ---
 title: Enriquecemento con importación personalizada de SFTP
 description: Información xeral sobre o enriquecemento con importación personalizada de SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595853"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896279"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer perfís de clientes con datos personalizados (vista previa)
 
-A importación personalizada co protocolo seguro de transferencia de ficheiros (SFTP) permítelle importar datos que non teñen que pasar polo proceso de unificación de datos. É un xeito flexible, seguro e sinxelo de incorporar os seus datos. A importación personalizada de SFTP pode usarse en combinación coa [exportación de SFTP](export-sftp.md) que lle permite exportar os datos do perfil do cliente necesarios para o enriquecemento. Os datos pódense procesar, enriquecer e a importación personalizada de SFTP pode usarse para devolver os datos enriquecidos á capacidade de información de audiencia de Dynamics 365 Customer Insights.
+A importación personalizada do protocolo de transferencia de ficheiros seguro (SFTP) permítelle importar datos que non teñen que pasar polo proceso de unificación de datos. É un xeito flexible, seguro e sinxelo de incorporar os seus datos. A importación personalizada de SFTP pode usarse en combinación coa [exportación de SFTP](export-sftp.md) que lle permite exportar os datos do perfil do cliente necesarios para o enriquecemento. Os datos pódense procesar, enriquecer e a importación personalizada de SFTP pode usarse para devolver os datos enriquecidos á capacidade de información de audiencia de Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para configurar a importación personalizada de SFTP, deben cumprirse os seguintes requisitos previos:
 
-- Ten credenciais de usuario (nome de usuario e contrasinal) para a localización de SFTP de onde se van importar os datos.
-- Ten o URL e o número de porto (normalmente 22) para o servidor STFP.
-- Ten o nome e a localización do ficheiro que se vai importar no servidor SFTP.
-- Hai un ficheiro *model.json* que especifica o esquema dos datos que se van importar. Este ficheiro debe estar no mesmo directorio que o ficheiro que se vai importar.
-- Ten permiso de [administrador](permissions.md#administrator).
+- Ten o nome do ficheiro e a localización (ruta) do ficheiro que se vai importar no servidor SFTP.
+- Existe un ficheiro *model.json* que especifica [o esquema do modelo de datos común](/common-data-model/) para que os datos se importen. Este ficheiro debe estar no mesmo directorio que o ficheiro que se vai importar.
+- Un administrador configurou xa unha conexión SFTP *ou* ten permisos de [administrador](permissions.md#administrator). Necesitará as credenciais de usuario, o URL e o número de porto para a localización de SFTP de onde quere importar datos.
 
-## <a name="configuration"></a>Configuración
+
+## <a name="configure-the-import"></a>Configurar a importación
 
 1. Vaia a **Datos** > **Enriquecemento** e seleccione o separador **Descubrir**.
 
-1. No **mosaico de importación personalizada de SFTP**, seleccione **Enriquecer os meus datos**.
+1. No **mosaico de importación personalizada de SFTP**, seleccione **Enriquecer os meus datos** e logo seleccione **Comezar**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Mosaico de importación personalizada de SFTP](media/SFTP_Custom_Import_tile.png "Mosaico de importación personalizada de SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Mosaico de importación personalizada de SFTP.":::
 
-1. Seleccione **Comezar** e proporcione as credenciais e o enderezo do servidor SFTP. Por exemplo, sftp://mysftpserver.com:22.
+1. Seleccione unha [conexión](connections.md) da lista despregable. Póñase en contacto cun administrador se non hai conexión dispoñible. Se é administrador, pode crear unha conexión seleccionando **Engadir conexión** e escollendo **Importación personalizada de SFTP** desde o menú despregable.
 
-1. Introduza o nome do ficheiro que contén os datos e a ruta ao ficheiro no servidor SFTP se non está no cartafol raíz.
+1. Seleccione **Conectar coa importación personalizada** para confirmar a conexión seleccionada.
 
-1. Confirme todas as entradas seleccionando **Conectar coa importación personalizada**.
+1.  Seleccione **Seguinte** e introduza o **Nome de arquivo** e o **Camiño** do ficheiro de datos que desexa importar.
 
-   > [!div class="mx-imgBorder"]
-   > ![Control flotante de configuración da importación personalizada de SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Control flotante de configuración da importación personalizada de SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de pantalla ao introducir a localización de datos.":::
+
+1. Seleccione **Seguinte** e proporcione un nome para o enriquecemento e un nome para a entidade de saída. 
+
+1. Seleccione **Gardar enriquecemento** despois de revisar as súas opcións.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Configure a conexión da importación personalizada de SFTP 
+
+Debe ser administrador para configurar as conexións. Seleccione **Engadir conexión** ao configurar un enriquecemento *ou* vaia a **Administrar** > **Conexións** e seleccione **Configurar** no mosaico de importación personalizada.
+
+1. Introduza un nome para a conexión na caixa **Nome de visualización**.
+
+1. Introduza un nome de usuario, contrasinal e URL de servidor válidos para o servidor STFP no que residen os datos que se van importar.
+
+1. Revise e proporcione o seu consentimento para a **Privacidade e cumprimento dos datos** seleccionando a caixa de verificación **Estou de acordo**.
+
+1. Seleccione **Verificar** para validar a configuración.
+
+1. Unha vez finalizada a verificación, pódese gardar a conexión facendo clic en **Gardar**.
+
+> [!div class="mx-imgBorder"]
+   > ![Páxina de configuración da conexión de Experian](media/enrichment-SFTP-connection.png "Páxina de configuración da conexión de Experian")
+
 
 ## <a name="defining-field-mappings"></a>Definir asignacións de campos 
 
@@ -105,8 +124,5 @@ Pode acceder a unha vista detallada de cada perfil enriquecido seleccionando **V
 ## <a name="next-steps"></a>Pasos seguintes
 
 Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md), [medidas](measures.md) e [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

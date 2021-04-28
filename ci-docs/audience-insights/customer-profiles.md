@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596865"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896325"
 ---
 # <a name="customer-profiles"></a>Perfís de clientes
 
@@ -59,7 +59,7 @@ Os detalles do cliente inclúen:
 
 -   **Ficha do perfil do cliente:** Este mosaico mostra os diferentes valores da entidade de perfil de cliente unificado. Estes detalles poden incluír enderezo de correo electrónico, nome, cidade etc. 
 
--   **Intereses potenciais, marcas potenciais:** Mostra se configurou un enriquecemento propio. Representa posibles intereses e afinidades para as marcas que poida ter un cliente cun perfil similar a este. Para obter máis información, consulte [Enriquecer os perfís de clientes con afinidades de marca e intereses](enrichment-microsoft-graph.md).
+-   **Intereses potenciais, marcas potenciais:** Mostra se configurou un enriquecemento propio. Representa posibles intereses e afinidades para as marcas que poida ter un cliente cun perfil similar a este. Para obter máis información, consulte [Enriquecer os perfís de clientes con afinidades de marca e intereses](enrichment-microsoft.md).
 
 -   **Medidas:** Mostra se configurou unha ou máis medidas dun tipo específico: medidas de atributo de cliente. Inclúen KPI calculados arredor dos seus clientes a nivel de cliente individual. Para obter máis información, consulte [Definir e xestionar medidas](measures.md).
 

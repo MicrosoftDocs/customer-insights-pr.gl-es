@@ -1,7 +1,7 @@
 ---
 title: Crear e xestionar ambientes
 description: Aprenda a rexistrarse no servizo e a xestionar contornos.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598291"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887984"
 ---
 # <a name="manage-environments"></a>Xestionar ambientes
 
@@ -44,6 +44,9 @@ Este artigo explica como crear unha nova organización e como fornecer un ambien
 
 Existen dúas formas de crear un ambiente novo. Pode especificar unha configuración completamente nova ou pode copiar algúns axustes de configuración dun ambiente existente.
 
+> [!NOTE]
+> As organizacións poden crear *dous* contornos para cada licenza de Customer Insights. Se a súa organización compra máis dunha vez unha licenza, por favor [póñase en contacto co noso equipo de asistencia](https://go.microsoft.com/fwlink/?linkid=2079641) para aumentar o número de contornos dispoñibles. Para obter máis información sobre a capacidade e a capacidade do complemento, descargue a [Guía de licenzas de Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 Para crear un ambiente:
 
 1. Seleccione o selector de **ambiente** na cabeceira da aplicación.
@@ -55,14 +58,14 @@ Para crear un ambiente:
 
 1. No diálogo **Crear novo ambiente**, seleccione **Novo ambiente**.
 
-   Se quere [copiar datos do ambiente actual](#additional-considerations-for-copy-configuration-preview), seleccione **Copiar do ambiente existente**. Verá unha lista de todos os ambientes dispoñibles da súa organización de onde pode copiar datos.
+   Se quere [copiar datos do ambiente actual](#considerations-for-copy-configuration-preview), seleccione **Copiar do ambiente existente**. Verá unha lista de todos os ambientes dispoñibles da súa organización de onde pode copiar datos.
 
 1. Indique os seguintes detalles:
    - **Nome**: O nome deste ambiente. Este campo xa está cuberto se copiou un ambiente existente, pero pode cambialo.
    - **Rexión**: a rexión na que se despregou e aloxou o servizo.
    - **Tipo**: selecciona se desexa crear un contorno de produción ou de illamento de procesos.
 
-2. Opcionalmente, pode seleccionar **Configuración avanzada**:
+1. Opcionalmente, pode seleccionar **Configuración avanzada**:
 
    - **Gardar todos os datos en**: especifique onde desexa almacenar os datos de saída xerados de Customer Insights. Terá dúas opcións: **Almacenamento de Customer Insights** (un Azure Data Lake xestionado polo equipo de Customer Insights) e **Azure Data Lake Storage Gen2** (o seu propio Azure Data Lake Storage). Por defecto, a opción de almacenamento de Customer Insights está seleccionada.
 
@@ -75,20 +78,20 @@ Para crear un ambiente:
 
    - Para a opción de Azure Data Lake Storage Gen2, pode escoller entre unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). O nome do **contedor** non se pode cambiar e será "customerinsights".
    
-   - Se quere usar [predicións](predictions.md) ou configurar o intercambio de datos con aplicacións e solucións baseadas en Microsoft Dataverse, forneza o URL do ambiente de Microsoft Dataverse en **Configurar o uso compartido de datos con Microsoft Dataverse e habilitar capacidades adicionais**. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun Data Lake xestionado de Microsoft Dataverse.
+   - Se quere usar [predicións](predictions.md), configure o uso compartido de datos con aplicacións e solucións baseadas en Microsoft Dataverse ou habilite a inxestión de datos desde fontes de datos locais, proporcione o URL do contorno de Microsoft Dataverse en **Configurar o uso compartido de datos con Microsoft Dataverse e habilitar as capacidades adicionais**. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun Data Lake xestionado de Microsoft Dataverse.
 
      > [!NOTE]
      > - Compartir datos cun Data Lake xestionado Microsoft Dataverse actualmente non é compatible cando garda todos os datos no seu propio Azure Data Lake Storage.
      > - A [predición de valores que faltan nunha entidade](predictions.md) non se admite actualmente cando habilita o uso compartido de datos cun Data Lake xestionado de Microsoft Dataverse.
 
      > [!div class="mx-imgBorder"]
-     > ![Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
+     > ![Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
    Cando execute procesos, como a inxestión de datos ou a creación de segmentos, crearanse os cartafoles correspondentes na conta de almacenamento que especificou anteriormente. Os ficheiros de datos e os ficheiros model.json crearanse e engadiranse aos respectivos subcartafoles en función do proceso que execute.
 
    Se crea varios contornos de Customer Insights e elixe gardar as entidades de saída deses ambientes na súa conta de almacenamento, crearanse cartafoles separados para cada contorno con ci_<environmentid> no contedor.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Consideracións adicionais para a configuración da copia (previsualización)
+### <a name="considerations-for-copy-configuration-preview"></a>Consideracións para a configuración da copia (versión preliminar)
 
 Copiaranse os seguintes axustes de configuración:
 
@@ -136,6 +139,18 @@ Pode editar algúns detalles dos contornos existentes.
 4. Se un ambiente está configurado para almacenar datos en Azure Data Lake Storage Gen2, pode actualizar a **Clave da conta**. Non obstante, non podes cambiar o **Nome da conta** nin o nome do **Contedor**.
 
 5. Opcionalmente, pode actualizar desde unha conexión baseada na clave de conta a unha conexión baseada en recursos ou baseada nunha subscrición. Unha vez actualizado, non poderá volver á clave da conta despois da actualización. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Non pode cambiar a información do **contedor** ao actualizar a conexión.
+
+6. Opcionalmente, pode proporcionar un URL do contorno de Microsoft Dataverse en **Configurar o uso compartido de datos con Microsoft Dataverse e habilitar capacidades adicionais**. Estas capacidades inclúen o uso compartido de datos con aplicacións e solucións baseadas en Microsoft Dataverse, inxestión de datos de fontes de datos locais ou o uso de [predicións](predictions.md). Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun Data Lake xestionado de Microsoft Dataverse.
+
+   > [!NOTE]
+   > - Compartir datos cun Data Lake xestionado Microsoft Dataverse actualmente non é compatible cando garda todos os datos no seu propio Azure Data Lake Storage.
+   > - A [predición de valores que faltan nunha entidade](predictions.md) actualmente non se admite cando habilita o uso compartido de datos cun Data Lake xestionado de Microsoft Dataverse.
+
+   Cando active o uso compartido de datos con Microsoft Dataverse, desencadearase a actualización completa das orixes de datos e outros procesos. Se actualmente se están executando e poñendo en cola procesos, non verá a opción para habilitar o uso compartido de datos con Microsoft Dataverse. Podes esperar a que estes procesos finalicen ou cancelalos para habilitar o uso compartido de datos. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse.":::
+   
+   Cando execute procesos, como a inxestión de datos ou a creación de segmentos, crearanse os cartafoles correspondentes na conta de almacenamento que especificou anteriormente. Os ficheiros de datos e os ficheiros model.json crearanse e engadiranse ás respectivas subcarpetas, dependendo do proceso que execute.
 
 ## <a name="reset-an-existing-environment"></a>Restablecer ambiente existente
 

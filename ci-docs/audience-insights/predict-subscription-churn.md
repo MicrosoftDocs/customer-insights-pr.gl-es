@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595654"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906900"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predición da renovación da subscrición (vista previa)
 
@@ -49,6 +49,12 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
         - **Marca de tempo:** a data e a hora do evento identificadas pola clave principal.
         - **Evento:** o nome do evento que desexa usar. Por exemplo, un campo chamado "UserAction" nun servizo de vídeo en streaming podería ter o valor de "Visualizado".
         - **Detalles:** información detallada sobre o evento. Por exemplo, un campo chamado "ShowTitle" nun servizo de vídeo en streaming podería ter o valor dun vídeo visualizado por un cliente.
+- Características datos suxeridas:
+    - Datos históricos suficientes: datos de subcrición durante polo menos o dobre da xanela de tempo seleccionada. Preferiblemente, de dous a tres anos de datos de subscrición.
+    - Estado da subscrición: os datos inclúen subscricións activas e inactivas para cada cliente polo que hai varias entradas por ID de cliente.
+    - Número de clientes: polo menos 10 perfís clientes, preferentemente máis de 1.000 clientes únicos. O modelo fallará con menos de 10 clientes e con datos históricos insuficientes.
+    - Integridade dos datos: menos do 20 % dos valores que faltan no campo de datos da entidade proporcionada.
+   
    > [!NOTE]
    > Necesitará polo menos dous rexistros de actividade para o 50% dos clientes para os que quere calcular a renovación.
 
@@ -67,7 +73,7 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
 ### <a name="define-customer-churn"></a>Definir abandono de clientes
 
 1. Insira o número de **Días desde que rematou a subscrición** que a súa empresa considera que un cliente está nun estado renovado. Este período normalmente gusta para as actividades empresariais como ofertas ou outros esforzos de mercadotecnia que intentan evitar a perda do cliente.
-1. Introduza o número de **Días para investigar o futuro para predicir a renovación** para configurar unha xanela para predicir a renovación. Por exemplo, para predicir o risco de renovación dos seus clientes nos próximos 90 días para axustarse aos seus esforzos de retención de marketing. A predición do risco de renovación durante períodos de tempo máis longos ou máis curtos pode facer máis difícil abordar os factores do seu perfil de risco de abandono, pero isto depende moito dos requisitos específicos da súa empresa. Seleccione **Seguinte** para continuar
+1. Introduza o número de **Días para investigar o futuro para predicir a renovación** para configurar unha xanela para predicir a renovación. Por exemplo, para predicir o risco de renovación dos seus clientes nos próximos 90 días para axustarse aos seus esforzos de retención de marketing. A predición do risco de abandono por períodos de tempo máis longos ou máis curtos pode facer máis difícil abordar os factores do seu perfil de risco de abandono, dependendo das necesidades específicas da súa empresa. Seleccione **Seguinte** para continuar
    >[!TIP]
    > Pode seleccionar **Gardar e pechar** en calquera momento para gardar a predición como borrador. Atopará o borrador de predición no separador **As miñas previsións** para continuar.
 
@@ -113,7 +119,8 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
 1. Seleccione a predición que desexa revisar.
    - **Nome da predición:** o nome da predición indicado ao creala.
    - **Tipo de predición:** o tipo de modelo empregado para a predición
-   - **Entidade de saída:** nome da entidade para almacenar a saída da predición. Pode atopar unha entidade con este nome en **Datos** > **Entidades**.
+   - **Entidade de saída:** nome da entidade para almacenar a saída da predición. Pode atopar unha entidade con este nome en **Datos** > **Entidades**.    
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é unha etiqueta binaria baseada en *ChurnScore* cun limiar de 0,5. É posible que o limiar predeterminado non funcione no seu escenario. [Cree un novo segmento](segments.md#create-a-new-segment) co seu limiar preferido.
    - **Campo previsto:** este campo está completado só para algúns tipos de predicións e non se usa na predición da renovación de subscricións.
    - **Estado:** o estado actual da execución da predición.
         - **En cola:** a predición está actualmente á espera de que se executen outros procesos.
