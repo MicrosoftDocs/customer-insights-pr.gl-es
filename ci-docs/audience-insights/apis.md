@@ -1,7 +1,7 @@
 ---
 title: Traballar con API
 description: Use as API e comprenda as limitacións.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873660"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016590"
 ---
 # <a name="work-with-customer-insights-apis"></a>Traballar coas API de Customer Insights
 
@@ -90,19 +90,13 @@ A [sección de rexistro de aplicacións](#create-a-new-app-registration-in-the-a
 
 1. No rexistro da súa aplicación no portal de Azure, vaia a **Permisos de API**.
 
-1. Seleccione **Engadir un permiso** e seleccione **Customer Insights** no panel lateral.
+1. Seleccione **Engadir un permiso**. 
+
+1. Seleccione o separador **API que usa a miña organización** e escolla **Dynamics 365 AI for Customer Insights** da lista. 
 
 1. Para o **Tipo de permiso**, seleccione **Permisos de aplicación** e seleccione o permiso **CustomerInsights.Api.All**.
 
 1. Seleccione **Engadir permisos**.
-
-1. Para dar o consentimento do administrador neste permiso de aplicación, cómpre engadir unha entidade de seguranza do servizo.
-
-   1. Instale o módulo Azure Active Directory (AD) PowerShell: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Conecte coa conta de AD: `Connect-AzureAD -TenantId <your tenant id>`. Pode atopar o seu ID de inquilino en **Visión xeral** > **Azure Active Directory**.
-   1. Execute o seguinte comando para engadir unha entidade de seguranza do servizo de Azure AD: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` O parámetro AppId pertence á aplicación de API de Customer Insights.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Exemplo de entidade de seguranza do servizo":::
 
 1. Volva a **Permisos de API** para rexistrar a aplicación.
 

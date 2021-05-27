@@ -1,7 +1,7 @@
 ---
-title: Instalar e configurar o complemento de cartón de cliente
-description: Instale e configure o complemento do cartón do cliente para Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Suplemento do cartón de cliente das aplicacións de Dynamics 365
+description: Mostrar datos de información do público nas aplicacións de Dynamics 365 con este suplemento.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597325"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059586"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento do cartón do cliente (vista previa)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións de Dynamics 365. Permite ver datos demográficos, información e cronoloxías de actividades co complemento da tarxeta de cliente.
+Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións de Dynamics 365. Co suplemento do cartón de cliente instalado nunha aplicación de Dynamics 365 compatible, pode escoller mostrar a demografía, a información e as liñas de tempo de actividades. O suplemento recuperará datos de Customer Insights sen afectar aos datos da aplicación de Dynamics 365 conectada. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Aplicación de Dynamics 365 (como Plataforma común de vendas ou Plataforma común de servizo de atención ao cliente), versión 9.0 e posterior con Interface unificada activada.
-- Perfís de clientes [inxeridos desde a aplicación de Dynamics 365 usando Common Data Service](connect-power-query.md).
-- Os usuarios do complemento de tarxeta de cliente deben ser [engadidos como usuarios](permissions.md) en información do público.
-- [Capacidades de busca e filtraxe configuradas](search-filter-index.md).
-- Control demográfico: os campos demográficos (como a idade ou o sexo) están dispoñibles no perfil de cliente unificado.
-- Control do enriquecemento: require [enriquecementos](enrichment-hub.md) activos aplicados aos perfís de clientes.
-- Control intelixente: require datos xerados mediante Azure Machine Learning ([predicións](predictions.md) ou [modelos personalizados](custom-models.md))
-- Control de medidas: require [medidas configuradas](measures.md).
-- Control da liña de tempo: require [actividades configuradas](activities.md).
+- O suplemento só funciona con aplicacións de Dynamics 365 controladas por modelos, como Sales ou Customer Service, versión 9.0 e posteriores.
+- Para que os seus datos de Dynamics 365 se asignen aos perfís de clientes da información do público, deben [inxerirse desde a aplicación de Dynamics 365 mediante o conector de Common Data Service](connect-power-query.md).
+- Todos os usuarios de Dynamics 365 do suplemento do cartón do cliente deben [engadirse como usuarios](permissions.md) na información do público para ver os datos.
+- Na información do público precísanse [capacidades de busca e filtros configuradas](search-filter-index.md) para que a busca de datos funcione.
+- Cada control do suplemento depende de datos específicos na información do público:
+  - Control de medidas: require [medidas configuradas](measures.md).
+  - Control de intelixencia: require datos xerados mediante [predicións](predictions.md) ou [modelos personalizados](custom-models.md).
+  - Control demográfico: os campos demográficos (como a idade ou o sexo) están dispoñibles no perfil de cliente unificado.
+  - Control do enriquecemento: require [enriquecementos](enrichment-hub.md) activos aplicados aos perfís de clientes.
+  - Control da liña de tempo: require [actividades configuradas](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalar o complemento do cartón do cliente
 
@@ -56,9 +57,9 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
    > [!NOTE]
    > Asegúrese de que o bloqueador de ventás emerxentes do navegador non bloquee a ventá de autenticación cando seleccione o botón **Iniciar sesión**.
 
-1. Seleccione o ambiente do que desexa obter datos.
+1. Seleccione o ambiente de Customer Insights do que desexa obter datos.
 
-1. Defina cal é a asignación de campos para os rexistros na aplicación de Dynamics 365.
+1. Defina a asignación de campos para rexistros na aplicación de Dynamics 365. En función dos seus datos en Customer Insights, pode escoller asignar as seguintes opcións:
    - Para asignar cun contacto, seleccione o campo da entidade de cliente que coincida co ID da súa entidade de contacto.
    - Para asignar cunha conta, seleccione o campo da entidade de cliente que coincida co ID da súa entidade de conta.
 

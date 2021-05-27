@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595806"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954577"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predición do valor de duración do cliente (VDC) (versión preliminar)
 
@@ -38,11 +38,11 @@ Os seguintes datos son necesarios e, cando están marcados como opcionais, recom
 - Identificador de cliente: identificador único para facer coincidir as transaccións cun cliente individual
 
 - Historial de transaccións: rexistro de transaccións históricas co esquema de datos semánticos a continuación
-    - ID de transacción: identificador único de cada transacción
-    - Data da transacción: data, preferiblemente unha marca de tempo de cada transacción
-    - Importe da transacción: valor monetario (por exemplo, ingresos ou marxe de beneficio) de cada transacción
-    - Etiqueta asignada ás devolucións (opcional): valor booleano que indica se a transacción é unha devolución 
-    - Identificador do produto (opcional): identificador do produto involucrado na transacción
+    - **ID de transacción**: identificador único de cada transacción
+    - **Data da transacción**: data, preferiblemente unha marca de tempo de cada transacción
+    - **Importe da transacción**: valor monetario (por exemplo, ingresos ou marxe de beneficio) de cada transacción
+    - **Etiqueta asignada ás devolucións** (opcional): valor booleano que indica se a transacción é unha devolución 
+    - **Identificador do produto** (opcional): identificador do produto involucrado na transacción
 
 - Datos adicionais (opcional), por exemplo
     - Actividades na web: historial de visitas a sitios web, historial de correo electrónico
@@ -53,10 +53,20 @@ Os seguintes datos son necesarios e, cando están marcados como opcionais, recom
     - Identificadores de clientes para atribuír actividades aos seus clientes
     - Información da actividade que contén o nome e a data da actividade
     - O esquema de datos semánticos para actividades inclúe: 
-        - Clave principal: un identificador único para unha actividade
-        - Marca de tempo: a data e a hora do evento identificadas pola clave principal
-        - Evento (nome da actividade): o nome do evento que desexa usar
-        - Detalles (importe ou valor): detalles sobre a actividade do cliente
+        - **Clave principal**: un identificador único para unha actividade
+        - **Marca de tempo**: a data e a hora do evento identificadas pola clave principal
+        - **Evento (nome da actividade)**: o nome do evento que quere usar
+        - **Detalles (importe ou valor)**: detalles sobre a actividade do cliente
+
+- Características datos suxeridas:
+    - Datos históricos suficientes: como mínimo un ano de datos transaccionais. Preferentemente entre dous e tres anos de datos transaccionais para predicir o VDC para un ano.
+    - Múltiples compras por cliente: idealmente polo menos entre dúas ou tres transaccións por ID de cliente, preferentemente en varias datas.
+    - Número de clientes: como mínimo 100 clientes únicos, preferentemente máis de 10.000 clientes. O modelo fallará con menos de 100 clientes e con datos históricos insuficientes
+    - Integridade dos datos: menos do 20 % dos valores que faltan nos campos obrigatorios nos datos de entrada   
+
+> [!NOTE]
+> - O modelo require o historial de transaccións dos seus clientes. Actualmente só se pode configurar unha entidade do historial de transaccións. Se hai varias entidades de compra ou transacción, pode unilas en Power Query antes da inxestión de datos.
+> - Non obstante, para obter datos de actividade do cliente adicionais (opcionais), pode engadir tantas entidades de actividade do cliente como queira para que o modelo as teña en conta.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Crear unha predición do valor de duración do cliente
 
@@ -76,7 +86,7 @@ Os seguintes datos son necesarios e, cando están marcados como opcionais, recom
    Por defecto, a unidade defínese como meses. Pode cambialo por anos para mirar máis adiante no futuro.
 
    > [!TIP]
-   > Para predicir con precisión o VDC para o período de tempo que fixe, necesita un período comparable de datos históricos. Por exemplo, se quere predicir durante os próximos 12 meses, recoméndase que teña polo menos 18-24 meses de datos históricos.
+   > Para predicir con precisión o VDC para o período de tempo que fixe, necesita un período comparable de datos históricos. Por exemplo, se quere predicir o VDC para os próximos 12 meses, recoméndase que teña polo menos 18-24 meses de datos históricos.
 
 1. Especifique o que **Clientes activos** significa para o seu negocio. Estableza o intervalo temporal no que un cliente debe ter polo menos unha transacción para considerarse activo. O modelo só predicirá o VDC para clientes activos. 
    - **Permitir que o modelo calcule o intervalo de compra (recomendado)**: O modelo analiza os seus datos e determina un período de tempo baseado nas compras históricas.
@@ -181,14 +191,14 @@ Hai tres seccións principais de datos dentro da páxina de resultados.
   Usando a definición de clientes de alto valor proporcionada ao configurar a predición, o sistema avalía o rendemento do modelo IA na predición dos clientes de alto valor en comparación cun modelo de base.    
 
   As cualificacións determínanse en función das seguintes regras:
-  - A: cando o modelo predixo con precisión polo menos un 5 % máis de clientes de alto valor en comparación co modelo de referencia.
-  - B: cando o modelo predixo con precisión entre un 0-5 % máis de clientes de alto valor en comparación co modelo de referencia.
-  - C: cando o modelo predixo con precisión menos clientes de alto valor en comparación co modelo de referencia.
+  - **A**: cando o modelo predixo con precisión polo menos un 5 % máis de clientes de alto valor en comparación co modelo de referencia.
+  - **B**: cando o modelo predixo con precisión entre un 0-5 % máis de clientes de alto valor en comparación co modelo de referencia.
+  - **C**: cando o modelo predixo con precisión menos clientes de alto valor en comparación co modelo de referencia.
 
   O panel **Valoración do modelo** mostra máis detalles sobre o rendemento do modelo IA e o modelo de base. O modelo de base utiliza un enfoque non baseado na IA para calcular o valor da duración do cliente baseado principalmente nas compras históricas realizadas polos clientes.     
   A fórmula estándar empregada para calcular o VDC polo modelo de base:    
 
-  *VDC para cada cliente = Compra mensual media feita polo cliente na ventá do cliente activo * Número de meses no período de predición do VDC * Taxa global de retención de todos os clientes*
+  _**VDC para cada cliente** = Compra mensual media feita polo cliente na ventá do cliente activo * Número de meses no período de predición do VDC * Taxa global de retención de todos os clientes*_
 
   O modelo IA compárase co modelo de base baseado en dúas métricas de rendemento do modelo.
   

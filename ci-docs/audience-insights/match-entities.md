@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595562"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085620"
 ---
 # <a name="match-entities"></a>Buscar coincidencias das entidades
 
@@ -103,6 +103,18 @@ As regras de coincidencia representan conxuntos de condicións. Para atopar coin
 
 > [!NOTE]
 > A orde das regras importa. O algoritmo de coincidencias tenta atopar coincidencias baseándose na súa primeira regra e continúa coa segunda regra só se non se identificaron coincidencias coa primeira regra.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Cambiar a orde de entidades nas regras de busca de coincidencias
+
+Pode reordenar as entidades para que as regras de busca de coincidencias cambien a orde en que se procesan. Eliminaranse as regras en conflito por mor dun cambio de orde. Ten que volver crear as regras eliminadas cunha configuración actualizada.
+
+1. Vaia a **Datos** > **Unificar** > **Buscar coincidencias** e seleccione **Editar**.
+
+1. No panel **Editar regra**, seleccione o control **Mover cara arriba ou cara abaixo** ou arrastre e solte as entidades para cambiar a orde.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Opcións para cambiar a orde en que se procesan as entidades na fase de busca de coincidencias.":::
+
+1. Para gardar a regra, seleccione **Feito**.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir a desduplicación nunha entidade coincidente
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596405"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049392"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades na información sobre o público
 
@@ -37,12 +37,12 @@ Seleccione unha entidade para explorar os diferentes campos e rexistros incluíd
 > [!div class="mx-imgBorder"]
 > ![Seleccionar unha entidade](media/data-manager-entities-data.png "Seleccionar unha entidade")
 
-- O separador **Datos** está seleccionado de xeito predeterminado e amosa unha táboa que mostra os detalles sobre os rexistros individuais da entidade.
+- O separador **Datos** mostra unha táboa con detalles sobre os rexistros individuais da entidade.
 
 > [!div class="mx-imgBorder"]
 > ![Táboa de campos](media/data-manager-entities-fields.PNG "Táboa de campos")
 
-- O separador **Campos** mostra unha táboa para revisar os detalles da entidade seleccionada, como nomes de campo, tipos de datos e tipos. A columna **Tipo** mostra os tipos asociados ao Common Data Model, identificados automaticamente polo sistema ou [mapeados manualmente](map-entities.md) polos usuarios. Trátase de tipos semánticos que poden diferir dos tipos de datos dos atributos, por exemplo, o campo *Correo electrónico* a continuación ten o tipo de datos *Texto* pero o seu tipo de Common Data Model (semántico) pode ser *Correo electrónico* ou *Enderezo de correo electrónico*.
+- O separador **Atributos** está seleccionado por defecto e mostra unha táboa para revisar os detalles da entidade seleccionada, como os nomes dos campos e os tipos, entre outros, de datos. A columna **Tipo** mostra os tipos asociados ao Common Data Model, identificados automaticamente polo sistema ou [mapeados manualmente](map-entities.md) polos usuarios. Trátase de tipos semánticos que poden diferir dos tipos de datos dos atributos, por exemplo, o campo *Correo electrónico* a continuación ten o tipo de datos *Texto* pero o seu tipo de Common Data Model (semántico) pode ser *Correo electrónico* ou *Enderezo de correo electrónico*.
 
 > [!NOTE]
 > As dúas táboas inclúen só unha mostra dos datos da súa entidade. Para ver o conxunto de datos completo, vaia á páxina **Orixes de datos**, seleccione unha entidade, seleccione **Editar** e, a continuación, visualice os datos desta entidade co editor Power Query como se explica en [Orixes de datos](data-sources.md).

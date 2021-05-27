@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887892"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085528"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
@@ -36,11 +36,9 @@ Podes engadir unha orixe de datos de tres xeitos principais:
 
 Admite datos interesantes de orixes de datos locais da Información do público en función dos fluxos de datos de Power Platform. Os fluxos de datos pódense activar en Customer Insights [proporcionando o URL do contorno de Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) ao configurar o ambiente.
 
-As fontes de datos que se creen despois de asociar un contorno de Dataverse con Customer Insights usarán [fluxos de datos e Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante as pasarelas de datos. Elimine e recree fontes de datos que existían antes de que un ambiente de Dataverse estivese asociado para usar as pasarelas de datos locais.
+As fontes de datos que se creen despois de asociar un contorno de Dataverse con Customer Insights usarán [fluxos de datos e Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante a pasarela de datos. Elimine e volva crear as orixes de datos que existían antes de que se asociase un ambiente de Dataverse para [usar as pasarelas de datos locais](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Power Platform onde pode ver e configurar pasarelas de datos locais.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de pantalla da páxina de fontes de datos que mostra ligazóns que apuntan ao ambiente de Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Revisa os datos inxeridos
 

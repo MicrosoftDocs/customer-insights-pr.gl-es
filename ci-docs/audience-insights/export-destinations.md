@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896141"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016612"
 ---
 # <a name="exports-preview-overview"></a>Visión xeral das exportacións (versión preliminar)
 
 A páxina **Exportacións** mostra todas as exportacións configuradas. As exportacións comparten datos específicos con varias aplicacións. Poden incluír perfís ou entidades de clientes, esquemas e detalles de asignación. Cada exportación require unha [conexión, configurada por un administrador, para xestionar a autenticación e o acceso](connections.md).
-
-> [!NOTE]
-> Ata marzo de 2021, as exportacións creaban automaticamente unha conexión co servizo correspondente. As exportacións agora requiren unha [conexión, creada e compartida por un administrador](connections.md) antes de poder crealas.
 
 Vaia a **Datos** > **Exportacións** para ver a páxina de exportacións. Todos os roles de usuario teñen acceso para ver as exportacións configuradas. Uso do campo de busca na barra de comandos para atopar exportacións polo seu nome, nome de conexión ou tipo de conexión.
 
