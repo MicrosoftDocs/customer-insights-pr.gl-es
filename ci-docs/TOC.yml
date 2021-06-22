@@ -96,30 +96,40 @@
           href: audience-insights/measures.md
     - name: Predicións
       items:
-        - name: Completar datos empregando predicións de valor
-          href: audience-insights/predictions.md
-        - name: Prever a renovación de subscricións
-          href: audience-insights/predict-subscription-churn.md
-        - name: Guía de mostra da predición do abandono da subscrición
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Predicir o abandono transaccional
-          href: audience-insights/predict-transactional-churn.md
-        - name: Guía de mostra da predición do abandono transaccional
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Predicir valor de duración do cliente (VDC)
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Predicir recomendacións de produtos
-          href: audience-insights/predict-product-recommendation.md
-        - name: Guía de mostra de predición de recomendacións de produtos
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Predicir datos coa axuda da IA
+          items:
+            - name: Visión xeral dos modelos de predición
+              href: audience-insights/predictions-overview.md
+            - name: Predicir valor de duración do cliente (VDC)
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Predicir recomendacións de produtos
+              href: audience-insights/predict-product-recommendation.md
+            - name: Prever a renovación de subscricións
+              href: audience-insights/predict-subscription-churn.md
+            - name: Predicir o abandono transaccional
+              href: audience-insights/predict-transactional-churn.md
+            - name: Usar os modelos personalizados da Aprendizaxe automática de Azure
+              href: audience-insights/custom-models.md
+            - name: Completar os datos que faltan parcialmente
+              href: audience-insights/predictions.md
+        - name: Guías de mostra
+          items:
+            - name: Guía de mostra para predicir o VDC
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Guía de mostra da predición do abandono da subscrición
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Guía de mostra da predición do abandono transaccional
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Guía de mostra de predición de recomendacións de produtos
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Experimentos con Aprendizaxe automática de Azure
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Experimentos de Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Xestionar predicións
+          href: audience-insights/manage-predictions.md
         - name: Crear segmentos baseados en predicións
           href: audience-insights/prediction-based-segment.md
-        - name: Implementar modelos personalizados de aprendizaxe automática
-          href: audience-insights/custom-models.md
-        - name: Experimentos con Aprendizaxe automática de Azure
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Experimentos de Azure Machine Learning Studio
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Exportar opcións
       items:
         - name: Exportacións
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: LinkedIn Ads
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Microsoft Advertising
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -200,6 +216,8 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Revisar esquemas de entidades no Common Data Model
           href: audience-insights/entity-schemas.md
+        - name: Datos de Customer Insights en Dataverse
+          href: audience-insights/customer-insights-dataverse.md
         - name: Traballar con API
           href: audience-insights/apis.md
         - name: Referencias das API
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Crear informes de perfís unificados
           href: engagement-insights/profile-reports.md
+        - name: Ver e crear dimensións
+          href: engagement-insights/dimensions.md
+        - name: Ver e crear métricas
+          href: engagement-insights/metrics.md
+        - name: Ver e crear segmentos
+          href: engagement-insights/segments.md
     - name: Análise de viaxes
       items:
         - name: Crear e xestionar informes de funil
