@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e futuras
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988918"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263249"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Actualizacións de maio de 2021
+
+As actualizacións de maio de 2021 inclúen varias funcións, actualizacións de rendemento e corrección de erros.
+
+### <a name="data-ingestion"></a>Inxestión de datos
+
+- **Ver ou modificar a definición das entidades ou os metadatos ao anexar datos de Azure Data Lake Storage** Agora pode ver e editar a definición das entidades ou os metadatos na información do público ao anexar datos dun cartafol de Common Data Model en Azure Data Lake Storage. Esta capacidade proporciona comentarios, validación do modelo e comprobación de erros en tempo real. Permite editar tanto o ficheiro model.json como o manifest.json sen problemas.
+
+### <a name="extensibility"></a>Extensibilidade
+
+- **Exportacións de segmentos, programación personalizada e duplicación melloradas** Agora pode [ver todas as exportacións dun segmento específico](export-destinations.md#view-exports-and-export-details) nunha lista. Esta nova vista axuda a xestionar como se usa un segmento específico e a adaptar as exportacións existentes ou crear outras novas.    
+  Pode [definir programacións de actualización personalizadas](export-destinations.md#schedule-and-run-exports) para exportacións individuais ou varias exportacións á vez. Ata agora, todas as exportacións executábanse con cada actualización do sistema.    
+  En vez de crear unha nova exportación desde cero, pode comezar a partir dunha existente para aforrar tempo.
+
+- **Exportar segmentos a Microsoft Advertising** Ampliamos os nosos destinos de exportación para incluír Microsoft Advertising. Cree públicos de Coincidencia de clientes en Microsoft Advertising cos datos de perfil de cliente unificado e use estes públicos para as campañas de publicidade. Para obter máis información, consulte [Exportar segmentos a Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Exportar segmentos a LinkedIn Ads** Ampliamos os nosos destinos de exportación para incluír LinkedIn Ads e permitirlle desbloquear a orientación aos contactos e ás empresa en LinkedIn exportando os datos dos perfís de clientes unificados. Para obter máis información, consulte [Exportar segmentos a LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Exportar segmentos a Omnisend** Ampliamos os nosos destinos de exportación para incluír Omnisend. Use os segmentos creados na información do público para xerar campañas, proporcionar márketing por correo electrónico e usar grupos específicos de clientes con Omnisend. Para obter máis información, consulte [Exportar segmentos a Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Predicións
+
+- **Informe de usabilidade dos datos de entrada** O informe de usabilidade dos datos de entrada ofrece unha visión consolidada dos erros e advertencias que poden xerar as predicións listas para utilizar. Tamén ofrece recomendacións sobre como mellorar o desempeño do modelo.    
+  O informe estará dispoñible despois de que un modelo finalice o seu proceso de adestramento. Créase para cada modelo por separado, independentemente de se se completou correctamente ou non.
+  Actualmente esta funcionalidade só está dispoñible para o modelo de abandono da transacción. Para máis información, consulte [Informe de usabilidade dos datos de entrada](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Relacións
+
+- **Visualizador de relacións** A vista do visualizador de relacións permítelle ver todas as relacións existentes entre entidades e a súa cardinalidade. Agora as relacións organízanse en grupos: relacións creadas polo usuario, relacións do sistema e relacións herdadas. Tamén pode exportar unha vista como imaxe. Para obter máis información, consulte [Ver relacións](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Actualizacións de abril de 2021
 

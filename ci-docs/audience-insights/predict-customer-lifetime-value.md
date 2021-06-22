@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954577"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095508"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predición do valor de duración do cliente (VDC) (versión preliminar)
 
@@ -149,7 +149,6 @@ Os datos que reflicten as interaccións clave dos clientes (como rexistros de we
 
 1. Seleccione **Seguinte**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Revisar e executar a configuración do modelo
 
 1. No paso **Revisar os detalles do seu modelo**, valide a configuración da predición. Pode volver a calquera parte da configuración da predición seleccionando **Editar** no valor amosado. Tamén pode seleccionar un paso de configuración no indicador de progreso.
@@ -170,11 +169,10 @@ Os datos que reflicten as interaccións clave dos clientes (como rexistros de we
 - **Estado**: Estado da execución da predición.
     - **En cola**: a predición está á espera de que finalicen outros procesos.
     - **Actualizando**: a predición está executándose actualmente para crear resultados que fluirán cara á entidade de saída.
-    - **Fallou**: Fallou a execución da predición. Para obter máis detalles, [revise os rexistros](#troubleshoot-a-failed-prediction).
+    - **Fallou**: Fallou a execución da predición. Para obter máis detalles, [revise os rexistros](manage-predictions.md#troubleshoot-a-failed-prediction).
     - **Con éxito**: a predición tivo éxito. Seleccione **Ver** nos tres puntos verticais para revisar os resultados da predición.
 - **Editado**: a data na que se modificou a configuración da predición.
 - **Última actualización**: a data na que a predición actualizou os resultados na entidade de saída.
-
 
 ### <a name="review-prediction-results"></a>Revisar os resultados da predición
 
@@ -216,28 +214,8 @@ Hai tres seccións principais de datos dentro da páxina de resultados.
 
 - **Factores máis influentes**: Considéranse varios factores ao crear a súa predición do VDC en función dos datos de entrada proporcionados ao modelo IA. Cada un dos factores ten calculada a súa importancia para as predicións agregadas que crea un modelo. Pode usar estes factores para axudar a validar os resultados da súa predición. Estes factores tamén ofrecen máis información sobre os factores máis influentes que contribuíron á predición do VDC en todos os seus clientes.
 
-## <a name="refresh-a-prediction"></a>Actualizar unha predición
+## <a name="manage-predictions"></a>Xestionar predicións
 
-As predicións actualízanse automaticamente na mesma [programación que as actualizacións dos datos](system.md#schedule-tab) como se configura na configuración. Tamén pode actualizalos manualmente.
-
-1. Vaia a **Intelixencia** > **Predicións** e seleccione o separador **As miñas predicións**.
-2. Seleccione os tres puntos verticais xunto á predición que quere actualizar.
-3. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar unha predición
-
-Eliminar unha predición tamén elimina a súa entidade de saída.
-
-1. Vaia a **Intelixencia** > **Predicións** e seleccione o separador **As miñas predicións**.
-2. Seleccione os tres puntos verticais xunto á predición que quere eliminar.
-3. Seleccione **Eliminar**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Resolver problemas de predición fallida
-
-1. Vaia a **Intelixencia** > **Predicións** e seleccione o separador **As miñas predicións**.
-2. Seleccione os tres puntos verticais xunto á predición para a que desexa ver os rexistros de erros.
-3. Seleccione **Rexistros**.
-4. Revise todos os erros. Existen varios tipos de erros que poden ocorrer e describen que problema causou o erro. Por exemplo, un erro de que non ten datos suficientes para predicir con precisión resólvese normalmente cargando máis datos na información sobre o público.
-
+É posible optimizar, solucionar problemas, actualizar ou eliminar predicións. Revise un informe de usabilidade dos datos de entrada para saber como facer unha predición máis rápido e máis fiable. Para obter máis información, consulte [Xestionar predicións](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

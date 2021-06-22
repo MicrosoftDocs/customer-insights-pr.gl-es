@@ -1,7 +1,7 @@
 ---
 title: Enriquecer os perfís de clientes con datos de Microsoft
 description: Use datos propietarios de Microsoft para enriquecer os seus datos de clientes con afinidades de marcas e intereses.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064889"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245705"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquecer os perfís de clientes con afinidades de marca e intereses (vista previa)
 
@@ -69,12 +69,10 @@ Unha experiencia guiada axúdalle a configurar os enriquecementos.
 
 ### <a name="define-your-brands-or-interests"></a>Definir as marcas ou os intereses
 
-Seleccione unha das seguintes opcións:
+Escolla ata cinco marcas ou intereses usando unha ou as dúas opcións seguintes:
 
-- **Sector**: o sistema identifica as principais marcas ou intereses relevantes para a súa industria e enriquece os datos dos seus clientes con elas.
-- **Elixa o seu**: seleccione ata cinco elementos da lista de marcas ou intereses máis relevantes para a súa organización.
-
-Para engadir unha marca ou interese, introdúzaa na área de entrada para obter suxestións baseadas nos termos correspondentes. Se non enumeramos unha marca ou interese que está a buscar, envíenos comentarios usando a ligazón **Suxerir**.
+- **Sector**: seleccione o sector da lista despregable e logo escolla entre as mellores marcas ou intereses para ese sector.
+- **Escoller os seus propios**: insira unha marca ou interese que sexa relevante para a súa organización e logo escolla entre as suxestións coincidentes. Se non enumeramos unha marca ou interese que está a buscar, envíenos comentarios usando a ligazón **Suxerir**.
 
 ### <a name="review-enrichment-preferences"></a>Revisar preferencias de enriquecemento
 

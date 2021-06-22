@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906762"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095554"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predición de recomendacións de produtos (versión preliminar)
 
@@ -205,33 +205,9 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
        > [!div class="mx-imgBorder"]
        > ![Lista que mostra suxestións de alta confianza para un conxunto selecto de clientes individuais](media/product-recommendation-highconfidence.PNG "Lista que mostra suxestións de alta confianza para un conxunto selecto de clientes individuais")
 
-## <a name="fix-a-failed-prediction"></a>Corrixir unha predición fallida
+## <a name="manage-predictions"></a>Xestionar predicións
 
-1. Vaia ao separador **As miñas predicións** en **Intelixencia** > **Predicións**.
-
-1. Seleccione a predición para a que desexa ver os rexistros de erros e seleccione **Rexistros**.
-
-1. Revise todos os erros. Existen varios tipos de erros que poden ocorrer e describen que problema causou o erro. Por exemplo, normalmente resólvese un erro que non ten datos suficientes para predicir con precisión cargando máis datos en Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Actualizar unha predición
-
-As predicións actualízanse automaticamente na mesma [programación que as actualizacións dos datos](system.md#schedule-tab) como se configura na configuración.
-
-1. Vaia ao separador **As miñas predicións** en **Intelixencia** > **Predicións**.
-
-1. Seleccione os tres puntos verticais xunto á predición que quere actualizar.
-
-1. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar unha predición
-
-Eliminar unha predición tamén eliminará a súa entidade de saída.
-
-1. Vaia ao separador **As miñas predicións** en **Intelixencia** > **Predicións**.
-
-1. Seleccione os tres puntos verticais xunto á predición que quere eliminar.
-
-1. Seleccione **Eliminar**.
+É posible optimizar, solucionar problemas, actualizar ou eliminar predicións. Revise un informe de usabilidade dos datos de entrada para saber como facer unha predición máis rápido e máis fiable. Para obter máis información, consulte [Xestionar predicións](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

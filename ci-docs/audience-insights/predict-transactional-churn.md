@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906854"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095600"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predición de abandono transaccional (previsualización)
 
@@ -144,7 +144,7 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
    - **Estado:** Estado da execución da predición.
         - **En cola:** a predición está á espera de que se executen outros procesos.
         - **Actualizando:** a predición está executándose actualmente para producir resultados que fluirán cara á entidade de saída.
-        - **Fallou:** Fallou a execución da predición. Para obter máis detalles, [revise os rexistros](#troubleshoot-a-failed-prediction).
+        - **Fallou:** Fallou a execución da predición. Para obter máis detalles, [revise os rexistros](manage-predictions.md#troubleshoot-a-failed-prediction).
         - **Con éxito:** a predición tivo éxito. Seleccione **Ver** nos tres puntos verticais para revisar a predición
    - **Editado:** a data na que se modificou a configuración da predición.
    - **Última actualización:** a data na que a predición actualizou resultados na entidade de saída.
@@ -168,35 +168,9 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
        
     1. **Factores máis influentes:** hai moitos factores que se teñen en conta á hora de crear a súa predición. Cada un dos factores ten a súa importancia calculada para as predicións agregadas que crea un modelo. Pode usar estes factores para axudar a validar os resultados da súa predición. Ou pode usar esta información máis tarde para [crear segmentos](segments.md) que poderían axudalo a influír no risco de renovación dos clientes.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Resolver problemas de predición fallida
+## <a name="manage-predictions"></a>Xestionar predicións
 
-1. Vaia a **Intelixencia** > **Predicións** e seleccione o separador **As miñas predicións**.
-
-1. Seleccione os tres puntos verticais xunto á predición para a que desexa ver os rexistros de erros.
-
-1. Seleccione **Rexistros**.
-
-1. Revise todos os erros. Existen varios tipos de erros que poden ocorrer e describen que problema causou o erro. Por exemplo, un erro que consiste en que non hai datos suficientes para predicir con precisión adoita resolverse cargando datos adicionais en Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Actualizar unha predición
-
-As predicións actualizaranse automaticamente no mesmo [programa que actualiza os seus datos](system.md#schedule-tab) tal e como se configura nos axustes. Tamén pode actualizalos manualmente.
-
-1. Vaia a **Intelixencia** > **Predicións** e seleccione o separador **As miñas predicións**.
-
-1. Seleccione os tres puntos verticais xunto á predición que quere actualizar.
-
-1. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar unha predición
-
-Eliminar unha predición tamén elimina a súa entidade de saída.
-
-1. Vaia a **Intelixencia** > **Predicións** e seleccione o separador **As miñas predicións**.
-
-1. Seleccione os tres puntos verticais xunto á predición que quere eliminar.
-
-1. Seleccione **Eliminar**.
+É posible optimizar, solucionar problemas, actualizar ou eliminar predicións. Revise un informe de usabilidade dos datos de entrada para saber como facer unha predición máis rápido e máis fiable. Para obter máis información, consulte [Xestionar predicións](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

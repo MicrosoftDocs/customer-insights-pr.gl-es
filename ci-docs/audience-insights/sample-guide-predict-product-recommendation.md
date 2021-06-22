@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595271"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129897"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guía de mostra de predición de recomendacións de produtos (versión preliminar)
 
@@ -22,7 +22,7 @@ Guiarémolo a través dun exemplo integral de predición de recomendacións de p
 
 ## <a name="scenario"></a>Escenario
 
-Contoso é unha empresa que produce cafés e máquinas de café de alta calidade, que venden a través do seu sitio web Contoso Coffee. O seu obxectivo é comprender que produtos deben recomendar aos seus clientes recorrentes. Sabendo que clientes son máis **susceptibles a comprar**, pode axudalos a aforrar esforzos de marketing centrándose en elementos específicos.
+Contoso é unha empresa que produce café e máquinas de café de alta calidade, que se venden a través do sitio web Contoso Coffee. O seu obxectivo é comprender que produtos deben recomendar aos seus clientes recorrentes. Sabendo que clientes son máis **susceptibles a comprar**, pode axudalos a aforrar esforzos de marketing centrándose en elementos específicos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -65,7 +65,7 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
 
 1. No campo **Nome** do panel lateral, cambie o nome da súa orixe de datos de **Consulta** a **eCommercePurchases**.
 
-1. Garde a orixe de datos.
+1. **Garde** a orixe de datos.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Inxerir datos de clientes desde o esquema de fidelización
@@ -83,11 +83,11 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
 
 1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **loyCustomers**.
 
-1. Garde a orixe de datos.
+1. **Garde** a orixe de datos.
 
 ## <a name="task-2---data-unification"></a>Tarefa 2: unificación de datos
 
-Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de coincidencias e combinación** para crear un perfil de cliente unificado. Para obter máis información, consulte [Unificación de datos](data-unification.md).
+Despois de inxerir os datos, comezamos o proceso de unificación de datos para crear un perfil de cliente unificado. Para obter máis información, consulte [Unificación de datos](data-unification.md).
 
 ### <a name="map"></a>Asignar
 
@@ -156,7 +156,7 @@ Cos perfís de clientes unificados no seu lugar, agora podemos executar a predic
 
    - **Número de produtos**: Configure este valor en **5**. Esta configuración define cantos produtos desexa recomendar aos seus clientes.
 
-   - **Suxerir produtos que os clientes compraron recentemente?**: Seleccione **Si** para indicar que desexa incluír produtos na recomendación que os seus clientes compraron antes.
+   - **Compras repetidas esperadas**: seleccione **Si** para indicar que quere incluír produtos na recomendación que os seus clientes compraron con anterioridade.
 
    - **Ventá para ver días pasados:** Seleccione polo menos **365 días**. Esta configuración define o número de días pasados que o modelo mira na actividade do cliente que se van usar como entrada para as súas recomendacións.
    

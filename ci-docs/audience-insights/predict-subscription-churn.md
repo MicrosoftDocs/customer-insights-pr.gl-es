@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906900"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095646"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predición da renovación da subscrición (vista previa)
 
@@ -147,30 +147,9 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
        > [!div class="mx-imgBorder"]
        > ![Lista que mostra factores influentes e a súa importancia para predicir o resultado da renovación](media/subscription-churn-influentialfactors.PNG "Lista que mostra factores influentes e a súa importancia para predicir o resultado da renovación")
 
-## <a name="fix-a-failed-prediction"></a>Corrixir unha predición fallida
+## <a name="manage-predictions"></a>Xestionar predicións
 
-1. Vaia ao separador **As miñas predicións** en **Intelixencia** > **Predicións**.
-1. Seleccione a predición para a que desexa ver os rexistros de erros e seleccione **Rexistros**.
-   > [!div class="mx-imgBorder"]
-   > ![Vista da barra do menú de resultados, incluídos os botóns de peche, modelo de edición e rexistros](media/subscription-churn-logsbutton.PNG "Vista da barra do menú de resultados, incluídos os botóns de peche, modelo de edición e rexistros")
-1. Revise todos os erros. Existen varios tipos de erros que poden ocorrer e describen que problema causou o erro. Por exemplo, un erro de que non ten datos suficientes para predicir con precisión resólvese normalmente cargando datos adicionais.
-
-## <a name="refresh-a-prediction"></a>Actualizar unha predición
-
-As predicións actualizaranse automaticamente no mesmo [programa que actualiza os seus datos](system.md#schedule-tab) tal e como se configura nos axustes.
-
-1. Vaia ao separador **As miñas predicións** en **Intelixencia** > **Predicións**.
-1. Seleccione os tres puntos verticais xunto á predición que quere actualizar.
-1. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar unha predición
-
-1. Vaia ao separador **As miñas predicións** en **Intelixencia** > **Predicións**.
-1. Seleccione os tres puntos verticais xunto á predición que quere eliminar.
-1. Seleccione **Eliminar**.
-
-> [!NOTE]
-> Se elimina unha predición eliminarase a súa entidade de saída.
+É posible optimizar, solucionar problemas, actualizar ou eliminar predicións. Revise un informe de usabilidade dos datos de entrada para saber como facer unha predición máis rápido e máis fiable. Para obter máis información, consulte [Xestionar predicións](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
