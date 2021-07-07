@@ -136,6 +136,8 @@
           items:
             - name: Visión xeral das exportacións
               href: audience-insights/export-destinations.md
+            - name: As miñas campañas
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -234,14 +240,14 @@
       href: engagement-insights/overview.md
     - name: Proba gratuíta
       href: 'https://pi.dynamics.com/'
-    - name: Introdución
+    - name: Comezar
       items:
-        - name: Introdución
+        - name: Comezar
           href: engagement-insights/get-started.md
         - name: Crear unha área de traballo
           href: engagement-insights/create-workspace.md
-        - name: Equipar o seu sitio web
-          href: engagement-insights/instrument-website.md
+        - name: Capturar eventos desde aplicacións móbiles e sitios web
+          href: engagement-insights/developer-resources.md
         - name: Conceptos e terminoloxía
           href: engagement-insights/glossary.md
     - name: Eventos
@@ -272,10 +278,18 @@
       items:
         - name: Visión xeral de recursos para programadores
           href: engagement-insights/developer-resources.md
-        - name: Titorial de SDK web
+        - name: Titorial do SDK web
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Exemplo de SDK web
           href: engagement-insights/websdk-sample.md
+        - name: Titorial do SDK de Android
+          href: engagement-insights/get-started-android.md
+        - name: Exemplo de SDK de Android
+          href: engagement-insights/androidsdk-sample.md
+        - name: Titorial sobre o SDK de iOS
+          href: engagement-insights/get-started-ios.md
+        - name: Mostra do SDK de iOS
+          href: engagement-insights/iossdk-sample.md
     - name: Administración
       items:
         - name: Roles e permisos
