@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896049"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305292"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecemento de perfís de clientes con HERE Technologies (vista previa)
 
@@ -26,7 +26,7 @@ Para configurar os enriquecementos de HERE Technologies, deben cumprirse os segu
 
 - Ten unha subscrición activa de HERE Technologies. Para obter unha subscrición, pode [inscribirse aquí](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ou [poñerse en contacto con HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) directamente. [Obteña máis información sobre o enriquecemento de localización de HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Hai unha [conexión](connections.md) de HERE dispoñible *ou* ten permisos de [administrador](permissions.md#administrator) e a clave da API de HERE Technologies.
+- Hai unha [conexión](connections.md) de HERE dispoñible *ou* ten permisos de [administrador](permissions.md#administrator) e a clave de API de HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 
@@ -37,7 +37,7 @@ Para configurar os enriquecementos de HERE Technologies, deben cumprirse os segu
    > [!div class="mx-imgBorder"]
    > ![Mosaico de HERE Technologies](media/HERE-tile.png "Mosaico de HERE Technologies")
 
-1. Seleccione unha [conexión](connections.md) da lista despregable. Póñase en contacto cun administrador se non hai conexión dispoñible. Se é administrador, pode crear unha conexión seleccionando **Engadir conexión**. Escolla **HERE Technologies** desde o menú despregable. 
+1. Seleccione unha [conexión](connections.md) da lista despregable. Póñase en contacto cun administrador se non hai conexión dispoñible. Se é administrador, pode crear unha conexión seleccionando **Engadir conexión**. Escolla **HERE Technologies** da lista despregable. 
 
 1. Seleccione **Conectar con HERE Technologies** para confirmar a selección.
 
@@ -66,13 +66,13 @@ Debe ser administrador para configurar as conexións. Seleccione **Engadir conex
 
 1. Proporcione unha clave de API de HERE Technologies válida.
 
-1. Revise e proporcione o seu consentimento para a **Privacidade de datos e cumprimento** seleccionando a caixa de verificación **Estou de acordo**
+1. Revise e proporcione o seu consentimento para a **Privacidade e cumprimento de datos** seleccionando **Estou de acordo**.
 
 1. Seleccione **Verificar** para validar a configuración.
 
 1. Despois de completar a verificación, seleccione **Gardar**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Páxina de configuración da conexión de HERE Technologies](media/enrichment-HERE-connection.png "Páxina de configuración da conexión de HERE Technologies")
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
@@ -85,7 +85,7 @@ Pode acceder a unha vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos seguintes
 
-Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
+Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md) e [medidas](measures.md), e incluso [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 

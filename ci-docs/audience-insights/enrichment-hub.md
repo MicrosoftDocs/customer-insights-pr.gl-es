@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954485"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305246"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -22,7 +22,8 @@ Use datos de fontes como Microsoft e outros socios para enriquecer os seus datos
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Páxina da plataforma común de enriquecemento":::
 
-Na información do público, vaia a **Datos** > **Enriquecemento** para traballar con opcións de enriquecemento.    
+Na información do público, vaia a **Datos** > **Enriquecemento** para traballar con opcións de enriquecemento.  
+
 Debe ter permisos de colaborador ou administrador para crear ou editar enriquecementos. Para obter máis información, consulte [Permisos](permissions.md).
 
 No separador **Descubrir**, atopará os seguintes enriquecementos:
@@ -31,7 +32,7 @@ No separador **Descubrir**, atopará os seguintes enriquecementos:
 - [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
 - [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft
 - [Datos da empresa](enrichment-leadspace.md) proporcionados por Leadspace
-- [Datos demográficos](enrichment-experian.md) proporcionados por Experian
+- [Demografía](enrichment-experian.md) fornecida por Experian
 - [Datos de localización](enrichment-here.md) subministrados por HERE Technologies
 - [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP)
 
@@ -39,7 +40,7 @@ No separador **Os meus enriquecementos**, pode ver os enriquecementos que config
 
 ## <a name="manage-existing-enrichments"></a>Xestionar os enriquecementos existentes
 
-Vaia a **Os meus enriquecementos** para ver todos os enriquecementos configurados. Cada enriquecemento represéntase como unha liña que inclúe información adicional sobre o enriquecemento.
+Vaia ao separador **Os meus enriquecementos** para ver todos os enriquecementos configurados. Cada enriquecemento represéntase como unha liña que inclúe información adicional sobre o enriquecemento.
 
 Seleccione un enriquecemento para ver as opcións dispoñibles. Tamén pode seleccionar os puntos suspensivos (...) nun elemento da lista para ver as opcións.
 
@@ -59,6 +60,6 @@ Os enriquecementos de terceiros configúranse usando [conexións](connections.md
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Enriquecementos múltiples do mesmo tipo
 
-A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueza os datos só dun segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver na páxina **Enriquecemento**.
+A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueceza datos só para un segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver na páxina **Enriquecemento**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

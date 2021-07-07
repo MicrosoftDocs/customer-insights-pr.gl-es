@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595516"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306301"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guía de mostra (previsualización) da predición do abandono da subscrición
 
@@ -22,7 +22,7 @@ Guiarémolo a través dun exemplo integral de predición do abandono da subscric
 
 ## <a name="scenario"></a>Escenario
 
-Contoso é unha empresa que produce cafés e máquinas de café de alta calidade, que venden a través do seu sitio web Contoso Coffee. Recentemente iniciaron un negocio de subscrición para que os seus clientes tomasen café de xeito habitual. O seu obxectivo é comprender que clientes subscritos poden cancelar a súa subscrición nos próximos meses. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
+Contoso é unha empresa que produce café e máquinas de café de alta calidade, que se venden a través do sitio web Contoso Coffee. Recentemente iniciaron un negocio de subscrición para que os seus clientes tomasen café de xeito habitual. O seu obxectivo é comprender que clientes subscritos poden cancelar a súa subscrición nos próximos meses. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -128,7 +128,7 @@ Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de
 
 1. Vaia ao separador **Buscar coincidencias** e seleccione **Definir orde**.
 
-1. No lista despregable **Primario**, escolla **eCommerceContacts: eCommerce** como fonte principal e inclúa todos os rexistros.
+1. Na lista despregable **Principal**, escolla **eCommerceContacts : eCommerce** como fonte principal e inclúa todos os rexistros.
 
 1. Na lista despregable **Entidade 2**, escolla **loyCustomers: LoyaltyScheme** e inclúa todos os rexistros.
 
@@ -146,8 +146,8 @@ Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de
 1. Introduza o nome **FullName, Email** para a nova regra.
 
    * Engada unha segunda condición para o enderezo de correo electrónico seleccionando **Engadir condición**
-   * Para os eCommerceContacts da entidade, escolla **EMail** no menú despregable.
-   * Para os loyCustomers da entidade, escolla **EMail** no menú despregable. 
+   * Para os eCommerceContacts da entidade, escolla **Correo electrónico** no menú despregable.
+   * Para os loyCustomers da entidade, escolla **Correo electrónico** no menú despregable. 
    * Deixe Normalizar en branco. 
    * Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
 

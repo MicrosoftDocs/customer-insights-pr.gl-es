@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965576"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305430"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecemento dos perfís de clientes con enderezos mellorados
 
@@ -22,11 +22,11 @@ Os enderezos dos seus datos poden estar sen estruturar, incompletos ou ser incor
 
 ## <a name="how-we-enhance-addresses"></a>Como melloramos os enderezos
 
-O noso modelo pasa por un proceso de dous pasos para mellorar un enderezo. En primeiro lugar, analiza o enderezo para identificar os seus compoñentes e colócaos nun formato estruturado. Despois, empregamos a intelixencia artificial para corrixir, completar e estandarizar os valores do enderezo.
+O noso modelo pasa por un proceso de dous pasos para mellorar un enderezo. En primeiro lugar, analiza o enderezo para identificar os seus compoñentes e colócaos nun formato estruturado. Despois, empregamos a IA para corrixir, completar e estandarizar os valores do enderezo.
 
 ### <a name="example"></a>Exemplo
 
-A información dos enderezos pode ter un formato non estándar e conter erros de ortografía. O modelo pode solucionar estes problemas e crear enderezos coherentes en perfís de clientes unificados.
+A información do enderezo pode ter un formato non estándar e conter erros ortográficos. O modelo pode solucionar estes problemas e crear enderezos coherentes en perfís de clientes unificados.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Os enderezos mellorados só funcionan cos valores que xa existen nos seus datos 
 2. Comproba se os valores, como os códigos postais ou os nomes de rúas, son válidos.
 3. Modifica os valores que non recoñece.
 
-O modelo utiliza técnicas baseadas na aprendizaxe automática para mellorar os enderezos. Aínda que aplicamos un limiar de confianza elevado para cando o modelo modifica un valor de entrada, como con calquera modelo baseado en aprendizaxe automática, non se garante unha precisión do 100 %.
+O modelo utiliza técnicas baseadas na aprendizaxe automática para mellorar os enderezos. Aínda que aplicamos un limiar de confianza elevado para cando o modelo cambia un valor de entrada, como con calquera modelo baseado na aprendizaxe automática, non se garante a precisión do 100 %.
 
 ## <a name="supported-countries-or-regions"></a>Países ou rexións admitidos
 
@@ -76,7 +76,7 @@ Os enderezos deben conter un valor de país ou rexión. Non procesamos enderezos
 1. Escolla como se formatan os enderezos nos conxuntos de datos. Escolla **Enderezo cun único atributo** se os enderezos dos seus datos usan só un campo. Escolla **Enderezo con varios atributos** se os enderezos dos seus datos usan máis dun campo de datos.
 
    > [!NOTE]
-   > O país ou rexión é obrigatorio tanto no enderezo cun único atributo como no que ten varios. Os enderezos que non conteñan valores de país ou rexión válidos ou admitidos non se enriquecerán
+   > O país/rexión é obrigatorio tanto nos enderezos de atributo único como de varios atributos. Os enderezos que non conteñan valores de país ou rexión válidos ou admitidos non se enriquecerán.
 
 1.  Asigne os campos de enderezo da súa entidade de cliente unificada.
 
@@ -98,6 +98,6 @@ Pode acceder a unha vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos seguintes
 
-Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
+Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md) e [medidas](measures.md), e incluso [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

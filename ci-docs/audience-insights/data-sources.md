@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085528"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304694"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
@@ -30,15 +30,15 @@ Podes engadir unha orixe de datos de tres xeitos principais:
 
 - [A través de decenas de conectores Power Query](connect-power-query.md)
 - [Desde un cartafol de Common Data Model](connect-common-data-model.md)
-- [Desde o seu propio lago de Common Data Service](connect-common-data-service-lake.md)
+- [Desde o seu propio lago de Microsoft Dataverse](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Engadir datos de fontes de datos locais
 
-Admite datos interesantes de orixes de datos locais da Información do público en función dos fluxos de datos de Power Platform. Os fluxos de datos pódense activar en Customer Insights [proporcionando o URL do contorno de Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) ao configurar o ambiente.
+Admite datos interesantes de orixes de datos locais da Información do público en función dos fluxos de datos de Microsoft Power Platform. Os fluxos de datos pódense activar en Customer Insights [proporcionando o URL do contorno de Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) ao configurar o ambiente.
 
-As fontes de datos que se creen despois de asociar un contorno de Dataverse con Customer Insights usarán [fluxos de datos e Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante a pasarela de datos. Elimine e volva crear as orixes de datos que existían antes de que se asociase un ambiente de Dataverse para [usar as pasarelas de datos locais](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+As fontes de datos que se creen despois de asociar un contorno de Dataverse con Customer Insights usarán [fluxos de datos e Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante a pasarela de datos. Elimine e volva crear as orixes de datos que existían antes de que se asociase un ambiente de Dataverse para [usar as pasarelas de datos locais](/data-integration/gateway/service-gateway-app.md).
 
-As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Power Platform onde pode ver e configurar pasarelas de datos locais.
+As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Microsoft Power Platform onde pode ver e configurar pasarelas de datos locais.
 
 ## <a name="review-ingested-data"></a>Revisa os datos inxeridos
 
@@ -56,7 +56,7 @@ Verá o nome de cada orixe de datos inxerida, o seu estado e a última vez que s
 
 Seleccione o valor na columna **Estado** de calquera orixe de datos para revisar máis detalles. No panel **Detalles do progreso**, expanda as **Fontes de datos**. Seleccione **Ver detalles** para ver máis información sobre o estado de actualización, incluídos os detalles de erros e as actualizacións de procesos posteriores.
 
-A carga de datos pode levar un tempo. Despois dunha actualización con éxito, os datos inxeridos poden revisarse desde a páxina **Entidades**. Para obter máis información, consulte [Entidades](entities.md).
+A carga de datos pode levar moito tempo. Despois dunha actualización con éxito, os datos inxeridos poden revisarse desde a páxina **Entidades**. Para obter máis información, consulte [Entidades](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Actualizar unha orixe de datos
 
@@ -66,7 +66,7 @@ Vaia a **Administrar** > **Sistema** > [**Programar**](system.md#schedule-tab) p
 
 Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
 
-1. Na información do público, vaia a **Datos** > **Orixes de datos**
+1. Na información do público, vaia a **Datos** > **Orixes de datos**.
 
 2. Seleccione os puntos suspensivos verticais xunto á orixe de datos que desexa actualizar e seleccione **Actualizar** da lista despregable.
 
@@ -78,7 +78,7 @@ Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
 
 1. Na información do público, vaia a **Datos** > **Orixes de datos**.
 
-2. Seleccione os tres puntos verticais xunto á orixe de datos que desexa eliminar e seleccione **Eliminar** no menú despregable.
+2. Seleccione os puntos suspensivos verticais xunto á orixe de datos que desexa eliminar e seleccione **Eliminar** do menú despregable.
 
 3. Confirme a eliminación.
 

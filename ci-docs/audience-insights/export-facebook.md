@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976040"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305108"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exportar lista de segmentos ao Xestor de anuncios de Facebook (versión preliminar)
 
@@ -23,11 +23,11 @@ Exporte segmentos de perfís de clientes unificados ao Xestor de anuncios de Fac
 ## <a name="prerequisites-for-connection"></a>Requisitos previos para a conexión
 
 - Debe ter unha [**conta publicitaria de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclúa unha [**conta empresarial de Facebook**](https://business.facebook.com/).
-- Debe ser administrador na [**Conta de anuncios de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Debe ser administrador da [**Conta de anuncios de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Ata 10 millóns de perfís de clientes por exportación ao Xestor de anuncios de Facebook.
+- Ata 10 millóns de perfís de clientes por exportación ao Xestor de anuncios de Facebook.
 - A exportación ao Xestor de anuncios de Facebook está limitada a segmentos.
 - Cree ou actualice audiencias personalizadas en Facebook de tipo *lista de clientes* só.
 - A exportación de segmentos cun total de 10 millón de perfís pode tardar ata 90 minutos en finalizar.
@@ -42,7 +42,7 @@ Antes de que os usuarios poidan crear unha exportación, un administrador debe c
 
 1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
 
-1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será **Administradores**. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Autenticar con anuncios de Facebook: 
 
@@ -52,7 +52,7 @@ Antes de que os usuarios poidan crear unha exportación, un administrador debe c
 
    1. Seleccione a **conta publicitaria de Facebook** coa que desexa traballar.
 
-   1. Seleccione un **Público personalizado existente** da lista despregable ou cree un **Novo público personalizado**. Para obter máis información, consulte [**Públicos no Xestor de anuncios de Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+   1. Seleccione un **Público personalizado existente** na lista despregable ou cree un **Novo público personalizado**. Para obter máis información, consulte [**Públicos no Xestor de anuncios de Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
       > Só pode crear ou actualizar públicos personalizados eb Facebook do tipo *lista de clientes* con esta exportación. Nalgúns casos, ve audiencias personalizadas de diferentes tipos na lista despregable. Seleccionar un tipo diferente á *lista de clientes* producirá un fallo na exportación. 
 
@@ -68,14 +68,15 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Seleccione **Engadir destino** para crear unha nova exportación. 
 
-1. En **Conexión da exportación** escolla unha conexión da sección **Xestor de anuncios de Facebook**. Se non ve o nome desta sección, non hai conexións deste tipo dispoñibles para vostede.
+1. En **Conexión da exportación** escolla unha conexión da sección **Xestor de anuncios de Facebook**. Se non ve o nome desta sección, non ten ningunha conexión deste tipo dispoñible.
 
 1. No **campo Escoller o identificador clave**, seleccione **Correo electrónico**, **Nome e enderezo** ou **Teléfono** para enviar ao Xestor de anuncios de Facebook. 
 
 1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**.
 
 1. Asigne os atributos correspondentes desde a súa entidade de cliente unificada para o identificador de clave seleccionado.
-   > [CONSELLO] As mellores posibilidades de coincidencia danse se selecciona **Correo electrónico** como identificador clave. Se engade identificadores adicionais pode mellorar a coincidencia.
+   > [!TIP]
+   > As mellores posibilidades de coincidencia danse se selecciona **Correo electrónico** como identificador clave. Se engade identificadores adicionais pode mellorar a coincidencia.
 
 1. Seleccione **Engadir atributo** para asignar máis atributos para envialos ao Xestor de anuncios de Facebook. Os atributos do Administrador de anuncios de Facebook asígnanse aos seguintes nomes descritivos de usuario: **FN** = **Nome**, **LN** = **Apelidos**, **FI** = **Inicial nome**, **PHONE** = **Teléfono**, **GEN** = **Sexo**, **DOB** = **Data de nacemento**, **ST** = **Estado**, **CT** = **Cidade**, **ZIP** = **Código postal**, **COUNTRY** = **País/rexión**
 
@@ -85,7 +86,9 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 Ao gardar unha exportación non se executa a exportación inmediatamente.
 
-A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
+A exportación execútase con cada [actualización programada](system.md#schedule-tab). 
+
+Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 

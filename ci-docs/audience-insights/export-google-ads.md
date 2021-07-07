@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976316"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305338"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos a Google Ads (versión preliminar)
 
-Exporte segmentos de perfís de clientes unificados á lista de públicos de Google Ads e utilíceos para anunciarse na Busca de Google, en Gmail, YouTube e na Rede de Display de Google. 
+Exporte segmentos de perfís de clientes unificados a unha lista de público de Google Ads e utilíceos para anunciarse na Busca de Google, Gmail, YouTube e a Rede de visualización de Google. 
 
 ## <a name="prerequisites-for-connection"></a>Requisitos previos para a conexión
 
 -   Ten unha [Conta de Google Ads](https://ads.google.com/) e as correspondentes credenciais de administrador.
--   Ten un [token de programador de Google Ads aprobado](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Cumpre os requisitos da [Política de coincidencia de clientes](https://support.google.com/adspolicy/answer/6299717)
--   Cumpre os requisitos dos [tamaños de lista de remárketing](https://support.google.com/google-ads/answer/7558048) 
-
+-   Ten un [token de programador de Google Ads aprobado](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Cumpre os requisitos da [Política de coincidencia de clientes](https://support.google.com/adspolicy/answer/6299717).
+-   Cumpre os requisitos dos [tamaños de lista de remárketing](https://support.google.com/google-ads/answer/7558048).
 -   Existen públicos en Google Ads e os ID correspondentes. Para obter máis información, consulte [Públicos de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Ten [segmentos configurados](segments.md)
--   Os perfís de clientes unificados nos segmentos exportados conteñen campos que representan un enderezo de correo electrónico, nome e apelidos
+-   Ten [segmentos configurados](segments.md).
+-   Os perfís de clientes unificados nos segmentos exportados conteñen campos que representan un enderezo de correo electrónico, nome e apelidos.
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
@@ -68,7 +67,7 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Seleccione **Engadir destino** para crear unha nova exportación.
 
-1. No campo **Conexión da exportación** escolla unha conexión da sección Google Ads. Se non ve o nome desta sección, non hai conexións deste tipo dispoñibles para vostede.
+1. No campo **Conexión da exportación** escolla unha conexión da sección Google Ads. Se non ve o nome desta sección, non ten ningunha conexión deste tipo dispoñible.
 
 1. Introduza o seu **[ID de audiencia de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e seleccione **Conectar** para inicializar a conexión a Google Ads.
 
@@ -78,7 +77,9 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 Ao gardar unha exportación non se executa a exportación inmediatamente.
 
-A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
+A exportación execútase con cada [actualización programada](system.md#schedule-tab). 
+
+Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895911"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305200"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquecemento de perfís de empresa con Leadspace (vista previa)
 
@@ -57,13 +57,13 @@ Para configurar Leadspace, deben cumprirse os seguintes requisitos previos:
 
 Debe ser administrador para configurar as conexións. Seleccione **Engadir conexión** ao configurar un enriquecemento *ou* vaia a **Administrar** > **Conexións** e seleccione **Configurar** no mosaico de Leadspace.
 
-1. Seleccione **Comezar** 
+1. Seleccione **Comezar**. 
 
 1. Introduza un nome para a conexión na caixa **Nome de visualización**.
 
 1. Forneza un token de Leadspace válido.
 
-1. Revise e proporcione o seu consentimento para a **Privacidade de datos e cumprimento** seleccionando a caixa de verificación **Estou de acordo**
+1. Revise e proporcione o seu consentimento para a **Privacidade e cumprimento de datos** seleccionando **Estou de acordo**.
 
 1. Seleccione **Verificar** para validar a configuración.
 
@@ -81,7 +81,7 @@ Para obter máis información, consulte [API de Leadspace](https://support.leads
 
 ## <a name="next-steps"></a>Pasos seguintes
 
-Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
+Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md) e [medidas](measures.md), e incluso [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 

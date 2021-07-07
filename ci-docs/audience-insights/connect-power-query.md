@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596911"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305889"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conéctarse a unha orixe de datos Power Query
 
@@ -72,7 +72,7 @@ Os conectores cunha marca de verificación na columna **Customer Insights (fluxo
 
 1. Na información do público, vaia a **Datos** > **Orixes de datos**.
 
-2. Seleccione os tres puntos verticais xunto á orixe de datos que desexa cambiar e seleccione **Editar** no menú despregable.
+2. Seleccione os puntos suspensivos verticais xunto á orixe de datos que desexa cambiar e seleccione **Editar** do menú despregable.
 
    > [!div class="mx-imgBorder"]
    > ![Editar opción](media/edit-option-data-sources.png "Editar opción")

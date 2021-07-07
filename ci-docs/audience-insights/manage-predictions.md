@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095708"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315876"
 ---
 # <a name="manage-predictions"></a>Xestionar predicións
 
@@ -35,9 +35,6 @@ Este artigo trata algunhas tarefas que comparten a maioría dos escenarios de pr
 O informe de usabilidade dos datos de entrada ofrece unha visión consolidada dos erros e advertencias que poden xerar as predicións listas para utilizar. Tamén ofrece recomendacións sobre como mellorar o desempeño do modelo.
 
 O informe estará dispoñible despois de que un modelo finalice o seu proceso de adestramento. Créase para cada modelo por separado, independentemente de se se completou correctamente ou non.
-
-> [!NOTE]
-> Actualmente, esta funcionalidade só funciona para o modelo de abandono da transacción.
 
 ### <a name="view-the-input-data-usability-report"></a>Ver informe de usabilidade dos datos de entrada
 

@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595424"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306118"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guía de mostra (previsualización) da predición do abandono transaccional
 
-Esta guía guiarao a través dun exemplo integral de predición do abandono transaccional en Customer Insights empregando os datos fornecidos a continuación. Todos os datos empregados nesta guía non son datos reais do cliente e forman parte do conxunto de datos de Contoso que se atopan no ambiente de *demostración* dentro da súa subscrición a Customer Insights.
+Esta guía guiarao a través dun exemplo integral de predición do abandono transaccional en Customer Insights empregando os datos fornecidos a continuación. Os datos empregados nesta guía non son datos reais de clientes, senón que forman parte do conxunto de datos de Contoso que se atopa no ambiente de *Demostración* dentro da súa subscrición a Customer Insights.
 
 ## <a name="scenario"></a>Escenario
 
-Contoso é unha empresa que produce cafés e máquinas de café de alta calidade, que venden a través do seu sitio web Contoso Coffee. O seu obxectivo é saber que clientes que adoitan mercar os seus produtos de xeito regular deixarán de ser clientes activos nos próximos 60 días. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
+Contoso é unha empresa que produce café e máquinas de café de alta calidade, que se venden a través do sitio web Contoso Coffee. O seu obxectivo é saber que clientes que adoitan mercar os seus produtos de xeito regular deixarán de ser clientes activos nos próximos 60 días. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -109,7 +109,7 @@ Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de
 
 1. Vaia ao separador **Buscar coincidencias** e seleccione **Definir orde**.
 
-1. No lista despregable **Primario**, escolla **eCommerceContacts: eCommerce** como fonte principal e inclúa todos os rexistros.
+1. Na lista despregable **Principal**, escolla **eCommerceContacts : eCommerce** como fonte principal e inclúa todos os rexistros.
 
 1. Na lista despregable **Entidade 2**, escolla **loyCustomers: LoyaltyScheme** e inclúa todos os rexistros.
 
@@ -127,8 +127,8 @@ Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de
 1. Introduza o nome **FullName, Email** para a nova regra.
 
    * Engada unha segunda condición para o enderezo de correo electrónico seleccionando **Engadir condición**
-   * Para os eCommerceContacts da entidade, escolla **EMail** no menú despregable.
-   * Para os loyCustomers da entidade, escolla **EMail** no menú despregable. 
+   * Para os eCommerceContacts da entidade, escolla **Correo electrónico** no menú despregable.
+   * Para os loyCustomers da entidade, escolla **Correo electrónico** no menú despregable. 
    * Deixe Normalizar en branco. 
    * Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
 

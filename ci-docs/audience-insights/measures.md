@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049248"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304790"
 ---
 # <a name="define-and-manage-measures"></a>Definir e xestionar medidas
 
-As medidas axudan a comprender mellor os comportamentos dos clientes e o rendemento empresarial. Miran valores relevantes de [perfís unificados](data-unification.md). Por exemplo, unha empresa quere ver o *gasto total por cliente* para comprender o historial de compras de cada cliente ou medir as *vendas totais da empresa* para comprender os ingresos agregados de todo o negocio.  
+As medidas axudan a comprender mellor os comportamentos dos clientes e o rendemento empresarial. Miran valores relevantes de [perfís unificados](data-unification.md). Por exemplo, unha empresa quere ver o *gasto total por cliente* para comprender o historial de compras dun cliente individual ou medir as *vendas totais da empresa* para comprender os ingresos agregados de todo o negocio.  
 
 As medidas créanse usando o creador de medidas, unha plataforma de consulta de datos con varios operadores e sinxelas opcións de asignación. Permite filtrar os datos, agrupar resultados, detectar [camiños de relación de entidade](relationships.md) e previsualizar os resultados.
 
@@ -36,7 +36,7 @@ Esta sección móstralle como crear unha nova medida desde cero. Pode construír
    > [!NOTE]
    > Se a nova configuración da medida só ten dous campos, por exemplo, CustomerID e un cálculo, a saída engadirase como unha nova columna á entidade xerada polo sistema denominada Customer_Measure. E poderá ver o valor da medida no perfil de cliente unificado. Outras medidas xerarán as súas propias entidades.
 
-1. Na área de configuración, escolla a función de agregación no menú despregable **Seleccionar función**. As funcións de agregación inclúen: 
+1. Na área de configuración, escolla a función de agregación do menú despregable **Seleccionar función**. As funcións de agregación inclúen: 
    - **Suma**
    - **Media**
    - **Número total**
@@ -69,12 +69,14 @@ Esta sección móstralle como crear unha nova medida desde cero. Pode construír
    1. Seleccione **Aplicar** para engadir os filtros á medida.
 
 1. Para engadir dimensións, seleccione **Dimensión** na área de configuración. As dimensións mostraranse como columnas na entidade de saída de medida.
+ 
    1. Seleccione **Editar dimensións** para engadir atributos de datos polos que desexa agrupar os valores da medida. Por exemplo, cidade ou sexo. Por defecto, a dimensión *CustomerID* seleccionouse para crear *medidas a nivel de cliente*. Pode eliminar a dimensión predeterminada se quere crear *medidas a nivel empresarial*.
    1. Seleccione **Feito** para engadir as dimensións á medida.
 
 1. Se hai valores nos seus datos que debe substituír por un número enteiro, por exemplo, substituír *cero* por *0*, seleccione **Regras**. Configure a regra e asegúrese de que escolle só números enteiros como substitutos.
 
 1. Se hai varias rutas entre a entidade de datos que asignou e a entidade *Cliente*, ten que escoller un dos [camiños de relación de entidade](relationships.md) identificados. Os resultados das medidas poden variar dependendo do camiño seleccionado. 
+   
    1. Seleccione **Preferencias de datos** e elixa o camiño da entidade que se debería empregar para identificar a súa medida. Se só hai un único camiño cara á entidade *Cliente*, este control non se amosará.
    1. Seleccione **Feito** para aplicar a súa selección. 
 
@@ -113,7 +115,7 @@ O seguinte procedemento describe os pasos para construír unha nova medida media
 
 1. Seleccione **Novo** e logo seleccione **Escoller un modelo**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de pantalla do menú despregable cando se crea unha nova medida con fincapé no modelo.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de pantalla do menú despregable cando se crea unha nova medida con resaltado no modelo.":::
 
 1. Busque o modelo que se adapte ás súas necesidades e seleccione **Escoller modelo**.
 
@@ -123,7 +125,7 @@ O seguinte procedemento describe os pasos para construír unha nova medida media
 
 1. Seleccione **Feito**.
 
-1. Na sección **Establecer o período de tempo**, defina o período de tempo dos datos que se van usar. Escolla se desexa que a nova medida abranga todo o conxunto de datos seleccionando **Todo o tempo**. Ou se quere que a medida se centre nun **Período de tempo específico**.
+1. Na sección **Establecer o período de tempo**, defina o período de tempo dos datos que se van usar. Escolla se desexa que a nova medida abranga todo o conxunto de datos seleccionando **Todo o tempo** ou se desexa que a medida se centre nun **Período de tempo específico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de pantalla que mostra a sección do período de tempo ao configurar unha medida a partir dun modelo.":::
 
@@ -142,12 +144,12 @@ O seguinte procedemento describe os pasos para construír unha nova medida media
 
 Pode atopar a lista de medidas na páxina **Medidas**.
 
-Atopará información sobre o tipo de medida, o creador, a data de creación, o estado e o estado. Cando selecciona unha medida da lista, pode previsualizar a saída e descargar un ficheiro .CSV.
+Atopará información sobre o tipo de medida, o creador, a data de creación, o estado e o estado. Cando selecciona unha medida da lista, pode previsualizar a saída e descargar un ficheiro CSV.
 
 Para actualizar todas as túas medidas ao mesmo tempo, seleccione **Actualizar todo** sen seleccionar unha medida específica.
 
 > [!div class="mx-imgBorder"]
-> ![Accións para xestionar medidas individuais](media/measure-actions.png "Accións para xestionar medidas individuais")
+> ![Accións para xestionar medidas individuais.](media/measure-actions.png "Accións para xestionar medidas individuais.")
 
 Seleccione unha medida da lista para as seguintes opcións:
 
@@ -159,11 +161,11 @@ Seleccione unha medida da lista para as seguintes opcións:
 - **Activar** ou **Desactivar**. As medidas inactivas non se actualizarán durante unha [actualización programada](system.md#schedule-tab).
 
 > [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies). Pode seleccionar o estado dun proceso para ver detalles sobre o progreso de todo o traballo. Despois de seleccionar **Ver detalles** para unha das tarefas do traballo, atopará información adicional: o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa.
+> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies). Pode seleccionar o estado dun proceso para ver detalles sobre o progreso de todo o traballo. Despois de seleccionar **Ver detalles** para unha das tarefas do traballo, atopará información adicional: tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa.
 
 ## <a name="next-step"></a>Seguinte paso
 
-Utilice as medidas existentes para crear [un segmento de clientes](segments.md).
+Pode usar as medidas existentes para crear [un segmento de clientes](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

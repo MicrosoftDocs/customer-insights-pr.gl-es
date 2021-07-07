@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111385"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306255"
 ---
 # <a name="segments-overview"></a>Visión xeral dos segmentos
 
@@ -38,7 +38,7 @@ Vaia á paxina **Segmentos** para ver todos os segmentos gardados e xestionalos.
 
 Cada segmento está representado por unha fila que inclúe información adicional sobre o segmento.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento seleccionado coa lista despregable de opcións e as opcións dispoñibles.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento seleccionado con lista despregable de opcións e opcións dispoñibles.":::
 
 A seguinte acción está dispoñible cando selecciona un segmento:
 
@@ -68,7 +68,7 @@ Pode exportar un segmento desde a páxina de segmentos ou a [páxina de exportac
 
 1. Seleccione **Mostrar máis [...]** para o segmento que quere exportar.
 
-1. Seleccione **Xestionar exportacións** na lista despregable de accións.
+1. Seleccione **Xestionar as exportacións** da lista despregable de accións.
 
 1. Ábrese a páxina **Exportacións (versión preliminar) para o segmento**. Pode ver todas as exportacións configuradas agrupadas por exportacións que conteñen ou non o segmento actual.
 

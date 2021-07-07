@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253038"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305476"
 ---
 # <a name="exports-preview-overview"></a>Visión xeral das exportacións (versión preliminar)
 
 A páxina **Exportacións** mostra todas as exportacións configuradas. As exportacións comparten datos específicos con varias aplicacións. Poden incluír perfís ou entidades de clientes, esquemas e detalles de asignación. Cada exportación require unha [conexión, configurada por un administrador, para xestionar a autenticación e o acceso](connections.md).
 
-Vaia a **Datos** > **Exportacións** para ver a páxina de exportacións. Todos os roles de usuario teñen acceso para ver as exportacións configuradas. Uso do campo de busca na barra de comandos para atopar exportacións polo seu nome, nome de conexión ou tipo de conexión.
+Vaia a **Datos** > **Exportacións** para ver a páxina de exportacións. Todos os roles de usuario poden ver as exportacións configuradas. Use o campo de busca na barra de comandos para buscar exportacións polo seu nome, nome de conexión ou tipo de conexión.
 
 ## <a name="set-up-a-new-export"></a>Configurar unha nova exportación
 
@@ -73,7 +73,7 @@ Despois de crear destinos de exportación, aparecen en **Datos** > **Exportació
 
 Cada exportación que configura ten unha programación de actualización. Durante unha actualización, o sistema busca datos novos ou actualizados para incluír nunha exportación. Por defecto, as exportacións execútanse como parte de todas as [actualización do sistema programadas](system.md#schedule-tab). Pode personalizar a programación de actualización ou desactivala para executar as exportacións manualmente.
 
-As programacións de exportación dependen do estado do seu ambiente. Se hai actualizacións en [dependencias](system.md#refresh-policies) no progreso cando debería comezar unha exportación programada, o sistema primeiro completará as dependencias e logo executará a exportación. Pode ver cando se actualizou por última vez unha exportación na columna **Actualizado**.
+As programacións de exportación dependen do estado do seu ambiente. Se hai actualizacións en curso nas [dependencias](system.md#refresh-policies) cando debería iniciarse unha exportación programada, o sistema primeiro completará as actualizacións e logo executará a exportación. Pode ver cando se actualizou por última vez unha exportación na columna **Actualizado**.
 
 ### <a name="schedule-exports"></a>Programar exportacións
 

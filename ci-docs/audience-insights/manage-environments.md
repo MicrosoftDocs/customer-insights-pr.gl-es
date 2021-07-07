@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259097"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304878"
 ---
 # <a name="manage-environments"></a>Xestionar ambientes
 
@@ -54,29 +54,32 @@ Para crear un ambiente:
 1. Seleccione **Nova**.
 
    > [!div class="mx-imgBorder"]
-   > ![Configuración de ambientes](media/environment-settings-dialog.png)
+   > ![Configuración de ambientes.](media/environment-settings-dialog.png)
 
-1. No diálogo **Crear novo ambiente**, seleccione **Novo ambiente**.
+1. No diálogo **Crear un ambiente**, seleccione **Novo ambiente**.
 
    Se quere [copiar datos do ambiente actual](#considerations-for-copy-configuration-preview), seleccione **Copiar do ambiente existente**. Verá unha lista de todos os ambientes dispoñibles da súa organización de onde pode copiar datos.
 
 1. Indique os seguintes detalles:
    - **Nome**: O nome deste ambiente. Este campo xa está cuberto se copiou un ambiente existente, pero pode cambialo.
-   - **Rexión**: a rexión na que se despregou e aloxou o servizo.
    - **Tipo**: selecciona se desexa crear un contorno de produción ou de illamento de procesos.
-
+   - **Rexión**: a rexión na que se despregou e aloxou o servizo.
+   
 1. Opcionalmente, pode seleccionar **Configuración avanzada**:
 
-   - **Gardar todos os datos en**: especifique onde desexa almacenar os datos de saída xerados de Customer Insights. Terá dúas opcións: **Almacenamento de Customer Insights** (un Azure Data Lake xestionado polo equipo de Customer Insights) e **Azure Data Lake Storage Gen2** (o seu propio Azure Data Lake Storage). Por defecto, a opción de almacenamento de Customer Insights está seleccionada.
+   - **Gardar todos os datos en**: especifique onde desexa almacenar os datos de saída xerados de Customer Insights. Terá dúas opcións: **Almacenamento de Customer Insights** (un Azure Data Lake xestionado polo equipo de Customer Insights) e **Azure Data Lake Storage** (o seu propio Azure Data Lake Storage). Por defecto, a opción de almacenamento de Customer Insights está seleccionada.
 
-   > [!NOTE]
-   > Ao gardar datos en Azure Data Lake Storage, acepta que os datos se transfiran e almacenen na localización xeográfica adecuada para esa conta de Azure Storage, que pode ser diferente á da conta na que están almacenados os datos en Dynamics 365 Customer Insights. [Obteña máis información no Centro de confianza de Microsoft.](https://www.microsoft.com/trust-center)
-   >
-   > Na actualidade, as entidades inxeridas sempre se almacenan no lago de datos xestionado por Customer Insights.
-   > Só admitimos contas de almacenamento de Azure Data Lake Gen2 da mesma rexión de Azure que seleccionou ao crear o ambiente.
-   > Só admitimos contas de almacenamento de Azure Data Lake Gen2 compatibles co Espazo de nomes xerárquicos (HNS).
+     > [!NOTE]
+     > Ao gardar datos en Azure Data Lake Storage, acepta que os datos se transfiran e almacenen na localización xeográfica adecuada para esa conta de Azure Storage, que pode ser diferente á da conta na que están almacenados os datos en Dynamics 365 Customer Insights. [Obteña máis información no Centro de confianza de Microsoft.](https://www.microsoft.com/trust-center)
+     >
+     > Na actualidade, as entidades inxeridas sempre se almacenan no Data Lake xestionado por Customer Insights. 
+     > 
+     > Só admitios contas de Azure Data Lake Storage da mesma rexión de Azure que seleccionou ao crear o ambiente. 
+     > 
+     > Só admitimos contas de Azure Data Lake Storage que teñan activado o espazo de nomes xerárquico.
 
-   - Para a opción de Azure Data Lake Storage Gen2, pode escoller entre unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). O nome do **Contedor** non se pode cambiar e será `customerinsights`.
+
+   - Para a opción Azure Data Lake Storage, pode escoller entre unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). O nome do **Contedor** non se pode cambiar e será `customerinsights`.
    
    - Se quere usar [predicións](predictions.md), configure o uso compartido de datos con Microsoft Dataverse ou habilite a inxestión de datos desde orixes de datos locais, proporcione o URL do ambiente de Microsoft Dataverse en **Configurar o uso compartido de datos con Microsoft Dataverse e activar funcionalidades adicionais**. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun Data Lake xestionado de Microsoft Dataverse.
 
@@ -85,7 +88,7 @@ Para crear un ambiente:
      > - A [predición de valores que faltan nunha entidade](predictions.md) non se admite actualmente cando habilita o uso compartido de datos cun Data Lake xestionado de Microsoft Dataverse.
 
      > [!div class="mx-imgBorder"]
-     > ![Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Cando execute procesos, como a inxestión de datos ou a creación de segmentos, crearanse os cartafoles correspondentes na conta de almacenamento que especificou anteriormente. Os ficheiros de datos e os ficheiros model.json crearanse e engadiranse aos cartafoles en función do nome do proceso.
 
@@ -113,14 +116,14 @@ Copiaranse os seguintes axustes de configuración:
 
 - Perfís de clientes.
 - Credenciais da orixe de datos. Deberá proporcionar as credenciais para cada orixe de datos e actualizar as fontes de datos manualmente.
-- Fontes de datos do cartafol Common Data Model e lago xestionado por Common Data Service. Terá que crear esas orixes de datos manualmente co mesmo nome que no ambiente de orixe.
+- Fontes de datos do cartafol de Common Data Model e Data Lake xestionado de Dataverse. Terá que crear esas orixes de datos manualmente co mesmo nome que no ambiente de orixe.
 
 Cando copie un ambiente, verá unha mensaxe de confirmación de que se creou o novo contorno. Seleccione **Ir a orixes de datos** para ver a lista de orixes de datos.
 
 Todas as orixes de datos mostrarán o estado **Credenciais requiridas**. Edite as orixes de datos e insira as credenciais para actualizalas.
 
 > [!div class="mx-imgBorder"]
-> ![Orixes de datos copiadas](media/data-sources-copied.png)
+> ![Orixes de datos copiadas.](media/data-sources-copied.png)
 
 Despois de actualizar as orixes de datos, diríxase a **Datos** > **Unificar**. Aquí atopará a configuración do ambiente de orixe. Edíteos segundo sexa necesario ou seleccione **Executar** para iniciar o proceso de unificación de datos e crear a entidade de cliente unificada.
 
@@ -136,7 +139,7 @@ Pode editar algúns detalles dos contornos existentes.
 
 3. Na caixa **Editar contorno**, pode actualizar o **Nome de visualización** do contorno, pero non pode cambiar a **Rexión** nin o **Tipo**.
 
-4. Se un ambiente está configurado para almacenar datos en Azure Data Lake Storage Gen2, pode actualizar a **Clave da conta**. Non obstante, non podes cambiar o **Nome da conta** nin o nome do **Contedor**.
+4. Se un ambiente está configurado para almacenar datos en Azure Data Lake Storage, pode actualizar a **Clave da conta**. Non obstante, non podes cambiar o **Nome da conta** nin o nome do **Contedor**.
 
 5. Opcionalmente, pode actualizar desde unha conexión baseada na clave de conta a unha conexión baseada en recursos ou baseada nunha subscrición. Unha vez actualizado, non poderá volver á clave da conta despois da actualización. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Non pode cambiar a información do **contedor** ao actualizar a conexión.
 
@@ -158,19 +161,19 @@ Como administrador, pode restablecer un ambiente a un estado baleiro se quere el
 
 1.  Seleccione o selector de **ambiente** na cabeceira da aplicación. 
 
-2.  Seleccione o ambiente que desexa restablecer e seleccione os puntos suspensivos **...**. 
+2.  Seleccione o ambiente que desexa restablecer e seleccione os puntos suspensivos (**...**). 
 
 3. Escolla a opción **Restablecer**. 
 
 4.  Para confirmar a eliminación, introduza o nome do contorno e seleccione **Restablecer**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Eliminar un ambiente existente (dispoñible só para administradores)
+## <a name="delete-an-existing-environment"></a>Eliminar un ambiente existente
 
 Como administrador, pode eliminar un ambiente que administra.
 
 1.  Seleccione o selector de **ambiente** na cabeceira da aplicación.
 
-2.  Seleccione o ambiente que desexa restablecer e seleccione os puntos suspensivos **...**. 
+2.  Seleccione o ambiente que desexa restablecer e seleccione os puntos suspensivos (**...**). 
 
 3. Escolla a opción **Eliminar**. 
 

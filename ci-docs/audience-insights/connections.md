@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896095"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304970"
 ---
 # <a name="connections-preview-overview"></a>Visión xeral de conexións (versión preliminar)
 
@@ -42,7 +42,7 @@ Para engadir conexións, cómpre ter [permisos de administrador](permissions.md)
 
 1. Vaia ao separador **Conexións**.
 
-1. Seleccione **Engadir conexión** para crear unha nova conexión. Escolla no menú despregable que tipo de conexión quere crear.
+1. Seleccione **Engadir conexión** para crear unha nova conexión. Escolla no menú despregable o tipo de conexión que desexa crear.
 
 1. No panel **Configurar a conexión**, proporcione os detalles requiridos. 
    1. O **Nome de visualización** e o tipo de conexión describen unha conexión. Recomendamos escoller un nome que explique o propósito e o destino desta conexión.
@@ -74,7 +74,9 @@ Ao configurar ou editar unha conexión de exportación, elixa aos usuarios que p
 
 ## <a name="remove-a-connection"></a>Eliminar unha conexión
 
-Se a conexión que vai eliminar é utilizada por enriquecementos ou exportacións, primeiro cómpre desprendela ou eliminala. O diálogo de eliminación guiarao aos enriquecementos ou exportacións relevantes. Os enriquecementos e exportacións desconectados quedan inactivos. Reactíveos engadíndolles outra conexión na páxina [Enriquecementos](enrichment-hub.md) ou [Exportacións](export-destinations.md).
+Se a conexión que vai eliminar é utilizada por enriquecementos ou exportacións, primeiro cómpre desprendela ou eliminala. O diálogo de eliminación guiarao aos enriquecementos ou exportacións relevantes. 
+
+Os enriquecementos e exportacións desconectados quedan inactivos. Reactíveos engadíndolles outra conexión na páxina [Enriquecementos](enrichment-hub.md) ou [Exportacións](export-destinations.md).
 
 1. Vaia a **Administrar** > **Conexións (versión preliminar)**.
 
@@ -89,5 +91,5 @@ Se a conexión que vai eliminar é utilizada por enriquecementos ou exportación
       - **Enriquecementos:** Pode eliminar ou desactivar os enriquecementos para poder eliminar a conexión. 
    1. Unha vez que a conexión non teña máis dependencias, volva a **Administrar** > **Conexións** e tente eliminar de novo a conexión.
 
-1. Para confirmar a eliminación seleccione **Quitar**.
+1. Para confirmar a eliminación, seleccione **Quitar**.
 

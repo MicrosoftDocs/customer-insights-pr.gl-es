@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595332"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306072"
 ---
 # <a name="segment-insights-preview"></a>Información do segmento (previsualización)
 
@@ -50,7 +50,7 @@ Seleccione unha información para ver os resultados da análise:
 
 - Número de membros que se solapan nos segmentos seleccionados para a súa análise.
 - Número de membros incluídos nun dos segmentos pero non no resto dos segmentos.
-- Se seleccionou campos mentres configura a análise de solapamento, atoparáos nas pestañas correspondentes. Pode usar o menú desplegable do filtro para seleccionar calquera nivel de interese do atributo e a táboa na parte inferior mostrará os datos correspondentes.
+- Se seleccionou campos mentres configura a análise de solapamento, atoparáos nas pestañas correspondentes. Pode usar o menú despregable de filtros para seleccionar calquera nivel de interese de atributo e a táboa na parte inferior amosará os datos correspondentes.
 
 ## <a name="segment-differentiators"></a>Diferenciadores de segmentos
 

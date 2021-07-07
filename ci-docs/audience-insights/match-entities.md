@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085620"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306026"
 ---
 # <a name="match-entities"></a>Buscar coincidencias das entidades
 
@@ -247,7 +247,7 @@ Pode especificar condicións que determinados rexistros deben coincidir sempre o
 
 1. Vaia a **Datos** > **Fontes de datos** e inxira os ficheiros modelo como novas entidades. Unha vez inxeridos, pode utilizalos para especificar a configuración da coincidencia.
 
-1. Despois de cargar os ficheiros e cando as entidades están dispoñibles, seleccione a opción **Coincidencia personalizada** de novo. Verá opcións para especificar as entidades que quere incluír. Seleccione as entidades requiridas do menú despregable.
+1. Despois de cargar os ficheiros e cando as entidades están dispoñibles, seleccione a opción **Coincidencia personalizada** de novo. Verá opcións para especificar as entidades que quere incluír. Seleccione as entidades requiridas no menú despregable.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de pantalla do diálogo para escoller substitucións para un escenario de coincidencia personalizado.":::
 

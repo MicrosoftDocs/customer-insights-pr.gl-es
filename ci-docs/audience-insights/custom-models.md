@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700666"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305628"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizaxe automática personalizados
 
@@ -72,7 +72,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
       > [!div class="mx-imgBorder"]
       > ![Panel de parámetros de saída do modelo](media/intelligence-screen3-outputparameters.png "Panel de parámetros de saída do modelo")
 
-1. Seleccione o atributo coincidente na lista despregable **Identificador de cliente nos resultados** que identifica os clientes e seleccione **Gardar**.
+1. Seleccione o atributo correspondente na lista despregable **Identificador de cliente** nos resultados que identifica os clientes e seleccione **Gardar**.
 
    > [!div class="mx-imgBorder"]
    > ![Relacionar resultados co panel de datos do cliente](media/intelligence-screen4-relatetocustomer.png "Relacionar resultados co panel de datos do cliente")
@@ -100,7 +100,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
       1. Seleccione o **Nome do parámetro do almacén de datos de saída** para a súa canle de proba.
       1. Seleccione o **Nome do parámetro do camiño de saída** para a súa canle de proba.
 
-1. Seleccione o atributo coincidente na lista despregable **Identificador de cliente nos resultados** que identifica os clientes e seleccione **Gardar**.
+1. Seleccione o atributo correspondente na lista despregable **Identificador de cliente** nos resultados que identifica os clientes e seleccione **Gardar**.
    Escolla un atributo da saída de inferencia con valores similares á columna ID de cliente da entidade Cliente. Se non ten esa columna no seu conxunto de datos, escolla un atributo que identifique de xeito único a fila.
 
 ## <a name="run-a-workflow"></a>Executar un fluxo de traballo

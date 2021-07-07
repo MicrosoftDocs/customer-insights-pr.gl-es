@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129943"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306347"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guía de mostra de predición do valor de duración do cliente (VDC)
 
@@ -123,7 +123,7 @@ Despois de inxerir os datos, comezamos o proceso de unificación de datos para c
 
 1. Vaia ao separador **Buscar coincidencias** e seleccione **Definir orde**.
 
-1. No lista despregable **Primario**, escolla **eCommerceContacts: eCommerce** como fonte principal e inclúa todos os rexistros.
+1. Na lista despregable **Principal**, escolla **eCommerceContacts : eCommerce** como fonte principal e inclúa todos os rexistros.
 
 1. Na lista despregable **Entidade 2**, escolla **loyCustomers: LoyaltyScheme** e inclúa todos os rexistros.
 
@@ -141,8 +141,8 @@ Despois de inxerir os datos, comezamos o proceso de unificación de datos para c
 1. Introduza o nome **FullName, Email** para a nova regra.
 
    - Engada unha segunda condición para o enderezo de correo electrónico seleccionando **Engadir condición**
-   - Para os eCommerceContacts da entidade, escolla **EMail** no menú despregable.
-   - Para os loyCustomers da entidade, escolla **EMail** no menú despregable.
+   - Para os eCommerceContacts da entidade, escolla **Correo electrónico** no menú despregable.
+   - Para os loyCustomers da entidade, escolla **Correo electrónico** no menú despregable.
    - Deixe Normalizar en branco.
    - Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
 
