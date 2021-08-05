@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305628"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554846"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizaxe automática personalizados
 
@@ -42,7 +42,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 1. Déalle ao seu modelo personalizado un nome recoñecible no campo **Nome**.
 
    > [!div class="mx-imgBorder"]
-   > ![Captura de pantalla do panel Fluxo de traballo novo](media/new-workflowv2.png "Captura de pantalla do panel Fluxo de traballo novo")
+   > ![Captura de pantalla do panel Fluxo de traballo novo.](media/new-workflowv2.png "Captura de pantalla do panel Fluxo de traballo novo")
 
 1. Seleccione a organización que contén o servizo web en **Arrendatario que contén o seu servizo web**.
 
@@ -59,7 +59,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
    > O fluxo de traballo do modelo personalizado aplicará a heurística para asignar os campos de entrada do servizo web aos atributos da entidade en función do nome e do tipo de datos do campo. Verá un erro se un campo de servizo web non se pode asignar a unha entidade.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurar un fluxo de traballo](media/intelligence-screen2-updated.png "Configurar un fluxo de traballo")
+   > ![Configurar un fluxo de traballo.](media/intelligence-screen2-updated.png "Configurar un fluxo de traballo")
 
 1. No paso **Parámetros de saída do modelo**, configure as seguintes propiedades:
    - Machine Learning Studio (clásico)
@@ -70,12 +70,12 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
       1. Seleccione o **nome do parámetro do camiño de saída** da súa canle de lotes desde o menú despregable.
 
       > [!div class="mx-imgBorder"]
-      > ![Panel de parámetros de saída do modelo](media/intelligence-screen3-outputparameters.png "Panel de parámetros de saída do modelo")
+      > ![Panel de parámetros de saída do modelo.](media/intelligence-screen3-outputparameters.png "Panel de parámetros de saída do modelo")
 
 1. Seleccione o atributo correspondente na lista despregable **Identificador de cliente** nos resultados que identifica os clientes e seleccione **Gardar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Relacionar resultados co panel de datos do cliente](media/intelligence-screen4-relatetocustomer.png "Relacionar resultados co panel de datos do cliente")
+   > ![Relacionar resultados co panel de datos do cliente.](media/intelligence-screen4-relatetocustomer.png "Relacionar resultados co panel de datos do cliente")
 
 1. Verá a pantalla **Fluxo de traballo gardado** con detalles sobre o fluxo de traballo.    
    Se configurou un fluxo de traballo para unha canle de Azure Machine Learning, a información do público anexarase ao espazo de traballo que contén a canle. A información do público obterá un rol de **Colaborador** no espazo de traballo de Azure.

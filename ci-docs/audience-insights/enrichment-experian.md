@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309818"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555351"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriqueza os perfís de clientes con datos demográficos de Experian (versión preliminar)
 
@@ -39,7 +39,7 @@ Actualmente admítese enriquecer perfís de clientes só nos Estados Unidos.
 1. Seleccione **Enriquecer os meus datos** no mosaico Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian mosaicos](media/experian-tile.png "Experian tile")
+   > ![Mosaico de Experian.](media/experian-tile.png "Experian tile")
    > 
 
 1. Seleccione unha [conexión](connections.md) da lista despregable. Póñase en contacto cun administrador se non hai conexión dispoñible. Se é administrador, pode crear unha conexión seleccionando **Engadir conexión** e escollendo Experian da lista despregable. 

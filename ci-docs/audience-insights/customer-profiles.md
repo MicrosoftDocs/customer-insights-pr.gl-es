@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304602"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554616"
 ---
 # <a name="customer-profiles"></a>Perfís de clientes
 
@@ -23,11 +23,11 @@ A páxina **Clientes** mostra unha vista combinada dos seus clientes, baseada no
 Os clientes poden ser persoas ou organizacións (vista previa). Cada perfil de cliente ou organización está representado por un mosaico. Seleccione un mosaico para ver información adicional sobre ese cliente ou organización específico. Use os controis de paxinación do final da páxina para ver rexistros adicionais.
 
 > [!div class="mx-imgBorder"] 
-> ![Perfís de cliente B2C](media/profiles-customers.png "Perfís de cliente B2C")
+> ![Perfís de cliente B2C.](media/profiles-customers.png "Perfís de cliente B2C")
 
 Organizacións (vista previa)
 > [!div class="mx-imgBorder"] 
-> ![Perfís de cliente B2B](media/profile-customers-b2b.png "Perfís de cliente B2B")
+> ![Perfís de cliente B2B.](media/profile-customers-b2b.png "Perfís de cliente B2B")
 
 > [!NOTE]
 > Se non ve os mosaicos ao seleccionar **Clientes** na navegación, o seu administrador precisará [definir polo menos un atributo que se poida buscar](search-filter-index.md) no **Índice de busca e filtro**.
@@ -47,7 +47,7 @@ Pode filtrar clientes polos campos de entidade de perfil do cliente. De xeito se
 2. Marque as caixas situadas xunto aos atributos polos que desexa filtrar os clientes.
 
    > [!div class="mx-imgBorder"] 
-   > ![Perfís de clientes](media/profiles-customers3.png "Perfís de clientes")
+   > ![Perfís de clientes.](media/profiles-customers3.png "Perfís de clientes")
 
 3. Elimine os filtros seleccionando **Limpar filtros** na páxina **Clientes**.
 

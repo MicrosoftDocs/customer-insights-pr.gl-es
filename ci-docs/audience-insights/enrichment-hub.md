@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfís de clientes unificados
 description: Use capacidades para enriquecer os datos dos seus clientes.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305246"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555259"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
 Use datos de fontes como Microsoft e outros socios para enriquecer os seus datos de clientes.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Páxina da plataforma común de enriquecemento":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Páxina da plataforma común de enriquecemento.":::
 
 Na información do público, vaia a **Datos** > **Enriquecemento** para traballar con opcións de enriquecemento.  
 
@@ -42,17 +43,17 @@ No separador **Os meus enriquecementos**, pode ver os enriquecementos que config
 
 Vaia ao separador **Os meus enriquecementos** para ver todos os enriquecementos configurados. Cada enriquecemento represéntase como unha liña que inclúe información adicional sobre o enriquecemento.
 
-Seleccione un enriquecemento para ver as opcións dispoñibles. Tamén pode seleccionar os puntos suspensivos (...) nun elemento da lista para ver as opcións.
+Seleccione o enriquecemento para ver as opcións dispoñibles. Tamén pode seleccionar os puntos suspensivos (...) nun elemento da lista para ver as opcións. Se configurou varios enriquecementos, pode usar a caixa de busca para atopalo rapidamente.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcións para xestionar os enriquecementos na lista de enriquecementos":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcións para xestionar os enriquecementos na lista de enriquecementos.":::
 
 - **Ver** detalles do enriquecemento co número de perfís de clientes enriquecidos.
 - **Editar** a configuración do enriquecemento.
 - **Execute** o enriquecemento para actualizar os perfís dos clientes cos últimos datos.
 - **Desactivar** un enriquecemento existente para evitar que se actualice automaticamente con cada actualización programada. Os datos da última actualización exitosa seguirán dispoñibles. **Activar** un enriquecemento inactivo para reiniciar a actualización automática con cada actualización programada.
-- **Eliminar** un enriquecemento.
+- **Eliminar** o enriquecemento.
 
-Pode executar ou desactivar varios enriquecementos á vez seleccionándoos na lista. As opcións de visualización e edición non están dispoñibles como acción masiva e só funcionan para un enriquecemento á vez.
+Execute ou desactive varios enriquecementos á vez seleccionándoos na lista. As opcións de visualización e edición non están dispoñibles como accións en masa. Só funcionan para un enriquecemento á vez.
 
 ## <a name="enrichments-and-connections"></a>Enriquecementos e conexións
 

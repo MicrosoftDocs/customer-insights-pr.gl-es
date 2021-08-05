@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304740"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554479"
 ---
 # <a name="work-with-customer-insights-apis"></a>Traballar coas API de Customer Insights
 
@@ -35,7 +35,7 @@ Este artigo describe como acceder ás API de Customer Insights, crear un rexistr
  
    Habilitar as API crea unha clave de subscrición principal e secundaria para a súa instancia que se usa nas solicitudes de API. Pode volver xerar as teclas seleccionando **Volver xerar primaria** ou **Volver xerar secundaria** en **Administrar** > **Permisos** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Activar API de Customer Insights":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Activar API de Customer Insights.":::
 
 1. Seleccione **Explorar as nosas API** para [probar as API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Aprenda a comezar a usar as bibliotecas de clientes de C # desde NuGet.org. Para
  
    Como alternativa, execute este comando na **Consola do xestor de paquetes de NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Engadir paquete de NuGet a un proxecto de Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Engadir paquete de NuGet a un proxecto de Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Usar a biblioteca de clientes de C#
 
@@ -141,7 +141,7 @@ Aprenda a comezar a usar as bibliotecas de clientes de C # desde NuGet.org. Para
 
 1. Pase este `HttpClient` na construción do cliente de `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Mostra de httpclient":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Mostra de httpclient.":::
 
 1. Faga chamadas co cliente aos "métodos de extensión", por exemplo, `GetAllInstancesAsync`. Se o acceso á `Microsoft.Rest.HttpOperationResponse` subxacente é preferible, use os "métodos de mensaxes http", por exemplo `GetAllInstancesWithHttpMessagesAsync`.
 

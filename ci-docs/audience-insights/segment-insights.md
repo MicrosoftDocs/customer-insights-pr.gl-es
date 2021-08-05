@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306072"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554983"
 ---
 # <a name="segment-insights-preview"></a>Información do segmento (previsualización)
 
@@ -44,7 +44,7 @@ Tamén pode analizar como cambia a superposición para atributos específicos.
 Despois de completar a análise, busque detalles sobre esta información en **Segmentos** > **Información (vista previa)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalles da información do solapamento do segmento":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalles da información do solapamento do segmento.":::
 
 Seleccione unha información para ver os resultados da análise:
 
@@ -77,7 +77,7 @@ Os diferenciadores de segmentos axúdanlle a descubrir que diferencia un segment
 Despois de completar a análise, busque detalles sobre esta información en **Segmentos** > **Información (vista previa)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalles da información de diferenciadores do segmento":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalles da información de diferenciadores do segmento.":::
 
 Seleccione unha información para ver os resultados da análise. Unha análise diferenciadora inclúe dúas lapelas. A lapela **Atributos** enumera os atributos de perfil considerados como diferenciadores. A lapela **Medidas** enumera os diferenciadores. Cada lapela inclúe os seguintes detalles:
 

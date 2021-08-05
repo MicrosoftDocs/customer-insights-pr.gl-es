@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595899"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692525"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Complete os seus datos parciais con predicións
 
@@ -31,11 +31,11 @@ As predicións permiten crear valores previstos facilmente que poden mellorar a 
 
 Antes de que a súa organización poida usar a función de predicións, asegúrese de que se cumpran os seguintes requisitos previos:
 
-1. A súa organización ten unha instancia [configurada em Common Data Service](/ai-builder/build-model#prerequisites) e está na mesma organización que Customer Insights.
+1. A súa organización ten unha instancia [configurada en Microsoft Dataverse](/ai-builder/build-model#prerequisites) e está na mesma organización que Customer Insights.
 
-2. O seu contorno está unido á súa instancia de Common Data Service.
+2. O seu ambiente de información do público está anexado á instancia de Dataverse.
 
-Se desexa [crear un ambiente novo](manage-environments.md), configúreo na caixa de diálogo **Crear un ambiente** e seleccione **Avanzado**. Se xa creou un ambiente, diríxase á súa configuración e seleccione **Avanzado**. De calquera xeito, na sección **Usar predicións**, introduza o URL de instancia de Common Data Service ao que desexa conectar o seu contorno.
+Se desexa [crear un ambiente novo](get-started-paid.md), configúreo na caixa de diálogo **Crear un ambiente** e seleccione **Avanzado**. Se xa creou un ambiente, diríxase á súa configuración e seleccione **Avanzado**. De calquera xeito, na sección **Usar predicións**, introduza o URL de instancia de Dataverse ao que desexa conectar o seu contorno.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Crear unha predición na entidade de Cliente
 
@@ -47,17 +47,17 @@ Se desexa [crear un ambiente novo](manage-environments.md), configúreo na caixa
 
 4. Atope o nome do atributo para o que desexe prever os valores e seleccione a icona **Visión xeral** na columna **Resumo**.
    > [!div class="mx-imgBorder"]
-   > ![Icona de vista xeral](media/intelligence-overviewicon.png "Icona de vista xeral")
+   > ![Icona de vista xeral.](media/intelligence-overviewicon.png "Icona de vista xeral")
 
 5. Se hai unha alta taxa de valores que faltan para o seu atributo, seleccione **Prever valores que faltan** para continuar coa súa predición.
    > [!div class="mx-imgBorder"]
-   > ![Vista xeral do estado con botón de predición de valores que faltan](media/intelligence-overviewpredictmissingvalues.png "Vista xeral do estado con botón de predición de valores que faltan")
+   > ![Vista xeral do estado con botón de predición de valores que faltan.](media/intelligence-overviewpredictmissingvalues.png "Vista xeral do estado con botón de predición de valores que faltan")
 
 6. Proporcione un **Nome para mostrar** e un **Nome da entidade de saída** para os resultados da predición.
 
 7. Unha lista de opcións completada previamente amosará onde pode asignar os valores a unha categoría prevista. Neste caso, as súas únicas opcións de categoría serán 0 ou 1 xa que se corresponden coa natureza real/falso ou binaria da predición. Na columna Categoría, asigne os valores de campo que desexa clasificar como "0" na predición final en "0" e os elementos que desexa clasificar como "1" na predición final en "1".
    > [!div class="mx-imgBorder"]
-   > ![Exemplo que mostra os valores de campo asignados a categorías](media/intelligence-categorymapping.png "Exemplo que mostra os valores de campo asignados a categorías")
+   > ![Exemplo que mostra os valores de campo asignados a categorías.](media/intelligence-categorymapping.png "Exemplo que mostra os valores de campo asignados a categorías")
 
 8. Seleccione **Feito** e a predición procesarase. O procesamento levará algún tempo, dependendo do tamaño e complexidade dos datos. Os resultados estarán dispoñibles nunha nova entidade en función do **Nome da entidade de saída** da predición que creou.
 
@@ -77,7 +77,7 @@ Como parte deste fluxo, vostede elixe un atributo específico no que basear o se
 
 5. Se o segmento que acaba de crear ten datos incompletos no campo de orixe, pode optar por predicir os valores que faltan.
    > [!div class="mx-imgBorder"]
-   > ![Botón de predición](media/segments-predictoption.png "Botón de predición")
+   > ![Botón de predición.](media/segments-predictoption.png "Botón de predición")
 
 6. Proporcione un **Nome para mostrar** e un **Nome da entidade de saída** para os resultados da predición.
 
@@ -93,7 +93,7 @@ Como parte deste fluxo, vostede elixe un atributo específico no que basear o se
 
 4. Verá varios puntos de datos na vista da súa predición.
    > [!div class="mx-imgBorder"]
-   > ![Páxina de predicións](media/intelligence-predictionsviewpage.png "Páxina de predicións")
+   > ![Páxina de predicións.](media/intelligence-predictionsviewpage.png "Páxina de predicións")
 
    - **Valores preditos** mostra a asignación creada durante a fase de asignación do valor do campo coa categoría. Estes son os valores do seu conxunto de datos que foron asignados a unha categoría específica.
    -**Principais elementos con maior influencia** son os factores dentro do seu conxunto de datos que probablemente influíran na confianza da predición de que o seu valor de campo sexa atribuído a unha categoría específica.
@@ -139,7 +139,7 @@ A seguinte execución da súa predición usará o modelo actualizado que creou.
 
 ## <a name="troubleshooting"></a>Resolución de problemas
 
-Se non pode completar o proceso de anexar Common Data Service debido a un erro, poderá tentar completar o proceso manualmente. Existen dous problemas coñecidos que poden ocorrer no proceso de anexar:
+Se non pode completar o proceso de anexar Dataverse debido a un erro, poderá tentar completar o proceso manualmente. Existen dous problemas coñecidos que poden ocorrer no proceso de anexar:
 
 - A solución de complemento de tarxeta de cliente non está instalada.
     1. Complete as instrucións para [instalar e configurar a solución](customer-card-add-in.md).

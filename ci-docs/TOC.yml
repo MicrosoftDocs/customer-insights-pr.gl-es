@@ -2,6 +2,8 @@
   href: index.yml
 - name: Visión xeral do produto
   href: overview.md
+- name: Crear unha proba
+  href: audience-insights/get-started-trial.md
 - name: Acceder ao seu ambiente
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Información do público
@@ -10,12 +12,10 @@
       href: audience-insights/index.yml
     - name: Visión xeral da capacidade
       href: audience-insights/overview.md
-    - name: Proba gratuíta
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Funcionalidades novas e actualizadas
       href: audience-insights/whats-new-audience-insights.md
     - name: Crear un novo ambiente
-      href: audience-insights/home.md
+      href: audience-insights/get-started-paid.md
     - name: Módulos de aprendizaxe
       items:
         - name: Inxerir datos
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Engadir un cartafol de Common Data Model como orixe de datos
           href: audience-insights/connect-common-data-model.md
-        - name: Engadir lago de datos xestionado de Common Data Service
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Engadir lago de datos xestionado de Dataverse
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Actualización incremental para orixes de datos
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Inxestión de datos en tempo real
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Enriquecer con importación personalizada de SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmentos e medidas
+    - name: Segmentos
       items:
         - name: Visión xeral dos segmentos
           href: audience-insights/segments.md
-        - name: Crear segmentos e grupos de clientes
+        - name: Crear segmentos
           href: audience-insights/segment-builder.md
         - name: Segmentos suxeridos baseados en medidas
           href: audience-insights/suggested-segments.md
@@ -254,11 +254,13 @@
       items:
         - name: Crear e modificar eventos
           href: engagement-insights/refined-events.md
+        - name: Recoñecer eventos web de visitantes previamente autenticados
+          href: engagement-insights/unknown-to-known.md
         - name: Exportar eventos
           href: engagement-insights/export-events.md
     - name: Informes
       items:
-        - name: Visualizar informes
+        - name: Ver informes
           href: engagement-insights/view-reports.md
         - name: Crear informes personalizados
           href: engagement-insights/custom-reports.md
@@ -304,7 +306,9 @@
       items:
         - name: Eliminar e exportar datos persoais
           href: engagement-insights/delete-export-personal-data.md
+    - name: Dispoñibilidade rexional
+      href: engagement-insights/regional-availability.md
     - name: Límites de servizo
       href: engagement-insights/quotas.md
-- name: Póñase en contacto coa asistencia técnica
+- name: Contactar coa asistencia
   href: 'https://admin.powerplatform.microsoft.com/support'

@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e futuras
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263249"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692387"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Actualizacións de xuño de 2021
+
+As actualizacións de xuño de 2021 inclúen varias características, actualizacións de rendemento e correccións de erros.
+
+### <a name="data-ingestion"></a>Inxestión de datos
+
+- **Actualizacións de progreso da unificación de datos mellorado** Agora pode ver actualizacións de estado dinámicas, melloradas e máis detalladas nos pasos do [proceso de unificación de datos](data-unification.md). Esta función permítelle rastrexar o progreso detallado para comprender o fluxo do proceso e tomar medidas se algún paso precisa atención.
+
+### <a name="extensibility"></a>Extensibilidade
+
+- **Exportar segmentos e outros datos a Salesforce Marketing Cloud** Ampliamos os nosos destinos de exportación para incluír [Salesforce Marketing Cloud](export-salesforce.md). Agora pode exportar segmentos e outros tipos de datos a Salesforce Marketing Cloud a través dunha exportación SFTP con marca. A importación de datos pódese automatizar completamente en Salesforce e empregarse para crear campañas de márketing máis eficaces.  
+ 
+- **Exportar segmentos a ActiveCampaign** Ampliamos os nosos destinos de exportación para incluír [Active Campaign](export-active-campaign.md). Agora pode exportar segmentos para xerar campañas, levar a cabo márketing por correo electrónico e traballar con grupos específicos de clientes en ActiveCampaign.
+ 
+- **Exportar segmentos a Sendinblue** Ampliamos os nosos destinos de exportación para incluír [Sendinblue](export-sendinblue.md). Agora pode exportar segmentos para xerar campañas, levar a cabo márketing por correo electrónico e traballar con grupos específicos de clientes con Sendinblue.
+ 
+### <a name="ux-updates"></a>Actualizacións de UX 
+
+- **Páxina de clientes e páxina de detalles do perfil novas e melloradas** Redeseñamos a páxina de clientes e as páxinas de detalles do perfil para mellorar a experiencia do usuario e obter un mellor desempeño. Estes cambios permiten ver, ordenar, buscar e filtrar clientes. Agora os filtros están representados no URL para compartir os resultados da busca con outros usuarios sen problemas. Os resultados da busca tamén se poden gardar como un segmento.    
+  A páxina de detalles dos perfís de clientes agora agrupa datos en varias subseccións, como datos demográficos, ID e outros atributos de perfil para unha mellor lexibilidade. Outras seccións da páxina de detalles do perfil agora son máis interactivas. Por exemplo, a sección de actividades agora permite filtrar e ordenar.
+
 
 ## <a name="may-2021-updates"></a>Actualizacións de maio de 2021
 
@@ -170,7 +192,7 @@ As actualizacións de febreiro de 2021 inclúen varias características, actuali
 
 - **O contorno de copia admite máis tipos de fontes de datos**
 
-  Os administradores poden copiar as configuracións de contorno a un novo contorno da mesma organización. Esta funcionalidade amplía a funcionalidade do contorno de copia para casos en que se usan as fontes de datos baseadas nun data lake de Common Data Service ou un cartafol de Common Data Model.
+  Os administradores poden copiar as configuracións de contorno a un novo contorno da mesma organización. Esta función amplía a funcionalidade do ambiente de copia para casos en que se usan as orixes de datos baseadas nun lago de datos xestionado de Microsoft Dataverse ou nun cartafol de Common Data Model.
 
 ## <a name="january-2021-updates"></a>Actualizacións de xaneiro de 2021
 

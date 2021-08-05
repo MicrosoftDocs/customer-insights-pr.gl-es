@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597417"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554433"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Usar modelos baseados en Azure Machine Learning
 
@@ -52,7 +52,7 @@ Debe crear conxuntos de datos para usar os datos da entidade de Customer Insight
      No deseñador, abra **Seleccionar columnas no conxunto de datos** e seleccione **Establecer como parámetro de canle** onde vostede fornece un nome para o parámetro.
 
      > [!div class="mx-imgBorder"]
-     > ![Parametrización do conxunto de datos no deseñador](media/intelligence-designer-dataset-parameters.png "Parametrización do conxunto de datos no deseñador")
+     > ![Parametrización do conxunto de datos no deseñador.](media/intelligence-designer-dataset-parameters.png "Parametrización do conxunto de datos no deseñador")
    
 * Parámetro do conxunto de datos no SDK (Python)
    
@@ -78,7 +78,7 @@ Debe crear conxuntos de datos para usar os datos da entidade de Customer Insight
 
 * O deseñador proporciona o [módulo Exportar datos](/azure/machine-learning/algorithm-module-reference/export-data) que permite exportar a saída dunha canle ao almacenamento de Azure. Actualmente, o módulo debe usar o tipo de almacén de datos **Azure Blob Storage** e parametrizar o **Almacén de datos** e o **Camiño** relativo. Customer Insights anula estes dous parámetros durante a execución da canle cun almacén de datos e unha ruta que é accesible ao produto.
    > [!div class="mx-imgBorder"]
-   > ![Exportar configuración do módulo de datos](media/intelligence-designer-importdata.png "Exportar configuración do módulo de datos")
+   > ![Exportar configuración do módulo de datos.](media/intelligence-designer-importdata.png "Exportar configuración do módulo de datos")
    
 * Ao escribir a saída de inferencia usando código, pode cargar a saída no camiño a dentro dun *almacén de datos rexistrado* no espazo de traballo. Se a ruta e o almacén de datos están parametrizados na canle, Customer Insights poderá ler e importar a saída de inferencia. Actualmente, admítese unha única saída tabular en formato CSV. A ruta debe incluír o directorio e o nome do ficheiro.
 

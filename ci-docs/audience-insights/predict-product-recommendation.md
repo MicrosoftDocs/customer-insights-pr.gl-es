@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095554"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556122"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predición de recomendacións de produtos (versión preliminar)
 
@@ -64,7 +64,7 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
 
 1. Seleccione o mosaico **Modelo de recomendacións de produtos (versión preliminar)** e seleccione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Mosaico do modelo de recomendación de produtos co botón Usar este modelo](media/product-recommendation-usethismodel.PNG "Mosaico do modelo de recomendación de produtos co botón Usar este modelo")
+   > ![Mosaico do modelo de recomendación de produtos co botón Usar este modelo.](media/product-recommendation-usethismodel.PNG "Mosaico do modelo de recomendación de produtos co botón Usar este modelo")
 
 1. Revise a información sobre os requisitos do modelo. Se ten os datos requiridos, seleccione **Comezar**.
 
@@ -93,7 +93,7 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
 
 1. Asigne os campos semánticos aos atributos da súa entidade do historial de compras e seleccione **Seguinte**. Para obter descricións dos campos, bótelle unha ollada aos [requisitos previos](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Definir a relación da entidade](media/product-recommendation-purchasehistorymapping.PNG "Páxina do historial de compras que mostra atributos semánticos asignados a campos da entidade do historial de compras seleccionada")
+   > ![Defina a relación da entidade.](media/product-recommendation-purchasehistorymapping.PNG "Páxina do historial de compras que mostra atributos semánticos asignados a campos da entidade do historial de compras seleccionada")
 
 1. Se os campos non se enchen, configure a relación da súa entidade do historial de compras á entidade *Cliente*.
     1. Seleccione a **entidade do historial de compra**.
@@ -101,7 +101,7 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
     1. Seleccione a **Entidade de cliente** que se corresponde coa súa entidade de cliente principal.
     1. Escriba un nome que describa a relación.
        > [!div class="mx-imgBorder"]
-       > ![Páxina do historial de compras que mostra a creación dunha relación co cliente](media/model-purchase-join.png "Páxina do historial de compras que mostra a creación dunha relación co cliente")
+       > ![Páxina do historial de compras que mostra a creación dunha relación co cliente.](media/model-purchase-join.png "Páxina do historial de compras que mostra a creación dunha relación co cliente")
 
 1. Seleccione **Gardar**.
 
@@ -145,7 +145,7 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
 
 1. Vaia ao separador **As miñas predicións** en **Intelixencia** > **Predicións**.
    > [!div class="mx-imgBorder"]
-   > ![Vista da páxina As miñas predicións](media/product-recommendation-mypredictions.PNG "Vista da páxina As miñas predicións")
+   > ![Vista da páxina As miñas predicións.](media/product-recommendation-mypredictions.PNG "Vista da páxina As miñas predicións")
 
 1. Seleccione a predición que desexa revisar.
    - **Nome da predición:** o nome da predición indicado ao creala.
@@ -163,7 +163,7 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
 
 1. Seleccione os tres puntos verticais xunto á predición da que desexa revisar os resultados e seleccione **Ver**.
    > [!div class="mx-imgBorder"]
-   > ![Vista de opcións no menú de tres puntos verticais para obter unha predición, incluída a edición, actualización, vista, rexistros e eliminación](media/product-recommendation-verticalellipses.PNG "Vista de opcións no menú de tres puntos verticais para obter unha predición, incluída a edición, actualización, vista, rexistros e eliminación")
+   > ![Vista de opcións no menú de tres puntos verticais para obter unha predición, incluída a edición, actualización, vista, rexistros e eliminación.](media/product-recommendation-verticalellipses.PNG "Vista de opcións no menú de tres puntos verticais para obter unha predición, incluída a edición, actualización, vista, rexistros e eliminación")
 
 1. Na páxina de resultados hai cinco seccións principais de datos:
     1. **Desempeño do modelo de formación:** A, B ou C son posibles puntuacións. Esta puntuación indica o rendemento da predición e pode axudalo a tomar a decisión de usar os resultados almacenados na entidade de saída.
@@ -173,13 +173,13 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
             - **C**: Considerarase o modelo con calidade **C** se a métrica "Éxito @ K" é menos que a liña base.
                
                > [!div class="mx-imgBorder"]
-               > ![Vista do resultado do rendemento do modelo](media/product-recommendation-modelperformance.PNG "Vista do resultado do rendemento do modelo")
+               > ![Vista do resultado do rendemento do modelo.](media/product-recommendation-modelperformance.PNG "Vista do resultado do rendemento do modelo")
             - **Liña base**: O modelo colle os produtos máis recomendados segundo o número de compras de todos os clientes e usa as regras aprendidas identificadas polo modelo para crear un conxunto de recomendacións para os clientes. As predicións compáranse cos principais produtos, calculados polo número de clientes que compraron o produto. Se un cliente ten polo menos un produto recomendado que tamén se viu nos produtos máis vendidos, considérase unha parte da liña de base. Se houbese 10 destes clientes que mercaran un produto recomendado dun total de 100 clientes, a liña base sería do 10 %.
             - **Éxito @ K**: Usando un conxunto de validación do período de tempo das transaccións, créanse recomendacións para todos os clientes e compáranse co conxunto de validación de transaccións. Por exemplo, nun período de 12 meses, o mes 12 podería reservarse como un conxunto de datos de validación. Se o modelo predí polo menos unha cousa que mercaría no mes 12 segundo o que aprendeu nos 11 meses anteriores, o cliente aumentaría a métrica "Éxito @ K".
     
     1. **Produtos máis suxeridos (con reconto):** Os cinco produtos principais previstos para os seus clientes.
        > [!div class="mx-imgBorder"]
-       > ![Gráfico que mostra os 5 principais produtos máis recomendados](media/product-recommendation-topproducts.PNG "Gráfico que mostra os 5 principais produtos máis recomendados")
+       > ![Gráfico que mostra os 5 principais produtos máis recomendados.](media/product-recommendation-topproducts.PNG "Gráfico que mostra os 5 principais produtos máis recomendados")
     
     1. **Factores clave de recomendación:** O modelo utiliza o historial de transaccións dos clientes para facer recomendacións de produtos. Aprende padróns baseados en compras pasadas e atopa similitudes entre clientes e produtos. Estas similitudes utilízanse entón para xerar recomendacións de produtos.
     Os seguintes son os factores que poden influír nunha recomendación de produto xerada polo modelo. 
@@ -190,20 +190,20 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
         Cada recomendación de produto está influenciada por un ou máis destes factores. A porcentaxe de recomendacións onde cada factor influente xogou un papel visualízase nun gráfico. No seguinte exemplo, o 100 % das recomendacións estiveron influenciadas por transaccións pasadas, o 60 % pola similitude dos clientes e o 22 % pola similitude do produto. Pase o rato por enriba das barras do gráfico para ver a porcentaxe exacta na que contribuíron os factores influentes.
 
         > [!div class="mx-imgBorder"]
-        > ![Principais factores de recomendación](media/product-recommendation-keyrecommendationfactors.png "Factores clave de recomendación aprendidos polo modelo para xerar recomendacións de produtos")
+        > ![Principais factores de recomendación.](media/product-recommendation-keyrecommendationfactors.png "Factores clave de recomendación aprendidos polo modelo para xerar recomendacións de produtos")
        
      
    1. **Estatísticas de datos**: Ofrece unha visión xeral do número de transaccións, clientes e produtos que o modelo considerou. Baséase nos datos de entrada que se empregaron para aprender padróns e xerar recomendacións de produtos.
 
       > [!div class="mx-imgBorder"]
-      > ![Estatísticas dos datos](media/product-recommendation-datastatistics.png "Estatísticas de datos arredor dos datos de entrada empregados polo modelo para aprender padróns")
+      > ![Estatísticas dos datos.](media/product-recommendation-datastatistics.png "Estatísticas de datos arredor dos datos de entrada empregados polo modelo para aprender padróns")
 
       Esta sección mostra as estatísticas arredor dos puntos de datos utilizados polo modelo para aprender padróns e xerar recomendacións de produtos. A filtraxe, tal e como se configura na configuración do modelo, aplicarase á saída xerada polo modelo. Non obstante, o modelo utiliza todos os datos dispoñibles para aprender padróns. Polo tanto, se usa a filtraxe de produtos na configuración do modelo, esta sección amosará o número total de produtos que o modelo analizou para aprender padróns, que poden diferir do número de produtos que coinciden cos criterios de filtraxe definidos.
 
    1. **Recomendacións de produtos de alta confianza:** Unha mostra de recomendacións proporcionadas aos seus clientes que o modelo cre que é probable que adquira o cliente.    
       Se se engade un catálogo de produtos, os ID de produtos substitúense por nomes de produtos. Os nomes de produtos proporcionan unha información máis intuitiva e que require accións sobre as predicións.
        > [!div class="mx-imgBorder"]
-       > ![Lista que mostra suxestións de alta confianza para un conxunto selecto de clientes individuais](media/product-recommendation-highconfidence.PNG "Lista que mostra suxestións de alta confianza para un conxunto selecto de clientes individuais")
+       > ![Lista que mostra suxestións de alta confianza para un conxunto selecto de clientes individuais.](media/product-recommendation-highconfidence.PNG "Lista que mostra suxestións de alta confianza para un conxunto selecto de clientes individuais")
 
 ## <a name="manage-predictions"></a>Xestionar predicións
 

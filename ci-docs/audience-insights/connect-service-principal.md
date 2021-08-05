@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596497"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692111"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectarse a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure para obter información sobre o público
 
 As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Siga a ler para aprender a conectar as estatísticas do público cunha conta de Azure Data Lake Storage Gen2 usando unha entidade de seguranza do servizo de Azure en lugar de claves da conta de almacenamento. 
 
-Pode usar a entidade de seguranza do servizo para, de forma segura, [engadir ou editar un cartafol de Common Data Model como orixe de datos](connect-common-data-model.md) ou [crear un novo ambiente ou actualizar un existente](manage-environments.md#create-an-environment-in-an-existing-organization).
+Pode usar a entidade de seguranza do servizo para, de forma segura, [engadir ou editar un cartafol de Common Data Model como orixe de datos](connect-common-data-model.md) ou [crear un novo ambiente ou actualizar un existente](get-started-paid.md).
 
 > [!IMPORTANT]
 > - A conta de almacenamento de Azure Data Lake Gen2 que pretenda utilizar a entidade de seguranza do servizo debe ter o [Espazo de nomes xerárquicos (HNS) activado](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Pode tardar ata 15 minutos en propagar os cambios.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduza o ID de recurso de Azure ou os detalles da subscrición a Azure no anexo da conta de almacenamento para a información do público.
 
-Anexe unha conta de almacenamento de Azure Data Lake na información sobre a audiencia para [almacenar datos de saída](manage-environments.md) ou [úsea como orixe de datos](connect-common-data-service-lake.md). Escoller a opción Azure Data Lake permítelle escoller entre un enfoque baseado en recursos ou baseado nunha subscrición.
+Anexe unha conta de almacenamento de Azure Data Lake na información sobre a audiencia para [almacenar datos de saída](manage-environments.md) ou [úsea como orixe de datos](connect-dataverse-managed-lake.md). Escoller a opción Azure Data Lake permítelle escoller entre un enfoque baseado en recursos ou baseado nunha subscrición.
 
 Siga os pasos seguintes para proporcionar a información requirida sobre o enfoque seleccionado.
 

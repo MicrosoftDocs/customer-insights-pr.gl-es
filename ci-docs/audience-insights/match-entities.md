@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306026"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650316"
 ---
 # <a name="match-entities"></a>Buscar coincidencias das entidades
 
@@ -138,7 +138,7 @@ Non é obrigatorio especificar regras de desduplicación. Se non se configuran t
    - **Menos recente**: Identifica o rexistro gañador en función da data menos recente. Require unha data ou un campo numérico para definir a actualidade.
  
    > [!div class="mx-imgBorder"]
-   > ![Paso 1 das regras de desduplicación](media/match-selfconflation.png "Paso 1 das regras de desduplicación")
+   > ![Paso 1 das regras de eliminación de duplicados.](media/match-selfconflation.png "Paso 1 das regras de desduplicación")
  
 1. Unha vez seleccionadas as entidades e configurada a súa preferencia de combinación, seleccione **Engadir regra** para definir as regras de desduplicación a nivel de entidade.
    - **Seleccionar campo** enumera todos os campos dispoñibles desa entidade. Escolla o campo que desexe comprobar se ten duplicados. Escolla campos que probablemente sexan únicos para cada cliente. Por exemplo, un enderezo de correo electrónico ou a combinación de nome, cidade e número de teléfono.
@@ -146,7 +146,7 @@ Non é obrigatorio especificar regras de desduplicación. Se non se configuran t
    - Defina máis condicións adicionais seleccionando **Engadir condición**.
  
    > [!div class="mx-imgBorder"]
-   > ![Paso 2 das regras de desduplicación](media/match-selfconflation-rules.png "Paso 2 das regras de desduplicación")
+   > ![Paso 2 das regras de eliminación de duplicados.](media/match-selfconflation-rules.png "Paso 2 das regras de desduplicación")
 
   Pode crear varias regras de desduplicación para unha entidade. 
 
@@ -179,7 +179,9 @@ Vaia a **Datos** > **Unify** > **Coincidencia** e seleccione **Executar** para i
 Atopará o resultado dunha execución con éxito, a entidade de perfil de cliente unificado, na páxina **Entidades**. Asignarase á súa entidade de cliente unificada o nome de **Clientes** na sección **Perfís**. A primeira execución da busca de coincidencias correcta crea a entidade *Cliente* unificada. Todas as execucións de buscas de correspondencias posteriores amplían esa entidade.
 
 > [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies). Pode seleccionar o estado dun proceso para ver detalles sobre o progreso de todo o traballo. Despois de seleccionar **Ver detalles** para unha das tarefas do traballo, atopará información adicional: o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa.
+> Despois de executar o proceso de coincidencias, seleccione o estado do proceso para abrir o panel **Detalles da tarefa**. Ofrece unha visión xeral sobre o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa. Seleccione **Ver detalles** para ver que entidades participaron no proceso de coincidencias, que regras se lles aplicaron e se as actualizacións se publicaron correctamente.  
+> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Camiño detallado para chegar aos detalles do proceso desde a ligazón de estado da tarefa.":::
 
 ## <a name="review-and-validate-your-matches"></a>Revisar e validar as súas coincidencias
 

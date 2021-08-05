@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596819"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554157"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualización incremental para orixes de datos baseadas en Power Query
 
@@ -45,7 +45,7 @@ As estadísticas do público permiten actualizar incrementalmente as fontes de d
 1. Na **Configuración de actualización incremental**, configurará a actualización incremental para todas as entidades que seleccionou ao crear a orixe de datos.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurar as entidades dunha orixe de datos para actualizar incrementalmente](media/incremental-refresh-settings.png "Configurar as entidades dunha orixe de datos para actualizar incrementalmente")
+   > ![Configurar as entidades dunha orixe de datos para a actualización incremental.](media/incremental-refresh-settings.png "Configurar as entidades dunha orixe de datos para actualizar incrementalmente")
 
 1. Seleccione unha entidade e proporcione os seguintes detalles:
 

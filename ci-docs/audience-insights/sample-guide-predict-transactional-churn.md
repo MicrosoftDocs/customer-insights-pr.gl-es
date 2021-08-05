@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306118"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556259"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guía de mostra (previsualización) da predición do abandono transaccional
 
@@ -47,7 +47,7 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
    - **CreatedOn**: data/hora/fuso
 
    [!div class="mx-imgBorder"]
-   ![Transformar DoB en data](media/ecommerce-dob-date.PNG "transformar data de nacemento en data")
+   ![Transformar DoB en data.](media/ecommerce-dob-date.PNG "transformar data de nacemento en data")
 
 1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
 

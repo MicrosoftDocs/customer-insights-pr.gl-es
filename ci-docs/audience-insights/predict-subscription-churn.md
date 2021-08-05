@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095646"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556305"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predición da renovación da subscrición (vista previa)
 
@@ -63,7 +63,7 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
 1. Na información do público, vaia a **Intelixencia** > **Predicións**.
 1. Seleccione o mosaico **Modelo de renovación de subscrición (vista previa)** e seleccione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Mosaico de modelo de renovación de subscrición co botón Utilizar este modelo](media/subscription-churn-usethismodel.PNG "Mosaico de modelo de renovación de subscrición co botón Utilizar este modelo")
+   > ![Mosaico de modelo de renovación de subscrición co botón Utilizar este modelo.](media/subscription-churn-usethismodel.PNG "Mosaico de modelo de renovación de subscrición co botón Utilizar este modelo")
 
 ### <a name="name-model"></a>Dar nome ao modelo
 
@@ -86,11 +86,11 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
     1. Seleccione a **Entidade de cliente** que se corresponde coa súa entidade de cliente principal.
     1. Escriba un nome que describa a relación.
        > [!div class="mx-imgBorder"]
-       > ![Páxina do historial de subscricións que mostra a creación dunha relación co cliente](media/subscription-churn-subscriptionhistoryrelationship.PNG "Páxina do historial de subscricións que mostra a creación dunha relación co cliente")
+       > ![Páxina do historial de subscricións que mostra a creación dunha relación co cliente.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Páxina do historial de subscricións que mostra a creación dunha relación co cliente")
 1. Seleccione **Seguinte**.
 1. Asigne os campos semánticos aos atributos da súa entidade do historial de subscricións e seleccione **Gardar**. Para obter descricións dos campos, bótelle unha ollada aos [requisitos previos](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Páxina do historial de subscricións que mostra atributos semánticos que se asignan a campos da entidade do historial de subscricións seleccionado](media/subscription-churn-subscriptionhistorymapping.PNG "Páxina do historial de subscricións que mostra atributos semánticos que se asignan a campos da entidade do historial de subscricións seleccionado")
+   > ![Páxina do historial de subscricións que mostra atributos semánticos que se asignan a campos da entidade do historial de subscricións seleccionado.](media/subscription-churn-subscriptionhistorymapping.PNG "Páxina do historial de subscricións que mostra atributos semánticos que se asignan a campos da entidade do historial de subscricións seleccionado")
 1. Seleccione **Engadir datos** para **Actividades de cliente** e escolla a entidade que fornece a información da actividade do cliente tal e como se describe nos requisitos previos.
 1. Seleccione un tipo de actividade que coincida co tipo de actividade do cliente que está configurando.  Seleccione **Crear novo** e indique un nome se non ve unha opción que coincida co tipo de actividade que precisa.
 1. Deberá configurar a relación desde a entidade de actividade de cliente na entidade de cliente.
@@ -101,7 +101,7 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
 1. Asigne os campos semánticos aos atributos da súa entidade de actividade de cliente e seleccione **Gardar**. Para obter descricións dos campos, bótelle unha ollada aos [requisitos previos](#prerequisites).
 1. (Opcional) Se ten algunha outra actividade de cliente que desexe incluír, repita os pasos anteriores.
    > [!div class="mx-imgBorder"]
-   > ![Definir a relación da entidade](media/subscription-churn-customeractivitiesmapping.PNG "Páxina de actividades de clientes que mostra atributos semánticos que se asignan a campos da entidade da actividade do cliente seleccionada")
+   > ![Defina a relación da entidade.](media/subscription-churn-customeractivitiesmapping.PNG "Páxina de actividades de clientes que mostra atributos semánticos que se asignan a campos da entidade da actividade do cliente seleccionada")
 1. Seleccione **Seguinte**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Establecer a programación e revisar a configuración
@@ -115,7 +115,7 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
 
 1. Vaia ao separador **As miñas predicións** en **Intelixencia** > **Predicións**.
    > [!div class="mx-imgBorder"]
-   > ![Vista da páxina As miñas predicións](media/subscription-churn-mypredictions.PNG "Vista da páxina As miñas predicións")
+   > ![Vista da páxina As miñas predicións.](media/subscription-churn-mypredictions.PNG "Vista da páxina As miñas predicións")
 1. Seleccione a predición que desexa revisar.
    - **Nome da predición:** o nome da predición indicado ao creala.
    - **Tipo de predición:** o tipo de modelo empregado para a predición
@@ -131,7 +131,7 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
    - **Última actualización:** a data na que a predición actualizou resultados na entidade de saída.
 1. Seleccione os tres puntos verticais xunto á predición da que desexa revisar os resultados e seleccione **Ver**.
    > [!div class="mx-imgBorder"]
-   > ![Vista de opcións no menú de tres puntos verticais para obter unha predición, incluída a edición, actualización, vista, rexistros e eliminación](media/subscription-churn-verticalellipses.PNG "Vista de opcións no menú de tres puntos verticais para obter unha predición, incluída a edición, actualización, vista, rexistros e eliminación")
+   > ![Vista de opcións no menú de tres puntos verticais para obter unha predición, incluída a edición, actualización, vista, rexistros e eliminación.](media/subscription-churn-verticalellipses.PNG "Vista de opcións no menú de tres puntos verticais para obter unha predición, incluída a edición, actualización, vista, rexistros e eliminación")
 1. Hai tres seccións principais de datos dentro da páxina de resultados:
     1. **Desempeño do modelo de formación:** A, B ou C son posibles puntuacións. Esta puntuación indica o rendemento da predición e pode axudalo a tomar a decisión de usar os resultados almacenados na entidade de saída.
         - As puntuacións determínanse segundo as regras seguintes:
@@ -139,13 +139,13 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
             - **B** cando o modelo predixo con precisión polo menos o 50 % do total de predicións e cando a porcentaxe de prediccións precisas para os clientes que abandonaron é ata un 10 % maior que a taxa de abandono media histórica da taxa media de abandono histórica.
             - **C** cando o modelo predixo con precisión menos do 50 % do total de predicións ou cando a porcentaxe de prediccións precisas para os clientes que abandonaron é inferior á taxa de abandono media histórica.
                > [!div class="mx-imgBorder"]
-               > ![Vista do resultado do rendemento do modelo](media/subscription-churn-modelperformance.PNG "Vista do resultado do rendemento do modelo")
+               > ![Vista do resultado do rendemento do modelo.](media/subscription-churn-modelperformance.PNG "Vista do resultado do rendemento do modelo")
     1. **Probabilidade de renovación (número de clientes):** grupos de clientes en función do risco previsto de renovación. Estes datos poden axudalo máis tarde se quere crear un segmento de clientes con alto risco de renovación. Estes segmentos axudan a comprender onde debe estar o seu corte para a subscrición a segmentos.
        > [!div class="mx-imgBorder"]
-       > ![Gráfico que mostra a distribución dos resultados da renovación, divididos en rangos do 0 ao 100%](media/subscription-churn-resultdistribution.PNG "Gráfico que mostra a distribución dos resultados da renovación, divididos en rangos do 0 ao 100%")
+       > ![Gráfico que mostra a distribución dos resultados da renovación, divididos en rangos do 0 ao 100%.](media/subscription-churn-resultdistribution.PNG "Gráfico que mostra a distribución dos resultados da renovación, divididos en rangos do 0 ao 100%")
     1. **Factores máis influentes:** hai moitos factores que se teñen en conta á hora de crear a súa predición. Cada un dos factores ten calculada a súa importancia para as predicións agregadas que crea un modelo. Pode usar estes factores para axudar a validar os resultados da súa predición. Ou pode usar esta información máis tarde para [crear segmentos](segments.md) que poderían axudalo a influír no risco de renovación dos clientes.
        > [!div class="mx-imgBorder"]
-       > ![Lista que mostra factores influentes e a súa importancia para predicir o resultado da renovación](media/subscription-churn-influentialfactors.PNG "Lista que mostra factores influentes e a súa importancia para predicir o resultado da renovación")
+       > ![Lista que mostra factores influentes e a súa importancia para predicir o resultado da renovación.](media/subscription-churn-influentialfactors.PNG "Lista que mostra factores influentes e a súa importancia para predicir o resultado da renovación")
 
 ## <a name="manage-predictions"></a>Xestionar predicións
 

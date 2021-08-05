@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305292"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555305"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecemento de perfís de clientes con HERE Technologies (vista previa)
 
@@ -35,7 +35,7 @@ Para configurar os enriquecementos de HERE Technologies, deben cumprirse os segu
 1. No mosaico de HERE Technologies, seleccione **Enriquecer os meus datos** e logo seleccione **Comezar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Mosaico de HERE Technologies](media/HERE-tile.png "Mosaico de HERE Technologies")
+   > ![Mosaico de HERE Technologies.](media/HERE-tile.png "Mosaico de HERE Technologies")
 
 1. Seleccione unha [conexión](connections.md) da lista despregable. Póñase en contacto cun administrador se non hai conexión dispoñible. Se é administrador, pode crear unha conexión seleccionando **Engadir conexión**. Escolla **HERE Technologies** da lista despregable. 
 
@@ -50,7 +50,7 @@ Para configurar os enriquecementos de HERE Technologies, deben cumprirse os segu
 1. Defina os campos dos perfís unificados que se deben empregar para buscar datos de localización coincidentes de HERE Technologies. Os campos **Rúa 1** e **Código postal** son obrigatorios para o enderezo primario e/ou secundario seleccionado. Para unha maior precisión de coincidencia, pódense engadir máis campos.
 
    > [!div class="mx-imgBorder"]
-   > ![Páxina de configuración de enriquecemento de HERE Technologies](media/enrichment-HERE-configuration.png "Páxina de configuración de enriquecemento de HERE Technologies")
+   > ![Páxina de configuración de enriquecemento de HERE Technologies.](media/enrichment-HERE-configuration.png "Páxina de configuración de enriquecemento de HERE Technologies")
 
 1. Seleccione **Seguinte** para concluír a asignación do campo.
 
@@ -73,7 +73,7 @@ Debe ser administrador para configurar as conexións. Seleccione **Engadir conex
 1. Despois de completar a verificación, seleccione **Gardar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Páxina de configuración da conexión de HERE Technologies](media/enrichment-HERE-connection.png "Páxina de configuración da conexión de HERE Technologies")
+   > ![Páxina de configuración da conexión de HERE Technologies.](media/enrichment-HERE-connection.png "Páxina de configuración da conexión de HERE Technologies")
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
 

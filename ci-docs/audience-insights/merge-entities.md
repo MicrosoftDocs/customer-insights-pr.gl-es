@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305633"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650132"
 ---
 # <a name="merge-entities"></a>Combinar entidades
 
@@ -109,7 +109,7 @@ Algunhas entidades conteñen máis detalles que outras. Se unha entidade inclúe
 Tanto se combina manualmente atributos ou deixa que o sistema os combine, sempre pode executar a súa combinación. Seleccione **Executar** na páxina **Combinar** para iniciar o proceso.
 
 > [!div class="mx-imgBorder"]
-> ![Almacenamento e execución da combinación de datos](media/configure-data-merge-save-run.png "Almacenamento e execución da combinación de datos")
+> ![Almacenamento e execución da combinación de datos.](media/configure-data-merge-save-run.png "Almacenamento e execución da combinación de datos")
 
 Escolla **Executar só combinación** se só quere ver a saída reflectida na entidade de cliente unificada. Os procesos descendentes actualizaranse segundo [se estableza na programación de actualización](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Escolla **Executar combinación e procesos descendentes** para actualizar o sist
 Para realizar máis modificacións e volver executar o paso, pode cancelar unha combinación en curso. Seleccione **Actualizando...** e seleccione **Cancelar traballo** no panel lateral que aparece.
 
 > [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies). Pode seleccionar o estado dun proceso para ver detalles sobre o progreso de todo o traballo. Despois de seleccionar **Ver detalles** para unha das tarefas do traballo, atopará información adicional: o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa.
+> Despois de executar o proceso de combinación, seleccione o estado do proceso para abrir o panel **Detalles da tarefa**. Ofrece unha visión xeral sobre o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa. Seleccione **Ver detalles** para ver que entidades participaron no proceso de coincidencias, se a resolución do conflito se realizou correctamente e se as actualizacións se publicaron correctamente.  
+> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Camiño detallado para chegar aos detalles do proceso desde a ligazón de estado da tarefa.":::
 
 ## <a name="next-step"></a>Seguinte paso
 

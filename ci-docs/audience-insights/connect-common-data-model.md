@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596543"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554892"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar cun cartafol de Common Data Model cunha conta de Azure Data Lake
 
@@ -45,7 +45,7 @@ Este artigo ofrece información sobre como inxerir datos desde un cartafol de Co
 
 1. Pode escoller entre usar unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Introduza a información do **contedor** e seleccione **Seguinte**.
    > [!div class="mx-imgBorder"]
-   > ![Cadro de diálogo para introducir novos detalles de conexión para Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Cadro de diálogo para introducir novos detalles de conexión para Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Precisa unha das seguintes funcións no contedor ou na conta de almacenamento mencionada anteriormente para poder conectarse e crear unha orixe de datos:
    >  - Lector de datos do BLOB de almacenamento
@@ -58,11 +58,11 @@ Este artigo ofrece información sobre como inxerir datos desde un cartafol de Co
 
 1. Obterá unha lista de entidades dispoñibles no ficheiro model.json ou manifest.json seleccionado. Pode revisar e seleccionar na lista de entidades dispoñibles e seleccionar **Gardar**. Todas as entidades seleccionadas inxeriranse a partir da orixe de datos nova.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo que mostra unha lista de entidades dun ficheiro model.json](media/review-entities.png)
+   > ![Caixa de diálogo que mostra unha lista de entidades dun ficheiro model.json.](media/review-entities.png)
 
 8. Indique que entidades de datos quere para activar a creación de perfís de datos e seleccione **Gardar**. A creación de perfís de datos activa as análises e outras funcionalidades. Pode seleccionar a entidade enteira, que selecciona todos os atributos da entidade, ou seleccionar certos atributos que elixa. Por defecto, ningunha entidade está habilitada para a creación de perfís de datos.
    > [!div class="mx-imgBorder"]
-   > ![Cadro de diálogo que mostra a creación de perfís de datos](media/dataprofiling-entities.png)
+   > ![Cadro de diálogo que mostra a creación de perfís de datos.](media/dataprofiling-entities.png)
 
 9. Despois de gardar as súas seleccións, abrirase a páxina **Fontes de datos**. Agora debe ver a conexión do cartafol Common Data Model como orixe de datos.
 
@@ -81,12 +81,12 @@ Pode actualizar a clave de acceso da conta de almacenamento que contén o cartaf
 
 4. Tamén pode actualizar a **Clave de acceso** e seleccionar **Seguinte**.
 
-   ![Caixa de diálogo para editar e actualizar unha clave de acceso para un orixe de datos existente](media/edit-access-key.png)
+   ![Diálogo para editar e actualizar unha clave de acceso para un orixe de datos existente.](media/edit-access-key.png)
 
 5. Opcionalmente, pode actualizar desde unha conexión de clave de conta a unha conexión baseada en recursos ou baseada nunha subscrición. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Non pode cambiar a información do **contedor** ao actualizar a conexión.
    > [!div class="mx-imgBorder"]
 
-   > ![Cadro de diálogo para introducir os detalles da conexión de Azure Data Lake nunha conta de almacenamento existente](media/enter-existing-storage-details.png)
+   > ![Caixa de diálogo para introducir os detalles da conexión de Azure Data Lake nunha conta de almacenamento existente.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Precisa unha das seguintes funcións no contedor ou na conta de almacenamento mencionada anteriormente para poder conectarse e crear unha orixe de datos:

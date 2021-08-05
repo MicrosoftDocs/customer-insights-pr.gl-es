@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124225"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362507"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos a Mailchimp (versión preliminar)
 
@@ -38,7 +38,7 @@ Exporte segmentos de perfís de clientes unificados a Mailchimp para crear bolet
 
 1. Vaia a **Administrar** > **Conexións**.
 
-1. Seleccione **Engadir conexión** e elixa **Autopilot** para configurar a conexión.
+1. Seleccione **Engadir conexión** e elixa **Mailchimp** para configurar a conexión.
 
 1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
 

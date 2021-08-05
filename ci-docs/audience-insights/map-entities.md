@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595991"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555121"
 ---
 # <a name="map-entities-and-attributes"></a>Entidades e atributos do mapa
 
@@ -35,14 +35,14 @@ Para obter máis información sobre o fluxo xeral de unificación de datos, cons
 3. Seleccione as entidades e atributos que desexe empregar nas fases *atopar coincidencia* e *combinar*. Pode seleccionar os atributos requiridos individualmente dunha entidade ou incluír todos os atributos dunha entidade seleccionando a caixa de verificación **Incluír todos os campos** a nivel de entidade. Recomendamos seleccionar polo menos dúas entidades para beneficiarse do proceso de unificación de datos.
 
    > [!div class="mx-imgBorder"]
-   > ![Exemplo de engadir entidades](media/data-manager-configure-map-add-entities-example.png "Exemplo de engadir entidades")
+   > ![Exemplo de engadir entidades.](media/data-manager-configure-map-add-entities-example.png "Exemplo de engadir entidades")
 
    Neste exemplo, engadimos as entidades **eCommerceContacts** e **loyCustomers**. Se escolle estas entidades, pode obter información sobre cales dos clientes comerciais en liña son membros do programa de fidelización.
    
    Pode buscar palabras clave en todos os atributos e entidades para seleccionar os atributos requiridos que desexa asignar.
    
      > [!div class="mx-imgBorder"]
-   > ![Exemplo de campos de busca](media/data-manager-configure-map-search-fields-example.png "Exemplo de campos de busca")
+   > ![Exemplo de campos de busca.](media/data-manager-configure-map-search-fields-example.png "Exemplo de campos de busca")
 
 4. Seleccione **Aplicar** para confirmar as súas seleccións.
 
@@ -55,7 +55,7 @@ Despois de seleccionar as súas entidades, a páxina **Mapa** enumera as entidad
 - **Tipo semántico de atributo**: categorías dos seus atributos, como o enderezo de correo electrónico ou o nome. Para usar modelos de IA para a predición intelixente de semántica, aforrar tempo e mellorar a precisión, configure **Asignación intelixente** en **ACTIVADO**. A asignación intelixente resalta a recomendación de semántica baseada en IA no campo **Tipo**. Se a configura en **DESACTIVADO**, verá as nosas recomendacións de asignación regular. Pode seleccionar calquera tipo semántico na lista de opcións dispoñibles e anular a selección suxerida.
 
 > [!div class="mx-imgBorder"]
-> ![Tipo de atributo e predición semántica](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo e predición semántica")
+> ![Tipo de atributo e predición semántica.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo e predición semántica")
 
 Tamén é posible engadir un tipo semántico personalizado. Seleccione o campo de tipo dun atributo e escriba o seu nome de tipo semántico personalizado. Deste xeito, tamén pode cambiar os tipos de atributo que foron identificados polo sistema.
 
@@ -64,7 +64,7 @@ Todos os atributos para os que se identifica automaticamente un tipo semántico 
 Os atributos que non se asignan automaticamente a un tipo semántico agrúpanse na sección **Definir os datos nos campos non asignados**. Seleccione o campo de tipo semántico para os atributos non asignados ou introduza o seu nome de tipo de atributo personalizado.
 
 > [!div class="mx-imgBorder"]
-> ![Clave primaria e tipo de atributo](media/data-manager-configure-map-add-attributes.png "Clave primaria e tipo de atributo")
+> ![Clave primaria e tipo de atributo.](media/data-manager-configure-map-add-attributes.png "Clave primaria e tipo de atributo")
 
 > [!NOTE]
 > Un campo debería asignarse ao tipo semántico Person.FullName para completar o nome do cliente na tarxeta do cliente. Do contrario, os cartóns de cliente aparecerán sen nome. 
@@ -76,7 +76,7 @@ Os atributos que non se asignan automaticamente a un tipo semántico agrúpanse 
 2. No panel **Editar campos**, engada ou elimine atributos e entidades. Use a busca ou o desprazamento para atopar e seleccionar os seus atributos e entidades de interese. Non pode eliminar un atributo ou unha entidade se xa coincidiron.
 
    > [!div class="mx-imgBorder"]
-   > ![Engadir ou eliminar atributos](media/configure-data-map-edit.png "Engadir ou eliminar atributos")
+   > ![Engadir ou eliminar atributos.](media/configure-data-map-edit.png "Engadir ou eliminar atributos")
 
 3. Seleccione **Aplicar**.
 

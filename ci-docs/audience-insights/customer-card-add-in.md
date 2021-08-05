@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059586"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692203"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento do cartón do cliente (vista previa)
 
@@ -25,7 +25,7 @@ Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións
 ## <a name="prerequisites"></a>Requisitos previos
 
 - O suplemento só funciona con aplicacións de Dynamics 365 controladas por modelos, como Sales ou Customer Service, versión 9.0 e posteriores.
-- Para que os seus datos de Dynamics 365 se asignen aos perfís de clientes da información do público, deben [inxerirse desde a aplicación de Dynamics 365 mediante o conector de Common Data Service](connect-power-query.md).
+- Para que os seus datos de Dynamics 365 se asignen aos perfís de clientes da información do público, deben [inxerirse desde a aplicación de Dynamics 365 mediante o conector de Microsoft Dataverse](connect-power-query.md).
 - Todos os usuarios de Dynamics 365 do suplemento do cartón do cliente deben [engadirse como usuarios](permissions.md) na información do público para ver os datos.
 - Na información do público precísanse [capacidades de busca e filtros configuradas](search-filter-index.md) para que a busca de datos funcione.
 - Cada control do suplemento depende de datos específicos na información do público:
@@ -50,7 +50,7 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
 1. Seleccione a ligazón **Nome de pantalla** para a solución **Complemento de tarxeta de cliente de Dynamics 365 Customer Insights (vista previa)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Seleccionar o nome para mostrar](media/select-display-name.png "Seleccionar o nome para mostrar")
+   > ![Seleccionar o nome para mostrar.](media/select-display-name.png "Seleccionar o nome para mostrar")
 
 1. Seleccione **Iniciar sesión** e insira as credenciais da conta de administrador que use para configurar Customer Insights.
 
@@ -64,7 +64,7 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
    - Para asignar cunha conta, seleccione o campo da entidade de cliente que coincida co ID da súa entidade de conta.
 
    > [!div class="mx-imgBorder"]
-   > ![Campo de ID de contacto](media/contact-id-field.png "Campo de ID de contacto")
+   > ![Campo de ID de contacto.](media/contact-id-field.png "Campo de ID de contacto")
 
 1. Seleccione **Gardar configuración** para gardar os axustes.
 
@@ -83,7 +83,7 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
 1. Seleccione o formulario de contacto ao que desexa engadir os controis da tarxeta de cliente.
 
     > [!div class="mx-imgBorder"]
-    > ![Seleccionar formulario de contacto](media/contact-active-forms.png "Seleccionar formulario de contacto")
+    > ![Seleccionar formulario de contacto.](media/contact-active-forms.png "Seleccionar formulario de contacto")
 
 1. Para engadir un control no editor de formularios, arrastre calquera campo do **Explorador de campos** ata onde desexe colocar o control.
 
@@ -110,7 +110,7 @@ O complemento de tarxeta de cliente non se actualiza automaticamente. Para actua
 
 1. Seleccione **Aplicar a actualización da solución** na barra de acción.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualice a solución na área de personalización das aplicacións de Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualice a solución na área de personalización das aplicacións de Dynamics 365.":::
 
 1. Despois de iniciar o proceso de actualización, verá un indicador de carga ata que finalice a actualización. Se non hai ningunha versión máis recente, a actualización amosará unha mensaxe de erro.
 
