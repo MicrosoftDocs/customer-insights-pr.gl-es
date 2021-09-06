@@ -1,5 +1,5 @@
 ---
-title: Exportar datos de Customer Insights á plataforma Adobe Experience
+title: Exportar datos de Customer Insights a Adobe Experience Platform
 description: Aprenda a usar segmentos de información do público en Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305522"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032115"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilice segmentos de Customer Insights na Adobe Experience Platform (versión preliminar)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Usar segmentos de Customer Insights en Adobe Experience Platform (versión preliminar)
 
-Como usuario de información de audiencia en Dynamics 365 Customer Insights é posible que crease segmentos para facer máis eficientes as súas campañas de mercadotecnia dirixíndose a públicos relevantes. Para usar un segmento de información de audiencia en Adobe Experience Platform e aplicacións como Adobe Campaign Standard, cómpre seguir algúns pasos descritos neste artigo.
+Como usuario de información de audiencia en Dynamics 365 Customer Insights é posible que crease segmentos para facer máis eficientes as súas campañas de mercadotecnia dirixíndose a públicos relevantes. Para usar un segmento da información do público en Adobe Experience Platform e aplicacións como Adobe Campaign Standard, cómpre seguir uns pasos descritos neste artigo.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagrama de proceso dos pasos descritos neste artigo.":::
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 -   LIcenza de Dynamics 365 Customer Insights
--   Licenza de Adobe Experience Platform
+-   LIcenza de Adobe Experience Platform
 -   Licenza de Adobe Campaign Standard
 -   Conta de Azure Blob Storage
 
 ## <a name="campaign-overview"></a>Visión xeral da campaña
 
-Para comprender mellor como pode usar segmentos de información do público en Adobe Experience Platform, vexamos unha mostra de campaña ficticia.
+Para comprender mellor como pode usar segmentos de información do público en Adobe Experience Platform, vexamos unha campaña de mostra ficticia.
 
-Supoñamos que a súa empresa ofrece un servizo mensual baseado na subscrición aos seus clientes nos Estados Unidos. Identifique os clientes cuxas subscricións deben renovarse nos próximos oito días pero aínda non renovaron a súa subscrición. Para manter estes clientes, pode enviarlles unha oferta promocional por correo electrónico mediante a Adobe Experience Platform.
+Supoñamos que a súa empresa ofrece un servizo mensual baseado na subscrición aos seus clientes nos Estados Unidos. Identifique os clientes cuxas subscricións deben renovarse nos próximos oito días pero aínda non renovaron a súa subscrición. Para conservar estes clientes, desexa enviarlles unha oferta promocional por correo electrónico mediante Adobe Experience Platform.
 
 Neste exemplo, debemos executar a campaña de correo electrónico promocional unha vez. Este artigo non cubre o caso de uso de realizar a campaña máis dunha vez.
 
@@ -93,7 +93,7 @@ Despois de gardar o destino de exportación, atoparao en **Datos** > **Exportaci
 Xa pode [exportar o segmento baixo demanda](export-destinations.md#run-exports-on-demand). A exportación tamén se executará con todas as [actualizacións programadas](system.md).
 
 > [!NOTE]
-> Asegúrese de que o número de rexistros do segmento exportado estea dentro do límite permitido da súa licenza de Adobe Campaign Standard.
+> Asegúrese de que o número de rexistros no segmento exportado está dentro do límite permitido da licenza de Adobe Campaign Standard.
 
 Os datos exportados almacénanse no contedor de Azure Blob Storage que configurou anteriormente. A seguinte ruta de cartafol créase automaticamente no seu contedor:
 
@@ -105,26 +105,26 @@ O *model.json* das entidades exportadas reside a nivel de *%ExportDestinationNam
 
 Exemplo: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definir o Experience Data Model (XDM) na Adobe Experience Platform
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definir o modelo de datos de experiencia (XDM) en Adobe Experience Platform
 
-Para poder usar os datos exportados de estatísticas de audiencia na Adobe Experience Platform, debemos definir o esquema do Experience Data Model e [configurar os datos para o perfil de cliente en tempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Antes de que se poidan utilizar os datos exportados da información do público en Adobe Experience Platform, necesitamos definir o esquema do modelo de datos de experiencia e [configurar os datos para o perfil de cliente en tempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Aprenda [que é XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) e os [conceptos básicos da composición do esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
 ## <a name="import-data-into-adobe-experience-platform"></a>Importar datos a Adobe Experience Platform
 
-Agora que todo está no seu lugar, necesitamos importar os datos de audiencia preparados da información da audiencia á Adobe Experience Platform.
+Agora que todo está no seu lugar, necesitamos importar os datos do público preparados desde a información do público a Adobe Experience Platform.
 
 En primeiro lugar, [cree unha conexión de orixe de Azure Blob Storage](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Despois de definir a conexión de orixe, [configure un fluxo de datos](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) para que unha conexión por lotes de almacenamento na nube importe a saída do segmento de información de audiencia a Adobe Experience Platform.
+Despois de definir a conexión de orixe, [configure un fluxo de datos](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) para que unha conexión por lotes de almacenamento na nube importe a saída do segmento desde a información do público a Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Crear un público en Adobe Campaign Standard
 
-Para enviar o correo electrónico desta campaña, usaremos Adobe Campaign Standard. Despois de importar os datos a Adobe Experience Platform, necesitamos [crear un público](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) en Adobe Campaign Standard empregando os datos da Adobe Experience Platform.
+Para enviar o correo electrónico desta campaña, usaremos Adobe Campaign Standard. Despois de importar os datos en Adobe Experience Platform, precisamos [crear un público](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) en Adobe Campaign Standard empregando os datos de Adobe Experience Platform.
 
 
-Aprenda a [usar o creador de segmentos](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) en Adobe Campaign Standard para definir un público baseado nos datos da Adobe Experience Platform.
+Aprenda a [usar o xerador de segmentos](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) en Adobe Campaign Standard para definir un público baseándose nos datos de Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Crear e enviar o correo electrónico usando Adobe Campaign Standard
 

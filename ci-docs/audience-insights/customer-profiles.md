@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554616"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032802"
 ---
 # <a name="customer-profiles"></a>Perfís de clientes
 
@@ -69,7 +69,7 @@ Seleccione **Volver a Clientes** para volver á páxina de busca de clientes.
 
 ## <a name="next-steps"></a>Pasos seguintes
 
-[Engada máis orixes de datos](data-sources.md) ou [cree segmentos de clientes](segments.md).
+[Engada máis orixes de datos](data-sources.md), [enriqueza perfís unificados](enrichment-hub.md) ou [cree segmentos](segments.md) para traballar con perfís unificados noutras aplicacións.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

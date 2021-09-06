@@ -1,6 +1,6 @@
 ---
 title: Exportar datos de Customer Insights a Adobe Campaign Standard
-description: Coñeza como usar segmentos de información de público en Adobe Campaign Standard.
+description: Aprenda a usar segmentos de información do público en Adobe Campaign Standard.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: d301b4f0cb875303fb3d373b77177acd1c1f5219cd6f23c2a1d29ce67a222eab
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305384"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032161"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utilice segmentos de Customer Insights en Adobe Campaign Standard (versión preliminar)
+# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Usar segmentos de Customer Insights en Adobe Campaign Standard (versión preliminar)
 
-Como usuario de información de audiencia en Dynamics 365 Customer Insights é posible que crease segmentos para facer máis eficientes as súas campañas de mercadotecnia dirixíndose a públicos relevantes. Para usar un segmento de información de audiencia en Adobe Experience Platform e aplicacións como Adobe Campaign Standard, cómpre seguir algúns pasos descritos neste artigo.
+Como usuario de información de audiencia en Dynamics 365 Customer Insights é posible que crease segmentos para facer máis eficientes as súas campañas de mercadotecnia dirixíndose a públicos relevantes. Para usar un segmento da información do público en Adobe Experience Platform e aplicacións como Adobe Campaign Standard, cómpre seguir uns pasos descritos neste artigo.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagrama de proceso dos pasos descritos neste artigo.":::
 
@@ -30,9 +30,9 @@ Como usuario de información de audiencia en Dynamics 365 Customer Insights é p
 
 ## <a name="campaign-overview"></a>Visión xeral da campaña
 
-Para comprender mellor como pode usar segmentos de información do público en Adobe Experience Platform, vexamos unha mostra de campaña ficticia.
+Para comprender mellor como pode usar segmentos de información do público en Adobe Experience Platform, vexamos unha campaña de mostra ficticia.
 
-Supoñamos que a súa empresa ofrece un servizo mensual baseado na subscrición aos seus clientes nos Estados Unidos. Identifique os clientes cuxas subscricións deben renovarse nos próximos oito días pero aínda non renovaron a súa subscrición. Para manter estes clientes, pode enviarlles unha oferta promocional por correo electrónico mediante Adobe Campaign Standard.
+Supoñamos que a súa empresa ofrece un servizo mensual baseado na subscrición aos seus clientes nos Estados Unidos. Identifique os clientes cuxas subscricións deben renovarse nos próximos oito días pero aínda non renovaron a súa subscrición. Para conservar estes clientes, desexa enviarlles unha oferta promocional por correo electrónico mediante Adobe Campaign Standard.
 
 Neste exemplo, debemos executar a campaña de correo electrónico promocional unha vez. Este artigo non cubre o caso de uso de realizar a campaña máis dunha vez. Non obstante, a información do público e Adobe Campaign Standard pódense configurar para que funcionen tamén nun escenario de campaña periódica.
 
@@ -56,7 +56,7 @@ Co noso público obxectivo identificado, podemos configurar a exportación desde
 
 1. Seleccione **Engadir conexión** e elixa **Adobe Campaign** para configurar a conexión ou seleccione **Configurar** no mosaico **Adobe Campaign**.
 
-   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Mosaico de configuración para Adobe Campaign Standard.":::
+   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Mosaico de configuración de Adobe Campaign Standard.":::
 
 1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
 
@@ -80,7 +80,7 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Seleccione **Engadir exportación** para crear unha nova exportación.
 
-1. No campo **Conexión da exportación** escolla unha conexión da sección Adobe Campaign. Se non ve o nome desta sección, non ten ningunha conexión deste tipo dispoñible.
+1. No campo **Conexión para a exportación**, escolla unha conexión na sección de Adobe Campaign. Se non ve o nome desta sección, non ten ningunha conexión deste tipo dispoñible.
 
 1. Escolla o segmento que quere exportar. Neste exemplo, é **ChurnProneCustomers**.
 
@@ -88,14 +88,14 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Seleccione **Seguinte**.
 
-1. Agora asignamos os campos **Orixe** do segmento de información do público aos nomes do campo **Obxectivo** no esquema de perfil Adobe Campaign Standard.
+1. Agora asignamos os campos de **Orixe** desde o segmento de información do público aos nomes dos campos de **Destino** no esquema do perfil de Adobe Campaign Standard.
 
-   :::image type="content" source="media/ACS-field-mapping.png" alt-text="Asignación de campo para o conector Adobe Campaign Standard.":::
+   :::image type="content" source="media/ACS-field-mapping.png" alt-text="Asignación de campos para o conector de Adobe Campaign Standard.":::
 
-   Se desexa engadir máis atributos, seleccione **Engadir atributo**. O nome de destino pode ser diferente do nome do campo de orixe, de xeito que aínda pode asignar a saída de segmentos de información de audiencia a Adobe Campaign Standard se os campos non teñen o mesmo nome nos dous sistemas.
+   Se desexa engadir máis atributos, seleccione **Engadir atributo**. O nome de destino pode ser diferente do nome do campo de orixe, de xeito que aínda pode asignar a saída do segmento desde a información do público a Adobe Campaign Standard se os campos non teñen o mesmo nome nos dous sistemas.
 
    > [!NOTE]
-   > O enderezo de correo electrónico úsase como campo de identidade, pero pode usar calquera outro identificador do perfil de cliente de información de público para asignar datos a Adobe Campaign Standard.
+   > O enderezo de correo electrónico úsase como campo de identidade, pero pode usar calquera outro identificador do seu perfil de cliente da información do público para asignar datos a Adobe Campaign Standard.
 
 1. Seleccione **Gardar**.
 
@@ -104,7 +104,7 @@ Despois de gardar o destino de exportación, atoparao en **Datos** > **Exportaci
 Xa pode [exportar o segmento baixo demanda](export-destinations.md#run-exports-on-demand). A exportación tamén se executará con todas as [actualizacións programadas](system.md).
 
 > [!NOTE]
-> Asegúrese de que o número de rexistros do segmento exportado estea dentro do límite permitido da súa licenza de Adobe Campaign Standard.
+> Asegúrese de que o número de rexistros no segmento exportado está dentro do límite permitido da licenza de Adobe Campaign Standard.
 
 Os datos exportados almacénanse no contedor de Azure Blob Storage que configurou anteriormente. A seguinte ruta de cartafol créase automaticamente no seu contedor:
 
@@ -116,19 +116,19 @@ Exemplo: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24
 
 Cando se exporta un segmento de información de audiencia, contén as columnas que seleccionou ao definir o destino da exportación no paso anterior. Estes datos pódense empregar para [crear perfís en Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Para usar o segmento en Adobe Campaign Standard, necesitamos ampliar o esquema de perfís en Adobe Campaign Standard para incluír dous campos adicionais. Aprenda a [ampliar o recurso do perfil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) con novos campos en Adobe Campaign Standard.
+Para usar o segmento en Adobe Campaign Standard, necesitamos ampliar o esquema de perfil en Adobe Campaign Standard para incluír dous campos adicionais. Aprenda a [ampliar o recurso do perfil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) con novos campos en Adobe Campaign Standard.
 
 No noso exemplo, estes campos son *Nome do segmento e data do segmento (opcional)*.
 
-Usaremos estes campos para identificar os perfís de Adobe Campaign Standard aos que queremos orientar esta campaña.
+Usaremos estes campos para identificar os perfís de Adobe Campaign Standard aos que nos queremos dirixir para esta campaña.
 
-Se non hai outros rexistros en Adobe Campaign Standard, ademais do que vai importar, pode omitir este paso.
+Se non hai outros rexistros en Adobe Campaign Standard diferentes aos que vai importar, pode omitir este paso.
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Importar datos a Adobe Campaign Standard
 
-Agora que todo está no seu lugar, necesitamos importar os datos de audiencia preparados da información da audiencia a Adobe Campaign Standard para crear perfís. Aprenda [como importar perfís en Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) usando un fluxo de traballo.
+Agora que todo está no seu lugar, necesitamos importar os datos do público preparados desde a información do público a Adobe Campaign Standard para crear perfís. Aprenda [a importar perfís en Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) usando un fluxo de traballo.
 
-O fluxo de traballo de importación na seguinte imaxe configurouse para executarse cada oito horas e buscar segmentos de información de audiencia exportados (ficheiro .csv en Azure Blob Storage). O fluxo de traballo extrae o contido do ficheiro .csv nunha orde de columna especificada. Este fluxo de traballo creouse para realizar un tratamento básico de erros e garantir que cada rexistro teña un enderezo de correo electrónico antes de hidratar os datos en Adobe Campaign Standard. O fluxo de traballo tamén extrae o nome do segmento do nome do ficheiro antes de realizar o upsert nos datos do perfil de Adobe Campaign Standard.
+O fluxo de traballo de importación na seguinte imaxe configurouse para executarse cada oito horas e buscar segmentos de información de audiencia exportados (ficheiro .csv en Azure Blob Storage). O fluxo de traballo extrae o contido do ficheiro .csv nunha orde de columna especificada. Este fluxo de traballo creouse para realizar un tratamento básico de erros e garantir que cada rexistro teña un enderezo de correo electrónico antes de hidratar os datos en Adobe Campaign Standard. O fluxo de traballo tamén extrae o nome do segmento do nome do ficheiro antes de actualizalo e inserilo nos datos do perfil de Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Captura de pantalla dun fluxo de traballo de importación na interface de usuario de Adobe Campaign Standard.":::
 
