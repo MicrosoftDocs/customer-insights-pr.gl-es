@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171162"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035229"
 ---
 # <a name="relationships-between-entities"></a>Relacións entre entidades
 
@@ -82,7 +82,7 @@ Esta páxina ofrece un conxunto de opcións para as relacións novas e existente
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorar o visualizador de relacións
 
-O visualizador de relacións mostra un diagrama de rede das relacións existentes entre as entidades conectadas e a súa cardinalidade.
+O visualizador de relacións mostra un diagrama de rede das relacións existentes entre as entidades conectadas e a súa cardinalidade. Tamén visualiza o camiño da relación.
 
 Para personalizar a vista, pode cambiar a posición das caixas arrastrándoas sobre o lenzo.
 
@@ -92,6 +92,20 @@ Opcións dispoñibles:
 - **Exportar como imaxe**: garde a vista actual como un ficheiro de imaxe.
 - **Cambiar a deseño horizontal ou vertical**: cambie o aliñamento das entidades e das relacións.
 - **Editar**: actualice as propiedades das relacións personalizadas no panel de edición e garde os cambios.
+
+### <a name="relationship-path"></a>Camiño da relación
+
+O camiño da relación describe as entidades que están conectadas con relacións entre unha entidade de orixe e unha entidade de destino. Úsase cando se crea un segmento ou unha medida que inclúe outras entidades distintas da entidade do perfil unificado e hai varias opcións para chegar á entidade do perfil unificado.
+
+O camiño da relación informa ao sistema sobre cales son as relacións para acceder á entidade do perfil unificado. Diferentes camiños de relación poden dar resultados diferentes.
+
+Por exemplo, a entidade *eCommerce_eCommercePurchases* ten as seguintes relacións coa entidade *Cliente* do perfil unificado:
+
+- eCommerce_eCommercePurchases > Cliente
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
+
+O camiño da relación determina as entidades que pode usar ao crear regras para medidas ou segmentos. Escoller a opción co camiño de relación máis longo probablemente dea menos resultados, porque os rexistros coincidentes deben formar parte de todas as entidades. Neste exemplo, un cliente ten que mercar bens a través dun comercio electrónico (eCommerce_eCommercePurchases), nun punto de venda (POS_posPurchases) e participar no noso programa de fidelidade (loyaltyScheme_loyCustomers). Se escolle a primeira opción, é probable que obteña máis resultados porque os clientes só precisan existir nunha entidade adicional.
 
 ## <a name="manage-existing-relationships"></a>Xestionar relacións existentes 
 
@@ -105,6 +119,6 @@ Seleccione unha relación e elixa unha das seguintes opcións:
 
 ## <a name="next-step"></a>Seguinte paso
 
-As relacións do sistema e personalizadas úsanse para [crear segmentos](segments.md) baseados en varias orixes de datos que xa non están gardadas en silos.
+As relacións personalizadas e do sistema úsanse para [crear segmentos](segments.md) e [medidas](measures.md) baseándose en varias orixes de datos que xa non están en silos.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685460"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377786"
 ---
 # <a name="create-and-manage-segments"></a>Crear e xestionar segmentos
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685460"
 > - Un panel lateral para seleccionar atributos estará dispoñible constantemente.
 > - Unha opción para seleccionar camiños de relación de entidade.
 > Para probar o novo creador de segmentos, envíe un correo electrónico co asunto "Solicitude para activar o novo creador de segmentos" a cihelp [arroba] microsoft.com. Inclúa o nome da súa organización e o ID do ambiente de illamento de procesos.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementos do xerador de segmentos." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Organice o segmento con regras e subregras. Cada regra ou subregra consta de condicións. Combine as condicións con operadores lóxicos.
+>
+> 2 - Escolla o [camiño da relación](relationships.md) entre entidades que se aplica a unha regra. O camiño da relación determina que atributos se poden usar nunha condición.
+>
+> 3 - Xestione regras e subregras. Cambie a posición dunha regra ou elimínea.
+>
+> 4 - Engada condicións e cree o nivel correcto de aniñamento usando subregras.
+>
+> 5 - Aplique operacións de conxunto ás regras conectadas.
+>
+> 6 - Use o panel de atributos para engadir atributos de entidade dispoñibles ou crear condicións baseadas en atributos. O panel mostra a lista de entidades e atributos, en función do camiño de relación seleccionado, que están dispoñibles para a regra seleccionada.
+>
+> 7 - Engada condicións baseadas en atributos a regras e subregras existentes ou engádaas a unha nova regra.
+>
+> 8 - Desfaga e volva facer os cambios mentres crea o segmento.
 
 Defina filtros complexos arredor da entidade de cliente unificada e as entidades relacionadas. Cada segmento, despois do procesamento, crea un conxunto de rexistros de clientes que pode exportar e nos que pode tomar medidas. Os segmentos xestionanse na páxina **Segmentos**. 
 
@@ -147,6 +164,6 @@ Os segmentos rápidos permítenlle crear rapidamente segmentos sinxelos cun úni
 
 ## <a name="next-steps"></a>Pasos seguintes
 
-[Exporte un segmento](export-destinations.md) e explore a [Tarxeta de cliente](customer-card-add-in.md) e os [conectores](export-power-bi.md) para obter información sobre o nivel de cliente.
+[Exporte un segmento](export-destinations.md) e explore a [Integración de cartóns de clientes](customer-card-add-in.md) para usar os segmentos noutras aplicacións.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
