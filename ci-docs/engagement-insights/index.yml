@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Capacidade de información de interacción (versión preliminar) de Dynamics 365 Customer Insights
+summary: Recompile datos dos seus sitios web. Comprenda as interaccións dos clientes e o seu uso de forma interactiva nos seus sitios. Use a integración profunda entre a información de interacción e a información do público para enriquecer as análises de comportamento en tempo real con informes de perfís de clientes. Enriqueza os perfís de clientes con actividades web para obter datos de comportamento en tempo real xunto con datos relevantes de clientes. Transforme a súa empresa para xerar valor inmediato dos datos de clientes.
+metadata:
+  title: Documentación da información de interacción (versión preliminar)
+  description: Centro de axuda con ligazóns clave para a información de interacción.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
+  ms.contentlocale: gl-ES
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036236"
+landingContent:
+- title: Sobre
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visión xeral da capacidade
+      url: overview.md
+    - text: Termos e conceptos
+      url: glossary.md
+    - text: Descubrir información de interacción
+      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+- title: Incorporación
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Comezar
+      url: get-started.md
+    - text: Crear unha área de traballo
+      url: create-workspace.md
+    - text: Equipar o seu sitio web
+      url: instrument-website.md
+- title: Informes
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Visualizar informes
+      url: view-reports.md
+    - text: Crear informes personalizados
+      url: custom-reports.md
+    - text: Ver informe de perfís unificados
+      url: profile-reports.md
+    - text: Crear informes de funil
+      url: funnel-reports.md
+- title: Eventos
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Crear eventos refinados
+      url: refined-events.md
+    - text: Exportar eventos
+      url: export-events.md
+    - text: Eliminar e exportar datos persoais
+      url: delete-export-personal-data.md
+- title: Recursos para programadores
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Recursos para programadores
+      url: developer-resources.md
+    - text: Exemplo de SDK web
+      url: websdk-sample.md
+    - text: Escenarios de SDK web avanzados
+      url: advanced-SDK-implementation.md
+    - text: Exemplo de SDK de Android
+      url: get-started-android.md
+    - text: Mostra do SDK de iOS
+      url: get-started-ios.md
+- title: Administración
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Xestionar ambientes e espazos de traballo
+      url: manage-environments-workspaces.md
+    - text: Conectar coa información do público
+      url: configure-connections.md
+    - text: Xestionar as cookies e o consentimento do usuario
+      url: user-consent-storage.md
