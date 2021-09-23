@@ -1,19 +1,19 @@
 ---
 title: Crear unha ligazón entre a información do público e a información de interacción
 description: Cree unha ligazón activa entre a información do público e a información de interacción para permitir o intercambio bidireccional de datos.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461011"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487105"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Crear unha ligazón entre a información do público e a información de interacción
 
@@ -26,14 +26,14 @@ Utilice segmentos e perfís unificados de información do público para obter m�
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Os perfís de información do público deben gardarse nunha conta de Azure Data Lake Storage da súa propiedade ou nun lago de datos xestionado de [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-
+- O seu ambiente de información do público debería ter un ambiente de Dataverse asociado. E se ese ambiente tamén o está a usar Dataverse para almacenar datos, asegúrese de comprobar a opción **Activar o uso compartido de datos** na información do público. Para obter máis información, consulte [Crear e configurar un contorno de pago na información do público](../audience-insights/get-started-paid.md).
 - Necesita permisos de administrador para os ambientes de información do público e información de interacción.
-
 - Os ambientes ligados deben estar na mesma rexión xeográfica.
 
 > [!NOTE]
 > - Se a subscrición á información do público é unha proba, que utiliza un lago de datos xestionado internamente de información do público, póñase en contacto con [pirequest@microsoft.com](mailto:pirequest@microsoft.com) para obter asistencia. 
-> - Se o seu ambiente de información do público utiliza o seu Azure Data Lake Storage para almacenar datos, cómpre engadir unha entidade de servizo de Azure de información de interacción á súa conta de almacenamento. Para máis detalles, vaia a [Conectarse a unha conta de Azure Data Lake Storage cunha entidade de servizo de Azure para a información do público](../audience-insights/connect-service-principal.md). Ademais, o seu ambiente de información do público debería ter un [ambiente de Dataverse](../audience-insights/get-started-paid.md) asociado. 
+> - Se o seu ambiente de información do público utiliza o seu Azure Data Lake Storage para almacenar datos, cómpre engadir unha entidade de servizo de Azure de información de interacción á súa conta de almacenamento. Para máis detalles, vaia a [Conectarse a unha conta de Azure Data Lake Storage cunha entidade de servizo de Azure para a información do público](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Crear unha ligazón de ambiente
 
@@ -75,6 +75,7 @@ Despois de ligar os ambientes, pode seleccionar funcións opcionais para os ambi
 
    > [!IMPORTANT]
    > Se non engade usuarios de xeito explícito neste paso, os datos ocultaranse aos usuarios na información de interacción.
+   > Para que os segmentos de información do público aparezan na información de interacción, primeiro debe [executar procesos descendentes e de combinación](../audience-insights/merge-entities.md). Os procesos descendentes son importantes porque xeran unha táboa única que prepara os segmentos de información do público para ser compartidos coa información de interacción. (Se está programada unha actualización do sistema, incluirá automaticamente os procesos descendentes).
 
 1. Revise a selección e logo seleccione **Rematar**.
 

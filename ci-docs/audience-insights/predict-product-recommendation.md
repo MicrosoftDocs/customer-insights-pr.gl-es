@@ -1,20 +1,20 @@
 ---
 title: Predición de recomendacións de produtos
 description: Prediga os produtos cos que é probable que un cliente interactúe ou adquira.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034954"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494537"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predición de recomendacións de produtos (versión preliminar)
 
@@ -89,23 +89,24 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
 
 ### <a name="add-required-data"></a>Engadir datos obrigatorios
 
-1. Seleccione **Engadir datos** para **Historial de transaccións do cliente** e escolla a entidade que fornece a información do historial de transaccións/compras como se describe nos [requisitos previos](#prerequisites).
+1. Seleccione **Engadir datos** e escolla o tipo de actividade no panel lateral que contén a información de transacción ou historial de compras requirida.
 
-1. Asigne os campos semánticos aos atributos da súa entidade do historial de compras e seleccione **Seguinte**. Para obter descricións dos campos, bótelle unha ollada aos [requisitos previos](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Defina a relación da entidade.](media/product-recommendation-purchasehistorymapping.PNG "Páxina do historial de compras que mostra atributos semánticos asignados a campos da entidade do historial de compras seleccionada")
+1. En **Elixir as actividades**, escolla as actividades específicas da actividade seleccionada na que desexa que se centre o cálculo.
 
-1. Se os campos non se enchen, configure a relación da súa entidade do historial de compras á entidade *Cliente*.
-    1. Seleccione a **entidade do historial de compra**.
-    1. Seleccione o **Campo** que identifica ao cliente na entidade do historial de compras. Debe relacionarse co identificador do cliente principal da súa entidade de *cliente*.
-    1. Seleccione a **Entidade de cliente** que se corresponde coa súa entidade de cliente principal.
-    1. Escriba un nome que describa a relación.
-       > [!div class="mx-imgBorder"]
-       > ![Páxina do historial de compras que mostra a creación dunha relación co cliente.](media/model-purchase-join.png "Páxina do historial de compras que mostra a creación dunha relación co cliente")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panel lateral que mostra a elección de actividades específicas baixo o tipo semántico.":::
+
+1. Se aínda non asignou a actividade a un tipo semántico, seleccione **Editar** facelo. Ábrese a experiencia guiada para asignar actividades semánticas. Asigne os seus datos aos campos correspondentes do tipo de actividade seleccionada.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de actividade de configuración de páxina.":::
+
+1. Despois de asignar a actividade ao tipo semántico correspondente, seleccione **Seguinte** para continuar 
+ 
+1. Asigne os atributos semánticos aos campos necesarios para executar o modelo.
 
 1. Seleccione **Gardar**.
 
 1. Seleccione **Seguinte**.
+
 
 ### <a name="configure-product-filters"></a>Configurar os filtros de produtos
 

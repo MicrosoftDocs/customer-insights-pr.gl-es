@@ -1,7 +1,7 @@
 ---
 title: Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo
 description: Use unha entidade de servizo de Azure para conectar co seu propio lago de datos.
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461146"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483523"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Siga lendo para aprender a conectarse a Dynamics 365 Customer Insights cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure en lugar de claves de conta de almacenamento. 
 
-Pode usar a entidade de servizo para [engadir ou editar un cartafol de Common Data Model como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un ambiente](get-started-paid.md) de forma segura.<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+Pode usar a entidade de servizo para [engadir ou editar un cartafol de Common Data Model como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un ambiente](get-started-paid.md) de forma segura.
 
 > [!IMPORTANT]
-> - A conta de Data Lake Storage que usará<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> a entidade de servizo debe ter [activado o espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace).
+> - A conta de Data Lake Storage que empregará o principal do servizo debe ter [habilitado o espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace).
 > - Precisa permisos de administrador para a súa subscrición a Azure para crear a entidade de seguranza do servizo.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear unha entidade de servizo de Azure para Customer Insights
@@ -38,7 +38,7 @@ Antes de crear unha nova entidade de servizo para a información do público ou 
 
 3. En **Xestionar**, seleccione **Aplicacións empresariais**.
 
-4. Busque o<!--note from editor: Via Microsoft Writing Style Guide.--> ID da aplicación de Microsoft:
+4. Busque o ID da aplicación de Microsoft:
    - Información do público: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` co nome `Dynamics 365 AI for Customer Insights`
    - Información de interacción: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` co nome `Dynamics 365 AI for Customer Insights engagement insights`
 
@@ -49,23 +49,23 @@ Antes de crear unha nova entidade de servizo para a información do público ou 
 6. Se non se devolven resultados, cree unha nova entidade de seguranza do servizo.
 
 >[!NOTE]
->Para usar todo a potencia de Dynamics 365 Customer Insights, suxerímoslle que engada ambas aplicacións á entidade de servizo.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>Para usar todo a potencia de Dynamics 365 Customer Insights, suxerímoslle que engada ambas aplicacións á entidade de servizo.
 
 ### <a name="create-a-new-service-principal"></a>Crear unha entidade de seguranza do servizo nova
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. Instale a versión máis recente de Azure Active Directory PowerShell para Graph. Para obter máis información, vaia a [Instalar Azure Active Directory PowerShell para Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. No seu PC, seleccione a tecla Windows do teclado e busque **Windows PowerShell** e seleccione **Executar como administrador**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. No seu PC, seleccione a tecla Windows do teclado e busque **Windows PowerShell** e seleccione **Executar como administrador**.
    
    1. Na xanela de PowerShell que se abre, introduza `Install-Module AzureAD`.
 
 2. Cree a entidade de servizo para Customer Insights co módulo de Azure AD PowerShell.
 
-   1. Na xanela de PowerShell que se abre, introduza `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Substitúa *[your tenant ID]*<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> co ID real do arrendatario onde desexa crear a entidade de servizo. O parámetro de nome do ambiente, `AzureEnvironmentName`, é opcional.
+   1. Na xanela de PowerShell que se abre, introduza `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Substitúa *[o seu identificador de arrendatario]* polo ID real do seu arrendatario onde desexa crear a entidade de seguranza do servizo. O parámetro de nome do ambiente, `AzureEnvironmentName`, é opcional.
   
    1. Introduza `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Este comando crea a entidade de seguranza do servizo para obter información sobre o público no inquilino seleccionado. 
 
-   1. Introduza `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Este comando crea a entidade de servizo da información de interacción<!--note from editor: Edit okay?--> no arrendatario seleccionado.
+   1. Introduza `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Este comando crea a entidade de servizo da información de interacción no arrendatario seleccionado.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Conceder permisos á entidade de seguranza do servizo para acceder á conta de almacenamento
 
@@ -90,7 +90,7 @@ Pode tardar ata 15 minutos en propagar os cambios.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduza o ID de recurso de Azure ou os detalles da subscrición a Azure no anexo da conta de almacenamento para a información do público
 
-Pode<!--note from editor: Edit suggested only if this section is optional.--> anexar unha conta de Data Lake Storage na información do público para [almacenar datos de saída](manage-environments.md) ou [usala como orixe de datos](connect-common-data-service-lake.md). Esta opción permítelle escoller entre un enfoque baseado en recursos ou baseado en subscricións. Dependendo do enfoque que escolla, siga o procedemento nunha das seguintes seccións.<!--note from editor: Suggested.-->
+Pode anexar unha conta de Data Lake Storage na información do público para [almacenar datos de saída](manage-environments.md) ou [usala como orixe de datos](connect-common-data-service-lake.md). Esta opción permítelle escoller entre un enfoque baseado en recursos ou baseado en subscricións. Dependendo do enfoque que escolla, siga o procedemento nunha das seguintes seccións.
 
 ### <a name="resource-based-storage-account-connection"></a>Conexión de conta de almacenamento baseada en recursos
 

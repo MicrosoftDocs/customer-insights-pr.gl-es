@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfís de clientes unificados
 description: Use capacidades para enriquecer os datos dos seus clientes.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032526"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469970"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -29,6 +29,7 @@ Debe ter permisos de colaborador ou administrador para crear ou editar enriquece
 
 No separador **Descubrir**, atopará os seguintes enriquecementos:
 
+- [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
 - [Marcas](enrichment-microsoft.md) fornecidas por Microsoft
 - [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
 - [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft
@@ -62,5 +63,17 @@ Os enriquecementos de terceiros configúranse usando [conexións](connections.md
 ## <a name="multiple-enrichments-of-the-same-type"></a>Enriquecementos múltiples do mesmo tipo
 
 A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueceza datos só para un segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver na páxina **Enriquecemento**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Vexa o progreso do proceso de enriquecemento
+
+Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado e os problemas potenciais mentres se actualiza ou despois de completar a actualización. Comprenda que procesos están implicados para actualizar un enriquecemento e canto tardou en executalos. Admítese o estado de enriquecemento para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
+
+Para ver o estado dun enriquecemento
+
+1. Vaia a **Datos** > **Enriquecemento**. 
+1. No separador **Os meus enriquecementos**, seleccione o estado dun enriquecemento para abrir un panel lateral. 
+1. No panel **Detalles do progreso**, expanda a sección **Enriquecementos**. 
+1. No enriquecemento no que desexa ver o progreso, seleccione **Ver detalles**. 
+1. No panel **Detalles da tarefa**, seleccione **Amosar detalles** para ver os procesos implicados na actualización do enriquecemento e o seu estado. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

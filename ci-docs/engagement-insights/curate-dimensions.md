@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461101"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466346"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Usar dimensións demográficas para dividir os datos de comportamento
 
@@ -29,7 +29,7 @@ Ao usar dimensións demográficas de perfís unificados, os usuarios de informac
 - Un ambiente de información de interacción no que ten datos de perfil de cliente ligados ao ambiente de información do público onde se crean os perfís de clientes. Máis información: [Crear unha ligazón entre a información do público e a información de interacción](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Despois de crear unha ligazón entre os ambientes de información do público e información de interacción, pode que só queira datos específicos das propiedades dos perfís dos clientes, que poden ser útiles como dimensións na información de interacción. Para obter máis información, vaia a [Permitir segmentos e atributos de perfís unificados de información do público](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Despois de crear unha ligazón entre os ambientes de información do público e información de interacción, pode que só queira datos específicos das propiedades dos perfís dos clientes, que poden ser útiles como dimensións na información de interacción. Para obter máis información, vaia a [Permitir segmentos e atributos de perfís unificados de información do público](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Crera un novo informe personalizado
 

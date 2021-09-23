@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: bf2ec67c9fb99918b87841d3c0b131934e31b58b
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033950"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486118"
 ---
 # <a name="out-of-box-profile-reports"></a>Informes de perfís listos para usar
 
@@ -31,7 +31,7 @@ Se está a usar unha versión de proba da capacidade de información do público
 
 ## <a name="enable-the-customer-profile-report"></a>Activar o informe de perfís de clientes
 
-Un administrador de ambientes debe [crear unha conexión coa información do público](configure-connections.md).
+Un administrador de contornos debe [ligar información de interacción e información de público](integrate-audience-insights-engagement-insights.md).
 
 Despois de especificar os detalles da conexión, o administrador pode conceder acceso a outras persoas da organización para ver o informe. O administrador de ambientes que configura a conexión ten acceso automaticamente ao informe. 
 

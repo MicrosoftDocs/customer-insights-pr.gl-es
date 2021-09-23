@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Capacidade de información de interacción (versión preliminar) de Dynamics 365 Customer Insights
+title: Funcionalidade de información de interacción en Dynamics 365 Customer Insights (vista previa)
 summary: Recompile datos dos seus sitios web. Comprenda as interaccións dos clientes e o seu uso de forma interactiva nos seus sitios. Use a integración profunda entre a información de interacción e a información do público para enriquecer as análises de comportamento en tempo real con informes de perfís de clientes. Enriqueza os perfís de clientes con actividades web para obter datos de comportamento en tempo real xunto con datos relevantes de clientes. Transforme a súa empresa para xerar valor inmediato dos datos de clientes.
 metadata:
   title: Documentación da información de interacción (versión preliminar)
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: gl-ES
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036236"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494182"
 landingContent:
 - title: Sobre
   linkLists:
   - linkListType: overview
     links:
-    - text: Visión xeral da capacidade
+    - text: Beneficios da funcionalidade
       url: overview.md
-    - text: Termos e conceptos
+    - text: Glosario de termos
       url: glossary.md
-    - text: Descubrir información de interacción
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Funcionalidades novas e actualizadas
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Incorporación
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Equipar o seu sitio web
       url: instrument-website.md
-- title: Informes
+- title: Ver e filtrar informes
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Visualizar informes
+    - text: Ver informes
       url: view-reports.md
-    - text: Crear informes personalizados
-      url: custom-reports.md
     - text: Ver informe de perfís unificados
       url: profile-reports.md
-    - text: Crear informes de funil
-      url: funnel-reports.md
-- title: Eventos
+    - text: Usar segmentos de público para filtrar informes
+      url: integrate-audience-insights-segments.md
+- title: Analizar
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Crear informes de funil
+      url: funnel-reports.md
+    - text: Analizar datos de comportamento
+      url: curate-dimensions.md
+    - text: Crear informes personalizados
+      url: custom-reports.md
     - text: Crear eventos refinados
       url: refined-events.md
     - text: Exportar eventos
       url: export-events.md
-    - text: Eliminar e exportar datos persoais
-      url: delete-export-personal-data.md
 - title: Recursos para programadores
   linkLists:
   - linkListType: reference
@@ -81,6 +83,10 @@ landingContent:
     - text: Xestionar ambientes e espazos de traballo
       url: manage-environments-workspaces.md
     - text: Conectar coa información do público
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Xestionar as cookies e o consentimento do usuario
       url: user-consent-storage.md
+    - text: Eliminar e exportar datos persoais
+      url: delete-export-personal-data.md
+    - text: Límites de servizo
+      url: ../service-limits.md

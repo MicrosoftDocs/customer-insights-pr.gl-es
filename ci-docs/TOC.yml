@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Funcionalidades novas e actualizadas
       href: audience-insights/whats-new-audience-insights.md
-    - name: Crear un novo ambiente
-      href: audience-insights/get-started-paid.md
+    - name: Comezar
+      items:
+        - name: Guía de inicio rápido
+          href: audience-insights/get-started.md
+        - name: Crear un novo ambiente
+          href: audience-insights/get-started-paid.md
+        - name: Explorar a información do público
+          href: audience-insights/home.md
     - name: Módulos de aprendizaxe
       items:
         - name: Inxerir datos
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Enderezos mellorados
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Enriquecer con Azure Maps
+          href: audience-insights/enrichment-azure-maps.md
         - name: Enriquecer con HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Enriquecer con Leadspace
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: Referencias das API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Límites de servizo
-      href: audience-insights/service-limits.md
-    - name: Solicitudes de DSR conforme a RXPD
-      href: audience-insights/gdpr.md
 - name: Información de interacción (versión preliminar)
   items:
     - name: Plataforma común de axuda
       href: engagement-insights/index.yml
     - name: Visión xeral da capacidade
       href: engagement-insights/overview.md
-    - name: Proba gratuíta
-      href: 'https://pi.dynamics.com/'
     - name: Comezar
       items:
-        - name: Comezar
+        - name: Guía de inicio rápido
           href: engagement-insights/get-started.md
         - name: Crear unha área de traballo
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Xestionar ambientes e espazos de traballo
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Configurar conexións
-          href: engagement-insights/configure-connections.md
         - name: Xestionar as cookies e o consentimento do usuario
           href: engagement-insights/user-consent-storage.md
-    - name: RXPD
-      items:
-        - name: Eliminar e exportar datos persoais
-          href: engagement-insights/delete-export-personal-data.md
     - name: Dispoñibilidade rexional
       href: engagement-insights/regional-availability.md
-    - name: Límites de servizo
-      href: engagement-insights/quotas.md
 - name: Integrar información do público e de interacción
   items:
     - name: Ligar información de interacción e información do público
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Usar dimensións demográficas para dividir os datos de comportamento
       href: engagement-insights/curate-dimensions.md
+- name: Límites de servizo
+  href: service-limits.md
+- name: Dereitos e solicitudes de DSR
+  href: dsr-rights-requests.md
 - name: Obter soporte técnico
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

@@ -4,17 +4,17 @@ description: Como crear, renomear e eliminar áreas de traballo e ambientes.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034040"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486033"
 ---
 # <a name="manage-environments-and-workspaces"></a>Xestionar ambientes e espazos de traballo
 
@@ -85,13 +85,11 @@ Ao eliminar unha área de traballo, eliminarase permanentemente todo o seu conti
 
 1. Seleccione **Engadir membros** para dar acceso e [atribuír roles](user-roles.md). Actualmente só está dispoñible o rol de **Administrador de áreas de traballo**.
 
-1. Se configura unha [conexión coa información do público](configure-connections.md), pode seleccionar **Permitir acceso aos datos do perfil** para permitirlle ao membro ver informes baseados en [perfís de usuarios](profile-reports.md).
-
 1. Seleccione **Engadir membros** para engadilos á súa área de traballo.
 
 ## <a name="manage-an-environment"></a>Xestionar un ambiente
 
-Como Administrador de ambientes, pode acceder a un ambiente desde o panel de navegación esquerdo. Pode configurar as opcións do ambiente, outros Administradores de ambientes, áreas de traballo e [conexións coa información do público](configure-connections.md). Seleccione os separadores para moverse entre as distintas áreas do centro de administración.
+Como Administrador de ambientes, pode acceder a un ambiente desde o panel de navegación esquerdo. Pode configurar axustes de contorno, outros administradores de contorno e espazos de traballo. Seleccione os separadores para moverse entre as distintas áreas do centro de administración.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centro de administración do ambiente.":::
 
@@ -123,8 +121,6 @@ Como Administrador de ambientes, pode acceder a un ambiente desde o panel de nav
 
 1. Seleccione **Engadir membros** para actualizar os membros e [atribuír roles](user-roles.md). Actualmente só está dispoñible o rol de **Administrador de ambientes**.
 
-1. Se configura unha [conexión coa información do público](configure-connections.md), pode seleccionar **Permitir acceso aos datos do perfil** para permitirlle ao membro ver informes baseados en [perfís de usuarios](profile-reports.md).
-
 1. Seleccione **Engadir membros** para engadilos ao seu ambiente.
 
 ### <a name="delete-an-environment"></a>Eliminar un ambiente
@@ -143,7 +139,7 @@ Os administradores de ambientes poden eliminar ambientes. Antes de poder elimina
 
 Establecer conexións coa información do público permítelle ver informes na información de interacción baseados en perfís de clientes unificados. 
 
-Para obter máis información, consulte [Configurar conexións](configure-connections.md).
+Para obter máis información, consulte [Crear unha ligazón entre a información do público e a información de interacción](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Xestionar os datos persoais
 

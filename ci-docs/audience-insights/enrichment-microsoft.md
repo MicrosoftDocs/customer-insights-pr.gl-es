@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033859"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466622"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquecer os perfís de clientes con afinidades de marca e intereses (vista previa)
 
@@ -126,6 +126,8 @@ Despois de executar o proceso de enriquecemento, vaia a **Os meus enriquecemento
 :::image type="content" source="media/my-enrichments.png" alt-text="Versión preliminar dos resultados despois de executar o proceso de enriquecemento.":::
 
 Revise os datos enriquecidos seleccionando **Ver datos enriquecidos** no gráfico. Os datos enriquecidos para as marcas van á entidade **BrandAffinityFromMicrosoft**. Datos para intereses na entidade **InterestAffinityFromMicrosoft**. Tamén atopará estas entidades enumeradas no grupo **Enriquecemento** en **Datos** > **Entidades**.
+
+Verá un gráfico co número de perfís de clientes enriquecidos ao longo do tempo e unha vista previa da entidade enriquecida. Seleccione **Mostrar máis** no mosaico de vista previa para abrir a entidade enriquecida.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Vexa datos de enriquecemento na tarxeta de cliente
 

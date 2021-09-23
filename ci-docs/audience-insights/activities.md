@@ -1,20 +1,20 @@
 ---
 title: Actividades do cliente
-description: Defina as actividades dos clientes e visualíceas na cronoloxía do cliente.
-ms.date: 04/07/2021
+description: Defina as actividades dos clientes e visualíceas nunha liña de tempo nos perfís dos clientes.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033629"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494409"
 ---
 # <a name="customer-activities"></a>Actividades do cliente
 
@@ -60,12 +60,15 @@ As súas fontes de datos poden incluír entidades con datos de transaccións e a
       - **Detalle adicional**: Campo con información relevante para esta actividade.
       - **Icona**: Icona que mellor representa este tipo de actividade.
       - **Enderezo web**: Campo que contén un URL con información sobre esta actividade. Por exemplo, o sistema transaccional que fornece esta actividade. Este URL pode ser calquera campo desde orixe de datos ou pode construírse como un campo novo usando unha transformación Power Query. Os datos do URL gardaranse na entidade *Actividade unificada*, que se pode consumir de forma descendente usando as [API](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique os datos de actividade do cliente nunha entidade de actividade unificada.":::
+
+   - **Mostrar na liña de tempo**
+      - Escolla se desexa amosar esta actividade na visualización da liña de tempo dos perfís dos clientes. Seleccione **Si** para amosar a actividade na liña do tempo ou **Non** para ocultala.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique os datos de actividade do cliente nunha entidade de actividade unificada.":::
 
 1. Seleccione **Seguinte** para ir ao seguinte paso. Pode seleccionar **Rematar e revisar** para gardar a actividade agora co tipo de actividade configurado en **Outro**. 
 
-1. No paso **Tipo de actividade**, elixa o tipo de actividade e opcionalmente seleccione se quere asignar semanticamente algúns dos tipos de actividade para usalos noutras áreas de Customer Insights. Actualmente, os tipos de actividade *Subscrición* e *SalesOrderLine* pódense asignar semanticamente despois de acordar asignar os campos. Se un tipo de actividade non é relevante para a nova actividade, pode escoller *Outro* ou *Crear novo* para un tipo de actividade personalizada.
+1. No paso **Tipo de actividade**, elixa o tipo de actividade e opcionalmente seleccione se quere asignar semanticamente algúns dos tipos de actividade para usalos noutras áreas de Customer Insights. Actualmente, os tipos de actividade *Comentarios*, *Fidelidade*, *SalesOrder*, *SalesOrderLine* e *Subscrición* pódense asignar semanticamente despois de acordar asignar os campos. Se un tipo de actividade non é relevante para a nova actividade, pode escoller *Outro* ou *Crear novo* para un tipo de actividade personalizada.
 
 1. Seleccione **Seguinte** para ir ao seguinte paso. 
 

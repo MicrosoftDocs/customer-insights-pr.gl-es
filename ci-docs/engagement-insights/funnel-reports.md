@@ -4,17 +4,17 @@ description: Como usar informes de funil para comprender a forma na que o public
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032253"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498640"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Crear e xestionar informes de funil
 
@@ -158,4 +158,21 @@ Pode cambiar o nome dun informe de funil, eliminalo ou modificar os pasos que in
 1. Seleccione un nome para abrir o informe.
 
 1. Seleccione o paso que quere eliminar e seleccione **Eliminar**.
+
+## <a name="funnel-insights"></a>Estatísticas de funil 
+
+As estatísticas de participación agora ofrecen información de funil para os clientes. Utilice información sobre o funil para obter unha visión máis profunda do comportamento do cliente sobre os pasos do informe do funil. Cando crea e garda un novo informe de funil, xéranse automaticamente información sobre o funil para o seu informe. 
+
+Pode ver as estatísticas do funil das seguintes categorías, tanto no nivel principal como no de paso: 
+
+ - Taxa de conversión 
+ - Tempo de transición 
+ - Hora de finalización 
+
+Utilice esta información para explorar máis o comportamento dos clientes e comprender mellor os puntos de entrega e as conversións do seu informe de funil. 
+
+As estatísticas do funil recalcúlanse cada 24 horas ou cando **Garda** o seu informe de funil. 
+
+> [!NOTE]
+> Para ver información sobre o funil, debe gardar o informe cada vez que faga cambios. 
 
