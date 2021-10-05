@@ -242,7 +242,7 @@
   items:
     - name: Plataforma común de axuda
       href: engagement-insights/index.yml
-    - name: Visión xeral da capacidade
+    - name: Acerca da información de interacción
       href: engagement-insights/overview.md
     - name: Comezar
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Dispoñibilidade rexional
       href: engagement-insights/regional-availability.md
-- name: Integrar información do público e de interacción
+- name: Compartir datos entre capacidades
   items:
     - name: Ligar información de interacción e información do público
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Dereitos e solicitudes de DSR
   href: dsr-rights-requests.md
-- name: Obter soporte técnico
-  href: 'https://dynamics.microsoft.com/support/'

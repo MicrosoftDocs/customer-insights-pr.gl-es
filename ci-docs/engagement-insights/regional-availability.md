@@ -4,16 +4,16 @@ description: Máis información sobre as rexións e áreas xeográficas nas que 
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
+ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483295"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "7564592"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Dispoñibilidade rexional para Dynamics 365 Customer Insights
 
@@ -21,9 +21,9 @@ ms.locfileid: "7483295"
 
 A información de interacción, unha capacidade de Dynamics 365 Customer Insights, introduce gradualmente máis rexións onde os clientes poden escoller almacenar os seus datos. Os administradores poden escoller unha rexión cando [creen un novo ambiente](manage-environments-workspaces.md#create-an-environment). 
 
-Cando configura a información de interacción por primeira vez, pode elixir a rexión mentres percorre a [experiencia guiada de primeira execución](quickstart.md). Máis tarde, cada novo ambiente permite escoller a rexión na que se almacenarán os datos.
+Cando configura a información de interacción por primeira vez, pode elixir a rexión mentres percorre a [experiencia guiada de primeira execución](quickstart.md). Máis tarde, cada novo ambiente permítelle escoller a rexión na que se almacenarán os datos.
 
-Actualmente hai dúas xeografías: EUA e Europa. Os usuarios poden escoller entre as rexións EUA Occidental ou Norte de Europa.
+Actualmente apoiamos as xeografías de Estados Unidos e Europa. Os usuarios poden escoller entre estas rexións: oeste dos EUA, Leste dos EUA, Norte de Europa e Oeste de Europa.
 
 Unha organización pode manter ambientes en diferentes rexións. Por exemplo, o ambiente A almacena datos en EUA Occidental e o ambiente B, no Norte de Europa.
 

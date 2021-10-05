@@ -1,26 +1,26 @@
 ---
 title: Engadir código a un sitio web
-description: Como engadir un fragmento de código para capturar eventos no seu sitio web.
+description: Como engadir un fragmento de código para capturar eventos de Dynamics 365 Customer Insights no seu sitio web.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 04/30/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: b5467da775a621c436bd9ddedb272506acc1e2b31dcf7c87feb5dd11e2daae2b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ad835f762226d62fdb0f544627f2a76ff09a1ffd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035092"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558853"
 ---
-# <a name="install-the-code-snippet-on-a-website"></a>Instalar o fragmento de código nun sitio web
+# <a name="install-the-web-sdk-on-a-website"></a>Instalar o SDK web nun sitio web
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Este artigo describe a forma na que un administrador instala o fragmento de código nun sitio web. Comezará a ver eventos na súa área de traballo pouco despois de engadir o script no sitio web. Para obter máis información, consulte [Xestión de áreas de traballo e ambientes](manage-environments-workspaces.md). Para capturar eventos en aplicacións móbiles, consulte [Descrición xeral dos recursos para programadores](developer-resources.md).
+Este artigo describe como un administrador instala o kit de ferramentas de desenvolvemento de software web (SDK) nun sitio web. Comezará a ver eventos no seu espazo de traballo pouco despois de instrumentar o seu sitio web. Para obter máis información, consulte [Xestión de áreas de traballo e ambientes](manage-environments-workspaces.md). Para capturar eventos en aplicacións móbiles, consulte [Descrición xeral dos recursos para programadores](developer-resources.md).
 
 
 ### <a name="prerequisites"></a>Requisitos previos
@@ -29,19 +29,30 @@ Este artigo describe a forma na que un administrador instala o fragmento de cód
 * O seu sitio web ou proxecto debe estar aloxado en liña para enviar datos de actividade. O servidor non aceptará datos enviados desde un ficheiro local.
 
 
-## <a name="add-code-to-your-website"></a>Engadir código a un sitio web
-1.  Vaia a **Administración** > **Área de traballo** e logo seleccione **Guía de instalación**.
+## <a name="add-web-sdk-to-your-website"></a>Engadir un SDK web ao seu sitio web
+
+Vaia a **Administración** > **Área de traballo** e logo seleccione **Guía de instalación**. Hai dúas opcións para instalar o SDK web. O primeiro é usar unha ligazón de descarga e o segundo é instalar un paquete de xestor de paquetes de nós (NPM).
+
+### <a name="option-1-using-the-download-link"></a>Opción 1. Uso da ligazón de descarga
+
 1. Seleccione **Copiar código** para copiar o fragmento de código. Por defecto, a clave de inxestión da súa área de traballo está incorporada no fragmento de código.
-:::image type="content" source="media/copy-code.png" alt-text="Captura de pantalla da páxina do fragmento de código.":::
-3. Engada o fragmento de código copiado ao seu sitio web, preto da <head> etiqueta e antes de calquera outra etiqueta de CSS ou script.
-4.  Publique o sitio web actualizado e agarde uns minutos para capturar o tráfico web entrante.
-5.  Para ver os seus datos, seleccione a área de traballo no conmutador de áreas de traballo no panel de navegación. A continuación, seleccione un dos informes na sección **Descubrir**.
+  :::image type="content" source="media/copy-code.png" alt-text="Captura de pantalla da páxina do fragmento de código.":::
+
+1. Engada o código copiado ao seu sitio web, preto da <head> etiqueta e antes de calquera outra etiqueta de CSS ou script.
+1. Publique o sitio web actualizado e agarde uns minutos para capturar o tráfico web entrante.
+1. Para ver os seus datos, seleccione a área de traballo no conmutador de áreas de traballo no panel de navegación. A continuación, seleccione un dos informes na sección **Descubrir**.
+
+### <a name="option-2-using-the-npm-package-recommended-for-javascript-based-web-apps"></a>Opción 2: usar o paquete NPM (recomendado para aplicacións web baseadas en JavaScript)
+
+1. Vaia á nosa [páxina web de NPM](https://www.npmjs.com/package/engagementinsights-web) e siga as instrucións para instalar e configurar o paquete web SDK NPM.
+1. Publique o sitio web actualizado e agarde uns minutos para capturar o tráfico web entrante.
+1. Para ver os seus datos, seleccione a área de traballo no conmutador de áreas de traballo no panel de navegación. A continuación, seleccione un dos informes na sección **Descubrir**.
 
 ## <a name="configuration-options"></a>Opcións de configuración
 
 Pode cambiar as seguintes opcións de configuración no fragmento de código:
 
-- **ingestionKey** : a clave de inxestión empregada para enviar eventos á súa área de traballo. Pode cambiar a clave de inxestión para enviar eventos a unha área de traballo diferente. Unha clave de inxestión é exclusiva de cada área de traballo. 
+- **ingestionKey** : a clave de inxestión empregada para enviar eventos á súa área de traballo. Pode cambiar a clave de inxestión para enviar eventos a unha área de traballo diferente. Unha clave de inxestión é exclusiva de cada área de traballo.
 - **autoCapture** : especifica se se capturan as visualizacións das páxinas e as interaccións co sitio web. Ten dúas opcións:
     - **view**: definido como *true* para capturar as visualizacións das páxinas. As visualizacións das páxinas captúranse como [eventos](glossary.md#event) de *visualización*, un tipo de [evento base](glossary.md#base-event).
     - **click** : definido como *true* para capturar as interaccións dos visitantes no sitio web. As interaccións captúranse como [eventos](glossary.md#event) de *acción*, un tipo de [evento base](glossary.md#base-event).

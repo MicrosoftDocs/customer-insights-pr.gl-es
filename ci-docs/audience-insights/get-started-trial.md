@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035413"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558821"
 ---
 # <a name="set-up-a-trial-environment"></a>Configurar un ambiente de proba 
 
@@ -95,7 +95,7 @@ Agora pode usar os datos inxeridos para adaptar Customer Insights ao seu escenar
 
 - As probas están activas durante 30 días por defecto. Non obstante, pode amplialas despois do día 23 ao iniciar sesión na proba.
 - Non pode usar a súa propia conta de Azure Data Lake Storage para almacenar datos de saída durante unha proba. Non obstante, pode inxerir datos dunha conta de Azure Data Lake Storage.
-- Pode almacenar ata 3 GB de datos no ambiente de Dataverse que se fornece automaticamente ao iniciar unha proba de Customer Insights.
+- Pode almacenar ata 3 GB de datos no ambiente de Dataverse que se aprovisiona automaticamente cando inicia unha proba de Customer Insights.
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>Copiar datos dunha subscrición de proba a unha de pago
 
