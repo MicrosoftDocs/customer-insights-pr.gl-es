@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Mailchimp
 description: Aprenda a configurar a conexión e exportar a Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033537"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618611"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos a Mailchimp (versión preliminar)
 
@@ -29,10 +29,10 @@ Exporte segmentos de perfís de clientes unificados a Mailchimp para crear bolet
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Ata 1 millón de perfís por exportación a Mailchimp.
+- Ata 1 millón de perfís de clientes por exportación a Mailchimp.
 - A exportación a Mailchimp está limitada a segmentos.
-- Exportar segmentos cun millón de perfís pode levar ata tres horas. 
-- O número de perfís que pode exportar a Mailchimp depende e está limitado no seu contrato con Mailchimp.
+- A exportación de segmentos con 1 millón de perfís de clientes pode levar ata tres horas. 
+- O número de perfís de clientes que pode exportar a Mailchimp depende e está limitado ao seu contrato con Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Configurar conexión a Mailchimp
 
@@ -66,7 +66,7 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Insira o seu **[ID de público de MailChimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. Na sección **Coincidencia de datos**, no campo **Correo electrónico**, seleccione o campo do seu perfil de cliente unificado que representa o enderezo de correo electrónico dun cliente. 
+1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. 
 
 1. Opcionalmente, pode exportar o **nome** e **apelidos** para crear correos electrónicos máis personalizados. Seleccione **Engadir atributo** para asignar estes campos.
 

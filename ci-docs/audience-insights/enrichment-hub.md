@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfís de clientes unificados
 description: Use capacidades para enriquecer os datos dos seus clientes.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469970"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617553"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -27,16 +27,26 @@ Na información do público, vaia a **Datos** > **Enriquecemento** para traballa
 
 Debe ter permisos de colaborador ou administrador para crear ou editar enriquecementos. Para obter máis información, consulte [Permisos](permissions.md).
 
-No separador **Descubrir**, atopará os seguintes enriquecementos:
+No separador **Descubrir**, atopará todas as opcións de enriquecemento compatibles.
 
-- [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
+# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+
 - [Marcas](enrichment-microsoft.md) fornecidas por Microsoft
 - [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
-- [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft
-- [Datos da empresa](enrichment-leadspace.md) proporcionados por Leadspace
+- [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft 
 - [Demografía](enrichment-experian.md) fornecida por Experian
-- [Datos de localización](enrichment-here.md) subministrados por HERE Technologies
-- [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP)
+- [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
+
+# <a name="business-accounts-b2b"></a>[Contas empresariais (B2B)](#tab/b2b)
+
+- [Datos da empresa](enrichment-leadspace.md) proporcionados por Leadspace
+- [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft 
+- [Datos de localización](enrichment-here.md) subministrados por HERE Technologies 
+- [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
+
+---
 
 No separador **Os meus enriquecementos**, pode ver os enriquecementos que configurou e editar as súas propiedades.
 
@@ -58,7 +68,7 @@ Execute ou desactive varios enriquecementos á vez seleccionándoos na lista. As
 
 ## <a name="enrichments-and-connections"></a>Enriquecementos e conexións
 
-Os enriquecementos de terceiros configúranse usando [conexións](connections.md), que un administrador configura con credenciais e proporciona o consentimento para as transferencias de datos. A conexión pode ser usada para configurar enriquecementos por administradores e colaboradores.  
+Os enriquecementos de terceiros configúranse usando [conexións](connections.md), que un administrador configura con credenciais e proporciona o consentimento para as transferencias de datos. Tanto os administradores como os colaboradores poden usar as conexións para configurar os enriquecementos.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Enriquecementos múltiples do mesmo tipo
 

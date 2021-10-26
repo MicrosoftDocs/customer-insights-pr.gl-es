@@ -1,7 +1,7 @@
 ---
 title: Crear e xestionar ambientes
 description: Aprenda a rexistrarse no servizo e a xestionar contornos.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034175"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645124"
 ---
 # <a name="manage-environments"></a>Xestionar ambientes
 
@@ -26,7 +26,7 @@ Seleccione o control **Ambiente** na esquina superior dereita da páxina para ca
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Captura de pantalla do control para cambiar de ambiente.":::
 
-Os administradores poden [crear](get-started-paid.md) e xestionar ambientes.
+Os administradores poden [crear](create-environment.md) e xestionar ambientes.
 
 ## <a name="edit-an-existing-environment"></a>Editar un ambiente existente
 
@@ -36,23 +36,9 @@ Pode editar algúns detalles dos contornos existentes.
 
 2.  Seleccione a icona de **edición**.
 
-3. Na caixa **Editar contorno**, pode actualizar o **Nome de visualización** do contorno, pero non pode cambiar a **Rexión** nin o **Tipo**.
+3. Na caixa **Editar contorno**, pode actualizar a configuración do contorno.
 
-4. Se un ambiente está configurado para almacenar datos en Azure Data Lake Storage, pode actualizar a **Clave da conta**. Non obstante, non podes cambiar o **Nome da conta** nin o nome do **Contedor**.
-
-5. Opcionalmente, pode actualizar desde unha conexión baseada na clave de conta a unha conexión baseada en recursos ou baseada nunha subscrición. Unha vez actualizado, non poderá volver á clave da conta despois da actualización. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Non pode cambiar a información do **contedor** ao actualizar a conexión.
-
-6. Opcionalmente, pode proporcionar un URL do contorno de Microsoft Dataverse en **Configurar o uso compartido de datos con Microsoft Dataverse e habilitar capacidades adicionais**. Estas capacidades inclúen o uso compartido de datos con aplicacións e solucións baseadas en Microsoft Dataverse, inxestión de datos de orixes de datos locais ou o uso de [predicións](predictions.md). Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun Data Lake xestionado de Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Compartir datos cun Data Lake xestionado Microsoft Dataverse actualmente non é compatible cando garda todos os datos no seu propio Azure Data Lake Storage.
-   > - A [predición de valores que faltan nunha entidade](predictions.md) e os informes incorporados de PowerBI na información do público (se están activados no seu ambiente) non son compatibles actualmente cando activa o uso compartido de datos co lago de datos xestionado de Microsoft Dataverse.
-
-   Despois de activar o uso compartido de datos con Microsoft Dataverse, comeza a actualización completa das orixes de datos e outros procesos. Se actualmente se están executando procesos, non ve a opción para habilitar o uso compartido de datos con Microsoft Dataverse. Espere a que estes procesos finalicen ou cancéleos para habilitar o uso compartido de datos. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse.":::
-   
-   Cando execute procesos, como a inxestión de datos ou a creación de segmentos, crearanse os cartafoles correspondentes na conta de almacenamento que especificou anteriormente. Os ficheiros de datos e os ficheiros model.json crearanse e engadiranse ás respectivas subcarpetas, dependendo do proceso que execute.
+Para obter máis información sobre a configuración do contorno, consulte [Crear un novo contorno](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar a configuración dun ambiente
 

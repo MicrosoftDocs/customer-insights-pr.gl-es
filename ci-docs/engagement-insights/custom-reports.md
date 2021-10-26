@@ -4,23 +4,23 @@ description: Obteña información acerca da creación e personalización de info
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 2540221710786dc1c84b231fbb23b9749b601cc6a2aeb78614e16002302a80a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3fa801bfc8b0aee65c21b90de2423a3d5d5e4e26
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036961"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582875"
 ---
 # <a name="create-and-edit-custom-reports"></a>Crear e editar informes personalizados
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Ademais dos informes listos para usar, pode crear un informe personalizado con visualizacións de táboas e gráficas que lle axudarán a comprender o comportamento dos usuarios. Este artigo explica como crear un informe cos datos que precisa usando visualizacións de gráficas e táboas. 
+Ademais de informes listos para usar (OOB), pode compilar un informe personalizado con visualizacións de táboa e gráficas para axudarlle a entender o comportamento do usuario. Este artigo explica como crear un informe cos datos que precisa usando visualizacións de gráficas e táboas. Para obter información sobre os informes de OOB, consulte [Ver informes](view-reports.md).
 
 ## <a name="create-a-custom-report"></a>Crear un informe personalizado
 
@@ -35,11 +35,13 @@ Ademais dos informes listos para usar, pode crear un informe personalizado con v
     - Seleccione **Engadir elemento visual** na barra de comandos para crear unha visualización de táboa predefinida.
     - Ou seleccione unha visualización de columna, barra, liña, área, torta, anel ou táboa no panel **Editor de informes**.
 
-1. No panel **Datos**, seleccione unha das **Métricas** dispoñibles (por exemplo, visualizacións das páxinas) para mostrar. Despois engada **Dimensións** (por exemplo, país) para mostrar na visualización. Para obter máis información sobre como engadir opcións adicionais para escoller, consulte [Ver e crear métricas](metrics.md) e [Ver e crear dimensións](dimensions.md).
+1. Na sección **Datos** do panel **Editor de visualización**, seleccione unha das opcións dispoñibles (por exemplo, vistas de páxinas) desde o panel despregable de **Métricas**. Tamén pode engadir **Dimensións** (por exemplo, país) para mostrar na visualización. Para obter máis información, consulte [Ver e crear métricas](metrics.md) e [Ver e crear dimensións](dimensions.md).
 
-1. Seleccione **Deseño** no panel **Editor de visualizacións** para engadir o **texto do título** e definir a **posición**, as **etiquetas de datos** e o **eixe**.  Tamén pode modificar a visualización seleccionando outro tipo de gráfica.
+   :::image type="content" source="media/page-views.png" alt-text="Escolla unha métrica para o seu informe.":::
 
-1. Pode modificar o tamaño e a posición dunha visualización:
+1. Seleccione a sección **Deseño** do panel **Editor de visualización** para engadir **Texto do título** e activar e desactivar o **Título**.  Tamén pode cambiar o tipo de visualización seleccionando outro gráfico, como **gráfico circular**.
+
+1. Para cambiar o tamaño e a posición dunha visualización:
    - Seleccione a visualización e arrastre unha das esquinas ou bordos para axustar o seu tamaño.
    - Seleccione a visualización e móvaa a unha nova posición. Tamén pode usar as teclas de frecha para cambiar a posición.
 1. Para engadir outra visualización, seleccione **Engadir elemento visual** na barra de comandos.
@@ -47,17 +49,27 @@ Ademais dos informes listos para usar, pode crear un informe personalizado con v
 
 1. Indique un nome para o informe personalizado e seleccione **Gardar** para crealo.
  
+## <a name="filter-a-custom-report"></a>Filtrar un informe personalizado
+
+Pode seleccionar o intervalo temporal ou de datas nun informe personalizado para centrarse nun valor ou período de tempo.
+
+Para seleccionar un intervalo temporal, na esquina superior dereita da vista do informe, seleccione un valor na lista despregable do informe. Tamén pode escoller un **Intervalo de datas fixado*.
+
+:::image type="content" source="media/filter-time-date-range.png" alt-text="Filtrar por hora ou intervalo de datas.":::
+
+Para a maioría dos informes, seleccione **+ Engadir condición** para escoller unha dimensión ou un segmento para filtrar o informe. Para obter máis información, consulte [Ver e crear segmentos](segments.md).
+
 ## <a name="edit-a-custom-report"></a>Editar un informe personalizado
 
 1. Vaia a **Analizar** > **Personalizados** para acceder á lista de informes personalizados.
 
 1. Na lista de informes personalizados, seleccione **Máis [...]**. 
 
-1. Escolla **Editar detalles** para cambiar o nome do informe.
+1. Escolla **Editar nome** para cambiar o nome do informe.
 
-1. Seleccione o nome do informe e use as opcións **Engadir elemento visual** e **Editar** para engadir, eliminar, recolocar ou redimensionar as visualizacións.
+1. Seleccione o nome do informe e use as opcións **+ Engadir elemento visual** e **Editar** para engadir, eliminar, recolocar ou redimensionar as visualizacións.
 
-1. Para cambiar as propiedades dunha visualización, seleccione **...** e despois **Editar elemento visual**.
+1. Para cambiar as propiedades dunha visualización, seleccione o elemento visual, seleccione **...** e logo, **Editar elemento visual**.
 
    :::image type="content" source="media/edit-visual-control.png" alt-text="Edición das propiedades da gráfica de informes personalizados.":::
 
@@ -72,5 +84,6 @@ Ademais dos informes listos para usar, pode crear un informe personalizado con v
 1. Escolla **Eliminar** para eliminar o informe.
 
 1. Confirme a acción para eliminar o informe permanentemente.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

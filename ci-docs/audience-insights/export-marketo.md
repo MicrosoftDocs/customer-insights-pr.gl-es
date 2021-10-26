@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Marketo
 description: Aprenda a configurar a conexión e exportar a Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033491"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619163"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos a Marketo (versión preliminar)
 
@@ -29,10 +29,10 @@ Exporte os segmentos de perfís de clientes unificados para xerar campañas, pro
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Ata 1 millón de perfís por exportación a Marketo.
+- Ata 1 millón de perfís de clientes por exportación a Marketo.
 - A exportación a Marketo está limitada a segmentos.
-- A exportación de segmentos cun total de 1 millón de perfís pode levar ata 3 horas. 
-- O número de perfís que pode exportar a Marketo depende e está limitado no seu contrato con Marketo.
+- A exportación de segmentos cun total de 1 millón de perfís de clientes pode levar ata 3 horas. 
+- O número de perfís de clientes que pode exportar a Marketo depende e está limitado ao seu contrato con Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Configurar conexión a Marketo
 
@@ -64,7 +64,7 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Introduza o seu **[ID de lista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. O ID da lista é un valor unicamente numérico. Por exemplo, se o seu ID de lista de Marketo é ST12345A7, elimine o carácter de antes e despois dos números e introduza `12345`. 
 
-1. Na sección **Coincidencia de datos**, no campo **Correo electrónico**, seleccione o campo do seu perfil de cliente unificado que representa o enderezo de correo electrónico dun cliente. 
+1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. 
 
 1. Opcionalmente, pode exportar o **nome**, **apelidos**, **cidade**, **estado** e **país/rexión** para crear correos electrónicos máis personalizados. Seleccione **Engadir atributo** para asignar estes campos.
 

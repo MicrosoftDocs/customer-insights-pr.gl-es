@@ -1,7 +1,7 @@
 ---
 title: Actividades do cliente
 description: Defina as actividades dos clientes e visualíceas nunha liña de tempo nos perfís dos clientes.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494409"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617967"
 ---
 # <a name="customer-activities"></a>Actividades do cliente
 
@@ -24,8 +24,7 @@ Combine as actividades dos clientes desde [varias fontes de datos](data-sources.
 
 As súas fontes de datos poden incluír entidades con datos de transaccións e actividades de varias fontes de datos. Identifique estas entidades e seleccione as actividades que desexa ver na liña de tempo do cliente. Escolla a entidade que inclúe a súa actividade ou actividades de destino.
 
-> [!NOTE]
-> Unha entidade debe ter polo menos un atributo de tipo **Data** para incluír nunha liña de tempo de cliente e non pode engadir entidades sen campos **Data**. O control **Engadir actividade** está desactivado se non se atopa tal entidade.
+Unha entidade debe ter polo menos un atributo de tipo **Data** para incluír nunha liña de tempo de cliente e non pode engadir entidades sen campos **Data**. O control **Engadir actividade** está desactivado se non se atopa tal entidade.
 
 1. Na información do público, vaia a **Datos** > **Actividades**.
 
@@ -41,13 +40,16 @@ As súas fontes de datos poden incluír entidades con datos de transaccións e a
 
 1. Seleccione **Seguinte** para ir ao seguinte paso.
 
-1. No paso **Relación**, configure os detalles para conectar os datos da súa actividade ao cliente correspondente. Este paso visualiza a conexión entre entidades.  
+1. No paso **Relación**, configure os detalles para conectar os datos da súa actividade co rexistro de cliente correspondente. Este paso visualiza a conexión entre entidades.  
 
    - **Primeiro**: Campo estranxeiro da súa entidade de actividade que se usará para establecer unha relación con outra entidade.
    - **Segundo**: Entidade cliente fonte correspondente coa que estará relacionada a súa entidade de actividade. Só pode relacionar con entidades de cliente de orixe que se usan no proceso de unificación de datos.
    - **Terceiro**: Se xa existe unha relación entre esta entidade de actividade e a entidade de cliente fonte seleccionada, o nome da relación estará en modo de só lectura. Se non existe tal relación, crearase unha nova relación co nome que proporcione nesta caixa.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Defina a relación da entidade.":::
+
+   > [!TIP]
+   > En contornos B2B, pode seleccionar entre entidades de conta e outras entidades. Se selecciona unha entidade de conta, o camiño da relación establécese automaticamente. Para outras entidades, ten que definir o camiño de relación entre unha ou varias entidades intermedias ata chegar a unha entidade de conta.
 
 1. Seleccione **Seguinte** para ir ao seguinte paso. 
 
@@ -95,5 +97,34 @@ As seguintes accións están dispoñibles cando selecciona unha actividade.
 - **Cambiar o nome**: Abre un diálogo onde pode introducir un nome diferente para a actividade seleccionada. Seleccione **Gardar** para aplicar as modificacións.
 
 - **Eliminar**: Abre un diálogo para confirmar a eliminación da actividade seleccionada. Tamén pode eliminar máis dunha actividade á vez seleccionando as actividades e logo seleccionando a icona de eliminación. Para confirmar a eliminación, seleccione **Eliminar**.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Ver cronoloxías de actividade nos perfís de clientes
+
+Despois de configurar as actividades do cliente, seleccione **Mostrar na cronoloxía da actividade** na configuración da actividade para atopar todas as actividades dos seus clientes no seu perfil de cliente.
+
+Para abrir a cronoloxía dun cliente, vaia a **Clientes** e escolla o perfil de cliente que desexa ver.
+
+Se un cliente participou nunha actividade que configurou, atoparaa na sección **Cronoloxía da actividade**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Consulte actividades configuradas en Perfís de clientes.":::
+
+Hai varias formas de filtrar actividades na liña de tempo da actividade:
+
+- Pode seleccionar unha ou varias das iconas de actividade para refinar os resultados para incluír só os tipos seleccionados.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtre as actividades por tipo usando as iconas.":::
+
+- Pode seleccionar **Filtrar** para abrir un panel de filtros para configurar os filtros da súa liña de tempo.
+
+   1. Pode filtrar por *ActivityType* e *Data*
+   1. Seleccione **Aplicar** para usar os filtros na cronoloxía da actividade.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Use o panel de filtros para configurar as condicións do filtro.":::
+
+Para eliminar filtros, seleccione **x** xunto a cada filtro aplicado á liña do tempo ou seleccione **Borrar filtros**.
+
+
+> [!NOTE]
+> Os filtros de actividade elimínanse cando sae dun perfil de cliente. Ten que aplicalos cada vez que abra un perfil de cliente.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

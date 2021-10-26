@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a LinkedIn Ads
 description: Aprenda a configurar a conexión e exportar a LinkedIn Ads.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034221"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618289"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportar segmentos a LinkedIn Ads (versión preliminar)
 
@@ -28,9 +28,9 @@ Exporte segmentos de perfís de clientes unificados a LinkedIn Ads para crear p�
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Pode exportar ata 100 000 perfís por exportación a LinkedIn Ads.
+- Pode exportar ata 100.000 perfís de clientes por exportación a LinkedIn Ads.
 - A exportación a LinkedIn Ads está limitada a segmentos.
-- A exportación de ata 100 000 perfís a LinkedIn Ads pode tardar ata 10 minutos en finalizar. 
+- A exportación de ata 100.000 perfís de clientes a LinkedIn Ads pode levar ata 10 minutos en completarse. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Configurar a conexión a LinkedIn Ads
 
@@ -66,7 +66,7 @@ Pode configurar unha exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Escolla se quere exportar datos para [dirixirse aos contactos](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ou [dirixirse ás empresas](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) en LinkedIn. 
 
-1. Na sección **Coincidencia de datos**, seleccione o campo do seu perfil de cliente unificado que represente o enderezo de correo electrónico dun cliente. É necesario exportar segmentos a LinkedIn Ads.
+1. Na sección **Coincidencia de datos**, para a orientación por contactos, seleccione polo menos un campo que represente un enderezo de correo electrónico dun cliente, Apple Ad ID, Google Ad ID, Google User ID ou nome e apelidos. Se escolle a orientación por empresa, seleccione polo menos un campo que represente un nome de empresa, dominio de correo electrónico, URL da páxina de LinkedIn, símbolo de acción ou sitio web. Pódense seleccionar campos adicionais para definir a exportación. 
 
 1. Seleccione os segmentos que desexa exportar. Os públicos coincidentes en LinkedIn Campaign Manager crearanse automaticamente co nome dos segmentos que seleccionou para exportar. Cada segmento dará lugar a un público coincidente diferente. 
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557350"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623001"
 ---
 # <a name="relationships-between-entities"></a>Relacións entre entidades
 
@@ -67,6 +67,20 @@ Unha relación consiste nunha *entidade de orixe* que contén a clave externa e 
    - **Campo da clave obxectivo**: o campo da clave da entidade de destino. Exemplo: o cliente podería usar o campo da clave **CustomerID**.
 
 4. Seleccione **Gardar** para crear a relación personalizada.
+
+## <a name="set-up-account-hierarchies"></a>Configurar xerarquías de conta
+
+Os contornos configurados para utilizar as contas empresariais como público obxectivo principal poden configurar xerarquías de contas para contas comerciais relacionadas. Por exemplo, unha empresa que ten unidades de negocio separadas. 
+
+As organizacións crean xerarquías de contas para xestionar mellor as contas e as súas relacións entre si. A capacidade de información de audiencia admite xerarquías de contas principais-secundarias que xa existen nos datos de clientes inxeridos. Por exemplo, contas de Dynamics 365 Sales. Estas xerarquías pódense configurar na páxina **Relacións** en estatísticas de audiencia, na pestana de xerarquía de contas.
+
+1. Vaia a **Datos** > **Relacións**.
+1. Seleccione a pestana **Xerarquía de contas**.
+1. Seleccione **Nova xerarquía de contas**. 
+1. No panel **Xerarquía de contas**, proporcione un nome para a xerarquía. O sistema crea un nome para a entidade de saída. Pode cambiar o nome da entidade de nome de saída.
+1. Seleccione a entidade que contén a xerarquía da súa conta. Normalmente está na mesma entidade que contén as contas.
+1. Seleccione a **ID de conta** e a **ID principal da conta** da entidade seleccionada 
+1. Seleccione **Gardar** para aplicar a configuración e finalizar a xerarquía da conta.
 
 ## <a name="view-relationships"></a>Ver relacións
 

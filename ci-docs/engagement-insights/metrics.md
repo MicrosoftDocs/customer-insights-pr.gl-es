@@ -4,17 +4,17 @@ description: Como crear, editar e eliminar métricas.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 79600a14bc7e98dfd066270f19c353fd007e1341
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034267"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623720"
 ---
 # <a name="view-and-create-metrics"></a>Ver e crear métricas
 
@@ -38,21 +38,24 @@ Estas métricas do sistema baséanse en propiedades de eventos existentes en eve
 1. Vaia a **Datos** no panel de navegación esquerdo. 
 1. Seleccione o separador **Métricas** para ver unha lista de todas as métricas na área de traballo. 
    > [!NOTE]
-   > As métricas xeradas polo sistema son só de lectura. Non podes cambialas nin eliminalas. Só pode crear e editar métricas personalizadas.
+   > As métricas xeradas polo sistema son só de lectura. Non pode editalas nin eliminalas. Só pode crear e editar métricas personalizadas.
 
 ## <a name="create-a-metric"></a>Crear unha métrica
 
 Os administradores de ambientes e áreas de traballo poden crear métricas. As propiedades dos eventos deben enviarse á área de traballo antes de crear unha métrica. Pode crear métricas baseadas nas propiedades dos eventos que envían os eventos base ou usar o SDK web para [enviar propiedades de eventos personalizadas](advanced-SDK-implementation.md).
 
 1. Vaia a **Datos** > **Métricas**.
-1. Seleccione **Nova métrica**.
+1. Seleccione **Nova métrica** para abrir o diálogo **Biblioteca de recursos** e **Nova métrica sen título**.
 
    :::image type="content" source="media/new-metric.png" alt-text="Engadir unha métrica a un evento.":::
 
-1. Para o formato, seleccione o tipo de datos **Enteiro** ou **Dobre**. Enteiro é un número enteiro. En Dobre, pode escoller entre un e tres decimais.
-1. No panel **Biblioteca de recursos**, busque a propiedade do evento na que se baseará a métrica.
-1. Seleccione o **signo máis (+)** xunto á propiedade para usala na fórmula. Só pode crear unha fórmula baseada nunha propiedade. 
-1. Seleccione unha das seguintes funcións de agregado. 
+1. No diálogo **Nova métrica sen título**, seleccione a lista despregable **Formato** e escolla o tipo de datos **Enteiro** ou **Dobre**. Enteiro é un número enteiro. En Dobre, pode escoller un e tres decimais.
+
+   :::image type="content" source="media/create-new-metric.png" alt-text="Crear unha nova métrica.":::
+   
+5. No panel **Biblioteca de recursos**, busque a propiedade do evento na que se baseará a métrica.
+6. Seleccione o **signo máis (+)** xunto á propiedade para usala na fórmula. Só pode crear unha fórmula baseada nunha propiedade. 
+7. Seleccione unha das seguintes funcións de agregado. 
 
    - Suma: o total aritmético de todos os valores 
    - Media: a media de todos os valores
@@ -68,12 +71,16 @@ Pode pasar ata un minuto antes de poder usar a métrica para [crear informes per
 
 ## <a name="edit-a-metric"></a>Editar unha métrica
 
+Só pode editar métricas personalizadas.
+
 1. Vaia a **Datos** > **Métricas**.
 1. Seleccione a métrica na lista.
 1. Cambiar a definición da métrica
 1. Seleccione **Gardar**.
 
 ## <a name="change-the-name-of-a-metric"></a>Cambiar o nome dunha métrica
+
+Só pode cambiar o nome das métricas personalizadas.
 
 1. Vaia a **Datos** > **Métricas**.
 1. Seleccione **Máis [...]** para unha métrica e escolla **Editar nome**.
@@ -82,11 +89,15 @@ Pode pasar ata un minuto antes de poder usar a métrica para [crear informes per
 
 ## <a name="delete-a-metric"></a>Eliminar unha métrica
 
+Só pode eliminar métricas personalizadas.
+
 1. Vaia a **Datos** > **Métricas**.
 1. Seleccione **Máis [...]** para unha métrica e escolla **Eliminar**.
 
    :::image type="content" source="media/delete-metric.png" alt-text="Eliminar unha métrica dun evento.":::
 
 1. Para confirmar a eliminación, seleccione **Eliminar**.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

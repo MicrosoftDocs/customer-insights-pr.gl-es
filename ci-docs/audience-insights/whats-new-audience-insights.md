@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465203"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606068"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Actualizacións de setembro de 2021
+
+As actualizacións en setembro de 2021 inclúen novas funcións, actualizacións de rendemento e corrección de erros.
+
+### <a name="activities"></a>Actividades
+
+- **Melloras na cronoloxía de actividades** Ampliamos os filtros para a cronoloxía das actividades nos perfís dos clientes. Ademais, pode usar o novo filtro para filtrar por tipo de actividade e por data. As datas pódense filtrar empregando diferentes condicións. Para obter máis información, consulte [Ver cronoloxías de actividade nos perfís de clientes](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relacións
+
+- **Compatibilidade con relación de varios saltos** Use relacións de varios saltos cando configure actividades e defina relacións entre entidades. As relacións de varios saltos utilizan unha entidade intermedia para conectar dúas entidades. Ao configurar unha actividade, pode usar unha relación de varios saltos para conectar a súa entidade de actividade a unha entidade intermedia e logo a unha entidade de cliente. Pode combinar relacións de varios saltos con relacións de varios camiños. Para obter máis información, consulte [Relación de varios saltos](relationships.md#multi-hop-relationship).
+
+- **Compatibilidade con relación de varios camiños** Use relacións de varios camiños cando configure actividades e defina relacións entre entidades. As relacións de varios camiños relacionan unha entidade de orixe con máis dunha entidade. Ao configurar unha actividade, pode usar unha relación de varios camiños para conectar a súa entidade de actividade a máis dunha entidade de cliente. Pode combinar relacións de varios camiños con relacións de varios saltos. Para obter máis información, consulte [Relación de varios camiños](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Actualizacións de agosto de 2021
 

@@ -8,18 +8,18 @@ ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
-ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
+ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "7564592"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645399"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Dispoñibilidade rexional para Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-A información de interacción, unha capacidade de Dynamics 365 Customer Insights, introduce gradualmente máis rexións onde os clientes poden escoller almacenar os seus datos. Os administradores poden escoller unha rexión cando [creen un novo ambiente](manage-environments-workspaces.md#create-an-environment). 
+A información de interacción, unha capacidade de Dynamics 365 Customer Insights, introduce gradualmente máis rexións onde os clientes poden escoller almacenar os seus datos. Os administradores poden escoller unha rexión cando [creen un novo ambiente](create-new-environment.md). 
 
 Cando configura a información de interacción por primeira vez, pode elixir a rexión mentres percorre a [experiencia guiada de primeira execución](quickstart.md). Máis tarde, cada novo ambiente permítelle escoller a rexión na que se almacenarán os datos.
 

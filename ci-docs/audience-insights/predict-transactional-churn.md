@@ -1,7 +1,7 @@
 ---
-title: Predición de abandono transaccional
+title: Predición do abandono de transaccións
 description: Prediga se un cliente está en risco de deixar de comprar os seus servizos ou produtos.
-ms.date: 11/12/2020
+ms.date: 10/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,23 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f0d56fc6595fcbb226897fcb52148924d00306b6d75b617fc8cafbcc0aab0641
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034908"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643375"
 ---
-# <a name="transactional-churn-prediction-preview"></a>Predición de abandono transaccional (previsualización)
+# <a name="transaction-churn-prediction-preview"></a>Predición do abandono da transacción (versión preliminar)
 
-A predición do abandono transaccional axuda a predicir se un cliente deixará de mercar os seus produtos ou servizos nunha xanela de tempo determinada. Pode crear novas predicións de abandono en **Intelixencia** > **Predicións**. Seleccione **As miñas predicións** para ver outras predicións que creou.
+A predición do abandono transaccional axuda a predicir se un cliente deixará de mercar os seus produtos ou servizos nunha xanela de tempo determinada. Pode crear novas predicións de abandono en **Intelixencia** > **Predicións**. Seleccione **As miñas predicións** para ver outras predicións que creou. 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6Eg]
+
+Para contornos baseados en contas empresariais, podemos predicir o cambio transaccional dunha conta e tamén unha combinación de conta e outro nivel de información como a categoría de produto. Engadir unha dimensión pode axudar a descubrir a probabilidade de que a conta "Contoso" deixe de mercar a categoría de produtos "papelería de oficina". Ademais, para as contas empresariais, tamén podemos empregar a IA para xerar unha lista de posibles motivos polos que é probable que unha conta cambie unha categoría de información de nivel secundario.
 
 > [!TIP]
-> Probe o tutorial para obter unha predición do abandono transaccional usando datos de mostra: [Guía de mostra de predición do abandono transaccional (vista previa)](sample-guide-predict-transactional-churn.md).
+> Probe o tutorial para unha predición de abandono de transacción usando datos de mostra: [Guía de mostra de predición de abandono de transacción (vista previa)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -34,9 +38,9 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
     - O esquema de datos semánticos para compras/transaccións require a seguinte información:
         - **ID de transacción:** Un identificador único dunha compra ou transacción.
         - **Data da transacción:** A data da compra ou transacción.
-        - **Valor da transacción:** O importe da moeda/valor numérico da transacción/elemento.
-        - (Opcional) **ID de produto único:** O ID do produto ou servizo adquirido se os seus datos están a un nivel de elemento de liña.
-        - (Opcional) **Se esta transacción foi unha devolución:** Un campo verdadeiro/falso que identifica se a transacción foi ou non unha devolución. Se o **Valor da transacción** é negativo, tamén usaremos esta información para inferir un retorno.
+        - **Valor da transacción**: O importe da moeda/valor numérico da transacción/elemento.
+        - (Opcional) **ID de produto único**: O ID do produto ou servizo adquirido se os seus datos están a un nivel de elemento de liña.
+        - (Opcional) **Se esta transacción foi unha devolución**: Un campo verdadeiro/falso que identifica se a transacción foi ou non unha devolución. Se o **Valor da transacción** é negativo, tamén usaremos esta información para inferir un retorno.
 - (Opcional) Datos sobre actividades do cliente:
     - Identificadores de actividades para distinguir actividades do mesmo tipo.
     - Identificadores de clientes para atribuír actividades aos seus clientes.
@@ -46,6 +50,15 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
         - **Marca de tempo:** a data e a hora do evento identificadas pola clave principal.
         - **Evento:** o nome do evento que desexa usar. Por exemplo, un campo chamado "UserAction" nunha tenda de ultramarinos pode ser un cupón utilizado polo cliente.
         - **Detalles:** información detallada sobre o evento. Por exemplo, un campo chamado "CouponValue" nunha tenda de alimentación pode ser o valor en moeda do cupón.
+- (Opcional) Datos sobre os seus clientes:
+    - Estes datos só deben raramente aliñarse cara a atributos máis estáticos para garantir que o modelo funcione mellor.
+    - O esquema de datos semánticos para os datos do cliente inclúe:
+        - **CustomerID:** Un identificador único para un cliente.
+        - **Data de creación:** A data en que se engadiu inicialmente o cliente.
+        - **Estado ou provincia:** a situación do estado ou provincia dun cliente.
+        - **País:** o país dun cliente.
+        - **Sector:** O tipo de sector dun cliente. Por exemplo, un campo chamado "Sector" nun torrador de café pode indicar se o cliente vendía polo miúdo.
+        - **Clasificación:** a clasificación dun cliente para o seu negocio. Por exemplo, un campo chamado "ValueSegment" nun torrador de café pode ser o nivel do cliente en función do tamaño do cliente.
 - Características datos suxeridas:
     - Datos históricos suficientes: datos de transaccións durante polo menos o dobre da xanela de tempo seleccionada. Preferiblemente, de dous a tres anos do historial de transaccións. 
     - Compras múltiples por cliente: idealmente polo menos dúas transaccións por cliente.
@@ -55,15 +68,15 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
 > [!NOTE]
 > Para unha empresa con alta frecuencia de compra de clientes (cada poucas semanas), recoméndase seleccionar unha ventá predición máis curta e definir o abandono. Para unha frecuencia de compra baixa (cada poucos meses ou unha vez ao ano), elixa unha fiestra máis longa de predición e defina o abandono.
 
-## <a name="create-a-transactional-churn-prediction"></a>Crear unha predición de abandono transaccional
+## <a name="create-a-transaction-churn-prediction"></a>Crear unha predición do abandono da transacción
 
 1. En Customer Insights, diríxase a **Intelixencia** > **Predicións**.
 
 1. Seleccione o mosaico **Modelo de abandono do cliente (vista previa)** e seleccione **Usar este modelo**.
-   
-1. No panel **Modelo de abandono do cliente**, escolla **Transaccional** e seleccione **Comezar**.
 
-:::image type="content" source="media/select-transaction-churn.PNG" alt-text="Captura de pantalla coa opción transaccional seleccionada no panel do modelo de abandono do cliente.":::
+1. No panel **Modelo de abandono de clientes**, escolla **Transacción** e seleccione **Comezar**.
+
+:::image type="content" source="media/select-transaction-churn.PNG" alt-text="Captura de pantalla coa opción de transacción seleccionada no panel do modelo de abandono de clientes.":::
 
 ### <a name="name-model"></a>Dar nome ao modelo
 
@@ -75,50 +88,86 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
 
 ### <a name="define-customer-churn"></a>Definir renovación do cliente
 
-1. Estableza unha xanela de días para predicir o abandono no campo **Identificar os clientes que poidan abandonar nos seguintes**. Por exemplo, predicir o risco de abandono dos seus clientes durante os próximos 90 días para alinearse cos seus esforzos de retención de mercadotecnia. A predición do risco de abandono por un período de tempo máis longo ou máis curto pode facer máis difícil abordar os factores do seu perfil de risco de abandono, pero depende das necesidades específicas do seu negocio. 
+1. Estableza unha xanela de días para predicir o abandono no campo **Identificar os clientes que poidan abandonar nos seguintes**. Por exemplo, predicir o risco de abandono dos seus clientes durante os próximos 90 días para alinearse cos seus esforzos de retención de mercadotecnia. A predición do risco de abandono por un período de tempo máis longo ou máis curto pode facer máis difícil abordar os factores do seu perfil de risco de abandono, pero depende das necesidades específicas do seu negocio.
    >[!TIP]
    > Pode seleccionar **Gardar e pechar** en calquera momento para gardar a predición como borrador. Atopará o borrador de predición no separador **As miñas previsións** para continuar.
 
 1. Introduza o número de días para definir o abandono no campo **Un cliente abandonou se non realizou compras en:**. Por exemplo, se un cliente non realizou compras nos últimos 30 días, é posible que a súa empresa considere que abandonou. 
 
-1. Seleccione **Seguinte** para continuar
+1. Seleccione **Seguinte** para continuar.
 
 ### <a name="add-required-data"></a>Engadir datos obrigatorios
 
-1. Seleccione **Engadir datos** para **Historial de compras** e escolla a entidade que fornece a información do historial de transaccións/compras como se describe nos [requisitos previos](#prerequisites).
+1. Seleccione **Engadir datos** e escolla o tipo de actividade no panel lateral que contén a información de transacción ou historial de compras requirida.
 
-1. Asigne os campos semánticos aos atributos da súa entidade do historial de compras e seleccione **Seguinte**. Para obter descricións dos campos, bótelle unha ollada aos [requisitos previos](#prerequisites).
+1. En **Elixir as actividades**, escolla as actividades específicas da actividade seleccionada na que desexa que se centre o cálculo.
 
-   :::image type="content" source="media/model-map-purchase-entity.PNG" alt-text="Asignar campos semánticos da entidade de compra.":::
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panel lateral que mostra a elección de actividades específicas baixo o tipo semántico.":::
 
-1. Se os campos de abaixo non se enchen, configure a relación da súa entidade do historial de compras á entidade Cliente.
-    1. Seleccione a **entidade do historial de compra**.
-    1. Seleccione o **Campo** que identifica ao cliente na entidade do historial de compras. Debe relacionarse coa identificación de cliente principal da súa entidade de cliente.
-    1. Seleccione a **Entidade de cliente** que se corresponde coa súa entidade de cliente principal.
-    1. Escriba un nome que describa a relación.
+1. Se aínda non asignou a actividade a un tipo semántico, seleccione **Editar** facelo. Ábrese a experiencia guiada para asignar actividades semánticas. Asigne os seus datos aos campos correspondentes do tipo de actividade seleccionada.
 
-    :::image type="content" source="media/model-purchase-join.PNG" alt-text="Páxina do historial de compras que mostra a creación dunha relación co cliente.":::
-   
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de actividade de configuración de páxina.":::
+
+1. Despois de asignar a actividade ao tipo semántico correspondente, seleccione **Seguinte** para continuar
+
+1. Asigne os atributos semánticos aos campos necesarios para executar o modelo. Se os campos de abaixo non se enchen, configure a relación da súa entidade do historial de compras á entidade *Cliente*.
+
 1. Seleccione **Seguinte**.
 
-1. Opcionalmente, seleccione **Engadir datos** para **Actividades do cliente**. Escolla a entidade que proporciona a información da actividade do cliente como se describe nos requisitos previos.
+### <a name="select-prediction-level"></a>Seleccionar nivel de predición
 
-1. Asigne os campos semánticos aos atributos da súa entidade de actividade do cliente e seleccione **Seguinte**. Para obter descricións dos campos, bótelle unha ollada aos [requisitos previos](#prerequisites).
+A maioría das predicións créanse a nivel de cliente. Nalgunhas situacións, é posible que non sexa o suficientemente detallado para atender ás necesidades da súa empresa. Pode usar esta función para predicir o abandono dunha sucursal dun cliente, por exemplo, en lugar de para o cliente no seu conxunto.
 
-   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Asignar campos de clientes para datos transacionais.":::
+1. Para crear unha predición a un nivel máis detallado que o cliente, seleccione **Seleccionar a entidade para un nivel secundario**. Se a opción non está dispoñible, asegúrese de ter completado a sección anterior.
+
+1. Amplíe as entidades das que desexa escoller o nivel secundario ou use a caixa de filtro de busca para filtrar as opcións seleccionadas.
+
+1. Escolla o atributo que desexa usar como nivel secundario e logo seleccione **Engadir**
+
+1. Seleccionar **Seguinte**
+
+> [!NOTE]
+> As entidades dispoñibles nesta sección móstranse porque teñen unha relación coa entidade que escolleu na sección anterior. Se non ve a entidade que quere engadir, asegúrese de que ten unha relación válida en **Relacións**. Só son válidas para esta configuración as relacións de un a un e de moitos a un.
+
+### <a name="add-additional-data-optional"></a>Engadir datos adicionais (opcional)
+
+Configure a relación da entidade de actividade do cliente coa entidade *Cliente*.
+
+1. Seleccione o campo que identifica ao cliente na entidade de actividade do cliente. Pode estar directamente relacionada co ID de cliente principal da súa entidade *Cliente*.
+
+1. Seleccione a entidade que sexa a súa entidade principal de *Cliente*.
+
+1. Escriba un nome que describa a relación.
+
+#### <a name="customer-activities"></a>Actividades do cliente
+
+1. Opcionalmente, seleccione **Engadir datos** para **Actividades do cliente**.
+
+1. Seleccione o tipo de actividade semántica que contén os datos que desexa usar e, a continuación, seleccione unha ou máis actividades na sección **Actividades**.
 
 1. Seleccione un tipo de actividade que coincida co tipo de actividade do cliente que está configurando. Seleccione **Crear novo** e elixa un tipo de actividade dispoñible ou cree un novo tipo.
 
-1. Deberá configurar a relación desde a entidade de actividade de cliente na entidade de cliente.
-    1. Seleccione o campo que identifica ao cliente na entidade de actividade do cliente. Pode estar directamente relacionado co ID de cliente principal da súa entidade Cliente.
-    1. Seleccione a entidade de cliente que se corresponde coa súa entidade de Cliente principal
-    1. Escriba un nome que describa a relación.
-
-1. Seleccione **Gardar**.
+1. Seleccione **Seguinte** e, a continuación, **Gardar**.
 
 1. Se ten algunha outra actividade do cliente que desexa incluír, repita os pasos anteriores.
 
+#### <a name="customers-data"></a>Datos dos clientes
+
+1. Tamén pode seleccionar **Engadir datos** para **Datos dos clientes**.
+
+1. Asigne os atributos semánticos aos campos dos datos dos seus propios clientes segundo se identifican. Os datos dos campos empregados non deben cambiar con frecuencia para garantir o mellor rendemento do modelo. Por exemplo, seleccionar un campo para "Clasificación" que cambiaba cada mes só tería o último valor empregado na predición, aínda que historicamente o mesmo valor pode non aplicarse ao cliente cando constrúe os padróns de predición.
+
 1. Seleccione **Seguinte**.
+
+### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Proporcione unha lista opcional de contas de referencia (só contas de empresa)
+
+Engada unha lista de clientes e contas da súa empresa que queira usar como puntos de referencia. Obterá [detalles destas contas de referencia](#review-a-prediction-status-and-results) incluíndo a súa puntuación de abandono e as características máis importantes que afectaron á súa predición de abandonos.
+
+1. Seleccione **+ Engadir clientes**.
+
+1. Escolla os clientes que actúan como punto de referencia.
+
+1. Seleccione **Seguinte** para continuar.
 
 ### <a name="set-schedule-and-review-configuration"></a>Establecer a programación e revisar a configuración
 
@@ -135,42 +184,62 @@ A predición do abandono transaccional axuda a predicir se un cliente deixará d
 1. Vaia a **Intelixencia** > **Predicións** e seleccione o separador **As miñas predicións**.
 
 1. Seleccione a predición que desexa revisar.
-   - **Nome da predición:** Nome da predición proporcionado ao creala.
-   - **Tipo de predición:** Tipo de modelo usado para a predición
-   - **Entidade de saída:** nome da entidade para almacenar a saída da predición. Pode atopar unha entidade con este nome en **Datos** > **Entidades**.    
+   - **Nome da predición**: Nome da predición proporcionado ao creala.
+   - **Tipo de predición**: Tipo de modelo usado para a predición
+   - **Entidade de saída**: nome da entidade para almacenar os resultados da predición. Pode atopar unha entidade con este nome en **Datos** > **Entidades**.
      Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é unha etiqueta binaria baseada en *ChurnScore* cun limiar de 0,5. É posible que o limiar predeterminado non funcione no seu escenario. [Cree un novo segmento](segments.md#create-a-new-segment) co seu limiar preferido.
      Non todos os clientes son necesariamente clientes activos. É posible que algúns deles non tivesen ningunha actividade durante moito tempo e xa se consideran perdidos, segundo a definición de abandono. Non é útil predicir o risco de abandono para os clientes que xa abandonaron porque non son o público de interese.
-   - **Campo previsto:** Este campo só se completa con algúns tipos de predicións e non se usa na predición do abandono.
-   - **Estado:** Estado da execución da predición.
-        - **En cola:** a predición está á espera de que se executen outros procesos.
-        - **Actualizando:** a predición está executándose actualmente para producir resultados que fluirán cara á entidade de saída.
-        - **Fallou:** Fallou a execución da predición. Para obter máis detalles, [revise os rexistros](manage-predictions.md#troubleshoot-a-failed-prediction).
-        - **Con éxito:** a predición tivo éxito. Seleccione **Ver** nos tres puntos verticais para revisar a predición
-   - **Editado:** a data na que se modificou a configuración da predición.
-   - **Última actualización:** a data na que a predición actualizou resultados na entidade de saída.
+   - **Campo previsto**: Este campo só se completa con algúns tipos de predicións e non se usa na predición do abandono.
+   - **Estado**: Estado da execución da predición.
+        - **En cola**: a predición está á espera de que se executen outros procesos.
+        - **Actualizando**: a predición está executándose actualmente para producir resultados que fluirán cara á entidade de saída.
+        - **Fallou**: Fallou a execución da predición. Para obter máis detalles, [revise os rexistros](manage-predictions.md#troubleshoot-a-failed-prediction).
+        - **Con éxito**: a predición tivo éxito. Seleccione **Ver** nos tres puntos verticais para revisar a predición
+   - **Editado**: a data na que se modificou a configuración da predición.
+   - **Última actualización**: a data na que a predición actualizou os resultados na entidade de saída.
 
 1. Seleccione os tres puntos verticais xunto á predición da que desexa revisar os resultados e seleccione **Ver**.
 
-   :::image type="content" source="media/model-subs-view.PNG" alt-text="Control de visualización para ver os resultados dunha predición.":::   
+   :::image type="content" source="media/model-subs-view.PNG" alt-text="Control de visualización para ver os resultados dunha predición.":::
 
 1. Hai tres seccións principais de datos dentro da páxina de resultados:
-    1. **Desempeño do modelo de formación:** A, B ou C son posibles puntuacións. Esta puntuación indica o rendemento da predición e pode axudalo a tomar a decisión de usar os resultados almacenados na entidade de saída. As puntuacións determínanse segundo as regras seguintes:
-         
-         - **A** cando o modelo predixo con precisión polo menos o 50 % das predicións totais e cando a porcentaxe de predicións precisas para os clientes que abandonaron é superior á taxa de referencia nun 10 % como mínimo.
+   - **Desempeño do modelo de formación**: A, B ou C son posibles puntuacións. Esta puntuación indica o rendemento da predición e pode axudalo a tomar a decisión de usar os resultados almacenados na entidade de saída. As puntuacións determínanse segundo as regras seguintes: 
+        - **A** cando o modelo predixo con precisión polo menos o 50 % das predicións totais e cando a porcentaxe de predicións precisas para os clientes que abandonaron é superior á taxa de referencia nun 10 % como mínimo.
             
-         - **B** cando o modelo predixo con precisión polo menos o 50 % das predicións totais e cando a porcentaxe de predicións precisas para os clientes que abandonaron é ata un 10 % superior á referencia.
+        - **B** cando o modelo predixo con precisión polo menos o 50 % das predicións totais e cando a porcentaxe de predicións precisas para os clientes que abandonaron é ata un 10 % superior á referencia.
             
-         - **C** cando o modelo predixo con precisión menos do 50 % das predicións totais ou cando a porcentaxe de predicións precisas para os clientes que abandonaron é inferior á referencia.
+        - **C** cando o modelo predixo con precisión menos do 50 % das predicións totais ou cando a porcentaxe de predicións precisas para os clientes que abandonaron é inferior á referencia.
                
-         - A **referencia** toma a entrada da fiestra de tempo da predición para o modelo (por exemplo, un ano) e o modelo crea diferentes fraccións de tempo dividíndoo entre 2 ata alcanzar un mes ou menos. Utiliza estas fraccións para crear unha regra de negocio para clientes que non compraron neste período de tempo. Considérase que estes clientes abandonaron. Elíxese como modelo de referencia a regra de negocio baseada no tempo con maior capacidade para predicir quen é susceptible de abandonar.
+        - A **referencia** toma a entrada da fiestra de tempo da predición para o modelo (por exemplo, un ano) e o modelo crea diferentes fraccións de tempo dividíndoo entre 2 ata alcanzar un mes ou menos. Utiliza estas fraccións para crear unha regra de negocio para clientes que non compraron neste período de tempo. Considérase que estes clientes abandonaron. Elíxese como modelo de referencia a regra de negocio baseada no tempo con maior capacidade para predicir quen é susceptible de abandonar.
             
-    1. **Probabilidade de renovación (número de clientes):** grupos de clientes en función do risco previsto de renovación. Estes datos poden axudalo máis tarde se quere crear un segmento de clientes con alto risco de renovación. Estes segmentos axudan a comprender onde debe estar o seu corte para a subscrición a segmentos.
+    - **Probabilidade de renovación (número de clientes)**: grupos de clientes en función do risco previsto de renovación. Estes datos poden axudalo máis tarde se quere crear un segmento de clientes con alto risco de renovación. Estes segmentos axudan a comprender onde debe estar o seu corte para a subscrición a segmentos.
        
-    1. **Factores máis influentes:** hai moitos factores que se teñen en conta á hora de crear a súa predición. Cada un dos factores ten a súa importancia calculada para as predicións agregadas que crea un modelo. Pode usar estes factores para axudar a validar os resultados da súa predición. Ou pode usar esta información máis tarde para [crear segmentos](segments.md) que poderían axudalo a influír no risco de renovación dos clientes.
+    - **Factores máis influentes**: hai moitos factores que se teñen en conta á hora de crear a súa predición. Cada un dos factores ten a súa importancia calculada para as predicións agregadas que crea un modelo. Pode usar estes factores para axudar a validar os seus resultados de predicións ou pode usar esta información máis tarde para [crear segmentos](segments.md) que poderían axudar a influír no risco de abandono dos clientes.
+
+
+1. Para as contas de empresas, atopará unha páxina de información de **Análise de funcións importantes**. Contén catro seccións de datos:
+
+    - O elemento seleccionado no panel dereito determina o contido desta páxina. Seleccione un elemento desde **Os mellores clientes** ou **Clientes de referencia**. Ambas listas están ordenadas por valor decrecente da puntuación de abandono, xa sexa a puntuación só para o cliente ou unha puntuación combinada para os clientes e un nivel secundario como a categoría de produto.
+        
+        - **Os mellores clientes**: lista de 10 clientes con maior risco de abandono e menor risco de abandono segundo as súas puntuacións. 
+        - **Clientes de referencia**: Lista de ata 10 clientes seleccionados durante a configuración do modelo.
+ 
+    - **Puntuación de abandono:** Mostra a puntuación de abandono para o elemento seleccionado no panel dereito.
+    
+    - **Distribución do risco de abandono:** Mostra a distribución do risco de abandono entre os clientes e a porcentaxe na que se atopa o cliente seleccionado. 
+    
+    - **Principais características que aumentan e diminúen o risco de abandono:** Para o elemento seleccionado no panel dereito, aparecen as cinco características principais que aumentaron e diminuíron o risco de abandono. Para cada función influínte, atopará o valor da función para ese elemento e a súa influencia na puntuación de abandono. Tamén se mostra o valor medio de cada función en segmentos de clientes baixos, medios e altos. Axuda a contextualizar mellor os valores das funcións máis influentes do elemento seleccionado e os compara con segmentos de clientes baixos, medios e altos.
+
+       - Baixo: contas ou combinacións de contas e nivel secundario cunha puntuación de abandono entre 0 e 0,33
+       - Medio: contas ou combinacións de contas e niveis secundarios cunha puntuación de abandono entre 0,33 e 0,66
+       - Alto: contas ou combinacións de contas e niveis secundarios cunha puntuación de abandono superior a 0,66
+    
+       Cando se predi o abandono a nivel de conta, considéranse todas as contas ao derivar os valores medios das funcións para os segmentos de abandono. Para as predicións de abandono no nivel secundario de cada conta, a derivación de segmentos de abandono depende do nivel secundario do elemento seleccionado no panel lateral. Por exemplo, se un elemento ten un nivel secundario de categoría de produto = material de oficina, entón só se consideran os artigos que teñan material de oficina como categoría de produto cando se derivan os valores medios de característica para os segmentos de abandono. Esta lóxica aplícase para garantir unha comparación xusta dos valores de características do elemento cos valores medios en segmentos baixos, medios e altos.
+
+       Nalgúns casos, o valor medio dos segmentos de abandono baixos, medios ou altos está baleiro ou non está dispoñible porque non hai elementos que pertenzan aos segmentos de abandono correspondentes segundo a definición anterior.
 
 ## <a name="manage-predictions"></a>Xestionar predicións
 
-É posible optimizar, solucionar problemas, actualizar ou eliminar predicións. Revise un informe de usabilidade dos datos de entrada para saber como facer unha predición máis rápido e máis fiable. Para obter máis información, consulte [Xestionar predicións](manage-predictions.md).
-
+É posible optimizar, solucionar problemas, actualizar ou eliminar predicións. Revise un informe de usabilidade dos datos de entrada para saber como facer unha predición máis rápido e máis fiable. Para obter máis información, vaia a [Xestionar predicións](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Como crear, editar e eliminar dimensións.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033995"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623630"
 ---
 # <a name="view-and-create-dimensions"></a>Ver e crear dimensións
 
@@ -22,7 +22,7 @@ ms.locfileid: "7033995"
 
 Unha dimensión é un atributo dun evento que pode describir, filtrar ou agrupar datos. Se está a realizar unha promoción de márketing no seu sitio web, pode usar dimensións para ordenar os visitantes por usuarios novos e recorrentes.  
 
-A información de interacción inclúe dimensións listas para usar para as propiedades dos eventos. Os exemplos inclúen:
+A información de interacción inclúe dimensións listas para usar (OOB) para as propiedades dos eventos. Os exemplos inclúen:
 
 - Nome do explorador
 - Nome de Páxina
@@ -44,17 +44,21 @@ As dimensións baséanse nas propiedades dos eventos existentes. Cando usa o có
 Ademais das dimensións xeradas polo sistema, os administradores de ambientes e áreas de traballo poden crear dimensións personalizadas. As dimensións personalizadas baséanse nas propiedades predefinidas dos eventos base ou poden usar as [propiedades personalizadas dun evento](advanced-SDK-implementation.md).
 
 1. Vaia a **Datos** > **Dimensións**.
-1. Seleccione **Engadir unha dimensión**.
+1. Seleccione **Nova dimensión**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Engadir unha dimensión a un evento.":::
 
 1. No panel **Crear unha dimensión**, seleccione unha propiedade para que a dimensión se basee nela. A lista de propiedades amosará todas as propiedades da área de traballo non atribuídas a unha dimensión.
-1. Introduza un nome na caixa **Nome para mostrar**. Opcionalmente, pode engadir unha descrición.
-1. Seleccione **Crear** para gardar a dimensión. Pode pasar até un minuto antes de que poida usar a dimensión nun [informe personalizado](custom-reports.md) ou [segmento](segments.md). 
+   
+   :::image type="content" source="media/create-new-dimension.png" alt-text="Crear unha dimensión nova.":::
+      
+3. Introduza un nome na caixa **Nome para mostrar**. Opcionalmente, pode engadir unha **Descrición**.
+4. Seleccione **Crear** para gardar a dimensión. Pode pasar até un minuto antes de que poida usar a dimensión nun [informe personalizado](custom-reports.md) ou [segmento](segments.md). 
 
 ## <a name="edit-a-dimension"></a>Editar unha dimensión
 
-Pode modificar o nome e a descrición dunha dimensión.
+Pode modificar o nome e a descrición dunha dimensión. Só pode editar as dimensións creadas polo usuario, pero non pode editar as dimensións do sistema.
+
 
 1. Vaia a **Datos** > **Dimensións**.
 1. Seleccione a dimensión que quere eliminar.

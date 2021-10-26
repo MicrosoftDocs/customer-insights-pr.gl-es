@@ -4,17 +4,17 @@ description: Como crear, editar e eliminar segmentos e onde empregalos.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036146"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623585"
 ---
 # <a name="view-and-create-segments"></a>Ver e crear segmentos
 
@@ -44,22 +44,27 @@ Esta sección describe como crear un *segmento en branco* a partir de cero.
 
 1. Seleccione **Novo segmento**.
 
-1. Na **Biblioteca de recursos**, escolla o atributo polo que quere filtrar. Actualmente só pode crear segmentos baseados en dimensións.
+1. Na **Biblioteca de recursos**, seleccione o (+) xunto ao atributo polo que desexa filtrar. Actualmente só pode crear segmentos baseados en dimensións.
 
-1. Escolla un operador e un valor para o atributo seleccionado. As seguintes operacións son compatibles.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Crear un segmento novo.":::
+
+1. Na sección **Regra**, escolla un operador e un valor para o atributo seleccionado. As seguintes operacións son compatibles.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Escolla un operador para o seu novo segmento.":::
+
    - **é**: require unha coincidencia exacta para incluír valores. Usa **igual que** para un único valor ou **calquera de** para incluír varios valores.
    - **non é**: require unha coincidencia exacta para excluír valores. Usa **igual que** para un único valor ou **calquera de** para incluír varios valores.
    - **comeza por**: unha cadea coa que comezan os valores coincidentes.
    - **finaliza en**: unha cadea coa que rematan os valores coincidentes.
    - **contén**: unha cadea contida nos valores coincidentes.
 
-1. Para engadir máis condicións a un grupo, pode usar dous operadores lóxicos. Os atributos proxectados téñense en conta cando se usan operadores de definición.
+1. Para engadir máis condicións a un grupo, pode empregar operadores lóxicos. Os atributos proxectados téñense en conta cando se usan operadores de definición.
    - Operador **AND**: as dúas condicións deben cumprirse como parte do proceso de segmentación. Esta opción é máis útil cando define condicións entre diferentes entidades.
    - Operador **OR**: calquera das condicións debe ser cumprida como parte do proceso de segmentación. Esta opción é máis útil cando define varias condicións para a mesma entidade.
 
 1. Seleccione **Gardar** e nomee o segmento. 
 
-O segmento aparecerá na páxina Segmentos e pode aplicalo a todos os informes e funís da área de traballo.
+O segmento aparecerá na páxina **Segmentos** e pode aplicalo a todos os informes e funís da área de traballo.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Usar un segmento nun informe ou funil
 
@@ -67,7 +72,7 @@ Pode aplicar segmentos a un informe ou funil para filtralos en función das cond
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Un informe de visualizacións de páxina cunha lista despregable expandida para escoller os segmentos que aplicar.":::
 
-Para aplicar un segmento, abra o informe ou o funil. Seleccione **Engadir condición** e elixa **Filtrar por segmento**. Escolla o segmento que quere aplicar da lista. O segmento aplicarase ao informe. Se unha gráfica non admite o segmento, mostra un erro.
+Para aplicar un segmento, abra o informe ou o funil. Seleccione **+ Engadir condición** e elixa **Filtrar por segmento**. Escolla o segmento que quere aplicar da lista. O segmento aplicarase ao informe. Se unha gráfica non admite o segmento, mostra un erro. Para obter máis información, consulte [Crear e xestionar informes de funil](funnel-reports.md).
  
 Pode aplicar *ata tres segmentos* a un informe ou funil.
 
@@ -91,5 +96,7 @@ Pode aplicar *ata tres segmentos* a un informe ou funil.
 1. Na lista de segmentos, seleccione **Máis [...]**. 
 1. Escolla **Eliminar** da lista despregable.
 1. Seleccione **Eliminar** para confirmar.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6ce72486faa97e6f630a991044ca5e6d4714d0b8b8395a60fad12f3e3a49fa29
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032433"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645032"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Complete os seus datos parciais con predicións
 
@@ -35,7 +35,7 @@ Antes de que a súa organización poida usar a función de predicións, asegúre
 
 2. O seu ambiente de información do público está anexado á instancia de Dataverse.
 
-Se desexa [crear un ambiente novo](get-started-paid.md), configúreo na caixa de diálogo **Crear un ambiente** e seleccione **Avanzado**. Se xa creou un ambiente, diríxase á súa configuración e seleccione **Avanzado**. De calquera xeito, na sección **Usar predicións**, introduza o URL de instancia de Dataverse ao que desexa conectar o seu contorno.
+Para obter máis información, consulte [Crear un novo contorno](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Crear unha predición na entidade de Cliente
 

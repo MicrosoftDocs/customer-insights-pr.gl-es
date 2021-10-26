@@ -1,7 +1,7 @@
 ---
 title: Combinar entidades na unificación de datos
 description: Combine entidades para crear perfís de clientes unificados.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494317"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648252"
 ---
 # <a name="merge-entities"></a>Combinar entidades
 
@@ -89,7 +91,7 @@ Na páxina **Combinar**, seleccione **Campos excluídos** para ver a lista de to
     :::image type="content" source="media/recency-merge-option.png" alt-text="Opción de actualidade no diálogo de combinación de campos.":::
     - **Menos recente**: identifica o valor do gañador en función do menos recente. Require unha data ou un campo numérico para que cada entidade participante no ámbito dos campos de combinación defina a actualidade.
 
-1.  Pode engadir campos adicionais para participar no proceso de combinación.
+1.  Pode engadir máis campos para participar no proceso de combinación.
 
 1.  Pode cambiar o nome do campo combinado.
 
@@ -131,7 +133,7 @@ Algunhas entidades conteñen máis detalles que outras. Se unha entidade inclúe
 
 Despois de configurar a fusión de campos, pode definir como xerar valores de CustomerId, os identificadores únicos do perfil de cliente. O paso de combinación no proceso de unificación de datos xera o identificador único do perfil de cliente. O identificador é o CustomerId na entidade *Cliente* que resulta do proceso de unificación de datos. 
 
-O CustomerId da entidade Customer baséase nun hash do primeiro valor das claves primarias gañadoras non nulas. Estas claves proveñen das entidades utilizadas na fase de combinación e fusión e están influenciadas pola orde de coincidencia. Así, o CustomerID xerado pode cambiar cando cambia un valor de clave primaria na entidade principal da orde de coincidencia. En consecuencia, o valor clave principal non sempre pode representar o mesmo cliente.
+O CustomerId da entidade Customer baséase nun hash do primeiro valor das claves primarias gañadoras non nulas. Estas claves proveñen das entidades utilizadas na fase de combinación e fusión e están influenciadas pola orde de coincidencia. Así, o CustomerID xerado pode cambiar cando cambia un valor de clave primaria na entidade principal da orde de coincidencia. Polo tanto, o valor clave principal non sempre pode representar ao mesmo cliente.
 
 A configuración dunha ID de cliente estable permítelle evitar ese comportamento.
 
@@ -139,7 +141,7 @@ A configuración dunha ID de cliente estable permítelle evitar ese comportament
 
 1. Vaia a **Unificar** > **Combinar**.
 
-1. Na páxina **Combinar**, seleccione o separador **Chaves**. 
+1. Seleccione o separador **Claves**. 
 
 1. Pase o cursor pola fila **CustomerId** e seleccione a opción **Configurar**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Control para personalizar a xeración de identificacións.":::
@@ -147,6 +149,30 @@ A configuración dunha ID de cliente estable permítelle evitar ese comportament
 1. Seleccione ata cinco campos que formarán un ID de cliente único e serán máis estables. Os rexistros que non coinciden coa súa configuración utilizan un ID configurado polo sistema.  
 
 1. Seleccione **Feito** e execute o proceso de combinación para aplicar os seus cambios.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Agrupar perfís en fogares ou grupos
+
+Como parte do proceso de configuración da xeración de perfís de clientes, pode definir regras para agrupar perfís relacionados nun clúster. Actualmente hai dous tipos de clústers dispoñibles: domésticos e personalizados. O sistema escolle automaticamente un fogar con regras predefinidas se a entidade *Cliente* contén os campos semánticos *Person.LastName* e *Location.Address*. Tamén pode crear un clúster coas súas propias regras e condicións, semellante a [regras de coincidencia](match-entities.md#define-rules-for-match-pairs).
+
+**Definir un fogar ou un grupo**
+
+1. Vaia a **Unificar** > **Combinar**.
+
+1. No separador **Combinar**, seleccione **Avanzado** > **Crear clúster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Controlar para crear un novo clúster.":::
+
+1. Escolla entre un clúster **Doméstico** ou **Personalizado**. Se os campos semánticos *Person.LastName* e *Location.Address* existen na entidade *Cliente*, o fogar seleccionarase automaticamente.
+
+1. Indique un nome para o clúster e seleccione **Feito**.
+
+1. Seleccione o separador **Clústers** para atopar o clúster que creou.
+
+1. Especifique as regras e condicións para definir o seu clúster.
+
+1. Seleccione **Executar** para executar o proceso de combinación e cree o clúster.
+
+Despois de executar o proceso de combinación, os identificadores de clúster engádense como novos campos á entidade *Cliente*.
 
 ## <a name="run-your-merge"></a>Execute a súa combinación
 

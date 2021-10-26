@@ -4,17 +4,17 @@ description: Use os informes dispoñibles para ver a actividade en tempo real no
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036646"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582920"
 ---
 # <a name="view-reports"></a>Visualizar informes
 
@@ -92,12 +92,18 @@ Os informes móbiles agrúpanse en categorías de uso en tempo real, aplicación
 
 - **Localizacións** amosa información sobre os usuarios da aplicación por país, rexión e cidade.
 
-## <a name="filter-by-time-or-value"></a>Filtrar por tempo ou valor
+## <a name="filter-by-time-or-date-range"></a>Filtrar por hora ou intervalo de datas
 
-Pode seleccionar o período de tempo ou o valor nun informe web ou móbil para centrarse nun valor ou período de tempo. 
+Pode seleccionar o intervalo temporal ou de datas nun informe web ou móbil para centrarse nun valor ou período de tempo. 
 
-- Para seleccionar un período de tempo, seleccione **Máis [...]** da lista despregable do informe. A selección do intervalo temporal está desactivada para un informe de uso en tempo real; o intervalo temporal para un informe de uso en tempo real é "now".
+- Para seleccionar un intervalo temporal, na esquina superior dereita da vista do informe, seleccione un valor na lista despregable do informe. Tamén pode escoller un **Intervalo de datas fixado**. 
 
-- Na maioría dos informes, seleccione un valor nunha gráfica ou lista para filtrar o informe para o valor seleccionado.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Filtrar por hora ou intervalo de datas.":::   
+
+- Para a maioría dos informes, seleccione un valor nun gráfico ou lista para filtrar o informe.
+
+> [!NOTE]
+> A selección do intervalo temporal está desactivada para un informe de uso en tempo real; o intervalo temporal para un informe de uso en tempo real é "now".
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

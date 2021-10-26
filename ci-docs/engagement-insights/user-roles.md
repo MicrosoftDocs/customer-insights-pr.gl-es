@@ -4,27 +4,33 @@ description: Visión xeral dos roles e permisos dispoñibles para os membros dun
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036691"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645535"
 ---
 # <a name="roles-and-permissions"></a>Roles e permisos
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Unha área de traballo é unha forma de almacenar e xestionar eventos e informes. Un membro é un usuario que pode acceder a unha área de traballo. Pode atribuír membros á súa área de traballo e definir os seus roles e permisos. As funcións de administrador xestionan as áreas de traballo e ambientes e configuran a información de interacción para outros usuarios. As funcións de colaboradores están dirixidas a analistas que non precisan configurar a información de interacción, pero que queren crear os seus propios informes, funís ou segmentos.
+Unha área de traballo é onde almacena e xestiona eventos e informes. Para obter máis información, consulte [Crear un espazo de traballo e engadir membros](create-workspace.md). 
+
+Un espazo de traballo pode incluír os seguintes roles e permisos:
+
+- Os roles de *membro* son usuarios que poden acceder a un espazo de traballo. Pode atribuír membros á súa área de traballo e definir os seus roles e permisos. 
+- As funcións de *administrador* xestionan as áreas de traballo e ambientes e configuran a información de interacción para outros usuarios. 
+- As funcións de *Colaborador* están dirixidos a analistas que non precisan configurar información de compromiso, pero que queren crear os seus propios informes, funís ou segmentos.
 
 ## <a name="permissions"></a>Permisos
   
-A seguinte táboa identifica os permisos para cada rol. 
+A seguinte táboa identifica permisos para cada rol. 
 
 | Permiso | Administrador do ambiente | Administrador da área de traballo | Colaborador do ambiente | Colaborador da área de traballo | 
 |--|--|--|--|--|

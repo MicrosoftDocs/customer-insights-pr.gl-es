@@ -4,17 +4,17 @@ description: Obteña información acerca da personalización e execución dun ex
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036601"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606207"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Executar o exemplo de SDK web para a capacidade de información de interacción de Dynamics 365 Customer Insights
 
@@ -26,7 +26,7 @@ A biblioteca do SDK web da capacidade de información de interacción é unha bi
 
 - Instale [Visual Studio Code](https://code.visualstudio.com/).
 - [Instale a extensión Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) en Visual Studio Code e familiarícese coa forma de executar Live Server.
-- Debe ter a [clave de inxestión](instrument-website.md).
+- Debe ter un [espazo de traballo de información de compromiso](create-workspace.md).
 
 ## <a name="run-sample"></a>Executar o exemplo
 
@@ -36,7 +36,11 @@ A biblioteca do SDK web da capacidade de información de interacción é unha bi
 
 1. Abra o cartafol descomprimido en Visual Studio Code.
 
-1. No ficheiro `ei_websdk_sample.html`, substitúa a cadea "INGESTION_KEY" pola súa clave de inxestión do portal da capacidade de información de interacción e a cadea "NAME", co nome global co que quere que se cree unha instancia para o SDK. Asegúrese de substituír todas as ocorrencias.
+1. Vaia ao portal de información de compromiso do seu espazo de traballo. Seleccione **Administrador** > **Espazo de traballo** e logo **Guía de instalación**. Siga a primeira opción e seleccione **Copiar código** para copiar o fragmento de código de JavaScript.
+
+1. No ficheiro `ei_websdk_sample.html`, pegue o fragmento de código que acaba de copiar nesta liña:
+
+   - <-- PEGUE O FRAGMENTO DE CÓDIGO DE JAVASCRIPT DO PORTAL DE INFORMACIÓN DE COMPROMISO AQUÍ DEBAIXO DESTA LIÑA -->
 
 1. Abra o ficheiro `ei_websdk_sample.html` con Live Server en Visual Studio Code seleccionando **Publicar** na barra de estado.
 

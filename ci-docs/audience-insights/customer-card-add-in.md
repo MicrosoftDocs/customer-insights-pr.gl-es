@@ -1,7 +1,7 @@
 ---
 title: Suplemento do cartón de cliente das aplicacións de Dynamics 365
 description: Mostrar datos de información do público nas aplicacións de Dynamics 365 con este suplemento.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032986"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643388"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento do cartón do cliente (vista previa)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións de Dynamics 365. Co suplemento do cartón de cliente instalado nunha aplicación de Dynamics 365 compatible, pode escoller mostrar a demografía, a información e as liñas de tempo de actividades. O suplemento recuperará datos de Customer Insights sen afectar aos datos da aplicación de Dynamics 365 conectada. 
+Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións de Dynamics 365. Co complemento de tarxeta de cliente instalado nunha aplicación de Dynamics 365 compatible, pode escoller amosar campos de perfil de cliente, estatísticas e cronoloxía da actividade. O suplemento recuperará datos de Customer Insights sen afectar aos datos da aplicación de Dynamics 365 conectada.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -28,20 +30,19 @@ Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións
 - Para que os seus datos de Dynamics 365 se asignen aos perfís de clientes da información do público, deben [inxerirse desde a aplicación de Dynamics 365 mediante o conector de Microsoft Dataverse](connect-power-query.md).
 - Todos os usuarios de Dynamics 365 do suplemento do cartón do cliente deben [engadirse como usuarios](permissions.md) na información do público para ver os datos.
 - Na información do público precísanse [capacidades de busca e filtros configuradas](search-filter-index.md) para que a busca de datos funcione.
-- Cada control do suplemento depende de datos específicos na información do público:
-  - Control de medidas: require [medidas configuradas](measures.md).
-  - Control de intelixencia: require datos xerados mediante [predicións](predictions.md) ou [modelos personalizados](custom-models.md).
-  - Control demográfico: os campos demográficos (como a idade ou o sexo) están dispoñibles no perfil de cliente unificado.
-  - Control do enriquecemento: require [enriquecementos](enrichment-hub.md) activos aplicados aos perfís de clientes.
-  - Control da liña de tempo: require [actividades configuradas](activities.md).
+- Cada control do suplemento depende de datos específicos na información do público. Algúns datos e controis só están dispoñibles en contornos de tipos específicos. A configuración do complemento informaralle se un control non está dispoñible debido ao tipo de ambiente seleccionado. Obteña máis información acerca de [casos de uso de contornos](work-with-business-accounts.md).
+  - **Control de medidas**: require [medidas configuradas](measures.md) do tipo de atributos do cliente.
+  - **Control de intelixencia**: require datos xerados mediante [predicións](predictions.md) ou [modelos personalizados](custom-models.md).
+  - **Control dos detalles do cliente**: todos os campos do perfil están dispoñibles no perfil de cliente unificado.
+  - **Control do enriquecemento**: require [enriquecementos](enrichment-hub.md) activos aplicados aos perfís de clientes.
+  - **Control de contactos**: require definición de entidade semántica de contactos tipo.
+  - **Control da liña de tempo**: require [actividades configuradas](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalar o complemento do cartón do cliente
 
 O complemento de tarxeta de cliente é unha solución para aplicacións de interacción cos clientes en Dynamics 365. Para instalar a solución, vaia a AppSource e busque **Tarxeta de cliente de Dynamics**. Seleccione o [Complemento da tarxeta de cliente en AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) e seleccione **Obtelo agora**.
 
-Pode que necesite iniciar sesión coas súas credenciais de administrador da aplicación de Dynamics 365 para instalar a solución.
-
-Pode que a solución tarde un tempo en instalarse no seu ambiente.
+Pode que necesite iniciar sesión coas súas credenciais de administrador da aplicación de Dynamics 365 para instalar a solución. Pode que a solución tarde un tempo en instalarse no seu ambiente.
 
 ## <a name="configure-the-customer-card-add-in"></a>Configurar o complemento de tarxeta de cliente
 
@@ -50,7 +51,7 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
 1. Seleccione a ligazón **Nome de pantalla** para a solución **Complemento de tarxeta de cliente de Dynamics 365 Customer Insights (vista previa)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Seleccionar o nome para mostrar.](media/select-display-name.png "Seleccionar o nome para mostrar")
+   > ![Seleccionar o nome para mostrar.](media/select-display-name.png "Seleccionar o nome para mostrar.")
 
 1. Seleccione **Iniciar sesión** e insira as credenciais da conta de administrador que use para configurar Customer Insights.
 
@@ -64,7 +65,7 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
    - Para asignar cunha conta, seleccione o campo da entidade de cliente que coincida co ID da súa entidade de conta.
 
    > [!div class="mx-imgBorder"]
-   > ![Campo de ID de contacto.](media/contact-id-field.png "Campo de ID de contacto")
+   > ![Campo de ID de contacto.](media/contact-id-field.png "Campo de ID de contacto.")
 
 1. Seleccione **Gardar configuración** para gardar os axustes.
 
@@ -73,7 +74,9 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
 1. Asigne o rol de **Personalizador de tarxetas de Customer Insights** aos usuarios que personalizarán o contido mostrado na tarxeta para toda a organización.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Engadir controis de cartón de cliente aos formularios
-  
+
+Dependendo do seu escenario, pode escoller engadir controis ao formulario de **Contacto** ou de **Conta**. Se o seu contorno de información sobre o público é para contas comerciais, recomendamos engadir os controis ao formulario de conta. Nese caso, substitúa "contacto" nos pasos seguintes por "conta".
+
 1. Para engadir os controis da tarxeta de cliente ao formulario de contacto, diríxase a **Configuración** > **Personalizacións** en Dynamics 365.
 
 1. Seleccione **Personalizar o sistema**.
@@ -83,7 +86,7 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
 1. Seleccione o formulario de contacto ao que desexa engadir os controis da tarxeta de cliente.
 
     > [!div class="mx-imgBorder"]
-    > ![Seleccionar formulario de contacto.](media/contact-active-forms.png "Seleccionar formulario de contacto")
+    > ![Seleccionar formulario de contacto.](media/contact-active-forms.png "Seleccionar formulario de contacto.")
 
 1. Para engadir un control no editor de formularios, arrastre calquera campo do **Explorador de campos** ata onde desexe colocar o control.
 
@@ -102,7 +105,8 @@ Pode que a solución tarde un tempo en instalarse no seu ambiente.
 1. Para personalizar o que quere mostrar no control personalizado, seleccione o botón de edición na esquina superior dereita.
 
 ## <a name="upgrade-customer-card-add-in"></a>Actualizar complemento do cartón do cliente
-O complemento de tarxeta de cliente non se actualiza automaticamente. Para actualizar á última versión, siga este procedemento na aplicación Dynamics 365 que ten instalado o complemento.
+
+O complemento de tarxeta de cliente non se actualiza automaticamente. Para actualizar á última versión, siga estes pasos na aplicación Dynamics 365 que ten instalado o complemento.
 
 1. Na aplicación Dynamics 365, vai a **Configuración** > **Personalización** e seleccione **Solucións**.
 

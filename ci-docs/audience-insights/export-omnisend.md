@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Omnisend
 description: Aprenda a configurar a conexión e exportar a Omnisend.
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 58b54dc24f4656f9dd376415a701539c8796e83e6d4e3c6754f5627ce77c5685
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031764"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619026"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exportar segmentos a Omnisend (versión preliminar)
 
@@ -28,9 +28,9 @@ Exporte segmentos de perfís de clientes unificados a Omnisend e utilíceos para
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Pode exportar ata 1 millón de perfís por exportación a Omnisend e pode tardar ata 4 horas en completarse.
+- Pode exportar ata 1 millón de perfís de clientes por exportación a Omnisend e pode levar ata 4 horas en completarse.
 - A exportación a Omnisend está limitada a segmentos.
-- O número de perfís que pode exportar a Omnisend depende do seu contrato con Omnisend.
+- O número de perfís de clientes que pode exportar a Omnisend depende do seu contrato con Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Configurar conexión a Omnisend
 
@@ -62,7 +62,7 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. No campo **Conexión da exportación** escolla unha conexión da sección Omnisend. Se non ve o nome desta sección, non hai conexións deste tipo dispoñibles para vostede.
 
-1. Na sección **Coincidencia de datos**, no campo **Correo electrónico**, seleccione o campo do seu perfil de cliente unificado que representa o enderezo de correo electrónico dun cliente. É necesario exportar segmentos a Omnisend. Opcionalmente, pode exportar o nome, apelidos, enderezo, país ou rexión, estado, cidade e código postal para crear correos electrónicos máis personalizados. Seleccione **Engadir atributo** para asignar estes campos.
+1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. É necesario exportar segmentos a Omnisend. Opcionalmente, pode exportar o nome, apelidos, enderezo, país ou rexión, estado, cidade e código postal para crear correos electrónicos máis personalizados. Seleccione **Engadir atributo** para asignar estes campos.
 
 1. Seleccione **Gardar**.
 
