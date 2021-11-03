@@ -1,7 +1,7 @@
 ---
 title: Crear segmentos usando o xerador de segmentos
 description: Cree segmentos de clientes para agrupalos en función de varios atributos.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623006"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673548"
 ---
 # <a name="create-segments"></a>Crear segmentos
 
@@ -23,6 +23,7 @@ Defina filtros complexos arredor da entidade de cliente unificada e as entidades
 > [!TIP]
 > - Os segmentos rápidos só se admiten en ambientes para **clientes individuais**.    
 > - Os segmentos baseados en **clientes individuais** inclúe automaticamente a información de contacto dispoñible para os membros do segmento. En ambientes para **contas comerciais**, os segmentos baséanse en contas (empresas ou filiais). Para incluír información de contacto nun segmento, use a funcionalidade **Atributos do proxecto** no creador de segmentos.
+>    - Asegúrese de que as fontes de datos de contacto son [asignadas semanticamente á entidade ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Xerador de segmentos
 
@@ -52,7 +53,7 @@ O exemplo anterior ilustra a capacidade de segmentación. Definimos un segmento 
 
 Hai varias formas de crear un novo segmento. Esta sección describe como construír o seu propio segmento desde cero. Tamén pode crear un *segmento rápido* baseado en entidades existentes ou usar os modelos de aprendizaxe automática para obter *segmentos suxeridos*. Para obter máis información, vaia a [Visión xeral dos segmentos](segments.md).
 
-Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento gárdase como un segmento inactivo. Cando complete a configuración do segmento, execútea para activalo. Tamén pode ***Activar** _ un segmento da páxina _ *Todos os segmentos**.
+Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento gárdase como un segmento inactivo. Cando complete a configuración do segmento, execútea para activalo. Tamén pode **Activar** un segmento da páxina **Todos os segmentos**.
 
 1. Vaia á páxina **Segmentos**.
 
@@ -86,17 +87,25 @@ Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento 
 
    Cando se usa o operador OR, todas as condicións deben basearse en entidades incluídas na ruta de relación.
 
-   - Pode crear varias regras para crear diferentes conxuntos de rexistros de clientes. Pode combinar grupos para incluír os clientes necesarios para o seu caso de empresa. Para crear unha nova regra, seleccione **Engadir regra**. En concreto, se non pode incluír unha entidade nunha regra debido ao camiño de relación especificado, ten que crear unha nova regra para escoller os atributos da mesma.
+   - Pode crear varias regras para crear diferentes conxuntos de rexistros de clientes. Pode combinar grupos para incluír os clientes necesarios para o seu caso de empresa. Para crear unha nova regra, seleccione **Engadir regra**. En concreto, se non pode incluír unha entidade nunha regra debido á ruta da relación especificada, ten que crear unha nova regra para escoller os atributos da mesma.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Engada unha nova regra a un segmento e elixa o operador de conxunto.":::
 
    - Seleccione un dos operadores de definición: **Unión**, **Intersección** ou **Excepto**.
 
       - **Unión** une os dous grupos.
-      - **Intersección** solapa os dous grupos. Só datos que *son comúns* a ambos os grupos mantéñense no grupo unificado.
-      - **Excepto** combina os dous grupos. Só datos do grupo A que *non son comúns* aos datos do grupo B mantéñense.
+      - **Intersección** solapa os dous grupos. Só os datos que *sexan comúns* a ambos os grupos permanecen no grupo unificado.
+      - **Excepto** combina os dous grupos. Só os datos do grupo A que *non son comúns* cos datos do grupo B se manteñen.
 
-1. De xeito predeterminado, os segmentos xeran a entidade de saída que contén todos os atributos dos perfís de clientes que coinciden cos filtros definidos. Se un segmento está baseado noutras entidades que non son o *Cliente*, pode engadir máis atributos destas entidades á entidade de saída. Seleccione **Atributos do proxecto** para escoller os atributos que se engadirán á entidade de saída.  
+1. De xeito predeterminado, os segmentos xeran a entidade de saída que contén todos os atributos dos perfís de clientes que coinciden cos filtros definidos. Se un segmento está baseado noutras entidades que non son o *Cliente*, pode engadir máis atributos destas entidades á entidade de saída. Seleccione **Atributos do proxecto** para escoller os atributos que se engadirán á entidade de saída. 
+
+   > [!IMPORTANT]
+   > Para os segmentos baseados en contas empresariais, hai que incluír no segmento os detalles dun ou máis contactos de cada conta da entidade *ContactProfile* para permitir que se active ou exporte ese segmento nos destinos que requiren información de contacto. Para obter máis información sobre a entidade *ContactProfile*, véxase [Asignacións semánticas](semantic-mappings.md).
+   > Unha saída de mostra para un segmento baseado en contas comerciais con atributos de contactos proxectados podería verse así: 
+   >
+   > |ID  |Nome da conta  |Ingresos  |Nome do contacto  | Rol do contacto|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [Director xeral, Xerente de adquisicións]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemplo de atributos proxectados seleccionados no panel lateral para engadir á entidade de saída.":::
   
@@ -107,13 +116,14 @@ Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento 
    > - Se o atributo que desexa proxectar está a máis dun salto da entidade de *Cliente*, como a define a relación, ese atributo debería usarse en todas as regras da consulta de segmento que estea a construír. 
    > - Se o atributo que desexa proxectar está a tan só un salto da entidade de *Cliente*, ese atributo non precisa estar presente en todas as regras da consulta de segmentos que estea a construír. 
    > - Os **atributos proxectados** téñense en conta cando se usan operadores de definición.
-   > - Para os segmentos baseados en contas empresariais, hai que incluír no segmento os detalles dun ou máis contactos de cada conta para permitir que se active ou exporte a estes destinos que requiren información de contacto.
 
 1. Antes de gardar e executar o segmento, seleccione **Editar detalles** xunto ao nome do segmento. Indique un nome para o seu segmento e actualice o **Nome da entidade de saída** suxerido para o segmento. Tamén pode engadir unha descrición ao segmento.
 
 1. Seleccione **Executar** para gardar o segmento, activalo e comezar a procesar o seu segmento en base a todas as regras e condicións. Se non, gardarase como un segmento inactivo.
-
+   
 1. Seleccione **Volver a segmentos** para volver á páxina **Segmentos**.
+
+1. Por defecto, o segmento créase como segmento dinámico. Significa que o segmento se actualiza durante as actualizacións do sistema. Para [deter a actualización automática](segments.md#manage-existing-segments), seleccione o segmento e escolla a opción **Facer estático**. Os segmentos estáticos pódense [actualizar manualmente](segments.md#refresh-segments) en calquera momento.
 
 > [!TIP]
 > - O creador de segmentos non suxerirá valores válidos das entidades cando estableza os operadores para as condicións. Pode ir a **Datos** > **Entidades** e descargar os datos da entidade para ver que valores están dispoñibles.

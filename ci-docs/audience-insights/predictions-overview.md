@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618841"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673960"
 ---
 # <a name="predictions-overview"></a>Visión xeral de predicións
 
@@ -25,14 +25,14 @@ Dynamics 365 Customer Insights inclúe unha variedade de opcións que aproveitan
 
 O xeito máis sinxelo de comezar coa predición de datos é cos modelos predefinidos, a miúdo denominados modelos listos para usar. Só requiren determinados datos e unha determinada estrutura para xerar información rapidamente. Actualmente están dispoñibles os seguintes modelos: 
 
-# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
 - [Valor de duración do cliente](predict-customer-lifetime-value.md): predí os ingresos potenciais dun cliente ao longo de toda a interacción cunha empresa.
 - [Recomendación de produtos](predict-product-recommendation.md): suxire conxuntos de recomendacións preditivas de produtos baseadas no comportamento de compra e en clientes con padróns de compra similares.
 - [Renovación da subscrición](predict-subscription-churn.md): predí se un cliente está en risco de deixar de usar os servizos ou produtos da subscrición da empresa.
 - [Abandono transaccional](predict-transactional-churn.md): predí se un cliente deixará de mercar os seus produtos ou servizos nun determinado intervalo temporal.
 
-# <a name="business-accounts-b2b"></a>[Contas empresariais (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
 - [Abandono transaccional](predict-transactional-churn.md): predí se un cliente deixará de mercar os seus produtos ou servizos nun determinado intervalo temporal.
 

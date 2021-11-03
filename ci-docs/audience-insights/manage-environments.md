@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645124"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673731"
 ---
 # <a name="manage-environments"></a>Xestionar ambientes
 
@@ -67,7 +67,8 @@ Copiaranse os seguintes axustes de configuración:
 
 - Perfís de clientes.
 - Credenciais da orixe de datos. Deberá proporcionar as credenciais para cada orixe de datos e actualizar as fontes de datos manualmente.
-- Fontes de datos do cartafol de Common Data Model e Data Lake xestionado de Dataverse. Terá que crear esas orixes de datos manualmente co mesmo nome que no ambiente de orixe.
+
+- Fontes de datos do cartafol de Common Data Model e o lago de datos xestionado de Dataverse. Terá que crear esas orixes de datos manualmente co mesmo nome que no ambiente de orixe.
 
 Cando copie un ambiente, verá unha mensaxe de confirmación de que se creou o novo contorno. Seleccione **Ir a orixes de datos** para ver a lista de orixes de datos.
 

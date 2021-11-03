@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617553"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672997"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -29,7 +29,7 @@ Debe ter permisos de colaborador ou administrador para crear ou editar enriquece
 
 No separador **Descubrir**, atopará todas as opcións de enriquecemento compatibles.
 
-# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
 - [Marcas](enrichment-microsoft.md) fornecidas por Microsoft
 - [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
@@ -38,7 +38,7 @@ No separador **Descubrir**, atopará todas as opcións de enriquecemento compati
 - [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
 
-# <a name="business-accounts-b2b"></a>[Contas empresariais (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
 - [Datos da empresa](enrichment-leadspace.md) proporcionados por Leadspace
 - [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft 

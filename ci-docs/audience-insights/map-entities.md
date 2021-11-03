@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648160"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673261"
 ---
 # <a name="map-entities-and-attributes"></a>Entidades e atributos do mapa
 
@@ -96,7 +96,7 @@ Continúe cos pasos de unificación e asegúrese de que o atributo que contén o
 
 Para organizacións (vista previa), o tipo de atributo debería asignarse a "Organization.Name"
 > [!div class="mx-imgBorder"]
-> ![Clave primaria e tipo de atributo B2B](media/configure-data-map-edit-b2b.png "Clave primaria e tipo de atributo B2B")
+> ![Clave principal e tipo de atributo B-a-B.](media/configure-data-map-edit-b2b.png "Clave principal e tipo de atributo B-a-B")
 
 ## <a name="next-step"></a>Seguinte paso
 

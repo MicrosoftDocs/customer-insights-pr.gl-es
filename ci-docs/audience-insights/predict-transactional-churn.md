@@ -1,7 +1,7 @@
 ---
 title: Predición do abandono de transaccións
 description: Prediga se un cliente está en risco de deixar de comprar os seus servizos ou produtos.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643375"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673043"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predición do abandono da transacción (versión preliminar)
 
@@ -28,6 +28,32 @@ Para contornos baseados en contas empresariais, podemos predicir o cambio transa
 > Probe o tutorial para unha predición de abandono de transacción usando datos de mostra: [Guía de mostra de predición de abandono de transacción (vista previa)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+
+- Polo menos [Permisos de colaborador](permissions.md) en Customer Insights.
+- Coñecemento empresarial para comprender o que significa a renovación para a súa empresa. Admitimos as definicións de abandono baseadas no tempo, o que significa que se considera que un cliente abandonou despois dun período sen compras.
+- Datos sobre as súas transaccións/compras e o seu historial:
+    - Identificadores de transaccións para distinguir compras/transaccións.
+    - Identificadores de clientes para facer coincidir as transaccións cos seus clientes.
+    - Datas de eventos de transacción, que definen as datas en que se produciu a transacción.
+    - O esquema de datos semánticos para compras/transaccións require a seguinte información:
+        - **ID de transacción:** Un identificador único dunha compra ou transacción.
+        - **Data da transacción:** A data da compra ou transacción.
+        - **Valor da transacción**: O importe da moeda/valor numérico da transacción/elemento.
+        - (Opcional) **ID de produto único**: O ID do produto ou servizo adquirido se os seus datos están a un nivel de elemento de liña.
+        - (Opcional) **Se esta transacción foi unha devolución**: Un campo verdadeiro/falso que identifica se a transacción foi ou non unha devolución. Se o **Valor da transacción** é negativo, tamén usaremos esta información para inferir un retorno.
+- (Opcional) Datos sobre actividades do cliente:
+    - Identificadores de actividades para distinguir actividades do mesmo tipo.
+    - Identificadores de clientes para atribuír actividades aos seus clientes.
+    - Información da actividade que contén o nome e a data da actividade.
+    - O esquema de datos semánticos para as actividades do cliente inclúe:
+        - **Clave principal:** un identificador único para unha actividade. Por exemplo, unha visita ao sitio web ou un rexistro de uso que mostra que o cliente probou unha mostra do seu produto.
+        - **Marca de tempo:** a data e a hora do evento identificadas pola clave principal.
+        - **Evento:** o nome do evento que desexa usar. Por exemplo, un campo chamado "UserAction" nunha tenda de ultramarinos pode ser un cupón utilizado polo cliente.
+        - **Detalles:** información detallada sobre o evento. Por exemplo, un campo chamado "CouponValue" nunha tenda de alimentación pode ser o valor en moeda do cupón.
+
+# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
 - Polo menos [Permisos de colaborador](permissions.md) en Customer Insights.
 - Coñecemento empresarial para comprender o que significa a renovación para a súa empresa. Admitimos as definicións de abandono baseadas no tempo, o que significa que se considera que un cliente abandonou despois dun período sen compras.
@@ -51,7 +77,7 @@ Para contornos baseados en contas empresariais, podemos predicir o cambio transa
         - **Evento:** o nome do evento que desexa usar. Por exemplo, un campo chamado "UserAction" nunha tenda de ultramarinos pode ser un cupón utilizado polo cliente.
         - **Detalles:** información detallada sobre o evento. Por exemplo, un campo chamado "CouponValue" nunha tenda de alimentación pode ser o valor en moeda do cupón.
 - (Opcional) Datos sobre os seus clientes:
-    - Estes datos só deben raramente aliñarse cara a atributos máis estáticos para garantir que o modelo funcione mellor.
+    - Estes datos deben aliñarse cara a atributos máis estáticos para garantir que o modelo funcione mellor.
     - O esquema de datos semánticos para os datos do cliente inclúe:
         - **CustomerID:** Un identificador único para un cliente.
         - **Data de creación:** A data en que se engadiu inicialmente o cliente.
@@ -59,6 +85,9 @@ Para contornos baseados en contas empresariais, podemos predicir o cambio transa
         - **País:** o país dun cliente.
         - **Sector:** O tipo de sector dun cliente. Por exemplo, un campo chamado "Sector" nun torrador de café pode indicar se o cliente vendía polo miúdo.
         - **Clasificación:** a clasificación dun cliente para o seu negocio. Por exemplo, un campo chamado "ValueSegment" nun torrador de café pode ser o nivel do cliente en función do tamaño do cliente.
+
+---
+
 - Características datos suxeridas:
     - Datos históricos suficientes: datos de transaccións durante polo menos o dobre da xanela de tempo seleccionada. Preferiblemente, de dous a tres anos do historial de transaccións. 
     - Compras múltiples por cliente: idealmente polo menos dúas transaccións por cliente.
@@ -114,6 +143,32 @@ Para contornos baseados en contas empresariais, podemos predicir o cambio transa
 
 1. Seleccione **Seguinte**.
 
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Engadir datos adicionais (opcional)
+
+Configure a relación da entidade de actividade do cliente coa entidade *Cliente*.
+
+1. Seleccione o campo que identifica ao cliente na entidade de actividade do cliente. Pode estar directamente relacionada co ID de cliente principal da súa entidade *Cliente*.
+
+1. Seleccione a entidade que sexa a súa entidade principal de *Cliente*.
+
+1. Escriba un nome que describa a relación.
+
+#### <a name="customer-activities"></a>Actividades do cliente
+
+1. Opcionalmente, seleccione **Engadir datos** para **Actividades do cliente**.
+
+1. Seleccione o tipo de actividade semántica que contén os datos que desexa usar e, a continuación, seleccione unha ou máis actividades na sección **Actividades**.
+
+1. Seleccione un tipo de actividade que coincida co tipo de actividade do cliente que está configurando. Seleccione **Crear novo** e elixa un tipo de actividade dispoñible ou cree un novo tipo.
+
+1. Seleccione **Seguinte** e, a continuación, **Gardar**.
+
+1. Se ten algunha outra actividade do cliente que desexa incluír, repita os pasos anteriores.
+
+# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Seleccionar nivel de predición
 
 A maioría das predicións créanse a nivel de cliente. Nalgunhas situacións, é posible que non sexa o suficientemente detallado para atender ás necesidades da súa empresa. Pode usar esta función para predicir o abandono dunha sucursal dun cliente, por exemplo, en lugar de para o cliente no seu conxunto.
@@ -122,9 +177,9 @@ A maioría das predicións créanse a nivel de cliente. Nalgunhas situacións, �
 
 1. Amplíe as entidades das que desexa escoller o nivel secundario ou use a caixa de filtro de busca para filtrar as opcións seleccionadas.
 
-1. Escolla o atributo que desexa usar como nivel secundario e logo seleccione **Engadir**
+1. Escolla o atributo que desexa usar como nivel secundario e logo seleccione **Engadir**.
 
-1. Seleccionar **Seguinte**
+1. Seleccione **Seguinte**.
 
 > [!NOTE]
 > As entidades dispoñibles nesta sección móstranse porque teñen unha relación coa entidade que escolleu na sección anterior. Se non ve a entidade que quere engadir, asegúrese de que ten unha relación válida en **Relacións**. Só son válidas para esta configuración as relacións de un a un e de moitos a un.
@@ -159,7 +214,7 @@ Configure a relación da entidade de actividade do cliente coa entidade *Cliente
 
 1. Seleccione **Seguinte**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Proporcione unha lista opcional de contas de referencia (só contas de empresa)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Proporcione unha lista opcional de contas de referencia
 
 Engada unha lista de clientes e contas da súa empresa que queira usar como puntos de referencia. Obterá [detalles destas contas de referencia](#review-a-prediction-status-and-results) incluíndo a súa puntuación de abandono e as características máis importantes que afectaron á súa predición de abandonos.
 
@@ -168,6 +223,8 @@ Engada unha lista de clientes e contas da súa empresa que queira usar como punt
 1. Escolla os clientes que actúan como punto de referencia.
 
 1. Seleccione **Seguinte** para continuar.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Establecer a programación e revisar a configuración
 
@@ -201,6 +258,25 @@ Engada unha lista de clientes e contas da súa empresa que queira usar como punt
 1. Seleccione os tres puntos verticais xunto á predición da que desexa revisar os resultados e seleccione **Ver**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Control de visualización para ver os resultados dunha predición.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+
+1. Hai tres seccións principais de datos dentro da páxina de resultados:
+   - **Desempeño do modelo de formación**: A, B ou C son posibles puntuacións. Esta puntuación indica o rendemento da predición e pode axudalo a tomar a decisión de usar os resultados almacenados na entidade de saída. As puntuacións determínanse segundo as regras seguintes: 
+        - **A** cando o modelo predixo con precisión polo menos o 50 % das predicións totais e cando a porcentaxe de predicións precisas para os clientes que abandonaron é superior á taxa de referencia nun 10 % como mínimo.
+            
+        - **B** cando o modelo predixo con precisión polo menos o 50 % das predicións totais e cando a porcentaxe de predicións precisas para os clientes que abandonaron é ata un 10 % superior á referencia.
+            
+        - **C** cando o modelo predixo con precisión menos do 50 % das predicións totais ou cando a porcentaxe de predicións precisas para os clientes que abandonaron é inferior á referencia.
+               
+        - A **referencia** toma a entrada da fiestra de tempo da predición para o modelo (por exemplo, un ano) e o modelo crea diferentes fraccións de tempo dividíndoo entre 2 ata alcanzar un mes ou menos. Utiliza estas fraccións para crear unha regra de negocio para clientes que non compraron neste período de tempo. Considérase que estes clientes abandonaron. Elíxese como modelo de referencia a regra de negocio baseada no tempo con maior capacidade para predicir quen é susceptible de abandonar.
+            
+    - **Probabilidade de renovación (número de clientes)**: grupos de clientes en función do risco previsto de renovación. Estes datos poden axudalo máis tarde se quere crear un segmento de clientes con alto risco de renovación. Estes segmentos axudan a comprender onde debe estar o seu corte para a subscrición a segmentos.
+       
+    - **Factores máis influentes**: hai moitos factores que se teñen en conta á hora de crear a súa predición. Cada un dos factores ten a súa importancia calculada para as predicións agregadas que crea un modelo. Pode usar estes factores para axudar a validar os seus resultados de predicións ou pode usar esta información máis tarde para [crear segmentos](segments.md) que poderían axudar a influír no risco de abandono dos clientes.
+
+
+# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
 1. Hai tres seccións principais de datos dentro da páxina de resultados:
    - **Desempeño do modelo de formación**: A, B ou C son posibles puntuacións. Esta puntuación indica o rendemento da predición e pode axudalo a tomar a decisión de usar os resultados almacenados na entidade de saída. As puntuacións determínanse segundo as regras seguintes: 
@@ -237,6 +313,11 @@ Engada unha lista de clientes e contas da súa empresa que queira usar como punt
        Cando se predi o abandono a nivel de conta, considéranse todas as contas ao derivar os valores medios das funcións para os segmentos de abandono. Para as predicións de abandono no nivel secundario de cada conta, a derivación de segmentos de abandono depende do nivel secundario do elemento seleccionado no panel lateral. Por exemplo, se un elemento ten un nivel secundario de categoría de produto = material de oficina, entón só se consideran os artigos que teñan material de oficina como categoría de produto cando se derivan os valores medios de característica para os segmentos de abandono. Esta lóxica aplícase para garantir unha comparación xusta dos valores de características do elemento cos valores medios en segmentos baixos, medios e altos.
 
        Nalgúns casos, o valor medio dos segmentos de abandono baixos, medios ou altos está baleiro ou non está dispoñible porque non hai elementos que pertenzan aos segmentos de abandono correspondentes segundo a definición anterior.
+       
+       > [!NOTE]
+       > A interpretación dos valores baixo as columnas media baixa, intermedia e alta é diferente para características categóricas como o país ou a industria. Dado que a noción de valor da característica "medio" non se aplica ás características categóricas, os valores destas columnas son a proporción de clientes en segmentos de abandono baixo, intermedio ou alto que teñen o mesmo valor da característica categórica en comparación co artigo seleccionado no panel lateral.
+
+---
 
 ## <a name="manage-predictions"></a>Xestionar predicións
 

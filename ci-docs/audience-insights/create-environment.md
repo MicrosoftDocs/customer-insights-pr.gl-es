@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645686"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673389"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un ambiente na información do público
 
@@ -46,7 +46,7 @@ No paso **Información básica**, escolla se desexa crear un ambiente desde cero
 
 Indique os seguintes detalles:
    - **Nome**: O nome deste ambiente. Este campo xa está cuberto se copiou un ambiente existente, pero pode cambialo.
-   - **Elixa o seu negocio**: elixa o público principal para o novo contorno. Pode traballar con clientes individuais (B2C) ou [contas comerciais](work-with-business-accounts.md) (B2B).
+   - **Elixa o seu negocio**: elixa o público principal para o novo contorno. Pode traballar con consumidores individuais (B-a-C) ou [contas empresariais](work-with-business-accounts.md) (B-a-B).
    - **Tipo**: seleccione se desexa crear un ambiente de produción ou de illamento de procesos. Os ambientes de illamento de procesos non permiten a actualización de datos programada e están destinados á implantación previa e ás probas. Os contornos de illamento de procesos usan o mesmo público principal que o ambiente de produción seleccionado actualmente.
    - **Rexión**: a rexión na que se despregou e aloxou o servizo.
 
@@ -66,7 +66,7 @@ Gardando datos en Azure Data Lake Storage, acepta que os datos serán transferid
 > - As contas de Azure Data Lake Storage da mesma rexión de Azure que seleccionou ao crear o ambiente.
 > - Contas de Azure Data Lake Storage que teñen o *espazo de nomes xerárquico* activado.
 
-Para a opción Azure Data Lake Storage, pode escoller entre unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). O nome **Envase** será `customerinsights` e non se pode cambiar.
+Para a opción Azure Data Lake Storage, pode escoller entre unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar cunha conta de Azure Data Lake Storage mediante unha entidade de servizo de Azure](connect-service-principal.md). O nome **Envase** será `customerinsights` e non se pode cambiar.
 
 Cando se completan os procesos do sistema, como a inxestión de datos, o sistema crea os cartafoles correspondentes na conta de almacenamento que especificou. Os ficheiros de datos e os ficheiros *model.json* créanse e engádense aos cartafoles en función do nome do proceso.
 
@@ -76,14 +76,14 @@ Se crea varios contornos de Customer Insights e elixe gardar as entidades de sa�
    
 O paso **Microsoft Dataverse** permítelle conectar Customer Insights co seu ambiente de Dataverse.
 
-Para usar [modelos de predición listos para usar](predictions-overview.md#out-of-box-models), configure o uso compartido de datos con Dataverse. Ou pode activar a inxestión de datos desde orixes de datos locais, proporcionando o URL do contorno de Microsoft Dataverse que administra a súa organización. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun Data Lake xestionado de Dataverse.
+Para usar [modelos de predición listos para usar](predictions-overview.md#out-of-box-models), configure o uso compartido de datos con Dataverse. Ou pode activar a inxestión de datos desde orixes de datos locais, proporcionando o URL do contorno de Microsoft Dataverse que administra a súa organización. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun lago de datos xestionado de Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights non é compatible cos seguintes escenarios de uso compartido dos datos:
-> - Se garda todos os seus datos no seu Azure Data Lake Storage, non poderá activar o uso compartido de datos cun Data Lake xestionado por Microsoft Dataverse.
-> - Se activa o uso compartido de datos cun Data Lake xestionado por Microsoft Dataverse, non poderá [crear valores preditos ou que faltan nunha entidade](predictions.md).
+> - Se garda todos os seus datos no seu Azure Data Lake Storage, non poderá activar o uso compartido de datos cun lago de datos xestionado por Dataverse.
+> - Se activa o uso compartido de datos con Dataverse, non poderá [crear valores preditos ou que faltan nunha entidade](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Paso 4: Finalizar a configuración
 
@@ -93,10 +93,10 @@ Tamén pode cambiar a maioría das opcións máis tarde. Para obter máis inform
 
 ## <a name="work-with-your-new-environment"></a>Traballar co seu novo ambiente
 
-Revise os seguintes artigos para axudalo a comezar a configurar Customer Insights. 
+Revise os seguintes artigos para axudarlle a comezar a configurar Customer Insights: 
 
 - [Engadir máis usuarios e atribuír permisos](permissions.md).
 - [Inxerir as orixes de datos](data-sources.md) e executalas mediante o [proceso de unificación de datos](data-unification.md) para obter [perfís de clientes unificados](customer-profiles.md).
 - [Enriquecer os perfís de clientes unificados](enrichment-hub.md) ou [executar modelos preditivos](predictions-overview.md).
-- [Crear segmentos](segments.md) para agrupar clientes e [medidas](measures.md) para revisar os KPI.
+- [Cree segmentos](segments.md) para agrupar clientes e [medidas](measures.md) para revisar os KPI.
 - [Configurar conexións](connections.md) e [exportacións](export-destinations.md) para procesar subconxuntos de datos noutras aplicacións.

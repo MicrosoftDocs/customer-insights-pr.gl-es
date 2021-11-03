@@ -1,7 +1,7 @@
 ---
 title: Comezar coas contas de empresa como público obxectivo principal
 description: Obteña información acerca das contas de empresa como público obxectivo principal Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644986"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673685"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Traballar con contas empresariais en estatísticas de público
 
-A capacidade de información de público de Dynamics 365 Customer Insights permítelle configurar o seu contorno para diferentes públicos obxectivo principais: clientes individuais (B2C) e contas empresariais (B2B). Nos escenarios B2C, os datos céntranse arredor das persoas. Para o B2B, o público obxectivo principal son as contas (organizacións ou empresas) e os contactos. Este artigo axúdalle a comezar cun ambiente para contas de empresas. Enumera as diferenzas para as áreas de funcións nas estatísticas do público, dependendo do foco do seu contorno. Para obter máis información sobre as diferenzas, revise os documentos das áreas de funcións. 
+A capacidade de información de público de Dynamics 365 Customer Insights permítelle configurar o seu contorno para diferentes públicos obxectivo principais: consumidores individuais (B-a-C) e contas empresariais (B-a-B). Nos escenarios B-a-C, os datos céntranse arredor das persoas. Para o B-a-B, o público obxectivo principal son as contas (organizacións ou empresas) e os contactos. Este artigo axúdalle a comezar cun ambiente para contas de empresas. Enumera as diferenzas para as áreas de funcións nas estatísticas do público, dependendo do foco do seu contorno. Para obter máis información sobre as diferenzas, revise os documentos das áreas de funcións. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Crear un contorno para contas de empresa
 
@@ -32,7 +32,7 @@ Despois de unificar os datos, [especifique xerarquías de contas](relationships.
 
 Se a súa organización mantén contornos para clientes individuais e contas comerciais, pode usar o conmutador do panel esquerdo para escoller o público obxectivo principal.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Cambiador para cambiar o público obxectivo principal entre clientes individuais e contas empresariais.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Cambiador para cambiar o público obxectivo principal entre clientes individuais e contas empresariais.":::
 
 ## <a name="supported-feature-areas"></a>Áreas de funcións compatibles
 

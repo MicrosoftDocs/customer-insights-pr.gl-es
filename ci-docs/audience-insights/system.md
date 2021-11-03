@@ -1,7 +1,7 @@
 ---
 title: Configuración do sistema en estatísticas de audiencia
 description: Máis información sobre a configuración do sistema na capacidade de información do público de Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035900"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651838"
 ---
 # <a name="system-configuration"></a>Configuración do sistema
 
@@ -24,9 +24,9 @@ A páxina **Sistema** inclúe as seguintes pestanas:
 - [Uso de API](#api-usage-tab)
 - [Sobre](#about-tab)
 - [Xeral](#general-tab)
+- [Seguranza](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Páxina do sistema.](media/system-tabs.png "Páxina do sistema")
+:::image type="content" source="media/system-tabs.png" alt-text="Pestanas de configuración na páxina do sistema.":::
 
 ## <a name="status-tab"></a>Separador de Estado
 
@@ -84,9 +84,15 @@ O separador **Acerca de** contén o **Nome para mostrar** da súa organización,
 
 ## <a name="general-tab"></a>Separador Xeral
 
-Existen dúas opcións no separador **Xeral**, **Idioma** e **Formato de país/rexión**.
+Pode cambiar o idioma e o formato do país/rexión na pestana **Xeral**.
 
-A aplicación [admite varios idiomas](supported-languages.md). Para cambiar o idioma preferido, escolla o **Idioma** no menú despregable.
+Customer Insights [admite varios idiomas](/dynamics365/get-started/availability). A aplicación usa a súa preferencia de idioma para mostrar elementos como o menú, o texto da etiqueta e as mensaxes do sistema no seu idioma preferido.
+
+Os datos importados e a información que introduciu manualmente non se traducen.
+
+### <a name="update-the-settings"></a>Actualizar a configuración
+
+Para cambiar o idioma preferido, escolla o **Idioma** no menú despregable.
 
 Para cambiar o formato preferido de datas, hora e números, use o menú despregable **Formato de país/rexión**. Mostrarase unha previsualización do formato neste campo. O sistema suxerirá automaticamente unha selección cando escolla un novo idioma.
 
@@ -105,6 +111,13 @@ O **Uso da API** contén tres seccións:
 
    As operacións que utilizan [inxestión de datos en tempo real](real-time-data-ingestion.md) conteñen un botón cun símbolo de binocular para ver o uso da API en tempo real. Seleccione o botón para abrir un panel lateral que conteña detalles de uso para o uso da API en tempo real no contorno actual.   
    Use a caixa **Agrupar por** no panel **Uso da API en tempo real** para escoller como presentar mellor as súas interaccións en tempo real. Pode agrupar os datos por método de API, nome cualificado de entidade (entidade inxerida), autor (orixe do evento), resultado (éxito ou fracaso) ou códigos de erro. Os datos están dispoñibles como gráfico de historial e como táboa.
+
+## <a name="security-tab"></a>Separador de seguranza
+
+A pestana de **Seguridade** permítell e vincular e xestionar o seu propio [Azure Key Vault](/azure/key-vault/general/basic-concepts) para o ambiente.
+A key vault específica pódese usar para probar e usar segredos no límite de cumprimento dunha organización. As estatísticas do público poden usar os segredos de Azure Key Vault para [configurar conexións](connections.md) a sistemas de terceiros.
+
+Para obter máis información, consulte [Traer o seu propio Azure Key Vault](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
