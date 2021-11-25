@@ -1,7 +1,7 @@
 ---
 title: Segmentos na información do público
 description: Visión xeral dos segmentos e da forma de crealos e xestionalos.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 56978c984a91e85e86956e7eac1d59609c349b6a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673831"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732586"
 ---
 # <a name="segments-overview"></a>Visión xeral dos segmentos
 
@@ -65,8 +65,7 @@ A seguinte acción está dispoñible cando selecciona un segmento:
 
 Pode actualizar todos os segmentos á vez seleccionando **Actualizar todo** na páxina **Segmentos** ou pode actualizar un ou varios segmentos cando os seleccione e elixir **Actualizar** desde as opcións. Tamén pode configurar unha actualización recorrente en **Administrador** > **Sistema** > **Programar**.
 
-> [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies). Pode seleccionar o estado dun proceso para ver detalles sobre o progreso de todo o traballo. Despois de seleccionar **Ver detalles** para unha das tarefas do traballo, atopará información adicional: o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Exportar segmentos
 
@@ -105,5 +104,6 @@ A parte inferior contén unha lista dos membros do segmento.
 > Os campos que aparecen nesta lista baséanse nos atributos das entidades do seu segmento.
 >
 >A lista é unha vista previa dos membros do segmento correspondentes e mostra os primeiros 100 rexistros do seu segmento para que poida avalialo rapidamente e revisar as súas definicións se é necesario. Para ver todos os rexistros coincidentes, cómpre [exportar o segmento](export-destinations.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

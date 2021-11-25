@@ -1,7 +1,7 @@
 ---
 title: Configuración do sistema en estatísticas de audiencia
-description: Máis información sobre a configuración do sistema na capacidade de información do público de Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+description: Obtén información sobre a configuración do sistema na capacidade de información sobre o público Dynamics 365 Customer Insights.
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651838"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732359"
 ---
 # <a name="system-configuration"></a>Configuración do sistema
+
+Para acceder ás configuracións do sistema nas estatísticas do público, selecciona na barra de navegación esquerda **Admin** > **Sistema** para ver unha lista de tarefas e procesos do sistema.
 
 A páxina **Sistema** inclúe as seguintes pestanas:
 - [Progresión](#status-tab)
@@ -30,39 +32,55 @@ A páxina **Sistema** inclúe as seguintes pestanas:
 
 ## <a name="status-tab"></a>Separador de Estado
 
-A **pestana de estado** permítelle rastrexar o progreso da inxestión de datos, as exportacións de datos e outros procesos importantes de produtos. Revise a información desta pestana para garantir a integridade dos procesos activos.
+O **Ficha de estado** permítelle seguir o progreso das tarefas, a inxestión de datos, as exportacións de datos e outros procesos importantes do produto. Revisa a información desta pestana para garantir a integridade das túas tarefas e procesos activos.
 
-Esta pestana inclúe táboas con información de estado e procesamento de varios procesos. Cada táboa rastrexa o **Nome** da tarefa e a súa entidade correspondente, o **Estado** da súa execución máis recente e cando foi a **Última actualización**.
+Esta pestana inclúe táboas con información de estado e procesamento de varios procesos. Cada táboa rastrexa o **Nome** da tarefa e a súa entidade correspondente, o **Estado** da súa execución máis recente e cando foi a **Última actualización**. Podes ver os detalles das últimas execucións seleccionando a tarefa ou o nome do proceso. 
 
-Visualice os detalles das últimas execucións das tarefas seleccionando o seu nome.
+Seleccione o estado a carón da tarefa ou proceso no ficheiro **Estado** columna para abrir **Detalles do progreso** panel.
 
-### <a name="status-types"></a>Tipos de estado
+   :::image type="content" source="media/system-progress-details.png" alt-text="Panel de detalles do progreso do sistema":::
 
-Existen seis tipos de estado para as tarefas. Os seguintes tipos de estado tamén aparecen nas páxinas *Coincidir*, *Combinar*, *Orixes de datos*, *Segmentos*, *Medidas*, *Enriquecemento*, *Actividades* e *Predicións*:
+### <a name="status-definitions"></a>Definicións de estado
 
-- **Procesamento:** a tarefa está en curso. O estado pode cambiar a Correcto ou Incorrecto.
-- **Correcto:** a tarefa completouse correctamente.
-- **Omitido:** a tarefa omitiuse. Un ou máis dos procesos descendentes dos que depende esta tarefa están fallando ou se omitiron.
-- **Fallo:** o procesamento da tarefa fallou.
-- **Cancelado:** o procesamento foi cancelado polo usuario antes de que rematase.
-- **En cola:** O procesamento está en cola e iniciarase unha vez que se completen todas as tarefas de subida. Para obter máis información, consulte [Políticas de actualización](#refresh-policies)
+O sistema utiliza os seguintes estados para tarefas e procesos:
 
-### <a name="refresh-policies"></a>Políticas de actualización
+|Progresión  |Definición  |
+|---------|---------|
+|Cancelouse |O usuario cancelou o procesamento antes de que rematase.   |
+|Ero   |A inxestión de datos tivo erros.         |
+|Erro  |Produciuse un erro ao procesar.  |
+|Sen iniciar   |O orixe de datos aínda non ten datos inxeridos ou aínda está en modo borrador.         |
+|Procesando  |A tarefa ou proceso está en curso.  |
+|Actualizando    |Inxestión de datos en curso. Pode cancelar esta operación seleccionando **Deixar de actualizar** na columna **Accións**. Deter a actualización dunha orixe de datos provocará que se restableza o seu estado da última actualización.       |
+|Omitido  |Saltouse a tarefa ou o proceso. Un ou máis dos procesos descendentes dos que depende esta tarefa están fallando ou se omitiron.|
+|Correcto  |Tarefa ou proceso completouse correctamente. Para as fontes de datos, indica que os datos se inxeriron correctamente se se menciona un momento no **Actualizado** columna.|
+|Na fila | O procesamento está en cola e comezará unha vez que se completen todas as tarefas e procesos anteriores. Para obter máis información, consulte [Procesos de actualización](#refresh-processes).|
 
-Esta lista mostra as políticas de actualización de cada un dos principais procesos:
+### <a name="refresh-processes"></a>Procesos de actualización
 
-- **Orixes de datos:** execútase segundo o [horario configurado](#schedule-tab). Non depende de ningún outro proceso. A coincidencia depende do éxito deste proceso.
-- **Coincidencia:** execútase segundo o [horario configurado](#schedule-tab). Depende do procesamento das orixes de datos utilizadas na definición da coincidencia. A combinación depende do éxito deste proceso.
-- **Combinar**: execútase segundo o [horario configurado](#schedule-tab). Depende da finalización do proceso de coincidencia. Os segmentos, medidas, enriquecemento, busca, actividades, predicións e preparación de datos dependen da correcta finalización deste proceso.
-- **Segmentos**: execútase manualmente (actualización única) e segundo o [horario configurado](#schedule-tab). Depende de Combinación. A información depende do seu procesamento.
-- **Medicións**: execútase manualmente (actualización única) e segundo o [horario configurado](#schedule-tab). Depende de Combinación.
-- **Actividades**: execútase manualmente (actualización única) e segundo o [horario configurado](#schedule-tab). Depende de Combinación.
-- **Enriquecemento**: execútase manualmente (actualización única) e segundo o [horario configurado](#schedule-tab). Depende de Combinación.
-- **Busca**: execútase manualmente (actualización única) e segundo o [horario configurado](#schedule-tab). Depende de Combinación.
-- **Preparación de datos:** execútase segundo o [horario configurado](#schedule-tab). Depende de Combinación.
-- **Información**: execútase manualmente (actualización única) e segundo o [horario configurado](#schedule-tab). Depende de segmentos.
+A actualización de tarefas e procesos execútase segundo o [horario configurado](#schedule-tab). 
 
-Seleccione o estado dunha tarefa para ver detalles sobre o progreso de todo o traballo na que estaba. As políticas de actualización anteriores poden axudar a comprender o que pode facer para abordar unha tarefa **Omitida** ou en **Cola**.
+|Procesar  |Descripción  |
+|---------|---------|
+|Actividade  |Funciona manualmente (actualización única). Depende do proceso de fusión. A información depende do seu procesamento.|
+|Ligazón de análises |Funciona manualmente (actualización única). Depende dos segmentos.  |
+|Preparación de análises |Funciona manualmente (actualización única). Depende dos segmentos.  |
+|Preparación dos datos   |Depende da fusión.   |
+|Orixes de datos   |Non depende de ningún outro proceso. A coincidencia depende do éxito deste proceso.  |
+|Enriquecementos   |Funciona manualmente (actualización única). Depende do proceso de fusión. |
+|Destinos de exportación |Funciona manualmente (actualización única). Depende dos segmentos.  |
+|Conclusións |Funciona manualmente (actualización única). Depende dos segmentos.  |
+|Intelixencia   |Depende da fusión.   |
+|Buscar coincidencias |Depende do procesamento das orixes de datos utilizadas na definición da coincidencia.      |
+|Medidas  |Funciona manualmente (actualización única). Depende do proceso de fusión.  |
+|Combinación   |Depende da finalización do proceso de coincidencia. Os segmentos, medidas, enriquecemento, busca, actividades, predicións e preparación de datos dependen da correcta finalización deste proceso.   |
+|Perfís   |Funciona manualmente (actualización única). Depende do proceso de fusión. |
+|Busca   |Funciona manualmente (actualización única). Depende do proceso de fusión. |
+|Segmentos  |Funciona manualmente (actualización única). Depende do proceso de fusión. A información depende do seu procesamento.|
+|Sistema   |Depende da finalización do proceso de coincidencia. Os segmentos, medidas, enriquecemento, busca, actividades, predicións e preparación de datos dependen da correcta finalización deste proceso.   |
+|Usuario  |Funciona manualmente (actualización única). Depende das entidades.  |
+
+Seleccione o estado dun proceso para ver os detalles do progreso de todo o traballo no que estaba. Os procesos de actualización anteriores poden axudar a comprender o que podes facer para abordar a **Omitido** ou **En cola** tarefa ou proceso.
 
 ## <a name="schedule-tab"></a>Separador de programación
 
@@ -86,7 +104,7 @@ O separador **Acerca de** contén o **Nome para mostrar** da súa organización,
 
 Pode cambiar o idioma e o formato do país/rexión na pestana **Xeral**.
 
-Customer Insights [admite varios idiomas](/dynamics365/get-started/availability). A aplicación usa a súa preferencia de idioma para mostrar elementos como o menú, o texto da etiqueta e as mensaxes do sistema no seu idioma preferido.
+Información do cliente [admite moitos idiomas](/dynamics365/get-started/availability). A aplicación usa a súa preferencia de idioma para mostrar elementos como o menú, o texto da etiqueta e as mensaxes do sistema no seu idioma preferido.
 
 Os datos importados e a información que introduciu manualmente non se traducen.
 
@@ -109,7 +127,7 @@ O **Uso da API** contén tres seccións:
 
 -  **Operacións**: unha táboa con filas para cada operación da API dispoñible e detalles sobre o uso das operacións. Pode seleccionar un nome de operación para ir á [referencia da API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   As operacións que utilizan [inxestión de datos en tempo real](real-time-data-ingestion.md) conteñen un botón cun símbolo de binocular para ver o uso da API en tempo real. Seleccione o botón para abrir un panel lateral que conteña detalles de uso para o uso da API en tempo real no contorno actual.   
+   Operacións que usan [inxestión de datos en tempo real](real-time-data-ingestion.md) contén un botón cun símbolo binocular para ver o uso da API en tempo real. Seleccione o botón para abrir un panel lateral que conteña detalles de uso para o uso da API en tempo real no contorno actual.   
    Use a caixa **Agrupar por** no panel **Uso da API en tempo real** para escoller como presentar mellor as súas interaccións en tempo real. Pode agrupar os datos por método de API, nome cualificado de entidade (entidade inxerida), autor (orixe do evento), resultado (éxito ou fracaso) ou códigos de erro. Os datos están dispoñibles como gráfico de historial e como táboa.
 
 ## <a name="security-tab"></a>Separador de seguranza

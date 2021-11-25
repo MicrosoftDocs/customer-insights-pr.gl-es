@@ -1,7 +1,7 @@
 ---
 title: Combinar entidades na unificación de datos
 description: Combine entidades para crear perfís de clientes unificados.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648252"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732770"
 ---
 # <a name="merge-entities"></a>Combinar entidades
 
@@ -24,7 +24,7 @@ A fase de combinación é a última fase do proceso de unificación de datos. O 
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Páxina Combinar no proceso de unificación de datos que mostra a táboa cos campos combinados que definen o perfil de cliente unificado.":::
 
-Despois de completar a [fase de correspondencia](match-entities.md), pode iniciar a fase de combinación seleccionando o mosaico **Combinar** na páxina **Unificar**.
+Despois de completar a [fase de correspondencia](match-entities.md), pode iniciar a fase de combinación seleccionando o mosaico [Combinar](match-entities.md) na páxina [Unificar](match-entities.md).
 
 ## <a name="review-system-recommendations"></a>Revisar recomendacións do sistema
 
@@ -187,10 +187,9 @@ Escolla **Executar combinación e procesos descendentes** para actualizar o sist
 
 Para realizar máis modificacións e volver executar o paso, pode cancelar unha combinación en curso. Seleccione **Actualizando...** e seleccione **Cancelar traballo** no panel lateral que aparece.
 
-> [!TIP]
-> Despois de executar o proceso de combinación, seleccione o estado do proceso para abrir o panel **Detalles da tarefa**. Ofrece unha visión xeral sobre o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa. Seleccione **Ver detalles** para ver que entidades participaron no proceso de coincidencias, se a resolución do conflito se realizou correctamente e se as actualizacións se publicaron correctamente.  
-> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Camiño detallado para chegar aos detalles do proceso desde a ligazón de estado da tarefa.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Camiño detallado para chegar aos detalles do proceso desde a ligazón de estado da tarefa.":::
 
 ## <a name="next-step"></a>Seguinte paso
 

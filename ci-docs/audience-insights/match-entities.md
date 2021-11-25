@@ -1,7 +1,7 @@
 ---
 title: Buscar coincidencias de entidades para a unificación de datos
 description: Faga coincidir entidades para combinar conxuntos de datos e crear perfís de clientes unificados.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648206"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732632"
 ---
 # <a name="match-entities"></a>Buscar coincidencias das entidades
 
@@ -180,10 +180,7 @@ Vaia a **Datos** > **Unify** > **Coincidencia** e seleccione **Executar** para i
 
 Atopará o resultado dunha execución con éxito, a entidade de perfil de cliente unificado, na páxina **Entidades**. Asignarase á súa entidade de cliente unificada o nome de **Clientes** na sección **Perfís**. A primeira execución da busca de coincidencias correcta crea a entidade *Cliente* unificada. Todas as execucións de buscas de correspondencias posteriores amplían esa entidade.
 
-> [!TIP]
-> Despois de executar o proceso de coincidencias, seleccione o estado do proceso para abrir o panel **Detalles da tarefa**. Ofrece unha visión xeral sobre o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa. Seleccione **Ver detalles** para ver que entidades participaron no proceso de coincidencias, que regras se lles aplicaron e se as actualizacións se publicaron correctamente.  
-> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Camiño detallado para chegar aos detalles do proceso desde a ligazón de estado da tarefa.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Revisar e validar as súas coincidencias
 

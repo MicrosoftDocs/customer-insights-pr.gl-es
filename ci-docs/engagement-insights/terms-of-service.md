@@ -9,22 +9,22 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d43d3c49c81ab343db5623ee4f5ebeb100d3b2b7
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
-ms.translationtype: HT
+ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218936"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7774121"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS - Información de interacción (versión preliminar) 
 
-A información de interacción (versión preliminar) é unha capacidade de prelanzamento en versión preliminar, o que significa que ten menos medidas de seguranza, privacidade e localización de datos que as funcionalidades e capacidades que están xeralmente dispoñibles en Dynamics 365 Customer Insights, ou ben unhas medidas diferentes. Revise as condicións que se indican a continuación e a documentación do produto para determinar se a información de interacción (versión preliminar) é adecuada para os seus datos.
+Os datos de interacción (vista previa) é unha función de vista previa previa ao lanzamento, o que significa que ten menos ou diferentes medidas de seguridade, privacidade e localización de datos que as funcións e capacidades que están dispoñibles xeralmente en Dynamics 365 Customer Insights. Revise as condicións que se indican a continuación e a documentación do produto para determinar se a información de interacción (versión preliminar) é adecuada para os seus datos.
 
 ## <a name="preview-terms-of-service"></a>VERSIÓN PRELIMINAR DAS CONDICIÓNS DE SERVIZO
 
 ÚLTIMA ACTUALIZACIÓN: OUTUBRO DE 2020 
 
-Ao acceder ou utilizar a versión preliminar dos servizos de información de interacción de Dynamics 365 Customer Insights (xunto con calquera fonte de datos proporcionada por Microsoft, os "Servizos"), acepta os termos e condicións deste Contrato. Se non os acepta, non acceda nin use os Servizos.
+Ao acceder ou utilizar a vista previa dos servizos de Dynamics 365 Customer Insights – Insights de compromiso (xunto con calquera fonte de datos proporcionada por Microsoft, os "Servizos"), aceptas os termos e condicións deste Acordo. Se non os acepta, non acceda nin use os Servizos.
 
 ## <a name="1-what-this-agreement-covers"></a>1. COBERTURA DO CONTRATO
 
@@ -154,7 +154,7 @@ NA MEDIDA EN QUE A LEXISLACIÓN O PERMITA, MICROSOFT NON SERÁ RESPONSABLE EN NI
 
 ### <a name="111-term"></a>11.1. Termo
 
-Este Contrato entra en vigor na data na que o acepta por primeira vez. Este Contrato substitúe calquera acordo anterior mediante o cal estivese a usar Dynamics 365 Product Insights ou calquera servizo precursor. Este Contrato finalizará na primeira destas dúas datas: (i) a data da primeira dispoñibilidade dun lanzamento comercial dos Servizos (se ocorre) ou (ii) a data na que Microsoft lle notificará a rescisión. Microsoft pode suspender ou cancelar o seu uso dos Servizos na súa totalidade ou en parte, así como o acceso a estes, ou rescindir este Contrato en calquera momento por calquera motivo e ao seu exclusivo criterio.
+Este Contrato entra en vigor na data na que o acepta por primeira vez. Este Acordo substitúe calquera acordo anterior en virtude do cal estivese utilizando Dynamics 365 Product Insights ou calquera servizo anterior. Este Contrato finalizará na primeira destas dúas datas: (i) a data da primeira dispoñibilidade dun lanzamento comercial dos Servizos (se ocorre) ou (ii) a data na que Microsoft lle notificará a rescisión. Microsoft pode suspender ou cancelar o seu uso dos Servizos na súa totalidade ou en parte, así como o acceso a estes, ou rescindir este Contrato en calquera momento por calquera motivo e ao seu exclusivo criterio.
 
 ### <a name="112-effect-of-termination"></a>11.2. Efecto da rescisión
 

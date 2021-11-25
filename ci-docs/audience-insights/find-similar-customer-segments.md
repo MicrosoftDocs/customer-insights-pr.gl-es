@@ -9,19 +9,21 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034536"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799680"
 ---
 # <a name="similar-customers-preview"></a>Clientes similares (vista previa)
 
 Esta característica permítelle atopar clientes similares na súa base de clientes mediante intelixencia artificial. Debe ter polo menos un segmento creado para usar esta función. A expansión dos criterios dun segmento existente axuda a atopar clientes similares a ese segmento.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
+
 > [!NOTE]
-> *Buscar clientes similares* usa medios automatizados para avaliar datos e facer predicións a partir deses datos e, polo tanto, ten a capacidade de ser utilizado como método de avaliación de perfís, xa que ese termo é definido polo Regulamento xeral de protección de datos ("RXPD"). O uso desta función para o procesamento de datos por parte do cliente pode estar suxeito a RXPD ou a outras leis ou regulamentos. Vostede é responsable de garantir que o seu uso de Dynamics 365 Customer Insights, incluíndo as predicións, cumpre con todas as leis e regulamentos aplicables, incluídas as leis relacionadas coa privacidade, os datos persoais, os datos biométricos, a protección de datos e a confidencialidade das comunicacións.
+> *Buscar clientes similares* usa medios automatizados para avaliar datos e facer predicións a partir deses datos e, polo tanto, ten a capacidade de ser utilizado como método de avaliación de perfís, xa que ese termo é definido polo Regulamento xeral de protección de datos ("RXPD"). O uso desta función para o procesamento de datos por parte do cliente pode estar suxeito a RXPD ou a outras leis ou regulamentos. Vostede é responsable de garantir que o seu uso de Dynamics 365 Customer Insights, incluídas as predicións, cumpra todas as leis e regulamentos aplicables, incluídas as leis relacionadas coa privacidade, os datos persoais, os datos biométricos, a protección de datos e a confidencialidade das comunicacións.
 
 ## <a name="finding-similar-customers"></a>Busca de clientes similares
 

@@ -1,7 +1,7 @@
 ---
 title: Crear e xestionar ambientes
 description: Aprenda a rexistrarse no servizo e a xestionar contornos.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673731"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799634"
 ---
 # <a name="manage-environments"></a>Xestionar ambientes
 
@@ -39,6 +39,19 @@ Pode editar algúns detalles dos contornos existentes.
 3. Na caixa **Editar contorno**, pode actualizar a configuración do contorno.
 
 Para obter máis información sobre a configuración do contorno, consulte [Crear un novo contorno](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Conéctate a Microsoft Dataverse
+   
+O **Microsoft Dataverse** paso permíteche conectar Customer Insights co teu entorno Dataverse.
+
+Usar [modelos prefabricados predición](predictions-overview.md#out-of-box-models), configure o uso compartido de datos con Dataverse. Ou pode activar a inxestión de datos das fontes de datos local, proporcionando o URL do contorno Microsoft Dataverse que administra a súa organización. Seleccione **Activa o uso compartido de datos** para compartir datos de saída de Customer Insights cun data lake xestionado por Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcións de configuración para activar o uso compartido de datos con Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights non é compatible cos seguintes escenarios de uso compartido dos datos:
+> - Se gardas todos os datos no teu propio Azure Data Lake Storage, non poderás activar a compartición de datos cun data lake xestionado por Dataverse.
+> - Se habilitas o uso compartido de datos con Dataverse, non poderás [crear valores previstos ou ausentes nunha entidade](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar a configuración dun ambiente
 
@@ -68,7 +81,7 @@ Copiaranse os seguintes axustes de configuración:
 - Perfís de clientes.
 - Credenciais da orixe de datos. Deberá proporcionar as credenciais para cada orixe de datos e actualizar as fontes de datos manualmente.
 
-- Fontes de datos do cartafol de Common Data Model e o lago de datos xestionado de Dataverse. Terá que crear esas orixes de datos manualmente co mesmo nome que no ambiente de orixe.
+- Fontes de datos do cartafol Common Data Model e do lago de datos xestionado por Dataverse. Terá que crear esas orixes de datos manualmente co mesmo nome que no ambiente de orixe.
 
 Cando copie un ambiente, verá unha mensaxe de confirmación de que se creou o novo contorno. Seleccione **Ir a orixes de datos** para ver a lista de orixes de datos.
 

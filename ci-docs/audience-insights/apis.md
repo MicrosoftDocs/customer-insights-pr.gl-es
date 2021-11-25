@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033583"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732262"
 ---
 # <a name="work-with-customer-insights-apis"></a>Traballar coas API de Customer Insights
 
-Dynamics 365 Customer Insights ofrece as API para crear as súas propias aplicacións baseadas nos seus datos en Customer Insights.
+Dynamics 365 Customer Insights ofrece API para crear as túas propias aplicacións baseadas nos teus datos en Customer Insights.
 
 > [!IMPORTANT]
 > Os detalles destas API enuméranse na [referencia das API de Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Inclúen información adicional sobre operacións, parámetros e respostas.
@@ -117,25 +117,25 @@ Esta sección axuda a comezar a usar as bibliotecas de clientes dispoñibles par
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Aprenda a comezar a usar as bibliotecas de clientes de C # desde NuGet.org. Para obter máis información sobre o paquete NuGet, vexa [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Actualmente, este paquete ten como obxectivo os frameworks netstandard2.0 e netcoreapp2.0.
+Aprende como comezar a usar as bibliotecas cliente C# de NuGet.org. Para obter máis información sobre o paquete NuGet, consulte [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Actualmente, este paquete ten como obxectivo os frameworks netstandard2.0 e netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Engadir a biblioteca de clientes de C# a un proxecto de C#
 
-1. En Visual Studio, abra o **Xestor de paquetes de NuGet** para o seu proxecto.
+1. En Visual Studio, abra o **NuGet Xestor de paquetes** para o teu proxecto.
 
 1. Buscar **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Seleccione **Instalar** para engadir o paquete ao proxecto.
  
-   Como alternativa, execute este comando na **Consola do xestor de paquetes de NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Alternativamente, executa este comando no ficheiro **NuGet Consola do xestor de paquetes** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Engadir paquete de NuGet a un proxecto de Visual Studio.":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Engade o paquete NuGet ao proxecto Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Usar a biblioteca de clientes de C#
 
 1. Use a [Biblioteca de autenticación de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) para obter un `AccessToken` usando o seu [Rexistro de aplicacións de Azure](#create-a-new-app-registration-in-the-azure-portal) existente.
 
-1. Despois de autenticar e adquirir con éxito un token, constrúa un `HttpClient` novo ou use un xa existente coa **"Autorización" de DefaultRequestHeaders** adicional definida en **<access token> de portador** e **Ocp-Apim-Subscription-Key** definida como [**clave de subscrición** do seu contorno de Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Despois de autenticarse e adquirir un token con éxito, constrúe un novo ou use un existente`HttpClient` co adicional **DefaultRequestHeaders "Autorización"** configurado para **"Token de acceso" do portador** e **Ocp-Apim-Clave de subscrición** establecer a [**clave de subscrición** desde o teu entorno de Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Restableza a cabeceira da **Autorización** cando corresponda. Por exemplo, cando o token caducou.
 

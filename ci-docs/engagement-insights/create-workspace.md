@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645308"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673441"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Crear un novo espazo de traballo e engadir membros
 
@@ -26,17 +26,17 @@ Ao crear unha área de traballo, selecciona o tipo de datos nos que se quere cen
 
 ## <a name="create-a-new-workspace"></a>Crear unha nova área de traballo
 
-O proceso de creación dunha área de traballo inclúe a configuración do *ambiente* para organizala. Un ambiente é un espazo que pode conter unha ou varias áreas de traballo. Pode usar un ambiente para xestionar as súas áreas de traballo e conexións coa capacidade de información do público de Customer Insights.
+O proceso de creación dunha área de traballo inclúe a configuración do *ambiente* para organizala. Un ambiente é un espazo que pode conter unha ou varias áreas de traballo. Podes usar un ambiente para xestionar os teus espazos de traballo e as conexións coa capacidade de información sobre a audiencia.
 
-1. Seleccione **Novo** desde o conmutador de áreas de traballo.
+1. Seleccione **+Novo** desde o selector de espazo de traballo.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Páxina de información do cliente con chamada no panel de navegación e descrición.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Páxina de Customer Insights con chamada no panel de navegación e descrición.":::
 
 1. No panel **Espazo de traballo**, introduza un **Nome do espazo de traballo**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Escriba un nome da área de traballo.":::
 
-1. Escolla o tipo de plataforma (web ou móbil) que desexe medir.
+1. Escolle o tipo de plataforma (web ou móbil) que queres medir.
 
 1. Seleccione **Mostrar configuración avanzada** para activar ou desactivar estas configuracións opcionais:
 

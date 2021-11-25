@@ -1,6 +1,6 @@
 ---
 title: Solicitudes de dereitos do titular dos datos (DSR) baixo RXPD | Microsoft Docs
-description: Responda ás solicitudes dos titulares dos datos da capacidade de información do público de Dynamics 365 Customer Insights.
+description: Responde ás solicitudes dos suxeitos de datos para a capacidade de información sobre o público Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483664"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732678"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitudes de dereitos do titular dos datos (DSR) baixo RXPD
 
@@ -24,7 +24,7 @@ Comprometémonos a axudar aos nosos clientes a cumprir os seus requisitos de RXP
 
 ## <a name="audience-insights"></a>Información do público
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Responder ás solicitudes de eliminación dos titulares dos datos segunco o RXPD para a capacidade de información do público de Dynamics 365 Customer Insights
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Respondendo ás solicitudes de eliminación do suxeito de datos do GDPR para a capacidade de información da audiencia Dynamics 365 Customer Insights
 
 O "dereito á eliminación" de datos persoais dos datos de clientes dunha organización é unha protección clave no Regulamento xeral de protección de datos (RXPD). A eliminación de datos persoais inclúe a eliminación de todos os datos persoais e os rexistros xerados polo sistema, excepto a información do rexistro de auditoría.
 
@@ -39,7 +39,7 @@ A información do público ofrece as seguintes experiencias internas para elimin
 
 Un administrador de Customer Insights pode seguir estes pasos para eliminar os datos de clientes que se eliminaron na orixe de datos:
 
-1. Inicie sesión en Dynamics 365 Customer Insights.
+1. Inicia sesión en Dynamics 365 Customer Insights.
 2. Na información do público, vaia a **Datos** > **Orixes de datos**
 3. Para cada orixe de datos da lista que contén datos de clientes eliminados:
    1. Seleccione (...) e, a seguir, seleccione **Actualizar**.
@@ -52,7 +52,7 @@ Un administrador de Customer Insights pode seguir estes pasos para eliminar os d
 
 Un administrador de Customer Insights pode seguir estes pasos para eliminar os datos de usuarios de Customer Insights:
 
-1. Inicie sesión en Dynamics 365 Customer Insights.
+1. Inicia sesión en Dynamics 365 Customer Insights.
 2. Na información do público, vaia a **Administrar** > **Permisos**.
 3. Marque a caixa de verificación do usuario que desexe eliminar.
 4. Seleccione **Quitar**.
@@ -79,7 +79,14 @@ Un administrador de arrendatarios pode seguir estes pasos para exportar datos:
 2. Recoñeza a confirmación para exportar os datos do usuario solicitado.
 3. Reciba os datos exportados a través do enderezo de correo electrónico do administrador do arrendatario.
 
-## <a name="engagement-insights"></a>Información de interacción
+## <a name="consent-management-preview"></a>Xestión do consentimento (vista previa)
+
+A capacidade de xestión do consentimento non recolle directamente datos do usuario. Só importa e procesa os datos de consentimento que proporcionan os usuarios noutras aplicacións.
+
+Para eliminar os datos de consentimento de usuarios específicos, elimínaos das fontes de datos inxeridas coa capacidade de xestión de consentimento. Despois de actualizar o orixe de datos, os datos eliminados tamén se eliminarán no Centro de consentimento. As aplicacións que usan a entidade de consentimento tamén eliminarán os datos que se eliminaron da fonte despois de a [refrescar](audience-insights/system.md#refresh-processes). Recomendamos actualizar as fontes de datos rapidamente despois de responder a unha solicitude do suxeito de datos para eliminar os datos do usuario de todos os demais procesos e aplicacións.
+
+
+## <a name="engagement-insights-preview"></a>Información de interacción (versión preliminar)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Eliminación e exportación de datos de eventos que conteñan información de identificación do usuario final
 

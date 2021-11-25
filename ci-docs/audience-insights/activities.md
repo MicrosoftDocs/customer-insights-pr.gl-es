@@ -1,7 +1,7 @@
 ---
 title: Actividades do cliente
 description: Defina as actividades dos clientes e visualíceas nunha liña de tempo nos perfís dos clientes.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673135"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732446"
 ---
 # <a name="customer-activities"></a>Actividades do cliente
 
-Combine as actividades dos clientes desde [varias fontes de datos](data-sources.md) en Dynamics 365 Customer Insights para crear unha liña de tempo que liste as actividades cronoloxicamente. Inclúa a cronoloxía nas aplicacións de Dynamics 365 coa solución [Complemento de tarxeta de cliente](customer-card-add-in.md), ou nun panel de Power BI.
+Combina as actividades dos clientes desde [diversas fontes de datos](data-sources.md) en Dynamics 365 Customer Insights para crear unha liña de tempo que enumera as actividades cronoloxicamente. Inclúa a liña de tempo nas aplicacións de Dynamics 365 co [Complemento da tarxeta de cliente](customer-card-add-in.md) solución ou nun panel Power BI.
 
 ## <a name="define-an-activity"></a>Definir unha actividade
 
@@ -82,9 +82,7 @@ Unha entidade debe ter polo menos un atributo de tipo **Data** para incluír nun
 
 1. Na páxina **Actividades**, seleccione **Executar** para procesar a actividade. 
 
-> [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies). Pode seleccionar o estado dun proceso para ver detalles sobre o progreso de todo o traballo. Despois de seleccionar **Ver detalles** para unha das tarefas do traballo, atopará información adicional: o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Xestionar actividades existentes
 

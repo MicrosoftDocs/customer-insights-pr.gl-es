@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645444"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673788"
 ---
 # <a name="manage-environments-and-workspaces"></a>Xestionar ambientes e espazos de traballo
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645444"
 
 Este tema trata sobre como xestionar espazos de traballo e contornos unha vez creados. 
 
-- Unha *área de traballo* é un espazo para almacenar e xestionar eventos e informes. É o lugar no que pode ver a actividade dos usuarios en tempo real. Cando crea unha área de traballo, selecciona o tipo de datos que se enviarán a esta. Actualmente, admítense datos web e aplicacións móbiles. Para obter máis información, consulte [Crear un espazo de traballo e engadir membros](create-workspace.md).
+- Unha *área de traballo* é un espazo para almacenar e xestionar eventos e informes. É o lugar no que pode ver a actividade dos usuarios en tempo real. Cando crea unha área de traballo, selecciona o tipo de datos que se enviarán a esta. Actualmente, admítense datos web e aplicacións móbiles. Para obter máis información, consulte [Crea un novo espazo de traballo e engade membros](create-workspace.md).
 
 - Un *ambiente* é un espazo onde xestiona as súas áreas de traballo e conexións. Para obter máis información, consulte [Crear un novo contorno](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Pode manter varias áreas de traballo simultaneamente nun ambiente. O seu [rol](
 
 ### <a name="delete-a-workspace"></a>Eliminar unha área de traballo
 
-Ao eliminar unha área de traballo, eliminarase permanentemente todo o seu contido, os datos, a configuración e os permisos. Isto non se pode desfacer.
+Ao eliminar un espazo de traballo elimina permanentemente todo o seu contido, datos, configuración e permisos. Isto non se pode desfacer.
 
 1. Vaia a **Administración** > **Área de traballo** e seleccione **Configuración**.
 
@@ -71,19 +71,11 @@ Como Administrador de contornos, pode acceder a un ambiente desde o panel de nav
 
 :::image type="content" source="media/environment-edit.png" alt-text="Centro de administración do ambiente.":::
 
-### <a name="rename-an-environment"></a>Renomear un ambiente
+### <a name="edit-an-environment-name"></a>Edita o nome dun entorno
 
 1. Vaia a **Administración** > **Ambiente** e seleccione **Configuración**.
 
 1. Actualice o campo do **nome do ambiente** e seleccione **Gardar** para aplicar as modificacións.
-
-### <a name="manage-environment-members"></a>Xestionar os membros dun ambiente
-
-1. Vaia a **Administración** > **Ambiente** e seleccione **Membros**.
-
-1. Seleccione **Engadir membros** para actualizar os membros e [atribuír roles](user-roles.md). Actualmente só está dispoñible o rol de **Administrador de ambientes**.
-
-1. Seleccione **Engadir membros** para engadilos ao seu ambiente.
 
 ### <a name="delete-an-environment"></a>Eliminar un ambiente
 
@@ -97,6 +89,14 @@ Os administradores de ambientes poden eliminar ambientes. Antes de poder elimina
 
 1. Seleccione **Eliminar** para eliminar o ambiente permanentemente.
 
+### <a name="manage-environment-members"></a>Xestionar os membros dun ambiente
+
+1. Vaia a **Administración** > **Ambiente** e seleccione **Membros**.
+
+1. Seleccione **Engadir membros** para actualizar os membros e [atribuír roles](user-roles.md). Actualmente só está dispoñible o rol de **Administrador de ambientes**.
+
+1. Seleccione **Engadir membros** para engadilos ao seu ambiente.
+
 ## <a name="manage-connections"></a>Xestionar conexións
 
 Establecer conexións coa información do público permítelle ver informes na información de interacción baseados en perfís de clientes unificados. 
@@ -107,7 +107,6 @@ Para obter máis información, consulte [Crear unha ligazón entre a informació
 
 Para protexer os datos persoais dos seus clientes, pode eliminar ou exportar os datos de identificación do usuario final.
 
-Para obter máis información, consulte [Eliminar e exportar datos de eventos que conteñan información persoal](delete-export-personal-data.md).
-
+Para obter máis información, consulte [Eliminar e exportar datos de eventos que conteñan información persoal](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

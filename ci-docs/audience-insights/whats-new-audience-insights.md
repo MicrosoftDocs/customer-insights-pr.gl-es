@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e futuras
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,58 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673826"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753115"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información sobre a audiencia de Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcionalidades a longo prazo, vexa os [plans de versións de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
+Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcións a longo prazo, bótalle un ollo ao [Plans de lanzamento de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
 Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver as funcionalidades antes que outras. A menos que se especifique o contrario, non é necesario que realice ningunha acción e actualizaremos a aplicación automaticamente sen tempo de inactividade.
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Actualizacións de octubre de 2021
+
+As actualizacións de outubro de 2021 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="b-to-b"></a>B-a-B
+
+A partir de outubro de 2021, podes traballar con contas empresariais e os seus contactos relacionados en Customer Insights. Antes, a aplicación estaba adaptada principalmente a consumidores individuais. Actualizáronse varias áreas de características para admitir escenarios B-to-B ademais dun novo tipo de ambiente. Para obter unha visión xeral das funcións B-to-B compatibles, consulte [Traballa con contas empresariais nas estatísticas do público](work-with-business-accounts.md).
+
+Nas seguintes seccións destacan algunhas das áreas clave que se adaptaron para soportar contas empresariais e consumidores individuais.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Segmentos de exportación baseados en contas comerciais
+
+Todas as exportacións de segmentos en estatísticas de audiencia están dispoñibles no contexto das contas empresariais. A maioría das exportacións de segmentos requiren unha configuración adicional e [información de contacto proxectada](segment-builder.md#create-a-new-segment) nos segmentos subxacentes para ser válido para as contas comerciais. Para obter máis información, consulte [Segmentos de exportación](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Use a exportación de anuncios de LinkedIn con contas empresariais
+
+A exportación de LinkedIn Ads agora está dispoñible para a orientación de contactos e empresas no contexto das contas comerciais. Ao seleccionar a orientación da empresa como o foco principal da exportación de LinkedIn, pode exportar segmentos construídos en contas empresariais sen necesidade de proxectar información de contacto. Para obter máis información, vai á documentación sobre [Exportación de anuncios de LinkedIn](export-linkedin-ads.md) e a diferenza entre [orientación de contactos](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) e [orientación da empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Crea medidas baseadas nas contas empresariais e na súa xerarquía
+
+O creador de medidas permíteche crear medidas en torno ás contas empresariais e, opcionalmente, utilizar a información da xerarquía. A información da xerarquía úsase para acumular un cálculo de medida nunha conta e todas as contas secundarias relacionadas. Por exemplo, pode crear medidas como os ingresos totais para cada grupo de contas empresariais identificadas pola súa xerarquía. Para obter máis información, consulte [Definir e xestionar medidas](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Crea segmentos baseados en contas empresariais e a súa xerarquía
+
+O creador de segmentos permítelle crear segmentos de contas empresariais que inclúen opcionalmente información de contacto para cada conta dun segmento. Se tes a xerarquía de contas configurada, podes usar a información da xerarquía de contas na creación do segmento. Para obter máis información, consulte [Crea un novo segmento](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva as túas contas empresariais con coñecementos profundos sobre a súa tendencia ao abandono
+
+O modelo de abandono de clientes predición agora tamén admite contas empresariais. Podes avaliar o risco de abandono non só para unha conta, senón tamén para unha combinación dunha conta e unha categoría de produto ou servizo que che compran. Esta adición axúdache a comprender se é máis probable que unha conta deixe de comprarche en xeral ou só para unha determinada categoría de bens ou servizos. Para axudarche aínda máis a usar este modelo de IA, tamén enumera os motivos polos que é probable que unha conta se abandone. Para obter máis información, consulte [Churn de transaccións predición (vista previa)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Consulta os contactos dunha conta empresarial na vista de Cliente
+
+Se as contas empresariais están asignadas a contas relacionadas, a aplicación Customer Insights mostra estes contactos relacionados como parte da vista de detalles do cliente. Para obter máis información, consulte [Perfís de clientes](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Actualizacións de setembro de 2021
 
@@ -78,7 +113,7 @@ As actualizacións de maio de 2021 inclúen varias funcións, actualizacións de
 
 ### <a name="data-ingestion"></a>Inxestión de datos
 
-- **Ver ou modificar a definición das entidades ou os metadatos ao anexar datos de Azure Data Lake Storage** Agora pode ver e editar a definición das entidades ou os metadatos na información do público ao anexar datos dun cartafol de Common Data Model en Azure Data Lake Storage. Esta capacidade proporciona comentarios, validación do modelo e comprobación de erros en tempo real. Permite editar tanto o ficheiro model.json como o manifest.json sen problemas.
+- **Consulta ou modifica os metadatos ou a definición de entidade ao anexar datos do teu Azure Data Lake Storage** Agora podes ver e editar os metadatos ou a definición de entidade nas estatísticas da audiencia ao anexar datos dun cartafol do modelo de datos común no teu Azure Data Lake Storage. Esta capacidade proporciona comentarios, validación do modelo e comprobación de erros en tempo real. Permite editar tanto o ficheiro model.json como o manifest.json sen problemas.
 
 ### <a name="extensibility"></a>Extensibilidade
 
@@ -153,7 +188,7 @@ As actualizacións de marzo de 2021 inclúen varias funcións, actualizacións d
 
 ### <a name="data-ingestion"></a>Inxestión de datos
 
-- **Conectarse ás fontes de datos locais usando fluxos de datos e pasarelas de Power Platform** Comprácenos anunciar a versión preliminar de fluxos de datos de Power Platform e conectividade local usando pasarelas en Customer Insights cun ambiente de Power Platform ou Dataverse asociado. Calquera nova fonte de datos creada nun contorno Customer Insights cun ambiente de Dataverse ligado establecerase por defecto en fluxos de datos de Power Platform que achegan a conectividade de datos local e un rico conxunto de conectores e capacidades de transformación.
+- **Conéctese a fontes de datos local usando fluxos de datos e pasarelas Power Platform** Temos o pracer de anunciar a vista previa dos fluxos de datos Power Platform e da conectividade local mediante pasarelas en Customer Insights cun entorno asociado Power Platform ou Dataverse. Calquera fonte de datos nova creada nun ambiente de Customer Insights cun ambiente Dataverse ligado terá como predeterminado fluxos de datos Power Platform que traerá a conectividade de datos local e un rico conxunto de conectores e capacidades de transformación.
 
 ### <a name="extensibility"></a>Extensibilidade
 
@@ -215,7 +250,7 @@ As actualizacións de febreiro de 2021 inclúen varias características, actuali
 
 - **O contorno de copia admite máis tipos de fontes de datos**
 
-  Os administradores poden copiar as configuracións de contorno a un novo contorno da mesma organización. Esta función amplía a funcionalidade do ambiente de copia para casos en que se usan as orixes de datos baseadas nun lago de datos xestionado de Microsoft Dataverse ou nun cartafol de Common Data Model.
+  Os administradores poden copiar as configuracións de contorno a un novo contorno da mesma organización. Esta función amplía a funcionalidade do contorno de copia para os casos nos que se utilicen fontes de datos baseadas nun lago de datos xestionado Microsoft Dataverse ou nun cartafol de modelo de datos común.
 
 ## <a name="january-2021-updates"></a>Actualizacións de xaneiro de 2021
 
@@ -241,7 +276,7 @@ As actualizacións de xaneiro de 2021 inclúen varias características, actualiz
 
 #### <a name="system-administration"></a>Administración do sistema
 
-- **Comparta datos sen problemas con Microsoft Dataverse** Agora pode compartir a saída de Customer Insights con aplicacións de Microsoft Dataverse que usan o Data Lake xestionado de Microsoft Dataverse. Unha vez asociado o ambiente de Dataverse a Customer Insights, ten a opción de habilitar o uso compartido de datos.
+- **Comparte datos sen problemas con Microsoft Dataverse** Agora podes compartir a saída de Customer Insights coas aplicacións Microsoft Dataverse usando o Microsoft Dataverse Managed Data Lake. Unha vez que asocias un ambiente Dataverse con Customer Insights, terás a opción de activar a compartición de datos.
   Para obter máis información, consulte [Xestionar ambientes](manage-environments.md).
 
 

@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights
 description: Xestione as exportacións para compartir datos.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673321"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732133"
 ---
 # <a name="exports-preview-overview"></a>Visión xeral das exportacións (versión preliminar)
 
@@ -97,7 +97,9 @@ Despois de crear destinos de exportación, aparecen en **Datos** > **Exportació
 
 Cada exportación que configura ten unha programación de actualización. Durante unha actualización, o sistema busca datos novos ou actualizados para incluír nunha exportación. Por defecto, as exportacións execútanse como parte de todas as [actualización do sistema programadas](system.md#schedule-tab). Pode personalizar a programación de actualización ou desactivala para executar as exportacións manualmente.
 
-As programacións de exportación dependen do estado do seu ambiente. Se hai actualizacións en curso nas [dependencias](system.md#refresh-policies) cando debería iniciarse unha exportación programada, o sistema primeiro completará as actualizacións e logo executará a exportación. Pode ver cando se actualizou por última vez unha exportación na columna **Actualizado**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+As programacións de exportación dependen do estado do seu ambiente. Se hai actualizacións en curso nas [dependencias](system.md#refresh-processes) cando debería iniciarse unha exportación programada, o sistema primeiro completará as actualizacións e logo executará a exportación. Pode ver cando se actualizou por última vez unha exportación na columna **Actualizado**.
 
 ### <a name="schedule-exports"></a>Programar exportacións
 

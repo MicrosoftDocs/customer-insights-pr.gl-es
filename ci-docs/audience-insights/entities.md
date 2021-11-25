@@ -1,7 +1,7 @@
 ---
 title: Entidades e conxuntos de datos
 description: Vexa os datos na páxina de entidades.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033813"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732078"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades na información sobre o público
 
-Despois de [configurar as súas orixes de datos](data-sources.md), vaia á páxina **Entidades** para avaliar a calidade dos datos inxeridos. As entidades considéranse conxuntos de datos. Múltiples capacidades de Dynamics 365 Customer Insights constrúense arredor destas entidades. Revisalas de preto pode axudarlle a validar o resultado desas capacidades.
+Despois de [configurar as súas orixes de datos](data-sources.md), vaia á páxina **Entidades** para avaliar a calidade dos datos inxeridos. As entidades considéranse conxuntos de datos. En torno a estas entidades constrúense varias capacidades de Dynamics 365 Customer Insights. Revisalas de preto pode axudarlle a validar o resultado desas capacidades.
 
 A páxina **Entidades** enumera entidades e inclúe varias columnas:
 
@@ -26,9 +26,10 @@ A páxina **Entidades** enumera entidades e inclúe varias columnas:
 - **Orixe**: tipo de orixes de datos que inxeriron a entidade
 - **Creado por**: nome da persoa que creou a entidade
 - **Data e hora de creación**: data e hora de creación da entidade
-- **Actualizado por**: nome da persoa que actualizou a entidade
-- **Última actualización**: data e hora da última actualización da entidade
-- **Última actualización**: data e hora da última actualización de datos
+- **Actualizado** : Nome da persoa que actualizou a entidade
+- **Estado** : Detalles sobre a última actualización da entidade
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Explorar os datos dunha entidade específica
 

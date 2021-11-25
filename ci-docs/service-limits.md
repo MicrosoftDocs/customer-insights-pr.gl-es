@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483665"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791979"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Límites de servizo en capacidades de Customer Insights
 
@@ -22,11 +22,11 @@ Este artigo describe os límites internos para o servizo de Customer Insights, q
 
 ## <a name="audience-insights"></a>Información do público
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Límites de servizo na capacidade de información do público de Dynamics 365 Customer Insights
+### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Límites do servizo na capacidade de información sobre o público Dynamics 365 Customer Insights
 
 | De áreas  | Límites  | Notas |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmentos e medidas | 100 segmentos ou medidas. | O número total de [segmentos](audience-insights/segments.md) e [medidas](audience-insights/measures.md) activos combinados non poden superar os 100.  |
+| Segmentos, medidas e predicións | 300  | O número total de [segmentos](audience-insights/segments.md),[medidas](audience-insights/measures.md), e [predicións](audience-insights/predictions.md) combinados non poden superar os 300.  |
 | Relacións | 20 niveis de profundidade nas relacións nos camiños da entidade. | Ao crear [segmentos](audience-insights/segments.md) ou [medidas](audience-insights/measures.md) usando a interface do creador, os camiños de entidades poden ter ata 20 saltos de relación entre a entidade de inicio e a entidade de destino.  |
 
 
