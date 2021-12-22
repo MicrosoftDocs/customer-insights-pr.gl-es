@@ -1,7 +1,7 @@
 ---
 title: Crear contornos en Customer Insights
 description: Pasos para crear ambientes cunha subscrición con licenza para Dynamics 365 Customer Insights.
-ms.date: 10/14/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673389"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892336"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un ambiente na información do público
 
@@ -77,6 +77,9 @@ Se crea varios contornos de Customer Insights e elixe gardar as entidades de sa�
 O paso **Microsoft Dataverse** permítelle conectar Customer Insights co seu ambiente de Dataverse.
 
 Para usar [modelos de predición listos para usar](predictions-overview.md#out-of-box-models), configure o uso compartido de datos con Dataverse. Ou pode activar a inxestión de datos desde orixes de datos locais, proporcionando o URL do contorno de Microsoft Dataverse que administra a súa organización. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun lago de datos xestionado de Dataverse.
+
+> [!IMPORTANT]
+> Insights de clientes e Dataverse deben estar na mesma rexión para poder compartir datos.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse.":::
 

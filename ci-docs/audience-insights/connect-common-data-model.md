@@ -1,7 +1,7 @@
 ---
 title: Conectar os datos de Common Data Model a unha conta de Azure Data Lake
 description: Traballe con datos de Common Data Model usando Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033124"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900195"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar cun cartafol de Common Data Model cunha conta de Azure Data Lake
 
@@ -30,7 +30,7 @@ Este artigo ofrece información sobre como inxerir datos desde un cartafol de Co
 
 - O Azure Data Lake que desexa conectar e do que inxerir datos ten que estar na mesma rexión de Azure que o ambiente de Dynamics 365 Customer Insights. Non se admiten conexións a un cartafol de Common Data Model desde un lago de datos nunha rexión de Azure diferente. Para coñecer a rexión de Azure do entorno, vaia a **Administrar** > **Sistema** > **Acerca de** na información do público.
 
-- Os datos almacenados en servizos en liña pódense almacenar nun lugar diferente a onde se procesan ou almacenan os datos en Dynamics 365 Customer Insights. Ao importar ou conectarse a datos almacenados en servizos en liña, acepta que os datos poden ser transferidos a e almacenados con Dynamics 365 Customer Insights. [Obteña máis información no Centro de confianza de Microsoft.](https://www.microsoft.com/trust-center)
+- Os datos almacenados nos servizos en liña poden almacenarse nun lugar diferente do que se procesan ou almacenan os datos en Dynamics 365 Customer Insights.Ao importar ou conectarse a datos almacenados nos servizos en liña, acepta que os datos se poidan transferir e almacenar con Dynamics 365 Customer Insights . [Máis información no Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Conectarse a un cartafol de Common Data Model
 
@@ -38,12 +38,11 @@ Este artigo ofrece información sobre como inxerir datos desde un cartafol de Co
 
 1. Seleccione **Engadir orixe de datos**.
 
-1. Seleccione **Conectarse a un cartafol de Common Data Model**, introduza un **Nome** para a orixe de datos e seleccione **Seguinte**. Dea nome ás instrucións: 
-   - Comece por unha letra.
-   - Use só letras e números. Non se permiten caracteres especiais nin espazos.
-   - Empregue entre 3 e 64 caracteres.
+1. Seleccione **Almacenamento Azure Data Lake**, introduce a **Nome** para o orixe de datos e, a continuación, seleccione **A continuación**.
 
-1. Pode escoller entre usar unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Introduza a información do **contedor** e seleccione **Seguinte**.
+   - Se se lle solicita, seleccione un dos conxuntos de datos de mostra correspondentes ao seu sector e, a continuación, seleccione **A continuación**. 
+
+1. Pode escoller entre usar unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md). Introduza o **Enderezo do servidor**, seleccione **acceder** e, a continuación, seleccione **A continuación**.
    > [!div class="mx-imgBorder"]
    > ![Cadro de diálogo para introducir novos detalles de conexión para Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Este artigo ofrece información sobre como inxerir datos desde un cartafol de Co
    > [!NOTE]
    > Calquera ficheiro model.json ou manifest.json asociado a outra orixe de datos do contorno non aparecerá na lista.
 
-1. Obterá unha lista de entidades dispoñibles no ficheiro model.json ou manifest.json seleccionado. Pode revisar e seleccionar na lista de entidades dispoñibles e seleccionar **Gardar**. Todas as entidades seleccionadas inxeriranse a partir da orixe de datos nova.
+1. Verá unha lista de entidades dispoñibles no ficheiro model.json ou manifest.json seleccionado. Revisa e selecciona desde a lista de entidades dispoñibles e, a continuación, selecciona **Gardar**. Todas as entidades seleccionadas inxeriranse a partir da orixe de datos nova.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo que mostra unha lista de entidades dun ficheiro model.json.](media/review-entities.png)
 
-8. Indique que entidades de datos quere para activar a creación de perfís de datos e seleccione **Gardar**. A creación de perfís de datos activa as análises e outras funcionalidades. Pode seleccionar a entidade enteira, que selecciona todos os atributos da entidade, ou seleccionar certos atributos que elixa. Por defecto, ningunha entidade está habilitada para a creación de perfís de datos.
+8. Indique cales son as entidades de datos que desexa activar o perfil de datos e, a continuación, seleccione **Gardar**. A creación de perfís de datos activa as análises e outras funcionalidades. Pode seleccionar a entidade enteira, que selecciona todos os atributos da entidade, ou seleccionar certos atributos que elixa. Por defecto, ningunha entidade está habilitada para a creación de perfís de datos.
    > [!div class="mx-imgBorder"]
    > ![Cadro de diálogo que mostra a creación de perfís de datos.](media/dataprofiling-entities.png)
 

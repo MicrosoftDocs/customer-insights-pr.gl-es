@@ -1,7 +1,7 @@
 ---
 title: Actualización incremental para fontes de datos baseadas en Power Query
 description: Actualice datos novos e actualizados para grandes orixes de datos baseadas en Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377832"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900266"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualización incremental para orixes de datos baseadas en Power Query
+
+Este artigo explica como configurar a actualización incremental para fontes de datos baseada en Power Query.
 
 A actualización incremental para as orixes de datos ofrece as seguintes vantaxes:
 
@@ -30,9 +32,9 @@ As estadísticas do público permiten actualizar incrementalmente as fontes de d
 
 1. [Cree unha nova orixe de datos baseada en Power Query](connect-power-query.md).
 
-1. Indique un nome da orixe de datos.
+1. Proporcionar a **Nome** para o orixe de datos.
 
-1. Seleccione unha orixe de datos que admita a actualización incremental, como a base de datos de Azure SQL.
+1. Seleccione un orixe de datos que admita a actualización incremental, como [Base de datos Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Seleccione as entidades ou táboas para inxerir.
 

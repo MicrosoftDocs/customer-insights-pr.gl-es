@@ -4,7 +4,7 @@
   href: overview.md
 - name: Proba gratuíta
   items:
-    - name: Inscribirse nunha proba gratuíta
+    - name: Inscribirse para unha proba gratuíta
       href: trial-signup.md
     - name: Preguntas máis frecuentes acerca da proba
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Engadir un cartafol de Common Data Model como orixe de datos
           href: audience-insights/connect-common-data-model.md
-        - name: Engade Dataverse lago de datos xestionado
+        - name: Engadir lago de datos xestionado de Dataverse
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Actualización incremental para orixes de datos
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Enderezos mellorados
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Mellorar os datos da empresa
+        - name: Datos de empresa enriquecidos
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Enriquecer con Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -94,6 +94,8 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Enriquecer con Experian
           href: audience-insights/enrichment-experian.md
+        - name: Enriquecer con Office 365 datos
+          href: audience-insights/enrichment-office.md
         - name: Enriquecer con importación personalizada de SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmentos
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Experimentos con Aprendizaxe automática de Azure
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Experimentos de Azure Machine Learning Studio
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Xestionar predicións
           href: audience-insights/manage-predictions.md
         - name: Crear segmentos baseados en predicións
@@ -166,11 +166,11 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analíticas
+            - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Plataforma Adobe Experience
+            - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -182,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: "Dynamics\_365 Sales"
               href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook Xestor de anuncios
+            - name: Xestor de anuncios de Facebook
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
@@ -218,7 +218,7 @@
               href: audience-insights/customer-card-add-in.md
             - name: Microsoft Teams (bot)
               href: audience-insights/export-teams-bot.md
-            - name: "Power\_Apps"
+            - name: Power Apps
               href: audience-insights/export-power-apps.md
             - name: Power Automate
               href: audience-insights/export-power-automate.md
@@ -240,6 +240,8 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Conectar cunha conta de almacenamento de ADLS mediante unha entidade de seguranza do servizo
               href: audience-insights/connect-service-principal.md
+            - name: Exportar rexistros de diagnóstico
+              href: audience-insights/diagnostics.md
     - name: Extensibilidade
       items:
         - name: Integrar datos web a partir de información de interacción
@@ -258,9 +260,9 @@
       href: consent-management/index.yml
     - name: Visión xeral da capacidade
       href: consent-management/overview.md
-    - name: Comezar
+    - name: Introdución
       items:
-        - name: Comezar
+        - name: Introdución
           href: consent-management/get-started.md
         - name: Conceptos e terminoloxía
           href: consent-management/glossary.md
@@ -282,7 +284,7 @@
           href: consent-management/system-settings.md
         - name: Xestionar usuarios e permisos
           href: consent-management/manage-users.md
-    - name: Use os datos de consentimento
+    - name: Usa os datos de consentimento
       items:
         - name: Crea predicións con datos de consentimento
           href: consent-management/predictions-consent-data.md
@@ -338,9 +340,9 @@
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Exemplo de SDK web
           href: engagement-insights/websdk-sample.md
-        - name: Titorial sobre o SDK de Android
+        - name: Titorial do SDK de Android
           href: engagement-insights/get-started-android.md
-        - name: Exemplo do SDK Android
+        - name: Exemplo de SDK de Android
           href: engagement-insights/androidsdk-sample.md
         - name: Titorial sobre o SDK de iOS
           href: engagement-insights/get-started-ios.md

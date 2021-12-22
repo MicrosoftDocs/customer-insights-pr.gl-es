@@ -1,7 +1,7 @@
 ---
 title: Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo
 description: Use unha entidade de servizo de Azure para conectar co seu propio lago de datos.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645170"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900256"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure
 
-As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Siga lendo para aprender a conectarse a Dynamics 365 Customer Insights cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure en lugar de claves de conta de almacenamento. 
+Este artigo explica como conectarse Dynamics 365 Customer Insights cunha Azure Data Lake Storage conta mediante un principal de servizo de Azure en lugar de claves de conta de almacenamento. 
 
-Pode usar a entidade de servizo para [engadir ou editar un cartafol de Common Data Model como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un ambiente](create-environment.md) de forma segura.
+As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes usar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un entorno](create-environment.md).
 
 > [!IMPORTANT]
 > - A conta de Data Lake Storage que empregará o principal do servizo debe ter [habilitado o espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace).
-> - Precisa permisos de administrador para a súa subscrición a Azure para crear a entidade de seguranza do servizo.
+> - Necesitas permisos de administrador para a túa subscrición a Azure para crear un principal de servizo.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear unha entidade de servizo de Azure para Customer Insights
 
-Antes de crear unha nova entidade de servizo para a información do público ou a información de interacción, comprobe se xa existe na súa organización.
+Antes de crear un novo principal de servizo para Customer Insights, comprobe se xa existe na súa organización.
 
 ### <a name="look-for-an-existing-service-principal"></a>Buscar unha entidade de seguranza do servizo existente
 

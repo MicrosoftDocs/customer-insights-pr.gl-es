@@ -1,5 +1,5 @@
 ---
-title: Exportar datos de Customer Insights a servidores SFTP
+title: Exportar datos de Customer Insights a hosts SFTP (vídeo)
 description: Aprenda a configurar a conexión e exportar a unha localización de SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673914"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927555"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segmentos e outros datos a SFTP (versión preliminar)
 
@@ -28,6 +28,7 @@ Use os datos dos seus clientes en aplicacións de terceiros exportándoos a unha
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
+- Os destinos SFTP detrás dos cortalumes non son compatibles actualmente. 
 - O tempo de execución dunha exportación depende do rendemento do seu sistema. Recomendamos dous núcleos de CPU e 1 Gb de memoria como configuración mínima do seu servidor. 
 - As entidades exportadoras con ata 100 millóns de perfís de clientes poden tardar 90 minutos cando se usa a configuración mínima recomendada de dous núcleos de CPU e 1 Gb de memoria. 
 

@@ -1,7 +1,7 @@
 ---
-title: Enriquecemento de mellora dos enderezos
+title: Enriquecemento de mellora de enderezos (vídeo)
 description: Enriqueza e normalice a información dos enderezos dos perfís de clientes cos modelos de Microsoft.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643394"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927509"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecemento dos perfís de clientes con enderezos mellorados
 
@@ -101,6 +101,16 @@ Para iniciar o proceso de enriquecemento, seleccione **Executar** na barra de co
 Despois de completar o proceso de enriquecemento, pode consultar os datos dos perfís de clientes recentemente enriquecidos en **Os meus enriquecementos**. Ademais, atopará a hora da última actualización e o número de perfís enriquecidos.
 
 Pode acceder a unha vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
+
+### <a name="overview-card"></a>Tarxeta xeral
+
+A tarxeta de visión xeral mostra detalles sobre a cobertura do enriquecemento. 
+
+* **Clientes procesados e modificados** : O número de perfís de clientes que se enriqueceron con éxito.
+
+* **Clientes procesados e non modificados** : O número de perfís de clientes que foron recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
+
+* **Clientes non procesados e non modificados** : O número de perfís que non foron recoñecidos. Normalmente para datos de entrada que non son válidos ou non admitidos polo enriquecemento.
 
 ## <a name="next-steps"></a>Pasos seguintes
 

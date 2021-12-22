@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e futuras
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,35 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753115"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884260"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información sobre a audiencia de Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcións a longo prazo, bótalle un ollo ao [Plans de lanzamento de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
+Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcionalidades a longo prazo, vexa os [plans de versións de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
 Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver as funcionalidades antes que outras. A menos que se especifique o contrario, non é necesario que realice ningunha acción e actualizaremos a aplicación automaticamente sen tempo de inactividade.
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Actualizacións de novembro de 2021
+
+As actualizacións de novembro de 2021 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>A subscrición ao segmento xa está dispoñible en Dataverse
+
+A información sobre a pertenza do segmento para os perfís de clientes xa está dispoñible en Dataverse xunto cos perfís e coñecementos dos clientes. As aplicacións de acción e as aplicacións baseadas en modelos de Dynamics 365 poden usar estes datos para buscar detalles de pertenza ao segmento dun cliente determinado.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>As actividades admiten detalles de contacto para as contas empresariais
+
+Agora podes configurar, mostrar e filtrar as actividades dos contactos nos cronogramas da actividade da túa conta empresarial para comprender mellor que contactos da conta participaron en actividades específicas.
 
 ## <a name="october-2021-updates"></a>Actualizacións de octubre de 2021
 
@@ -113,7 +125,7 @@ As actualizacións de maio de 2021 inclúen varias funcións, actualizacións de
 
 ### <a name="data-ingestion"></a>Inxestión de datos
 
-- **Consulta ou modifica os metadatos ou a definición de entidade ao anexar datos do teu Azure Data Lake Storage** Agora podes ver e editar os metadatos ou a definición de entidade nas estatísticas da audiencia ao anexar datos dun cartafol do modelo de datos común no teu Azure Data Lake Storage. Esta capacidade proporciona comentarios, validación do modelo e comprobación de erros en tempo real. Permite editar tanto o ficheiro model.json como o manifest.json sen problemas.
+- **Ver ou modificar a definición das entidades ou os metadatos ao anexar datos de Azure Data Lake Storage** Agora pode ver e editar a definición das entidades ou os metadatos na información do público ao anexar datos dun cartafol de Common Data Model en Azure Data Lake Storage. Esta capacidade proporciona comentarios, validación do modelo e comprobación de erros en tempo real. Permite editar tanto o ficheiro model.json como o manifest.json sen problemas.
 
 ### <a name="extensibility"></a>Extensibilidade
 
@@ -188,7 +200,7 @@ As actualizacións de marzo de 2021 inclúen varias funcións, actualizacións d
 
 ### <a name="data-ingestion"></a>Inxestión de datos
 
-- **Conéctese a fontes de datos local usando fluxos de datos e pasarelas Power Platform** Temos o pracer de anunciar a vista previa dos fluxos de datos Power Platform e da conectividade local mediante pasarelas en Customer Insights cun entorno asociado Power Platform ou Dataverse. Calquera fonte de datos nova creada nun ambiente de Customer Insights cun ambiente Dataverse ligado terá como predeterminado fluxos de datos Power Platform que traerá a conectividade de datos local e un rico conxunto de conectores e capacidades de transformación.
+- **Conectarse ás fontes de datos locais usando fluxos de datos e pasarelas de Power Platform** Comprácenos anunciar a versión preliminar de fluxos de datos de Power Platform e conectividade local usando pasarelas en Customer Insights cun ambiente de Power Platform ou Dataverse asociado. Calquera nova fonte de datos creada nun contorno Customer Insights cun ambiente de Dataverse ligado establecerase por defecto en fluxos de datos de Power Platform que achegan a conectividade de datos local e un rico conxunto de conectores e capacidades de transformación.
 
 ### <a name="extensibility"></a>Extensibilidade
 
@@ -250,7 +262,7 @@ As actualizacións de febreiro de 2021 inclúen varias características, actuali
 
 - **O contorno de copia admite máis tipos de fontes de datos**
 
-  Os administradores poden copiar as configuracións de contorno a un novo contorno da mesma organización. Esta función amplía a funcionalidade do contorno de copia para os casos nos que se utilicen fontes de datos baseadas nun lago de datos xestionado Microsoft Dataverse ou nun cartafol de modelo de datos común.
+  Os administradores poden copiar as configuracións de contorno a un novo contorno da mesma organización. Esta función amplía a funcionalidade do ambiente de copia para casos en que se usan as orixes de datos baseadas nun lago de datos xestionado de Microsoft Dataverse ou nun cartafol de Common Data Model.
 
 ## <a name="january-2021-updates"></a>Actualizacións de xaneiro de 2021
 
@@ -276,7 +288,7 @@ As actualizacións de xaneiro de 2021 inclúen varias características, actualiz
 
 #### <a name="system-administration"></a>Administración do sistema
 
-- **Comparte datos sen problemas con Microsoft Dataverse** Agora podes compartir a saída de Customer Insights coas aplicacións Microsoft Dataverse usando o Microsoft Dataverse Managed Data Lake. Unha vez que asocias un ambiente Dataverse con Customer Insights, terás a opción de activar a compartición de datos.
+- **Comparta datos sen problemas con Microsoft Dataverse** Agora pode compartir a saída de Customer Insights con aplicacións de Microsoft Dataverse que usan o Data Lake xestionado de Microsoft Dataverse. Unha vez asociado o ambiente de Dataverse a Customer Insights, ten a opción de habilitar o uso compartido de datos.
   Para obter máis información, consulte [Xestionar ambientes](manage-environments.md).
 
 

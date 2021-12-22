@@ -1,7 +1,7 @@
 ---
 title: Usar fontes de datos para inxerir datos
 description: Aprenda a importar datos de varias orixes.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,36 +10,39 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732140"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900340"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-A capacidade de información sobre a audiencia en Dynamics 365 Customer Insights conéctase a datos dun amplo conxunto de fontes. Conectarse a unha orixe de datos a miúdo chámase proceso de *inxestión de datos*. Despois de inxerir os datos, pode [unificar](data-unification.md) e tomar medidas ao respecto.
+A capacidade de información do público de Dynamics 365 Customer Insights conéctase a datos dun amplo conxunto de fontes. Conectarse a unha orixe de datos a miúdo chámase proceso de *inxestión de datos*. Despois de inxerir os datos, pode [unificar](data-unification.md) e tomar medidas ao respecto.
 
 ## <a name="add-a-data-source"></a>Engadir unha orixe de datos
 
-Consulte os artigos detallados sobre como engadir unha orixe de datos, dependendo da opción que escolla.
+Consulta os artigos detallados para saber como engadir un orixe de datos, dependendo da opción que elixas.
 
-Podes engadir unha orixe de datos de tres xeitos principais:
+Podes engadir as seguintes fontes de datos:
 
-- [A través de decenas de conectores Power Query](connect-power-query.md)
-- [Desde un cartafol de Common Data Model](connect-common-data-model.md)
-- [Do teu propio lago Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [Conectores Power Query](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse lago](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Se está a usar a versión de proba, a sección de métodos de importación inclúe a **Biblioteca de datos de Customer Insights** opción. Escolla esta opción para seleccionar un conxunto de datos de mostra dispoñible para varias industrias. Para obter máis información, consulte [Dynamics 365 Customer Insights xuízo](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Engadir datos de fontes de datos locais
 
-A inxestión de datos das fontes de datos local nas estatísticas de audiencia é compatible en función dos fluxos de datos Microsoft Power Platform. Os fluxos de datos pódense activar en Customer Insights mediante [proporcionando o URL do entorno Microsoft Dataverse](create-environment.md) ao configurar o ambiente.
+Admite datos interesantes de orixes de datos locais da Información do público en función dos fluxos de datos de Microsoft Power Platform. Podes activar os fluxos de datos en Customer Insights mediante [proporcionando o Microsoft Dataverse URL do entorno](create-environment.md) ao configurar o ambiente.
 
-As fontes de datos que se crean despois de asociar un ambiente Dataverse con Customer Insights utilizarán [Power Platform fluxos de datos](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante a pasarela de datos. Elimina e recrea fontes de datos que existían antes de que se asociase un ambiente Dataverse [use as pasarelas de datos local](/data-integration/gateway/service-gateway-app).
+Fontes de datos que se crean despois de asociar a Dataverse ambiente co uso de Customer Insights [Power Platform fluxos de datos](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante a pasarela de datos. Pode eliminar e recrear fontes de datos que existían antes de a Dataverse ambiente estaba asociado [usando pasarelas de datos local](/data-integration/gateway/service-gateway-app).
 
-As pasarelas de datos dun contorno existente Power BI ou Power Apps estarán visibles e podes reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente Microsoft Power Platform onde podes ver e configurar pasarelas de datos local.
+As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Microsoft Power Platform onde pode ver e configurar pasarelas de datos locais.
 
 ## <a name="review-ingested-data"></a>Revisa os datos inxeridos
 

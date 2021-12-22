@@ -1,7 +1,7 @@
 ---
 title: Experimentos de Azure Machine Learning
 description: Use modelos baseados en Azure Machine Learning en Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033170"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881736"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Usar modelos baseados en Azure Machine Learning
 
-Os datos unificados en Dynamics 365 Customer Insights son unha fonte para construír modelos de aprendizaxe automática que poden xerar información comercial adicional. Customer Insights intégrase con Machine Learning Studio (clásico) e Azure Machine Learning para usar os seus propios modelos personalizados. Consulte os [Experimentos de Machine Learning Studio (clásico)](machine-learning-studio-experiments.md) para ver exemplos de experimentos construídos en Machine Learning Studio (clásico). 
+Os datos unificados en Dynamics 365 Customer Insights son unha fonte para construír modelos de aprendizaxe automática que poden xerar información comercial adicional. Customer Insights intégrase coa Aprendizaxe automática de Azure para usar os seus propios modelos personalizados.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -35,7 +35,7 @@ Os datos unificados en Dynamics 365 Customer Insights son unha fonte para constr
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Traballar co deseñador de Azure Machine Learning
 
-O deseñador de Azure Machine Learning ofrece un lenzo visual onde pode arrastrar e soltar conxuntos de datos e módulos, semellante a Machine Learning Studio (clásico). Unha canle por lotes creada a partir do deseñador pódese integrar en Customer Insights se se configura de acordo. 
+O deseñador de Azure Aprendizaxe automático ofrece un lenzo visual onde podes arrastrar e soltar conxuntos de datos e módulos. Unha canle por lotes creada a partir do deseñador pódese integrar en Customer Insights se se configura de acordo. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Traballar co SDK de Azure Machine Learning
 

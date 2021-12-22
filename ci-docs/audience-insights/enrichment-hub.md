@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770115"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884214"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -34,7 +34,7 @@ No separador **Descubrir**, atopará todas as opcións de enriquecemento compati
 - [Marcas](enrichment-microsoft.md) fornecidas por Microsoft
 - [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
 - [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft 
-- [Datos demográficos](enrichment-experian.md) proporcionados por Experian
+- [Demografía](enrichment-experian.md) fornecida por Experian
 - [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
 
@@ -46,6 +46,7 @@ No separador **Descubrir**, atopará todas as opcións de enriquecemento compati
 - [Datos de localización](enrichment-here.md) subministrados por HERE Technologies 
 - [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
+- [Datos de participación da conta](enrichment-office.md) proporcionado por Microsoft
 
 ---
 
@@ -77,7 +78,7 @@ A entidade que se vai enriquecer especifícase durante a configuración de enriq
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Vexa o progreso do proceso de enriquecemento
 
-Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado e os problemas potenciais mentres se actualiza ou despois de completar a actualización. Comprenda que procesos están implicados para actualizar un enriquecemento e canto tardou en executalos. O estado de enriquecemento é compatible con Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
+Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado e os problemas potenciais mentres se actualiza ou despois de completar a actualización. Comprenda que procesos están implicados para actualizar un enriquecemento e canto tardou en executalos. Admítese o estado de enriquecemento para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
 
 Para ver o estado dun enriquecemento
 

@@ -1,7 +1,7 @@
 ---
 title: Activar regras de consentimento para segmentos
 description: Sigue estes pasos para vincular os datos de consentimento e activar as comprobacións de consentimento nas estatísticas da audiencia. Un administrador tamén pode desactivar as comprobacións de consentimento.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790774"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884072"
 ---
 # <a name="activate-consent-rules"></a>Activar regras de consentimento
 
@@ -49,3 +49,6 @@ Para deixar de usar os datos de consentimento nas estatísticas da audiencia, un
 1. Seleccione o **Consentimento (vista previa)** ficha.
 
 1. No **Activa as comprobacións de consentimento** sección, configure o interruptor en **Desactivado**.
+
+> [!TIP]
+> Para deixar de usar a capacidade de xestión do consentimento, consulte [Configuración do sistema no Centro de consentimento (vista previa)](../consent-management/system-settings.md).
