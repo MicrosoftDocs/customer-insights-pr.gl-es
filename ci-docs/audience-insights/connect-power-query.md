@@ -1,6 +1,6 @@
 ---
-title: Inxerir datos a través dun conector Power Query (vídeo)
-description: Conectores para orixes de datos baseados en Power Query.
+title: Inxerir datos a través de a Power Query conector (contén vídeo)
+description: Conectores para fontes de datos baseados en Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903838"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934976"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Conéctarse a unha orixe de datos Power Query
+# <a name="connect-to-a-power-query-data-source"></a>Conectar a a Power Query orixe de datos
 
 Power Query ofrece un amplo conxunto de conectores para inxerir datos. A maioría destes conectores son compatibles con Dynamics 365 Customer Insights. 
 
-Engadindo fontes de datos baseadas en conectores Power Query xeralmente seguen os pasos descritos nesta sección. Non obstante, dependendo do conector que use, é necesaria unha información diferente. Para obter máis información, consulte a documentación sobre conectores individuais na páxina [Referencia do conector Power Query](/power-query/connectors/).
+Engadir fontes de datos baseadas en Power Query conectores xeralmente segue os pasos descritos nesta sección. Non obstante, dependendo do conector que use, é necesaria unha información diferente. Para obter máis información, consulte a documentación sobre conectores individuais na páxina [Power Query referencia do conector](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -40,12 +40,12 @@ Engadindo fontes de datos baseadas en conectores Power Query xeralmente seguen o
 
 1. Seleccione **Transformar datos**. Neste paso, engadirá entidades á súa orixe de datos. As entidades son conxuntos de datos. Se ten unha base de datos que inclúe varios conxuntos de datos, cada conxunto de datos é a súa propia entidade.
 
-1. O diálogo **Power Query - Editar consultas** permítelle revisar e refinar os datos. As entidades que os sistemas identificaron na orixe de datos seleccionada aparecen no panel esquerdo.
+1. O **Power Query - Editar consultas** diálogo permítelle revisar e refinar os datos. As entidades que os sistemas identificaron na orixe de datos seleccionada aparecen no panel esquerdo.
 
    > [!div class="mx-imgBorder"]
    > ![Diálogo Editar consultas.](media/data-manager-configure-edit-queries.png "Editar diálogo de consultas")
 
-1. Tamén pode transformar os seus datos. Seleccione unha entidade para editar ou transformar. Use as opcións da ventá de Power Query para aplicar transformacións. Cada transformación aparece na lista **Pasos aplicados**. Power Query ofrece numerosas opcións de transformación predefinidas. Para obter máis información, consulte [Transformacións de Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Tamén pode transformar os seus datos. Seleccione unha entidade para editar ou transformar. Use as opcións do Power Query xanela para aplicar transformacións. Cada transformación aparece na lista **Pasos aplicados**. Power Query ofrece numerosas opcións de transformación predefinidas. Para obter máis información, consulte [Power Query Transformacións](/power-query/power-query-what-is-power-query#transformations).
 
 1. Pode engadir entidades adicionais á súa orixe de datos seleccionando **Obter datos** na caixa de diálogo **Editar consultas**.
 
@@ -54,17 +54,17 @@ Engadindo fontes de datos baseadas en conectores Power Query xeralmente seguen o
    - Se está inxerindo datos dun ficheiro CSV, a primeira fila a miúdo contén cabeceiras. Vaia a **Transformar táboa** e seleccione **Usar cabeceiras como primeira fila**.
    - Asegúrese de que o tipo de datos está configurado correctamente.
 
-1. Seleccione **Gardar** na parte inferior da ventá de Power Query para gardar as transformacións. Despois de gardar, atopará o seu orixe de datos en **Datos** > **Orixes de datos**.
+1. Seleccione **Gardar** na parte inferior do Power Query xanela para gardar as transformacións. Despois de gardar, atopará o seu orixe de datos en **Datos** > **Orixes de datos**.
 
 1. Na páxina **Orixes de datos**, notarás que o novo orixe de datos está en estado **Actualizando**.
 
-## <a name="available-power-query-data-sources"></a>Orixes de datos de Power Query dispoñibles
+## <a name="available-power-query-data-sources"></a>Dispoñible Power Query fontes de datos
 
-Vexa o [Referencia do conector Power Query](/power-query/connectors/) para obter unha lista de conectores que pode usar para importar datos a Customer Insights. 
+Vexa o [Power Query referencia do conector](/power-query/connectors/) para obter unha lista de conectores que pode usar para importar datos a Customer Insights. 
 
-Os conectores cunha marca de verificación na columna **Customer Insights (fluxos de datos)** están dispoñibles para crear novas orixes de datos baseadas en Power Query. Revise a documentación dun conector específico para obter máis información sobre os seus requisitos previos, limitacións e outros detalles.
+Conectores cunha marca de verificación no **Información do cliente (fluxos de datos)** columnas están dispoñibles para crear novas fontes de datos baseadas Power Query. Revise a documentación dun conector específico para obter máis información sobre os seus requisitos previos, limitacións e outros detalles.
 
-## <a name="edit-power-query-data-sources"></a>Editar orixes de datos de Power Query
+## <a name="edit-power-query-data-sources"></a>Editar Power Query fontes de datos
 
 > [!NOTE]
 > É posible que non se poidan facer cambios nas fontes de datos que se están empregando actualmente nun dos procesos da aplicación (*segmentación*, *coincidencia* ou *combinación*, por exemplo). 
@@ -80,9 +80,9 @@ Os conectores cunha marca de verificación na columna **Customer Insights (fluxo
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. Aplique os seus cambios e transformacións no diálogo **Power Query - Editar consultas** como se describe na sección [Crea unha nova orixe de datos](#create-a-new-data-source).
+3. Aplica os teus cambios e transformacións no **Power Query - Editar consultas** diálogo como se describe no [Crea un novo orixe de datos](#create-a-new-data-source) sección.
 
-4. Seleccione **Gardar** en Power Query despois de completar as edicións para gardar os cambios.
+4. Seleccione **Gardar** en Power Query despois de completar as súas edicións para gardar os seus cambios.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

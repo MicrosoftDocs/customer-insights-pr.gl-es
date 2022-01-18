@@ -1,7 +1,7 @@
 ---
-title: Churn de transaccións predición (vídeo)
+title: Churn de transaccións predición (contén vídeo)
 description: Prediga se un cliente está en risco de deixar de comprar os seus servizos ou produtos.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904070"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967745"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predición do abandono da transacción (versión preliminar)
 
@@ -103,10 +103,10 @@ Para contornos baseados en contas empresariais, podemos predicir o cambio transa
 
 1. Seleccione o mosaico **Modelo de abandono do cliente (vista previa)** e seleccione **Usar este modelo**.
 
-1. No panel **Modelo de abandono de clientes**, escolla **Transacción** e seleccione **Comezar**.
+1. No **Modelo de abandono de clientes (vista previa)** panel, escolle **Transacción** e selecciona **Comezar**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Captura de pantalla coa opción de transacción seleccionada no panel do modelo de abandono de clientes.":::
-
+ 
 ### <a name="name-model"></a>Dar nome ao modelo
 
 1. Proporcione un nome para o modelo para distinguilo doutros modelos.
@@ -117,11 +117,11 @@ Para contornos baseados en contas empresariais, podemos predicir o cambio transa
 
 ### <a name="define-customer-churn"></a>Definir renovación do cliente
 
-1. Estableza unha xanela de días para predicir o abandono no campo **Identificar os clientes que poidan abandonar nos seguintes**. Por exemplo, predicir o risco de abandono dos seus clientes durante os próximos 90 días para alinearse cos seus esforzos de retención de mercadotecnia. A predición do risco de abandono por un período de tempo máis longo ou máis curto pode facer máis difícil abordar os factores do seu perfil de risco de abandono, pero depende das necesidades específicas do seu negocio.
+1. Establece o **predición ventá**. Por exemplo, predicir o risco de abandono dos seus clientes durante os próximos 90 días para alinearse cos seus esforzos de retención de mercadotecnia. A predición do risco de abandono por un período de tempo máis longo ou máis curto pode facer máis difícil abordar os factores do seu perfil de risco de abandono, pero depende das necesidades específicas do seu negocio.
    >[!TIP]
-   > Pode seleccionar **Gardar e pechar** en calquera momento para gardar a predición como borrador. Atopará o borrador de predición no separador **As miñas previsións** para continuar.
+   > Podes seleccionar **Garda o borrador** en calquera momento para gardar o predición como borrador. Atopará o borrador de predición no separador **As miñas previsións** para continuar.
 
-1. Introduza o número de días para definir o abandono no campo **Un cliente abandonou se non realizou compras en:**. Por exemplo, se un cliente non realizou compras nos últimos 30 días, é posible que a súa empresa considere que abandonou. 
+1. Introduza o número de días para definir o abandono **Definición de churn** campo. Por exemplo, se un cliente non realizou compras nos últimos 30 días, é posible que a súa empresa considere que abandonou. 
 
 1. Seleccione **Seguinte** para continuar.
 
@@ -129,19 +129,16 @@ Para contornos baseados en contas empresariais, podemos predicir o cambio transa
 
 1. Seleccione **Engadir datos** e escolla o tipo de actividade no panel lateral que contén a información de transacción ou historial de compras requirida.
 
-1. En **Elixir as actividades**, escolla as actividades específicas da actividade seleccionada na que desexa que se centre o cálculo.
+1. Baixo **Selecciona actividades**, escolla as actividades específicas do tipo de actividade seleccionado no que desexa que se centre o cálculo.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panel lateral que mostra a elección de actividades específicas baixo o tipo semántico.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Panel lateral que mostra a elección de actividades específicas baixo o tipo semántico.":::
 
-1. Se aínda non asignou a actividade a un tipo semántico, seleccione **Editar** facelo. Ábrese a experiencia guiada para asignar actividades semánticas. Asigne os seus datos aos campos correspondentes do tipo de actividade seleccionada.
+   Se aínda non asignou a actividade a un tipo semántico, seleccione **Editar** facelo. Ábrese a experiencia guiada para asignar actividades semánticas. Asigne os seus datos aos campos correspondentes do tipo de actividade seleccionada.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de actividade de configuración de páxina.":::
+1. Asigne os atributos semánticos aos campos necesarios para executar o modelo. Se os campos de abaixo non se enchen, configure a relación da súa entidade do historial de compras á entidade *Cliente*. Seleccione **Gardar**.
 
-1. Despois de asignar a actividade ao tipo semántico correspondente, seleccione **Seguinte** para continuar
+1. No **Engade os datos necesarios** paso, seleccione **A continuación** para continuar se non queres engadir máis actividades.
 
-1. Asigne os atributos semánticos aos campos necesarios para executar o modelo. Se os campos de abaixo non se enchen, configure a relación da súa entidade do historial de compras á entidade *Cliente*.
-
-1. Seleccione **Seguinte**.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 

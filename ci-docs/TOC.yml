@@ -44,7 +44,7 @@
       items:
         - name: Visión xeral de orixes de datos
           href: audience-insights/data-sources.md
-        - name: Engadir orixes de datos a través de conectores de Power Query.
+        - name: Engadir fontes de datos mediante Power Query conectores
           href: audience-insights/connect-power-query.md
         - name: Engadir un cartafol de Common Data Model como orixe de datos
           href: audience-insights/connect-common-data-model.md
@@ -80,11 +80,11 @@
       items:
         - name: Enriquecer perfís de clientes
           href: audience-insights/enrichment-hub.md
-        - name: Afinidades de marca e interese
+        - name: Marcas e intereses
           href: audience-insights/enrichment-microsoft.md
         - name: Enderezos mellorados
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Datos de empresa enriquecidos
+        - name: Información da empresa enriquecida
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Enriquecer con Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Predicir abandono de transaccións
               href: audience-insights/predict-transactional-churn.md
+            - name: Analiza o sentimento nos comentarios dos clientes
+              href: audience-insights/sentiment-analysis.md
             - name: Usar os modelos personalizados da Aprendizaxe automática de Azure
               href: audience-insights/custom-models.md
             - name: Completar os datos que faltan parcialmente

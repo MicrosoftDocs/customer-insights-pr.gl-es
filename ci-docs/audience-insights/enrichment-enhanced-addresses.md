@@ -1,5 +1,5 @@
 ---
-title: Enriquecemento de mellora de enderezos (vídeo)
+title: Enriquecemento de mellora de enderezos (contén vídeo)
 description: Enriqueza e normalice a información dos enderezos dos perfís de clientes cos modelos de Microsoft.
 ms.date: 12/16/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927509"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934921"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecemento dos perfís de clientes con enderezos mellorados
 
@@ -110,7 +110,7 @@ A tarxeta de visión xeral mostra detalles sobre a cobertura do enriquecemento.
 
 * **Clientes procesados e non modificados** : O número de perfís de clientes que foron recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
 
-* **Clientes non procesados e non modificados** : O número de perfís que non foron recoñecidos. Normalmente para datos de entrada que non son válidos ou non admitidos polo enriquecemento.
+* **Clientes non procesados e non modificados** : O número de perfís que non foron recoñecidos. Normalmente para datos de entrada non válidos ou non admitidos polo enriquecemento.
 
 ## <a name="next-steps"></a>Pasos seguintes
 

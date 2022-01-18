@@ -1,5 +1,5 @@
 ---
-title: Desenvolvemento de subscricións predición (vídeo)
+title: Desenvolvemento de subscricións predición (contén vídeo)
 description: Fai a predición de se un cliente está en risco por deixar de usar os produtos ou servizos da subscrición da súa empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903970"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967699"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predición da renovación da subscrición (vista previa)
 
@@ -77,7 +77,7 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
 1. Insira o número de **Días desde que rematou a subscrición** que a súa empresa considera que un cliente está nun estado renovado. Este período normalmente gusta para as actividades empresariais como ofertas ou outros esforzos de mercadotecnia que intentan evitar a perda do cliente.
 1. Introduza o número de **Días para investigar o futuro para predicir a renovación** para configurar unha xanela para predicir a renovación. Por exemplo, para predicir o risco de renovación dos seus clientes nos próximos 90 días para axustarse aos seus esforzos de retención de marketing. A predición do risco de abandono por períodos de tempo máis longos ou máis curtos pode facer máis difícil abordar os factores do seu perfil de risco de abandono, dependendo das necesidades específicas da súa empresa. Seleccione **Seguinte** para continuar
    >[!TIP]
-   > Pode seleccionar **Gardar e pechar** en calquera momento para gardar a predición como borrador. Atopará o borrador de predición no separador **As miñas previsións** para continuar.
+   > Podes seleccionar **Garda o borrador** en calquera momento para gardar o predición como borrador. Atopará o borrador de predición no separador **As miñas previsións** para continuar.
 
 ### <a name="add-required-data"></a>Engadir datos necesarios
 
