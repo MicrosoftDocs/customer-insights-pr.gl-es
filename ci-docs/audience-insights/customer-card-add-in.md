@@ -1,6 +1,6 @@
 ---
 title: Complemento da tarxeta de cliente para as aplicacións de Dynamics 365 (contén vídeo)
-description: Mostrar datos de información do público nas aplicacións de Dynamics 365 con este suplemento.
+description: "Mostrar datos de información do público nas aplicacións de Dynamics\_365 con este suplemento."
 ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: MT
-ms.contentlocale: gl-ES
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945425"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Complemento do cartón do cliente (vista previa)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións de Dynamics 365. Co complemento de tarxeta de cliente instalado nunha aplicación de Dynamics 365 compatible, pode escoller amosar campos de perfil de cliente, estatísticas e cronoloxía da actividade. O suplemento recuperará datos de Customer Insights sen afectar aos datos da aplicación de Dynamics 365 conectada.
 
@@ -27,7 +22,7 @@ Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións
 ## <a name="prerequisites"></a>Requisitos previos
 
 - O suplemento só funciona con aplicacións de Dynamics 365 controladas por modelos, como Sales ou Customer Service, versión 9.0 e posteriores.
-- Para que os teus datos de Dynamics 365 se asignen aos perfís de clientes de información sobre a audiencia, recomendámosche que [inxerido desde a aplicación Dynamics 365 usando o Microsoft Dataverse conector](connect-power-query.md). Se utilizas un método diferente para inxerir contactos (ou contas) de Dynamics 365, debes asegurarte de que`contactid` (ou`accountid`) defínese como o campo [clave principal para ese orixe de datos no paso do mapa do proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Para que os teus datos de Dynamics 365 se asignen aos perfís de clientes de información sobre a audiencia, recomendámosche que [inxerido desde a aplicación Dynamics 365 mediante o Microsoft Dataverse conector](connect-power-query.md). Se utilizas un método diferente para inxerir contactos (ou contas) de Dynamics 365, debes asegurarte de que`contactid` (ou`accountid`) defínese como o campo [clave principal para ese orixe de datos no paso do mapa do proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Todos os usuarios de Dynamics 365 do suplemento do cartón do cliente deben [engadirse como usuarios](permissions.md) na información do público para ver os datos.
 - Na información do público precísanse [capacidades de busca e filtros configuradas](search-filter-index.md) para que a busca de datos funcione.
 - Cada control do suplemento depende de datos específicos na información do público. Algúns datos e controis só están dispoñibles en contornos de tipos específicos. A configuración do complemento informaralle se un control non está dispoñible debido ao tipo de ambiente seleccionado. Obteña máis información acerca de [casos de uso de contornos](work-with-business-accounts.md).

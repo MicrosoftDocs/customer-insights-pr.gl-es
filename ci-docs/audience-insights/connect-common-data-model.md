@@ -1,7 +1,7 @@
 ---
 title: Conectar os datos de Common Data Model a unha conta de Azure Data Lake
 description: Traballe con datos de Common Data Model usando Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: gl-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900195"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar cun cartafol de Common Data Model cunha conta de Azure Data Lake
 
 Este artigo ofrece información sobre como inxerir datos desde un cartafol de Common Data Model usando a súa conta de Azure Data Lake Storage Gen2.
@@ -25,6 +20,8 @@ Este artigo ofrece información sobre como inxerir datos desde un cartafol de Co
 - Os datos do seu Azure Data Lake deben seguir o estándar do modelo de datos comúns. De momento non se admiten outros formatos.
 
 - A inxestión de datos admite contas de almacentamento de Azure Data Lake *Gen2* exclusivamente. Non pode usar as contas de almacenamento de Azure Data Lake Gen1 para inxerir datos.
+
+- A conta de almacenamento de Azure Data Lake debe ter [espazo de nomes xerárquico activado](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Para autenticarse cunha entidade de seguranza do servizo de Azure, asegúrese de que está configurada no seu inquilino. Para obter máis información, consulte [Conectar información do público a unha conta de Azure Data Lake Storage Gen2 cunha entidade principal de seguranza do servizo de Azure](connect-service-principal.md).
 

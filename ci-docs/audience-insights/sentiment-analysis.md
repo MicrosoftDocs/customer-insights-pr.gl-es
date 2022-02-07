@@ -1,5 +1,5 @@
 ---
-title: Análise semántica para comentarios dos clientes
+title: Análise de sentimentos para comentarios dos clientes
 description: Aprende a usar un modelo de análise de sentimentos nos comentarios dos clientes en Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: MT
-ms.contentlocale: gl-ES
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951107"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analiza o sentimento nos comentarios dos clientes (vista previa)
 
 Os clientes esperan produtos, servizos e experiencias de alta calidade nestes días. Especialmente os clientes que comparten os seus comentarios. É moi difícil para as organizacións analizar un volume crecente de datos sen reducir a precisión e un custo laboral máis elevado. Dynamics 365 Customer Insights ofrece un modelo de análise de sentimentos para os comentarios dos clientes que permite ás organizacións analizar os seus datos con máis precisión e a un custo menor.
@@ -38,7 +33,7 @@ Para garantir que pode confiar nos resultados dos modelos, fornecemos informaci�
 
 Usamos dous **Modelos de procesamento da linguaxe natural (PNL).** : A primeira asigna a cada comentario de comentarios unha puntuación de sentimento. O segundo modelo asocia cada feedback con todos os aspectos comerciais aplicables. Os modelos están adestrados en datos públicos de fontes en redes sociais, venda polo miúdo, restaurantes, produtos de consumo e industrias do automóbil.    
   
-- Os aspectos comerciais predefinidos para que o modelo se asocie cos datos de comentarios inclúen:
+Os aspectos comerciais predefinidos para que o modelo se asocie cos datos de comentarios inclúen:
 -   Xestión de contas
 -   Finalización da compra e pagamento
 -   Asistencia técnica
@@ -147,7 +142,7 @@ Hai catro seccións principais de datos dentro da páxina de resultados.
 
   :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="Gráfico de barras que mostra o sentimento do cliente nos tres grupos de sentimentos.":::
 
-- **Puntuación media do sentimento ao longo do tempo** : o sentimento do cliente pode cambiar co paso do tempo. Ofrecemos tendencias nos sentimentos dos seus clientes para o intervalo de tempo dos seus datos. Esta vista pode axudarche a valorar o efecto das promocións estacionais, os lanzamentos de produtos ou outras intervencións con límite de tempo no sentimento dos clientes. Consulta o gráfico seleccionando o ano de interese no menú despregable. 
+- **Puntuación media do sentimento ao longo do tempo** : O sentimento do cliente pode cambiar co paso do tempo. Ofrecemos tendencias nos sentimentos dos seus clientes para o intervalo de tempo dos seus datos. Esta vista pode axudarche a valorar o efecto das promocións estacionais, os lanzamentos de produtos ou outras intervencións con límite de tempo no sentimento dos clientes. Consulta o gráfico seleccionando o ano de interese no menú despregable. 
 
   :::image type="content" source="media/sentiment-score-over-time.png" alt-text="Gráfico histórico coa puntuación do sentimento ao longo do tempo representada como unha liña.":::
  

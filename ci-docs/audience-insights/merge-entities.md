@@ -1,7 +1,7 @@
 ---
 title: Combinar entidades na unificación de datos
 description: Combine entidades para crear perfís de clientes unificados.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,21 +10,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: gl-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732770"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Combinar entidades
 
 A fase de combinación é a última fase do proceso de unificación de datos. O seu propósito é conciliar datos conflitivos. Como exemplos de datos en conflito poden incluírse un nome de cliente que se atopa en dous dos seus conxuntos de datos pero aparece un pouco diferente en cada un ("Grant Marshall" fronte a "Grant Marshal") ou un número de teléfono que difire en formato (617-803-091X fronte a 617803091X). A fusión deses puntos de datos conflitivos realízase atributo por atributo.
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Páxina Combinar no proceso de unificación de datos que mostra a táboa cos campos combinados que definen o perfil de cliente unificado.":::
 
-Despois de completar a [fase de correspondencia](match-entities.md), pode iniciar a fase de combinación seleccionando o mosaico [Combinar](match-entities.md) na páxina [Unificar](match-entities.md).
+Despois de completar a [fase de correspondencia](match-entities.md), pode iniciar a fase de combinación seleccionando o mosaico **Combinar** na páxina **Unificar**.
 
 ## <a name="review-system-recommendations"></a>Revisar recomendacións do sistema
 
@@ -99,11 +94,13 @@ Na páxina **Combinar**, seleccione **Campos excluídos** para ver a lista de to
 
 1. Seleccione **Gardar** e **Executar** para procesar as modificacións. 
 
-## <a name="manually-combine-fields"></a>Combinar campos manualmente
+## <a name="combine-fields-manually"></a>Combina campos manualmente
 
-Especifique un atributo combinado manualmente. 
+Especifique un atributo combinado manualmente.
 
-1. Na páxina **Combinar**, seleccione **Combinar campos**.
+1. No **Combinar** páxina, seleccione **Combina**.
+
+1. Escolle o **Campos** opción.
 
 1. Especifique a política de gañador da combinación no menú despregable **Combinar campos por**.
 
@@ -114,6 +111,26 @@ Especifique un atributo combinado manualmente.
 1. Seleccione **Feito** para aplicar os cambios.
 
 1. Seleccione **Gardar** e **Executar** para procesar as modificacións. 
+
+## <a name="combine-a-group-of-fields"></a>Combina un grupo de campos
+
+Trata un grupo de campos como unha única unidade. Por exemplo, se os nosos rexistros conteñen os campos Enderezo1, Enderezo2, Cidade, Estado e Código postal. Probablemente non queiramos combinarnos no Enderezo2 dun rexistro diferente, pensando que faría que os nosos datos sexan máis completos
+
+1. No **Combinar** páxina, seleccione **Combina**.
+
+1. Escolle o **Grupo de campos** opción.
+
+1. Especifique a política do gañador da fusión no ficheiro **Clasifica os grupos por** Despregar menú.
+
+1. Seleccione **Engadir** e escolla se quere engadir máis campos ou grupos adicionais aos campos.
+
+1. Proporcionar a **Nome** e un **Nome da saída** para cada campo combinado.
+
+1. Proporcionar a **Nome** para o grupo de campos. 
+
+1. Seleccione **Feito** para aplicar os cambios.
+
+1. Seleccione **Gardar** e **Executar** para procesar as modificacións.
 
 ## <a name="change-the-order-of-fields"></a>Modificar a orde dos campos
 

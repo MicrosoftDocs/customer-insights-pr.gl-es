@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e futuras
-description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 12/02/2021
+description: 'Información sobre novas funcións, melloras e corrección de erros.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
-ms.contentlocale: gl-ES
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884260"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcionalidades a longo prazo, vexa os [plans de versións de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Actualizacións de decembro de 2021
+
+As actualizacións de decembro de 2021 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Reenviar rexistros de Customer Insights a Azure Monitor
+
+Customer Insights ofrece unha integración directa con Azure Monitor. Esta función inclúe eventos de auditoría e eventos operativos. Os rexistros de recursos de Azure Monitor permítenche supervisar e enviar rexistros a Azure Storage, Azure Log Analytics ou transmitilos a Azure Event Hubs.
+
+Para obter máis información, consulte [Reenvío de sesión Dynamics 365 Customer Insights con Azure Monitor (vista previa)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Enriquece os perfís de clientes con datos de compromiso
+
+Usa datos de Microsoft Office 365 para enriquecer os perfís da túa conta de cliente con información sobre compromisos mediante Office 365 aplicacións. Os datos de compromiso consisten en correo electrónico e actividade de reunións, que se agregan a nivel de conta. Por exemplo, o número de correos electrónicos dunha conta empresarial ou o número de reunións coa conta. Non se comparten datos sobre usuarios individuais. Este enriquecemento está dispoñible nas seguintes rexións: Reino Unido, Europa e América do Norte.
+
+Para obter máis información, consulte [Enriquece os perfís de clientes con datos de compromiso (vista previa)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Funcións avanzadas de unificación de datos
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Activa políticas de resolución de conflitos a nivel de atributos individuais
+
+Ao deduplicar os rexistros de clientes nunha entidade, quizais non queira ter que escoller un rexistro completo como gañador. Agora permíteche combinar os mellores campos de varios rexistros en función de regras para cada atributo. Por exemplo, pode escoller manter o correo electrónico máis recente E o enderezo máis completo de diferentes rexistros. 
+
+Agora podes definir regras de combinación separadas para atributos individuais mentres desduplicas e fusionas rexistros nunha única entidade. Anteriormente, só lle permitíamos seleccionar unha única regra de combinación (mantendo os rexistros en función da integridade dos datos recentes) e esa regra aplicábase a nivel de rexistro a todos os atributos. Non é ideal cando algúns dos datos que queres gardar se atopan no rexistro A e outros bos no rexistro B.
+
+Para obter máis información, consulte [Definir a desduplicación nunha entidade de coincidencia](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Regras personalizadas para a correspondencia
+
+Hai momentos nos que cómpre especificar unha excepción ás regras xerais para NON coincidir con rexistros. Isto pode ocorrer cando varias persoas comparten información suficiente para que o sistema as corresponda como unha única persoa. Por exemplo, xemelgos co mesmo apelidos, que viven na mesma cidade e comparten a data de nacemento.
+
+As excepcións garanten que a unificación de datos incorrecta se poida resolver nas regras de unificación. Podes engadir varias excepcións a unha regra.
+
+Para obter máis información, consulte [Engade excepcións a unha regra](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Proporcione políticas adicionais de resolución de conflitos e habilite a agrupación de atributos
+
+Esta función permítelle tratar un grupo de campos como unha única unidade. Por exemplo, se os nosos rexistros conteñen os campos Enderezo1, Enderezo2, Cidade, Estado e Código postal. Probablemente non queiramos combinarnos no Enderezo2 dun rexistro diferente, pensando que faría que os nosos datos sexan máis completos.
+
+Agora podes combinar un grupo de campos relacionados e aplicar unha única política de combinación ao grupo. 
+
+Para obter máis información, consulte [Combina un grupo de campos](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Actualizacións de novembro de 2021
 
@@ -47,7 +86,7 @@ As actualizacións de outubro de 2021 inclúen novas funcións, melloras de rend
 
 A partir de outubro de 2021, podes traballar con contas empresariais e os seus contactos relacionados en Customer Insights. Antes, a aplicación estaba adaptada principalmente a consumidores individuais. Actualizáronse varias áreas de características para admitir escenarios B-to-B ademais dun novo tipo de ambiente. Para obter unha visión xeral das funcións B-to-B compatibles, consulte [Traballa con contas empresariais nas estatísticas do público](work-with-business-accounts.md).
 
-Nas seguintes seccións destacan algunhas das áreas clave que se adaptaron para soportar contas empresariais e consumidores individuais.
+Nas seguintes seccións destacan algunhas das áreas clave que se adaptaron para dar soporte ás contas empresariais e aos consumidores individuais.
 
 #### <a name="export-segments-based-on-business-accounts"></a>Segmentos de exportación baseados en contas comerciais
 
@@ -63,7 +102,7 @@ O creador de medidas permíteche crear medidas en torno ás contas empresariais 
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Crea segmentos baseados en contas empresariais e a súa xerarquía
 
-O creador de segmentos permítelle crear segmentos de contas empresariais que inclúen opcionalmente información de contacto para cada conta dun segmento. Se tes a xerarquía de contas configurada, podes usar a información da xerarquía de contas na creación do segmento. Para obter máis información, consulte [Crea un novo segmento](segment-builder.md#create-a-new-segment).
+O creador de segmentos permítelle crear segmentos de contas empresariais que inclúan opcionalmente información de contacto para cada conta dun segmento. Se tes a xerarquía de contas configurada, podes usar a información da xerarquía de contas na creación do segmento. Para obter máis información, consulte [Crea un novo segmento](segment-builder.md#create-a-new-segment).
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva as túas contas empresariais con coñecementos profundos sobre a súa tendencia ao abandono
 

@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: gl-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380741"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidades no Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) é unha especificación declarativa e unha definición de entidades estándar que representan conceptos e actividades de uso común en aplicacións empresariais e de produtividade. Este modelo estase estendendo a datos observacionais e analíticos tamén. O Common Data Model proporciona entidades comerciais ben definidas, modulares e extensibles, como contas, unidade de negocio, caso, contacto, cliente potencial, oportunidade e produto, así como interaccións con provedores, traballadores e clientes, como actividades e acordos de nivel de servizo. Calquera pode construír e ampliar as definicións do Common Data Model para capturar ideas adicionais específicas do negocio.
 
