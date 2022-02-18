@@ -1,7 +1,7 @@
 ---
 title: Complemento da tarxeta de cliente para as aplicacións de Dynamics 365 (contén vídeo)
-description: "Mostrar datos de información do público nas aplicacións de Dynamics\_365 con este suplemento."
-ms.date: 12/22/2021
+description: Mostrar datos de información do público nas aplicacións de Dynamics 365 con este suplemento.
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: gl-ES
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085215"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Complemento do cartón do cliente (vista previa)
 
 
@@ -113,5 +118,26 @@ O complemento de tarxeta de cliente non se actualiza automaticamente. Para actua
 
 1. Despois de iniciar o proceso de actualización, verá un indicador de carga ata que finalice a actualización. Se non hai ningunha versión máis recente, a actualización amosará unha mensaxe de erro.
 
+## <a name="troubleshooting"></a>Resolución de problemas
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Os controis do complemento da tarxeta de cliente non atopan datos
+
+**Problema:**
+
+Mesmo con campos de identificación configurados correctamente, os controis non poden atopar datos de ningún cliente.  
+
+**Resolución:**
+
+1. Asegúrate de configurar o complemento da tarxeta segundo as instrucións: [Configure o complemento da tarxeta de cliente](#configure-the-customer-card-add-in) 
+
+1. Revisa a configuración da inxestión de datos. Edite o orixe de datos para o sistema Dynamics 365 que contén o GUID do ID de contacto. Se o GUID de ID de contacto aparece con caracteres en maiúscula Power Query editor, proba o seguinte: 
+    1. Edita o orixe de datos para abrir o orixe de datos en Power Query Editor.
+    1. Seleccione a columna ID de contacto.
+    1. Seleccione **Transformar** na barra de cabeceira para ver as accións dispoñibles.
+    1. Seleccione **minúscula**. Valida se os GUID da táboa están agora en minúscula.
+    1. Garde a orixe de datos.
+    1. Executa procesos de inxestión, unificación e posterior de datos para propagar os cambios no GUID. 
+
+Despois de completar a actualización completa, os controis do complemento da tarxeta de cliente deberían mostrar os datos esperados. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

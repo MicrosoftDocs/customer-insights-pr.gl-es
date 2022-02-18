@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900256"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088145"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure
 
 Este artigo explica como conectarse Dynamics 365 Customer Insights cunha Azure Data Lake Storage conta mediante un principal de servizo de Azure en lugar de claves de conta de almacenamento. 
 
-As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes usar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un entorno](create-environment.md).
+As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes utilizar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un entorno](create-environment.md).
 
 > [!IMPORTANT]
-> - A conta de Data Lake Storage que empregará o principal do servizo debe ter [habilitado o espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace).
+> - A conta de Data Lake Storage que utilizará o principal do servizo debe ser Gen2 e ter [espazo de nomes xerárquico activado](/azure/storage/blobs/data-lake-storage-namespace). Non se admiten as contas de almacenamento de Azure Data Lake Gen1.
 > - Necesitas permisos de administrador para a túa subscrición a Azure para crear un principal de servizo.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear unha entidade de servizo de Azure para Customer Insights

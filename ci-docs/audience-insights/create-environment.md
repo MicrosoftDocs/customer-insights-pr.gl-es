@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892336"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088100"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un ambiente na información do público
 
@@ -28,7 +28,7 @@ As organizacións poden crear *dous* contornos para cada licenza de Customer Ins
 
 ## <a name="create-a-new-environment"></a>Crear un novo ambiente
 
-Despois de mercar unha licenza de subscrición para Customer Insights, o administrador global do arrendatario de Microsoft 365 recibe un correo electrónico que o invita a crear o ambiente. Vaia a [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) para comezar. 
+Despois de comprar unha licenza de subscrición para Customer Insights, o administrador global do Microsoft 365 o inquilino recibe un correo electrónico que o invita a crear o ambiente. Vaia a [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) para comezar. 
 
 Unha experiencia guiada axúdalle nos pasos para recompilar toda a información necesaria para un novo contorno. Precisa [permisos de administrador](permissions.md) en información do público para crear ou xestionar ambientes.
 
@@ -64,7 +64,7 @@ Gardando datos en Azure Data Lake Storage, acepta que os datos serán transferid
 > Customer Insights actualmente admite o seguinte:
 > - Entidades inxeridas de fluxos de datos de Power BI que se almacenan nun Data Lake xestionado por Microsoft Dataverse.  
 > - As contas de Azure Data Lake Storage da mesma rexión de Azure que seleccionou ao crear o ambiente.
-> - Contas de Azure Data Lake Storage que teñen o *espazo de nomes xerárquico* activado.
+> - Azure Data Lake Storage contas que son Gen2 e teñen *espazo de nomes xerárquico* activado. Non se admiten as contas de almacenamento de Azure Data Lake Gen1.
 
 Para a opción Azure Data Lake Storage, pode escoller entre unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar cunha conta de Azure Data Lake Storage mediante unha entidade de servizo de Azure](connect-service-principal.md). O nome **Envase** será `customerinsights` e non se pode cambiar.
 
@@ -79,7 +79,7 @@ O paso **Microsoft Dataverse** permítelle conectar Customer Insights co seu amb
 Para usar [modelos de predición listos para usar](predictions-overview.md#out-of-box-models), configure o uso compartido de datos con Dataverse. Ou pode activar a inxestión de datos desde orixes de datos locais, proporcionando o URL do contorno de Microsoft Dataverse que administra a súa organización. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun lago de datos xestionado de Dataverse.
 
 > [!IMPORTANT]
-> Insights de clientes e Dataverse deben estar na mesma rexión para poder compartir datos.
+> Información do cliente e Dataverse deben estar na mesma rexión para poder compartir datos.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse.":::
 

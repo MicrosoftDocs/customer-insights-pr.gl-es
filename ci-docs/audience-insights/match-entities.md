@@ -1,7 +1,7 @@
 ---
 title: Buscar coincidencias de entidades para a unificación de datos
 description: Busque coincidencias de entidades para crear perfís de clientes unificados.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: gl-ES
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098833"
 ---
-
 # <a name="match-entities"></a>Buscar coincidencias das entidades
 
 A fase de coincidencia especifica como combinar os seus conxuntos de datos nun conxunto de datos de perfil de cliente unificado. Despois de completar o [paso de asignación](map-entities.md) no proceso de unificación de datos, estará listo para atopar unha coincidencia coas súas entidades. A fase de coincidencias require polo menos dúas entidades asignadas.
@@ -24,13 +29,7 @@ A páxina de coincidencia consta de tres seccións:
 
 ## <a name="specify-the-match-order"></a>Especificar a orde de coincidencia
 
-Vaia a **Datos** > **Unificar** > **Buscar coincidencias** e seleccione **Establecer orde** para comezar a fase de busca de coincidencias.
-
-Cada coincidencia unifica dúas ou máis entidades nunha única entidade consolidada. Ao mesmo tempo, garda os rexistros exclusivos dos clientes. Por exemplo, seleccionamos dúas entidades: **eCommerce: eCommerceContacts** como entidade primaria e **LoyaltyScheme: loyCustomers** como segunda entidade. A orde das entidades especifica en que orde tentará o sistema atopar coincidencias cos rexistros.
-
-:::image type="content" source="media/match-page.png" alt-text="Captura de pantalla da páxina de coincidencias na área Unify do proceso de unificación de datos.":::
-  
-A entidade primaria *eCommerce: eCommerceContacts* coincide coa seguinte entidade *LoyaltyScheme: loyCustomers*. O conxunto de datos que resulta do primeiro paso de coincidencia coincide coa seguinte entidade se tes máis de dúas entidades.
+Cada coincidencia unifica dúas ou máis entidades nunha única entidade consolidada. Ao mesmo tempo, garda os rexistros exclusivos dos clientes. A orde de coincidencia indica a orde na que o sistema tenta facer coincidir os rexistros.
 
 > [!IMPORTANT]
 > A entidade que escolle como Primaria servirá de base para o seu conxunto de datos de perfís unificado. A esta entidade engadiranse entidades adicionais seleccionadas durante a fase de coincidencia. Isto non significa que a entidade unificada inclúa *todos* os datos incluídos nesta entidade.
@@ -38,9 +37,18 @@ A entidade primaria *eCommerce: eCommerceContacts* coincide coa seguinte entidad
 > Hai dúas consideracións que poden axudarlle a elixir a xerarquía das súas entidades:
 >
 > - Escolla a entidade cos datos de perfil máis completos e fiables sobre os seus clientes como entidade principal.
-> - Escolla a entidade que ten varios atributos en común con outras entidades (por exemplo, nome, número de teléfono ou enderezo de correo electrónico) como entidade principal.
+> - Escolla a entidade que teña varios atributos en común con outras entidades (por exemplo, nome, número de teléfono ou enderezo de correo electrónico) como entidade principal.
 
-Despois de especificar a orde de coincidencia, verá os pares de coincidencias definidos na sección **Detalles de rexistros coincidentes** en **Datos** > **Unify** > **Coincidencia**. As métricas clave estarán baleiras ata que finalice o proceso de coincidencia.
+1. Vaia a **Datos** > **Unificar** > **Buscar coincidencias** e seleccione **Establecer orde** para comezar a fase de busca de coincidencias.
+1. Seleccione **Orde da entidade**. Por exemplo, seleccione **Comercio electrónico: eCommerceContacts** como entidade primaria e **LoyaltyScheme:loyCustomers** como segunda entidade. 
+1. Para ter todos os rexistros da entidade como un cliente único e coincidir con todas as entidades seguintes, selecciona **Inclúe todo**.
+1. Seleccione **Feito**. 
+
+Despois de especificar a orde de coincidencia, os pares de coincidencia definidos móstranse no ficheiro **Detalles dos rexistros coincidentes** sección sobre **Datos** > **Unificar** > **Partido**. As métricas clave están baleiras ata que se complete o proceso de coincidencia.
+
+:::image type="content" source="media/match-page.png" alt-text="Captura de pantalla da páxina de coincidencias na área Unify do proceso de unificación de datos.":::
+  
+A entidade primaria *eCommerce: eCommerceContacts* coincide coa seguinte entidade *LoyaltyScheme: loyCustomers*. O conxunto de datos que resulta do primeiro paso de coincidencia coincide coa seguinte entidade se tes máis de dúas entidades.
 
 ## <a name="define-rules-for-match-pairs"></a>Definir regras para parellas coincidentes
 
@@ -50,7 +58,7 @@ A advertencia **Precisa regras** situada xunto ao nome dunha entidade suxire que
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Captura de pantalla da sección Detalles do rexistro coincidente con control para engadir regras resaltadas.":::
 
-1. Seleccione **Engadir regras** nunha entidade na sección **Detalles de rexistros coincidentes** para definir as regras de coincidencia.
+1. Seleccione **Engadir regra** baixo unha entidade no **Detalles dos rexistros coincidentes** sección para definir regras de coincidencia.
 
 1. No panel **Crear regra**, configure as condicións para a regra.
 
@@ -61,15 +69,15 @@ A advertencia **Precisa regras** situada xunto ao nome dunha entidade suxire que
    - **Entidade/Campo (segunda fila)**: escolla un atributo relacionado co atributo da entidade especificado na primeira fila.
 
    - **Normalizar**: seleccione unha das seguintes opcións de normalización para os atributos seleccionados. 
-     - Espazo en branco: elimina todos os espazos. *Ola Mundo* convértese en *HelloWorld*.
+     - Numerais: converte outros sistemas numerais, como os números romanos, en números árabes. *VIII* pasa a ser *8*.
      - Símbolos: elimina todos os símbolos e caracteres especiais. *Head&Shoulder* convértese en *HeadShoulder*.
      - Texto en minúsculas: converte todos os caracteres en minúscula. *MAIÚSCULAS e maiúscula inicial de palabra* convértese en *maiúsculas e maiúscula inicial de palabra*.
+     - Tipo (teléfono, nome, enderezo, organización): estandariza nomes, títulos, números de teléfono, enderezos, etc. 
      - Unicode a ASCII: converte a notación unicode en caracteres ASCII. */u00B2* convértese en *2*.
-     - Numerais: converte outros sistemas numerais, como os números romanos, en números árabes. *VIII* pasa a ser *8*.
-     - Tipos semánticos: estandariza nomes, títulos, números de teléfono, enderezos, etc. 
+     - Espazo en branco: elimina todos os espazos. *Ola Mundo* convértese en *HelloWorld*.
 
    - **Precisión**: define o nivel de precisión para aplicar a esta condición. 
-     - **Básico**: escolla entre *Baixo*, *Medio*, *Alto* e *Exacto*. Seleccione **Exacto** para atopar a coincidencia só con rexistros que se corresponden ao 100 por cento. Seleccione un dos outros niveis para atopar coincidencias de rexistros que non sexan 100 por cento idénticos.
+     - **Básico**: escolla entre *Baixo*, *Medio*, *Alto* e *Exacto*. Seleccione **Exacto** para coincidir só con rexistros que coincidan co 100 por cento. Seleccione un dos outros niveis para atopar coincidencias de rexistros que non sexan 100 por cento idénticos.
      - **Personalizado**: defina unha porcentaxe coa que deben coincidir os rexistros. O sistema só atopará a coincidencia cos rexistros que superen este limiar.
 
 1. Proporcione un **nome** para a regra.
@@ -92,7 +100,7 @@ Para atopar coincidencias con entidades só se os atributos cumpren varias condi
 
 ### <a name="add-rules-to-a-match-pair"></a>Engadir regras a un par de coincidencias
 
-As regras de coincidencia representan conxuntos de condicións. Para atopar coincidencias de entidades por condicións baseadas en varios atributos, engada máis regras
+As regras de coincidencia representan conxuntos de condicións. Para facer coincidir entidades por condicións baseadas en varios atributos, engade máis regras.
 
 1.  Vaia a **Datos** > **Unify** > **Coincidencia** e seleccione **Engadir regra** na entidade á que desexa engadir regras.
 
@@ -117,7 +125,7 @@ Podes reordenar as entidades para as regras de coincidencia para cambiar a orde 
 
 Ademais de [regras de coincidencia entre entidades](#define-rules-for-match-pairs), tamén pode especificar regras de cancelación de duplicacións. *Cancelación de duplicación* é outro proceso ao atopar coincidencias con rexistros. Identifica rexistros duplicados e úneos nun rexistro. Os rexistros de orixe vincúlanse co rexistro combinado con ID alternativos.
 
-Os rexistros con coincidencia duplicada utilizaranse no proceso de busca de coincidencias entre entidades. A cancelación da duplicación ocorre en entidades individuais e pódese configurar cada entidade usada en pares de coincidencias.
+Os rexistros deduplicados úsanse no proceso de coincidencia entre entidades. A deduplicación ocorre en entidades individuais e pódese configurar para cada entidade utilizada nos pares de coincidencias.
 
 Non é obrigatorio especificar regras de desduplicación. Se non se configuran tales regras, aplícanse as regras definidas polo sistema. Combinan todos os rexistros nun único rexistro antes de pasar os datos da entidade á coincidencia entre entidades para obter un mellor rendemento.
 
@@ -125,7 +133,7 @@ Non é obrigatorio especificar regras de desduplicación. Se non se configuran t
 
 1. Vaia a **Datos** > **Unify** > **Coincidencia**.
 
-1. No **Detalles de rexistros deduplicados** sección, seleccione **Establecer entidades**. Se xa se crearon regras de cancelación de duplicación, seleccione **Editar**.
+1. No **Detalles dos rexistros deduplicados** sección, seleccione **Establecer entidades**. Se xa se crearon regras de cancelación de duplicación, seleccione **Editar**.
 
 1. No panel **Preferencias de combinación**, escolla as entidades nas que desexa executar a cancelación da duplicación.
 
@@ -134,7 +142,7 @@ Non é obrigatorio especificar regras de desduplicación. Se non se configuran t
       - **Máis recente**: Identifica o rexistro gañador en función da data máis recente. Require unha data ou un campo numérico para definir a actualidade.
       - **Menos recente**: Identifica o rexistro gañador en función da data menos recente. Require unha data ou un campo numérico para definir a actualidade.
 
-   1. Opcionalmente, seleccione **Avanzado** para definir regras de deduplicación sobre atributos individuais dunha entidade. Por exemplo, pode escoller manter o correo electrónico máis recente E o enderezo máis completo de diferentes rexistros. Amplíe a entidade para ver todos os seus atributos e defina que opción usar para atributos individuais. Se escolle unha opción baseada na recensión, tamén debe especificar un campo de data/hora que defina a recente. 
+   1. Opcionalmente, para definir regras de deduplicación en atributos individuais dunha entidade, seleccione **Avanzado**. Por exemplo, pode escoller manter o correo electrónico máis recente E o enderezo máis completo de diferentes rexistros. Amplíe a entidade para ver todos os seus atributos e defina que opción usar para atributos individuais. Se escolle unha opción baseada na recensión, tamén debe especificar un campo de data/hora que defina a recente. 
  
       > [!div class="mx-imgBorder"]
       > ![Paso 1 das regras de eliminación de duplicados.](media/match-selfconflation.png "Paso 1 das regras de desduplicación")
@@ -286,12 +294,12 @@ Podes especificar condicións que anulan a lóxica de coincidencia predeterminad
 #### <a name="known-issues"></a>Problemas coñecidos
 
 - A autocombinación non mostra os datos normalizados nas entidades de deduplicación. Non obstante, aplica a normalización internamente durante a deduplicación. É por deseño para todas as normalizacións. 
-- Se se elimina a configuración do tipo semántico no ficheiro **Mapa** na fase cando unha regra de coincidencia utiliza a asignación de alias ou o bypass personalizado, a normalización non se aplicará. Só ocorre se borra o tipo semántico despois de configurar a normalización na regra de coincidencia porque o tipo semántico será descoñecido.
+- Se a configuración do tipo semántico se elimina no ficheiro **Mapa** na fase cando unha regra de coincidencia utiliza a asignación de alias ou o bypass personalizado, a normalización non se aplicará. Só ocorre se borra o tipo semántico despois de configurar a normalización na regra de coincidencia porque o tipo semántico será descoñecido.
 
 
 ## <a name="next-step"></a>Seguinte paso
 
-Despois de completar o proceso de coincidencia para polo menos un par de coincidencias, continúa ata o [**Combinar**](merge-entities.md) paso.
+Despois de completar o proceso de coincidencia de polo menos un par de coincidencias, continúa ata o [**Combinar**](merge-entities.md) paso.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

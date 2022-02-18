@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e futuras
-description: 'Información sobre novas funcións, melloras e corrección de erros.'
-ms.date: 01/27/2022
+description: Información sobre novas funcións, melloras e corrección de erros.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: gl-ES
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088283"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Actualizacións de xaneiro de 2022
+
+As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Análise de sentimentos dos comentarios dos teus clientes
+
+Customer Insights ofrece unha nova función impulsada pola intelixencia artificial para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
+
+Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (Vista previa)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Actualizacións de decembro de 2021
@@ -37,7 +53,7 @@ Para obter máis información, consulte [Reenvío de sesión Dynamics 365 Custom
 
 Usa datos de Microsoft Office 365 para enriquecer os perfís da túa conta de cliente con información sobre compromisos mediante Office 365 aplicacións. Os datos de compromiso consisten en correo electrónico e actividade de reunións, que se agregan a nivel de conta. Por exemplo, o número de correos electrónicos dunha conta empresarial ou o número de reunións coa conta. Non se comparten datos sobre usuarios individuais. Este enriquecemento está dispoñible nas seguintes rexións: Reino Unido, Europa e América do Norte.
 
-Para obter máis información, consulte [Enriquece os perfís de clientes con datos de compromiso (vista previa)](enrichment-office.md)
+Para obter máis información, consulte [Enriquece os perfís de clientes con datos de compromiso (Vista previa)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Funcións avanzadas de unificación de datos
 
@@ -86,7 +102,7 @@ As actualizacións de outubro de 2021 inclúen novas funcións, melloras de rend
 
 A partir de outubro de 2021, podes traballar con contas empresariais e os seus contactos relacionados en Customer Insights. Antes, a aplicación estaba adaptada principalmente a consumidores individuais. Actualizáronse varias áreas de características para admitir escenarios B-to-B ademais dun novo tipo de ambiente. Para obter unha visión xeral das funcións B-to-B compatibles, consulte [Traballa con contas empresariais nas estatísticas do público](work-with-business-accounts.md).
 
-Nas seguintes seccións destacan algunhas das áreas clave que se adaptaron para dar soporte ás contas empresariais e aos consumidores individuais.
+Nas seguintes seccións destacan algunhas das áreas clave que se adaptaron para soportar contas empresariais e consumidores individuais.
 
 #### <a name="export-segments-based-on-business-accounts"></a>Segmentos de exportación baseados en contas comerciais
 
@@ -98,13 +114,13 @@ A exportación de LinkedIn Ads agora está dispoñible para a orientación de co
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Crea medidas baseadas nas contas empresariais e na súa xerarquía
 
-O creador de medidas permíteche crear medidas en torno ás contas empresariais e, opcionalmente, utilizar a información da xerarquía. A información da xerarquía úsase para acumular un cálculo de medida nunha conta e todas as contas secundarias relacionadas. Por exemplo, pode crear medidas como os ingresos totais para cada grupo de contas empresariais identificadas pola súa xerarquía. Para obter máis información, consulte [Definir e xestionar medidas](measures.md).
+O creador de medidas permítelle crear medidas en torno ás contas empresariais e, opcionalmente, utilizar a información da xerarquía. A información da xerarquía úsase para acumular un cálculo de medida nunha conta e todas as contas secundarias relacionadas. Por exemplo, pode crear medidas como os ingresos totais para cada grupo de contas empresariais identificadas pola súa xerarquía. Para obter máis información, consulte [Definir e xestionar medidas](measures.md).
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Crea segmentos baseados en contas empresariais e a súa xerarquía
 
 O creador de segmentos permítelle crear segmentos de contas empresariais que inclúan opcionalmente información de contacto para cada conta dun segmento. Se tes a xerarquía de contas configurada, podes usar a información da xerarquía de contas na creación do segmento. Para obter máis información, consulte [Crea un novo segmento](segment-builder.md#create-a-new-segment).
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva as túas contas empresariais con coñecementos profundos sobre a súa tendencia ao abandono
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva as túas contas empresariais con coñecementos profundos sobre a súa tendencia de abandono
 
 O modelo de abandono de clientes predición agora tamén admite contas empresariais. Podes avaliar o risco de abandono non só para unha conta, senón tamén para unha combinación dunha conta e unha categoría de produto ou servizo que che compran. Esta adición axúdache a comprender se é máis probable que unha conta deixe de comprarche en xeral ou só para unha determinada categoría de bens ou servizos. Para axudarche aínda máis a usar este modelo de IA, tamén enumera os motivos polos que é probable que unha conta se abandone. Para obter máis información, consulte [Churn de transaccións predición (vista previa)](predict-transactional-churn.md).
 

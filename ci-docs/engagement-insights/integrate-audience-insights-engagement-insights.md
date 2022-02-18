@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645580"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116012"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Crear unha ligazón entre a información do público e a información de interacción
 
@@ -25,7 +25,7 @@ Utilice segmentos e perfís unificados de información do público para obter m�
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Os perfís de información do público deben gardarse nunha conta de Azure Data Lake Storage da súa propiedade ou nun lago de datos xestionado de [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
+- Os perfís de información sobre o público deben almacenarse nun Azure Data Lake Storage conta que posúe ou nunha [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash; lago de datos xestionado. 
 - O seu ambiente de información do público debería ter un ambiente de Dataverse asociado. E se ese ambiente tamén o está a usar Dataverse para almacenar datos, asegúrese de comprobar a opción **Activar o uso compartido de datos** na información do público. Para obter máis información, consulte [Crear e configurar un contorno en estatísticas de público](../audience-insights/create-environment.md).
 - Necesita permisos de administrador para os ambientes de información do público e información de interacción.
 - Os ambientes ligados deben estar na mesma rexión xeográfica.
