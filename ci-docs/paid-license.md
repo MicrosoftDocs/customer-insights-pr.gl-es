@@ -5,21 +5,21 @@ description: Familiarícese coa experiencia da primeira execución en Dynamics 3
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: conceptual
+ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977670"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645685"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Introdución despois de comprar Customer Insights
 
 Este artigo explica como dar os seus primeiros pasos en Dynamics 365 Customer Insights despois de que a súa organización comprase unha subscrición. Se desexa mercar Customer Insights, as nosas opcións de contacto aparecen na [páxina web de Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Despois de comprar unha licenza de subscrición para Customer Insights, o administrador global do Microsoft 365 o inquilino recibe un correo electrónico que o invita a crear o ambiente. 
+Despois de mercar unha licenza de subscrición para Customer Insights, o administrador global do arrendatario de Microsoft 365 recibe un correo electrónico que o invita a crear o ambiente. 
 
 Customer Insights ten licenzas por arrendatario e inclúe varias capacidades. Pode mercar máis capacidade e licenzas para aumentar a cota predeterminada. 
 - [Visión xeral de prezos](https://dynamics.microsoft.com/ai/customer-insights/pricing/)

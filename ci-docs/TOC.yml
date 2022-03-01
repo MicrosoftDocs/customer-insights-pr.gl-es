@@ -2,30 +2,8 @@
   href: index.yml
 - name: Visión xeral do produto
   href: overview.md
-- name: Catálogo de aprendizaxe
-  items:
-    - name: Introdución
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Inxerir datos
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Crear un perfil de cliente unificado
-      href: /learn/modules/unified-customer-profile/
-    - name: Traballar con información sobre o público
-      href: /learn/modules/working-with-customer-insights/
-    - name: Enriquece os datos e fai predicións
-      href: /learn/modules/enrich-data/
-    - name: Xestionar conexións externas
-      href: /learn/modules/configure-third-party-connections/
-    - name: Administrar Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
-- name: Proba gratuíta
-  items:
-    - name: Inscribirse para unha proba gratuíta
-      href: trial-signup.md
-    - name: Preguntas máis frecuentes acerca da proba
-      href: trial-FAQ.md
-- name: Comezar cunha licenza de pago
-  href: paid-license.md
+- name: Crear unha proba
+  href: audience-insights/get-started-trial.md
 - name: Acceder ao seu ambiente
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Información do público
@@ -41,16 +19,24 @@
         - name: Guía de inicio rápido
           href: audience-insights/get-started.md
         - name: Crear un novo ambiente
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: Explorar a información do público
           href: audience-insights/home.md
-    - name: Traballar con contas de negocio
-      href: audience-insights/work-with-business-accounts.md
+    - name: Módulos de aprendizaxe
+      items:
+        - name: Inxerir datos
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: Crear un perfil de cliente unificado
+          href: /learn/modules/unified-customer-profile/
+        - name: Traballar coa aplicación
+          href: /learn/modules/working-with-customer-insights/
+        - name: Enriquecer datos e predicións
+          href: /learn/modules/enrich-data/
     - name: Orixes de datos
       items:
         - name: Visión xeral de orixes de datos
           href: audience-insights/data-sources.md
-        - name: Engadir fontes de datos mediante Power Query conectores
+        - name: Engadir orixes de datos a través de conectores de Power Query.
           href: audience-insights/connect-power-query.md
         - name: Engadir un cartafol de Common Data Model como orixe de datos
           href: audience-insights/connect-common-data-model.md
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: Enumerar actividades do cliente
           href: audience-insights/activities.md
-        - name: Definir asignacións semánticas
-          href: audience-insights/semantic-mappings.md
     - name: Enriquecemento de información
       items:
         - name: Enriquecer perfís de clientes
           href: audience-insights/enrichment-hub.md
-        - name: Marcas e intereses
+        - name: Afinidades de marca e interese
           href: audience-insights/enrichment-microsoft.md
         - name: Enderezos mellorados
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Información da empresa enriquecida
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Enriquecer con Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Enriquecer con HERE Technologies
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Enriquecer con Experian
           href: audience-insights/enrichment-experian.md
-        - name: Enriquecer con Office 365 datos
-          href: audience-insights/enrichment-office.md
         - name: Enriquecer con importación personalizada de SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmentos
@@ -134,10 +114,8 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Prever a renovación de subscricións
               href: audience-insights/predict-subscription-churn.md
-            - name: Predicir abandono de transaccións
+            - name: Predicir o abandono transaccional
               href: audience-insights/predict-transactional-churn.md
-            - name: Analiza o sentimento nos comentarios dos clientes
-              href: audience-insights/sentiment-analysis.md
             - name: Usar os modelos personalizados da Aprendizaxe automática de Azure
               href: audience-insights/custom-models.md
             - name: Completar os datos que faltan parcialmente
@@ -148,12 +126,14 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Guía de mostra da predición do abandono da subscrición
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Guía de exemplo para a predición do abandono de transaccións
+            - name: Guía de mostra da predición do abandono transaccional
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Guía de mostra de predición de recomendacións de produtos
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Experimentos con Aprendizaxe automática de Azure
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Experimentos de Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: Xestionar predicións
           href: audience-insights/manage-predictions.md
         - name: Crear segmentos baseados en predicións
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: Xestionar varios ambientes
           href: audience-insights/manage-environments.md
-        - name: Seguranza
-          items:
-            - name: Traia o seu propio Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: Conectar cunha conta de almacenamento de ADLS mediante unha entidade de seguranza do servizo
-              href: audience-insights/connect-service-principal.md
-            - name: Exportar rexistros de diagnóstico
-              href: audience-insights/diagnostics.md
+        - name: Conectar cunha conta de almacenamento de ADLS mediante unha entidade de seguranza do servizo
+          href: audience-insights/connect-service-principal.md
+        - name: Idiomas compatibles
+          href: audience-insights/supported-languages.md
     - name: Extensibilidade
       items:
         - name: Integrar datos web a partir de información de interacción
@@ -262,52 +238,16 @@
           href: audience-insights/apis.md
         - name: Referencias das API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Xestión do consentimento (vista previa)
-  items:
-    - name: Plataforma común de axuda
-      href: consent-management/index.yml
-    - name: Visión xeral da capacidade
-      href: consent-management/overview.md
-    - name: Introdución
-      items:
-        - name: Introdución
-          href: consent-management/get-started.md
-        - name: Conceptos e terminoloxía
-          href: consent-management/glossary.md
-    - name: Importar datos de consentimento
-      items:
-        - name: Importar datos de consentimento
-          href: consent-management/import-consent-data.md
-        - name: Establece os datos de consentimento e aplica as preferencias de consentimento
-          href: consent-management/set-consent-rules.md
-    - name: Xestionar os datos de consentimento
-      items:
-        - name: Activa as regras de consentimento nas estatísticas do público
-          href: audience-insights/activate-consent.md
-        - name: Xestiona as regras de consentimento predeterminadas nos segmentos de información de audiencia
-          href: audience-insights/change-default-consent-rules.md
-    - name: Xestiona a configuración e os usuarios
-      items:
-        - name: Configurar a configuración do sistema
-          href: consent-management/system-settings.md
-        - name: Xestionar usuarios e permisos
-          href: consent-management/manage-users.md
-    - name: Usa os datos de consentimento
-      items:
-        - name: Crea predicións con datos de consentimento
-          href: consent-management/predictions-consent-data.md
 - name: Información de interacción (versión preliminar)
   items:
     - name: Plataforma común de axuda
       href: engagement-insights/index.yml
-    - name: Acerca da información de interacción
+    - name: Visión xeral da capacidade
       href: engagement-insights/overview.md
     - name: Comezar
       items:
         - name: Guía de inicio rápido
           href: engagement-insights/get-started.md
-        - name: Crear un ambiente
-          href: engagement-insights/create-new-environment.md
         - name: Crear unha área de traballo
           href: engagement-insights/create-workspace.md
         - name: Capturar eventos desde aplicacións móbiles e sitios web
@@ -366,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Dispoñibilidade rexional
       href: engagement-insights/regional-availability.md
-- name: Compartir datos entre capacidades
+- name: Integrar información do público e de interacción
   items:
     - name: Ligar información de interacción e información do público
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -379,4 +319,4 @@
 - name: Dereitos e solicitudes de DSR
   href: dsr-rights-requests.md
 - name: Obter soporte técnico
-  href: /power-platform/admin/get-help-support
+  href: 'https://dynamics.microsoft.com/support/'

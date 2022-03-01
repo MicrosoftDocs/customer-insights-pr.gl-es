@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Dynamics 365 Marketing
 description: Aprenda a configurar a conexión e exportar a Dynamics 365 Marketing.
-ms.date: 08/24/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e2ec9f1cc11fdab5ff313bb3041d2b158ed6ca67
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046668"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692479"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Usar segmentos en Dynamics 365 Marketing (versión preliminar)
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-
-Use os [segmentos](segments.md) para xerar campañas e contactar con grupos específicos de clientes con Dynamics 365 Marketing. Para obter máis información, consulte [Usar segmentos de Dynamics 365 Customer Insights con Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
-
-Se está a empregar as novas capacidades de Dynamics 365 Marketing para a orquestración de viaxes dos clientes en tempo real nunha organización de Dataverse, non precisa crear unha exportación estándar a Dynamics 365 Marketing. Os contactos e segmentos da información do público están dispoñibles directamente en Dynamics 365 Marketing despois de conectar Marketing e Customer Insights. Antes de eliminar as exportacións existentes, revise a documentación sobre [como conectar a información do público e a orquestración de viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile).
+Use os [segmentos](segments.md) para xerar campañas e contactar con grupos específicos de clientes con Dynamics 365 Marketing. Para obter máis información, consulte [Usar segmentos de Dynamics 365 Customer Insights con Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
 
 ## <a name="prerequisite-for-a-connection"></a>Requisito previo para unha conexión
 
@@ -45,7 +43,7 @@ Se está a empregar as novas capacidades de Dynamics 365 Marketing para a orques
 
 1. Na sección **Conta de administrador do servidor**, seleccione **Iniciar sesión** e escolla unha conta de Dynamics 365 Marketing.
 
-1. Asigne o campo Contact ID da entidade Cliente ao Contact ID de Dynamics 365.
+1. Asigne un campo de ID de cliente ao ID de contacto de Dynamics 365.
 
 1. Seleccione **Gardar** para completar a conexión. 
 

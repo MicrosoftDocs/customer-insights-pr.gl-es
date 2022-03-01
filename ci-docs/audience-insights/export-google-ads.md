@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Google Ads
 description: Aprenda a configurar a conexión e exportar a Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,19 +9,16 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617916"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604275"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos a Google Ads (versión preliminar)
 
 Exporte segmentos de perfís de clientes unificados a unha lista de público de Google Ads e utilíceos para anunciarse na Busca de Google, Gmail, YouTube e a Rede de visualización de Google. 
-
-> [!IMPORTANT]
-> Actualmente, só pode crear unha nova conexión e exportar datos a Google Ads se xa ten un token de programador de Google Ads aprobado. Debido a cambios na política, actualizaremos a exportación de Google Ads en breve e ofreceremos unha opción de exportación que non requirirá un token de programador para garantir a continuidade da súa experiencia e simplificar a exportación a Google Ads. Recomendamos non configurar máis conexións con Google Ads para facilitar o cambio á nova opción de exportación.
 
 ## <a name="prerequisites-for-connection"></a>Requisitos previos para a conexión
 
@@ -35,9 +32,9 @@ Exporte segmentos de perfís de clientes unificados a unha lista de público de 
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Ata 1 millón de perfís de clientes por exportación a Google Ads.
+- Ata 1 millón de perfís por exportación a Google Ads.
 - A exportación a Google Ads está limitada a segmentos.
-- A exportación de segmentos cun total de 1 millón de perfís de clientes pode levar ata 5 minutos por mor das limitacións do provedor. 
+- A exportación de segmentos cun total de 1 millón de perfís pode levar ata 5 minutos debido ás limitacións do provedor. 
 - A busca de coincidencias en Google Ads pode levar ata 48 horas.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configurar conexión a Google Ads
@@ -74,7 +71,7 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Introduza o seu **[ID de audiencia de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e seleccione **Conectar** para inicializar a conexión a Google Ads.
 
-1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente.
+1. Na sección **Coincidencia de datos**, no campo **Correo electrónico**, seleccione o campo do seu perfil de cliente unificado que representa o enderezo de correo electrónico dun cliente.
 
 1. Seleccione os segmentos que desexa exportar. Pode exportar ata 1 millón de perfís de clientes en total a Google Ads.
 

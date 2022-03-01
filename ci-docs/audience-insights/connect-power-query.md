@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
-ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8092070"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934976"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar a a Power Query orixe de datos
 
@@ -30,7 +30,7 @@ Engadir fontes de datos baseadas en Power Query conectores xeralmente segue os p
 
 1. Seleccione **Engadir orixe de datos**.
 
-1. Seleccione **Microsoft Power Query**.
+1. Seleccione **Microsoft Power Query** e, a continuación, seleccione **A continuación**.
 
 1. Escriba un **Nome** para a orixe de datos e seleccione **Seguinte** para crear o orixe de datos.
 
@@ -47,12 +47,12 @@ Engadir fontes de datos baseadas en Power Query conectores xeralmente segue os p
 
 1. Tamén pode transformar os seus datos. Seleccione unha entidade para editar ou transformar. Use as opcións do Power Query xanela para aplicar transformacións. Cada transformación aparece na lista **Pasos aplicados**. Power Query ofrece numerosas opcións de transformación predefinidas. Para obter máis información, consulte [Power Query Transformacións](/power-query/power-query-what-is-power-query#transformations).
 
+1. Pode engadir entidades adicionais á súa orixe de datos seleccionando **Obter datos** na caixa de diálogo **Editar consultas**.
+
    Recomendamos que use as seguintes transformacións:
 
-   - Se está inxerindo datos dun ficheiro CSV, a primeira fila a miúdo contén cabeceiras. Ir a **Transformar** e selecciona **Use a primeira fila como cabeceiras**.
-   - Asegúrese de que o tipo de datos está configurado correctamente. Por exemplo, para os campos de data, seleccione un tipo de data.
-
-1. Para engadir entidades adicionais ao teu orixe de datos no **Editar consultas** diálogo, vai a **Casa** e selecciona **Obter datos**.
+   - Se está inxerindo datos dun ficheiro CSV, a primeira fila a miúdo contén cabeceiras. Vaia a **Transformar táboa** e seleccione **Usar cabeceiras como primeira fila**.
+   - Asegúrese de que o tipo de datos está configurado correctamente.
 
 1. Seleccione **Gardar** na parte inferior do Power Query xanela para gardar as transformacións. Despois de gardar, atopará o seu orixe de datos en **Datos** > **Orixes de datos**.
 

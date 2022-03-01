@@ -1,7 +1,7 @@
 ---
 title: Completar datos parciais mediante predicións
 description: Utilice predicións para cubrir datos de clientes incompletos.
-ms.date: 11/01/2021
+ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,32 +9,31 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732402"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645032"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa os teus datos parciais con predicións (obsoleto)
+# <a name="complete-your-partial-data-with-predictions"></a>Complete os seus datos parciais con predicións
 
-> [!IMPORTANT]
-> Esta característica será **obsoleto** a partir de **5 de novembro de 2021**. As implementacións actuais seguirán funcionando ata que se elimine a función, pero non poderás crear novas integracións usando as instrucións que aparecen a continuación.
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 As predicións permiten crear valores previstos facilmente que poden mellorar a comprensión dun cliente. Na páxina **Intelixencia** > **Predicións**, pode seleccionar **As miñas predicións** para ver predicións que configurou noutras partes das estatísticas do público e permitirlle personalizalas aínda máis.
 
 > [!NOTE]
 > Non pode usar esta función se o seu contorno usa o almacenamento Azure Data Lake Gen 2.
 >
-> A función de predicións usa medios automatizados para avaliar datos e facer predicións a partir dese dato e, polo tanto, ten a capacidade de ser utilizada como método de perfilado, xa que ese termo está definido polo Regulamento xeral de protección de datos ("RXPD"). O uso desta función para o procesamento de datos por parte do cliente pode estar suxeito a RXPD ou a outras leis ou regulamentos. Vostede é responsable de garantir que o seu uso de Dynamics 365 Customer Insights, incluídas as predicións, cumpra todas as leis e regulamentos aplicables, incluídas as leis relacionadas coa privacidade, os datos persoais, os datos biométricos, a protección de datos e a confidencialidade das comunicacións.
+> A función de predicións usa medios automatizados para avaliar datos e facer predicións a partir dese dato e, polo tanto, ten a capacidade de ser utilizada como método de perfilado, xa que ese termo está definido polo Regulamento xeral de protección de datos ("RXPD"). O uso desta función para o procesamento de datos por parte do cliente pode estar suxeito a RXPD ou a outras leis ou regulamentos. Vostede é responsable de garantir que o seu uso de Dynamics 365 Customer Insights, incluíndo as predicións, cumpre con todas as leis e regulamentos aplicables, incluídas as leis relacionadas coa privacidade, os datos persoais, os datos biométricos, a protección de datos e a confidencialidade das comunicacións.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Antes de que a súa organización poida usar a función de predicións, asegúrese de que se cumpran os seguintes requisitos previos:
 
-1. A túa organización ten unha instancia [configurado en Microsoft Dataverse](/ai-builder/build-model#prerequisites) e está na mesma organización que Customer Insights.
+1. A súa organización ten unha instancia [configurada en Microsoft Dataverse](/ai-builder/build-model#prerequisites) e está na mesma organización que Customer Insights.
 
-2. A túa contorna de información sobre a audiencia está anexada á túa instancia Dataverse.
+2. O seu ambiente de información do público está anexado á instancia de Dataverse.
 
 Para obter máis información, consulte [Crear un novo contorno](create-environment.md).
 
@@ -61,8 +60,6 @@ Para obter máis información, consulte [Crear un novo contorno](create-environm
    > ![Exemplo que mostra os valores de campo asignados a categorías.](media/intelligence-categorymapping.png "Exemplo que mostra os valores de campo asignados a categorías")
 
 8. Seleccione **Feito** e a predición procesarase. O procesamento levará algún tempo, dependendo do tamaño e complexidade dos datos. Os resultados estarán dispoñibles nunha nova entidade en función do **Nome da entidade de saída** da predición que creou.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Crear unha predición mentres se crea un segmento
 
@@ -142,7 +139,7 @@ A seguinte execución da súa predición usará o modelo actualizado que creou.
 
 ## <a name="troubleshooting"></a>Resolución de problemas
 
-Se non podes completar o proceso de anexo Dataverse debido a un erro, podes tentar completar o proceso manualmente. Existen dous problemas coñecidos que poden ocorrer no proceso de anexar:
+Se non pode completar o proceso de anexar Dataverse debido a un erro, poderá tentar completar o proceso manualmente. Existen dous problemas coñecidos que poden ocorrer no proceso de anexar:
 
 - A solución de complemento de tarxeta de cliente non está instalada.
     1. Complete as instrucións para [instalar e configurar a solución](customer-card-add-in.md).

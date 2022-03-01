@@ -1,20 +1,20 @@
 ---
 title: Relacións entre entidades e camiños das entidades
 description: Cree e xestione relacións entre entidades a partir de varias fontes de datos.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623001"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171162"
 ---
 # <a name="relationships-between-entities"></a>Relacións entre entidades
 
@@ -68,20 +68,6 @@ Unha relación consiste nunha *entidade de orixe* que contén a clave externa e 
 
 4. Seleccione **Gardar** para crear a relación personalizada.
 
-## <a name="set-up-account-hierarchies"></a>Configurar xerarquías de conta
-
-Os contornos configurados para utilizar as contas empresariais como público obxectivo principal poden configurar xerarquías de contas para contas comerciais relacionadas. Por exemplo, unha empresa que ten unidades de negocio separadas. 
-
-As organizacións crean xerarquías de contas para xestionar mellor as contas e as súas relacións entre si. A capacidade de información de audiencia admite xerarquías de contas principais-secundarias que xa existen nos datos de clientes inxeridos. Por exemplo, contas de Dynamics 365 Sales. Estas xerarquías pódense configurar na páxina **Relacións** en estatísticas de audiencia, na pestana de xerarquía de contas.
-
-1. Vaia a **Datos** > **Relacións**.
-1. Seleccione a pestana **Xerarquía de contas**.
-1. Seleccione **Nova xerarquía de contas**. 
-1. No panel **Xerarquía de contas**, proporcione un nome para a xerarquía. O sistema crea un nome para a entidade de saída. Pode cambiar o nome da entidade de nome de saída.
-1. Seleccione a entidade que contén a xerarquía da súa conta. Normalmente está na mesma entidade que contén as contas.
-1. Seleccione a **ID de conta** e a **ID principal da conta** da entidade seleccionada 
-1. Seleccione **Gardar** para aplicar a configuración e finalizar a xerarquía da conta.
-
 ## <a name="view-relationships"></a>Ver relacións
 
 A páxina Relacións enumera todas as relacións que se crearon. Cada fila representa unha relación, que tamén inclúe detalles sobre a entidade de orixe, a entidade de destino e a cardinalidade. 
@@ -96,7 +82,7 @@ Esta páxina ofrece un conxunto de opcións para as relacións novas e existente
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorar o visualizador de relacións
 
-O visualizador de relacións mostra un diagrama de rede das relacións existentes entre as entidades conectadas e a súa cardinalidade. Tamén visualiza o camiño da relación.
+O visualizador de relacións mostra un diagrama de rede das relacións existentes entre as entidades conectadas e a súa cardinalidade.
 
 Para personalizar a vista, pode cambiar a posición das caixas arrastrándoas sobre o lenzo.
 
@@ -106,56 +92,6 @@ Opcións dispoñibles:
 - **Exportar como imaxe**: garde a vista actual como un ficheiro de imaxe.
 - **Cambiar a deseño horizontal ou vertical**: cambie o aliñamento das entidades e das relacións.
 - **Editar**: actualice as propiedades das relacións personalizadas no panel de edición e garde os cambios.
-
-## <a name="relationship-paths"></a>Camiños da relación
-
-Un camiño de relación describe as entidades que están conectadas con relacións entre unha entidade de orixe e unha entidade de destino. Úsase cando se crea un segmento ou unha medida que inclúe outras entidades distintas da entidade do perfil unificado e hai varias opcións para chegar á entidade do perfil unificado. 
-
-Un camiño de relación informa ao sistema sobre cales son as relacións para acceder á entidade de perfil unificado. Diferentes camiños de relación poden dar resultados diferentes.
-
-Por exemplo, a entidade *eCommerce_eCommercePurchases* ten as seguintes relacións coa entidade *Cliente* do perfil unificado:
-
-- eCommerce_eCommercePurchases > Cliente
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
-
-Un camiño de relación determina que entidades pode usar ao crear regras para medidas ou segmentos. Escoller a opción co camiño de relación máis longo probablemente dea menos resultados, porque os rexistros coincidentes deben formar parte de todas as entidades. Neste exemplo, un cliente ten que mercar bens a través dun comercio electrónico (eCommerce_eCommercePurchases), nun punto de venda (POS_posPurchases) e participar no noso programa de fidelidade (loyaltyScheme_loyCustomers). Se escolle a primeira opción, é probable que obteña máis resultados porque os clientes só precisan existir nunha entidade adicional.
-
-### <a name="direct-relationship"></a>Relación directa
-
-Unha relación clasifícase como **relación directa** cando unha entidade de orixe se relaciona cunha entidade de destino cunha soa relación.
-
-Por exemplo, se unha entidade de actividade chamada *eCommerce_eCommercePurchases* conéctase a unha entidade de destino *eCommerce_eCommerceContacts* a través de *ContactId* só, é unha relación directa.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="A entidade de orixe conéctase directamente coa entidade de destino.":::
-
-#### <a name="multi-path-relationship"></a>Relación de varios camiños
-
-Unha **relación de varios camiños** é un tipo especial de relación directa que conecta unha entidade de orixe a máis dunha entidade de destino.
-
-Por exemplo, se unha entidade de actividade chamada *eCommerce_eCommercePurchases* está relacionada con dúas entidades de destino, *eCommerce_eCommerceContacts* e *loyaltyScheme_loyCustomers*, é unha relación de varios camiños.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="A entidade de orixe conéctase directamente a máis dunha entidade de destino a través dunha relación de varios saltos.":::
-
-### <a name="indirect-relationship"></a>Relación indirecta
-
-Unha relación clasifícase como **relación indirecta** cando unha entidade de orixe se relaciona cunha ou máis entidades adicionais antes de relacionarse cunha entidade de destino.
-
-#### <a name="multi-hop-relationship"></a>Relación de varios saltos
-
-Unha *relación de varios saltos* é unha *relación indirecta* que lle permite conectar unha entidade de orixe a unha entidade de destino a través dunha ou máis entidades intermediarias adicionais.
-
-Por exemplo, se unha entidade de actividade chamada *eCommerce_eCommercePurchasesWest* se conecta a unha entidade intermedia chamada *eCommerce_eCommercePurchasesEast* e logo conéctase a unha entidade de destino chamada *eCommerce_eCommerceContacts*, é unha relación de varios saltos.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="A entidade de orixe conéctase directamente a unha entidade de destino cunha entidade intermedia.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Relación de varios camiños e varios saltos
-
-As relacións de varios saltos e varios camiños pódense usar xuntas para crear **relacións de varios saltos e varios camiños**. Este tipo especial combina as funcións de **varios saltos** e as **relacións de varios camiños**. Permite conectarse a máis dunha entidade de destino mentres usa entidades intermedias.
-
-Por exemplo, se unha entidade de actividade chamada *eCommerce_eCommercePurchasesWest* se conecta a unha entidade intermedia chamada *eCommerce_eCommercePurchasesEast* e logo conéctase a dúas entidades de destino chamadas *eCommerce_eCommerceContacts* e *loyaltyScheme_loyCustomers*, é unha relación de varios saltos e varios camiños.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="A entidade de orixe conéctase directamente a unha entidade de destino e conéctase a outra entidade de destino a través dunha entidade intermedia.":::
 
 ## <a name="manage-existing-relationships"></a>Xestionar relacións existentes 
 
@@ -169,6 +105,6 @@ Seleccione unha relación e elixa unha das seguintes opcións:
 
 ## <a name="next-step"></a>Seguinte paso
 
-As relacións personalizadas e do sistema úsanse para [crear segmentos](segments.md) e [medidas](measures.md) baseándose en varias orixes de datos que xa non están en silos.
+As relacións do sistema e personalizadas úsanse para [crear segmentos](segments.md) baseados en varias orixes de datos que xa non están gardadas en silos.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

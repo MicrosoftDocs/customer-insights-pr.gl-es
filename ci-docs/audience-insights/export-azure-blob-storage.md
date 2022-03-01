@@ -1,75 +1,50 @@
 ---
 title: Exportar datos de Customer Insights a un Azure Blob Storage
-description: Aprenda a configurar a conexión e exportar ao almacenamento de BLOB.
-ms.date: 10/06/2021
-ms.reviewer: mhart
+description: Aprenda a configurar a conexión co Azure Blob Storage.
+ms.date: 09/18/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: 925b53260e7c633e17d7f172d2dd2d581e982e10
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605836"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667137"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportar lista de segmentos e outros datos a Azure Blob Storage (versión preliminar)
+# <a name="connector-for-azure-blob-storage-preview"></a>Conector para Azure Blob Storage (vista previa)
 
-Almacene os datos de Customer Insights nun almacenamento de BLOB ou úseo para transferir os datos a outras aplicacións.
+Almacene os datos de Customer Insights nun Azure Blob Storage ou úseo para transferir os datos a outras aplicacións.
 
-## <a name="known-limitations"></a>Limitacións coñecidas
+## <a name="configure-the-connector-for-azure-blob-storage"></a>Configurar o conector para Azure Blob Storage
 
-1. Para Azure Blob Storage pode escoller entre o [Rendemento estándar e o nivel de rendemento Premium](/azure/storage/blobs/storage-blob-performance-tiers). Se escolle o nivel de rendemento Premium, seleccione os [blobs de bloque premium como tipo de conta](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+1. Na información do público, vaia a **Administrar** > **Destinos de exportación**.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Configurar a conexión ao almacenamento de BLOB
+1. En **Azure Blob Storage**, seleccione **Configurar**.
 
-1. Vaia a **Administrar** > **Conexións**.
+1. Introduza **Nome da conta**, **Clave da conta** e **Contedor** para a súa conta de Azure Blob Storage.
+    - Para obter máis información sobre como atopar o nome da conta de almacenamento BLOB de Azure e a clave da conta, consulte [Xestionar a configuración da conta de almacenamento no portal de Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Para obter máis información acerca de como crear un contedor, consulte [Crear un contedor](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Seleccione **Engadir conexión** e elixa **Azure Blob Storage** para configurar a conexión.
+1. Déalle ao seu destino un nome recoñecible no campo **Nome para mostrar**.
 
-1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
-
-1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Insira o **Nome da conta**, a **Clave da conta** e o **Contedor** para a súa conta de almacenamento de BLOB.
-    - Para obter máis información sobre como atopar o nome e a clave da conta de Blob Storage, consulte [Xestionar a configuración da conta de almacenamento no portal de Azure](/azure/storage/common/storage-account-manage).
-    - Para obter máis información acerca de como crear un contedor, consulte [Crear un contedor](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
-
-1. Seleccione **Gardar** para completar a conexión. 
-
-## <a name="configure-an-export"></a>Configurar unha exportación
-
-Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Para obter máis información, consulte [Permisos necesarios para configurar unha exportación](export-destinations.md#set-up-a-new-export).
-
-> [!IMPORTANT]
-> Se activou a configuración de eliminación temporal da conta de almacenamento de BLOB de Azure, as exportacións fallarán. Desactive a eliminación temporal para exportar datos aos BLOB. Para obter máis información, consulte [Activar a eliminación temporal de BLOB](/azure/storage/blobs/soft-delete-blob-enable.md)
-
-1. Vaia a **Datos** > **Exportacións**.
-
-1. Seleccione **Engadir destino** para crear unha nova exportación.
-
-1. No campo **Conexión da exportación** escolla unha conexión da sección Azure Blob Storage. Se non ve o nome desta sección, non ten ningunha conexión deste tipo dispoñible.
+1. Seleccione **Seguinte**.
 
 1. Seleccione a caixa xunto a cada unha das entidades que desexa exportar a este destino.
 
 1. Seleccione **Gardar**.
 
-Ao gardar unha exportación non se executa a exportación inmediatamente.
+Os datos exportados almacénanse no contedor de Azure Blob Storage que configurou. As seguintes rutas de cartafol créanse automaticamente no seu contedor:
 
-A exportación execútase con cada [actualización programada](system.md#schedule-tab).     
-
-Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
-
-Os datos exportados almacénanse no contedor de almacenamento de BLOB que configurou. As seguintes rutas de cartafol créanse automaticamente no seu contedor:
-
-- Para entidades de orixe e entidades xeradas polo sistema:   
-  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
+- Para entidades de orixe e entidades xeradas polo sistema: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - Exemplo: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
-- O model.json das entidades exportadas estará no nivel %ExportDestinationName%.  
+- O model.json para as entidades exportadas residirá no nivel % ExportDestinationName%
   - Exemplo: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+## <a name="export-the-data"></a>Exportar os datos
+
+Pode [exportar datos baixo demanda](/export-destinations.md#export-data-on-demand). A exportación tamén se executará con todas as [actualizacións programadas](system.md#schedule-tab).

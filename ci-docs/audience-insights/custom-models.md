@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967653"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881782"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizaxe automática personalizados
 
@@ -40,8 +40,6 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 
    > [!NOTE]
    > Os datos transfírense entre as instancias de Customer Insights e os servizos web ou canalizacións de Azure seleccionados no fluxo de traballo. Cando transfira datos a algún servizo de Azure, asegúrese de que este estea configurado para procesar os datos co sistema e na localización necesarios para cumprir todos os requisitos legais ou normativos que se apliquen ditos datos da organización.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Engadir un novo fluxo de traballo
 

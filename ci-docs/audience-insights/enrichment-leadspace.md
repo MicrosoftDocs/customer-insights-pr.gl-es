@@ -1,79 +1,50 @@
 ---
 title: Enriquecemento de perfís de empresa co enriquecemento de terceiros de Leadspace
 description: Información xeral sobre o enriquecemento de terceiros de Leadspace.
-ms.date: 09/30/2021
-ms.reviewer: mhart
+ms.date: 11/24/2020
+ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
+ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673230"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4668721"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquecemento de perfís de empresa con Leadspace (vista previa)
 
-Leadspace é unha empresa de ciencia de datos que ofrece unha plataforma de datos de clientes B-a-B. Permite que os ambientes con perfís de clientes unificados baseados en contas enriquezan os seus datos. Enriqueza *Perfís de clientes* con atributos como o tamaño da empresa, a localización ou a industria. Enriqueza *Perfís de contacto* con atributos como o título, a persoa ou a verificación por correo electrónico.
+Leadspace é unha empresa de ciencia de datos que proporciona unha plataforma de datos de clientes B2B. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos incluíen atributos adicionais, como o tamaño da empresa, a localización o sector e moito máis.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para configurar Leadspace, deben cumprirse os seguintes requisitos previos:
 
-- Ten unha licenza de Leadspace activa.
-- Ten [perfís de clientes unificados](customer-profiles.md) baseados en contas.
-- Un administrador xa configurou unha conexión de Leadspace ou vostede ten permisos de [administrador](permissions.md#administrator) e a "clave perpetua" (denominada **Token de Leadspace**). Contacte con [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) directamente para obter detalles sobre o seu produto.
+- Ten unha licenza de Leadspace activa e a "clave perpetua" (coñecida como **Token de Leadspace**). Contacte directamente con [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) para obter máis detalles sobre o seu produto.
+- Ten permisos de [administrador](permissions.md#administrator).
+- Ten [perfís de clientes unificados](customer-profiles.md) para empresas.
 
-## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
+## <a name="configuration"></a>Configuración
 
 1. Na información do público, vaia a **Datos** > **Enriquecemento**.
 
-1. No mosaico de Leadspace, seleccione **Enriquecer os meus datos** e logo seleccione **Comezar**.
+1. Seleccione **Enriquecer os meus datos** no mosaico de Leadspace.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Captura de pantalla do mosaico de Leadspace.":::
 
-1. Seleccione unha [conexión](connections.md) da lista despregable. Póñase en contacto cun administrador se non hai conexión dispoñible. Se é administrador, pode crear unha conexión seleccionando **Engadir conexión** e escollendo **Leadspace**. 
+1. Seleccione **Comezar** e logo introduza un **Token de Leadspace** (clave perpetua) activo. Revise e proporcione o seu consentimento para a **Privacidade e cumprimento dos datos** seleccionando a caixa de verificación **Estou de acordo**. Confirme ambas as entradas seleccionando **Conectarse a Leadspace**.
 
-1. Seleccione **Conectar con Leadspace** para confirmar a conexión.
-
-1. Seleccione **Seguinte** e escolla o **Conxunto de datos do cliente** que quere enriquecer cos datos da empresa de Leadspace. Pode seleccionar a entidade **Cliente** para enriquecer todos os seus perfís de clientes ou seleccione unha entidade de segmento para enriquecer só os perfís de clientes contidos nese segmento.
-
-    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Captura de pantalla ao escoller o conxunto de datos do cliente.":::
-
-1. Seleccione **Seguinte** e defina os campos dos perfís unificados que se usan para buscar os datos da empresa coincidentes de Leadspace. O campo **Nome da empresa** é obrigatorio. Para unha maior precisión de coincidencia, ata outros dous campos, **Páxina web da empresa** e **Localización da empresa**, pódense engadir.
+1. Seleccione **Asignar datos** e defina os campos dos perfís unificados que se deben empregar para buscar os datos da empresa coincidentes de Leadspace. O campo **Nome da empresa** é obrigatorio. Para unha maior precisión de coincidencia, ata outros dous campos, **Páxina web da empresa** e **Localización da empresa**, pódense engadir.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Panel de asignación de campos de Leadspace.":::
-
-1. Seleccione **Seguinte** para concluír a asignación do campo.
-
-1. Marque a caixa de verificación se ten *Perfís de contacto* que lle gustaría enriquecer. As estatísticas do público asignarán automaticamente os campos obrigatorios.
-
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Enriquecemento de rexistros de contacto de Leadspace.":::
- 
-1. Indique un nome para o enriquecemento e seleccione **Gardar enriquecemento** despois de revisar as súas opcións.
-
-
-## <a name="configure-the-connection-for-leadspace"></a>Configurar a conexión para Leadspace 
-
-Debe ser administrador para configurar as conexións. Seleccione **Engadir conexión** ao configurar un enriquecemento *ou* vaia a **Administrar** > **Conexións** e seleccione **Configurar** no mosaico de Leadspace.
-
-1. Seleccione **Comezar**. 
-
-1. Introduza un nome para a conexión na caixa **Nome de visualización**.
-
-1. Forneza un token de Leadspace válido.
-
-1. Revise e proporcione o seu consentimento para a **Privacidade e cumprimento de datos** seleccionando **Estou de acordo**.
-
-1. Seleccione **Verificar** para validar a configuración.
-
-1. Despois de completar a verificación, seleccione **Gardar**.
    
-   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Páxina de configuración da conexión de Leadspace.":::
+1. Seleccione **Aplicar** para completar a asignación de campos.
+
+1. Seleccione **Executar** para enriquecer os perfís da empresa. O tempo que leva un enriquecemento depende do número de perfís de clientes unificados.
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
 
@@ -85,13 +56,9 @@ Para obter máis información, consulte [API de Leadspace](https://support.leads
 
 ## <a name="next-steps"></a>Pasos seguintes
 
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 
 Cando habilita Dynamics 365 Customer Insights para transmitir datos a Leadspace, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de garantir que Leadspace cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

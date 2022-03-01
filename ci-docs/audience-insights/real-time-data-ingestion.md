@@ -2,19 +2,19 @@
 title: Inxestión e limitacións de datos en tempo real
 description: Información xeral sobre capacidades en tempo real nas estatísticas do público.
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035275"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689173"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Inxestión de datos en tempo real (vista previa)
 
@@ -54,7 +54,7 @@ A API en tempo real permítelle publicar unha nova actividade do seu sistema de 
 
 Hai dúas formas de conectarse á API en tempo real:
 
-- [indirectamente](#connect-via-the-dynamics-365-customer-insights-connector), usando o [conector Dynamics 365 Customer Insights](/connectors/customerinsights/)
+- [indirectamente](#connect-via-the-dynamics-365-customer-insights-connector), usando o [conector Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
 - [directamente](#connect-directly-to-the-real-time-api), co código
 
 Ámbolos dous xeitos comparten os seguintes requisitos previos:
@@ -66,13 +66,13 @@ Hai dúas formas de conectarse á API en tempo real:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Conectarse a través do conector de Dynamics 365 Customer Insights
 
-A API en tempo real pode inxerir datos dun conector Power Platform específico, o [conector de Dynamics 365 Customer Insights](/connectors/customerinsights/), sen necesidade de escribir e despregar ningún código.    
-O conector pode facer as mesmas accións en tempo real que a API. Necesita unha licenza válida para os conectores premium. Para obter máis información, consulte [Preguntas máis frecuentes acerca de licenzas de Power Apps e Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
+A API en tempo real pode inxerir datos dun conector Power Platform específico, o [conector de Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), sen necesidade de escribir e despregar ningún código.    
+O conector pode facer as mesmas accións en tempo real que a API. Necesita unha licenza válida para os conectores premium. Para obter máis información, consulte [Preguntas máis frecuentes acerca de licenzas de Power Apps e Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps e/ou Power Automate](/connectors/)
-- Azure [Logic Apps](/azure/connectors/apis-list)
+- Power Platform [Power Apps e/ou Power Automate](https://docs.microsoft.com/connectors/)
+- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
 
-Para obter máis detalles sobre a creación de fluxos, consulte a [documentación de Power Automate](/power-automate/).
+Para obter máis detalles sobre a creación de fluxos, consulte a [documentación de Power Automate](https://docs.microsoft.com/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Conectar directamente á API en tempo real
 
@@ -83,7 +83,6 @@ Os detalles desta API, incluídos parámetros e respostas, pódense atopar na se
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprender o seu uso en tempo real coa telemetría
 
-Obteña unha visión xeral do volume de solicitudes á API en tempo real e información sobre problemas que pode atopar o sistema. Pode [acceder á telemetría en tempo real](system.md#api-usage-tab). 
+Obteña unha visión xeral do volume de solicitudes á API en tempo real e información sobre problemas que pode atopar o sistema. Pode [acceder á telemetría en tempo real](system.md#api-usage-tab) indo a **Administrador** > **Sistema** > **Uso da API**. Na táboa **Operacións**, as filas das operacións da API que usan os métodos en tempo real conteñen un botón para ver o uso da API en tempo real. O botón visualízase cun símbolo de binocular. Seleccione o botón para abrir un panel lateral que conteña detalles de uso para o uso da API en tempo real no contorno actual.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Use o selector **Agrupar por** para escoller como presentar mellor as súas interaccións en tempo real nunha liña de tempo que vai desde as últimas 24 horas ata os últimos 30 días. Pode agrupar os datos por método de API, nome cualificado de entidade (entidade inxerida), autor (orixe do evento), resultado (éxito ou fracaso) ou códigos de erro. Os datos están dispoñibles como gráfico de historial e como táboa.

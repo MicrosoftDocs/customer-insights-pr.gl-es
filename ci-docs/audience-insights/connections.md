@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977735"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304970"
 ---
 # <a name="connections-preview-overview"></a>Visión xeral de conexións (versión preliminar)
 
@@ -47,7 +47,6 @@ Para engadir conexións, cómpre ter [permisos de administrador](permissions.md)
 1. No panel **Configurar a conexión**, proporcione os detalles requiridos. 
    1. O **Nome de visualización** e o tipo de conexión describen unha conexión. Recomendamos escoller un nome que explique o propósito e o destino desta conexión.
    1. Os campos exactos dependen do servizo ao que se conecte. Pode coñecer os detalles dun tipo de conexión específico no artigo sobre o servizo de destino.
-   1. Se [usa o seu propio Key Vault](use-azure-key-vault.md) para gardar segredos, active **Usar Key Vault** e escolla o segredo da lista.
 
 1. Seleccione **Gardar** para crear a conexión.
 
@@ -94,6 +93,3 @@ Os enriquecementos e exportacións desconectados quedan inactivos. Reactíveos e
 
 1. Para confirmar a eliminación, seleccione **Quitar**.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurar conexións con segredos xestionados polo seu Key Vault
-
-Algunhas conexións precisan segredos como claves ou contrasinais de API. Algunhas conexións admiten segredos almacenados no seu Key Vault. Máis información sobre as conexións compatibles e como configurar [o seu propio Key Vault para obter información sobre o público](use-azure-key-vault.md).

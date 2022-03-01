@@ -1,7 +1,7 @@
 ---
 title: Predición de recomendacións de produtos
 description: Prediga os produtos cos que é probable que un cliente interactúe ou adquira.
-ms.date: 01/13/2022
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967792"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494537"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predición de recomendacións de produtos (versión preliminar)
 
@@ -54,7 +54,7 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
 
 > [!NOTE]
 > - O modelo require o historial de transaccións dos seus clientes. A definición dunha transacción é bastante flexible. Calquera dato que describe unha interacción usuario-produto pode funcionar como entrada. Por exemplo, mercar un produto, tomar unha clase ou asistir a un evento.
-> - Actualmente só se pode configurar unha entidade do historial de transaccións. Se hai varias entidades de compra, únaas Power Query antes da inxestión de datos.
+> - Actualmente só se pode configurar unha entidade do historial de transaccións. Se hai varias entidades de compra, únaas en Power Query antes da inxestión de datos.
 > - Se os detalles da orde e dos pedidos son entidades diferentes, únaas antes de empregalas no modelo. O modelo non funciona só cun ID de pedido ou ID de recibo nunha entidade.
 
 
@@ -79,11 +79,11 @@ Se ten interese en probar esta función pero non ten datos para completar os seg
 1. Configure o **Número de produtos** que quere recomendar a un cliente. Este valor depende de como o método de entrega enche os datos. Se pode recomendar tres produtos, defina este valor segundo corresponda.
    
    >[!TIP]
-   > Podes seleccionar **Garda o borrador** en calquera momento para gardar o predición como borrador. Atopará o borrador da predición no separador **As miñas predicións**.
+   > Pode seleccionar **Gardar e pechar** en calquera momento para gardar a predición como borrador. Atopará o borrador da predición no separador **As miñas predicións**.
 
-1. Escolle se queres incluír produtos que os clientes compraron recentemente na páxina **Se esperan compras repetidas** campo.
+1. Escolla se quere **Suxerir produtos que os clientes comprasen recentemente**.
 
-1. Establece o **Mirar cara atrás fiestra**. Esta configuración especifica o período de tempo que considera o modelo antes de recomendarlle de novo o produto ao usuario. Por exemplo, indica que un cliente compra un portátil cada dous anos. Nesta xanela verá o historial de compras dos últimos dous anos e, se se atopa algún artigo, filtrarase o elemento das recomendacións.
+1. Se seleccionou *non* recomendar produtos comprados recentemente, configure a **Ventá para ver días pasados**. Esta configuración especifica o período de tempo que considera o modelo antes de recomendarlle de novo o produto ao usuario. Por exemplo, indica que un cliente compra un portátil cada dous anos. Nesta xanela verá o historial de compras dos últimos dous anos e, se se atopa algún artigo, filtrarase o elemento das recomendacións.
 
 1. Seleccionar **Seguinte**
 
