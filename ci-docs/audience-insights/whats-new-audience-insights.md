@@ -1,23 +1,24 @@
 ---
 title: Funcionalidades novas e futuras
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 03/02/2022
+ms.date: 07/19/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232656"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692387"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcionalidades a longo prazo, vexa os [plans de versións de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
@@ -25,131 +26,6 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
-
-
-## <a name="january-2022-updates"></a>Actualizacións de xaneiro de 2022
-
-As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
-
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Análise de sentimentos dos comentarios dos teus clientes
-
-Customer Insights ofrece unha nova función impulsada pola intelixencia artificial para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
-
-Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (Vista previa)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Actualizacións de decembro de 2021
-
-As actualizacións de decembro de 2021 inclúen novas funcións, melloras de rendemento e corrección de erros.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Reenviar rexistros de Customer Insights a Azure Monitor
-
-Customer Insights ofrece unha integración directa con Azure Monitor. Esta función inclúe eventos de auditoría e eventos operativos. Os rexistros de recursos de Azure Monitor permítenche supervisar e enviar rexistros a Azure Storage, Azure Log Analytics ou transmitilos a Azure Event Hubs.
-
-Para obter máis información, consulte [Reenvío de sesión Dynamics 365 Customer Insights con Azure Monitor (vista previa)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Enriquece os perfís de clientes con datos de compromiso
-
-Usa datos de Microsoft Office 365 para enriquecer os perfís da túa conta de cliente con información sobre compromisos mediante Office 365 aplicacións. Os datos de compromiso consisten en correo electrónico e actividade de reunións, que se agregan a nivel de conta. Por exemplo, o número de correos electrónicos dunha conta empresarial ou o número de reunións coa conta. Non se comparten datos sobre usuarios individuais. Este enriquecemento está dispoñible nas seguintes rexións: Reino Unido, Europa e América do Norte.
-
-Para obter máis información, consulte [Enriquece os perfís de clientes con datos de compromiso (Vista previa)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Funcións avanzadas de unificación de datos
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Activa políticas de resolución de conflitos a nivel de atributos individuais
-
-Ao deduplicar os rexistros de clientes nunha entidade, quizais non queira ter que escoller un rexistro completo como gañador. Agora permíteche combinar os mellores campos de varios rexistros en función de regras para cada atributo. Por exemplo, pode escoller manter o correo electrónico máis recente E o enderezo máis completo de diferentes rexistros. 
-
-Agora podes definir regras de combinación separadas para atributos individuais mentres desduplicas e fusionas rexistros nunha única entidade. Anteriormente, só permitíamos seleccionar unha única regra de combinación (mantendo os rexistros en función da integridade dos datos de recentes) e esa regra aplicábase a nivel de rexistro a todos os atributos. Non é ideal cando algúns dos datos que queres gardar se atopan no rexistro A e outros bos no rexistro B.
-
-Para obter máis información, consulte [Definir a desduplicación nunha entidade de coincidencia](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Regras personalizadas para a correspondencia
-
-Hai momentos nos que cómpre especificar unha excepción ás regras xerais para NON coincidir con rexistros. Isto pode ocorrer cando varias persoas comparten información suficiente para que o sistema as corresponda como unha única persoa. Por exemplo, xemelgos co mesmo apelidos, que viven na mesma cidade e comparten a data de nacemento.
-
-As excepcións garanten que a unificación de datos incorrecta se poida resolver nas regras de unificación. Podes engadir varias excepcións a unha regra.
-
-Para obter máis información, consulte [Engade excepcións a unha regra](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Proporcione políticas adicionais de resolución de conflitos e habilite a agrupación de atributos
-
-Esta función permítelle tratar un grupo de campos como unha única unidade. Por exemplo, se os nosos rexistros conteñen os campos Enderezo1, Enderezo2, Cidade, Estado e Código postal. Probablemente non queiramos combinarnos no Enderezo2 dun rexistro diferente, pensando que faría que os nosos datos sexan máis completos.
-
-Agora podes combinar un grupo de campos relacionados e aplicar unha única política de combinación ao grupo. 
-
-Para obter máis información, consulte [Combina un grupo de campos](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Actualizacións de novembro de 2021
-
-As actualizacións de novembro de 2021 inclúen novas funcións, melloras de rendemento e corrección de erros.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>A subscrición ao segmento xa está dispoñible en Dataverse
-
-A información sobre a pertenza do segmento para os perfís de clientes xa está dispoñible en Dataverse xunto cos perfís e coñecementos dos clientes. As aplicacións de acción e as aplicacións baseadas en modelos de Dynamics 365 poden usar estes datos para buscar detalles de pertenza ao segmento dun cliente determinado.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>As actividades admiten detalles de contacto para as contas empresariais
-
-Agora podes configurar, mostrar e filtrar as actividades dos contactos nos cronogramas da actividade da túa conta empresarial para comprender mellor que contactos da conta participaron en actividades específicas.
-
-## <a name="october-2021-updates"></a>Actualizacións de octubre de 2021
-
-As actualizacións de outubro de 2021 inclúen novas funcións, melloras de rendemento e corrección de erros.
-
-### <a name="b-to-b"></a>B-a-B
-
-A partir de outubro de 2021, podes traballar con contas empresariais e os seus contactos relacionados en Customer Insights. Antes, a aplicación estaba adaptada principalmente a consumidores individuais. Actualizáronse varias áreas de características para admitir escenarios B-to-B ademais dun novo tipo de ambiente. Para obter unha visión xeral das funcións B-to-B compatibles, consulte [Traballa con contas empresariais nas estatísticas do público](work-with-business-accounts.md).
-
-Nas seguintes seccións destacan algunhas das áreas clave que se adaptaron para soportar contas empresariais e consumidores individuais.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Segmentos de exportación baseados en contas comerciais
-
-Todas as exportacións de segmentos en estatísticas de audiencia están dispoñibles no contexto das contas empresariais. A maioría das exportacións de segmentos requiren unha configuración adicional e [información de contacto proxectada](segment-builder.md#create-a-new-segment) nos segmentos subxacentes para ser válido para as contas comerciais. Para obter máis información, consulte [Segmentos de exportación](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Use a exportación de anuncios de LinkedIn con contas empresariais
-
-A exportación de LinkedIn Ads agora está dispoñible para a orientación de contactos e empresas no contexto das contas comerciais. Ao seleccionar a orientación da empresa como o foco principal da exportación de LinkedIn, pode exportar segmentos construídos en contas empresariais sen necesidade de proxectar información de contacto. Para obter máis información, vai á documentación sobre [Exportación de anuncios de LinkedIn](export-linkedin-ads.md) e a diferenza entre [orientación de contactos](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) e [orientación da empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Crea medidas baseadas nas contas empresariais e na súa xerarquía
-
-O creador de medidas permíteche crear medidas en torno ás contas empresariais e, opcionalmente, utilizar a información da xerarquía. A información da xerarquía úsase para acumular un cálculo de medida nunha conta e todas as contas secundarias relacionadas. Por exemplo, pode crear medidas como os ingresos totais para cada grupo de contas empresariais identificadas pola súa xerarquía. Para obter máis información, consulte [Definir e xestionar medidas](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Crea segmentos baseados en contas empresariais e a súa xerarquía
-
-O creador de segmentos permítelle crear segmentos de contas empresariais que inclúan opcionalmente información de contacto para cada conta dun segmento. Se tes a xerarquía de contas configurada, podes usar a información da xerarquía de contas na creación do segmento. Para obter máis información, consulte [Crea un novo segmento](segment-builder.md#create-a-new-segment).
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserva as túas contas empresariais con coñecementos profundos sobre a súa tendencia ao abandono
-
-O modelo de abandono de clientes predición agora tamén admite contas empresariais. Podes avaliar o risco de abandono non só para unha conta, senón tamén para unha combinación dunha conta e unha categoría de produto ou servizo que che compran. Esta adición axúdache a comprender se é máis probable que unha conta deixe de comprarche en xeral ou só para unha determinada categoría de bens ou servizos. Para axudarche aínda máis a usar este modelo de IA, tamén enumera os motivos polos que é probable que unha conta se abandone. Para obter máis información, consulte [Churn de transaccións predición (vista previa)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Consulta os contactos dunha conta empresarial na vista de Cliente
-
-Se as contas empresariais están asignadas a contas relacionadas, a aplicación Customer Insights mostra estes contactos relacionados como parte da vista de detalles do cliente. Para obter máis información, consulte [Perfís de clientes](customer-profiles.md).
-
-
-## <a name="september-2021-updates"></a>Actualizacións de setembro de 2021
-
-As actualizacións en setembro de 2021 inclúen novas funcións, actualizacións de rendemento e corrección de erros.
-
-### <a name="activities"></a>Actividades
-
-- **Melloras na cronoloxía de actividades** Ampliamos os filtros para a cronoloxía das actividades nos perfís dos clientes. Ademais, pode usar o novo filtro para filtrar por tipo de actividade e por data. As datas pódense filtrar empregando diferentes condicións. Para obter máis información, consulte [Ver cronoloxías de actividade nos perfís de clientes](activities.md#view-activity-timelines-on-customer-profiles).
-
-### <a name="relationships"></a>Relacións
-
-- **Compatibilidade con relación de varios saltos** Use relacións de varios saltos cando configure actividades e defina relacións entre entidades. As relacións de varios saltos utilizan unha entidade intermedia para conectar dúas entidades. Ao configurar unha actividade, pode usar unha relación de varios saltos para conectar a súa entidade de actividade a unha entidade intermedia e logo a unha entidade de cliente. Pode combinar relacións de varios saltos con relacións de varios camiños. Para obter máis información, consulte [Relación de varios saltos](relationships.md#multi-hop-relationship).
-
-- **Compatibilidade con relación de varios camiños** Use relacións de varios camiños cando configure actividades e defina relacións entre entidades. As relacións de varios camiños relacionan unha entidade de orixe con máis dunha entidade. Ao configurar unha actividade, pode usar unha relación de varios camiños para conectar a súa entidade de actividade a máis dunha entidade de cliente. Pode combinar relacións de varios camiños con relacións de varios saltos. Para obter máis información, consulte [Relación de varios camiños](relationships.md#multi-path-relationship).
-
-## <a name="august-2021-updates"></a>Actualizacións de agosto de 2021
-
-As actualizacións de xullo e agosto de 2021 inclúen unha nova función, actualizacións de rendemento e corrección de erros.
-
-### <a name="extensibility"></a>Extensibilidade
-
-- **Exportar segmentos a Klaviyo** Ampliamos os nosos [destinos de exportación para incluír Klaviyo](export-klaviyo.md). Agora pode exportar segmentos para crear campañas, levar a cabo márketing por correo electrónico e usar grupos específicos de clientes con Klaviyo. 
-
 
 ## <a name="june-2021-updates"></a>Actualizacións de xuño de 2021
 
@@ -267,7 +143,7 @@ As actualizacións de marzo de 2021 inclúen varias funcións, actualizacións d
 - **Exportar segmentos a Constant Contact** Ampliamos os nosos destinos de exportación para incluír Constant Contact. Agora pode exportar segmentos de Customer Insights a listas de Constant Contact e utilizalos como base para as súas campañas de mercadotecnia.   
    Para obter máis información, consulte [Exportar a Constant Contact](export-constant-contact.md).
 
-- **Exportar segmentos a RollWorks** Ampliamos os nosos destinos de exportación para incluír RollWorks. Agora pode exportar segmentos de Customer Insights a públicos de RollWorks e utilizalos como referencia para a súa publicidade B-a-B.    
+- **Exportar segmentos a RollWorks** Ampliamos os nosos destinos de exportación para incluír RollWorks. Agora pode exportar segmentos de Customer Insights a públicos de RollWorks e utilizalos como base para as súa publicidade B2B.    
    Para obter máis información, consulte [Exportar a RollWorks](export-rollworks.md).
 
 - **Exportar segmentos a Snapchat** Ampliamos os nosos destinos de exportación para incluír Snapchat. Agora pode exportar segmentos de Customer Insights a públicos de Snapchat e utilizalos como base para as súa publicidade.     

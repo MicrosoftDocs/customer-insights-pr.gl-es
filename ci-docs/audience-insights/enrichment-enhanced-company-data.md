@@ -1,19 +1,20 @@
 ---
 title: Mellora dos datos da empresa
 description: Enriquece e normaliza os datos da empresa cos modelos de Microsoft.
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229401"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927580"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquecemento dos perfís da empresa con datos da empresa mellorados
 
@@ -65,7 +66,7 @@ Hai algunhas limitacións cos datos mellorados. Os elementos da lista a continua
 
 1. Seleccione que tipo de campos dos perfís da súa empresa se deben usar para facer coincidir os datos da empresa compilados por Microsoft. Esta selección afectará aos campos de asignación aos que ten acceso no seguinte paso.
 
-1.  Asigne os campos da empresa da súa entidade cliente unificada. Cantos máis identificadores clave e campos mapees, máis probabilidades hai de que a taxa de coincidencia sexa maior.
+1.  Asigne os campos da empresa da súa entidade cliente unificada. Cantos máis identificadores de clave e campos mapees, máis probabilidade de que exista unha taxa de coincidencia máis alta.
 
     :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Paso de mapeo de datos ao configurar o enriquecemento dunha empresa.":::
 
@@ -81,17 +82,17 @@ Para iniciar o proceso de enriquecemento, seleccione **Executar** na barra de co
 
 Despois de completar o proceso de enriquecemento, pode consultar os datos dos perfís de clientes recentemente enriquecidos en **Os meus enriquecementos**. Ademais, atopará a hora da última actualización e o número de perfís enriquecidos.
 
-Podes ver unha mostra dos datos enriquecidos no **Vista previa de clientes enriquecidos** tella. Seleccione **Ver máis** e selecciona o **Datos** para acceder a unha vista detallada de cada perfil enriquecido.
+Pode acceder a unha vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
 
 ### <a name="overview-card"></a>Tarxeta xeral
 
 A tarxeta de visión xeral mostra detalles sobre a cobertura do enriquecemento. 
 
-* **Empresas procesadas e modificadas** : O número de perfís de empresas de clientes que se enriqueceron con éxito.
+* **Clientes procesados e modificados** : O número de perfís de clientes que se enriqueceron con éxito.
 
-* **Empresas tramitadas e non modificadas** : O número de perfís de empresas de clientes que foron recoñecidos pero non modificados. Isto ocorre normalmente cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
+* **Clientes procesados e non modificados** : O número de perfís de clientes que foron recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
 
-* **Empresas non tramitadas e non modificadas** : O número de perfís de empresas de clientes que non foron recoñecidos. Isto ocorre normalmente para os datos de entrada que non son válidos ou non son compatibles co enriquecemento.
+* **Clientes non procesados e non modificados** : O número de perfís que non foron recoñecidos. Normalmente para datos de entrada que non son válidos ou non admitidos polo enriquecemento.
 
 ## <a name="next-steps"></a>Pasos seguintes
 

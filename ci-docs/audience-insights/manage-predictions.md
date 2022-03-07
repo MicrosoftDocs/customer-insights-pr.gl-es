@@ -1,19 +1,20 @@
 ---
 title: Tarefas compartidas para escenarios de predición
 description: Aprenda a xestionar, solucionar problemas e perfeccionar as predicións.
-ms.date: 11/01/2021
+ms.date: 05/17/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230790"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315876"
 ---
 # <a name="manage-predictions"></a>Xestionar predicións
 
@@ -49,12 +50,12 @@ As seguintes columnas do informe conteñen información útil para mellorar os d
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Exemplo dun informe de usabilidade dos datos de entrada que mostra unha táboa con erros, avisos e recomendacións.":::
 
-- **Nome:** Nome descritivo do erro, aviso ou recomendación.
-- **Paso:** Fase do modelo, tren ou puntuación, a que fai referencia a información.
-- **Estado:** Gravidade da información (erro, aviso, recomendación).
-- **Nome da columna:** Columna dunha entidade que se debe modificar para mellorar o rendemento do modelo.
-- **Nome da entidade:** Nome da entidade que se debe modificar para mellorar o rendemento do modelo.
-- **Detalles:** Detalles sobre o erro, aviso ou recomendación.
+- Nome: nome descritivo do erro, aviso ou recomendación.
+- Paso: puntuación, adestramento ou fase do modelo aos que fai referencia a información.
+- Estado: gravidade da información (erro, aviso, recomendación).
+- Nome da columna: columna dunha entidade que necesita ser modificada para mellorar o desempeño do modelo.
+- Nome da entidade: nome da entidade que necesita ser modificada para mellorar o desempeño do modelo.
+- Detalles: detalles sobre o erro, aviso ou recomendación.
 
 ## <a name="refresh-a-prediction"></a>Actualizar unha predición
 
@@ -65,8 +66,6 @@ As predicións actualizaranse automaticamente no mesmo [programa que actualiza o
 1. Seleccione os tres puntos verticais xunto á predición que quere actualizar.
 
 1. Seleccione **Actualizar**.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Eliminar unha predición
 

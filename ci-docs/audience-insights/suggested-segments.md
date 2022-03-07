@@ -1,22 +1,20 @@
 ---
 title: Segmentos suxeridos con tecnoloxía de aprendizaxe automática
 description: Permita que a aprendizaxe automática lle axude a atopar segmentos novos e interesantes baseados nos atributos do cliente.
-ms.date: 10/15/2021
+ms.date: 02/01/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-searchScope:
-- ci-segment-suggestions
-- customerInsights
-ms.openlocfilehash: 82345a7d7cf7fd38d74080552799de0b92461d78
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: bbc22adcd7b6e756fa6128abd855795de7480f2d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353587"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597094"
 ---
 # <a name="suggested-segments-preview"></a>Segmentos suxeridos (versión preliminar)
 
@@ -25,7 +23,7 @@ Descubra segmentos interesantes dos seus clientes coa axuda dun modelo IA. Esta 
 > [!NOTE]
 > A función de segmentos suxeridos emprega medios automatizados para avaliar datos e facer predicións en función deses datos e, polo tanto, ten a capacidade de usarse como método de creación de perfís, tal e como ese termo está definido polo Regulamento xeral de protección de datos ("RXPD"). O uso desta función para procesar datos pode estar suxeito ao RXPD ou a outras leis ou regulamentos. Vostede é responsable de garantir que o seu uso de Dynamics 365 Customer Insights, incluída esta función, cumpre con todas as leis e regulamentos aplicables, incluídas as leis relacionadas coa privacidade, os datos persoais, os datos biométricos, a protección de datos e a confidencialidade das comunicacións.
 
-:::image type="content" source="media/suggested-segments.png" alt-text="Páxina de segmentos suxeridos que mostra detalles dunha suxestión nun panel lateral.":::
+:::image type="content" source="media/suggested-segments-details.png" alt-text="Páxina de segmentos suxeridos en Customer Insights que amosa detalles dunha suxestión nun panel lateral.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Segmentos suxeridos para mellorar os seus KPI
 
@@ -51,7 +49,7 @@ As suxestións de segmentos son diferentes se escolle un atributo numérico ou u
 
 Cun atributo numérico como *ingresos anuais* ou *período de adhesión* como atributo principal, o sistema suxire segmentos que teñen un valor medio maior ou menor do atributo numérico cando se compara con todos os clientes.
 
-Un atributo categórico como a *satisfacción do cliente* como o atributo principal resulta en segmentos suxeridos que teñen unha porcentaxe maior ou menor de clientes pertencentes a unha categoría determinada cando se compara coa porcentaxe de todos os clientes pertencentes a esa mesma categoría. Por exemplo, a *satisfacción do cliente* escóllese como atributo principal e consta de tres categorías (*Baixa*, *Media* e *Alta*). Para cada categoría, suxeriranse segmentos que teñan unha porcentaxe maior ou menor de clientes pertencentes a esa categoría en comparación coa proporción de todos os clientes da mesma categoría. Se o 22 % de todos os clientes teñen unha satisfacción *alta*, pois, só os segmentos que teñan unha proporción maior ou menor de clientes cunha satisfacción *alta* en comparación co 22 % suxerirase para esa categoría. Do mesmo xeito, suxeriranse segmentos para cada unha das outras categorías (*Baixa* e *Media*) se son estatisticamente significativos.
+Un atributo categórico como a *satisfacción do cliente* como o atributo principal resulta en segmentos suxeridos que teñen unha porcentaxe maior ou menor de clientes pertencentes a unha categoría determinada cando se compara coa porcentaxe de todos os clientes pertencentes a esa mesma categoría. Por exemplo, a *satisfacción do cliente* escóllese como atributo principal e consta de tres categorías (*Baixa*, *Media* e *Alta*). Para cada categoría, suxeriranse segmentos que teñan unha porcentaxe significativamente maior ou menor de clientes pertencentes a esa categoría en comparación coa proporción de todos os clientes da mesma categoría. Se o 22 % de todos os clientes teñen unha satisfacción *Alta*, entón, só os segmentos que teñen unha proporción significativamente maior ou menor de clientes cunha satisfacción *Alta* suxeriranse fronte ao 22 % para esa categoría. Do mesmo xeito, suxeriranse segmentos para cada unha das outras categorías (*Baixa* e *Media*) se son estatisticamente significativos.
 
 > [!NOTE]
 > Actualmente, só admitimos atributos categóricos primarios que teñen ata 10 categorías. Se desexa ver suxestións de segmentos baseadas nun atributo principal con máis de 10 categorías, recomendamos agrupar algunhas das categorías para reducir o número de categorías a 10 ou menos. Esta limitación só se aplica aos atributos primarios. Para influír nos atributos categóricos, actualmente admitimos un máximo de 100 categorías.
@@ -79,7 +77,7 @@ Un atributo categórico como a *satisfacción do cliente* como o atributo princi
 
 Unha vez que o modelo IA xerou as suxestións, atoparaas enumeradas en **Segmentos** > **Suxestións (versión preliminar)**.
  
-Seleccione un segmento suxerido para revisar os detalles desa suxestión. Tamén pode revisar os valores ou as regras dos atributos que o modelo IA aprendeu para suxerir o segmento seleccionado.
+Seleccione un segmento suxerido para revisar os detalles desa suxestión, incluíndo unha comparación do valor medio e do número de membros do segmento. Tamén pode revisar os valores ou as regras dos atributos que o modelo IA aprendeu para suxerir o segmento seleccionado.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Gardar unha suxestión como segmento
 
