@@ -3,18 +3,17 @@ title: Tarefas compartidas para escenarios de predición
 description: Aprenda a xestionar, solucionar problemas e perfeccionar as predicións.
 ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731986"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230790"
 ---
 # <a name="manage-predictions"></a>Xestionar predicións
 
@@ -53,7 +52,7 @@ As seguintes columnas do informe conteñen información útil para mellorar os d
 - **Nome:** Nome descritivo do erro, aviso ou recomendación.
 - **Paso:** Fase do modelo, tren ou puntuación, a que fai referencia a información.
 - **Estado:** Gravidade da información (erro, aviso, recomendación).
-- **Nome da columna:** Columna nunha entidade que se debe modificar para mellorar o rendemento do modelo.
+- **Nome da columna:** Columna dunha entidade que se debe modificar para mellorar o rendemento do modelo.
 - **Nome da entidade:** Nome da entidade que se debe modificar para mellorar o rendemento do modelo.
 - **Detalles:** Detalles sobre o erro, aviso ou recomendación.
 

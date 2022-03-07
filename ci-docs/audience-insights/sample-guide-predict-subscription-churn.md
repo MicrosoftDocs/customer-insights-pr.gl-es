@@ -3,26 +3,28 @@ title: Guía de mostra da predición do abandono da subscrición
 description: Utilice esta guía de mostra para probar o modelo de predición do abandono da subscrición listo para usar.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306301"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355611"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Guía de mostra (previsualización) da predición do abandono da subscrición
+# <a name="subscription-churn-prediction-sample-guide"></a>Guía de mostra da predición do abandono da subscrición
 
 Guiarémolo a través dun exemplo integral de predición do abandono da subscrición empregando os datos de exemplo fornecidos a continuación. 
 
 ## <a name="scenario"></a>Escenario
 
-Contoso é unha empresa que produce café e máquinas de café de alta calidade, que se venden a través do sitio web Contoso Coffee. Recentemente iniciaron un negocio de subscrición para que os seus clientes tomasen café de xeito habitual. O seu obxectivo é comprender que clientes subscritos poden cancelar a súa subscrición nos próximos meses. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
+Contoso é unha empresa que produce cafés e máquinas de café de alta calidade, que venden a través do seu sitio web Contoso Coffee. Recentemente iniciaron un negocio de subscrición para que os seus clientes tomasen café de xeito habitual. O seu obxectivo é comprender que clientes subscritos poden cancelar a súa subscrición nos próximos meses. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -31,7 +33,7 @@ Contoso é unha empresa que produce café e máquinas de café de alta calidade,
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1: inxerir datos
 
-Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importación de fontes de datos usando conectores de Power Query](connect-power-query.md) especificamente. A seguinte información supón que está familiarizado coa inxestión de datos en xeral. 
+Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando fontes de datos usando Power Query conectores](connect-power-query.md) concretamente. A seguinte información supón que está familiarizado coa inxestión de datos en xeral. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inxerir datos de clientes desde a plataforma de comercio electrónico
 
@@ -168,7 +170,7 @@ Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tarefa 3: configurar a predición de abandono da subscrición
 
-Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición de abandono de subscricións. Para os pasos detallados, consulte o artigo [Predición de abandono de subscricións (vista previa)](predict-subscription-churn.md). 
+Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición de abandono de subscricións. Para ver os pasos detallados, consulte [Churn de subscricións predición](predict-subscription-churn.md) artigo. 
 
 1. Vaia a **Intelixencia** > **Descubrir** e seleccione para usar o **Modelo de abandono do cliente**.
 

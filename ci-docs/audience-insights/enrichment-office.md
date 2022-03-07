@@ -3,18 +3,17 @@ title: Enriquece os perfís de clientes con datos de Microsoft Office 365
 description: Usa datos propietarios de Microsoft Office para enriquecer os seus perfís de clientes con datos de compromiso.
 ms.date: 12/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a30e09b5ed491c8d36019b5f0d35e0a2f7a0199c
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7889774"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228472"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enriquece os perfís de clientes con datos de compromiso (vista previa)
 
@@ -64,7 +63,7 @@ Para iniciar o proceso, seleccione **Corre** na páxina de configuración da par
 
 Dependendo do tamaño dos teus datos de Office, pode tardar varias horas en completarse.
 
-Cando executa un enriquecemento, Microsoft procesará os datos dentro do Office 365 límite de cumprimento para crear información agregada, que despois se engaden ao seu contorno de Customer Insights. Non hai datos a nivel individual (por exemplo, o corpo de ningún correo electrónico ou invitación do calendario) que están dispoñibles para os usuarios de Customer Insights. 
+Cando executa un enriquecemento, Microsoft procesará os datos dentro do Office 365 límite de cumprimento para crear coñecementos agregados, que despois se engaden ao seu contorno de Customer Insights. Non hai datos a nivel individual (por exemplo, o corpo de ningún correo electrónico ou invitación do calendario) que están dispoñibles para os usuarios de Customer Insights. 
 
 [!INCLUDE [progress-details-pane](../includes/progress-details-pane.md)]
 
@@ -76,7 +75,7 @@ Tamén atoparás un gráfico co número de clientes enriquecidos ao longo do tem
 
 :::image type="content" source="media/enrichment-office-results-overview.png" alt-text="Versión preliminar dos resultados despois de executar o proceso de enriquecemento.":::
 
-Todos os datos son agregados ata o nivel de conta. O sistema calcula unha puntuación de compromiso, que varía de 0 a 100, para cada conta. A puntuación do compromiso proporciona unha medida composta do compromiso da conta entre correos electrónicos e reunións en relación ás túas outras contas. A seguinte lista contén os datos agregados que proporciona o enriquecemento da conta:
+Todos os datos son agregados ata o nivel de conta. O sistema calcula unha puntuación de compromiso, que varía de 0 a 100, para cada conta. A puntuación do compromiso proporciona unha medida composta do compromiso da conta entre correos electrónicos e reunións en relación coas outras contas. A seguinte lista contén os datos agregados que proporciona o enriquecemento da conta:
 
 
 

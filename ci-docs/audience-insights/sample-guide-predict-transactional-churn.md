@@ -3,26 +3,25 @@ title: Guía de mostra da predición do abandono transaccional
 description: Utilice esta guía de mostra para probar o modelo de predición do abandono transaccional listo para usar.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029443"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354599"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Guía de mostra (previsualización) da predición do abandono transaccional
+# <a name="transactional-churn-prediction-sample-guide"></a>Guía de mostra da predición do abandono transaccional
 
-Esta guía guiarao a través dun exemplo integral de predición do abandono transaccional en Customer Insights empregando os datos fornecidos a continuación. Os datos empregados nesta guía non son datos reais de clientes, senón que forman parte do conxunto de datos de Contoso que se atopa no ambiente de *Demostración* dentro da súa subscrición a Customer Insights.
+Esta guía guiarao a través dun exemplo integral de predición do abandono transaccional en Customer Insights empregando os datos fornecidos a continuación. Todos os datos empregados nesta guía non son datos reais do cliente e forman parte do conxunto de datos de Contoso que se atopan no ambiente de *demostración* dentro da súa subscrición a Customer Insights.
 
 ## <a name="scenario"></a>Escenario
 
-Contoso é unha empresa que produce café e máquinas de café de alta calidade, que se venden a través do sitio web Contoso Coffee. O seu obxectivo é saber que clientes que adoitan mercar os seus produtos de xeito regular deixarán de ser clientes activos nos próximos 60 días. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
+Contoso é unha empresa que produce cafés e máquinas de café de alta calidade, que venden a través do seu sitio web Contoso Coffee. O seu obxectivo é saber que clientes que adoitan mercar os seus produtos de xeito regular deixarán de ser clientes activos nos próximos 60 días. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -31,7 +30,7 @@ Contoso é unha empresa que produce café e máquinas de café de alta calidade,
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1: inxerir datos
 
-Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importación de fontes de datos usando conectores de Power Query](connect-power-query.md) especificamente. A seguinte información supón que está familiarizado coa inxestión de datos en xeral. 
+Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando fontes de datos usando Power Query conectores](connect-power-query.md) concretamente. A seguinte información supón que está familiarizado coa inxestión de datos en xeral. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inxerir datos de clientes desde a plataforma de comercio electrónico
 
@@ -149,7 +148,7 @@ Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tarefa 3: configurar a predición de abandono transaccional
 
-Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición de abandono de subscricións. Para os pasos detallados, consulte o artigo [Predición de abandono de subscricións (vista previa)](predict-subscription-churn.md). 
+Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición de abandono de subscricións. Para ver os pasos detallados, consulte [Churn de subscricións predición](predict-subscription-churn.md) artigo. 
 
 1. Vaia a **Intelixencia** > **Descubrir** e seleccione para usar o **Modelo de abandono do cliente**.
 

@@ -4,23 +4,22 @@ description: Como exportar eventos refinados e eventos base.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 04/30/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: d062e2982c1041454b083630404f2b68f0da9669
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032383"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232886"
 ---
 # <a name="export-events"></a>Exportar eventos
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Un evento representa o comportamento dun usuario. Rexistra cando un usuario ve unha páxina (evento de visualización) ou interactúa co contido (evento de acción). Cando pode decidir que propiedades dos datos quere mostrar nun informe, esta visualización virtual dos datos chámase *evento refinado*. 
+Un evento representa o comportamento dun usuario. Rexistra cando un usuario ve unha páxina (evento de visualización) ou interactúa co contido (evento de acción). Cando pode decidir que propiedades dos datos quere mostrar nun informe, esta visualización virtual dos datos chámase *evento refinado*. Para obter máis información, consulte [Crear e modificar eventos](refined-events.md).
 
 - Pode exportar eventos e eventos refinados a un almacenamento externo. 
 - As exportacións son un fluxo de datos de avance. Non pode volver a encher o fluxo. 
@@ -45,26 +44,28 @@ Antes de configurar unha exportación, ten que ter acceso e unha subscrición ac
 
 ## <a name="export-events"></a>Exportar eventos
 
-Hai dúas formas de exportar eventos: 
+Hai dúas formas de presentar o diálogo **Exportar eventos**: 
 - Vaia a **Datos** > **Exportacións** e seleccione **Nova exportación**.
 - Vaia a **Datos** > **Eventos**, seleccione **Máis [...]** xunto ao evento que desexa exportar e seleccione **Exportar** dende o menú despregable. 
 
+:::image type="content" source="media/new-export.png" alt-text="Crear unha nova exportación.":::
+
 Móstranselle os pasos para crear unha exportación:
 
-1. Proporcione un **nome para a exportación**.
+1. Proporcione un **Nome de exportación** e, a continuación, seleccione **Seguinte**.
 
 1. Na lista despregable **Selección de eventos**, escolla os eventos básicos e os eventos refinados para incluír na exportación. 
 
-1. En **Estrutura do ficheiro**, seleccione a cadencia para crear novos ficheiros no almacenamento de destino. Os eventos expórtanse de forma continua a medida que chegan.
+1. Na sección **Estrutura de ficheiros**, seleccione a cadencia (cada hora ou diariamente) para crear novos ficheiros no almacenamento de destino e logo seleccione **Seguinte**. Os eventos expórtanse de forma continua a medida que chegan.
 
-1. Seleccione o formato para a exportación. Pode escoller entre os formatos **Common Data Model**, **CSV** e **JSON**. Para usar a exportación con outras aplicacións de Dynamics 365, recoméndase empregar o formato Common Data Model.
+1. No diálogo **Escoller formato**, seleccione o formato para a súa exportación. Escolla entre **Modelo de datos comúns**, **CSV** e **JSON**. Para usar a exportación con outras aplicacións de Dynamics 365, recomendamos o formato **Modelo de datos comúns**.
 
-1. No paso **Escoller un destino**, especifique a localización de Azure Data Lake Storage Gen2.
+1. Na caixa de diálogo **Escoller destino**, especifique a localización de Azure Data Lake Storage Gen 2.
     1. **Nome da conta de ADLS Gen2** é o nome da conta de almacenamento na que desexa gardar a exportación. 
     1. **Camiño do cartafol** define onde se debe almacenar a exportación no sistema de ficheiros e na estrutura de directorios da conta de almacenamento.
     1. A **Clave compartida** está dispoñible no portal de Azure para a conta de almacenamento.
 
-1. Revise e confirme as seleccións.
+1. Revise e confirme as súas seleccións para rematar.
 
 ## <a name="view-and-manage-exports"></a>Ver e xestionar exportacións
 

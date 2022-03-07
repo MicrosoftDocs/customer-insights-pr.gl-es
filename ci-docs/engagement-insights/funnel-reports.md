@@ -4,17 +4,16 @@ description: Como usar informes de funil para comprender a forma na que o public
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
-ms.translationtype: HT
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498640"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226258"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Crear e xestionar informes de funil
 
@@ -163,13 +162,23 @@ Pode cambiar o nome dun informe de funil, eliminalo ou modificar os pasos que in
 
 As estatísticas de participación agora ofrecen información de funil para os clientes. Utilice información sobre o funil para obter unha visión máis profunda do comportamento do cliente sobre os pasos do informe do funil. Cando crea e garda un novo informe de funil, xéranse automaticamente información sobre o funil para o seu informe. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Estatísticas de funil.":::
+
+> [!NOTE]
+> As estatísticas de funil só se poden xerar para pasos de funil que **non** inclúe dimensións personalizadas. Para xerar estatísticas de funil para todos os pasos do seu funil, use dimensións listas para usar de estatísticas de compromiso para crear os pasos do funil. 
+
 Pode ver as estatísticas do funil das seguintes categorías, tanto no nivel principal como no de paso: 
 
- - Taxa de conversión 
+ - Taxa de conversión
+ -    A taxa de conversión entre Finalización de compra e Compra é do 22%.
  - Tempo de transición 
+ -    O tempo medio de transición entre o Carro da compra e a Finalización da compra é de 23 minutos. 
  - Hora de finalización 
+ -    A cantidade de tempo media que tardan os clientes en finalizar o funil é de 47 minutos. 
 
 Utilice esta información para explorar máis o comportamento dos clientes e comprender mellor os puntos de entrega e as conversións do seu informe de funil. 
+
+Para comparar estatísticas en diferentes pasos, seleccione **Ver a división en pasos** ou **Comparar con outros pasos** desde as tarxetas de información. Amosarán un gráfico de barras que compara as métricas de cada paso do funil. 
 
 As estatísticas do funil recalcúlanse cada 24 horas ou cando **Garda** o seu informe de funil. 
 

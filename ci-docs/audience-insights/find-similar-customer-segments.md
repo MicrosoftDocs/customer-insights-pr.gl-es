@@ -1,24 +1,29 @@
 ---
-title: Buscar clientes semellantes con IA
+title: Buscar clientes similares con IA (contén vídeo)
 description: Atope segmentos de clientes similares con intelixencia artificial.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034536"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355243"
 ---
 # <a name="similar-customers-preview"></a>Clientes similares (vista previa)
 
 Esta característica permítelle atopar clientes similares na súa base de clientes mediante intelixencia artificial. Debe ter polo menos un segmento creado para usar esta función. A expansión dos criterios dun segmento existente axuda a atopar clientes similares a ese segmento.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Buscar clientes similares* usa medios automatizados para avaliar datos e facer predicións a partir deses datos e, polo tanto, ten a capacidade de ser utilizado como método de avaliación de perfís, xa que ese termo é definido polo Regulamento xeral de protección de datos ("RXPD"). O uso desta función para o procesamento de datos por parte do cliente pode estar suxeito a RXPD ou a outras leis ou regulamentos. Vostede é responsable de garantir que o seu uso de Dynamics 365 Customer Insights, incluíndo as predicións, cumpre con todas as leis e regulamentos aplicables, incluídas as leis relacionadas coa privacidade, os datos persoais, os datos biométricos, a protección de datos e a confidencialidade das comunicacións.

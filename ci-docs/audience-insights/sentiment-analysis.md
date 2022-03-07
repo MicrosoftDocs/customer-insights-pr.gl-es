@@ -1,20 +1,19 @@
 ---
-title: Análise semántica para comentarios dos clientes
+title: Análise de sentimentos para comentarios dos clientes
 description: Aprende a usar un modelo de análise de sentimentos nos comentarios dos clientes en Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: HT
+ms.openlocfilehash: b06613b00a512a31479f9d30d539a010e17d33ba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951107"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231463"
 ---
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analiza o sentimento nos comentarios dos clientes (vista previa)
 
@@ -32,13 +31,13 @@ Esta información pode axudarche a conseguir os seguintes resultados:
 - Identificar aspectos comerciais con problemas sinalados polos clientes  
 - Segmenta os clientes en función do seu sentimento para realizar campañas personalizadas con vendas, mercadotecnia e esforzos de apoio dirixidos
 - Optimice as operacións comerciais abordando áreas de preocupación ou oportunidades que foron mencionadas polos clientes
-- Recoñece os aspectos comerciais que lles vai ben e premia aos clientes satisfeitos mediante programas de fidelización e promoción
+- Recoñece os aspectos comerciais que o están facendo ben e premia aos clientes satisfeitos mediante programas de fidelización e promoción
 
 Para garantir que pode confiar nos resultados dos modelos, fornecemos información transparente sobre como toman decisións os modelos. Recibirás unha lista de palabras que afectaron á decisión dos modelos de asignar unha puntuación de sentimento ou un aspecto empresarial particular aos comentarios de comentarios.  
 
 Usamos dous **Modelos de procesamento da linguaxe natural (PNL).** : A primeira asigna a cada comentario de comentarios unha puntuación de sentimento. O segundo modelo asocia cada feedback con todos os aspectos comerciais aplicables. Os modelos están adestrados en datos públicos de fontes en redes sociais, venda polo miúdo, restaurantes, produtos de consumo e industrias do automóbil.    
   
-- Os aspectos comerciais predefinidos para que o modelo se asocie cos datos de comentarios inclúen:
+Os aspectos comerciais predefinidos para que o modelo se asocie cos datos de comentarios inclúen:
 -   Xestión de contas
 -   Finalización da compra e pagamento
 -   Asistencia técnica
@@ -121,7 +120,7 @@ Os seguintes atributos de datos son necesarios:
   - **Fallou**: Fallou a execución da predición. Para obter máis detalles, revise os rexistros.
   - **Con éxito**: a predición tivo éxito. Seleccione Ver nos tres puntos verticais para revisar os resultados da predición.
 - **Editado**: a data na que se modificou a configuración da predición.
-- **Última actualización** : A data en que o predición actualizou resulta na entidade de saída.
+- **Última actualización** : A data na que o predición actualizou resulta na entidade de saída.
 
 ## <a name="manage-sentiment-analysis"></a>Xestionar a análise de sentimentos
 

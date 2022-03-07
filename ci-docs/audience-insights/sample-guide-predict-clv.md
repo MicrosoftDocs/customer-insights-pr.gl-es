@@ -3,18 +3,17 @@ title: Guía de mostra de predición do valor de duración do cliente
 description: Utilice esta guía de mostra para probar o modelo de predición do valor de duración do cliente.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306347"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354829"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guía de mostra de predición do valor de duración do cliente (VDC)
 
@@ -22,7 +21,7 @@ Esta guía explicaralle un exemplo integral da predición do valor de duración 
 
 ## <a name="scenario"></a>Escenario
 
-Contoso é unha empresa que produce café e máquinas de café de alta calidade. Venden os produtos a través do sitio web de Contoso Coffee. A empresa quere comprender o valor (ingresos) que poden xerar os seus clientes nos próximos 12 meses. Coñecer o valor esperado dos seus clientes nos próximos 12 meses axudaralles a dirixir os seus esforzos de márketing cara a clientes valiosos.
+Contoso é unha empresa que produce café e máquinas de café de alta calidade. Venden os produtos a través do seu sitio web Contoso Coffee. A empresa quere comprender o valor (ingresos) que poden xerar os seus clientes nos próximos 12 meses. Coñecer o valor esperado dos seus clientes nos próximos 12 meses axudaralles a dirixir os seus esforzos de márketing cara a clientes valiosos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -31,7 +30,7 @@ Contoso é unha empresa que produce café e máquinas de café de alta calidade.
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1: inxerir datos
 
-Revise os artigos [sobre a inxestión de datos](data-sources.md) e [a importación de orixes de datos usando conectores de Power Query](connect-power-query.md). A seguinte información supón que está familiarizado coa inxestión de datos en xeral.
+Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importar fontes de datos usando Power Query conectores](connect-power-query.md). A seguinte información supón que está familiarizado coa inxestión de datos en xeral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inxerir datos de clientes desde a plataforma de comercio electrónico
 
@@ -164,7 +163,7 @@ Despois de inxerir os datos, comezamos o proceso de unificación de datos para c
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tarefa 3: Configurar a predición do valor de duración do cliente
 
-Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición do valor de duración do cliente. Para obter os pasos detallados, consulte [Predición do valor de duración do cliente (versión preliminar)](predict-customer-lifetime-value.md).
+Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición do valor de duración do cliente. Para ver os pasos detallados, consulte [Valor de por vida do cliente predición](predict-customer-lifetime-value.md).
 
 1. Vaia a **Intelixencia**  > **Predicións** e seleccione o **Modelo de valor de duración do cliente**.
 

@@ -1,42 +1,48 @@
 ---
 title: Exportar datos de Customer Insights a Autopilot
-description: Aprenda a configurar a conexión a Autopilot.
-ms.date: 12/08/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Aprenda a configurar a conexión e exportar a Autopilot.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 33a8cd1ae4a77ce2248bc2805d25687c9a2c2732
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: 7a7a67a52fcf39da8d50bd95817d25470fc90b6f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269236"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227664"
 ---
-# <a name="connector-for-autopilot-preview"></a>Conector para Autopilot (versión preliminar)
+# <a name="export-segments-to-autopilot-preview"></a>Exportar segmentos a Autopilot (versión preliminar)
 
 Exporte segmentos de perfís de clientes unificados a Autopilot e utilíceos para campañas e mercadotecnia por correo electrónico en Autopilot. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites-for-a-connection"></a>Requisitos previos para unha conexión
 
 -   Ten unha [Conta de Autopilot](https://www.autopilothq.com/) e as correspondentes credenciais de administrador.
 -   Ten [segmentos configurados](segments.md) na información do público.
 -   Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico.
 
-## <a name="connect-to-autopilot"></a>Conectar con AutoPilot
+## <a name="known-limitations"></a>Limitacións coñecidas
 
-1. Vaia a **Administrador** > **Exportar destinos**.
+- Pode exportar ata 100.000 perfís de clientes en total ao piloto automático.
+- A exportación a Autopilot está limitada a segmentos.
+- A exportación de ata 100.000 perfís de clientes ao piloto automático pode tardar unhas horas en completarse. 
+- O número de perfís de clientes que pode exportar ao piloto automático depende e está limitado ao seu contrato co piloto automático.
 
-1. En **Autopilot**, seleccione **Configurar**.
+## <a name="set-up-connection-to-autopilot"></a>Configurar conexión a Autopilot
 
-1. Déalle ao seu destino da exploración un nome recoñecible no campo **Nome para mostrar**.
+1. Vaia a **Administrar** > **Conexións**.
 
-   :::image type="content" source="media/export-autopilot.PNG" alt-text="Panel de configuración para a conexión de Autopilot.":::
+1. Seleccione **Engadir conexión** e elixa **Autopilot** para configurar a conexión.
 
-1. Introduza a súa **Clave da API de Autopilot** [Clave da API de Autopilot](https://autopilot.docs.apiary.io/#).
+1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
+
+1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Introduza a súa [Clave da API de Autopilot](https://autopilot.docs.apiary.io/#).
 
 1. Seleccione **Estou de acordo** para confirmar a **Privacidade e cumprimento dos datos**.
 
@@ -44,26 +50,27 @@ Exporte segmentos de perfís de clientes unificados a Autopilot e utilíceos par
 
 1. Seleccione **Autoengadirse como usuario de exportación** e proporcione as súas credenciais de Customer Insights.
 
-1. Seleccione **Seguinte** para configurar a exportación.
+1. Seleccione **Gardar** para completar a conexión.
 
-## <a name="configure-the-connector"></a>Configurar o conector
+## <a name="configure-an-export"></a>Configurar unha exportación
 
-1. Na sección **Coincidencia de datos**, no campo **Correo electrónico**, seleccione o campo do seu perfil de cliente unificado que representa o enderezo de correo electrónico dun cliente. Repita os mesmos pasos para outros campos opcionais como **nome**, **apelidos**.
+Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Para obter máis información, consulte [Permisos necesarios para configurar unha exportación](export-destinations.md#set-up-a-new-export).
+
+1. Vaia a **Datos** > **Exportacións**.
+
+1. Seleccione **Engadir destino** para crear unha nova exportación.
+
+1. No campo **Conexión da exportación** escolla unha conexión da sección Autopilot. Se non ve o nome desta sección, non hai conexións deste tipo dispoñibles para vostede.
+
+1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. Repita os mesmos pasos para outros campos opcionais como **nome**, **apelidos**.
 
 1. Seleccione os segmentos que desexa exportar. Nós fortemente **recomendamos non exportar máis de 100.000 perfís de clientes en total** a Autopilot. 
 
 1. Seleccione **Gardar**.
 
-## <a name="export-the-data"></a>Exportar os datos
+Ao gardar unha exportación non se executa a exportación inmediatamente.
 
-Pode [exportar datos baixo demanda](export-destinations.md). A exportación tamén se executará con todas as [actualizacións programadas](system.md#schedule-tab).
-
-## <a name="known-limitations"></a>Limitacións coñecidas
-
-- Pode exportar ata 100.000 perfís en total a Autopilot.
-- A exportación a Autopilot está limitada a segmentos.
-- Exportar ata 100.000 perfís a Autopilot pode tardar unhas horas en completarse. 
-- O número de perfís que pode exportar a Autopilot depende e está limitado no seu contrato con Autopilot.
+A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 

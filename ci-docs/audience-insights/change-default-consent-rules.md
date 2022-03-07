@@ -2,20 +2,19 @@
 title: Xestiona as regras de consentimento predeterminadas nos segmentos
 description: Coa capacidade de xestión de consentimento, pode desactivar ou cambiar as regras de consentimento predeterminadas se as anulacións están activadas.
 ms.date: 12/01/2021
-ms.service: customer-insights
 mms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28c9ea49b1f3aebd3abd7d4de58fe61e6474158b
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
+ms.openlocfilehash: 4eae4da67fd4c6e70800f495ba30366d4fc9a0dd
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884168"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228937"
 ---
-# <a name="disable-or-change-default-consent-rules"></a>Desactivar ou cambiar as regras de consentimento predeterminadas
+# <a name="disable-or-change-default-consent-rules"></a>Desactiva ou cambia as regras de consentimento predeterminadas
 
 Se as súas organizacións usan o [capacidade de xestión do consentimento](../consent-management/overview.md) combinado con información sobre o público, [os administradores poden facer cumprir as regras de consentimento](activate-consent.md) para segmentos. 
 

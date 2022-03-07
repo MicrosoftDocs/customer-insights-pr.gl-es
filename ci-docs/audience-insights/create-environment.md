@@ -1,21 +1,23 @@
 ---
 title: Crear contornos en Customer Insights
 description: Pasos para crear ambientes cunha subscrición con licenza para Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088100"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354093"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un ambiente na información do público
 
@@ -76,12 +78,14 @@ Se crea varios contornos de Customer Insights e elixe gardar as entidades de sa�
    
 O paso **Microsoft Dataverse** permítelle conectar Customer Insights co seu ambiente de Dataverse.
 
-Para usar [modelos de predición listos para usar](predictions-overview.md#out-of-box-models), configure o uso compartido de datos con Dataverse. Ou pode activar a inxestión de datos desde orixes de datos locais, proporcionando o URL do contorno de Microsoft Dataverse que administra a súa organización. Seleccione **Activar o uso compartido de datos** para compartir os datos de saída de Customer Insights cun lago de datos xestionado de Dataverse.
+Proporciona o teu propio Microsoft Dataverse ambiente para compartir datos (perfís e coñecementos) con aplicacións empresariais baseadas Dataverse, como Dynamics 365 Marketing ou aplicacións baseadas en modelos en Power Apps. Deixa este campo baleiro se non tes o teu Dataverse medio ambiente e proporcionaremos un para ti.
+
+Conectando ao teu Dataverse ambiente tamén che permite [inxerir datos de fontes de datos local usando Power Platform fluxos de datos e pasarelas](data-sources.md#add-data-from-on-premises-data-sources). Tamén podes usar [modelos prefabricados predición](predictions-overview.md?tabs=b2c#out-of-box-models) ao conectarse a a Dataverse ambiente.
 
 > [!IMPORTANT]
 > Información do cliente e Dataverse deben estar na mesma rexión para poder compartir datos.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcións de configuración para habilitar o uso compartido de datos con Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="compartición de datos con Microsoft Dataverse habilitado automaticamente para novas instancias netas.":::
 
 > [!NOTE]
 > Customer Insights non é compatible cos seguintes escenarios de uso compartido dos datos:

@@ -2,18 +2,17 @@
 title: Usar dimensións demográficas para dividir os datos de comportamento (dimensións recompiladas)
 description: Utilice dimensións recompiladas de perfís unificados para habilitar as propiedades dos perfís de clientes da información do público.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461101"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233045"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Usar dimensións demográficas para dividir os datos de comportamento
 
@@ -29,7 +28,7 @@ Ao usar dimensións demográficas de perfís unificados, os usuarios de informac
 - Un ambiente de información de interacción no que ten datos de perfil de cliente ligados ao ambiente de información do público onde se crean os perfís de clientes. Máis información: [Crear unha ligazón entre a información do público e a información de interacción](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Despois de crear unha ligazón entre os ambientes de información do público e información de interacción, pode que só queira datos específicos das propiedades dos perfís dos clientes, que poden ser útiles como dimensións na información de interacción. Para obter máis información, vaia a [Permitir segmentos e atributos de perfís unificados de información do público](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Despois de crear unha ligazón entre os ambientes de información do público e información de interacción, pode que só queira datos específicos das propiedades dos perfís dos clientes, que poden ser útiles como dimensións na información de interacción. Para obter máis información, vaia a [Permitir segmentos e atributos de perfís unificados de información do público](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Crera un novo informe personalizado
 

@@ -1,24 +1,26 @@
 ---
-title: Actualización incremental para fontes de datos baseadas en Power Query
-description: Actualice datos novos e actualizados para grandes orixes de datos baseadas en Power Query.
+title: Actualización incremental para Power Query fontes de datos baseadas
+description: Actualiza datos novos e actualizados para fontes de datos grandes baseados en Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900266"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353680"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualización incremental para orixes de datos baseadas en Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualización incremental para fontes de datos baseada en Power Query
 
-Este artigo explica como configurar a actualización incremental para fontes de datos baseada en Power Query.
+Este artigo explica como configurar a actualización incremental para fontes de datos baseadas en Power Query.
 
 A actualización incremental para as orixes de datos ofrece as seguintes vantaxes:
 
@@ -28,9 +30,9 @@ A actualización incremental para as orixes de datos ofrece as seguintes vantaxe
 
 ## <a name="configure-incremental-refresh"></a>Configurar actualización incremental
 
-As estadísticas do público permiten actualizar incrementalmente as fontes de datos importadas a través de Power Query que admiten a inxestión incremental. Por exemplo, as bases de datos de Azure SQL con campos de data e hora, que indican cando se actualizaron por última vez os rexistros de datos.
+A información sobre o público permite unha actualización incremental das fontes de datos importadas Power Query que admiten a inxestión incremental. Por exemplo, as bases de datos de Azure SQL con campos de data e hora, que indican cando se actualizaron por última vez os rexistros de datos.
 
-1. [Cree unha nova orixe de datos baseada en Power Query](connect-power-query.md).
+1. [Crea un novo orixe de datos baseado en Power Query](connect-power-query.md).
 
 1. Proporcionar a **Nome** para o orixe de datos.
 

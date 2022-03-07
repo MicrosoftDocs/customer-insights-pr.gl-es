@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645262"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353711"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Comezar coa capacidade de información do público de Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ A primeira vez que inicie sesión en información sobre o público, pode configu
 
 Os perfís unificados son a base para obter información e tomar medidas sobre os datos. Traia datos de varias fontes e execute o proceso de unificación de datos para combinar perfís unificados. Especificar as relacións entre as entidades inxeridas usan funcións de enriquecemento para engadir información aos perfís. 
 
-1. Inxira datos creando fontes de datos a partir de varias opcións. Escolla entre [conectores de Power Query](connect-power-query.md), un [Cartafol de Modelo de datos comúns](connect-common-data-model.md) ou [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Inxira datos creando fontes de datos a partir de varias opcións. Escolle entre [Power Query conectores](connect-power-query.md), a [Cartafol Common Data Model](connect-common-data-model.md), ou [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Execute o [proceso de unificación de datos](data-unification.md) percorrendo as fases [mapa](map-entities.md), [coincidencia](match-entities.md) e [combinación](merge-entities.md).
 

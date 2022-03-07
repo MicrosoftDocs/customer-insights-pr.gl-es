@@ -4,25 +4,22 @@ author: m-hartmann
 description: Obteña unha visión xeral de Dynamics 365 Customer Insights e as súas capacidades.
 ms.author: mhart
 ms.date: 07/30/2021
-ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 82b335388002158885fa55b61562db6c8370dc9d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036509"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350175"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Visión xeral do produto de Dynamics 365 Customer Insights
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) é unha parte da plataforma de datos de clientes de Microsoft (CDP) que axuda a ofrecer experiencias personalizadas aos clientes. As capacidades da plataforma ofrecen información sobre quen son os seus clientes e como interactúan coa súa plataforma. Unifique os datos dos clientes en todas as fontes para obter unha única visión dos clientes.
 
+A [información do público](audience-insights/overview.md) axúdalle a transformar o seu negocio nunha organización centrada no cliente. Os profesionais de mercadotecnia, vendas e servizos teñen a información necesaria para personalizar as experiencias. Conecte datos de fontes transaccionais, de comportamento e de observación para crear unha vista de cliente de 360 graos. Vexa os resultados máis rápido cun CDP deseñado para ofrecer información sobre a que se pode actuar. 
 
-- A [información do público](audience-insights/overview.md) axúdalle a transformar o seu negocio nunha organización centrada no cliente. Os profesionais de mercadotecnia, vendas e servizos teñen a información necesaria para personalizar as experiencias. Conecte datos de fontes transaccionais, de comportamento e de observación para crear unha vista de cliente de 360 graos. Vexa os resultados máis rápido cun CDP deseñado para ofrecer información sobre a que se pode actuar. 
-
-- As [Estatísticas de participación (versión preliminar)](engagement-insights/index.yml) permítenlle entender de forma interactiva como os seus clientes están a usar os seus servizos e produtos, tanto de xeito individual como holístico, en sitios web, aplicacións móbiles e produtos conectados. Combine análises de comportamento con tipos de datos transaccionais, demográficos, de enquisas e outros de Microsoft Dynamics 365 Customer Insights. Manteña un control total sobre os datos dos seus clientes para garantir o maior nivel de regulación e cumprimento dos datos.
+[Insights de compromiso](engagement-insights/overview.md) foi unha función de vista previa en Customer Insights que se centra en reunir eventos web e móbiles para obter información adicional. A vista previa rematou o 15 de febreiro de 2022.
  
 ## <a name="choose-a-capability"></a>Escoller unha capacidade
 
@@ -33,5 +30,10 @@ Para escoller unha capacidade
 1. No panel de navegación, seleccione **Todas as aplicacións** para abrir a xanela **Elixir o seu foco**.
 1. Seleccione **Ir agora** para navegar ata a capacidade que desexe.
 
+## <a name="pricing-and-licensing"></a>Prezos e licenzas
+
+Customer Insights ten licenzas por arrendatario e inclúe varias capacidades. Pode mercar licenzas e capacidade adicional para aumentar a cota predeterminada. 
+- [Visión xeral de prezos](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
+- Capacidade e dereitos: [Guía de licenzas de Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

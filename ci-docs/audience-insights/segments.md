@@ -1,32 +1,37 @@
 ---
 title: Segmentos na información do público
 description: Visión xeral dos segmentos e da forma de crealos e xestionalos.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617373"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355981"
 ---
 # <a name="segments-overview"></a>Visión xeral dos segmentos
 
 Os segmentos permiten agrupar aos seus clientes en función de atributos demográficos, transaccionais ou de comportamento. Pode usar segmentos para ter como obxectivo campañas promocionais, actividades de venda e accións de asistencia ao cliente para alcanzar os obxectivos da súa empresa.
 
-Os perfís de clientes que coinciden cos filtros dunha definición de segmento denomínanse *membros* dun segmento. Algúns [límites de servizo](service-limits.md) aplican.
+Os perfís de clientes que coinciden cos filtros dunha definición de segmento denomínanse *membros* dun segmento. Algúns [límites de servizo](/dynamics365/customer-insights/service-limits) aplican.
 
 ## <a name="create-a-new-segment"></a>Crear un segmento novo
 
 Hai varias formas de crear un novo segmento: 
 
-# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
 - Segmento complexo con creador de segmentos: [Construír o noso](segment-builder.md#create-a-new-segment) 
 - Segmentos simples cun operador: [segmento rápido](segment-builder.md#quick-segments) 
@@ -34,7 +39,7 @@ Hai varias formas de crear un novo segmento:
 - Suxestións con tecnoloxía de IA baseadas en medidas ou atributos: [segmentos suxeridos para mellorar as medidas](suggested-segments.md) 
 - Suxestións baseadas en actividades: [segmentos suxeridos baseados na actividade dos clientes](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Contas empresariais (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
 - Segmento complexo con creador de segmentos: [Construír o noso](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +70,7 @@ A seguinte acción está dispoñible cando selecciona un segmento:
 
 Pode actualizar todos os segmentos á vez seleccionando **Actualizar todo** na páxina **Segmentos** ou pode actualizar un ou varios segmentos cando os seleccione e elixir **Actualizar** desde as opcións. Tamén pode configurar unha actualización recorrente en **Administrador** > **Sistema** > **Programar**.
 
-> [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para as tarefas ou os procesos. Ademais, a maioría dos procesos [dependen doutros procesos descendentes](system.md#refresh-policies). Pode seleccionar o estado dun proceso para ver detalles sobre o progreso de todo o traballo. Despois de seleccionar **Ver detalles** para unha das tarefas do traballo, atopará información adicional: o tempo de procesamento, a última data de procesamento e todos os erros e avisos asociados á tarefa.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Exportar segmentos
 
@@ -106,4 +110,5 @@ A parte inferior contén unha lista dos membros do segmento.
 >
 >A lista é unha vista previa dos membros do segmento correspondentes e mostra os primeiros 100 rexistros do seu segmento para que poida avalialo rapidamente e revisar as súas definicións se é necesario. Para ver todos os rexistros coincidentes, cómpre [exportar o segmento](export-destinations.md).
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

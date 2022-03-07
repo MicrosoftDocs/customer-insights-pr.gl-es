@@ -1,20 +1,19 @@
 ---
 title: Conector de Power BI
 description: Obteña información acerca de como usar o conector de Dynamics 365 Customer Insights en Power BI.
-ms.date: 09/21/2020
-ms.reviewer: sthe
-ms.service: customer-insights
+ms.date: 07/23/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405698"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225513"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector de Power BI (vista previa)
 
@@ -23,7 +22,7 @@ Cree visualizacións para os seus datos con Power BI Desktop. Xere información 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Ten perfís de clientes unificados.
-- A última versión de [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) está instalada no seu computador. [Obtén máis información acerca de Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- A última versión de [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) está instalado no seu computador. [Obtén máis información acerca de Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Configurar o conector de Power BI
 
@@ -31,7 +30,7 @@ Cree visualizacións para os seus datos con Power BI Desktop. Xere información 
 
 1. Seleccione **Ver máis** e busque **Dynamics 365 Customer Insights**
 
-1. Seleccione o resultado e **Conectar**.
+1. Seleccione **Conectar**.
 
 1. **Inicie sesión** coa mesma conta organizativa que usa para Customer Insights e seleccione **Conectar**.
    > [!NOTE]
@@ -39,7 +38,7 @@ Cree visualizacións para os seus datos con Power BI Desktop. Xere información 
 
 1. Na caixa de diálogo **Navegador**. ve a lista de todos os ambientes aos que ten acceso. Amplíe un contorno e abra calquera das carpetas (entidades, medidas, segmentos, enriquecementos). Por exemplo, abra o cartafol **Entidades** para ver todas as entidades que pode importar.
 
-   ![Power BI Connector Navigator](media/power-bi-navigator.png "Power BI Connector Navigator")
+   ![Power BI Connector Navigator.](media/power-bi-navigator.png "Power BI Connector Navigator")
 
 1. Seleccione as caixas de verificación xunto ás entidades que hai que incluír e **Cargar**. Pode seleccionar varias entidades de varios ambientes.
 
@@ -47,8 +46,32 @@ Cree visualizacións para os seus datos con Power BI Desktop. Xere información 
 
 ## <a name="large-data-sets"></a>Conxuntos de datos grandes
 
-O conector Customer Insights para Power BI está deseñado para funcionar con conxuntos de datos que conteñen ata 1 millón de perfís de clientes. A importación de conxuntos de datos máis grandes pode funcionar, pero leva moito tempo. Ademais, o proceso podería ter un tempo de espera debido ás limitacións de Power BI. Para obter máis información, consulte [Power BI: recomendacións para grandes conxuntos de datos](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+O conector Customer Insights para Power BI está deseñado para funcionar con conxuntos de datos que conteñen ata 1 millón de perfís de clientes. A importación de conxuntos de datos máis grandes pode funcionar, pero leva moito tempo. Ademais, o proceso podería ter un tempo de espera debido ás limitacións de Power BI. Para obter máis información, consulte [Power BI: recomendacións para grandes conxuntos de datos](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Traballar cun subconxunto de datos
 
 Considere traballar cun subconxunto dos seus datos. Por exemplo, pode crear [segmentos](segments.md) en vez de exportar todos os rexistros de clientes a Power BI.
+
+## <a name="troubleshooting"></a>Resolución de problemas
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>O contorno de Customer Insights non aparece en Power BI
+
+Contornos que teñen máis dunha [relación](relationships.md) definida entre dúas entidades idénticas nas estatísticas de audiencia non estarán dispoñibles no conector de Power BI.
+
+Pode identificar e eliminar as relacións duplicadas.
+
+1. Na información do público, vaia a **Datos** > **Relacións** no ambiente que lle falta en Power BI.
+2. Identificar relacións duplicadas:
+   - Comprobe se hai máis dunha relación definida entre as mesmas dúas entidades.
+   - Comprobe se hai unha relación creada entre dúas entidades que están incluídas no proceso de unificación. Hai unha relación implícita definida entre todas as entidades incluídas no proceso de unificación.
+3. Elimine as relacións duplicadas identificadas.
+
+Despois de eliminar as relacións duplicadas, intente configurar o conector de Power BI de novo. O ambiente debería estar dispoñible agora.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Erros nos campos de data ao cargar entidades en Power BI Desktop
+
+Ao cargar entidades que conteñen campos cun formato de data como MM/DD/AAAA, pode atopar erros debido a que os formatos de configuración rexional non coinciden. Esta falta de coincidencia acontece cando o ficheiro de Power BI Desktop se establece noutra configuración rexional diferente a Inglés (Estados Unidos), porque os campos de data na información do público gárdanse en formato estadounidense.
+
+O ficheiro de Power BI Desktop ten unha única configuración rexional que se aplica ao recuperar datos. Para que estes campos de data se interpreten correctamente, estableza a configuración rexional do ficheiro .BPI en Inglés (Estados Unidos). [Obteña información sobre como cambiar a configuración rexional dun ficheiro de Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

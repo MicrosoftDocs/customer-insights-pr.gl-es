@@ -3,20 +3,19 @@ title: Desenvolvemento de subscricións predición (contén vídeo)
 description: Fai a predición de se un cliente está en risco por deixar de usar os produtos ou servizos da subscrición da súa empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967699"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354691"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predición da renovación da subscrición (vista previa)
+# <a name="subscription-churn-prediction"></a>Predición de abandono de subscricións
 
 A predición da renovación da subscrición axuda a prever se un cliente está en risco por deixar de usar os produtos ou servizos da subscrición da súa empresa. Pode crear unha nova predición da renovación da subscrición na páxina **Intelixencia** > **Predicións**. Seleccione **As miñas predicións** para ver outras predicións que creou.
 
@@ -63,7 +62,7 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
 ## <a name="create-a-subscription-churn-prediction"></a>Crear unha predición da renovación dunha subscrición
 
 1. Na información do público, vaia a **Intelixencia** > **Predicións**.
-1. Seleccione o mosaico **Modelo de renovación de subscrición (vista previa)** e seleccione **Usar este modelo**.
+1. Seleccione o **Modelo de subscrición** mosaico e selecciona **Use este modelo**.
    > [!div class="mx-imgBorder"]
    > ![Mosaico de modelo de renovación de subscrición co botón Utilizar este modelo.](media/subscription-churn-usethismodel.PNG "Mosaico de modelo de renovación de subscrición co botón Utilizar este modelo")
 

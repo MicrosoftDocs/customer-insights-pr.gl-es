@@ -3,20 +3,24 @@ title: Predición do valor de duración do cliente (VDC)
 description: Prediga o potencial de ingresos para os clientes activos no futuro.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035367"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355787"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Predición do valor de duración do cliente (VDC) (versión preliminar)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predición do valor de duración do cliente (VDC)
 
 Prediga o valor potencial (ingresos) que os clientes activos individuais aportarán á súa empresa a través dun período de tempo futuro definido. Esta función pode axudarlle a acadar varios obxectivos: 
 - Identificar clientes de alto valor e procesar esta información
@@ -65,7 +69,7 @@ Os seguintes datos son necesarios e, cando están marcados como opcionais, recom
     - Integridade dos datos: menos do 20 % dos valores que faltan nos campos obrigatorios nos datos de entrada   
 
 > [!NOTE]
-> - O modelo require o historial de transaccións dos seus clientes. Actualmente só se pode configurar unha entidade do historial de transaccións. Se hai varias entidades de compra ou transacción, pode unilas en Power Query antes da inxestión de datos.
+> - O modelo require o historial de transaccións dos seus clientes. Actualmente só se pode configurar unha entidade do historial de transaccións. Se hai varias entidades de compra/transacción, podes unila Power Query antes da inxestión de datos.
 > - Non obstante, para obter datos de actividade do cliente adicionais (opcionais), pode engadir tantas entidades de actividade do cliente como queira para que o modelo as teña en conta.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Crear unha predición do valor de duración do cliente
@@ -74,7 +78,7 @@ Os seguintes datos son necesarios e, cando están marcados como opcionais, recom
 
 1. Seleccione o mosaico **Valor de duración do cliente** e seleccione **Usar modelo**. 
 
-1. No panel **Valor de duración do cliente (versión preliminar)**, seleccione **Comezar**.
+1. No **Valor de vida do cliente** panel, seleccione **Comezar**.
 
 1. **Poña nome a este modelo** e o **Nome da entidade de saída** para distinguilos doutros modelos ou entidades.
 

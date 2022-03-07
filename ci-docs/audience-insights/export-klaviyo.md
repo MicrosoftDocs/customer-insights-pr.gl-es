@@ -1,20 +1,19 @@
 ---
 title: Exportar datos de Customer Insights a Klaviyo
 description: Aprenda a configurar a conexión e exportar a Klaviyo.
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
+ms.openlocfilehash: 027aee70d9fdab0a92d7fd99209a6ac2ca3cc361
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385786"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225450"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Exportar listas de segmentos a Klaviyo (versión preliminar)
 
@@ -28,10 +27,10 @@ Exporte segmentos de perfís de clientes unificados a Klaviyo e utilíceos para 
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Pode exportar ata 100.000 perfís por exportación a Klaviyo.
+- Pode exportar ata 100.000 perfís de clientes por exportación a Klaviyo.
 - A exportación a Klaviyo está limitada a segmentos.
-- Exportar ata 1 millón de perfís a Klaviyo pode tardar ata 20 minutos en completarse. 
-- O número de perfís que pode exportar a Klaviyo depende e está limitado ao seu contrato con Klaviyo.
+- A exportación de ata 1 millón de perfís de clientes a Klaviyo pode levar ata 20 minutos en completarse. 
+- O número de perfís de clientes que pode exportar a Klaviyo depende e está limitado ao seu contrato con Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Configurar conexión a Klaviyo
 
@@ -67,7 +66,7 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Introduza o seu [**ID de lista de Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. Na sección **Coincidencia de datos**, no campo **Correo electrónico**, seleccione o campo do seu perfil de cliente unificado que representa o enderezo de correo electrónico dun cliente. É necesario para exportar segmentos a Klaviyo.
+3. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. É necesario para exportar segmentos a Klaviyo.
 
 1. Seleccione **Gardar**.
 

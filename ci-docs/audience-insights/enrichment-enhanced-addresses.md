@@ -1,20 +1,25 @@
 ---
 title: Enriquecemento de mellora de enderezos (contén vídeo)
 description: Enriqueza e normalice a información dos enderezos dos perfís de clientes cos modelos de Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934921"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353634"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecemento dos perfís de clientes con enderezos mellorados
 
@@ -100,17 +105,17 @@ Para iniciar o proceso de enriquecemento, seleccione **Executar** na barra de co
 
 Despois de completar o proceso de enriquecemento, pode consultar os datos dos perfís de clientes recentemente enriquecidos en **Os meus enriquecementos**. Ademais, atopará a hora da última actualización e o número de perfís enriquecidos.
 
-Pode acceder a unha vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
+Podes ver unha mostra dos datos enriquecidos no **Vista previa de clientes enriquecidos** tella. Seleccione **Ver máis** e selecciona o **Datos** para acceder a unha vista detallada de cada perfil enriquecido.
 
 ### <a name="overview-card"></a>Tarxeta xeral
 
 A tarxeta de visión xeral mostra detalles sobre a cobertura do enriquecemento. 
 
-* **Clientes procesados e modificados** : O número de perfís de clientes que se enriqueceron con éxito.
+* **Enderezos procesados e modificados** : O número de perfís de clientes con enderezos que se enriqueceron con éxito.
 
-* **Clientes procesados e non modificados** : O número de perfís de clientes que foron recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
+* **Enderezos procesados e non modificados** : O número de perfís de clientes con enderezos recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
 
-* **Clientes non procesados e non modificados** : O número de perfís que non foron recoñecidos. Normalmente para datos de entrada non válidos ou non admitidos polo enriquecemento.
+* **Enderezos non procesados e non modificados** : O número de perfís con enderezos que non foron recoñecidos. Normalmente para datos de entrada que non son válidos ou non admitidos polo enriquecemento.
 
 ## <a name="next-steps"></a>Pasos seguintes
 

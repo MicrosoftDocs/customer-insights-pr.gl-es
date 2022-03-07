@@ -3,18 +3,20 @@ title: Entidades e conxuntos de datos
 description: Vexa os datos na páxina de entidades.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900425"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355296"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades na información sobre o público
 
@@ -41,7 +43,7 @@ O **Entidades** páxina lista entidades e inclúe estas columnas:
 > ![Táboa de campos.](media/data-manager-entities-fields.PNG "Táboa de campos")
 
 > [!NOTE]
-> Esta páxina mostra só unha mostra dos datos da túa entidade. Para ver o conxunto de datos completo, vaia á páxina **Orixes de datos**, seleccione unha entidade, seleccione **Editar** e, a continuación, visualice os datos desta entidade co editor Power Query como se explica en [Orixes de datos](data-sources.md).
+> Esta páxina mostra só unha mostra dos datos da túa entidade. Para ver o conxunto de datos completo, vai a **Fontes de datos** páxina, seleccione unha entidade, seleccione **Editar**, e despois ver os datos desta entidade co Power Query editor como se explica en [Fontes de datos](data-sources.md).
 
 Para saber máis sobre os datos inxeridos na entidade, a columna **Resumo** ofrécelle algunhas características importantes dos datos, como os datos nulos, valores que faltan, valores únicos, contas e distribucións, segundo corresponda aos seus datos. Seleccione a icona de gráfico para ver o resumo dos datos.
 
@@ -57,7 +59,7 @@ Para saber máis sobre os datos inxeridos na entidade, a columna **Resumo** ofr�
 
   - **Nome do informe** : Nome do informe.
   - **Creado por** : Nome da persoa que creou a entidade.
-  - **Creada** : Data e hora de creación da entidade.
+  - **Creado** : Data e hora de creación da entidade.
   - **Editado por** : Nome da persoa que modificou a entidade.
   - **Editado** : Data e hora da modificación da entidade. 
 
@@ -71,7 +73,9 @@ Os campos dunha orixe de datos inxerida poden conter datos danados. Os rexistros
 
 Por exemplo, unha columna "aniversario" ten o tipo de datos definido como "data". Un rexistro de cliente introduciu o seu aniversario como "01/01/19777". O sistema marcará este rexistro como danado. Agora outra persoa pode cambiar o aniversario no sistema de orixe a "1977". Despois dunha actualización automatizada das orixes de datos, o campo ten un formato válido e o rexistro eliminarase da entidade danada. 
 
-Vaia a **Datos** > **Entidades** e busque as entidades danadas na sección **Sistema**. Esquema de nomeamento de entidades danadas: "DataSourceName_EntityName_corrupt".
+Vaia a **Datos** > **Entidades** e busque as entidades danadas na sección **Sistema**. Esquema de nomeamento de entidades danadas: "DataSourceName_EntityName_corrupt". Seleccione unha entidade corrupta para identificar todos os campos danados e o motivo a nivel de rexistro individual.
+> [!div class="mx-imgBorder"]
+> ![Motivo de corrupción.](media/corruption-reason.png "Razón de corrupción")
 
 Customer Insights aínda procesa rexistros danados. Non obstante, poden causar problemas ao traballar cos datos unificados.
 

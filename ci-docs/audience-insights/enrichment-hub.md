@@ -1,21 +1,25 @@
 ---
 title: Enriquecer perfís de clientes unificados
 description: Use capacidades para enriquecer os datos dos seus clientes.
-ms.date: 11/05/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770115"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372700"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -34,9 +38,11 @@ No separador **Descubrir**, atopará todas as opcións de enriquecemento compati
 - [Marcas](enrichment-microsoft.md) fornecidas por Microsoft
 - [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
 - [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft 
-- [Datos demográficos](enrichment-experian.md) proporcionados por Experian
+- [Demografía](enrichment-experian.md) fornecida por Experian
 - [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
+- [Datos de localización](enrichment-here.md) subministrados por HERE Technologies 
+- [Identidade](enrichment-liveramp.md) proporcionado por LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
@@ -46,6 +52,7 @@ No separador **Descubrir**, atopará todas as opcións de enriquecemento compati
 - [Datos de localización](enrichment-here.md) subministrados por HERE Technologies 
 - [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
+- [Datos de participación da conta](enrichment-office.md) proporcionado por Microsoft
 
 ---
 
@@ -75,9 +82,13 @@ Os enriquecementos de terceiros configúranse usando [conexións](connections.md
 
 A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueceza datos só para un segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver na páxina **Enriquecemento**.
 
+## <a name="enrich-data-sources-before-unification"></a>Enriquece as fontes de datos antes da unificación
+
+Podes enriquecer os datos dos teus clientes antes da unificación de datos para axudar a aumentar a calidade dunha coincidencia de datos. Para obter máis información, consulte [orixe de datos enriquecemento](data-sources-enrichment.md).
+
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Vexa o progreso do proceso de enriquecemento
 
-Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado e os problemas potenciais mentres se actualiza ou despois de completar a actualización. Comprenda que procesos están implicados para actualizar un enriquecemento e canto tardou en executalos. O estado de enriquecemento é compatible con Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
+Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado e os problemas potenciais mentres se actualiza ou despois de completar a actualización. Comprenda que procesos están implicados para actualizar un enriquecemento e canto tardou en executalos. Admítese o estado de enriquecemento para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
 
 Para ver o estado dun enriquecemento
 

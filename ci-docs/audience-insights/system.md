@@ -1,24 +1,30 @@
 ---
 title: Configuración do sistema en estatísticas de audiencia
-description: Obtén información sobre a configuración do sistema na capacidade de información sobre o público Dynamics 365 Customer Insights.
+description: Máis información sobre a configuración do sistema na capacidade de información do público de Dynamics 365 Customer Insights.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732359"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354227"
 ---
 # <a name="system-configuration"></a>Configuración do sistema
 
-Para acceder ás configuracións do sistema nas estatísticas do público, selecciona na barra de navegación esquerda **Admin** > **Sistema** para ver unha lista de tarefas e procesos do sistema.
+Para acceder ás configuracións do sistema nas estatísticas do público, selecciona desde a barra de navegación esquerda **Admin** > **Sistema** para ver unha lista de tarefas e procesos do sistema.
 
 A páxina **Sistema** inclúe as seguintes pestanas:
 - [Progresión](#status-tab)
@@ -34,7 +40,7 @@ A páxina **Sistema** inclúe as seguintes pestanas:
 
 O **Ficha de estado** permítelle seguir o progreso das tarefas, a inxestión de datos, as exportacións de datos e outros procesos importantes do produto. Revisa a información desta pestana para garantir a integridade das túas tarefas e procesos activos.
 
-Esta pestana inclúe táboas con información de estado e procesamento de varios procesos. Cada táboa rastrexa o **Nome** da tarefa e a súa entidade correspondente, o **Estado** da súa execución máis recente e cando foi a **Última actualización**. Podes ver os detalles das últimas execucións seleccionando a tarefa ou o nome do proceso. 
+Esta pestana inclúe táboas con información de estado e procesamento de varios procesos. Cada táboa rastrexa o **Nome** da tarefa e a súa entidade correspondente, o **Estado** da súa execución máis recente e cando foi a **Última actualización**. Podes ver os detalles das últimas execucións seleccionando o nome da tarefa ou do proceso. 
 
 Seleccione o estado a carón da tarefa ou proceso no ficheiro **Estado** columna para abrir **Detalles do progreso** panel.
 
@@ -46,7 +52,7 @@ O sistema utiliza os seguintes estados para tarefas e procesos:
 
 |Progresión  |Definición  |
 |---------|---------|
-|Cancelouse |O usuario cancelou o procesamento antes de que rematase.   |
+|Cancelado |O usuario cancelou o procesamento antes de que rematase.   |
 |Ero   |A inxestión de datos tivo erros.         |
 |Erro  |Produciuse un erro ao procesar.  |
 |Sen iniciar   |O orixe de datos aínda non ten datos inxeridos ou aínda está en modo borrador.         |
@@ -75,16 +81,20 @@ A actualización de tarefas e procesos execútase segundo o [horario configurado
 |Medidas  |Funciona manualmente (actualización única). Depende do proceso de fusión.  |
 |Combinación   |Depende da finalización do proceso de coincidencia. Os segmentos, medidas, enriquecemento, busca, actividades, predicións e preparación de datos dependen da correcta finalización deste proceso.   |
 |Perfís   |Funciona manualmente (actualización única). Depende do proceso de fusión. |
-|Busca   |Funciona manualmente (actualización única). Depende do proceso de fusión. |
+|Buscar   |Funciona manualmente (actualización única). Depende do proceso de fusión. |
 |Segmentos  |Funciona manualmente (actualización única). Depende do proceso de fusión. A información depende do seu procesamento.|
 |Sistema   |Depende da finalización do proceso de coincidencia. Os segmentos, medidas, enriquecemento, busca, actividades, predicións e preparación de datos dependen da correcta finalización deste proceso.   |
-|Usuario  |Funciona manualmente (actualización única). Depende das entidades.  |
+|User  |Funciona manualmente (actualización única). Depende das entidades.  |
 
-Seleccione o estado dun proceso para ver os detalles do progreso de todo o traballo no que estaba. Os procesos de actualización anteriores poden axudar a comprender o que podes facer para abordar a **Omitido** ou **En cola** tarefa ou proceso.
+Seleccione o estado dun proceso para ver os detalles do progreso de todo o traballo no que se atopaba. Os procesos de actualización anteriores poden axudar a comprender o que podes facer para abordar a **Omitido** ou **En cola** tarefa ou proceso.
 
 ## <a name="schedule-tab"></a>Separador de programación
 
 Use o separador **Programar** para programar actualizacións automáticas de todas as [fontes de datos inxeridas](data-sources.md). As actualizacións automáticas axudan a asegurar que as actualizacións das súas orixes de datos se reflictan nos seus perfís de clientes unificados.
+
+> [!NOTE]
+> As fontes de datos xestionadas por ti actualízanse segundo as súas propias programacións. Para programar a actualización das fontes de datos xestionadas por ti, configura a configuración de actualización nese orixe de datos específico desde o **Fontes de datos** páxina.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Configuración de actualización do fluxo de datos.":::
 
 1. Na información do público, vaia a **Administrar** > **Sistema** e seleccione o separador **Programar**.
 

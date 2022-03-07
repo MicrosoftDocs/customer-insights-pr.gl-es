@@ -1,24 +1,28 @@
 ---
 title: Completar datos parciais mediante predicións
 description: Utilice predicións para cubrir datos de clientes incompletos.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645032"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354001"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Complete os seus datos parciais con predicións
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa os teus datos parciais con predicións (obsoleto)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Esta característica será **obsoleto** a partir de **5 de novembro de 2021**. As implementacións actuais seguirán funcionando ata que se elimine a función, pero non poderás crear novas integracións utilizando as instrucións que aparecen a continuación.
 
 As predicións permiten crear valores previstos facilmente que poden mellorar a comprensión dun cliente. Na páxina **Intelixencia** > **Predicións**, pode seleccionar **As miñas predicións** para ver predicións que configurou noutras partes das estatísticas do público e permitirlle personalizalas aínda máis.
 
@@ -60,6 +64,8 @@ Para obter máis información, consulte [Crear un novo contorno](create-environm
    > ![Exemplo que mostra os valores de campo asignados a categorías.](media/intelligence-categorymapping.png "Exemplo que mostra os valores de campo asignados a categorías")
 
 8. Seleccione **Feito** e a predición procesarase. O procesamento levará algún tempo, dependendo do tamaño e complexidade dos datos. Os resultados estarán dispoñibles nunha nova entidade en función do **Nome da entidade de saída** da predición que creou.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Crear unha predición mentres se crea un segmento
 
@@ -110,7 +116,7 @@ Como parte deste fluxo, vostede elixe un atributo específico no que basear o se
 
 ## <a name="edit-a-prediction"></a>Editar unha predición
 
-Despois de crear unha predición, pode personalizar o modelo no AI Builder para aumentar a eficacia do seu modelo.  
+Despois de crear un predición, podes personalizar o modelo no AI Builder para aumentar a eficacia do seu modelo.  
 
 1. Na información do público, vaia a **Intelixencia** > **Predicións** > **As miñas predicións**.
 
@@ -118,14 +124,14 @@ Despois de crear unha predición, pode personalizar o modelo no AI Builder para 
 
 3. Seleccione os tres puntos na columna **Accións** e escolla **Ver**.
 
-4. Seleccione **Personalizar en AI Builder**.
+4. Seleccione **Personaliza en AI Builder**.
 
-5. Actualice o seu modelo en AI Builder. [Obteña máis información sobre como xestionar modelos en AI builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Actualiza o teu modelo no AI Builder. [Obteña máis información sobre como xestionar modelos en AI builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 A seguinte execución da súa predición usará o modelo actualizado que creou.
 
 > [!NOTE]
-> Os novos modelos creados en AI Builder non se amosarán nos datos do público a menos que o modelo se crease a partir das experiencias enumeradas anteriormente.
+> Novos modelos creados en AI Builder non se mostrará nas estatísticas do público a menos que o modelo se crease a partir das experiencias indicadas anteriormente.
 
 ## <a name="remove-a-prediction"></a>Eliminar unha predición
 

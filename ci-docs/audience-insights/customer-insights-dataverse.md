@@ -1,20 +1,22 @@
 ---
 title: Datos de Customer Insights en Microsoft Dataverse
 description: Use as entidades de Customer Insights como táboas en Microsoft Dataverse.
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645216"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355427"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Traballar con datos de Customer Insights en Microsoft Dataverse
 
@@ -45,6 +47,7 @@ Algunhas entidades de saída da información do público están dispoñibles com
 - [CustomerMeasure](#customermeasure)
 - [Enriquecemento](#enrichment)
 - [Predición](#prediction)
+- [Segmento de pertenza](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -121,3 +124,16 @@ Esta táboa contén a saída das predicións do modelo.
 | Valores               | Cadea JSON | Lista de atributos producidos polo modelo |
 | msdynci_predictionid | GUID        | GUID determinista xerado a partir de msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Segmento de pertenza
+
+Esta táboa contén información sobre a pertenza ao segmento dos perfís de clientes.
+
+| Column        | Tipo | Descripción                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | ID do perfil do cliente        |
+| SegmentProvider      | String       | Aplicación que publica os segmentos. Valor predeterminado: información sobre o público         |
+| SegmentMembershipType | String       | Tipo de cliente deste segmento rexistro de pertenza. Admite varios tipos, como Cliente, Contacto ou Conta. Valor predeterminado: cliente  |
+| Segmentos       | Cadea JSON  | Lista de segmentos únicos dos que pertence o perfil do cliente      |
+| msdynci_identifier  | String   | Identificador único do rexistro de pertenza ao segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID determinista xerado a partir de`msdynci_identifier`          |

@@ -4,22 +4,21 @@ author: m-hartmann
 description: Familiarícese coa experiencia da primeira execución en Dynamics 365 Customer Insights e explore as súas capacidades.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645685"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350129"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Introdución despois de comprar Customer Insights
 
 Este artigo explica como dar os seus primeiros pasos en Dynamics 365 Customer Insights despois de que a súa organización comprase unha subscrición. Se desexa mercar Customer Insights, as nosas opcións de contacto aparecen na [páxina web de Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Despois de mercar unha licenza de subscrición para Customer Insights, o administrador global do arrendatario de Microsoft 365 recibe un correo electrónico que o invita a crear o ambiente. 
+Despois de comprar unha licenza de subscrición para Customer Insights, o administrador global do Microsoft 365 o inquilino recibe un correo electrónico que o invita a crear o ambiente. 
 
 Customer Insights ten licenzas por arrendatario e inclúe varias capacidades. Pode mercar máis capacidade e licenzas para aumentar a cota predeterminada. 
 - [Visión xeral de prezos](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ A primeira experiencia de execución axúdalle a escoller o foco inicial con Cus
 
 ## <a name="create-your-own-environment"></a>Cree o seu propio contorno
 
-Despois do primeiro inicio de sesión, verá un ambiente con datos de mostra. Pode usar eses datos para explorar funcións e familiarizarse coa aplicación. Para usar os seus propios datos, ten que crear un ambiente coa capacidade na que queira traballar.
-
-- [Crear un ambiente na información do público.](audience-insights/get-started-paid.md)
-- [Crear un ambiente na información de interacción.](engagement-insights/create-new-environment.md) 
+Despois do primeiro inicio de sesión, verá un ambiente con datos de mostra. Pode usar eses datos para explorar funcións e familiarizarse coa aplicación. Para usar os teus propios datos, tes que facelo [crear un ambiente](audience-insights/get-started-paid.md).
 
 
 
