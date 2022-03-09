@@ -1,62 +1,89 @@
 ---
 title: Entidades e conxuntos de datos
 description: Vexa os datos na páxina de entidades.
-ms.date: 04/16/2020
-ms.reviewer: mukeshpo
-ms.service: customer-insights
+ms.date: 12/06/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e71c69a6207147d8cd65363d51a5fa6bbf896151
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269374"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355296"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades na información sobre o público
 
 Despois de [configurar as súas orixes de datos](data-sources.md), vaia á páxina **Entidades** para avaliar a calidade dos datos inxeridos. As entidades considéranse conxuntos de datos. Múltiples capacidades de Dynamics 365 Customer Insights constrúense arredor destas entidades. Revisalas de preto pode axudarlle a validar o resultado desas capacidades.
 
-A páxina **Entidades** enumera entidades e inclúe varias columnas:
+O **Entidades** páxina lista entidades e inclúe estas columnas:
 
-- **Nome**: o nome da súa entidade de datos. Se ve un símbolo de aviso xunto ao nome dunha entidade, significa que os datos da entidade non se cargaron correctamente.
-- **Orixe**: tipo de orixes de datos que inxeriron a entidade
-- **Creado por**: nome da persoa que creou a entidade
-- **Data e hora de creación**: data e hora de creación da entidade
-- **Actualizado por**: nome da persoa que actualizou a entidade
-- **Última actualización**: data e hora da última actualización da entidade
-- **Última actualización**: data e hora da última actualización de datos
+- **Nome** : O nome da entidade de datos. Se ve un símbolo de aviso xunto ao nome dunha entidade, significa que os datos da entidade non se cargaron correctamente.
+- **Fonte** : Tipo de orixe de datos que inxeriu a entidade.
+- **Actualizado** : Hora da última actualización da entidade.
+- **Estado** : Detalles sobre a última actualización da entidade.
 
-## <a name="exploring-a-specific-entitys-data"></a>Exploración de datos dunha entidade específica
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
-Seleccione unha entidade para explorar os diferentes campos e rexistros incluídos nela.
+## <a name="explore-a-specific-entitys-data"></a>Explorar os datos dunha entidade específica
 
-> [!div class="mx-imgBorder"]
-> ![Seleccionar unha entidade](media/data-manager-entities-data.png "Seleccionar unha entidade")
+1. Na información do público, vaia a **Datos** > **Entidades**.
+1. Dende **Entidades** páxina, seleccione unha entidade para abrir a páxina de detalles.  
+1. Explora os diferentes campos e rexistros incluídos para esa entidade.
 
-- O separador **Datos** está seleccionado de xeito predeterminado e amosa unha táboa que mostra os detalles sobre os rexistros individuais da entidade.
+- O separador **Atributos** está seleccionado por defecto e mostra unha táboa para revisar os detalles da entidade seleccionada, como os nomes dos campos e os tipos, entre outros, de datos. A columna **Tipo** mostra os tipos asociados ao Common Data Model, identificados automaticamente polo sistema ou [mapeados manualmente](map-entities.md) polos usuarios. Estes tipos son tipos semánticos que poden diferir dos tipos de datos dos atributos. Por exemplo, o campo *Correo electrónico* que se mostra a continuación ten un tipo de datos *Text* pero o seu tipo (semántico) de Common Data Model pode ser *Email* ou *EmailAddress*.
 
 > [!div class="mx-imgBorder"]
-> ![Táboa de campos](media/data-manager-entities-fields.PNG "Táboa de campos")
-
-- O separador **Campos** mostra unha táboa para revisar os detalles da entidade seleccionada, como nomes de campo, tipos de datos e tipos. A columna **Tipo** mostra os tipos asociados ao Common Data Model, identificados automaticamente polo sistema ou [mapeados manualmente](map-entities.md) polos usuarios. Trátase de tipos semánticos que poden diferir dos tipos de datos dos atributos, por exemplo, o campo *Correo electrónico* a continuación ten o tipo de datos *Texto* pero o seu tipo de Common Data Model (semántico) pode ser *Correo electrónico* ou *Enderezo de correo electrónico*.
+> ![Táboa de campos.](media/data-manager-entities-fields.PNG "Táboa de campos")
 
 > [!NOTE]
-> As dúas táboas inclúen só unha mostra dos datos da súa entidade. Para ver o conxunto de datos completo, vaia á páxina **Orixes de datos**, seleccione unha entidade, seleccione **Editar** e, a continuación, visualice os datos desta entidade co editor Power Query como se explica en [Orixes de datos](data-sources.md).
+> Esta páxina mostra só unha mostra dos datos da túa entidade. Para ver o conxunto de datos completo, vai a **Fontes de datos** páxina, seleccione unha entidade, seleccione **Editar**, e despois ver os datos desta entidade co Power Query editor como se explica en [Fontes de datos](data-sources.md).
 
-Para saber máis sobre os datos inxeridos na entidade, a columna **Resumo** ofrécelle algunhas características importantes dos datos, como os datos nulos, valores que faltan, valores únicos, contas e distribucións, segundo corresponda aos seus datos.
-
-Seleccione a icona de gráfico para ver o resumo dos datos.
+Para saber máis sobre os datos inxeridos na entidade, a columna **Resumo** ofrécelle algunhas características importantes dos datos, como os datos nulos, valores que faltan, valores únicos, contas e distribucións, segundo corresponda aos seus datos. Seleccione a icona de gráfico para ver o resumo dos datos.
 
 > [!div class="mx-imgBorder"]
-> ![Símbolo de resumo](media/data-manager-entities-summary.png "Táboa de resumo de datos")
+> ![Símbolo de resumo.](media/data-manager-entities-summary.png "Táboa de resumo de datos")
 
-### <a name="next-step"></a>Seguinte paso
+- O separador **Datos** mostra unha táboa con detalles sobre os rexistros individuais da entidade. Os detalles indicados dependen do tipo de datos da entidade.
 
-Consulte o tema [Unificar](data-unification.md) para obter información acerca de como *asignar*, *atopar coincidencia* e *combinar* os datos inxeridos.
+> [!div class="mx-imgBorder"]
+> ![Selecciona unha entidade.](media/data-manager-entities-data.png "Seleccionar unha entidade")
+
+- O **Informes** a pestana (dispoñible para algunhas entidades) permítelle visualizar os seus datos creando un informe e inclúe estas columnas:
+
+  - **Nome do informe** : Nome do informe.
+  - **Creado por** : Nome da persoa que creou a entidade.
+  - **Creado** : Data e hora de creación da entidade.
+  - **Editado por** : Nome da persoa que modificou a entidade.
+  - **Editado** : Data e hora da modificación da entidade. 
+
+## <a name="entity-specific-information"></a>Información específica da entidade
+
+A seguinte sección ofrece información sobre algunhas entidades creadas polo sistema.
+
+### <a name="corrupted-data-sources"></a>Orixes de datos danadas
+
+Os campos dunha orixe de datos inxerida poden conter datos danados. Os rexistros con campos danados expóñense en entidades creadas polo sistema. Coñecer os rexistros danados axuda a identificar que datos hai que revisar e actualizar no sistema de orixe. Despois da seguinte actualización da orixe de datos, os rexistros corrixidos inxírense en Customer Insights e transmítense aos procesos descendentes. 
+
+Por exemplo, unha columna "aniversario" ten o tipo de datos definido como "data". Un rexistro de cliente introduciu o seu aniversario como "01/01/19777". O sistema marcará este rexistro como danado. Agora outra persoa pode cambiar o aniversario no sistema de orixe a "1977". Despois dunha actualización automatizada das orixes de datos, o campo ten un formato válido e o rexistro eliminarase da entidade danada. 
+
+Vaia a **Datos** > **Entidades** e busque as entidades danadas na sección **Sistema**. Esquema de nomeamento de entidades danadas: "DataSourceName_EntityName_corrupt". Seleccione unha entidade corrupta para identificar todos os campos danados e o motivo a nivel de rexistro individual.
+> [!div class="mx-imgBorder"]
+> ![Motivo de corrupción.](media/corruption-reason.png "Razón de corrupción")
+
+Customer Insights aínda procesa rexistros danados. Non obstante, poden causar problemas ao traballar cos datos unificados.
+
+As seguintes comprobacións execútanse nos datos inxeridos para expoñer rexistros danados: 
+
+- O valor dun campo non coincide co tipo de datos da súa columna.
+- Os campos conteñen caracteres que fan que as columnas non coincidan co esquema esperado. Por exemplo: comiñas con formato incorrecto, comiñas sen escape ou caracteres de nova liña.
+- Se hai columnas datatime/date/datetimeoffset, o seu formato debe especificarse no modelo se non segue o formato ISO estándar.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

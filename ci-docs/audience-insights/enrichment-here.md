@@ -3,18 +3,17 @@ title: Enriquecemento co enriquecemento de terceiros de HERE Technologies
 description: Información xeral sobre o enriquecemento de terceiros de HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6555305"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230380"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecemento de perfís de clientes con HERE Technologies (vista previa)
 
@@ -85,7 +84,7 @@ Pode acceder a unha vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos seguintes
 
-Crear sobre os seus datos enriquecidos de clientes. Cree [segmentos](segments.md) e [medidas](measures.md), e incluso [exporte os datos](export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 

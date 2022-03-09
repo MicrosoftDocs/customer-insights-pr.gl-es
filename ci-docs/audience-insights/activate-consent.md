@@ -1,20 +1,19 @@
 ---
 title: Activar regras de consentimento para segmentos
 description: Sigue estes pasos para vincular os datos de consentimento e activar as comprobacións de consentimento nas estatísticas da audiencia. Un administrador tamén pode desactivar as comprobacións de consentimento.
-ms.date: 11/03/2021
-ms.service: customer-insights
+ms.date: 11/12/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
-ms.translationtype: HT
+ms.openlocfilehash: 4b55c82229b1a6189c0dd67d145386344286df8a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790774"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227491"
 ---
 # <a name="activate-consent-rules"></a>Activar regras de consentimento
 
@@ -36,7 +35,7 @@ Cos datos de consentimento importados ao Centro de consentimento (vista previa) 
 
 1. No menú despregable, selecciona onde queres permitir substitucións.     
 
-1. No **Vincular o consentimento aos perfís de clientes** sección, escolla o atributo que se usa como identificador para vincular os datos de consentimento aos datos do cliente. Probablemente será un número de teléfono ou enderezo de correo electrónico. 
+1. No **Vincular o consentimento aos perfís de clientes** sección, escolla o atributo que se utiliza como identificador para vincular os datos de consentimento aos datos do cliente. Probablemente será un número de teléfono ou enderezo de correo electrónico. 
 
 1. Seleccione **Gardar** para aplicar a súa configuración.
 
@@ -49,3 +48,6 @@ Para deixar de usar os datos de consentimento nas estatísticas da audiencia, un
 1. Seleccione o **Consentimento (vista previa)** ficha.
 
 1. No **Activa as comprobacións de consentimento** sección, configure o interruptor en **Desactivado**.
+
+> [!TIP]
+> Para deixar de usar a capacidade de xestión do consentimento, consulte [Configuración do sistema no Centro de consentimento (vista previa)](../consent-management/system-settings.md).

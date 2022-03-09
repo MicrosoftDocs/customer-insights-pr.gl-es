@@ -2,21 +2,24 @@
 title: Guía de mostra de predición de recomendacións de produtos
 description: Utilice esta guía de mostra para probar o modelo de predición de recomendacións de produtos.
 ms.date: 02/10/2021
-ms.reviewer: digranad
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 0ee873d9b7caa5f891cb2d5b8c665dec90ad0e59
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270490"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354645"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Guía de mostra de predición de recomendacións de produtos (versión preliminar)
+# <a name="product-recommendation-prediction-sample-guide"></a>Guía de mostra de predición de recomendacións de produtos
 
 Guiarémolo a través dun exemplo integral de predición de recomendacións de produtos empregando os datos de exemplo fornecidos a continuación.
 
@@ -31,7 +34,7 @@ Contoso é unha empresa que produce cafés e máquinas de café de alta calidade
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1: inxerir datos
 
-Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importación de fontes de datos usando conectores de Power Query](connect-power-query.md) especificamente. A seguinte información supón que está familiarizado coa inxestión de datos en xeral.
+Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando fontes de datos usando Power Query conectores](connect-power-query.md) concretamente. A seguinte información supón que está familiarizado coa inxestión de datos en xeral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inxerir datos de clientes desde a plataforma de comercio electrónico
 
@@ -65,7 +68,7 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
 
 1. No campo **Nome** do panel lateral, cambie o nome da súa orixe de datos de **Consulta** a **eCommercePurchases**.
 
-1. Garde a orixe de datos.
+1. **Garde** a orixe de datos.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Inxerir datos de clientes desde o esquema de fidelización
@@ -83,11 +86,11 @@ Revise os artigos [sobre a inxestión de datos](data-sources.md) e a [importaci�
 
 1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **loyCustomers**.
 
-1. Garde a orixe de datos.
+1. **Garde** a orixe de datos.
 
 ## <a name="task-2---data-unification"></a>Tarefa 2: unificación de datos
 
-Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de coincidencias e combinación** para crear un perfil de cliente unificado. Para obter máis información, consulte [Unificación de datos](data-unification.md).
+Despois de inxerir os datos, comezamos o proceso de unificación de datos para crear un perfil de cliente unificado. Para obter máis información, consulte [Unificación de datos](data-unification.md).
 
 ### <a name="map"></a>Asignar
 
@@ -105,7 +108,7 @@ Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de
 
 1. Vaia ao separador **Buscar coincidencias** e seleccione **Definir orde**.
 
-2. No lista despregable **Primario**, escolla **eCommerceContacts: eCommerce** como fonte principal e inclúa todos os rexistros.
+2. Na lista despregable **Principal**, escolla **eCommerceContacts : eCommerce** como fonte principal e inclúa todos os rexistros.
 
 3. Na lista despregable **Entidade 2**, escolla **loyCustomers: LoyaltyScheme** e inclúa todos os rexistros.
 
@@ -123,8 +126,8 @@ Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de
 6. Introduza o nome **FullName, Email** para a nova regra.
 
    - Engada unha segunda condición para o enderezo de correo electrónico seleccionando **Engadir condición**
-   - Para os eCommerceContacts da entidade, escolla **EMail** no menú despregable.
-   - Para os loyCustomers da entidade, escolla **EMail** no menú despregable.
+   - Para os eCommerceContacts da entidade, escolla **Correo electrónico** no menú despregable.
+   - Para os loyCustomers da entidade, escolla **Correo electrónico** no menú despregable.
    - Deixe Normalizar en branco.
    - Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
 
@@ -156,7 +159,7 @@ Cos perfís de clientes unificados no seu lugar, agora podemos executar a predic
 
    - **Número de produtos**: Configure este valor en **5**. Esta configuración define cantos produtos desexa recomendar aos seus clientes.
 
-   - **Suxerir produtos que os clientes compraron recentemente?**: Seleccione **Si** para indicar que desexa incluír produtos na recomendación que os seus clientes compraron antes.
+   - **Compras repetidas esperadas**: seleccione **Si** para indicar que quere incluír produtos na recomendación que os seus clientes compraron con anterioridade.
 
    - **Ventá para ver días pasados:** Seleccione polo menos **365 días**. Esta configuración define o número de días pasados que o modelo mira na actividade do cliente que se van usar como entrada para as súas recomendacións.
    

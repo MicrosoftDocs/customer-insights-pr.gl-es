@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648115"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225421"
 ---
 # <a name="create-a-new-environment"></a>Crear un novo ambiente 
 
@@ -40,13 +39,13 @@ Un ambiente é un espazo onde xestiona as súas áreas de traballo e conexións.
 
 1. Escolla a **Rexión** e seleccione **Seguinte**. 
 
-1. Escriba un **Nome do espazo de traballo**, que lle permite recompilar datos para sitios web específicos ou aplicacións. Para obter máis información, consulte [Crear un espazo de traballo](create-workspace.md).
+1. Tipo a **Nome do espazo de traballo**, que che permite recompilar datos para sitios web ou aplicacións específicos. Para obter máis información, consulte [Crear un espazo de traballo](create-workspace.md).
 
-1. Escolla o **tipo de espazo de traballo** (web ou móbil) que desexe crear. 
+1. Escolle o **Tipo de espazo de traballo** (web ou móbil) que quere crear. 
 
 1. Seleccione **Mostrar configuración avanzada** para activar ou desactivar estas configuracións opcionais:
 
-   - Axuste **Descoñecido a coñecidos** en "habilitado" para asociar eventos web con usuarios que se autenticaron previamente. Para obter máis información, consulte [Recoñecer eventos web de visitantes previamente autenticados](unknown-to-known.md)
+   - Axuste **Descoñecido a coñecidos** en "habilitado" para asociar eventos web con usuarios que se autenticaron previamente. Para obter máis información, consulte [Recoñece eventos web de visitantes previamente autenticados](unknown-to-known.md).
    - Axuste **Filtrar o tráfico de bots** en "activado" para eliminar o tráfico web por bots para este espazo de traballo. 
 
 1. Seleccione **Completar** cando remate. 
