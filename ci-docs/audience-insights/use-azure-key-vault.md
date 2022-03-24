@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355889"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376506"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Traia a súa propia key vault de Azure (versión preliminar)
 
@@ -31,7 +31,7 @@ Para configurar o key vault nas estatísticas do público, deben cumprirse os se
 
 - Ten unha subscrición a Azure activa.
 
-- Ten un rol de [Administrador](permissions.md#administrator) na información do público. Obteña máis información sobre [permisos do usuario en estatísticas de audiencia](permissions.md#assign-roles-and-permissions).
+- Ten un rol de [Administrador](permissions.md#admin) na información do público. Obteña máis información sobre [permisos do usuario en estatísticas de audiencia](permissions.md#assign-roles-and-permissions).
 
 - Ten os roles de [Colaborador](/azure/role-based-access-control/built-in-roles#contributor) e [Administrador de acceso de usuario](/azure/role-based-access-control/built-in-roles#user-access-administrator) na key vault ou no grupo de recursos ao que pertence a key vault. Para obter máis información, vaia a [Engadir ou eliminar as asignacións de funcións de Azure usando o portal de Azure](/azure/role-based-access-control/role-assignments-portal). Se non ten a función de administrador de acceso de usuario no key vault, debe configurar os permisos de control de acceso baseados en funcións para o principal do servizo de Azure para Dynamics 365 Customer Insights por separado. Siga os pasos para [usar un principal de servizo de Azure](connect-service-principal.md) para a key vault que debería estar ligada.
 

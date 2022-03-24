@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353634"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376295"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecemento dos perfís de clientes con enderezos mellorados
 
 Os enderezos dos seus datos poden estar sen estruturar, incompletos ou ser incorrectos. Use os modelos de Microsoft para normalizar e enriquecer os seus enderezos en [formato Common Data Model](/common-data-model/schema/core/applicationcommon/address) para unha mellor precisión e información.
+
+Tamén podes [enriquecer enderezos en fontes de datos](data-sources-enrichment.md) para mellorar a precisión da coincidencia no proceso de unificación de datos. 
 
 ## <a name="how-we-enhance-addresses"></a>Como melloramos os enderezos
 
@@ -113,9 +115,9 @@ A tarxeta de visión xeral mostra detalles sobre a cobertura do enriquecemento.
 
 * **Enderezos procesados e modificados** : O número de perfís de clientes con enderezos que se enriqueceron con éxito.
 
-* **Enderezos procesados e non modificados** : O número de perfís de clientes con enderezos recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
+* **Enderezos procesados e non modificados** : O número de perfís de clientes con enderezos que foron recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
 
-* **Enderezos non procesados e non modificados** : O número de perfís con enderezos que non foron recoñecidos. Normalmente para datos de entrada que non son válidos ou non admitidos polo enriquecemento.
+* **Enderezos non procesados e non modificados** : O número de perfís con enderezos que non foron recoñecidos. Normalmente para datos de entrada non válidos ou non admitidos polo enriquecemento.
 
 ## <a name="next-steps"></a>Pasos seguintes
 

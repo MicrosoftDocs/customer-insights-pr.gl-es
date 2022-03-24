@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232656"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376460"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novidades na capacidade de información do público de Dynamics 365 Customer Insights
-
-
 
 Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcionalidades a longo prazo, vexa os [plans de versións de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
@@ -27,6 +25,62 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
 
+## <a name="february-2022-updates"></a>Actualizacións de febreiro de 2022
+
+As actualizacións de febreiro de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="general-availability-for-prediction-models"></a>Dispoñibilidade xeral para os modelos predición
+
+Modelos prefabricados predición, incluídos **churn de subscricións**, **transaccional**, e **valor de vida do cliente (CLV)** estarán dispoñibles xeralmente como parte de Customer Insights. 
+
+Para obter máis información, consulte [Visión xeral das predicións](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Novo orixe de datos: integración con Azure Synapse Analytics (Vista previa)
+
+Azure Synapse Analytics é un servizo de análise empresarial que acelera o tempo para obter información en almacéns de datos e sistemas de big data.
+
+Se a súa organización xa utiliza capacidades de análise avanzada de Azure Synapse Analytics e almacena a saída nas bases de datos de Data Lake, pode inxerir facilmente eses datos a Customer Insights. Para obter máis información, consulte [Conectar un Azure Synapse orixe de datos (vista previa)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Enriquecemento LiveRamp (Previsualización)
+
+LiveRamp ofrece resolución de identidade sen conexión determinista e consolidación de datos dos clientes. Podes asignar os identificadores persoais dos teus datos de cliente ao gráfico de identidade de AbiliTec e recibir ID de AbiliTec. Despois podes usar estes ID para unificar mellor os datos dos teus clientes.
+
+Para obter máis información, consulte [Enriquece os perfís de clientes con datos de identidade de LiveRamp (vista previa)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Enriquecemento para fontes de datos (vista previa)
+
+Use datos de fontes como Microsoft e outros socios para enriquecer os datos dos seus clientes antes da unificación de datos. Os enriquecementos orixe de datos axudan a producir datos máis completos e de calidade que poden axudar a conseguir mellores resultados unha vez que unifiques os teus datos.
+
+Para obter máis información, consulte [Enriquecemento para fontes de datos (vista previa)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Modificar propietario do ambiente
+
+Aínda que varios usuarios poden ter permisos de administrador en Customer Insights, só un usuario é o propietario dun ambiente. Unha experiencia mellorada permíteche cambiar de propietario dun ambiente e reclamar a propiedade se un antigo propietario deixa a organización. 
+
+Para obter máis información, consulte [Cambiar o propietario dun ambiente](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>O proceso de preparación de datos enumera os motivos da corrupción dos rexistros danados
+
+O proceso de preparación de datos agora mostra o motivo da corrupción de todos os campos con datos corruptos a nivel de rexistro individual para facilitar a identificación. 
+
+Para obter máis información, consulte [Fontes de datos danadas](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Fin da vista previa para as funcións de informes na capacidade de información de compromiso
+
+O Dynamics 365 Customer Insights A vista previa da capacidade de datos de compromiso finalizou o 15 de febreiro de 2022.  
+Este cambio significa que a experiencia de proba de Customer Insights xa non inclúe a posibilidade de crear funis nin outras funcións de informes.
+
+Convidámoste a explorar e avaliar outras moitas características de [Información do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
+ 
+Durante un período de transición, os participantes existentes de vista previa aínda teñen acceso a algunhas capacidades e funcións de vista previa:
+
+- Obter código para instrumentalizar un sitio web ou unha aplicación para móbil 
+- Consulta eventos e propiedades de eventos 
+- Mellora os perfís unificados con eventos inxeridos e refinados para beneficiarse do valor total dos datos dos seus clientes
+  
+Durante o período de transición, os eventos capturados aínda se transmiten ao Data Lake conectado. Unha vez desactivada esta función, o intercambio de datos entre as estatísticas de compromiso e as estatísticas do público deterase e non se envía ningún evento novo ao almacenamento conectado.
+Póñase en contacto directamente co equipo da súa conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache informado dos próximos lanzamentos. 
+
 ## <a name="january-2022-updates"></a>Actualizacións de xaneiro de 2022
 
 As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
@@ -35,7 +89,7 @@ As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rend
 
 Customer Insights ofrece unha nova función impulsada pola intelixencia artificial para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
 
-Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (Vista previa)](sentiment-analysis.md).
+Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (vista previa)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Actualizacións de decembro de 2021
@@ -52,7 +106,7 @@ Para obter máis información, consulte [Reenvío de sesión Dynamics 365 Custom
 
 Usa datos de Microsoft Office 365 para enriquecer os perfís da túa conta de cliente con información sobre compromisos mediante Office 365 aplicacións. Os datos de compromiso consisten en correo electrónico e actividade de reunións, que se agregan a nivel de conta. Por exemplo, o número de correos electrónicos dunha conta empresarial ou o número de reunións coa conta. Non se comparten datos sobre usuarios individuais. Este enriquecemento está dispoñible nas seguintes rexións: Reino Unido, Europa e América do Norte.
 
-Para obter máis información, consulte [Enriquece os perfís de clientes con datos de compromiso (Vista previa)](enrichment-office.md).
+Para obter máis información, consulte [Enriquece os perfís de clientes con datos de compromiso (vista previa)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Funcións avanzadas de unificación de datos
 
@@ -60,7 +114,7 @@ Para obter máis información, consulte [Enriquece os perfís de clientes con da
 
 Ao deduplicar os rexistros de clientes nunha entidade, quizais non queira ter que escoller un rexistro completo como gañador. Agora permíteche combinar os mellores campos de varios rexistros en función de regras para cada atributo. Por exemplo, pode escoller manter o correo electrónico máis recente E o enderezo máis completo de diferentes rexistros. 
 
-Agora podes definir regras de combinación separadas para atributos individuais mentres desduplicas e fusionas rexistros nunha única entidade. Anteriormente, só permitíamos seleccionar unha única regra de combinación (mantendo os rexistros en función da integridade dos datos de recentes) e esa regra aplicábase a nivel de rexistro a todos os atributos. Non é ideal cando algúns dos datos que queres gardar se atopan no rexistro A e outros bos no rexistro B.
+Agora podes definir regras de combinación separadas para atributos individuais mentres desduplicas e fusionas rexistros nunha única entidade. Anteriormente, só lle permitíamos seleccionar unha única regra de combinación (mantendo os rexistros en función da integridade dos datos recentes) e esa regra aplicábase a nivel de rexistro a todos os atributos. Non é ideal cando algúns dos datos que queres gardar se atopan no rexistro A e outros bos no rexistro B.
 
 Para obter máis información, consulte [Definir a desduplicación nunha entidade de coincidencia](match-entities.md#define-deduplication-on-a-match-entity).
 
@@ -101,7 +155,7 @@ As actualizacións de outubro de 2021 inclúen novas funcións, melloras de rend
 
 A partir de outubro de 2021, podes traballar con contas empresariais e os seus contactos relacionados en Customer Insights. Antes, a aplicación estaba adaptada principalmente a consumidores individuais. Actualizáronse varias áreas de características para admitir escenarios B-to-B ademais dun novo tipo de ambiente. Para obter unha visión xeral das funcións B-to-B compatibles, consulte [Traballa con contas empresariais nas estatísticas do público](work-with-business-accounts.md).
 
-Nas seguintes seccións destacan algunhas das áreas clave que se adaptaron para soportar contas empresariais e consumidores individuais.
+Nas seguintes seccións destacan algunhas das áreas clave que se adaptaron para dar soporte ás contas empresariais e aos consumidores individuais.
 
 #### <a name="export-segments-based-on-business-accounts"></a>Segmentos de exportación baseados en contas comerciais
 

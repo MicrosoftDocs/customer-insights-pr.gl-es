@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354406"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376414"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Reenvío de sesión Dynamics 365 Customer Insights con Azure Monitor (vista previa)
 
@@ -37,7 +37,7 @@ Customer Insights envía os seguintes rexistros de eventos:
 Para configurar diagnósticos en Customer Insights, débense cumprir os seguintes requisitos previos:
 
 - Tes un activo [Subscrición Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Tes [Administrador](permissions.md#administrator) permisos en Customer Insights.
+- Tes [Administrador](permissions.md#admin) permisos en Customer Insights.
 - Tes o **Colaborador** e **Administrador de acceso de usuarios** papel no recurso de destino en Azure. O recurso pode ser unha conta de Azure Storage, un Azure Event Hub ou un espazo de traballo de Azure Log Analytics. Para obter máis información, consulte [Engadir ou eliminar asignacións de roles de Azure mediante o portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 - [Requisitos do destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Azure Event Hub ou Azure Log Analytics.
 - Tes polo menos o **Lector** papel no grupo de recursos ao que pertence o recurso.
@@ -51,7 +51,7 @@ Para configurar diagnósticos en Customer Insights, débense cumprir os seguinte
    > [!div class="mx-imgBorder"]
    > ![Conexión de diagnóstico](media/diagnostics-pane.png "Conexión de diagnóstico")
 
-1. Proporcione un nome no **Nome do destino do diagnóstico** campo.
+1. Proporcione un nome no **Nome do destino de diagnóstico** campo.
 
 1. Escolle o **Inquilino** da subscrición de Azure co recurso de destino e seleccione **acceder**.
 
@@ -87,7 +87,7 @@ O esquema de rexistro segue o [Esquema común de Azure Monitor](/azure/azure-mon
 Customer Insights ofrece dúas categorías:
 
 - **Auditoría de eventos** :[Eventos da API](#api-event-schema) para rastrexar os cambios de configuración no servizo. `POST|PUT|DELETE|PATCH` operacións entran nesta categoría.
-- **Eventos operativos** :[Eventos da API](#api-event-schema) ou [eventos de fluxo de traballo](#workflow-event-schema) xerado ao utilizar o servizo.  Por exemplo,`GET` solicitudes ou eventos de execución dun fluxo de traballo.
+- **Eventos operativos** :[Eventos da API](#api-event-schema) ou [eventos de fluxo de traballo](#workflow-event-schema) xerado durante o uso do servizo.  Por exemplo,`GET` solicitudes ou eventos de execución dun fluxo de traballo.
 
 ## <a name="configuration-on-the-destination-resource"></a>Configuración no recurso de destino
 
@@ -132,7 +132,7 @@ Os eventos da API e os eventos de fluxo de traballo teñen unha estrutura común
 | `resultSignature` | String    | Opcional          | Estado do resultado do evento. Se a operación corresponde a unha chamada á API REST, é o código de estado HTTP.        | `200`             |
 | `durationMs`      | Longo      | Opcional          | Duración da operación en milisegundos.     | `133`     |
 | `callerIpAddress` | String    | Opcional          | Enderezo IP da persoa que chama, se a operación corresponde a unha chamada API procedente dun enderezo IP dispoñible publicamente.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Opcional          | Obxecto JSON que describe a identidade do usuario ou aplicación que fixo a operación.       | Ver [Identidade](#identity-schema) sección.     |  |
+| `identity`        | String    | Opcional          | Obxecto JSON que describe a identidade do usuario ou aplicación que fixo a operación.       | Ver [Identidade](#identity-schema) sección.     |  
 | `properties`      | String    | Opcional          | Obxecto JSON con máis propiedades para a categoría particular de eventos.      | Ver [Propiedades](#api-properties-schema) sección.    |
 | `level`           | String    | Obrigatorio          | Grao de gravidade do evento.    | `Informational`,`Warning`,`Error`, ou `Critical`.           |
 | `uri`             | String    | Opcional          | URI de solicitude absoluta.    |               |
@@ -230,7 +230,7 @@ Os eventos de fluxo de traballo teñen as seguintes propiedades.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Si      | Si  | Sempre`WorkflowEvent`, marcando o evento como evento de fluxo de traballo.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Si      | Si  | Identificador do fluxo de traballo executado. Todos os eventos de fluxo de traballo e tarefa dentro da execución do fluxo de traballo teñen o mesmo `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Si      | Si  | Identificador da operación, consulte [Tipos de operación].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Si      | Si  | Identificador da operación, véx[ Tipos de operación].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Si      | No   | Só fluxo de traballo. Número de tarefas que desencadea o fluxo de traballo.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Si      | No   | Opcional. Só eventos de fluxo de traballo. O Azure Active Directory [objectId do usuario](/azure/marketplace/find-tenant-object-id#find-user-object-id) quen desencadeou o fluxo de traballo, consulte tamén `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Si      | No   | `full` ou`incremental` refrescar.                                                                                                                                                                                                                            |
@@ -239,7 +239,7 @@ Os eventos de fluxo de traballo teñen as seguintes propiedades.
 | `properties.startTimestamp`                  | Si      | Si  | Marca de tempo UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Si      | Si  | Marca de tempo UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Si      | Si  | Marca de tempo UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Si      | Si  | Información do cliente`instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Si      | Si  | Información do cliente`instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Si  | - Para OperationType =`Export`, o identificador é a guía da configuración de exportación. <br> - Para OperationType =`Enrichment`, é a guía do enriquecemento <br> - Para OperationType`Measures` e`Segmentation`, o identificador é o nome da entidade. |
 | `properties.friendlyName`                    | No       | Si  | Nome fácil de usar da exportación ou da entidade que se procesa.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Si  | Opcional. Mensaxe de erro con máis detalles.                                                                                                                                                                                                                  |

@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: eebaaf18795e80dd1ba16a15a23844d685c94c6e
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8373059"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376577"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecemento das fontes de datos (vista previa)
 
@@ -31,7 +31,7 @@ Debes ter permisos de Colaborador ou Administrador para crear ou editar enriquec
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Páxina de enriquecemento de fontes de datos.":::
 
-   O **Descubrir** a pestana mostra o [opcións de enriquecemento orixe de datos compatibles](#supported-data-source-enrichments).
+   O **Descubrir** pestana mostra o [opcións de enriquecemento orixe de datos compatibles](#supported-data-source-enrichments).
 
 1. Seleccione **Enriquece os meus datos** para configurar un enriquecemento orixe de datos. O nome da entidade de saída enchégase automaticamente.
 
@@ -40,7 +40,7 @@ Debes ter permisos de Colaborador ou Administrador para crear ou editar enriquec
 Actualmente están dispoñibles os seguintes enriquecementos para as fontes de datos. Revisa os pasos detallados para o enriquecemento para aprender a configuralo.
 
 - [Enderezos mellorados](enrichment-enhanced-addresses.md)
-- [Datos de identidade de LiveRamp](enrichment-liveramp.md)
+- [Información da empresa enriquecida](enrichment-enhanced-company-data.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Xestiona os enriquecementos orixe de datos existentes
 

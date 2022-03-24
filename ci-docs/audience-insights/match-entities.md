@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372625"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376920"
 ---
 # <a name="match-entities"></a>Buscar coincidencias das entidades
 
@@ -79,7 +79,7 @@ A advertencia **Precisa regras** situada xunto ao nome dunha entidade suxire que
      - Espazo en branco: elimina todos os espazos. *Ola Mundo* convértese en *HelloWorld*.
 
    - **Precisión**: define o nivel de precisión para aplicar a esta condición. 
-     - **Básico**: escolla entre *Baixo*, *Medio*, *Alto* e *Exacto*. Seleccione **Exacto** para coincidir só con rexistros que coincidan co 100 por cento. Seleccione un dos outros niveis para atopar coincidencias de rexistros que non sexan 100 por cento idénticos.
+     - **Básico**: escolla entre *Baixo*, *Medio*, *Alto* e *Exacto*. Seleccione **Exacto** para coincidir só con rexistros que coincidan ao 100 por cento. Seleccione un dos outros niveis para atopar coincidencias de rexistros que non sexan 100 por cento idénticos.
      - **Personalizado**: defina unha porcentaxe coa que deben coincidir os rexistros. O sistema só atopará a coincidencia cos rexistros que superen este limiar.
 
 1. Proporcione un **nome** para a regra.
@@ -135,7 +135,7 @@ Non é obrigatorio especificar regras de desduplicación. Se non se configuran t
 
 1. Vaia a **Datos** > **Unify** > **Coincidencia**.
 
-1. No **Detalles dos rexistros deduplicados** sección, seleccione **Establecer entidades**. Se xa se crearon regras de cancelación de duplicación, seleccione **Editar**.
+1. No **Detalles de rexistros deduplicados** sección, seleccione **Establecer entidades**. Se xa se crearon regras de cancelación de duplicación, seleccione **Editar**.
 
 1. No panel **Preferencias de combinación**, escolla as entidades nas que desexa executar a cancelación da duplicación.
 
@@ -181,9 +181,11 @@ Unha entidade de saída de desduplicación contén a seguinte información:
 - Campos empregados para definir as regras de desduplicación.
 - Campos Regra e Puntuación para indicar cal das regras de desduplicación se aplicou e a puntuación devolta polo algoritmo de correspondencia.
  
-## <a name="include-enriched-entities-preview"></a>Incluír entidades enriquecidas (vista previa)
+## <a name="include-enriched-entities-preview"></a>Incluír entidades enriquecidas (Vista previa)
 
 Se enriqueceches as entidades no nivel orixe de datos, selecciónaas antes de executar o proceso de coincidencia. As entidades enriquecidas poden mellorar os resultados da túa unificación. Para obter máis información, consulte [Enriquecemento das fontes de datos](data-sources-enrichment.md). 
+
+A entidade enriquecida contén os campos orixe de datos orixinais e os campos enriquecidos. Polo tanto, se decide traballar coa entidade enriquecida, a configuración existente non se verá afectada. Non obstante, quizais necesites actualizar as regras de coincidencia para utilizar os campos enriquecidos.
 
 1. Ir a **Datos** > **Unificar** > **Partido** e selecciona **Usa entidades enriquecidas** na parte superior da páxina.
 
@@ -247,7 +249,7 @@ Pode reconfigurar e axustar a maioría dos parámetros de coincidencia.
 
 Na maioría dos casos, a coincidencia de entidades leva a perfís de usuario únicos con datos consolidados. Para tratar de forma dinámica casos raros de falsos positivos e falsos negativos, pode definir excepcións para unha regra de coincidencia. As excepcións aplícanse despois de procesar as regras de coincidencia e evitar a coincidencia de todos os rexistros, que cumpren os criterios de excepción.
 
-Por exemplo, se a túa regra de coincidencia combina apelidos, cidade e data de nacemento, o sistema identificaría aos xemelgos co mesmo apelidos que vivan na mesma cidade e co mesmo perfil. Podes especificar unha excepción que non coincida cos perfís se os nome das entidades que combinas non son os mesmos.
+Por exemplo, se a túa regra de coincidencia combina apelidos, cidade e data de nacemento, o sistema identificaría os xemelgos co mesmo apelidos que viven na mesma cidade e co mesmo perfil. Podes especificar unha excepción que non coincida cos perfís se os nome das entidades que combinas non son os mesmos.
 
 1. Vaia a **Datos** > **Unify** > **Coincidencia** e seleccione **Editar** na regra á que desexa engadir condicións.
 
@@ -306,7 +308,7 @@ Podes especificar condicións que anulan a lóxica de coincidencia predeterminad
 #### <a name="known-issues"></a>Problemas coñecidos
 
 - A autocombinación non mostra os datos normalizados nas entidades de deduplicación. Non obstante, aplica a normalización internamente durante a deduplicación. É por deseño para todas as normalizacións. 
-- Se se elimina a configuración do tipo semántico no ficheiro **Mapa** na fase cando unha regra de coincidencia usa a asignación de alias ou o bypass personalizado, a normalización non se aplicará. Só ocorre se borra o tipo semántico despois de configurar a normalización na regra de coincidencia porque o tipo semántico será descoñecido.
+- Se se elimina a configuración do tipo semántico no ficheiro **Mapa** na fase cando unha regra de coincidencia utiliza a asignación de alias ou o bypass personalizado, a normalización non se aplicará. Só ocorre se borra o tipo semántico despois de configurar a normalización na regra de coincidencia porque o tipo semántico será descoñecido.
 
 
 ## <a name="next-step"></a>Seguinte paso

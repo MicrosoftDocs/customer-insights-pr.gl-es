@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228472"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376828"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enriquece os perfís de clientes con datos de compromiso (vista previa)
 
@@ -28,7 +28,7 @@ Para configurar o enriquecemento, débense cumprir os seguintes requisitos previ
 - Tes un activo Office 365 licenza cloud.
 - Tes [perfís de clientes unificados](customer-profiles.md) baseado en [contas empresariais](work-with-business-accounts.md).
 - O teu ambiente de Customer Insights debe ter un [Microsoft Dataverse organización adxunta](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Tes [administrador](permissions.md#administrator) permisos.
+- Tes [administrador](permissions.md#admin) permisos.
 - Tes ou podes obter o consentimento do teu Office 365 administrador de inquilinos para usar Office 365 datos a proporcionar **Insights para a organización** dentro das aplicacións de Dynamics 365.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
@@ -63,7 +63,7 @@ Para iniciar o proceso, seleccione **Corre** na páxina de configuración da par
 
 Dependendo do tamaño dos teus datos de Office, pode tardar varias horas en completarse.
 
-Cando executa un enriquecemento, Microsoft procesará os datos dentro do Office 365 límite de cumprimento para crear coñecementos agregados, que despois se engaden ao seu contorno de Customer Insights. Non hai datos a nivel individual (por exemplo, o corpo de ningún correo electrónico ou invitación do calendario) que están dispoñibles para os usuarios de Customer Insights. 
+Cando executa un enriquecemento, Microsoft procesará os datos dentro do Office 365 límite de cumprimento para crear información agregada, que despois se engaden ao seu contorno de Customer Insights. Non hai datos a nivel individual (por exemplo, o corpo de ningún correo electrónico ou invitación do calendario) que están dispoñibles para os usuarios de Customer Insights. 
 
 [!INCLUDE [progress-details-pane](../includes/progress-details-pane.md)]
 

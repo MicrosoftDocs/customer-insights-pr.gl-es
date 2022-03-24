@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229636"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376552"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer perfís de clientes con datos personalizados (vista previa)
 
@@ -25,7 +25,7 @@ Para configurar a importación personalizada de SFTP, deben cumprirse os seguint
 
 - Ten o nome do ficheiro e a localización (ruta) do ficheiro que se vai importar no servidor SFTP.
 - Existe un ficheiro *model.json* que especifica [o esquema do modelo de datos común](/common-data-model/) para que os datos se importen. Este ficheiro debe estar no mesmo directorio que o ficheiro que se vai importar.
-- Un administrador configurou xa unha conexión SFTP *ou* ten permisos de [administrador](permissions.md#administrator). Necesitará as credenciais de usuario, o URL e o número de porto para a localización de SFTP de onde quere importar datos.
+- Un administrador configurou xa unha conexión SFTP *ou* ten permisos de [administrador](permissions.md#admin). Necesitará as credenciais de usuario, o URL e o número de porto para a localización de SFTP de onde quere importar datos.
 
 
 ## <a name="configure-the-import"></a>Configurar a importación
