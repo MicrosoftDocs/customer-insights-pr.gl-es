@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfís de clientes unificados
 description: Use capacidades para enriquecer os datos dos seus clientes.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372700"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491956"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -97,5 +97,19 @@ Para ver o estado dun enriquecemento
 1. No panel **Detalles do progreso**, expanda a sección **Enriquecementos**. 
 1. No enriquecemento no que desexa ver o progreso, seleccione **Ver detalles**. 
 1. No panel **Detalles da tarefa**, seleccione **Amosar detalles** para ver os procesos implicados na actualización do enriquecemento e o seu estado. 
+
+## <a name="enrichment-results"></a>Resultados de enriquecemento
+
+Despois dunha carreira de enriquecemento completada, pode revisar os resultados do enriquecemento.
+
+1. Vaia a **Datos** > **Enriquecemento**. 
+1. Seleccione o enriquecemento sobre o que desexa información.
+
+Todos os enriquecementos mostran información básica como o número de perfís enriquecidos, unha vista previa da entidade de enriquecemento xerada e o número de perfís enriquecidos ao longo do tempo. Se está dispoñible, o **Número de clientes enriquecidos por campo** proporciona un detalle da cobertura de cada campo enriquecido.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Páxina de resultados de enriquecementos.":::
+
+Algúns enriquecementos tamén mostran información específica do tipo de enriquecemento. Consulte a documentación para o enriquecemento correspondente para obter máis información.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

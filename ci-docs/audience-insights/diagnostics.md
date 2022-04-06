@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376414"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523667"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Reenvío de sesión Dynamics 365 Customer Insights con Azure Monitor (vista previa)
 
@@ -87,7 +87,7 @@ O esquema de rexistro segue o [Esquema común de Azure Monitor](/azure/azure-mon
 Customer Insights ofrece dúas categorías:
 
 - **Auditoría de eventos** :[Eventos da API](#api-event-schema) para rastrexar os cambios de configuración no servizo. `POST|PUT|DELETE|PATCH` operacións entran nesta categoría.
-- **Eventos operativos** :[Eventos da API](#api-event-schema) ou [eventos de fluxo de traballo](#workflow-event-schema) xerado durante o uso do servizo.  Por exemplo,`GET` solicitudes ou eventos de execución dun fluxo de traballo.
+- **Eventos operativos** :[Eventos da API](#api-event-schema) ou [eventos de fluxo de traballo](#workflow-event-schema) xerado ao utilizar o servizo.  Por exemplo,`GET` solicitudes ou eventos de execución dun fluxo de traballo.
 
 ## <a name="configuration-on-the-destination-resource"></a>Configuración no recurso de destino
 
@@ -230,7 +230,7 @@ Os eventos de fluxo de traballo teñen as seguintes propiedades.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Si      | Si  | Sempre`WorkflowEvent`, marcando o evento como evento de fluxo de traballo.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Si      | Si  | Identificador do fluxo de traballo executado. Todos os eventos de fluxo de traballo e tarefa dentro da execución do fluxo de traballo teñen o mesmo `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Si      | Si  | Identificador da operación, véx[ Tipos de operación].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Si      | Si  | Identificador da operación, véx [Tipos de operación](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Si      | No   | Só fluxo de traballo. Número de tarefas que desencadea o fluxo de traballo.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Si      | No   | Opcional. Só eventos de fluxo de traballo. O Azure Active Directory [objectId do usuario](/azure/marketplace/find-tenant-object-id#find-user-object-id) quen desencadeou o fluxo de traballo, consulte tamén `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Si      | No   | `full` ou`incremental` refrescar.                                                                                                                                                                                                                            |

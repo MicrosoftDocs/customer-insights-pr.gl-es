@@ -1,7 +1,7 @@
 ---
 title: Usar fontes de datos para inxerir datos
 description: Aprenda a importar datos de varias orixes.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354047"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464047"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
@@ -47,7 +47,18 @@ Fontes de datos que se crean despois de asociar a Dataverse ambiente co uso de C
 
 As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Microsoft Power Platform onde pode ver e configurar pasarelas de datos locais.
 
+> [!IMPORTANT]
+> Asegúrate de que as túas pasarelas estean actualizadas á versión máis recente. Pode instalar unha actualización e reconfigurar unha pasarela a partir dunha solicitude que aparece na pantalla da pasarela directamente ou [descarga a última versión](https://powerapps.microsoft.com/downloads/). Se non utilizas a última versión da pasarela, a actualización do fluxo de datos falla con mensaxes de erro como **Non se admite a palabra clave: propiedades de configuración. Nome do parámetro: palabra clave**.
+
 ## <a name="review-ingested-data"></a>Revisa os datos inxeridos
+Se o teu ambiente contén Power Platform fluxos de datos, o **Fontes de datos** páxina enumera tres seccións: 
+- **Compartido** : fontes de datos que poden xestionar todos os administradores de Customer Insights. Power BI fluxos de datos, a súa propia conta de almacenamento e anexo a un Dataverse -Managed Data Lake son exemplos de fontes de datos compartidas.
+- **Xestionado por min** :Power Platform fluxos de datos creados e só podes xestionalos ti. Outros administradores de Customer Insights só poden ver estes fluxos de datos pero non editalos, actualizalos nin eliminalos.
+- **Xestionado por outros** :Power Platform fluxos de datos creados por outros administradores. Só podes velos. Enumera o propietario do fluxo de datos co que contactar para obter axuda.
+> [!NOTE]
+> Todas as entidades poden ser vistas e usadas por outros usuarios. A contextualidade do usuario aplícase só ás fontes de datos e non ás entidades que resultan destes fluxos de datos.
+
+Se non Power Platform úsanse fluxos de datos, non verá ningún grupo ou sección. O **Fontes de datos** páxina contén só unha lista de todas as fontes de datos.
 
 Verá o nome de cada orixe de datos inxerida, o seu estado e a última vez que se actualizaron os datos para esa orixe. Pode ordenar a lista de fontes de datos por cada columna.
 
