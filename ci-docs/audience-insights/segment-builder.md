@@ -1,37 +1,36 @@
 ---
 title: Crear segmentos usando o xerador de segmentos
 description: Cree segmentos de clientes para agrupalos en función de varios atributos.
-ms.date: 10/18/2021
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segments
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 1a28289ecb740ab6cdfa603b2cd66376e7e8b576
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354553"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529583"
 ---
 # <a name="create-segments"></a>Crear segmentos
 
-Defina filtros complexos arredor da entidade de cliente unificada e as entidades relacionadas. Cada segmento, despois do procesamento, crea un conxunto de rexistros de clientes que pode exportar e nos que pode tomar medidas. Os segmentos xestionanse na páxina **Segmentos**. Pode [crear novos segmentos](#create-a-new-segment) usando o xerador de segmentos ou [crear segmentos rápidos](#quick-segments) desde outras áreas da aplicación. 
+Defina filtros complexos arredor da entidade de cliente unificada e as entidades relacionadas. Cada segmento, despois do procesamento, crea un conxunto de rexistros de clientes que pode exportar e nos que pode tomar medidas. Os segmentos xestionanse na páxina **Segmentos**. Pode [crear novos segmentos](#create-a-new-segment) usando o xerador de segmentos ou [crear segmentos rápidos](#quick-segments) desde outras áreas da aplicación.
 
 > [!TIP]
-> - Os segmentos rápidos só se admiten en ambientes para **clientes individuais**.    
-> - Os segmentos baseados en **clientes individuais** inclúe automaticamente a información de contacto dispoñible para os membros do segmento. En ambientes para **contas comerciais**, os segmentos baséanse en contas (empresas ou filiais). Para incluír información de contacto nun segmento, use a funcionalidade **Atributos do proxecto** no creador de segmentos.
->    - Asegúrese de que as fontes de datos de contacto son [asignadas semanticamente á entidade ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> - Os segmentos rápidos só se admiten en ambientes para **clientes individuais**.
+> - Os segmentos baseados en **clientes individuais** inclúe automaticamente a información de contacto dispoñible para os membros do segmento. En ambientes para **contas comerciais**, os segmentos baséanse en contas (empresas ou filiais). Para incluír información de contacto nun segmento, use a funcionalidade **Atributos do proxecto** no creador de segmentos. Asegúrese de que as fontes de datos de contacto son [asignadas semanticamente á entidade ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Xerador de segmentos
 
-A seguinte imaxe ilustra os distintos aspectos do creador de segmentos. Mostra un segmento que se converte nun grupo de clientes. Os clientes pediron mercadorías nun período de tempo específico e xuntaron puntos de recompensa ou gastaron unha certa cantidade de diñeiro. 
+A seguinte imaxe ilustra os distintos aspectos do creador de segmentos. Mostra un segmento que se converte nun grupo de clientes. Os clientes pediron mercadorías nun período de tempo específico e xuntaron puntos de recompensa ou gastaron unha certa cantidade de diñeiro.
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementos do xerador de segmentos." lightbox="media/segment-builder-overview.png":::
 
@@ -65,11 +64,11 @@ Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento 
 
 1. Na páxina do creador de segmentos, defina ou compoña regras. Unha regra está composta dunha ou máis condicións que definen un conxunto de clientes.
 
-1. Na sección **Regra1**, escolla un atributo dunha entidade pola que desexa filtrar os clientes. Hai dúas formas de escoller atributos: 
+1. No **Regra 1** sección, escolla un atributo dunha entidade pola que quere filtrar os clientes. Hai dúas formas de escoller atributos:
    - Revise a lista de entidades e atributos dispoñibles no panel **Engadir á regra** e seleccione a icona **+** situada ao lado do atributo para engadir. Escolla se desexa engadir o atributo a unha regra existente ou utilizalo para crear unha nova regra.
    - Escriba o nome do atributo na sección da regra para ver as suxestións coincidentes.
 
-1. Escolla os operadores para especificar os valores coincidentes da condición. O atributo pode ter un dos catro tipos de datos como valor: numérico, cadea, data ou booleano. Dependendo do tipo de datos do atributo, hai diferentes operadores dispoñibles para especificar a condición. Para segmentos con contas comerciais, hai dous operadores especiais dispoñibles para incluír xerarquías potenciais entre as contas inxeridas. Use os operadores *secundario de* e *principal de* para incluír contas relacionadas. 
+1. Escolla os operadores para especificar os valores coincidentes da condición. O atributo pode ter un dos catro tipos de datos como valor: numérico, cadea, data ou booleano. Dependendo do tipo de datos do atributo, hai diferentes operadores dispoñibles para especificar a condición. Para segmentos con contas comerciais, hai dous operadores especiais dispoñibles para incluír xerarquías potenciais entre as contas inxeridas. Use os operadores *secundario de* e *principal de* para incluír contas relacionadas.
 
 1. Seleccione **Engadir condición** para engadir máis condicións a unha regra. Para crear unha regra baixo a regra actual, seleccione **Engadir subregra**.
 
@@ -77,7 +76,7 @@ Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento 
 
    :::image type="content" source="media/relationship-path.png" alt-text="Ruta de relación potencial ao crear unha regra baseada nunha entidade asignada á entidade de cliente unificada.":::
 
-   Por exemplo, a entidade *eCommerce_eCommercePurchases* da captura de pantalla ten catro opcións para asignar á entidade *Cliente*: 
+   Por exemplo, a entidade *eCommerce_eCommercePurchases* da captura de pantalla ten catro opcións para asignar á entidade *Cliente*:
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Cliente
    - eCommerce_eCommercePurchases > Cliente
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
@@ -101,11 +100,11 @@ Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento 
       - **Intersección** solapa os dous grupos. Só os datos que *sexan comúns* a ambos os grupos permanecen no grupo unificado.
       - **Excepto** combina os dous grupos. Só os datos do grupo A que *non son comúns* cos datos do grupo B se manteñen.
 
-1. De xeito predeterminado, os segmentos xeran a entidade de saída que contén todos os atributos dos perfís de clientes que coinciden cos filtros definidos. Se un segmento está baseado noutras entidades que non son o *Cliente*, pode engadir máis atributos destas entidades á entidade de saída. Seleccione **Atributos do proxecto** para escoller os atributos que se engadirán á entidade de saída. 
+1. De xeito predeterminado, os segmentos xeran a entidade de saída que contén todos os atributos dos perfís de clientes que coinciden cos filtros definidos. Se un segmento está baseado noutras entidades que non son o *Cliente*, pode engadir máis atributos destas entidades á entidade de saída. Seleccione **Atributos do proxecto** para escoller os atributos que se engadirán á entidade de saída.
 
    > [!IMPORTANT]
    > Para os segmentos baseados en contas empresariais, hai que incluír no segmento os detalles dun ou máis contactos de cada conta da entidade *ContactProfile* para permitir que se active ou exporte ese segmento nos destinos que requiren información de contacto. Para obter máis información sobre a entidade *ContactProfile*, véxase [Asignacións semánticas](semantic-mappings.md).
-   > Unha saída de mostra para un segmento baseado en contas comerciais con atributos de contactos proxectados podería verse así: 
+   > Unha saída de mostra para un segmento baseado en contas comerciais con atributos de contactos proxectados podería verse así:
    >
    > |ID  |Nome da conta  |Ingresos  |Nome do contacto  | Rol do contacto|
    > |---------|---------|---------|---------|---|
@@ -117,14 +116,16 @@ Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento 
 
    > [!NOTE]
    > - **Atributos do proxecto** só funciona para entidades que teñen unha relación de un a moitos coa entidade de cliente. Por exemplo, un cliente pode ter varias subscricións.
-   > - Se o atributo que desexa proxectar está a máis dun salto da entidade de *Cliente*, como a define a relación, ese atributo debería usarse en todas as regras da consulta de segmento que estea a construír. 
-   > - Se o atributo que desexa proxectar está a tan só un salto da entidade de *Cliente*, ese atributo non precisa estar presente en todas as regras da consulta de segmentos que estea a construír. 
+   > - Se o atributo que desexa proxectar está a máis dun salto da entidade de *Cliente*, como a define a relación, ese atributo debería usarse en todas as regras da consulta de segmento que estea a construír.
+   > - Se o atributo que desexa proxectar está a tan só un salto da entidade de *Cliente*, ese atributo non precisa estar presente en todas as regras da consulta de segmentos que estea a construír.
    > - Os **atributos proxectados** téñense en conta cando se usan operadores de definición.
 
-1. Antes de gardar e executar o segmento, seleccione **Editar detalles** xunto ao nome do segmento. Indique un nome para o seu segmento e actualice o **Nome da entidade de saída** suxerido para o segmento. Tamén pode engadir unha descrición ao segmento.
+1. Seleccione **Editar detalles** xunto ao segmento Sen título. Indique un nome para o seu segmento e actualice o **Nome da entidade de saída** suxerido para o segmento. Opcionalmente, engade unha descrición e [etiquetas](work-with-tags-columns.md#manage-tags) ao segmento.
+
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Cadro de diálogo Editar detalles.":::
 
 1. Seleccione **Executar** para gardar o segmento, activalo e comezar a procesar o seu segmento en base a todas as regras e condicións. Se non, gardarase como un segmento inactivo.
-   
+
 1. Seleccione **Volver a segmentos** para volver á páxina **Segmentos**.
 
 1. Por defecto, o segmento créase como segmento dinámico. Significa que o segmento se actualiza durante as actualizacións do sistema. Para [deter a actualización automática](segments.md#manage-existing-segments), seleccione o segmento e escolla a opción **Facer estático**. Os segmentos estáticos pódense [actualizar manualmente](segments.md#refresh-segments) en calquera momento.
@@ -132,7 +133,7 @@ Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento 
 > [!TIP]
 > - O creador de segmentos non suxerirá valores válidos das entidades cando estableza os operadores para as condicións. Pode ir a **Datos** > **Entidades** e descargar os datos da entidade para ver que valores están dispoñibles.
 > - As condicións baseadas nas datas permiten cambiar entre datas fixas e un intervalo de datas flotante.
-> - Se ten varias regras para o seu segmento, a regra que está editando ten unha liña azul vertical ao lado. 
+> - Se ten varias regras para o seu segmento, a regra que está editando ten unha liña azul vertical ao lado.
 > - Pode mover regras e condicións a outros lugares da definición do segmento. Seleccione [...] xunto a unha regra ou condición e elixa como e a onde movela.
 > - Os controis **Desfacer** e **Refacer** da barra de comandos permiten restablecer os cambios.
 
@@ -153,10 +154,9 @@ Os segmentos rápidos permítenlle crear rapidamente segmentos sinxelos cun úni
 
 4. O sistema forneceralle un **Tamaño de segmento estimado**. Pode escoller se quere xerar o segmento que definiu ou primeiro revisalo para obter un tamaño de segmento diferente.
 
-    > [!div class="mx-imgBorder"]
-    > ![Nome e estimación para un segmento rápido.](media/quick-segment-name.png "Nome e estimación para un segmento rápido")
+   :::image type="content" source="media/quick-segment-name.png" alt-text="Nome e estimación para un segmento rápido.":::
 
-5. Proporcione un **Nome** para o segmento. Tamén pode fornecer un **nome para mostrar**.
+5. Proporcionar a **Nome** e **Nome da entidade de saída** para o seu segmento. Opcionalmente, engadir [etiquetas](work-with-tags-columns.md#manage-tags).
 
 6. Seleccione **Gardar** para crear o seu segmento.
 

@@ -1,7 +1,7 @@
 ---
 title: Datos de Customer Insights en Microsoft Dataverse
 description: Use as entidades de Customer Insights como táboas en Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 04/05/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: bbbbf2a7f5edb81ee75f6e33988cd4721134b6e7
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355427"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547624"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Traballar con datos de Customer Insights en Microsoft Dataverse
 
-Customer Insights ofrece a opción de pór dispoñibles as entidades de saída en [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Esta integración permite compartir datos e desenvolver de forma personalizada facilmente mediante un enfoque de pouco código ou sen código. As entidades de saída estarán dispoñibles como táboas en Dataverse. Estas táboas permiten escenarios como [fluxos de traballo automatizados mediante Power Automate](/power-automate/getting-started), [aplicacións controladas por modelos](/powerapps/maker/model-driven-apps/) e [aplicacións de lenzo](/powerapps/maker/canvas-apps/) mediante Power Apps. Pode usar os datos para calquera outra aplicación baseada en táboas de Dataverse. A implantación actual admite principalmente buscas onde se poden obter datos das entidades de información do público dispoñibles para un determinado ID de cliente.
+Customer Insights ofrece a opción de pór dispoñibles as entidades de saída en [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Esta integración permite compartir datos sinxelos e desenvolvemento personalizado a través dun enfoque de código baixo/sen código. O [entidades de saída](#output-entities) están dispoñibles como táboas en a Dataverse ambiente. Podes usar os datos para calquera outra aplicación baseada en Dataverse táboas. Estas táboas permiten escenarios como fluxos de traballo automatizados Power Automate ou crear aplicacións con Power Apps. A implementación actual admite principalmente buscas nas que se poden obter datos das entidades de Customer Insights dispoñibles para un determinado ID de cliente.
 
 ## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Anexar un ambiente de Dataverse a Customer Insights
 
-**Organizacións con ambientes existentes de Dataverse**
+**Organización existente**
 
-As organizacións que xa utilizan Dataverse poden [usar un dos seus ambientes existentes de Dataverse](create-environment.md) cando un administrador configura a información do público. Ao proporcionar o URL ao ambiente de Dataverse, anéxase ao seu novo ambiente de información do público. Para garantir o mellor desempeño posible, os ambientes de Customer Insights e Dataverse deben estar aloxados na mesma rexión.
+Os administradores poden configurar Customer Insights para [utilizar un existente Dataverse ambiente](create-environment.md) cando crean un ambiente de Customer Insights. Ao proporcionar o URL ao ambiente de Dataverse, anéxase ao seu novo ambiente de información do público. Información do cliente e Dataverse os ambientes deben estar aloxados na mesma rexión. 
+
+Se non queres utilizar un existente Dataverse ambiente, o sistema crea un novo ambiente para os datos de Customer Insights no seu inquilino. 
+
+> [!NOTE]
+> Se as súas organizacións xa usan Dataverse no seu arrendatario, é importante recordar que [a creación de ambientes de Dataverse está controlada por un administrador](/power-platform/admin/control-environment-creation). Por exemplo, se está configurando un novo ambiente de información do público coa súa conta de organización e o administrador desactivou a creación de ambientes de proba de Dataverse para todos excepto para os administradores, non pode crear un novo ambiente de proba.
+> 
+> Os ambientes de proba de Dataverse creados en Customer Insights teñen 3 GB de almacenamento que non contarán para a capacidade total á que ten dereito o arrendatario. As subscricións de pago reciben o dereito de Dataverse a 15 GB para a base de datos e 20 GB para o almacenamento de ficheiros.
 
 **Nova organización**
 
-Se crea unha nova organización ao configurar Customer Insights, obterá automaticamente un novo ambiente de Dataverse.
-
-> [!NOTE]
-> Se as súas organizacións xa usan Dataverse no seu arrendatario, é importante recordar que [a creación de ambientes de Dataverse está controlada por un administrador](/power-platform/admin/control-environment-creation.md). Por exemplo, se está configurando un novo ambiente de información do público coa súa conta de organización e o administrador desactivou a creación de ambientes de proba de Dataverse para todos excepto para os administradores, non pode crear un novo ambiente de proba.
-> 
-> Os ambientes de proba de Dataverse creados en Customer Insights teñen 3 GB de almacenamento que non contarán para a capacidade total á que ten dereito o arrendatario. As subscricións de pago reciben o dereito de Dataverse a 15 GB para a base de datos e 20 GB para o almacenamento de ficheiros.
+Se crea unha nova organización ao configurar Customer Insights, o sistema crea automaticamente unha nova Dataverse ambiente na súa organización para vostede.
 
 ## <a name="output-entities"></a>Entidades de saída
 
@@ -129,11 +131,11 @@ Esta táboa contén a saída das predicións do modelo.
 
 Esta táboa contén información sobre a pertenza ao segmento dos perfís de clientes.
 
-| Column        | Tipo | Descripción                        |
+| Column        | Tipo | Descripción                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID do perfil do cliente        |
-| SegmentProvider      | String       | Aplicación que publica os segmentos. Valor predeterminado: información sobre o público         |
-| SegmentMembershipType | String       | Tipo de cliente deste segmento rexistro de pertenza. Admite varios tipos, como Cliente, Contacto ou Conta. Valor predeterminado: cliente  |
-| Segmentos       | Cadea JSON  | Lista de segmentos únicos dos que pertence o perfil do cliente      |
-| msdynci_identifier  | String   | Identificador único do rexistro de pertenza ao segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| CustomerId        | String       | ID do perfil do cliente        |
+| SegmentProvider      | String       | Aplicación que publica os segmentos. Valor predeterminado: información sobre o público         |
+| SegmentMembershipType | String       | Tipo de cliente deste segmento rexistro de pertenza. Admite varios tipos, como Cliente, Contacto ou Conta. Valor predeterminado: cliente  |
+| Segmentos       | Cadea JSON  | Lista de segmentos únicos dos que é membro o perfil do cliente      |
+| msdynci_identifier  | String   | Identificador único do rexistro de pertenza ao segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | GUID determinista xerado a partir de`msdynci_identifier`          |

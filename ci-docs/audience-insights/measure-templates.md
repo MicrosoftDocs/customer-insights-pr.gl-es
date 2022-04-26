@@ -1,22 +1,22 @@
 ---
 title: Crea medidas a partir de modelos
 description: Definir medidas utilizando modelos para casos de uso comúns.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359948"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529399"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Usar un modelo para construír unha medida
 
@@ -51,7 +51,9 @@ Modelos de medidas dispoñibles:
 
 1. Revise os datos requiridos e seleccione **Comezar** se ten todos os datos no seu lugar.
 
-1. No panel **Editar nome**, estableza o nome da medida e a entidade de saída. 
+1. Seleccione **Editar detalles** xunto a Nome da medida. Proporcione un nome para a medida. Opcionalmente, engadir [etiquetas](work-with-tags-columns.md#manage-tags) á medida.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Cadro de diálogo Editar detalles.":::
 
 1. Seleccione **Feito**.
 
