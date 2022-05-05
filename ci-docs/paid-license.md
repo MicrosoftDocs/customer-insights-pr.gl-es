@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8455996"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641852"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Introdución despois de comprar Customer Insights
 
@@ -34,9 +34,8 @@ A primeira experiencia de execución axúdalle a escoller o foco inicial con Cus
 
 1. Vaia ao [URL da aplicación Customer Insights](https://home.ci.ai.dynamics.com).
 1. Inicie sesión cunha conta de traballo ou escolar. 
-1. Acepte os termos do servizo e defina as preferencias de contido para a súa instancia de Customer Insights.
-1. Escolla a capacidade para centrarse ata chegar á páxina de inicio da capacidade seleccionada.
+1. Acepta as condicións do servizo e establece as preferencias de contido para o teu ambiente de Customer Insights.
 
 ## <a name="create-your-own-environment"></a>Cree o seu propio contorno
 
-Despois do primeiro inicio de sesión, verá un ambiente con datos de mostra. Pode usar eses datos para explorar funcións e familiarizarse coa aplicación. Para usar os teus propios datos, tes que facelo [crear un ambiente](/dynamics365/customer-insights/audience-insights/create-environment).
+Despois do primeiro inicio de sesión, verá un ambiente con datos de mostra. Pode usar eses datos para explorar funcións e familiarizarse coa aplicación. Para usar os teus propios datos, tes que facelo [crear un ambiente](create-environment.md).

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 98c7bd1cec20481874681e98bda050846c760e45
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92dc5c662af39a5a4393f15ac48b50af81f8f4d
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619283"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641468"
 ---
-Crear sobre os seus datos enriquecidos de clientes. Crear [segmentos](../audience-insights/segments.md) e [medidas](../audience-insights/measures.md) seleccionando as iconas da barra de comandos. Tamén pode [exportar os datos](../audience-insights/export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
+Crear sobre os seus datos enriquecidos de clientes. Crear [segmentos](../segments.md) e [medidas](../measures.md) seleccionando as iconas da barra de comandos. Tamén pode [exportar os datos](../export-destinations.md) para ofrecer experiencias personalizadas aos seus clientes.
