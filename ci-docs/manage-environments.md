@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642785"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741039"
 ---
 # <a name="manage-environments"></a>Xestionar ambientes
 
@@ -101,7 +101,7 @@ Customer Insights non é compatible cos seguintes escenarios de uso compartido d
 - Se activa o uso compartido de datos con Dataverse, non poderá [crear valores preditos ou que faltan nunha entidade](predictions.md).
 - Se activas a compartición de datos con Dataverse, non poderás ver ningún informe opcional de PowerBI Embedded no teu ambiente de Customer Insights.
 
-### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Eliminar unha conexión existente a un Dataverse ambiente
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Eliminar unha conexión existente a a Dataverse ambiente
 
 Ao conectarse a un Dataverse ambiente, a mensaxe de erro **Esta organización de CDS xa está asociada a outra instancia de Customer Insights** significa que o Dataverse o ambiente xa se usa nun ambiente de Customer Insights. Pode eliminar a conexión existente como administrador global no Dataverse ambiente. Pode tardar un par de horas en completar os cambios.
 
@@ -127,7 +127,7 @@ Verá unha lista de todos os ambientes dispoñibles da súa organización de ond
 Copiaranse os seguintes axustes de configuración:
 
 - Fontes de datos inxeridas ou importadas
-- Configuración da unificación de datos (mapa, coincidencia, combinación)
+- Configuración de unificación de datos
 - Segmentos
 - Medidas
 - Relacións
@@ -146,7 +146,7 @@ Cando copia a configuración do ambiente, os seguintes datos son *non* copiado:
 - Perfís de clientes.
 - Credenciais da orixe de datos. Deberá proporcionar as credenciais para cada orixe de datos e actualizar as fontes de datos manualmente.
 - Fontes de datos do cartafol de Common Data Model e o lago de datos xestionado de Dataverse. Terá que crear esas orixes de datos manualmente co mesmo nome que no ambiente de orixe.
-- Segredos de conexión que se utilizan para exportacións e enriquecementos. Ten que reautenticar as conexións e despois reactivar os enriquecementos e as exportacións. 
+- Segredos de conexión que se utilizan para exportacións e enriquecementos. Ten que volver autenticar as conexións e despois reactivar os enriquecementos e as exportacións. 
 
 Cando copie un ambiente, verá unha mensaxe de confirmación de que se creou o novo contorno. Seleccione **Ir a orixes de datos** para ver a lista de orixes de datos.
 

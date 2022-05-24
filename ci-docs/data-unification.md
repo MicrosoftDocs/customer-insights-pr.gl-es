@@ -1,38 +1,46 @@
 ---
 title: Crear unha vista unificada dos seus clientes
-description: Revise o proceso de unificación de datos cos seus datos para crear un único conxunto de datos mestre de perfís de clientes.
-ms.date: 10/18/2021
-ms.reviewer: mhart
+description: Siga o proceso de unificación de datos cos seus datos para crear un único conxunto de datos de perfís de clientes unificados.
+ms.date: 05/10/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
+author: v-wendysmith
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: eb5bbc538f93bc7097581db233d684870ade84a2
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642486"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755732"
 ---
 # <a name="data-unification-overview"></a>Descrición xeral da unificación de datos
 
-Despois de [configurar as fontes de datos](data-sources.md), pode unificar os datos. A unificación de datos inclúe tres pasos: **Mapa**, **Coincidencia** e **Combinación**.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-O proceso de unificación de datos permite unificar fontes de datos diferentes nun único conxunto de datos principal que fornece unha visión unificada dos seus clientes. As fases de unificación son obrigatorias e realízanse na seguinte orde:
+Despois de [configurar as fontes de datos](data-sources.md), pode unificar os datos. A unificación de datos permíteche unificar fontes de datos distintas nun único conxunto de datos mestre que ofrece unha vista unificada deses datos. Para os consumidores individuais (B-to-C) nos que os datos se centran en persoas, a unificación ofrece unha visión unificada dos seus clientes. Para as contas empresariais (B-to-B) onde os datos se centran en contas, a unificación ofrece unha vista unificada das túas contas.
 
-1. [Asignar](map-entities.md)
-2. [Match](match-entities.md)
-3. [Combinar](merge-entities.md)
+Os datos pódense unificar nunha única entidade ou en varias entidades. A unificación realízase na seguinte orde:
 
-Despois de completar a unificación de datos, pode
+1. [Campos de orixe](map-entities.md) (anteriormente chamado Mapa): no paso dos campos de orixe, seleccione entidades e campos para incluír no proceso de unificación. Asigne os campos a un tipo semántico común que describa o propósito do campo.
 
-- [establecer relacións entre entidades](relationships.md) para crear segmentos sofisticados
-- [enriquecer os seus datos](enrichment-hub.md) para obter unha gama máis ampla de información sobre os seus clientes
-- [definir actividades](activities.md) dalgúns dos atributos inxeridos
+1. [Rexistros duplicados](remove-duplicates.md) (anteriormente formaba parte de Coincidir): no paso de rexistros duplicados, defina opcionalmente regras para eliminar os rexistros de clientes duplicados de cada entidade.
 
+1. [Condicións de coincidencia](match-entities.md) (anteriormente chamado Coincidir): no paso de condicións de coincidencia, defina regras que coincidan con rexistros de clientes entre entidades. Cando un cliente se atopa en dúas ou máis entidades, créase un único rexistro consolidado con todas as columnas e os datos de cada entidade.
+
+1. [Campos de clientes unificados](merge-entities.md) (anteriormente chamado Combinar): no paso de campos de cliente unificados, determine que campos de orixe se deben incluír, excluír ou combinar nun perfil de cliente unificado.  
+
+1. [Revisión](review-unification.md) e crea o perfil unificado.
+
+Despois de completar a unificación de datos, pode opcionalmente:
+
+- [Establecer relacións entre entidades](relationships.md) para crear segmentos sofisticados.
+- [Enriquece os teus datos](enrichment-hub.md) para obter unha gama máis ampla de información sobre os seus clientes.
+- [Definir actividades](activities.md) a partir dalgúns dos atributos inxeridos.
+- [Construír medidas](measures.md) para comprender mellor os comportamentos dos clientes e o rendemento empresarial.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642817"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741177"
 ---
 # <a name="power-automate-connector-preview"></a>Conector de Power Automate (vista previa)
 
@@ -25,14 +25,14 @@ Desencadee eventos específicos para que se produzan automaticamente cando se mo
 
 ## <a name="power-automate-triggers"></a>Desencadeadores de Power Automate
 
-Use desencadeadores para crear fluxos na nube e automatizar tarefas repetitivas, como notificacións ou accións máis avanzadas. 
+Use desencadeadores para crear fluxos na nube e automatizar tarefas repetitivas, como notificacións ou accións máis avanzadas.
 
-- Desencadeador cando falla unha actualización dunha orixe de datos. 
+- Desencadeador cando falla unha actualización dunha orixe de datos.
 - Desencadeador cando se fai unha actualización dunha orixe de datos correctamente.
 - Desencadear cando se cruza un limiar nun segmento. O desencadeador está limitado a cruzar por enriba do limiar.
 - Desencadear cando se cruza un limiar nunha medición de empresa. Só se admiten as medicións de empresa sen ningunha dimensión. O desencadeador está limitado a cruzar por enriba do limiar.
 - Activar cando se complete unha actualización completa de (fontes de datos, segmentos, medidas...).
-- Activar cando se completa unha actualización do proceso de unificación (mapa, coincidencia, combinación).
+- Activar cando se complete unha actualización do proceso de unificación.
 
 [Configure os desencadeadores en Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

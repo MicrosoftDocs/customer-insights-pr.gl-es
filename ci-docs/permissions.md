@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653566"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740901"
 ---
 # <a name="user-permissions"></a>Permisos de usuario
 
@@ -41,7 +41,7 @@ Existen tres tipos de roles:
 
 - Todos os permisos dispoñibles para o espectador.
 - Cargue e transforme datos usando a páxina **Orixes de datos**.
-- Complete as seccións *Unificación de datos* (**Asignación**, **Coincidencia** e **Combinación**) que permiten obter unha entidade de perfil de cliente unificada.
+- Completa ***Unificación de datos** que dan como resultado a entidade de perfil de cliente unificada.
 - Defina **Relacións** e **Actividades**.
 - Cree segmentos usando a páxina **Segmentos**.
 - Crear medidas empregando a páxina **Medidas**.

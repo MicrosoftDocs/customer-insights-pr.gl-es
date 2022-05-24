@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642553"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741501"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar datos a Azure Synapse Analytics (Vista previa)
 
@@ -34,7 +34,7 @@ En Azure:
 
 - Unha subscrición de Azure activa.
 
-- Se utiliza un novo Azure Data Lake Storage Conta Gen2, o *principal de servizo para Customer Insights* necesidades **Colaborador de datos de Blob de almacenamento** permisos. Obteña máis información acerca da [conexión a unha conta de Azure Data Lake Storage Gen2 coa entidade de servizo de Azure para a información do público](connect-service-principal.md). Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
+- Se utiliza un novo Azure Data Lake Storage Conta Gen2, o *principal de servizo para Customer Insights* necesidades **Colaborador de datos de Blob de almacenamento** permisos. Máis información sobre [conectando a un Azure Data Lake Storage Conta Gen2 co servizo principal de Azure para Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
 
 - No grupo de recursos onde se atopa Azure Synapse o espazo de traballo está situado, o *principal do servizo* e o *Azure AD usuario con permisos de administrador en Customer Insights* deben ser asignados polo menos **Lector** permisos. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 

@@ -1,7 +1,7 @@
 ---
 title: Guía de mostra de predición de recomendacións de produtos
 description: Utilice esta guía de mostra para probar o modelo de predición de recomendacións de produtos.
-ms.date: 02/10/2021
+ms.date: 05/16/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 1115bab13bdca4a308a8d9eb5a1dc270801d16be
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642774"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762684"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Guía de mostra de predición de recomendacións de produtos
 
@@ -40,7 +40,7 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando f
 
 1. Cree unha orixe de datos denominada **eCommerce**, escolla a opción de importación e seleccione o conector **Texto/CSV**.
 
-1. Insira o URL dos contactos de comercio electrónico https://aka.ms/ciadclasscontacts.
+1. Introduza o URL dos contactos de comercio electrónico: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
 
 1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
 
@@ -50,15 +50,15 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando f
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transforme a data de nacemento en data.":::
 
-5. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
+1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
 
-6. **Garde** a orixe de datos.
+1. **Garde** a orixe de datos.
 
 ### <a name="ingest-online-purchase-data"></a>Inxerir datos de compra en liña
 
 1. Engada outro conxunto de datos á mesma orixe de datos de **comercio electrónico**. Escolla o conector **Texto/CSV** de novo.
 
-1. Introduza o URL para datos de **compras en liña** https://aka.ms/ciadclassonline.
+1. Introduza o URL para **Compras en liña** datos [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
 
 1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
 
@@ -70,12 +70,11 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando f
 
 1. **Garde** a orixe de datos.
 
-
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Inxerir datos de clientes desde o esquema de fidelización
 
 1. Cree unha orixe de datos denominada **LoyaltyScheme**, escolla a opción de importación e seleccione o conector **Texto/CSV**.
 
-1. Insira o URL dos contactos de comercio electrónico https://aka.ms/ciadclasscustomerloyalty.
+1. Introduza o URL dos contactos de comercio electrónico [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
 
 1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
 
@@ -90,64 +89,11 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando f
 
 ## <a name="task-2---data-unification"></a>Tarefa 2: unificación de datos
 
-Despois de inxerir os datos, comezamos o proceso de unificación de datos para crear un perfil de cliente unificado. Para obter máis información, consulte [Unificación de datos](data-unification.md).
-
-### <a name="map"></a>Asignar
-
-1. Despois de inxerir os datos, asigne os contactos desde os datos de comercio electrónico e de fidelización a tipos de datos comúns. Vaia a **Datos** > **Unificar** > **Asignar**.
-
-2. Seleccione as entidades que representan o perfil do cliente: **eCommerceContacts** e **loyCustomers**.
-
-   ![unificar fontes de datos de comercio electrónico e fidelización.](media/unify-ecommerce-loyalty.png)
-
-3. Seleccione **ContactId** como clave primaria para **eCommerceContacts** e **LoyaltyID** como clave primaria para **loyCustomers**.
-
-   ![Unificar LoyaltyId como clave principal.](media/unify-loyaltyid.png)
-
-### <a name="match"></a>Buscar coincidencias
-
-1. Vaia ao separador **Buscar coincidencias** e seleccione **Definir orde**.
-
-2. Na lista despregable **Principal**, escolla **eCommerceContacts : eCommerce** como fonte principal e inclúa todos os rexistros.
-
-3. Na lista despregable **Entidade 2**, escolla **loyCustomers: LoyaltyScheme** e inclúa todos os rexistros.
-
-   ![unificar coincidencias de comercio electrónico e fidelización.](media/unify-match-order.png)
-
-4. Seleccione **Crear unha nova regra**
-
-5. Engada a súa primeira condición usando FullName.
-
-   - Para eCommerceContacts, seleccione **FullName** no menú despregable.
-   - Para loyCustomers, seleccione **FullName** no menú despregable.
-   - Seleccione o menús despregable **Normalizar** e escolla **Tipo (teléfono, nome, enderezo...)**.
-   - Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
-
-6. Introduza o nome **FullName, Email** para a nova regra.
-
-   - Engada unha segunda condición para o enderezo de correo electrónico seleccionando **Engadir condición**
-   - Para os eCommerceContacts da entidade, escolla **Correo electrónico** no menú despregable.
-   - Para os loyCustomers da entidade, escolla **Correo electrónico** no menú despregable.
-   - Deixe Normalizar en branco.
-   - Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
-
-   ![Unificar a regra de coincidencia para o nome e o correo electrónico.](media/unify-match-rule.png)
-
-7. Seleccione **Gardar** e **Executar**.
-
-### <a name="merge"></a>Combinación
-
-1. Vaia ao separador **Combinar**.
-
-1. No **ContactId** da entidade **loyCustomers**, cambie o nome de visualización a **ContactIdLOYALTY** para diferencialo dos outros identificadores inxeridos.
-
-   ![renomear contactid do identificador de fidelidade.](media/unify-merge-contactid.png)
-
-1. Seleccione **Gardar** e **Executar** para iniciar o proceso de unión.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>Tarefa 3: configurar a predición de recomendacións de produtos
 
-Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición de abandono de subscricións.
+Cos perfís de clientes unificados, agora podemos executar a recomendación de produtos predición.
 
 1. Vaia a **Intelixencia** > **Predición** e escolla **Recomendación de produtos**.
 
@@ -162,27 +108,36 @@ Cos perfís de clientes unificados no seu lugar, agora podemos executar a predic
    - **Compras repetidas esperadas**: seleccione **Si** para indicar que quere incluír produtos na recomendación que os seus clientes compraron con anterioridade.
 
    - **Ventá para ver días pasados:** Seleccione polo menos **365 días**. Esta configuración define o número de días pasados que o modelo mira na actividade do cliente que se van usar como entrada para as súas recomendacións.
-   
+
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Preferencias do modelo de recomendación de produtos.":::
 
-1. Seleccione **Datos requiridos** e seleccione **Engadir datos** para o historial de compras.
+1. No **Engade os datos necesarios** paso, seleccione **Engadir datos**.
 
-1. Engada a entidade **eCommercePurchases : eCommerce** e asigne os campos de comercio electrónico aos campos correspondentes requiridos polo modelo.
+1. No **Engadir datos** panel, escolla o **Liña de pedido de vendas** como a entidade do historial de compras. Neste momento, é probable que aínda non estea configurado. Abre a ligazón no panel para crear a actividade cos seguintes pasos:
+   1. Introduza un **Nome da actividade** e escolle *eCommerceCompras: eCommerce* como **Entidade actividade**. O **Chave primaria** é *Id de compra*.
+   1. Define e nomea a relación co *eCommerceContacts: entidade de comercio electrónico* e escolle **ContactId** como clave externa.
+   1. Para a unificación de actividade, establece **Actividade do evento** como *Prezo total* e marca de tempo para *CompradoOn*. Podes especificar máis campos como se indica en [Actividades do cliente](activities.md).
+   1. Para **Tipo de actividade**, escolle *Liña de pedido de vendas*. Mapea os seguintes campos de actividade:
+      - ID da liña de pedido: PurchaseId
+      - ID do pedido: PurchaseId
+      - Datos do pedido: PurchasedOn
+      - ID do produto: ID do produto
+      - Importe: Prezo total
+   1. Revisa e remata a actividade antes de volver á configuración do modelo.
 
-1. Una a entidade **eCommercePurchases : eCommerce** con **eCommerceContacts : eCommerce**.
+1. De volta no **Selecciona actividades** paso, escolla a actividade recentemente creada no **Actividades** sección. Seleccione **A continuación** e a asignación de atributos xa está cuberta. Seleccione **Gardar**.
 
-   ![Unir entidades de comercio electrónico.](media/model-purchase-join.png)
+1. Nesta guía de exemplo, omitimos o **Engade información do produto** e **Filtros de produtos** definido porque non temos datos de información do produto.
 
-1. Seleccione **Seguinte** para establecer a programación do modelo.
+1. No **Actualizacións de datos** paso, configure o horario do modelo.
 
    O modelo necesita adestrarse regularmente para aprender novos padróns cando se inxiren novos datos. Para este exemplo, seleccione **Mensual**.
 
-1. Despois de revisar todos os detalles, seleccione **Gardar e executar**.
-
+1. Despois de revisar todos os detalles, seleccione **Gardar e executar**. Levará uns minutos executar o modelo a primeira vez.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Tarefa 4: revisar resultados e explicacións do modelo
 
-Deixe que o modelo complete o adestramento e a puntuación dos datos. Agora pode revisar as explicacións do modelo de recomendación de produtos. Para obter máis información, consulte [Revisar o estado e os resultados dunha predición](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Deixe que o modelo complete o adestramento e a puntuación dos datos. Agora pode revisar as explicacións do modelo de recomendación de produtos. Para obter máis información, consulte [Revisar o estado e os resultados dunha predición](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-purchased-products"></a>Tarefa 5: crear un segmento de produtos moi comprados
 
@@ -190,21 +145,19 @@ Executar o modelo de produción crea unha nova entidade na que pode ver en **Dat
 
 Pode crear un novo segmento baseado na entidade creada polo modelo.
 
-1. Vaia a **Segmentos**. Seleccione **Novo** e elixa **Crear a partir de** > **Intelixencia**.
+1. Vaia a **Segmentos**. Seleccione **Novo** e escolle **Crear a partir da intelixencia**.
 
    ![Creación dun segmento coa saída do modelo.](media/segment-intelligence.png)
 
 1. Seleccione o extremo **OOBProductRecommendationModelPrediction** e defina o segmento:
 
    - Campo: ProductID
-   - Operador: Valor
    - Valor: seleccione os tres identificadores de produto principais
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Cree un segmento a partir dos resultados do modelo.":::
 
-Agora ten un segmento que se actualiza dinamicamente e identifica aos clientes que están máis dispostos a mercar os tres produtos máis recomendados 
+Agora tes un segmento que se actualiza de forma dinámica que identifica os clientes que poden estar interesados en comprar os tres produtos máis recomendados.
 
 Para ver máis información, consulte: [Creación e xestión de segmentos](segments.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

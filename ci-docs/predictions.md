@@ -12,17 +12,17 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642782"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740717"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa os teus datos parciais con predicións (obsoleto)
 
 > [!IMPORTANT]
-> Esta característica será **obsoleto** a partir de **5 de novembro de 2021**. As implementacións actuais seguirán funcionando ata que se elimine a función, pero non poderás crear novas integracións utilizando as instrucións que aparecen a continuación.
+> Esta característica será **obsoleto** a partir de **5 de novembro de 2021**. As implementacións actuais seguirán funcionando ata que se elimine a función, pero non poderás crear novas integracións usando as instrucións que aparecen a continuación.
 
 As predicións permiten crear valores previstos facilmente que poden mellorar a comprensión dun cliente. Na páxina **Intelixencia** > **Predicións**, pode seleccionar **As miñas predicións** para ver as predicións que configurou noutras partes de Customer Insights e permitirlle seguir personalizándoas.
 
@@ -37,7 +37,7 @@ Antes de que a súa organización poida usar a función de predicións, asegúre
 
 1. A súa organización ten unha instancia [configurada en Microsoft Dataverse](/ai-builder/build-model#prerequisites) e está na mesma organización que Customer Insights.
 
-2. O seu ambiente de información do público está anexado á instancia de Dataverse.
+2. O seu contorno de Customer Insights está anexo á súa instancia de Dataverse.
 
 Para obter máis información, consulte [Crear un novo contorno](create-environment.md).
 

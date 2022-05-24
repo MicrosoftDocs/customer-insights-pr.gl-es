@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642656"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739160"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure
 
 Este artigo explica como conectarse Dynamics 365 Customer Insights cunha Azure Data Lake Storage conta mediante un principal de servizo de Azure en lugar de claves de conta de almacenamento. 
 
-As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes utilizar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un ambiente](create-environment.md).
+As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes utilizar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un entorno](create-environment.md).
 
 > [!IMPORTANT]
 > - A conta de Data Lake Storage que utilizará o principal do servizo debe ser Gen2 e ter [espazo de nomes xerárquico activado](/azure/storage/blobs/data-lake-storage-namespace). Non se admiten as contas de almacenamento de Azure Data Lake Gen1.
@@ -40,7 +40,7 @@ Antes de crear un novo principal de servizo para Customer Insights, comprobe se 
 
 3. En **Xestionar**, seleccione **Aplicacións empresariais**.
 
-4. Busca o ID da aplicación de Microsoft`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` co nome `Dynamics 365 AI for Customer Insights`.
+4. Engade un filtro para **O ID da aplicación comeza por**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` ou buscar o nome `Dynamics 365 AI for Customer Insights`.
 
 5. Se atopa un rexistro coincidente, significa que a entidade de servizo xa existe. 
    

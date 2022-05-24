@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642513"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755634"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento do cartón do cliente (vista previa)
-
-
 
 Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións de Dynamics 365. Co complemento de tarxeta de cliente instalado nunha aplicación de Dynamics 365 compatible, pode escoller amosar campos de perfil de cliente, estatísticas e cronoloxía da actividade. O suplemento recuperará datos de Customer Insights sen afectar aos datos da aplicación de Dynamics 365 conectada.
 
@@ -31,10 +29,10 @@ Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións
 ## <a name="prerequisites"></a>Requisitos previos
 
 - O suplemento só funciona con aplicacións de Dynamics 365 controladas por modelos, como Sales ou Customer Service, versión 9.0 e posteriores.
-- Para que os seus datos de Dynamics 365 se asignen aos perfís de clientes de Customer Insights, recomendamos que [inxerido desde a aplicación Dynamics 365 mediante o Microsoft Dataverse conector](connect-power-query.md). Se utilizas un método diferente para inxerir contactos (ou contas) de Dynamics 365, debes asegurarte de que`contactid` (ou`accountid`) defínese como o campo [clave principal para ese orixe de datos no paso do mapa do proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Para que os seus datos de Dynamics 365 se asignen aos perfís de clientes de Customer Insights, recomendamos que [inxerido desde a aplicación Dynamics 365 mediante o Microsoft Dataverse conector](connect-power-query.md). Se utilizas un método diferente para inxerir contactos (ou contas) de Dynamics 365, debes asegurarte de que`contactid` (ou`accountid`) defínese como o campo [clave principal para ese orixe de datos no paso do mapa do proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Todos os usuarios de Dynamics 365 do complemento da tarxeta de cliente deben ser [engadidos como usuarios](permissions.md) en Customer Insights para ver os datos.
 - [Capacidades de busca e filtro configuradas](search-filter-index.md) en Customer Insights son necesarios para que funcione a busca de datos.
-- Cada control de complemento depende de datos específicos de Customer Insights. Algúns datos e controis só están dispoñibles en contornos de tipos específicos. A configuración do complemento informaralle se un control non está dispoñible debido ao tipo de ambiente seleccionado. Obteña máis información acerca de [casos de uso de contornos](work-with-business-accounts.md).
+- Cada control de complemento depende de datos específicos de Customer Insights. Algúns datos e controis só están dispoñibles en contornos de tipos específicos. A configuración do complemento informarache se un control non está dispoñible debido ao tipo de ambiente seleccionado. Obteña máis información acerca de [casos de uso de contornos](work-with-business-accounts.md).
   - **Control de medidas**: require [medidas configuradas](measures.md) do tipo de atributos do cliente.
   - **Control de intelixencia** : Require datos xerados mediante [predicións ou modelos personalizados](predictions-overview.md).
   - **Control dos detalles do cliente**: todos os campos do perfil están dispoñibles no perfil de cliente unificado.
@@ -132,16 +130,16 @@ Mesmo con campos de identificación configurados correctamente, os controis non 
 
 **Resolución:**
 
-1. Asegúrate de configurar o complemento de tarxeta segundo as instrucións: [Configure o complemento da tarxeta de cliente](#configure-the-customer-card-add-in) 
+1. Asegúrate de configurar o complemento de tarxeta segundo as instrucións: [Configure o complemento da tarxeta de cliente](#configure-the-customer-card-add-in)
 
-1. Revisa a configuración da inxestión de datos. Edite o orixe de datos para o sistema Dynamics 365 que contén o GUID do ID de contacto. Se o GUID de ID de contacto aparece con caracteres en maiúsculas Power Query editor, proba o seguinte: 
+1. Revisa a configuración da inxestión de datos. Edite o orixe de datos para o sistema Dynamics 365 que contén o GUID do ID de contacto. Se o GUID de ID de contacto aparece con caracteres en maiúsculas Power Query editor, proba os seguintes pasos:
     1. Edita o orixe de datos para abrir o orixe de datos en Power Query Editor.
     1. Seleccione a columna ID de contacto.
     1. Seleccione **Transformar** na barra de cabeceira para ver as accións dispoñibles.
     1. Seleccione **minúscula**. Valida se os GUID da táboa están agora en minúscula.
     1. Garde a orixe de datos.
-    1. Executar procesos de inxestión, unificación e posterior de datos para propagar os cambios no GUID. 
+    1. Executar procesos de inxestión, unificación e posterior de datos para propagar os cambios no GUID.
 
-Despois de completar a actualización completa, os controis do complemento da tarxeta de cliente deberían mostrar os datos esperados. 
+Despois de que o sistema complete a actualización completa, os controis do complemento da tarxeta de cliente deberían mostrar os datos esperados.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

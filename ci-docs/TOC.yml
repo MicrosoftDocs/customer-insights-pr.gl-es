@@ -66,12 +66,18 @@
   items:
     - name: Descrición xeral da unificación de datos
       href: data-unification.md
-    - name: Entidades e atributos do mapa
+    - name: Seleccione os campos de orixe
       href: map-entities.md
-    - name: Buscar coincidencias das entidades
+    - name: Eliminar rexistros duplicados
+      href: remove-duplicates.md
+    - name: Condicións do partido
       href: match-entities.md
-    - name: Combinar entidades
+    - name: Unificar campos de clientes
       href: merge-entities.md
+    - name: Revisar a unificación de datos
+      href: review-unification.md
+    - name: Actualiza a configuración de unificación
+      href: data-unification-update.md
 - name: Enriquecemento de información
   items:
     - name: Enriquecer perfís de clientes
@@ -282,6 +288,8 @@
       href: apis.md
     - name: Referencias das API
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Consultas de mostra de OData
+      href: odata-examples.md
 - name: Xestión do consentimento (vista previa)
   items:
     - name: Plataforma común de axuda

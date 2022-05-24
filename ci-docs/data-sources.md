@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642496"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739206"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
@@ -36,9 +36,6 @@ Podes engadir as seguintes fontes de datos:
 - [Desde o seu propio lago de Microsoft Dataverse](connect-dataverse-managed-lake.md)
 - [Dende un Azure Synapse Analytics base de datos](connect-synapse.md)
 
-> [!NOTE]
-> Se está a usar a versión de proba, a sección de métodos de importación inclúe a **Biblioteca de datos de Customer Insights** opción. Escolla esta opción para seleccionar un conxunto de datos de mostra dispoñible para varias industrias. Para obter máis información, consulte [Dynamics 365 Customer Insights xuízo](trial-signup.md).
-
 ## <a name="add-data-from-on-premises-data-sources"></a>Engadir datos de fontes de datos locais
 
 Admítese a inxestión de datos das fontes de datos local en función de Microsoft Power Platform fluxos de datos. Podes activar os fluxos de datos en Customer Insights mediante [proporcionando o Microsoft Dataverse URL do entorno](create-environment.md) ao configurar o ambiente.
@@ -48,7 +45,7 @@ Fontes de datos que se crean despois de asociar a Dataverse ambiente co uso de C
 As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Microsoft Power Platform onde pode ver e configurar pasarelas de datos locais.
 
 > [!IMPORTANT]
-> Asegúrate de que as túas pasarelas estean actualizadas á versión máis recente. Pode instalar unha actualización e reconfigurar unha pasarela a partir dunha solicitude que aparece na pantalla da pasarela directamente ou [descarga a última versión](https://powerapps.microsoft.com/downloads/). Se non utilizas a última versión da pasarela, a actualización do fluxo de datos falla con mensaxes de erro como **Non se admite a palabra clave: propiedades de configuración. Nome do parámetro: palabra clave**.
+> Asegúrate de que as túas pasarelas estean actualizadas á versión máis recente. Pode instalar unha actualización e reconfigurar unha pasarela desde unha solicitude que se mostra na pantalla da pasarela directamente ou [descarga a última versión](https://powerapps.microsoft.com/downloads/). Se non utilizas a última versión da pasarela, a actualización do fluxo de datos falla con mensaxes de erro como **Non se admite a palabra clave: propiedades de configuración. Nome do parámetro: palabra clave**.
 
 ## <a name="review-ingested-data"></a>Revisa os datos inxeridos
 Se o teu ambiente contén Power Platform fluxos de datos, o **Fontes de datos** páxina enumera tres seccións: 

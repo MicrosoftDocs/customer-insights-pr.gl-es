@@ -1,19 +1,19 @@
 ---
 title: Guía de mostra da predición do abandono transaccional
 description: Utilice esta guía de mostra para probar o modelo de predición do abandono transaccional listo para usar.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642840"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741317"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Guía de mostra da predición do abandono transaccional
 
@@ -86,69 +86,13 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando f
 
 1. Garde a orixe de datos.
 
-
 ## <a name="task-2---data-unification"></a>Tarefa 2: unificación de datos
 
-Despois de inxerir os datos agora comezamos o proceso de **Asignación, busca de coincidencias e combinación** para crear un perfil de cliente unificado. Para obter máis información, consulte [Unificación de datos](data-unification.md).
-
-### <a name="map"></a>Asignar
-
-1. Despois de inxerir os datos, asigne os contactos desde os datos de comercio electrónico e de fidelización a tipos de datos comúns. Vaia a **Datos** > **Unificar** > **Asignar**.
-
-1. Seleccione as entidades que representan o perfil do cliente: **eCommerceContacts** e **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unificar fontes de datos de comercio electrónico e fidelización.":::
-
-1. Seleccione **ContactId** como clave primaria para **eCommerceContacts** e **LoyaltyID** como clave primaria para **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unificar LoyaltyId como clave principal.":::
-
-### <a name="match"></a>Buscar coincidencias
-
-1. Vaia ao separador **Buscar coincidencias** e seleccione **Definir orde**.
-
-1. Na lista despregable **Principal**, escolla **eCommerceContacts : eCommerce** como fonte principal e inclúa todos os rexistros.
-
-1. Na lista despregable **Entidade 2**, escolla **loyCustomers: LoyaltyScheme** e inclúa todos os rexistros.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="unificar coincidencias de comercio electrónico e fidelización.":::
-
-1. Seleccione **Crear unha nova regra**
-
-1. Engada a súa primeira condición usando FullName.
-
-   * Para eCommerceContacts, seleccione **FullName** no menú despregable.
-   * Para loyCustomers, seleccione **FullName** no menú despregable.
-   * Seleccione o menús despregable **Normalizar** e escolla **Tipo (teléfono, nome, enderezo...)**.
-   * Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
-
-1. Introduza o nome **FullName, Email** para a nova regra.
-
-   * Engada unha segunda condición para o enderezo de correo electrónico seleccionando **Engadir condición**
-   * Para os eCommerceContacts da entidade, escolla **Correo electrónico** no menú despregable.
-   * Para os loyCustomers da entidade, escolla **Correo electrónico** no menú despregable. 
-   * Deixe Normalizar en branco. 
-   * Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unificar a regra de coincidencia para o nome e o correo electrónico.":::
-
-7. Seleccione **Gardar** e **Executar**.
-
-### <a name="merge"></a>Combinación
-
-1. Vaia ao separador **Combinar**.
-
-1. No **ContactId** da entidade **loyCustomers**, cambie o nome de visualización a **ContactIdLOYALTY** para diferencialo dos outros identificadores inxeridos.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="renomear contactid do identificador de fidelidade.":::
-
-1. Seleccione **Gardar** e **Executar** para iniciar o proceso de unión.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tarefa 3: configurar a predición de abandono transaccional
 
-Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición de abandono de subscricións. Para ver os pasos detallados, consulte [Churn de subscricións predición](predict-subscription-churn.md) artigo. 
+Cos perfís de clientes unificados, agora podemos executar o churn de transaccións predición. Para ver os pasos detallados, consulte [Churn de transaccións predición](predict-transactional-churn.md) artigo. 
 
 1. Vaia a **Intelixencia** > **Descubrir** e seleccione para usar o **Modelo de abandono do cliente**.
 
@@ -180,7 +124,7 @@ Cos perfís de clientes unificados no seu lugar, agora podemos executar a predic
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Tarefa 4: revisar resultados e explicacións do modelo
 
-Deixe que o modelo complete o adestramento e a puntuación dos datos. Agora pode revisar as explicacións do modelo de abandono de subscricións. Para obter máis información, consulte [Revisar o estado e os resultados dunha predición](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Deixe que o modelo complete o adestramento e a puntuación dos datos. Agora podes revisar as explicacións do modelo de churn. Para obter máis información, consulte [Revisar o estado e os resultados dunha predición](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Tarefa 5: crear un segmento de clientes con alto risco de abandono
 
@@ -192,14 +136,12 @@ Pode crear un novo segmento baseado na entidade creada polo modelo.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Creación dun segmento coa saída do modelo.":::
 
-1. Seleccione o extremo **OOBSubscriptionChurnPrediction** e defina o segmento: 
+1. Seleccione o **OOBeCommerceChurnPrediction** punto final e define o segmento: 
    - Campo: ChurnScore
    - Operador: maior que
    - Valor: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Configurar o segmento de abandono de subscricións.":::
 
-Agora ten un segmento que se actualiza dinámicamente para identificar clientes con alto risco de abandono para este negocio da subscrición.
+Agora tes un segmento que se actualiza de forma dinámica que identifica clientes con alto risco de abandono.
 
 Para ver máis información, consulte: [Creación e xestión de segmentos](segments.md).
 

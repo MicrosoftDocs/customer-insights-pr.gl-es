@@ -1,19 +1,19 @@
 ---
 title: Funcionalidades novas e futuras
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 04/05/2022
+ms.date: 05/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 25c6e2897d836854408871b2c74afa16ecba7435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: HT
+ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
+ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642830"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "8700935"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
@@ -24,6 +24,28 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="april-2022-updates"></a>Actualizacións de abril de 2022
+
+As actualizacións de abril de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (Previsualización)
+
+Dun & Bradstreet ofrece datos comerciais, análises e información para empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
+
+Para obter máis información, consulte [Enriquecemento dos perfís de empresas con Dun & Bradstreet (Previsualización)](enrichment-dnb.md).
+
+### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Defina o tipo de medida ao crear unha nova medida
+
+Agora podes distinguir entre medidas para perfís individuais e medidas de toda a túa empresa. Mentres que as medidas comerciais aparecen na páxina de inicio de Customer Insights, as medidas dos clientes están expostas nas vistas detalladas dos clientes.
+
+Para obter máis información, consulte [Usa o creador de medidas para crear medidas desde cero](measure-builder.md).
+
+### <a name="consolidation-of-customer-insights-documentation"></a>Consolidación da documentación de Customer Insights
+
+Revisamos os nosos artigos de documentación e eliminamos as mencións ás estatísticas de compromiso e as capacidades de información sobre o público. No futuro, faremos referencia coherentemente ao nome do produto Customer Insights cando escribamos sobre as funcións principais da aplicación. Este cambio tamén leva a unha reestruturación significativa da táboa de contidos, a estrutura do URL e as rutas dos ficheiros no repositorio de documentación subxacente. Todos os teus marcadores ou ligazóns existentes seguen funcionando e redirixindo aos URL actualizados.
+
+Se queres informarnos como percibes ese cambio ou detectar que algo non funciona como esperaba, infórmanos por [enviando comentarios para esta páxina](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Actualizacións de marzo de 2022
 
@@ -108,7 +130,7 @@ Para obter máis información, consulte [Fontes de datos danadas](entities.md#co
 O Dynamics 365 Customer Insights A vista previa da capacidade de datos de compromiso finalizou o 15 de febreiro de 2022.  
 Este cambio significa que a experiencia de proba de Customer Insights xa non inclúe a posibilidade de crear funis nin outras funcións de informes.
 
-Convidámoste a explorar e avaliar outras moitas características de [Información do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
+Convidámoste a explorar e avaliar outras moitas características de [Insights do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
  
 Durante un período de transición, os participantes existentes de vista previa aínda teñen acceso a algunhas capacidades e funcións de vista previa:
 
@@ -117,7 +139,7 @@ Durante un período de transición, os participantes existentes de vista previa 
 - Mellora os perfís unificados con eventos inxeridos e refinados para beneficiarse do valor total dos datos dos seus clientes
   
 Durante o período de transición, os eventos capturados aínda se transmiten ao Data Lake conectado. Unha vez desactivada esta función, o uso compartido de datos deterase e non se enviarán novos eventos ao almacenamento conectado.
-Póñase en contacto directamente co equipo da súa conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache informado dos próximos lanzamentos. 
+Póñase en contacto directamente co seu equipo da conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache informado dos próximos lanzamentos. 
 
 ## <a name="january-2022-updates"></a>Actualizacións de xaneiro de 2022
 
@@ -127,7 +149,7 @@ As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rend
 
 Customer Insights ofrece unha nova función impulsada pola intelixencia artificial para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
 
-Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (vista previa)](sentiment-analysis.md).
+Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (Vista previa)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

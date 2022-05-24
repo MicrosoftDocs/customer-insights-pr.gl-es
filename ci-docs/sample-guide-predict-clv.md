@@ -1,19 +1,19 @@
 ---
 title: Guía de mostra de predición do valor de duración do cliente
 description: Utilice esta guía de mostra para probar o modelo de predición do valor de duración do cliente.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642777"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740809"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guía de mostra de predición do valor de duración do cliente (VDC)
 
@@ -30,7 +30,7 @@ Contoso é unha empresa que produce café e máquinas de café de alta calidade.
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1: inxerir datos
 
-Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importar fontes de datos usando Power Query conectores](connect-power-query.md). A seguinte información supón que está familiarizado coa inxestión de datos en xeral.
+Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando fontes de datos usando Power Query conectores](connect-power-query.md). A seguinte información supón que está familiarizado coa inxestión de datos en xeral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inxerir datos de clientes desde a plataforma de comercio electrónico
 
@@ -102,64 +102,7 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importar fon
 
 ## <a name="task-2---data-unification"></a>Tarefa 2: unificación de datos
 
-Despois de inxerir os datos, comezamos o proceso de unificación de datos para crear un perfil de cliente unificado. Para obter máis información, consulte [Unificación de datos](data-unification.md).
-
-### <a name="map"></a>Asignar
-
-1. Despois de inxerir os datos, asigne os contactos desde os datos de comercio electrónico e de fidelización a tipos de datos comúns. Vaia a **Datos** > **Unificar** > **Asignar**.
-
-1. Seleccione as entidades que representan o perfil do cliente: **eCommerceContacts** e **loyCustomers**. A continuación, seleccione **Aplicar**.
-
-   ![unificar fontes de datos de comercio electrónico e fidelización.](media/unify-ecommerce-loyalty.png)
-
-1. Seleccione **ContactId** como clave primaria para **eCommerceContacts** e **LoyaltyID** como clave primaria para **loyCustomers**.
-
-   ![Unificar LoyaltyId como clave principal.](media/unify-loyaltyid.png)
-
-1. Seleccione **Gardar**.
-
-### <a name="match"></a>Buscar coincidencias
-
-1. Vaia ao separador **Buscar coincidencias** e seleccione **Definir orde**.
-
-1. Na lista despregable **Principal**, escolla **eCommerceContacts : eCommerce** como fonte principal e inclúa todos os rexistros.
-
-1. Na lista despregable **Entidade 2**, escolla **loyCustomers: LoyaltyScheme** e inclúa todos os rexistros.
-
-   ![unificar coincidencias de comercio electrónico e fidelización.](media/unify-match-order.png)
-
-1. Seleccione **Engadir regra**.
-
-1. Engada a súa primeira condición usando FullName.
-
-   - Para eCommerceContacts, seleccione **FullName** no menú despregable.
-   - Para loyCustomers, seleccione **FullName** no menú despregable.
-   - Seleccione o menú despregable **Normalizar** e escolla **Tipo (teléfono, nome, enderezo...)**.
-   - Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
-
-1. Introduza o nome **FullName, Email** para a nova regra.
-
-   - Engada unha segunda condición para o enderezo de correo electrónico seleccionando **Engadir condición**
-   - Para os eCommerceContacts da entidade, escolla **Correo electrónico** no menú despregable.
-   - Para os loyCustomers da entidade, escolla **Correo electrónico** no menú despregable.
-   - Deixe Normalizar en branco.
-   - Defina o **Nivel de precisión**: **Básico** e **Valor**: **Alto**.
-
-   ![Unificar a regra de coincidencia para o nome e o correo electrónico.](media/unify-match-rule.png)
-
-1. Seleccione **Feito**.
-
-1. Seleccione **Gardar** e **Executar**.
-
-### <a name="merge"></a>Combinación
-
-1. Vaia ao separador **Combinar**.
-
-1. No **ContactId** da entidade **loyCustomers**, cambie o nome de visualización a **ContactIdLOYALTY** para diferencialo dos outros identificadores inxeridos.
-
-   ![renomear contactid do identificador de fidelidade.](media/unify-merge-contactid.png)
-
-1. Seleccione **Gardar** e **Executar combinación e procesos descendentes**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tarefa 3: Configurar a predición do valor de duración do cliente
 
