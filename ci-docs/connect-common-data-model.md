@@ -1,7 +1,7 @@
 ---
 title: Conectar os datos de Common Data Model a unha conta de Azure Data Lake
 description: Traballe con datos de Common Data Model usando Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642643"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833355"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar cun cartafol de Common Data Model cunha conta de Azure Data Lake
 
@@ -46,16 +46,16 @@ Este artigo ofrece información sobre como inxerir datos Dynamics 365 Customer I
 
 1. Seleccione **Almacenamento Azure Data Lake**, introduce a **Nome** para o orixe de datos e, a continuación, seleccione **A continuación**.
 
-   - Se se lle solicita, seleccione un dos conxuntos de datos de mostra correspondentes ao seu sector e, a continuación, seleccione **A continuación**. 
+   - Se se lle solicita, seleccione un dos conxuntos de datos de mostra correspondentes ao seu sector e, a continuación, seleccione **A continuación**.
 
-1. Pode escoller entre usar unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md). Introduza o **Enderezo do servidor**, seleccione **acceder** e, a continuación, seleccione **A continuación**.
+1. Pode escoller entre usar unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md). Introduza o **Enderezo do servidor**, seleccione **Iniciar sesión** e, a continuación, seleccione **A continuación**.
    > [!div class="mx-imgBorder"]
    > ![Cadro de diálogo para introducir novos detalles de conexión para Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Precisa unha das seguintes funcións no contedor ou na conta de almacenamento mencionada anteriormente para poder conectarse e crear unha orixe de datos:
-   >  - Lector de datos do BLOB de almacenamento
-   >  - Propietario dos datos do BLOB de almacenamento
-   >  - Colaborador de datos do BLOB de almacenamento
+   > Necesitas un dos seguintes roles para o contedor da conta de almacenamento para crear o orixe de datos:
+   >
+   >  - Storage Blob Data Reader é suficiente para ler desde unha conta de almacenamento e inxerir os datos a Customer Insights. 
+   >  - Se queres editar os ficheiros de manifesto directamente en Customer Insights, é necesario o Colaborador ou o propietario de datos de Blob de almacenamento.
 
 1. No diálogo **Seleccionar un cartafol de Common Data Model**, seleccione o ficheiro model.json ou manifest.json desde o que importar datos e seleccione **Seguinte**.
    > [!NOTE]
@@ -65,11 +65,11 @@ Este artigo ofrece información sobre como inxerir datos Dynamics 365 Customer I
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo que mostra unha lista de entidades dun ficheiro model.json.](media/review-entities.png)
 
-8. Indique cales son as entidades de datos que desexa activar o perfil de datos e, a continuación, seleccione **Gardar**. A creación de perfís de datos activa as análises e outras funcionalidades. Pode seleccionar a entidade enteira, que selecciona todos os atributos da entidade, ou seleccionar certos atributos que elixa. Por defecto, ningunha entidade está habilitada para a creación de perfís de datos.
+1. Indique cales son as entidades de datos que desexa activar o perfil de datos e, a continuación, seleccione **Gardar**. A creación de perfís de datos activa as análises e outras funcionalidades. Pode seleccionar a entidade enteira, que selecciona todos os atributos da entidade, ou seleccionar certos atributos que elixa. Por defecto, ningunha entidade está habilitada para a creación de perfís de datos.
    > [!div class="mx-imgBorder"]
    > ![Cadro de diálogo que mostra a creación de perfís de datos.](media/dataprofiling-entities.png)
 
-9. Despois de gardar as súas seleccións, abrirase a páxina **Fontes de datos**. Agora debe ver a conexión do cartafol Common Data Model como orixe de datos.
+1. Despois de gardar as súas seleccións, abrirase a páxina **Fontes de datos**. Agora debe ver a conexión do cartafol Common Data Model como orixe de datos.
 
 > [!NOTE]
 > Un ficheiro model.json ou manifest.json só pode asociarse cunha orixe de datos no mesmo ambiente. Non obstante, o mesmo ficheiro model.json ou manifest.json pode usarse para fontes de datos en múltiples contornos.
@@ -80,7 +80,7 @@ Pode actualizar a clave de acceso da conta de almacenamento que contén o cartaf
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
-2. A carón da orixe de datos que desexa actualizar, seleccione os tres puntos.
+2. A carón do orixe de datos que queres actualizar, selecciona os puntos suspensivos verticais (&vellip;).
 
 3. Seleccione a opción **Editar** da lista.
 
@@ -93,13 +93,6 @@ Pode actualizar a clave de acceso da conta de almacenamento que contén o cartaf
 
    > ![Caixa de diálogo para introducir os detalles da conexión de Azure Data Lake nunha conta de almacenamento existente.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Precisa unha das seguintes funcións no contedor ou na conta de almacenamento mencionada anteriormente para poder conectarse e crear unha orixe de datos:
-   >  - Lector de datos do BLOB de almacenamento
-   >  - Propietario dos datos do BLOB de almacenamento
-   >  - Colaborador de datos do BLOB de almacenamento
-
-
 6. Opcionalmente, escolla un ficheiro model.json ou manifest.json diferente cun conxunto diferente de entidades do contedor.
 
 7. Opcionalmente, pode seleccionar entidades adicionais para inxerir. Tamén pode eliminar calquera entidade xa seleccionada se non hai dependencias.
@@ -107,7 +100,6 @@ Pode actualizar a clave de acceso da conta de almacenamento que contén o cartaf
    > [!IMPORTANT]
    > Se hai dependencias no ficheiro model.json ou manifest.json existente e no conxunto de entidades, verá unha mensaxe de erro e non poderá seleccionar un ficheiro model.json ou manifest.json diferente. Elimine esas dependencias antes de cambiar o ficheiro model.json ou manifest.json ou cree unha nova orixe de datos co ficheiro model.json ou manifest.json que desexe usar para evitar eliminar as dependencias.
 
-8. Opcionalmente, pode seleccionar atributos ou entidades adicionais para habilitar a creación de perfís de datos ou desactivar os xa seleccionados.   
-
+8. Opcionalmente, pode seleccionar atributos ou entidades adicionais para habilitar a creación de perfís de datos ou desactivar os xa seleccionados.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

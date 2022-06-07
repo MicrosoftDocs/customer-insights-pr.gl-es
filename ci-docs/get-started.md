@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741131"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833537"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Comezar a utilizar Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Customer Insights pode axudarche a construír unha comprensión máis profunda d
 
 ## <a name="step-1-create-an-environment"></a>Paso 1: Crear un ambiente
 
-Para comezar, primeiro ten que crear un ambiente no que traballar. Se a súa organización xa adquiriu unha licenza, consulte [Crea un ambiente](create-environment.md). Para iniciar unha proba de Customer Insights, consulte [Configura un ambiente de proba](trial-signup.md).
+En primeiro lugar, crea un ambiente para traballar. Se a súa organización xa adquiriu unha licenza, consulte [Crea un ambiente](create-environment.md). Para iniciar unha proba de Customer Insights, consulte [Configura un ambiente de proba](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>Paso 2: Explore os datos do cliente
 
-A primeira vez que inicie sesión en Customer Insights, pode configurar a configuración e explorar o produto.
+A primeira vez que inicie sesión en Customer Insights, configure a configuración e explore o produto.
 
 1. [inicia sesión en Customer Insights](https://home.ci.ai.dynamics.com) usando o teu Microsoft Azure Active Directory (AAD) conta de usuario.
 
-1. [Cambia o ambiente](manage-environments.md#switch-environments) para ver datos de demostración e [explorar Customer Insights](home.md).
+1. Cambia o ambiente para ver os datos de demostración e [explorar Customer Insights](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Paso 3: inxerir, unificar e establecer relacións para os seus datos
 
-Os perfís unificados son a base para obter información e tomar medidas sobre os datos. Traia datos de varias fontes e execute o proceso de unificación de datos para combinar perfís unificados. Especificar as relacións entre as entidades inxeridas usan funcións de enriquecemento para engadir información aos perfís.
+Os perfís unificados son a base para obter información e tomar medidas sobre os datos. Traia datos de varias fontes e execute o proceso de unificación de datos para combinar perfís unificados. Especifique as relacións entre as entidades inxeridas e use funcións de enriquecemento para engadir información aos perfís.
 
-1. Inxira datos creando fontes de datos a partir de varias opcións. Escolle entre [Power Query conectores](connect-power-query.md), a [Cartafol Common Data Model](connect-common-data-model.md), ou [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Inxira datos creando fontes de datos a partir de varias opcións. Escolle entre [Power Query conectores](connect-power-query.md), a [Cartafol Common Data Model](connect-common-data-model.md), ou [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Executar o [proceso de unificación de datos](data-unification.md) mediante a identificación do [campos de orixe](map-entities.md), eliminando [duplicados](remove-duplicates.md),[condicións de coincidencia](match-entities.md), e [unificando campos](merge-entities.md).
 
@@ -47,7 +47,7 @@ Os perfís unificados son a base para obter información e tomar medidas sobre o
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Paso 4: mellorar os perfís unificados con predicións, actividades e medidas
 
-Con perfís unificados configurados, pode mellorar os seus datos e aumentar aínda máis a información que proporcionan.
+Con perfís unificados configurados, mellora os teus datos e aumenta aínda máis a información que proporcionan.
 
 1. Escolla entre unha biblioteca en expansión de provedores de enriquecemento para [enriquecer os seus datos de clientes](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Con perfís unificados configurados, pode mellorar os seus datos e aumentar aín
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>Paso 5: crear segmentos e activar datos a través de varias opcións de exportación
 
-Agora que os seus datos están completos e conteñen unha ampla gama de información sobre os seus clientes, é hora de buscar formas de actuar sobre estes datos.
+Agora que os teus datos están completos e conteñen unha ampla gama de información sobre os teus clientes, busca formas de tomar medidas sobre eses datos.
 
 1. [Cree segmentos](segments.md), subconxuntos da súa base de clientes, para garantir que as súas accións sexan relevantes para os clientes obxecto de aprendizaxe.
 

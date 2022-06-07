@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642850"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800324"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Usa o creador de medidas para crear medidas desde cero
 
-Este artigo explica como crear un novo [medida](measures.md) dende cero. O creador de medidas permítelle definir cálculos mediante operadores matemáticos, funcións de agregación e filtros. Podes construír unha medida con atributos de entidades relacionadas co unificado *Cliente* entidade.
+Este artigo explica como crear un novo [medida](measures.md) dende cero. O creador de medidas permíteche definir cálculos mediante operadores matemáticos, funcións de agregación e filtros. Podes crear unha medida con atributos de entidades relacionadas co unificado *Cliente* entidade.
 
 A creación de medidas en ambientes B-to-C e B-to-B funciona do mesmo xeito. Non obstante, se es un ambiente B-to-B [utiliza contas con xerarquías](relationships.md#set-up-account-hierarchies), pode optar por agregar a medida en subcontas relacionadas.
 
@@ -32,7 +32,7 @@ Podes crear medidas a nivel de clientes individuais (atributo de cliente, medida
 
 - Atributo do cliente: xera a saída como un novo atributo, que se garda como unha nova columna na entidade xerada polo sistema chamada *Medida_cliente*. Ao actualizar un atributo de cliente, todos os outros atributos de cliente no *Medida_cliente* actualizar a entidade simultaneamente. Ademais, os atributos do cliente móstranse na tarxeta do perfil do cliente. Unha vez executado ou gardado, o atributo de cliente non pode cambialo a unha medida de cliente.
 
-- Medida do cliente: xera a saída como a súa propia entidade e non pode cambiala a un atributo de cliente unha vez executada ou gardada. As medidas do cliente non aparecen na tarxeta do perfil do cliente.
+- Medida do cliente: xera resultados como a súa propia entidade e non podes cambialo a un atributo de cliente unha vez executado ou gardado. As medidas do cliente non aparecen na tarxeta do perfil do cliente.
 
 - Medida empresarial: xera resultados como a súa propia entidade e móstrase na páxina de inicio do seu contorno de Customer Insights.
 
@@ -88,7 +88,7 @@ Podes crear medidas a nivel de clientes individuais (atributo de cliente, medida
 
 1. Para engadir máis cálculos para a medida, seleccione **Novo cálculo**. Só pode usar entidades na mesma ruta de entidade para novos cálculos. Máis cálculos mostraranse como columnas novas na entidade de saída de medida.
 
-1. Seleccione **...** sobre o cálculo para **Duplicar**, **Cambiar o nome** ou **Quitar** un cálculo dunha medida.
+1. Seleccione os puntos suspensivos verticais (&vellip;) sobre o cálculo a **Duplicar**, **o nome**, ou **Quitar** un cálculo a partir dunha medida.
 
 1. Na área **Vista previa**, verá o esquema de datos da entidade de saída de medida, incluídos filtros e dimensións. A vista previa reacciona dinamicamente aos cambios na configuración.
 
@@ -158,7 +158,7 @@ Podes crear medidas a nivel de contas individuais (medida do cliente) ou a nivel
    1. Seleccione **Camiño de relación** e elixa o camiño da entidade que se debería empregar para identificar a súa medida. Se só hai un único camiño cara á entidade *Cliente*, este control non se amosará.
    1. Seleccione **Feito** para aplicar a súa selección.
 
-1. Seleccione **...** sobre o cálculo para **Duplicar**, **Cambiar o nome** ou **Quitar** un cálculo dunha medida.
+1. Seleccione os puntos suspensivos verticais (&vellip;) sobre o cálculo a **Duplicar**, **o nome**, ou **Quitar** un cálculo a partir dunha medida.
 
 1. Na área **Vista previa**, verá o esquema de datos da entidade de saída de medida, incluídos filtros e dimensións. A vista previa reacciona dinamicamente aos cambios na configuración.
 

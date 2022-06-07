@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653475"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763577"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Traia a súa propia key vault de Azure (versión preliminar)
 
@@ -89,9 +89,9 @@ Os seguintes permisos concédense a Customer Insights nunha bóveda de claves li
 
 | Tipo        | Permisos          |
 | ----------- | -------------------- |
-| Tecla         | [Obter claves](/rest/api/keyvault/get-keys), [Obter clave](/rest/api/keyvault/get-key)                                 |
-| Segredo      | [Obtén segredos](/rest/api/keyvault/get-secrets), [Obter segredo](/rest/api/keyvault/get-secret)                     |
-| Certificado | [Obter certificados](/rest/api/keyvault/get-certificates), [Obter certificado](/rest/api/keyvault/get-certificate) |
+| Tecla         | [Obter claves](/rest/api/keyvault/keys/get-keys/get-keys), [Obter clave](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Segredo      | [Obtén segredos](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Obter segredo](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Certificado | [Obter certificados](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Obter certificado](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Os valores anteriores son o mínimo para enumerar e ler durante a execución.
 

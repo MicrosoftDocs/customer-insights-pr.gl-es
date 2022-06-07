@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641806"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833766"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntas máis frecuentes sobre as probas de Dynamics 365 Customer Insights
 
@@ -62,9 +62,9 @@ Pode ampliar a proba directamente na aplicación. Pode ampliar a proba unha vez.
 
 Xeralmente, recomendamos comezar de novo cos seus propios datos ao actualizar á versión de pago de Customer Insights. 
 
-Opcionalmente, se só utilizas Customer Insights, podes copiar os teus datos dun ambiente de proba se compras Customer Insights. Debes ser o administrador da proba de Customer Insights e o administrador global da túa Microsoft 365 inquilino ou o administrador de Dynamics 365 da súa organización para migrar a configuración dun ambiente de proba a un ambiente de pago. 
+Opcionalmente, se só utilizas Customer Insights, podes copiar os teus datos dun ambiente de proba se compras Customer Insights. Debes ser o administrador da proba de Customer Insights e o administrador global da túa Microsoft 365 inquilino ou o administrador de Dynamics 365 da súa organización para migrar a configuración dun ambiente de proba a un ambiente de pago.
 
-Despois de iniciar sesión na súa instancia de pago de Customer Insights por primeira vez, solicítaselle que cree un novo ambiente. Neste proceso, pode optar por copiar a configuración desde un ambiente existente e migrar a maioría das opcións de configuración. Se ten os permisos mencionados anteriormente, o ambiente de proba mostrarase nesta lista. Para obter máis información, consulte [Copiar a configuración dun ambiente](manage-environments.md#copy-the-environment-configuration).
+Despois de iniciar sesión na súa instancia de pago de Customer Insights por primeira vez, solicítaselle que cree un novo ambiente. Neste proceso, pode optar por copiar a configuración desde un ambiente existente e migrar a maioría das opcións de configuración. Se ten os permisos mencionados anteriormente, o ambiente de proba mostrarase nesta lista. Para obter máis información, consulte [Copiar a configuración dun ambiente](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Cales son os límites e as cotas da proba?
 
@@ -81,9 +81,10 @@ Despois de rexistrarse na proba, chegará á pantalla principal da aplicación. 
 
 A maioría das funcións das capacidades de Customer Insights están dispoñibles na proba.
 
-As seguintes características son **non dispoñible**: 
+As seguintes características son **non dispoñible**:
+
 - Non pode crear ambientes novos que empreguen a súa propia conta de Azure Data Lake Storage.
-- Non podes eliminar o ambiente de proba. 
+- Non podes eliminar o ambiente de proba.
 
 ### <a name="how-long-does-the-trial-last"></a>Canto dura a proba?
 

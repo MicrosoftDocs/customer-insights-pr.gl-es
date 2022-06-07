@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642573"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800418"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizaxe automática personalizados
 
@@ -92,7 +92,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 
 ## <a name="edit-a-workflow"></a>Editar un fluxo de traballo
 
-1. Na páxina **Modelos personalizados**, seleccione os tres puntos verticais na columna **Accións** situada xunto a un fluxo de traballo creado anteriormente e seleccione **Editar**.
+1. No **Modelos personalizados** páxina, seleccione os puntos suspensivos verticais (&vellip;) no **Accións** columna xunto a un fluxo de traballo que creaches e seleccionaches previamente **Editar**.
 
 1. Pode actualizar o nome recoñecible do seu fluxo de traballo no campo **Nome de visualización**, pero non pode cambiar o servizo web ou a canle configurados. Seleccione **Seguinte**.
 
@@ -108,7 +108,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 
 ## <a name="run-a-workflow"></a>Executar un fluxo de traballo
 
-1. Na páxina **Modelos personalizados**, seleccione os tres puntos verticais na columna **Accións** situada xunto a un fluxo de traballo creado anteriormente.
+1. No **Modelos personalizados** páxina, seleccione os puntos suspensivos verticais (&vellip;) no **Accións** columna xunto a un fluxo de traballo que creaches anteriormente.
 
 1. Seleccione **Executar**.
 
@@ -116,7 +116,7 @@ O seu fluxo de traballo tamén se executa automaticamente con todas as actualiza
 
 ## <a name="delete-a-workflow"></a>Eliminar un fluxo de traballo
 
-1. Na páxina **Modelos personalizados**, seleccione os tres puntos verticais na columna **Accións** situada xunto a un fluxo de traballo creado anteriormente.
+1. No **Modelos personalizados** páxina, seleccione os puntos suspensivos verticais (&vellip;) no **Accións** columna xunto a un fluxo de traballo que creaches anteriormente.
 
 1. Seleccione **Eliminar** e confirme a eliminación.
 

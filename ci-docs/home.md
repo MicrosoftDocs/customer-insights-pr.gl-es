@@ -11,26 +11,26 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
-ms.translationtype: HT
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743411"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768348"
 ---
 # <a name="explore-customer-insights"></a>Explore os datos do cliente
 
 Podes acceder [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) no seguinte URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-O **Casa** A páxina mostra guía a través do proceso de configuración das funcións principais e ofrece unha visión xeral dos segmentos, medidas e datos de enriquecemento.
+O **Casa** guía a través do proceso de configuración das funcións clave e ofrece unha visión xeral dos segmentos, medidas e datos de enriquecemento.
 
 :::image type="content" source="media/home-page.png" alt-text="Captura de pantalla da pantalla de inicio que mostra exemplos de información.":::
 
 ## <a name="left-side-pane"></a>Panel lateral esquerdo
 
-Use o panel esquerdo para navegar entre as diferentes áreas de Customer Insights. 
+Use o panel esquerdo para navegar entre as diferentes áreas de Customer Insights.
 
-Se traballas con contas empresariais e consumidores individuais, podes seleccionar o teu público principal para fixar o teu foco en consecuencia. 
+Se traballas con contas empresariais e consumidores individuais, podes seleccionar o teu público principal para fixar o teu foco en consecuencia.
 
 ## <a name="application-header"></a>Cabeceira da aplicación
 
@@ -38,15 +38,15 @@ O **Medio ambiente** o selector mostra o ambiente no que traballa e permíteche 
 
 A icona da cara sorrinte é **Comentarios** control. Selecciónao para contarnos a túa experiencia con Customer Insights. Escoitamos activamente os teus comentarios e agradecemos de antemán que nos fagas saber o que che gusta e como podemos mellorar.
 
-O **Configuración** control, representado por unha icona de engrenaxe, permíteche reunir detalles da sesión para Customer Insights e configurar a configuración global para o teu Microsoft 365 perfil. 
+O **Configuración** control, representado por unha icona de engrenaxe, permíteche reunir detalles da sesión para Customer Insights e configurar a configuración global para o teu Microsoft 365 perfil.
 
 **Axuda** opcións, visualizadas cunha icona de signo de interrogación, ofrecen ligazóns de axuda contextual e outros recursos útiles.
 
-A túa imaxe de perfil abre **Xerente** para o seu Microsoft 365 perfil. Seleccione **A miña conta** para xestionar a súa configuración persoal.
+A túa imaxe de perfil abre o **Xerente** para o seu Microsoft 365 perfil. Seleccione **A miña conta** para xestionar a súa configuración persoal.
 
 ## <a name="getting-started-with-customer-insights-section"></a>Comezando coa sección Customer Insights
 
-Esta sección contén tarxetas que che axudan a percorrer o proceso de configuración do teu ambiente de Customer Insights. 
+Esta sección contén tarxetas que che axudan a percorrer o proceso de configuración do teu ambiente de Customer Insights.
 
 1. O **Engadir datos** tarxeta axúdache coa importación de datos. Soporte de Customer Insights [varias opcións para introducir datos sobre os seus clientes](data-sources.md). Seleccione **Engadir fontes de datos** para comezar.
 1. Unha vez que se complete con éxito a importación de datos inicial, pode usar o **Unificar datos** tarxeta para harmonizar os datos e [crear perfís de clientes unificados](data-unification.md) de fontes dispares. 

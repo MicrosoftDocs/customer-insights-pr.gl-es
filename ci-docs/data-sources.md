@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739206"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800464"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
@@ -76,7 +76,7 @@ Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
-2. Seleccione os puntos suspensivos verticais xunto á orixe de datos que desexa actualizar e seleccione **Actualizar** da lista despregable.
+2. Seleccione os puntos suspensivos verticais (&vellip;) xunto ao orixe de datos que quere actualizar e seleccionar **Actualizar** da lista despregable.
 
 3. A orixe de datos agora está activada para unha actualización manual. Actualizar unha orixe de datos actualizá tanto o esquema de entidade como os datos de todas as entidades especificadas na orixe de datos.
 
@@ -86,7 +86,7 @@ Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
-2. Seleccione os puntos suspensivos verticais xunto á orixe de datos que desexa eliminar e seleccione **Eliminar** do menú despregable.
+2. Seleccione os puntos suspensivos verticais (&vellip;) xunto ao orixe de datos que quere eliminar e seleccionar **Eliminar** desde o menú despregable.
 
 3. Confirme a eliminación.
 

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700935"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833628"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp ofrece resolución de identidade e consolidación de datos dos clientes
 Para obter máis información, consulte [Enriquece os perfís de clientes con datos de identidade de LiveRamp (vista previa)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organiza segmentos e medidas con etiquetas e filtros
+
 Se a túa organización mantén moitos segmentos ou medidas, ás veces pode resultar un reto atopar o axeitado. Esta nova función permíteche organizar listas mediante etiquetas e columnas. Axuda a atopar datos de forma rápida e sinxela e a personalizar as vistas.
 
 Para obter máis información, consulte [Traballar con etiquetas e columnas](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Para obter máis información, consulte [Traballar con etiquetas e columnas](wor
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Activa o uso compartido de datos con Dataverse cando use a súa propia conta de almacenamento
 
 Se o teu ambiente usa Azure Data Lake Storage para almacenar datos de Customer Insights e compartir datos Microsoft Dataverse precisa algunha configuración adicional.
-Antes, só podías activar a compartición de datos con Dataverse cando os teus datos foron almacenados no noso lago de datos xestionado. 
+Antes, só podías activar a compartición de datos con Dataverse cando os teus datos foron almacenados no noso lago de datos xestionado.
 
-Para obter máis información, consulte [Activa o uso compartido de datos con Dataverse do teu propio Azure Data Lake Storage (Vista previa)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Para obter máis información, consulte [Activa o uso compartido de datos con Dataverse do teu propio Azure Data Lake Storage (Vista previa)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Novos destinos de exportación: Iterable e Braze
 
@@ -80,8 +81,7 @@ Para obter máis información, consulte [Exportar segmentos a Iterable (vista pr
 O cambio de API nos servizos conectados leva a actualizacións para que os conectores funcionen de forma fiable e sen problemas. Publicamos algunhas actualizacións para as exportacións aos servizos de Marketo e Google Ads:
 
 - Google Ads: a nova versión do conector de exportación de Google Ads simplifica a experiencia de autenticación e agora permíteche crear novas audiencias de Google Ads automaticamente. 
-- Marketo: a nova versión do conector de exportación de Marketo ofrece compatibilidade co ID de Marketo, o que lle permite evitar a duplicación de datos, actualizar os rexistros existentes e crear novos rexistros en Marketo. 
-
+- Marketo: a nova versión do conector de exportación de Marketo ofrece soporte para o ID de Marketo, o que lle permite evitar a duplicación de datos, actualizar os rexistros existentes e crear novos rexistros en Marketo. 
 
 ## <a name="february-2022-updates"></a>Actualizacións de febreiro de 2022
 
@@ -139,7 +139,7 @@ Durante un período de transición, os participantes existentes de vista previa 
 - Mellora os perfís unificados con eventos inxeridos e refinados para beneficiarse do valor total dos datos dos seus clientes
   
 Durante o período de transición, os eventos capturados aínda se transmiten ao Data Lake conectado. Unha vez desactivada esta función, o uso compartido de datos deterase e non se enviarán novos eventos ao almacenamento conectado.
-Póñase en contacto directamente co seu equipo da conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache informado dos próximos lanzamentos. 
+Póñase en contacto directamente co seu equipo da conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache ao día dos próximos lanzamentos. 
 
 ## <a name="january-2022-updates"></a>Actualizacións de xaneiro de 2022
 

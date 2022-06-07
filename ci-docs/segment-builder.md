@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642761"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800094"
 ---
 # <a name="create-segments"></a>Crear segmentos
 
@@ -134,8 +134,9 @@ Ao crear un segmento, pode gardar un borrador. Na fase de borrador, un segmento 
 > - O creador de segmentos non suxerirá valores válidos das entidades cando estableza os operadores para as condicións. Pode ir a **Datos** > **Entidades** e descargar os datos da entidade para ver que valores están dispoñibles.
 > - As condicións baseadas nas datas permiten cambiar entre datas fixas e un intervalo de datas flotante.
 > - Se ten varias regras para o seu segmento, a regra que está editando ten unha liña azul vertical ao lado.
-> - Pode mover regras e condicións a outros lugares da definición do segmento. Seleccione [...] xunto a unha regra ou condición e elixa como e a onde movela.
+> - Pode mover regras e condicións a outros lugares da definición do segmento. Seleccione os puntos suspensivos verticais (&vellip;) xunto a unha regra ou condición e escolle como e onde movela.
 > - Os controis **Desfacer** e **Refacer** da barra de comandos permiten restablecer os cambios.
+> - Despois de crear un segmento, algúns segmentos permítenche [rastrexar o uso do segmento](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Segmentos rápidos
 

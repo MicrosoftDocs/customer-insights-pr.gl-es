@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740717"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800648"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa os teus datos parciais con predicións (obsoleto)
 
@@ -95,7 +95,7 @@ Como parte deste fluxo, vostede elixe un atributo específico no que basear o se
 
 2. Seleccione a predición que desexa revisar.
 
-3. Seleccione os tres puntos na columna **Accións** e escolla **Ver**.
+3. Seleccione os puntos suspensivos verticais (&vellip;) no **Accións** columna e escolla **Ver**.
 
 4. Verá varios puntos de datos na vista da súa predición.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Despois de crear un predición, podes personalizar o modelo no AI Builder para a
 
 2. Seleccione a predición que desexa editar.
 
-3. Seleccione os tres puntos na columna **Accións** e escolla **Ver**.
+3. Seleccione os puntos suspensivos verticais (&vellip;) no **Accións** columna e escolla **Ver**.
 
 4. Seleccione **Personalizar en AI Builder**.
 
@@ -139,7 +139,7 @@ A seguinte execución da súa predición usará o modelo actualizado que creou.
 
 2. Seleccione a predición que desexe eliminar.
 
-3. Seleccione os tres puntos na columna **Accións** e escolla **Eliminar**.
+3. Seleccione os puntos suspensivos verticais (&vellip;) no **Accións** columna e escolla **Eliminar**.
 
 4. Confirme a eliminación.
 
@@ -153,7 +153,7 @@ Se non pode completar o proceso de anexar Dataverse debido a un erro, poderá te
 - Non se conceden permisos de aplicacións.
     1. Vaia a [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Seleccione **Contornos**.
-    1. Seleccione os tres puntos situados xunto ao contorno ao que desexa engadir o permiso e seleccione **Configuración**.
+    1. Seleccione os puntos suspensivos verticais (&vellip;) xunto ao entorno ao que desexa engadir o permiso e seleccione **Configuración**.
     1. Amplíe **Usuarios + permisos** e seleccione **Usuarios**.
     1. Seleccione **+ Novo** e seleccione **Usuario**.
     1. Seleccione **Usuario da aplicación** se non está seleccionado e introduza a seguinte información:

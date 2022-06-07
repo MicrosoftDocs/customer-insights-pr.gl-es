@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642825"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800557"
 ---
 # <a name="work-with-tags-and-columns"></a>Traballar con etiquetas e columnas
 
@@ -37,7 +37,7 @@ Podes ver, engadir e eliminar etiquetas dun elemento. Engade etiquetas mentres c
 
 1. Seleccione o elemento cuxas etiquetas quere xestionar.
 
-1. Seleccione **Mostrar máis (...)** e selecciona **Etiquetar**.
+1. Seleccione os puntos suspensivos verticais (&vellip;) e seleccione **Etiquetar**.
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="Segmento seleccionado con lista despregable de opcións e opcións dispoñibles."lightbox="media/segments_list_tag.png":::
 

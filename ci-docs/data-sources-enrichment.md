@@ -1,19 +1,19 @@
 ---
 title: Orixe de datos enriquecemento
 description: Enriquece as fontes de datos antes de pasar polo proceso de unificación de datos.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755684"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800279"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecemento das fontes de datos (vista previa)
 
@@ -27,7 +27,7 @@ Debes ter permisos de Colaborador ou Administrador para crear ou editar enriquec
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
-1. Seleccione os puntos suspensivos verticais xunto ao orixe de datos que quere enriquecer e seleccione **Enriquecer**.
+1. Seleccione os puntos suspensivos verticais (&vellip;) xunto ao orixe de datos que quere enriquecer e seleccionar **Enriquecer**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Páxina de enriquecemento de fontes de datos.":::
 
@@ -41,11 +41,12 @@ Actualmente están dispoñibles os seguintes enriquecementos para as fontes de d
 
 - [Enderezos mellorados](enrichment-enhanced-addresses.md)
 - [Información da empresa enriquecida](enrichment-enhanced-company-data.md)
+- [Datos de identidade de LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Xestiona os enriquecementos orixe de datos existentes
 
 Vaia ao separador **Os meus enriquecementos** para ver todos os enriquecementos configurados.
 
-Seleccione o enriquecemento para ver as opcións dispoñibles. Tamén pode seleccionar os puntos suspensivos (...) nun elemento da lista para ver as opcións. Se configurou varios enriquecementos, pode usar a caixa de busca para atopalo rapidamente.
+Seleccione o enriquecemento para ver as opcións dispoñibles. Tamén pode seleccionar os puntos suspensivos verticais (&vellip;) nun elemento da lista para ver as opcións. Se configurou varios enriquecementos, pode usar a caixa de busca para atopalo rapidamente.
 
 Podes ver, editar, executar ou eliminar un enriquecemento orixe de datos. Para obter máis información, consulte [Xestionar os enriquecementos existentes](enrichment-hub.md).

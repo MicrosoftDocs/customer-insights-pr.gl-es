@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641514"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808544"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitudes de dereitos do titular dos datos (DSR) baixo RXPD
 
@@ -41,7 +41,7 @@ Un administrador de Customer Insights pode seguir estes pasos para eliminar os d
 1. Inicie sesión en Dynamics 365 Customer Insights.
 2. Ir a **Datos** > **Fontes de datos**
 3. Para cada orixe de datos da lista que contén datos de clientes eliminados:
-   1. Seleccione (...) e, a seguir, seleccione **Actualizar**.
+   1. Seleccione os puntos suspensivos verticais (&vellip;) e, a continuación, seleccione **Actualizar**.
    2. Consulte o estado da orixe de datos en **Estado**. A aparición dunha marca de verificación significa que a actualización tivo éxito. Un triángulo de aviso significa que algo saíu mal. Se aparece un triángulo de aviso, póñase en contacto con D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Un administrador de Customer Insights pode seguir estes pasos para eliminar os d
 Un administrador de Customer Insights pode seguir estes pasos para eliminar os datos de usuarios de Customer Insights:
 
 1. Inicie sesión en Dynamics 365 Customer Insights.
-2. Ir a **Admin** > **Permisos**.
+2. Ir a **Admin** > **Seguridade** > **Permisos**.
 3. Marque a caixa de verificación do usuario que desexe eliminar.
 4. Seleccione **Quitar**.
 
@@ -82,6 +82,6 @@ Un administrador de arrendatarios pode seguir estes pasos para exportar datos:
 
 A capacidade de xestión do consentimento non recolle directamente datos do usuario. Só importa e procesa os datos de consentimento que proporcionan os usuarios noutras aplicacións.
 
-Para eliminar os datos de consentimento de usuarios específicos, elimínaos das fontes de datos inxeridas coa capacidade de xestión do consentimento. Despois de actualizar o orixe de datos, os datos eliminados tamén se eliminarán no Centro de consentimento. As aplicacións que usan a entidade de consentimento tamén eliminarán os datos que se eliminaron da fonte despois de a [refrescar](system.md#refresh-processes). Recomendamos actualizar as fontes de datos rapidamente despois de responder a unha solicitude do suxeito de datos para eliminar os datos do usuario de todos os demais procesos e aplicacións.
+Para eliminar os datos de consentimento de usuarios específicos, elimínaos das fontes de datos inxeridas coa capacidade de xestión de consentimento. Despois de actualizar o orixe de datos, os datos eliminados tamén se eliminarán no Centro de consentimento. As aplicacións que usan a entidade de consentimento tamén eliminarán os datos que se eliminaron da fonte despois de a [refrescar](system.md#refresh-processes). Recomendamos actualizar as fontes de datos rapidamente despois de responder a unha solicitude do suxeito de datos para eliminar os datos do usuario de todos os demais procesos e aplicacións.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755307"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800370"
 ---
 # <a name="connections-preview-overview"></a>Visión xeral de conexións (versión preliminar)
 
@@ -69,7 +69,7 @@ Ao configurar ou editar unha conexión de exportación, elixa aos usuarios que p
 
 1. Vaia ao separador **Conexións**.
 
-1. Seleccione os tres puntos verticais para a conexión que desexa editar.
+1. Seleccione os puntos suspensivos verticais (&vellip;) para a conexión que quere editar.
 
 1. Seleccione **Editar**.
 
@@ -85,7 +85,7 @@ Os enriquecementos e exportacións desconectados quedan inactivos. Reactíveos e
 
 1. Vaia ao separador **Conexións**.
 
-1. Seleccione os tres puntos verticais para a conexión que desexa eliminar.
+1. Seleccione os puntos suspensivos verticais (&vellip;) para a conexión que quere eliminar.
 
 1. Seleccione **Eliminar** do menú despregable. Aparecerá un diálogo de confirmación.
 

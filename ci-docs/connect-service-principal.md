@@ -1,7 +1,7 @@
 ---
 title: Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo
 description: Use unha entidade de servizo de Azure para conectar co seu propio lago de datos.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739160"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833383"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure
 
-Este artigo explica como conectarse Dynamics 365 Customer Insights cunha Azure Data Lake Storage conta mediante un principal de servizo de Azure en lugar de claves de conta de almacenamento. 
+Este artigo explica como conectarse Dynamics 365 Customer Insights cunha Azure Data Lake Storage conta mediante un principal de servizo de Azure en lugar de claves de conta de almacenamento.
 
-As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes utilizar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un entorno](create-environment.md).
+As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes usar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un ambiente](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - A conta de Data Lake Storage que utilizará o principal do servizo debe ser Gen2 e ter [espazo de nomes xerárquico activado](/azure/storage/blobs/data-lake-storage-namespace). Non se admiten as contas de almacenamento de Azure Data Lake Gen1.
-> - Necesitas permisos de administrador para a túa subscrición a Azure para crear un principal de servizo.
+> - Necesitas permisos de administrador para o teu arrendatario de Azure para crear un principal de servizo.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear unha entidade de servizo de Azure para Customer Insights
 
@@ -38,29 +39,15 @@ Antes de crear un novo principal de servizo para Customer Insights, comprobe se 
 
 2. En **Servizos de Azure**, seleccione **Azure Active Directory**.
 
-3. En **Xestionar**, seleccione **Aplicacións empresariais**.
+3. Baixo **Xestionar**, seleccione **Aplicación Microsoft**.
 
 4. Engade un filtro para **O ID da aplicación comeza por**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` ou buscar o nome `Dynamics 365 AI for Customer Insights`.
 
-5. Se atopa un rexistro coincidente, significa que a entidade de servizo xa existe. 
-   
+5. Se atopa un rexistro coincidente, significa que a entidade de servizo xa existe.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Captura de pantalla que mostra unha entidade de servizo existente.":::
-   
-6. Se non se devolven resultados, cree unha nova entidade de seguranza do servizo.
 
-### <a name="create-a-new-service-principal"></a>Crear unha entidade de seguranza do servizo nova
-
-1. Instale a versión máis recente de Azure Active Directory PowerShell para Graph. Para obter máis información, vaia a [Instalar Azure Active Directory PowerShell para Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. No seu PC, seleccione a tecla Windows do teclado e busque **Windows PowerShell** e seleccione **Executar como administrador**.
-   
-   1. Na xanela de PowerShell que se abre, introduza `Install-Module AzureAD`.
-
-2. Cree a entidade de servizo para Customer Insights co módulo de Azure AD PowerShell.
-
-   1. Na xanela de PowerShell que se abre, introduza `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Substituír *[ID do teu directorio]* co ID de directorio real da túa subscrición de Azure onde queres crear o principal do servizo. O parámetro de nome do ambiente, `AzureEnvironmentName`, é opcional.
-  
-   1. Introduza `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Este comando crea o principal de servizo para Customer Insights na subscrición de Azure seleccionada. 
+6. Se non se devolve ningún resultado, podes [crear un novo principal de servizo](#create-a-new-service-principal). Na maioría dos casos, xa existe e só precisa conceder permisos ao principal do servizo para acceder á conta de almacenamento.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Conceder permisos á entidade de seguranza do servizo para acceder á conta de almacenamento
 
@@ -77,9 +64,9 @@ Vaia ao portal de Azure para conceder permisos ao principal do servizo para a co
 1. No panel **Engadir atribución de roles**, estableza as seguintes propiedades:
    - Función: **Colaborador de datos do BLOB de almacenamento**
    - Asignar acceso a: **Usuario, grupo ou entidade de seguranza do servizo**
-   - Seleccionar membros: **Dynamics 365 AI para Customer Insights** (o [principal do servizo](#create-a-new-service-principal) creaches anteriormente neste procedemento)
+   - Seleccionar membros: **Dynamics 365 AI para Customer Insights** (o [principal do servizo](#create-a-new-service-principal) buscaches anteriormente neste procedemento)
 
-1.  Seleccione **Revisar + asignar**.
+1. Seleccione **Revisar + asignar**.
 
 Pode tardar ata 15 minutos en propagar os cambios.
 
@@ -91,7 +78,7 @@ Podes anexar unha conta de Data Lake Storage en Customer Insights a [almacenar d
 
 1. Vaia ao [Portal de administración de Azure](https://portal.azure.com), inicie sesión na súa subscrición e abra a conta de almacenamento.
 
-1. No panel esquerdo, vaia a **Configuración** > **Propiedades**.
+1. No panel esquerdo, vai a **Configuración** > **Puntos finais**.
 
 1. Copie o valor do ID do recurso da conta de almacenamento.
 
@@ -115,5 +102,18 @@ Podes anexar unha conta de Data Lake Storage en Customer Insights a [almacenar d
 
 1. Continúa cos pasos restantes en Customer Insights para anexar a conta de almacenamento.
 
+### <a name="create-a-new-service-principal"></a>Crear unha entidade de seguranza do servizo nova
+
+1. Instale a versión máis recente de Azure Active Directory PowerShell para Graph. Para obter máis información, vaia a [Instalar Azure Active Directory PowerShell para Graph](/powershell/azure/active-directory/install-adv2).
+
+   1. No seu PC, prema a tecla Windows do teclado e busque **Windows PowerShell** e selecciona **Executar como administrador**.
+
+   1. Na xanela de PowerShell que se abre, introduza `Install-Module AzureAD`.
+
+2. Cree a entidade de servizo para Customer Insights co módulo de Azure AD PowerShell.
+
+   1. Na xanela de PowerShell que se abre, introduza `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Substituír *[ID do teu directorio]* co ID de directorio real da túa subscrición de Azure onde queres crear o principal do servizo. O parámetro de nome do ambiente, `AzureEnvironmentName`, é opcional.
+  
+   1. Introduza `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Este comando crea o principal de servizo para Customer Insights na subscrición de Azure seleccionada.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

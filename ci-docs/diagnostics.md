@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755260"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807579"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Reenvío de sesión Dynamics 365 Customer Insights con Azure Monitor (vista previa)
 
@@ -38,7 +38,7 @@ Para configurar diagnósticos en Customer Insights, débense cumprir os seguinte
 
 - Tes un activo [Subscrición Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Tes [Administrador](permissions.md#admin) permisos en Customer Insights.
-- Tes o **Colaborador** e **Administrador de acceso de usuarios** papel no recurso de destino en Azure. O recurso pode ser unha conta de Azure Storage, un Azure Event Hub ou un espazo de traballo de Azure Log Analytics. Para obter máis información, consulte [Engadir ou eliminar asignacións de roles de Azure mediante o portal de Azure](/azure/role-based-access-control/role-assignments-portal).
+- Tes o **Colaborador** e **Administrador de acceso de usuarios** papel no recurso de destino en Azure. O recurso pode ser un Azure Data Lake Storage conta, un Azure Event Hub ou un espazo de traballo de Azure Log Analytics. Para obter máis información, consulte [Engadir ou eliminar asignacións de roles de Azure mediante o portal de Azure](/azure/role-based-access-control/role-assignments-portal). Este permiso é necesario ao configurar os axustes de diagnóstico en Customer Insights. Pódese cambiar despois da configuración correcta.
 - [Requisitos do destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Azure Event Hub ou Azure Log Analytics.
 - Tes polo menos o **Lector** papel no grupo de recursos ao que pertence o recurso.
 
@@ -51,9 +51,9 @@ Para configurar diagnósticos en Customer Insights, débense cumprir os seguinte
    > [!div class="mx-imgBorder"]
    > ![Conexión de diagnóstico](media/diagnostics-pane.png "Conexión de diagnóstico")
 
-1. Proporcione un nome no **Nome do destino do diagnóstico** campo.
+1. Proporcione un nome no **Nome do destino de diagnóstico** campo.
 
-1. Escolle o **Inquilino** da subscrición de Azure co recurso de destino e seleccione **acceder**.
+1. Escolle o **Inquilino** da subscrición de Azure co recurso de destino e seleccione **Iniciar sesión**.
 
 1. Seleccione o **Tipo de recurso** (Conta de almacenamento, centro de eventos ou análise de rexistro).
 
@@ -87,7 +87,7 @@ O esquema de rexistro segue o [Esquema común de Azure Monitor](/azure/azure-mon
 Customer Insights ofrece dúas categorías:
 
 - **Auditoría de eventos** :[Eventos da API](#api-event-schema) para rastrexar os cambios de configuración no servizo. `POST|PUT|DELETE|PATCH` operacións entran nesta categoría.
-- **Eventos operativos** :[Eventos da API](#api-event-schema) ou [eventos de fluxo de traballo](#workflow-event-schema) xerado ao utilizar o servizo.  Por exemplo,`GET` solicitudes ou os eventos de execución dun fluxo de traballo.
+- **Eventos operativos** :[Eventos da API](#api-event-schema) ou [eventos de fluxo de traballo](#workflow-event-schema) xerado ao utilizar o servizo.  Por exemplo,`GET` solicitudes ou eventos de execución dun fluxo de traballo.
 
 ## <a name="configuration-on-the-destination-resource"></a>Configuración no recurso de destino
 
@@ -131,7 +131,7 @@ Os eventos da API e os eventos de fluxo de traballo teñen unha estrutura común
 | `resultType`      | String    | Obrigatorio          | Estado do evento. `Success`,`ClientError`,`Failure`                                                                                                        |                                                                                                                                                                          |
 | `resultSignature` | String    | Opcional          | Estado do resultado do evento. Se a operación corresponde a unha chamada á API REST, é o código de estado HTTP.        | `200`             |
 | `durationMs`      | Longo      | Opcional          | Duración da operación en milisegundos.     | `133`     |
-| `callerIpAddress` | String    | Opcional          | Enderezo IP da persoa que chama, se a operación corresponde a unha chamada API procedente dun enderezo IP dispoñible publicamente.                                                 | `144.318.99.233`         |
+| `callerIpAddress` | String    | Opcional          | Enderezo IP da persoa que chama, se a operación corresponde a unha chamada de API procedente dun enderezo IP dispoñible publicamente.                                                 | `144.318.99.233`         |
 | `identity`        | String    | Opcional          | Obxecto JSON que describe a identidade do usuario ou aplicación que fixo a operación.       | Ver [Identidade](#identity-schema) sección.     |  
 | `properties`      | String    | Opcional          | Obxecto JSON con máis propiedades para a categoría particular de eventos.      | Ver [Propiedades](#api-properties-schema) sección.    |
 | `level`           | String    | Obrigatorio          | Grao de gravidade do evento.    | `Informational`,`Warning`,`Error`, ou `Critical`.           |
