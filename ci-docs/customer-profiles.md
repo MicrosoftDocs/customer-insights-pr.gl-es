@@ -1,7 +1,7 @@
 ---
 title: Ver perfís de clientes
 description: Obteña unha vista combinada dos seus datos de clientes unificados.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,18 +14,18 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755780"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947044"
 ---
 # <a name="customer-profiles"></a>Perfís de clientes
 
 A páxina **Clientes** mostra unha vista combinada dos perfís de clientes unificados. Os perfís dos clientes están dispoñibles unha vez que vostede [creou a entidade de cliente unificado](data-unification.md). A páxina permítelle buscar clientes e definir o índice para esa busca.
 
-Os clientes poden ser persoas ou organizacións. Cada perfil de cliente está representado por un mosaico. Use os controis de paxinación para obter máis rexistros. A tarxeta mostra campos da entidade *Cliente* definida no **Índice de busca e filtro**. O sistema elixe a orde dos campos dentro de cada tarxeta.
+Os clientes poden ser persoas ou organizacións. Cada perfil de cliente está representado por un mosaico. Use os controis de paxinación para obter máis rexistros. A tarxeta mostra campos da entidade *Cliente* definida no **Índice de busca e filtro**. A orde dos campos dentro de cada tarxeta é escollida polo sistema.
 
 Seleccione un mosaico para ver os datos do cliente seleccionado nunha páxina dedicada chamada [Páxina de detalles do cliente](customer-profiles.md#customer-details-page).
 
@@ -55,9 +55,9 @@ Pode filtrar os clientes polos campos de entidade de *Cliente*. De xeito semella
 
 Seleccione calquera dos mosaicos de clientes para abrir a **Páxina de detalles do cliente**. Esta vista contén información unificada do cliente seleccionado. Os datos do cliente inclúen o seguinte contido:
 
-**Mosaico do perfil do cliente**: este mosaico mostra os diferentes valores da entidade de *Cliente* unificada. Se un campo non ten valor para o perfil de cliente seleccionado, non se amosará. O mosaico estrutúrase en seccións:
+**Mosaico do perfil do cliente**: este mosaico mostra os diferentes valores da entidade de *Cliente* unificada. Se un campo non ten ningún valor para o perfil de cliente seleccionado, non se mostrará excepto o campo do enderezo. O mosaico estrutúrase en seccións:
 
-- A primeira sección mostra un conxunto predefinido de campos seguidos de todos os campos que forman parte do índice de busca e filtro. Todos os campos relacionados co enderezo combínanse nunha única liña se o perfil contén estes campos.
+- A primeira sección mostra un conxunto predefinido de campos seguidos de todos os campos que forman parte do índice de busca e filtro. Todos os campos relacionados co enderezo combínanse nunha única liña, que amosa aínda que o perfil non conteña información de enderezo.
 - **Contactos para este cliente**: en contornos para contas comerciais, verá todos os contactos relacionados con este cliente como a segunda sección. Cada contacto móstrase cos seus campos. Os campos baleiros están ocultos.
 - **Campos adicionais**: mostra os campos restantes do cliente seleccionado, excepto os ID.
 - **ID**: enumera todos os ID situados baixo o seu nome de entidade correspondente. Os campos identifícanse como ID pola súa semántica, que os ordena como tales.

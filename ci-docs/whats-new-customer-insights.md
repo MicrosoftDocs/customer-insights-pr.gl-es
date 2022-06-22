@@ -1,19 +1,19 @@
 ---
-title: Funcionalidades novas e futuras
+title: Funcionalidades novas e actualizadas
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833628"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843345"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
@@ -24,20 +24,51 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Actualizacións de maio de 2022
+
+As actualizacións de maio de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="updated-data-unification-experience"></a>Experiencia de unificación de datos actualizada
+
+ A unificación de datos permíteche unificar fontes de datos distintas nun único conxunto de datos mestre que ofrece unha vista unificada deses datos. Os datos pódense unificar nunha única entidade ou en varias entidades. Primeiro, ti [seleccionar entidades e campos de orixe](map-entities.md),[eliminar rexistros duplicados](remove-duplicates.md), especifique as regras para [condicións de coincidencia](match-entities.md), e definir cales [campos para incluír nos perfís de clientes unificados](merge-entities.md).
+
+Para obter máis información, consulte [Visión xeral da unificación de datos](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Páxina de inicio actualizada en Customer Insights
+
+**Casa** guíache a través do proceso de configuración das funcións clave e ofrece unha visión xeral dos segmentos, medidas e datos de enriquecemento. Actualizamos a experiencia para ofrecer información máis relevante dunha ollada.
+
+Para obter máis información, consulte [Explore os datos do cliente](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Rastrexa o uso dun segmento
+
+Agora podes [rastrexar o uso dun segmento](segments.md#track-usage-of-a-segment) en aplicacións, que están baseadas no Dataverse organización que está conectada con Customer Insights. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), o sistema infórmache sobre o uso dese segmento.
+
+### <a name="export-to-criteo"></a>Exportar a Criteo
+
+Criteo é unha plataforma en liña que axuda aos usuarios a xestionar a publicidade dixital. Agora podes exportar segmentos de perfís de clientes unificados para xerar campañas, ofrecer marketing por correo electrónico e utilizar grupos específicos de clientes con Criteo.
+
+Para obter máis información, consulte [Exportar segmentos a Criteo (vista previa)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Estrutura de documentación refinada para a creación de ambientes
+
+Revisamos os documentos de axuda relacionados coa creación e xestión de ambientes en Customer Insights. Os artigos agrúpanse agora no nó Entornos da táboa de contidos. Os artigos reestruturados ofrecen máis orientación sobre as diferentes formas de configurar ambientes e teñen unha estrutura máis clara. Se tes comentarios que compartir, avísanos a través dos controis ao final dos artigos de axuda.
+
+Para obter máis información, consulte [Como: Crear un novo ambiente](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Actualizacións de abril de 2022
 
 As actualizacións de abril de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
 
-### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (Previsualización)
+### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (versión previa)
 
 Dun & Bradstreet ofrece datos comerciais, análises e información para empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
 
-Para obter máis información, consulte [Enriquecemento dos perfís de empresas con Dun & Bradstreet (Previsualización)](enrichment-dnb.md).
+Para obter máis información, consulte [Enriquecemento dos perfís da empresa con Dun & Bradstreet (Vista previa)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Defina o tipo de medida ao crear unha nova medida
 
-Agora podes distinguir entre medidas para perfís individuais e medidas de toda a túa empresa. Mentres que as medidas comerciais aparecen na páxina de inicio de Customer Insights, as medidas dos clientes están expostas nas vistas detalladas dos clientes.
+Agora podes distinguir entre medidas para perfís individuais e medidas de toda a túa empresa. Aínda que as medidas comerciais aparecen na páxina de inicio de Customer Insights, as medidas dos clientes están expostas nas vistas detalladas dos clientes.
 
 Para obter máis información, consulte [Usa o creador de medidas para crear medidas desde cero](measure-builder.md).
 
@@ -81,7 +112,7 @@ Para obter máis información, consulte [Exportar segmentos a Iterable (vista pr
 O cambio de API nos servizos conectados leva a actualizacións para que os conectores funcionen de forma fiable e sen problemas. Publicamos algunhas actualizacións para as exportacións aos servizos de Marketo e Google Ads:
 
 - Google Ads: a nova versión do conector de exportación de Google Ads simplifica a experiencia de autenticación e agora permíteche crear novas audiencias de Google Ads automaticamente. 
-- Marketo: a nova versión do conector de exportación de Marketo ofrece soporte para o ID de Marketo, o que lle permite evitar a duplicación de datos, actualizar os rexistros existentes e crear novos rexistros en Marketo. 
+- Marketo: a nova versión do conector de exportación de Marketo ofrece compatibilidade co ID de Marketo, o que lle permite evitar a duplicación de datos, actualizar os rexistros existentes e crear novos rexistros en Marketo. 
 
 ## <a name="february-2022-updates"></a>Actualizacións de febreiro de 2022
 
@@ -130,7 +161,7 @@ Para obter máis información, consulte [Fontes de datos danadas](entities.md#co
 O Dynamics 365 Customer Insights A vista previa da capacidade de datos de compromiso finalizou o 15 de febreiro de 2022.  
 Este cambio significa que a experiencia de proba de Customer Insights xa non inclúe a posibilidade de crear funis nin outras funcións de informes.
 
-Convidámoste a explorar e avaliar outras moitas características de [Insights do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
+Convidámoste a explorar e avaliar outras moitas características de [Información do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
  
 Durante un período de transición, os participantes existentes de vista previa aínda teñen acceso a algunhas capacidades e funcións de vista previa:
 
@@ -139,7 +170,7 @@ Durante un período de transición, os participantes existentes de vista previa 
 - Mellora os perfís unificados con eventos inxeridos e refinados para beneficiarse do valor total dos datos dos seus clientes
   
 Durante o período de transición, os eventos capturados aínda se transmiten ao Data Lake conectado. Unha vez desactivada esta función, o uso compartido de datos deterase e non se enviarán novos eventos ao almacenamento conectado.
-Póñase en contacto directamente co seu equipo da conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache ao día dos próximos lanzamentos. 
+Póñase en contacto directamente co equipo da súa conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache informado dos próximos lanzamentos. 
 
 ## <a name="january-2022-updates"></a>Actualizacións de xaneiro de 2022
 
@@ -149,7 +180,7 @@ As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rend
 
 Customer Insights ofrece unha nova función impulsada pola intelixencia artificial para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
 
-Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (Vista previa)](sentiment-analysis.md).
+Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (vista previa)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

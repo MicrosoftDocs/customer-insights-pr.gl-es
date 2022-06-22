@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfís de clientes unificados
 description: Use capacidades para enriquecer os datos dos seus clientes.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800603"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954039"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
 
@@ -35,29 +35,29 @@ No separador **Descubrir**, atopará todas as opcións de enriquecemento compati
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
+- [Identidade AbiliTec](enrichment-liveramp.md) proporcionado por LiveRamp AbiliTec
 - [Marcas](enrichment-microsoft.md) fornecidas por Microsoft
-- [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
-- [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft 
 - [Demografía](enrichment-experian.md) fornecida por Experian
-- [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
-- [Datos de localización](enrichment-here.md) subministrados por HERE Technologies 
-- [Identidade](enrichment-liveramp.md) proporcionado por LiveRamp AbiliTec
+- [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft
+- [Intereses](enrichment-microsoft.md) fornecidos por Microsoft
+- [Datos de localización](enrichment-azure-maps.md) proporcionado por Microsoft Azure Mapas
+- [Datos de localización](enrichment-here.md) subministrados por HERE Technologies
+- [Datos personalizados SFTP](enrichment-SFTP-custom-import.md) a través do protocolo de transferencia segura de ficheiros (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
-- [Datos da empresa](enrichment-leadspace.md) proporcionados por Leadspace
-- [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft 
-- [Datos da empresa mellorados](enrichment-enhanced-company-data.md) proporcionado por Microsoft
-- [Datos de localización](enrichment-here.md) subministrados por HERE Technologies 
-- [Datos personalizados](enrichment-SFTP-custom-import.md) a través do protocolo seguro de transferencia de ficheiros (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) fornecido por Microsoft
-- [Datos da empresa](enrichment-dnb.md) proporcionado por Dun & Bradstreet
 - [Datos de participación da conta](enrichment-office.md) proporcionado por Microsoft
+- [Datos da empresa](enrichment-dnb.md) proporcionado por Dun & Bradstreet
+- [Datos da empresa](enrichment-leadspace.md) proporcionados por Leadspace
+- [Enderezos mellorados](enrichment-enhanced-addresses.md) fornecidos por Microsoft
+- [Datos da empresa mellorados](enrichment-enhanced-company-data.md) proporcionado por Microsoft
+- [Datos de localización](enrichment-azure-maps.md) proporcionado por Microsoft Azure Mapas
+- [Datos de localización](enrichment-here.md) subministrados por HERE Technologies
+- [Datos personalizados SFTP](enrichment-SFTP-custom-import.md) a través do protocolo de transferencia segura de ficheiros (SFTP)
 
 ---
 
-No separador **Os meus enriquecementos**, pode ver os enriquecementos que configurou e editar as súas propiedades.
+No separador **Os meus enriquecementos**, pode ver os enriquecementos que configurou e editar as súas propiedades. Tamén podes crear [segmentos](segments.md) ou [medidas](measures.md) de enriquecementos.
 
 ## <a name="manage-existing-enrichments"></a>Xestionar os enriquecementos existentes
 
@@ -81,36 +81,45 @@ Os enriquecementos de terceiros configúranse usando [conexións](connections.md
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Enriquecementos múltiples do mesmo tipo
 
-A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueceza datos só para un segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver na páxina **Enriquecemento**.
+A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueceza datos só para un segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver en cada ficha do **Descubrir** ficha da **Enriquecemento** páxina.
 
 ## <a name="enrich-data-sources-before-unification"></a>Enriquece as fontes de datos antes da unificación
 
 Podes enriquecer os datos dos teus clientes antes da unificación de datos para axudar a aumentar a calidade dunha coincidencia de datos. Para obter máis información, consulte [orixe de datos enriquecemento](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Vexa o progreso do proceso de enriquecemento
+## <a name="run-or-refresh-enrichments"></a>Executar ou actualizar enriquecementos
+
+1. Para iniciar o proceso de enriquecemento, seleccione **Corre**. Ou, deixe que o sistema execute o enriquecemento automaticamente como parte dun [actualización programada](system.md#schedule-tab). O tempo de procesamento depende do tamaño dos datos dos clientes.
+
+1. Opcionalmente, [ver o progreso do proceso de enriquecemento](#see-the-progress-of-the-enrichment-process).
+
+1. Despois de completar o proceso de enriquecemento, vai a **Os meus enriquecementos** para revisar os datos dos perfís de clientes recentemente enriquecidos, a hora da última actualización e o número de perfís enriquecidos.
+
+1. Seleccione o enriquecemento para ver [resultados de enriquecemento](#enrichment-results).
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Vexa o progreso do proceso de enriquecemento
 
 Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado e os problemas potenciais mentres se actualiza ou despois de completar a actualización. Comprenda que procesos están implicados para actualizar un enriquecemento e canto tardou en executalos. Admítese o estado de enriquecemento para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
 
-Para ver o estado dun enriquecemento
-
-1. Vaia a **Datos** > **Enriquecemento**. 
-1. No separador **Os meus enriquecementos**, seleccione o estado dun enriquecemento para abrir un panel lateral. 
-1. No panel **Detalles do progreso**, expanda a sección **Enriquecementos**. 
-1. No enriquecemento no que desexa ver o progreso, seleccione **Ver detalles**. 
-1. No panel **Detalles da tarefa**, seleccione **Amosar detalles** para ver os procesos implicados na actualización do enriquecemento e o seu estado. 
+1. Vaia a **Datos** > **Enriquecemento**.
+1. No **Os meus enriquecementos** ficha, seleccione o estado do enriquecemento para abrir un panel lateral.
+1. No panel **Detalles do progreso**, expanda a sección **Enriquecementos**.
+1. No enriquecemento no que desexa ver o progreso, seleccione **Ver detalles**.
+1. No panel **Detalles da tarefa**, seleccione **Amosar detalles** para ver os procesos implicados na actualización do enriquecemento e o seu estado.
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
 
-Despois dunha carreira de enriquecemento completada, pode revisar os resultados do enriquecemento.
+Despois dunha carreira de enriquecemento completada, revise os resultados do enriquecemento.
 
-1. Vaia a **Datos** > **Enriquecemento**. 
-1. Seleccione o enriquecemento sobre o que desexa información.
+1. Vaia a **Datos** > **Enriquecemento**.
+1. No **Os meus enriquecementos** ficha, seleccione o enriquecemento sobre o que quere información.
 
-Todos os enriquecementos mostran información básica como o número de perfís enriquecidos, unha vista previa da entidade de enriquecemento xerada e o número de perfís enriquecidos ao longo do tempo. Se está dispoñible, o **Número de clientes enriquecidos por campo** proporciona un detalle da cobertura de cada campo enriquecido.
+Todos os enriquecementos mostran información básica como o número de perfís enriquecidos e o número de perfís enriquecidos ao longo do tempo. O **Vista previa de clientes enriquecidos** o mosaico mostra unha mostra da entidade de enriquecemento xerada. Para ver unha vista detallada, seleccione **Ver máis** e selecciona o **Datos** ficha.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Páxina de resultados de enriquecementos.":::
 
-Algúns enriquecementos tamén mostran información específica do tipo de enriquecemento. Consulte a documentación para o enriquecemento correspondente para obter máis información.
+Se está dispoñible, o **Número de clientes enriquecidos por campo** proporciona un detalle da cobertura de cada campo enriquecido.
 
+Algúns enriquecementos tamén mostran información específica do tipo de enriquecemento. Para obter máis información, consulte a documentación relacionada.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

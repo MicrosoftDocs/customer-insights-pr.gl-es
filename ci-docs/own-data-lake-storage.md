@@ -1,19 +1,19 @@
 ---
 title: Usa o teu propio Azure Data Lake Storage Conta Gen2
 author: mukeshpo
-description: Obtén información sobre os requisitos para usar o teu Azure Data Lake Storage conta para almacenar datos de Customer Insights.
+description: Obtén información sobre os requisitos para usar o teu propio Azure Data Lake Storage conta para almacenar datos de Customer Insights.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833944"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011931"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Usa o teu propio Azure Data Lake Storage Conta Gen2
 
@@ -37,6 +37,7 @@ Cando cree un novo ambiente, asegúrese de que existe a conta de Data Lake Stora
 1. Escolle como **Conecta o teu almacenamento**. Podes escoller entre unha opción baseada en recursos e unha opción baseada na subscrición para a autenticación. Para obter máis información, consulte [Conectar a un Azure Data Lake Storage conta mediante un Azure Service Principal](connect-service-principal.md).
    - Para **Subscrición de Azure**, escolle o **Subscrición**, **de recursos**, e **Conta de almacenamento** que contén o`customerinsights` envase.
    - Para **Clave da conta**, proporcionar o **Nome da conta** e o **Clave da conta** para a conta de Data Lake Storage. O uso deste método de autenticación implica que se lle informa se a súa organización rota as claves. Debes [actualizar a configuración do entorno](manage-environments.md#edit-an-existing-environment) coa nova chave cando se xire.
+1. Escolla se quere utilizar Azure Private Link para conectarse á conta de almacenamento e [crear a conexión a Private Link](security-overview.md#private-links-tab) cun proceso de dous pasos.
 
 Cando se completan os procesos do sistema como a inxestión de datos, o sistema crea os cartafoles correspondentes na conta de almacenamento. Os ficheiros de datos e os ficheiros *model.json* créanse e engádense aos cartafoles en función do nome do proceso.
 

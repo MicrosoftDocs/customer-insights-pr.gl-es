@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800170"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011701"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conectar cos datos dun lago de datos xestionado de Microsoft Dataverse
 
-Este artigo ofrece información sobre como Dataverse os usuarios poden conectarse rapidamente a entidades analíticas nun Microsoft Dataverse lago xestionado. 
+Microsoft Dataverse os usuarios poden conectarse rapidamente a entidades analíticas nun Microsoft Dataverse lago xestionado.
 
 > [!NOTE]
 > Debes ser administrador do Dataverse organización para continuar e ver a lista de entidades dispoñibles no lago xestionado.
@@ -32,40 +32,34 @@ Este artigo ofrece información sobre como Dataverse os usuarios poden conectars
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Conectarse a un lago xestionado por Dataverse
 
-1. En Customer Insights, diríxase a **Datos** > **Fontes de datos**.
+1. Vaia a **Datos** > **Orixes de datos**.
 
-2. Seleccione **Engadir orixe de datos**.
+1. Seleccione **Engadir orixe de datos**.
 
-3. Seleccione **Microsoft Dataverse** e selecciona **A continuación**.
+1. Seleccione **Microsoft Dataverse**.
 
-4. Escriba un **Nome** para a orixe de datos e seleccione **Seguinte**. 
+1. Introduza a **Nome** para o orixe de datos e un opcional **Descrición**.
 
-5. Proporcione o **Enderezo do servidor** para a organización de Dataverse e seleccione **Iniciar sesión**.
+1. Proporcione o **Enderezo do servidor** para a organización de Dataverse e seleccione **Iniciar sesión**.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Pantalla no paso de inxestión de datos onde un usuario pode introducir o URL do ambiente de Dataverse.":::
-
-6. Seleccione as táboas que quere inxerir como entidades en Customer Insights da lista dispoñible.    
+1. Seleccione as táboas que quere inxerir como entidades a Customer Insights da lista dispoñible.
 
    > [!NOTE]
    > Se algunhas táboas xa están seleccionadas, poden ser usadas por outras aplicacións de Dynamics 365 (como Dynamics 365 Sales Insights ou Customer Service Insights). Non se pode cambiar a selección. Estas táboas estarán dispoñibles como entidades unha vez que se crea a orixe de datos.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Caixa de diálogo que mostra unha lista de entidades no ambiente de Dataverse.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Caixa de diálogo que mostra unha lista de entidades no ambiente de Dataverse.":::
 
-7. Garde a selección para comezar a sincronizar as táboas seleccionadas de Dataverse. Atopará a conexión acabada de engadir na páxina **Orixes de datos**. Porase na fila para actualizar e mostrará o número de entidades como 0 ata que se sincronicen todas as táboas seleccionadas.
+1. Garde a selección para comezar a sincronizar as táboas seleccionadas de Dataverse. Atopará a conexión acabada de engadir na páxina **Orixes de datos**. Porase na fila para actualizar e mostrará o número de entidades como 0 ata que se sincronicen todas as táboas seleccionadas.
 
 Só unha orixe de datos dun ambiente pode usar ao mesmo tempo o mesmo lago xestionado de Dataverse.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Editar unha orixe de datos de lago xestionado por Dataverse
 
-Só edita a selección da entidades despois de crear a orixe de datos. Por exemplo, se se engadiron entidades adicionais a Dataverse e tamén quere importalos.    
+Só edita a selección da entidades despois de crear a orixe de datos. Por exemplo, se se engadiron entidades adicionais a Dataverse e tamén quere importalos.
 Para conectarse a outro lago de datos de Dataverse, [cree unha nova orixe de datos](#connect-to-a-dataverse-managed-lake).
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
-2. A carón do orixe de datos que queres actualizar, selecciona os puntos suspensivos verticais (&vellip;).
+1. A carón do orixe de datos que queres actualizar, selecciona **Editar**.
 
-3. Seleccione a opción **Editar** da lista.
-
-4. Seleccione entidades adicionais da lista de entidades dispoñibles e seleccione **Gardar**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Seleccione entidades adicionais da lista de entidades dispoñibles e seleccione **Gardar**.

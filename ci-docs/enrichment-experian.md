@@ -1,101 +1,92 @@
 ---
 title: Enriquecemento co enriquecemento de terceiros Experian
 description: Información xeral sobre o enriquecemento de terceiros Experian.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f5aa45316b9e0e99c7ba4389353063e9d3ce06c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642456"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954085"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriqueza os perfís de clientes con datos demográficos de Experian (versión preliminar)
 
 Experian é líder mundial en servizos de mercadotecnia e informes de crédito ao consumidor e ás empresas. Cos servizos de enriquecemento de datos de Experian, pode construír unha comprensión máis profunda dos seus clientes enriquecendo os perfís dos seus clientes con datos demográficos como tamaño do fogar, ingresos e moito máis.
 
-## <a name="prerequisites"></a>Requisitos previos
-
-Para configurar Experian, deben cumprirse os seguintes requisitos previos:
-
-- Debe ter unha subscrición activa de Experian. Para obter unha subscrición, [contacte con Experian](https://www.experian.com/marketing-services/contact) directamente. [Obteña máis información acerca do enriquecementos de datos de Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-
-- Un administrador configurou xa unha conexión de Experian *ou* ten permisos de [administrador](permissions.md#admin). Tamén precisa o ID de usuario, o ID de grupo e o número de modelo da súa conta de transporte seguro (ST) con SSH que Experian creou para vostede.
-
 ## <a name="supported-countriesregions"></a>Países ou rexións compatibles
 
 Actualmente admítese enriquecer perfís de clientes só nos Estados Unidos.
+
+## <a name="prerequisites"></a>Requisitos previos
+
+- Un activo Experian subscrición. Para obter unha subscrición, [contacte con Experian](https://www.experian.com/marketing-services/contact) directamente. [Obteña máis información acerca do enriquecementos de datos de Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+
+- An Experian [conexión](connections.md) é [configurado](#configure-the-connection-for-experian) por un administrador.
+
+- Experian ID de usuario, ID de partido e número de modelo para a túa conta de transporte seguro (ST) habilitado para SSH Experian creado para ti.
+
+## <a name="configure-the-connection-for-experian"></a>Configurar a conexión de Experian
+
+Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten un Experian ID de usuario, ID do partido e número de modelo.
+
+1. Seleccione **Engadir conexión** ao configurar un enriquecemento ou vaia a **Admin** > **Conexións** e selecciona **Montar** no Experian tella.
+
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian panel de configuración da conexión.":::
+
+1. Introduza un nome para a conexión e un ID de usuario, ID de partido e número de modelo válidos para a túa Experian Conta de transporte seguro.
+
+1. Revise e proporcione o seu consentimento para a [Privacidade e cumprimento de datos](#data-privacy-and-compliance) seleccionando **Estou de acordo**.
+
+1. Seleccione **Verificar** para validar a configuración e, a continuación, seleccione **Gardar**.
+
+### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
+
+Cando permite a Dynamics 365 Customer Insights transmitir datos a Experian, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de asegurarse de que Experian cumpre coas obrigacións de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 
 1. Vaia a **Datos** > **Enriquecemento** e seleccione o separador **Descubrir**.
 
-1. Seleccione **Enriquecer os meus datos** no mosaico Experian.
+1. Seleccione **Enriquece os meus datos** no **Demografía** dende Experian tella.
 
-   > [!div class="mx-imgBorder"]
-   > ![Mosaico de Experian.](media/experian-tile.png "Experian tile")
-   > 
+   :::image type="content" source="media/experian-tile.png" alt-text="Experian mosaico na páxina de resumo do enriquecemento.":::
 
-1. Seleccione unha [conexión](connections.md) da lista despregable. Póñase en contacto cun administrador se non hai conexión dispoñible. Se é administrador, pode crear unha conexión seleccionando **Engadir conexión** e escollendo Experian da lista despregable. 
+1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
 
-1. Seleccione **Conectarse a Experian** para confirmar a selección de conexión.
+1. Seleccione a conexión. Póñase en contacto cun administrador se non está dispoñible.
 
-1.  Seleccione **Seguinte** e escolla o **Conxunto de datos do cliente** que quere enriquecer con datos demográficos de Experian. Pode seleccionar a entidade **Cliente** para enriquecer todos os seus perfís de clientes ou seleccione unha entidade de segmento para enriquecer só os perfís de clientes contidos nese segmento.
+1. Seleccione **Seguinte**.
+
+1. Seleccione o **Conxunto de datos do cliente** e escolle o perfil ou segmento do que queres enriquecer con datos demográficos Experian. O *Cliente* a entidade enriquece todos os seus perfís de clientes mentres que un segmento enriquece só os perfís de clientes contidos nese segmento.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Captura de pantalla ao escoller o conxunto de datos do cliente.":::
 
-1. Seleccione **Seguinte** e defina que tipo de campos dos seus perfís unificados se deben empregar para buscar datos demográficos coincidentes de Experian. Polo menos un dos campos **Nome e enderezo**, **Teléfono** ou **Correo electrónico** é requerido. Para unha maior precisión de coincidencia, pódense engadir ata outros dous campos. Esta selección afectará aos campos de asignación aos que ten acceso no seguinte paso.
+1. Define que tipo de campos dos teus perfís unificados queres usar para facer coincidir os datos demográficos Experian. Polo menos un dos campos **Nome e enderezo**, **Teléfono** ou **Correo electrónico** é requerido. Para unha maior precisión de coincidencia, engade outros campos. Seleccione **Seguinte**.
 
-    > [!TIP]
-    > Enviar máis atributos de identificación claves a Experian é probable que produza unha maior taxa de coincidencia.
+1. Asigne os seus campos aos datos demográficos de Experian.
 
-1. Seleccione **Seguinte** para iniciar a asignación dos campos.
+1. Seleccione **Seguinte** para concluír a asignación do campo.
 
-1. Defina que campos dos seus perfís unificados se deben empregar para buscar datos demográficos coincidentes de Experian. Os campos necesarios están marcados.
-
-1. Proporcione un nome para o enriquecemento e un nome para a entidade de saída.
+1. Proporcionar a **Nome** para o enriquecemento e o **Nome da entidade de saída**.
 
 1. Seleccione **Gardar enriquecemento** despois de revisar as súas opcións.
 
-## <a name="configure-the-connection-for-experian"></a>Configurar a conexión de Experian 
-
-Debe ser administrador para configurar as conexións. Seleccione **Engadir conexión** ao configurar un enriquecemento *ou* vaia a **Administrar** > **Conexións** e seleccionr **configurar** no mosaico de Experian.
-
-1. Seleccione **Comezar**.
-
-1. Introduza un nome para a conexión na caixa **Nome de visualización**.
-
-1. Introduza un ID de usuario, ID de grupo e número de modelo válidos para a súa conta de transporte seguro de Experian.
-
-1. Revise e proporcione o seu consentimento para a **Privacidade e cumprimento de datos** seleccionando **Estou de acordo**.
-
-1. Seleccione **Verificar** para validar a configuración.
-
-1. Despois de completar a verificación, seleccione **Gardar**.
-   
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian panel de configuración da conexión.":::
+1. Seleccione **Corre** para iniciar o proceso de enriquecemento ou pechar para volver ao **Enriquecementos** páxina.
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
 
-Para iniciar o proceso de enriquecemento, seleccione **Executar** na barra de comandos. Tamén pode deixar que o sistema execute o enriquecemento automaticamente como parte dunha [actualización programada](system.md#schedule-tab). O tempo de procesamento dependerá do tamaño dos datos dos seus clientes e dos procesos de enriquecemento configurados para a súa conta por Experian.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Despois de completar o proceso de enriquecemento, pode consultar os datos dos perfís de clientes recentemente enriquecidos en **Os meus enriquecementos**. Ademais, atopará a hora da última actualización e o número de perfís enriquecidos.
-
-Pode acceder a unha vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
+O **Número de clientes enriquecidos por campo** proporciona un detalle da cobertura de cada campo enriquecido.
 
 ## <a name="next-steps"></a>Pasos seguintes
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando permite a Dynamics 365 Customer Insights transmitir datos a Experian, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de asegurarse de que Experian cumpre coas obrigacións de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

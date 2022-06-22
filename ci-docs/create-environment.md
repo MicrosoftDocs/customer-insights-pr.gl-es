@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833556"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011609"
 ---
 # <a name="how-to-create-a-new-environment"></a>Como: Crear un novo ambiente
 
@@ -59,7 +59,7 @@ No **Almacenamento de datos** paso, escolla onde almacenar os datos de Customer 
 
 Hai dúas opcións nas que podes escoller:
 
-- **Almacenamento de datos de clientes** : O equipo de Customer Insights xestiona o almacenamento de datos. É a opción predeterminada e, a menos que existan requisitos específicos para almacenar datos na túa propia conta de almacenamento, recomendámosche que utilices esta opción.
+- **Almacenamento de datos de clientes** : O equipo de Customer Insights xestiona o almacenamento de datos. É a opción predeterminada e, a menos que existan requisitos específicos para almacenar datos na túa propia conta de almacenamento, recomendámosche usar esta opción.
 - **Azure Data Lake Storage**: Especifique o seu Azure Data Lake Storage para almacenar os datos para que teña control total onde se almacenan os datos. Para obter máis información, consulte [Usa o teu propio Azure Data Lake Storage conta](own-data-lake-storage.md).
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Escolla a opción preferida para almacenar os seus datos.":::
@@ -67,6 +67,7 @@ Hai dúas opcións nas que podes escoller:
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>Paso 3: Conectar con Microsoft Dataverse
 
 O paso **Microsoft Dataverse** permítelle conectar Customer Insights co seu ambiente de Dataverse. Comparte datos con Dataverse para usalo con aplicacións empresariais baseadas en Dataverse, como Dynamics 365 Marketing ou aplicacións baseadas en modelos Power Apps.
+
 
 Deixa este campo baleiro se non tes o teu Dataverse ambiente e crearemos un para ti.
 

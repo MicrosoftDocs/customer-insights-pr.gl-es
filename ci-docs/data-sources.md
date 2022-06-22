@@ -1,88 +1,80 @@
 ---
 title: Usar fontes de datos para inxerir datos
 description: Aprenda a importar datos de varias orixes.
-ms.date: 03/18/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800464"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011747"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
+Dynamics 365 Customer Insights proporciona conexións para traer datos dun amplo conxunto de fontes. Conectarse a unha orixe de datos a miúdo chámase proceso de *inxestión de datos*. Despois de inxerir os datos, pode [unificar](data-unification.md), xera información e activa os datos para crear experiencias personalizadas.
 
+## <a name="add-data-sources"></a>Engadir orixes de datos
 
-Dynamics 365 Customer Insights conecta con datos dun amplo conxunto de fontes. Conectarse a unha orixe de datos a miúdo chámase proceso de *inxestión de datos*. Despois de inxerir os datos, pode [unificar](data-unification.md) e tomar medidas ao respecto.
+Podes anexar ou importar fontes de datos a Customer Insights. As ligazóns seguintes ofrecen instrucións para engadir fontes de datos.
 
-## <a name="add-a-data-source"></a>Engadir unha orixe de datos
+**Adxunta un orixe de datos**
 
-Consulta os artigos detallados para saber como engadir un orixe de datos, dependendo da opción que elixas.
+Se tes datos preparados nun dos servizos de datos Azure de Microsoft, Customer Insights pode conectarse facilmente ao orixe de datos sen ter que volver inxerir os datos. Seleccione unha das seguintes opcións:
+- [Azure Data Lake Storage(arquivos csv ou parquet nun cartafol Common Data Model)](connect-common-data-model.md)
+- [Azure Synapse Analytics(bases de datos de lagos)](connect-synapse.md)
+- [Microsoft Dataverse lago de datos](connect-dataverse-managed-lake.md)
 
-Podes engadir as seguintes fontes de datos:
+**Importar e transformar**
 
-- [A través de decenas de Power Query conectores](connect-power-query.md)
-- [Desde un cartafol de Common Data Model](connect-common-data-model.md)
-- [Desde o seu propio lago de Microsoft Dataverse](connect-dataverse-managed-lake.md)
-- [Dende un Azure Synapse Analytics base de datos](connect-synapse.md)
+Se utiliza fontes de datos locais, Microsoft ou datos de terceiros, importe e transforme os datos mediante Power Query conectores.
+- [Power Query conectores](connect-power-query.md)
 
-## <a name="add-data-from-on-premises-data-sources"></a>Engadir datos de fontes de datos locais
+## <a name="review-data-sources"></a>Revisar fontes de datos
 
-Admítese a inxestión de datos das fontes de datos local en función de Microsoft Power Platform fluxos de datos. Podes activar os fluxos de datos en Customer Insights mediante [proporcionando o Microsoft Dataverse URL do entorno](create-environment.md) ao configurar o ambiente.
-
-Fontes de datos que se crean despois de asociar a Dataverse ambiente co uso de Customer Insights [Power Platform fluxos de datos](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante a pasarela de datos. Pode eliminar e recrear fontes de datos que existían antes de a Dataverse ambiente estaba asociado [usando pasarelas de datos local](/data-integration/gateway/service-gateway-app).
-
-As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Microsoft Power Platform onde pode ver e configurar pasarelas de datos locais.
-
-> [!IMPORTANT]
-> Asegúrate de que as túas pasarelas estean actualizadas á versión máis recente. Pode instalar unha actualización e reconfigurar unha pasarela desde unha solicitude que se mostra na pantalla da pasarela directamente ou [descarga a última versión](https://powerapps.microsoft.com/downloads/). Se non utilizas a última versión da pasarela, a actualización do fluxo de datos falla con mensaxes de erro como **Non se admite a palabra clave: propiedades de configuración. Nome do parámetro: palabra clave**.
-
-## <a name="review-ingested-data"></a>Revisa os datos inxeridos
-Se o teu ambiente contén Power Platform fluxos de datos, o **Fontes de datos** páxina enumera tres seccións: 
-- **Compartido** : fontes de datos que poden xestionar todos os administradores de Customer Insights. Power BI fluxos de datos, a súa propia conta de almacenamento e anexo a un Dataverse -Managed Data Lake son exemplos de fontes de datos compartidas.
-- **Xestionado por min** :Power Platform fluxos de datos creados e só podes xestionalos ti. Outros administradores de Customer Insights só poden ver estes fluxos de datos pero non editalos, actualizalos nin eliminalos.
+Se o teu ambiente estaba configurado para usar o almacenamento de Customer Insights e utilizas fontes de datos locais, utilizas Power Platform fluxos de datos. Con Power Platform fluxos de datos, pode ver fontes de datos compartidas e fontes de datos xestionadas por outros. O **Fontes de datos** A páxina enumera as fontes de datos en tres seccións:
+- **Compartido** : fontes de datos que poden xestionar todos os administradores de Customer Insights. Power Platform fluxos de datos, a súa propia conta de almacenamento e anexo a un Dataverse -Managed Data Lake son exemplos de fontes de datos compartidas.
+- **Xestionado por min** :Power Platform fluxos de datos creados e xestionados só por ti. Outros administradores de Customer Insights só poden ver estes fluxos de datos pero non editalos, actualizalos nin eliminalos.
 - **Xestionado por outros** :Power Platform fluxos de datos creados por outros administradores. Só podes velos. Enumera o propietario do fluxo de datos co que contactar para obter axuda.
 > [!NOTE]
-> Todas as entidades poden ser vistas e usadas por outros usuarios. A contextualidade do usuario aplícase só ás fontes de datos e non ás entidades que resultan destes fluxos de datos.
+> Todas as entidades poden ser vistas e usadas por outros usuarios. Aínda que as fontes de datos son propiedade do usuario que as creou, as entidades resultantes da inxestión de datos poden ser utilizadas por todos os usuarios de Customer Insights.
 
-Se non Power Platform úsanse fluxos de datos, non verá ningún grupo ou sección. O **Fontes de datos** páxina contén só unha lista de todas as fontes de datos.
+Se o teu ambiente non utiliza Power Platform fluxos de datos, o **Fontes de datos** páxina contén só unha lista de todas as fontes de datos. Non se mostran seccións.
 
-Verá o nome de cada orixe de datos inxerida, o seu estado e a última vez que se actualizaron os datos para esa orixe. Pode ordenar a lista de fontes de datos por cada columna.
+Ir a **Datos** > **Fontes de datos** para ver o nome de cada orixe de datos inxerido, o seu estado e a última vez que se actualizaron os datos desa fonte. Pode ordenar a lista de fontes de datos por cada columna.
 
-> [!div class="mx-imgBorder"]
-> ![Orixe de datos engadida.](media/configure-data-datasource-added.png "Orixe de datos engadida")
+:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Orixe de datos engadida.":::
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 A carga de datos pode levar moito tempo. Despois dunha actualización con éxito, os datos inxeridos poden revisarse desde a páxina **Entidades**. Para obter máis información, consulte [Entidades](entities.md).
 
-## <a name="refresh-a-data-source"></a>Actualizar unha orixe de datos
+## <a name="refresh-data-sources"></a>Actualizar orixes de datos
 
-As fontes de datos pódense actualizar de xeito automático ou actualizarse manualmente a demanda. 
+As fontes de datos pódense actualizar de xeito automático ou actualizarse manualmente a demanda. [Fontes de datos locais](connect-power-query.md#add-data-from-on-premises-data-sources) actualizar os seus propios horarios que se configuran durante a inxestión de datos. Para as fontes de datos adxuntas, a inxestión de datos consome os últimos datos dispoñibles desa orixe de datos.
 
-Vaia a **Administrar** > **Sistema** > [**Programar**](system.md#schedule-tab) para configurar actualizacións programadas de todas as fontes de datos inxeridas.
+Ir a **Admin** > **Sistema** > [**Horario**](system.md#schedule-tab) para configurar as actualizacións programadas polo sistema das fontes de datos inxeridas.
 
 Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
-2. Seleccione os puntos suspensivos verticais (&vellip;) xunto ao orixe de datos que quere actualizar e seleccionar **Actualizar** da lista despregable.
+1. Seleccione os puntos suspensivos verticais (&vellip;) xunto ao orixe de datos que quere actualizar e seleccionar **Actualizar** da lista despregable. A orixe de datos agora está activada para unha actualización manual. Actualizar unha orixe de datos actualizá tanto o esquema de entidade como os datos de todas as entidades especificadas na orixe de datos.
 
-3. A orixe de datos agora está activada para unha actualización manual. Actualizar unha orixe de datos actualizá tanto o esquema de entidade como os datos de todas as entidades especificadas na orixe de datos.
-
-4. Seleccione **Deixar de actualizar** se quere cancelar unha actualización existente e a orixe de datos volverá ao seu último estado de actualización.
+1. Seleccione **Deixar de actualizar** se quere cancelar unha actualización existente e a orixe de datos volverá ao seu último estado de actualización.
 
 ## <a name="delete-a-data-source"></a>Eliminar unha orixe de datos
+
+Un orixe de datos só se pode eliminar se os datos non se usan en ningún procesamento como a unificación, a información, as activacións ou as exportacións.
 
 1. Vaia a **Datos** > **Orixes de datos**.
 

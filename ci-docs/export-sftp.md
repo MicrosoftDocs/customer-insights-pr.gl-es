@@ -1,19 +1,19 @@
 ---
 title: Exportar datos de Customer Insights a hosts SFTP (contén vídeo)
 description: Aprenda a configurar a conexión e exportar a unha localización de SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642593"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947182"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segmentos e outros datos a SFTP (versión preliminar)
 
@@ -28,8 +28,8 @@ Use os datos dos seus clientes en aplicacións de terceiros exportándoos a unha
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
 - Os destinos SFTP detrás dos cortalumes non son compatibles actualmente. 
-- O tempo de execución dunha exportación depende do rendemento do seu sistema. Recomendamos dous núcleos de CPU e 1 Gb de memoria como configuración mínima do seu servidor. 
-- As entidades exportadoras con ata 100 millóns de perfís de clientes poden tardar 90 minutos cando se usa a configuración mínima recomendada de dous núcleos de CPU e 1 Gb de memoria. 
+- O tempo de execución dunha exportación depende do rendemento do seu sistema. Recomendamos dous núcleos de CPU e 1 Gb de memoria como configuración mínima do seu servidor.
+- As entidades exportadoras con ata 100 millóns de perfís de clientes poden tardar 90 minutos cando se usa a configuración mínima recomendada de dous núcleos de CPU e 1 Gb de memoria.
 
 ## <a name="set-up-connection-to-sftp"></a>Configurar conexión a SFTP
 
@@ -64,13 +64,17 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 1. Seleccione as entidades, por exemplo, segmentos que desexa exportar.
 
    > [!NOTE]
-   > Cada entidade seleccionada dividirase en ata cinco ficheiros de saída cando se exporte. 
+   > Cada entidade seleccionada dividirase en ata cinco ficheiros de saída cando se exporte.
 
 1. Seleccione **Gardar**.
 
 Ao gardar unha exportación non se executa a exportación inmediatamente.
 
-A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
+A exportación execútase con cada [actualización programada](system.md#schedule-tab).
+Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> A exportación de entidades que conteñen unha gran cantidade de datos pode levar a varios ficheiros CSV no mesmo cartafol para cada exportación. A división das exportacións ocorre por motivos de rendemento para minimizar o tempo que tarda en completarse unha exportación.
 
 ## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 

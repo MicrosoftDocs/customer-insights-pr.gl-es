@@ -1,7 +1,7 @@
 ---
 title: Enriquecemento de mellora de enderezos (contén vídeo)
 description: Enriqueza e normalice a información dos enderezos dos perfís de clientes cos modelos de Microsoft.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642466"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953809"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecemento dos perfís de clientes con enderezos mellorados
 
@@ -53,17 +53,17 @@ A información do enderezo pode ter un formato non estándar e conter erros orto
 
 ### <a name="limitations"></a>Limitacións
 
-Os enderezos mellorados só funcionan cos valores que xa existen nos seus datos de enderezos inxeridos. O modelo non: 
+Os enderezos mellorados só funcionan cos valores que xa existen nos datos de enderezos inxeridos. O modelo non:
 
 1. Comproba se o enderezo é válido.
 2. Comproba se os valores, como os códigos postais ou os nomes de rúas, son válidos.
 3. Modifica os valores que non recoñece.
 
-O modelo utiliza técnicas baseadas na aprendizaxe automática para mellorar os enderezos. Aínda que aplicamos un limiar de confianza elevado para cando o modelo cambia un valor de entrada, como con calquera modelo baseado na aprendizaxe automática, non se garante a precisión do 100 %.
+O modelo utiliza técnicas baseadas na aprendizaxe automática para mellorar os enderezos. Como con calquera modelo baseado en aprendizaxe automática, non se garante unha precisión do 100 %.
 
 ## <a name="supported-countries-or-regions"></a>Países ou rexións admitidos
 
-Actualmente admitimos enderezos enriquecidos nestes países ou rexións: 
+Actualmente admitimos enderezos enriquecidos nestes países ou rexións:
 
 - Australia
 - O Canadá
@@ -74,50 +74,46 @@ Actualmente admitimos enderezos enriquecidos nestes países ou rexións:
 - O Reino Unido
 - Os Estados Unidos
 
-Os enderezos deben conter un valor de país ou rexión. Non procesamos enderezos de países ou rexións que non se admitan nin enderezos nos que non se proporcione ningún país ou rexión.
-
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 
-1. Vaia a **Datos** > **Enriquecemento**.
+1. Vaia a **Datos** > **Enriquecemento** e seleccione o separador **Descubrir**.
 
 1. Seleccione **Enriquecer os meus datos** no mosaico **Enderezos mellorados**.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Captura de pantalla do mosaico Enderezos mellorados.":::
 
-1. Seleccione o **Conxunto de datos do cliente** e escolla a entidade que conteña os enderezos que quere enriquecer. Pode seleccionar a entidade *Cliente* para enriquecer enderezos en todos os seus perfís de clientes ou seleccionar unha entidade de segmento para enriquecer enderezos só nos perfís de clientes contidos nese segmento.
+1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
+
+1. Seleccione o **Conxunto de datos do cliente** e escolle o perfil ou segmento que queres enriquecer. O *Cliente* a entidade enriquece todos os seus perfís de clientes mentres que un segmento enriquece só os perfís de clientes contidos nese segmento.
 
 1. Escolla como se formatan os enderezos nos conxuntos de datos. Escolla **Enderezo cun único atributo** se os enderezos dos seus datos usan só un campo. Escolla **Enderezo con varios atributos** se os enderezos dos seus datos usan máis dun campo de datos.
+
+1. Seleccione **A continuación** e mapea os campos de enderezos da túa entidade cliente unificada.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Páxina de asignación de campos de enderezos mellorados.":::
 
    > [!NOTE]
    > O país/rexión é obrigatorio tanto nos enderezos de atributo único como de varios atributos. Os enderezos que non conteñan valores de país ou rexión válidos ou admitidos non se enriquecerán.
 
-1.  Asigne os campos de enderezo da súa entidade de cliente unificada.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Páxina de asignación de campos de enderezos mellorados.":::
-
 1. Seleccione **Seguinte** para concluír a asignación do campo.
 
-1. Proporcione un nome para o enriquecemento e a entidade de saída.
+1. Proporcionar a **Nome** para o enriquecemento e o **Entidade de saída**.
 
 1. Seleccione **Gardar enriquecemento** despois de revisar as súas opcións.
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
 
-Para iniciar o proceso de enriquecemento, seleccione **Executar** na barra de comandos. Tamén pode deixar que o sistema execute o enriquecemento automaticamente como parte dunha [actualización programada](system.md#schedule-tab). O tempo de procesamento depende do tamaño dos datos dos clientes.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Despois de completar o proceso de enriquecemento, pode consultar os datos dos perfís de clientes recentemente enriquecidos en **Os meus enriquecementos**. Ademais, atopará a hora da última actualización e o número de perfís enriquecidos.
-
-Podes ver unha mostra dos datos enriquecidos no **Vista previa de clientes enriquecidos** tella. Seleccione **Ver máis** e selecciona o **Datos** para acceder a unha vista detallada de cada perfil enriquecido.
+O **Número de clientes enriquecidos por campo** proporciona un detalle da cobertura de cada campo enriquecido.
 
 ### <a name="overview-card"></a>Tarxeta xeral
 
-A tarxeta de visión xeral mostra detalles sobre a cobertura do enriquecemento. 
+O **Os clientes cambian a visión xeral** A tarxeta mostra detalles sobre a cobertura do enriquecemento:
 
-* **Enderezos procesados e modificados** : O número de perfís de clientes con enderezos que se enriqueceron con éxito.
-
-* **Enderezos procesados e non modificados** : O número de perfís de clientes con enderezos recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
-
-* **Enderezos non procesados e non modificados** : O número de perfís con enderezos que non foron recoñecidos. Normalmente para datos de entrada que non son válidos ou non admitidos polo enriquecemento.
+- **Enderezos procesados e modificados** : O número de perfís de clientes con enderezos que se enriqueceron con éxito.
+- **Enderezos procesados e non modificados** : O número de perfís de clientes con enderezos recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
+- **Enderezos non procesados e non modificados** : número de perfís con enderezos que non foron recoñecidos. Normalmente para datos de entrada que non son válidos ou non admitidos polo enriquecemento.
 
 ## <a name="next-steps"></a>Pasos seguintes
 

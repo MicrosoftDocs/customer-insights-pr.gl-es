@@ -1,7 +1,7 @@
 ---
 title: Revisar a unificación de datos
 description: Revisa os pasos de unificación de datos, crea perfís de clientes unificados e revisa os resultados
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8742972"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844084"
 ---
 # <a name="review-data-unification"></a>Revisar a unificación de datos
 
@@ -32,11 +32,13 @@ Este último paso do proceso de unificación mostra un resumo dos pasos do proce
 
 1. Seleccione **Editar** en calquera dos pasos de unificación de datos para revisar e facer calquera cambio.
 
-1. Se estás satisfeito coas túas seleccións, selecciona **Crear perfís de clientes**. O **Unificar** móstrase a páxina mentres se crea o perfil de cliente unificado. O algoritmo de unificación tarda en completarse e non podes cambiar a configuración ata que se complete.
+1. Se estás satisfeito coas túas seleccións, selecciona **Crear perfís de clientes**. O **Unificar** móstrase a páxina mentres se crea o perfil de cliente unificado. Todas as tellas excepto **Campos de orixe** mostrar **En cola** ou **Refrescante** estado.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Captura de pantalla da páxina Unify con mosaicos que mostran En cola ou Actualizando.":::
 
-Cando se completa o proceso de unificación, chamou a entidade unificada do perfil do cliente *Cliente*, aparece no **Entidades** páxina na **Perfís** sección. A primeira execución exitosa de unificación crea o unificado *Cliente* entidade. Todas as execucións posteriores amplían esa entidade.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+O algoritmo de unificación tarda en completarse e non podes cambiar a configuración ata que se complete. Cando se completa o proceso de unificación, chamou a entidade unificada do perfil do cliente *Cliente*, aparece no **Entidades** páxina na **Perfís** sección. A primeira execución exitosa de unificación crea o unificado *Cliente* entidade. Todas as execucións posteriores amplían esa entidade.
 
 ## <a name="review-the-results-of-data-unification"></a>Revisar os resultados da unificación de datos
 

@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833766"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011885"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntas máis frecuentes sobre as probas de Dynamics 365 Customer Insights
 
@@ -68,7 +68,7 @@ Despois de iniciar sesión na súa instancia de pago de Customer Insights por pr
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Cales son os límites e as cotas da proba?
 
-- Non pode usar a súa propia conta de almacenamento de Azure Data Lake para almacenar datos de saída durante unha versión de proba de Customer Insights. Non obstante, pode inxerir datos dunha conta de Azure Data Lake Storage.
+- Non podes usar o teu Azure Data Lake Storage para almacenar datos de saída durante unha versión de proba de Customer Insights. Non obstante, pode inxerir datos dunha conta de Data Lake Storage.
 - Pode almacenar ata 3 GB de datos no ambiente de Dataverse que se aprovisiona automaticamente cando inicia unha proba de Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Preguntas específicas sobre Customer Insights
@@ -83,7 +83,7 @@ A maioría das funcións das capacidades de Customer Insights están dispoñible
 
 As seguintes características son **non dispoñible**:
 
-- Non pode crear ambientes novos que empreguen a súa propia conta de Azure Data Lake Storage.
+- Non podes crear novos ambientes que utilicen o teu propio Azure Data Lake Storage conta.
 - Non podes eliminar o ambiente de proba.
 
 ### <a name="how-long-does-the-trial-last"></a>Canto dura a proba?

@@ -1,19 +1,19 @@
 ---
 title: Solicitudes de dereitos do titular dos datos (DSR) baixo RXPD | Microsoft Docs
 description: Responda ás solicitudes do titular dos datos para Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808544"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947366"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitudes de dereitos do titular dos datos (DSR) baixo RXPD
 
@@ -77,11 +77,5 @@ Un administrador de arrendatarios pode seguir estes pasos para exportar datos:
 1. Envíe un correo electrónico a D365CI@microsoft.com especificando o enderezo de correo electrónico do usuario na solicitude. O equipo de Customer Insights enviará un correo electrónico ao enderezo de correo electrónico do administrador do arrendatario rexistrado e pedirá confirmación para exportar datos.
 2. Recoñeza a confirmación para exportar os datos do usuario solicitado.
 3. Reciba os datos exportados a través do enderezo de correo electrónico do administrador do arrendatario.
-
-## <a name="consent-management-preview"></a>Xestión do consentimento (vista previa)
-
-A capacidade de xestión do consentimento non recolle directamente datos do usuario. Só importa e procesa os datos de consentimento que proporcionan os usuarios noutras aplicacións.
-
-Para eliminar os datos de consentimento de usuarios específicos, elimínaos das fontes de datos inxeridas coa capacidade de xestión de consentimento. Despois de actualizar o orixe de datos, os datos eliminados tamén se eliminarán no Centro de consentimento. As aplicacións que usan a entidade de consentimento tamén eliminarán os datos que se eliminaron da fonte despois de a [refrescar](system.md#refresh-processes). Recomendamos actualizar as fontes de datos rapidamente despois de responder a unha solicitude do suxeito de datos para eliminar os datos do usuario de todos os demais procesos e aplicacións.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

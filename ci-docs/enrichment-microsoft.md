@@ -1,5 +1,5 @@
 ---
-title: Enriquecer os perfís de clientes con datos de Microsoft
+title: Enriquece os perfís de clientes con marcas e datos de intereses de Microsoft
 description: Use os datos propietarios de Microsoft para enriquecer os datos dos seus clientes con afinidades e compartición de voz.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642623"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953763"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enriquece os perfís de clientes con afinidades e compartición de voz (vista previa)
 
-Use os datos propietarios de Microsoft para enriquecer os datos dos seus clientes con afinidades de marca, afinidades de interese e compartición de voz (SoV). Estas afinidades e SoV baséanse en datos de persoas con datos demográficos similares aos dos teus clientes. Esta información axúdache a comprender e segmentar mellor os teus clientes en función das súas afinidades ou SoV con marcas e intereses específicos.
-
-Ir a **Datos** > **Enriquecemento** a [configurar e ver enriquecementos](enrichment-hub.md).
-
-Para configurar afinidades de marca e enriquecemento de SoV, vai a **Descubrir** ficha e seleccione **Enriquece os meus datos** no **Marcas** tella.
-
-Para configurar as afinidades de intereses e o enriquecemento de SoV, vaia a **Descubrir** ficha e seleccione **Enriquece os meus datos** no **Intereses** tella.
-
-   > [!div class="mx-imgBorder"]
-   > ![Mosaicos de marcas e intereses.](media/BrandsInterest-tile-Hub.png "Mosaicos de marcas e intereses")
+Use os datos propietarios de Microsoft para enriquecer os datos dos seus clientes con afinidades de marca, afinidades de interese e compartición de voz (SoV). Estas afinidades e SoV baséanse en datos de persoas con datos demográficos similares aos teus clientes. Esta información axúdache a comprender e segmentar mellor os teus clientes en función das súas afinidades ou SoV con marcas e intereses específicos.
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Como determinamos afinidades e SoV
 
@@ -45,7 +36,6 @@ Usamos os datos de busca en liña de Microsoft para atopar afinidades e SoV para
 En cada perfil de cliente enriquecido, fornecemos dous valores relacionados: o nivel de afinidade e a puntuación de afinidade. Estes valores axúdanlle a determinar o forte que é a afinidade do segmento demográfico dese perfil, por unha marca ou interese, en comparación con outros segmentos demográficos.
 
 O *nivel de afinidade* consta de catro niveis e a *puntuación de afinidade* calcúlase nunha escala de 100 puntos que se asigna aos niveis de afinidade.
-
 
 |Nivel de afinidade |Puntuación de afinidade  |
 |---------|---------|
@@ -64,78 +54,65 @@ Calculamos SoV nunha escala de 100 puntos. O SoV total de todas as marcas ou int
 
 Actualmente son compatibles as seguintes opcións de país ou rexión: Australia, Canadá (inglés), Francia, Alemaña, Reino Unido ou Estados Unidos (inglés).
 
-Para seleccionar un país ou rexión, abra **Enriquecemento de marcas** ou **Enriquecemento de intereses** e seleccione **Cambiar** preto de **País/Rexión**. No panel **Configuración do país/rexión**, escolla unha opción e seleccione **Solicitar**.
+## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 
-### <a name="implications-related-to-country-selection"></a>Implicacións relacionadas coa selección do país
+1. Vaia a **Datos** > **Enriquecemento** e seleccione o separador **Descubrir**.
 
-- Cando [escolla as súas propias marcas](#define-your-brands-or-interests), o sistema ofrece suxestións en función do país ou rexión seleccionado.
+   - Para configurar afinidades de marca e enriquecemento de SoV, seleccione **Enriquece os meus datos** no **Marcas** tella.
 
-- Cando [escolla unha industria](#define-your-brands-or-interests), obterá as marcas ou intereses máis relevantes en función do país ou rexión seleccionado.
+   - Para configurar afinidades de interese e enriquecemento SoV, seleccione **Enriquece os meus datos** no **Intereses** tella.
 
-- Ao [enriquecer perfís](#refresh-enrichment), enriqueceremos todos os perfís de clientes dos que obteñamos datos das marcas e intereses seleccionados, incluídos os perfís que non están no país ou rexión seleccionados. Por exemplo, se seleccionou Alemaña, enriqueceremos os perfís situados nos Estados Unidos se temos datos dispoñibles para as marcas e os intereses seleccionados nos Estados Unidos.
+   > [!div class="mx-imgBorder"]
+   > ![Mosaicos de marcas e intereses.](media/BrandsInterest-tile-Hub.png "Mosaicos de marcas e intereses")
 
-## <a name="configure-enrichment"></a>Configurar o enriquecemento
+1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
 
-Unha experiencia guiada axúdalle a configurar os enriquecementos. 
+1. Para cambiar o seu país ou rexión, seleccione **Cambio** preto de **País/Rexión**. No **Configuración do país/rexión** panel, escolla a [país/rexión admitido](#supported-countriesregions) e selecciona **Solicitar**.
 
-### <a name="define-your-brands-or-interests"></a>Definir as marcas ou os intereses
+   > [!NOTE]
+   > Cando escolla as súas propias marcas, o sistema ofrece suxestións en función do país ou rexión seleccionado. Cando escolla unha industria, obterá as marcas ou intereses máis relevantes en función do país ou rexión seleccionado.
 
-Escolla ata cinco marcas ou intereses usando unha ou as dúas opcións seguintes:
+1. Escolla ata cinco marcas ou intereses usando unha ou as dúas opcións seguintes:
 
-- **Industria**: Seleccione a súa industria na lista despregable e logo escolla entre as mellores marcas ou intereses desa industria.
-- **Escoller os seus propios**: insira unha marca ou interese que sexa relevante para a súa organización e logo escolla entre as suxestións coincidentes. Se non enumeramos unha marca ou interese que está a buscar, envíenos comentarios usando a ligazón **Suxerir**.
+   - **Industria**: Seleccione a súa industria na lista despregable e logo escolla entre as mellores marcas ou intereses desa industria.
+   - **Escoller os seus propios**: insira unha marca ou interese que sexa relevante para a súa organización e logo escolla entre as suxestións coincidentes. Se non enumeramos unha marca ou interese que está a buscar, envíenos comentarios usando a ligazón **Suxerir**.
 
-### <a name="review-enrichment-preferences"></a>Revisar preferencias de enriquecemento
+1. Seleccione **A continuación** e revisa as túas preferencias de enriquecemento predeterminadas e actualízaas segundo sexa necesario.
 
-Revise as súas preferencias de enriquecemento predeterminadas e actualíceas segundo sexa necesario.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captura de pantalla da xanela de preferencias de enriquecemento.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captura de pantalla da xanela de preferencias de enriquecemento.":::
+1. Seleccione **Seguinte**.
 
-### <a name="select-entity-to-enrich"></a>Seleccionar entidade para enriquecer
+1. Seleccione o **Conxunto de datos do cliente** e escolle o perfil ou segmento que queres enriquecer con datos de Microsoft. O *Cliente* a entidade enriquece todos os seus perfís de clientes mentres que un segmento enriquece só os perfís de clientes contidos nese segmento.
 
-Seleccione **Entidade enriquecida** e escolla o conxunto de datos que quere enriquecer con datos de Microsoft. Pode seleccionar a entidade Cliente para enriquecer todos os seus perfís de clientes ou seleccione unha entidade de segmento para enriquecer só os perfís de clientes contidos nese segmento.
+1. Seleccione **Seguinte**.
 
-### <a name="map-your-fields"></a>Asignar os campos
+1. Asigne os seus campos desde a súa entidade cliente unificada aos datos de Microsoft.
 
-Asigne campos da súa entidade cliente unificada para definir o segmento demográfico que desexa que use o sistema para enriquecer os datos dos seus clientes. Asigne o País/Rexión e polo menos os atributos Data de nacemento ou Sexo. Ademais, debe asignar polo menos un código de cidade (e estado/provincia) ou codigo postal. Seleccione **Editar** definir a asignación dos campos e seleccionar **Aplicar** cando remate. Seleccione **Gardar** para completar a asignación de campos.
+   > [!NOTE]
+   > Son necesarios polo menos os atributos Data de nacemento ou Sexo. Requírese o país/rexión e polo menos a cidade (e o estado/provincia) ou o código postal. Recomendamos que a data de nacemento se converta ao tipo DateTime durante a inxestión de datos. Alternativamente, pode ser unha cadea en [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato "aaaa-MM-dd" ou "aaaa-MM-ddTHH:mm:ss".
 
-Admítense os seguintes formatos e valores (os valores non diferencian entre maiúsculas e minúsculas):
+1. Seleccione **Seguinte** para concluír a asignación do campo.
 
-- **Data de nacemento**: Recomendamos que a data de nacemento sexa convertida ao tipo DateTime durante a inxestión de datos. Alternativamente, pode ser unha cadea en [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato "aaaa-MM-dd" ou "aaaa-MM-ddTHH:mm:ss".
-- **Sexo**: Masculino, Feminino, Descoñecido.
-- **Código postal**: Códigos postales de cinco díxitos para Estados Unidos, código postal estándar en calquera outro lugar.
-- **Cidade**: Nome da cidade en inglés.
-- **Estado/Provincia**: Abreviatura de dúas letras para Estados Unidos e Canadá. Abreviación de dúas ou tres letras para Australia. Non se aplica a Francia, Alemaña ou Reino Unido.
-- **País/Rexión**:
+1. Proporcione un nome para o enriquecemento. O **Nome da entidade de saída** se selecciona automaticamente.
 
-  - EUA: Estados Unidos de América, Estados Unidos, EE. UU., EUA, EU
-  - CA: Canadá, CA
-  - RU: Reino Unido, RU, Gran Bretaña, GB, Reino Unido de Gran Bretaña e Irlanda do Norte, Reino Unido de Gran Bretaña
-  - AU: Australia, AU, Mancomunidade de Australia
-  - FR: Francia, FR, República Francesa
-  - DE: Alemaña, Alemán, Deutschland, Allemagne, DE, República Federal de Alemaña, República de Alemaña
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Revisión de intereses e nome de páxina.":::
 
-## <a name="review-and-name-the-enrichment"></a>Revisar e nomear o enriquecemento
+1. Seleccione **Gardar enriquecemento** despois de revisar as súas opcións.
 
-Finalmente, pode revisar a información e proporcionar un nome para o enriquecemento.
+1. Seleccione **Corre** para iniciar o proceso de enriquecemento ou pechar para volver ao **Enriquecementos** páxina.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Revisión de intereses e nome de páxina.":::
-
-## <a name="refresh-enrichment"></a>Actualizar o enriquecemento
-
-Execute o enriquecemento despois de configurar marcas, intereses e asignación de campos para os datos demográficos. Para iniciar o proceso, seleccione **Executar** na páxina de configuración da marca ou o interese. Ademais, pode deixar que o sistema execute o enriquecemento automaticamente como parte dunha actualización programada.
-
-Dependendo do tamaño dos datos dos seus clientes, a execución do enriquecemento pode levar uns minutos.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   Ao enriquecer perfís, enriqueceremos todos os perfís de clientes dos que obteñamos datos das marcas e intereses seleccionados, incluídos os perfís que non están no país ou rexión seleccionados. Por exemplo, se seleccionou Alemaña, enriqueceremos os perfís situados nos Estados Unidos se temos datos dispoñibles para as marcas e os intereses seleccionados nos Estados Unidos.
 
 ## <a name="enrichment-results"></a>Resultados de enriquecemento
 
-Despois de executar o proceso de enriquecemento, vaia a **Os meus enriquecementos** para revisar o número total de clientes enriquecidos e unha subdivisión de marcas ou intereses nos perfís de clientes enriquecidos.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Versión preliminar dos resultados despois de executar o proceso de enriquecemento.":::
 
-Atoparás un gráfico co número de perfís de clientes enriquecidos ao longo do tempo e vistas previas das entidades enriquecidas. Revisa os datos enriquecidos seleccionando **Ver máis** no **Nivel de afinidade** ou **Compartir de voz** gráficos. Os datos enriquecidos das marcas van para o **BrandAffinityFromMicrosoft** e **BrandShareOfVoiceFromMicrosoft** entidades. Os datos dos intereses están no **InterestAffinityFromMicrosoft** e **InterestShareOfVoiceFromMicrosoft** entidades. Tamén atopará estas entidades enumeradas no grupo **Enriquecemento** en **Datos** > **Entidades**.
+Os resultados inclúen **Nivel de afinidade** ou **Compartir de voz** gráficos.
+
+As entidades creadas a partir dos enriquecementos están listadas baixo o **Enriquecemento** grupo en **Datos** > **Entidades**. Os datos enriquecidos das marcas van para o **BrandAffinityFromMicrosoft** e **BrandShareOfVoiceFromMicrosoft** entidades. Os datos dos intereses están no **InterestAffinityFromMicrosoft** e **InterestShareOfVoiceFromMicrosoft** entidades.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Vexa datos de enriquecemento na tarxeta de cliente
 

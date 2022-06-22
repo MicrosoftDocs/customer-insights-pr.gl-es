@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833383"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011839"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure
 
 Este artigo explica como conectarse Dynamics 365 Customer Insights cunha Azure Data Lake Storage conta mediante un principal de servizo de Azure en lugar de claves de conta de almacenamento.
 
-As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes usar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un ambiente](create-environment.md).
+As ferramentas automatizadas que utilizan servizos de Azure sempre deben ter permisos restrinxidos. En lugar de ter aplicacións iniciadas como un usuario totalmente privilexiado, Azure ofrece entidades de seguranza do servizo. Podes utilizar os principais servizos de forma segura [engadir ou editar un cartafol do modelo de datos común como orixe de datos](connect-common-data-model.md) ou [crear ou actualizar un ambiente](create-environment.md).
 
 > [!IMPORTANT]
 >
@@ -51,7 +51,13 @@ Antes de crear un novo principal de servizo para Customer Insights, comprobe se 
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Conceder permisos á entidade de seguranza do servizo para acceder á conta de almacenamento
 
-Vaia ao portal de Azure para conceder permisos ao principal do servizo para a conta de almacenamento que quere usar en Customer Insights.
+Vaia ao portal de Azure para conceder permisos ao principal do servizo para a conta de almacenamento que quere usar en Customer Insights. Débese asignar un dos seguintes roles á conta de almacenamento ou contedor:
+
+|Credencial|Requirimentos|
+|----------|------------|
+|Usuario conectado actualmente|**Papel** : Storage Blob Data Reader, Storage Blob Contributor ou Storage Blob Owner.<br>**Nivel** : Os permisos pódense conceder na conta de almacenamento ou no contedor.</br>|
+|Director do servizo de información do cliente -<br>Usando Azure Data Lake Storage como orixe de datos</br>|Opción 1<ul><li>**Papel** : Storage Blob Data Reader, Storage Blob Data Contributor ou Storage Blob Data Owner.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>Opción 2 *(sen compartir o acceso principal do servizo á conta de almacenamento)*<ul><li>**Papel 1** : Storage Blob Data Reader, Storage Blob Data Contributor ou Storage Blob Data Owner.</li><li>**Nivel** : Débense conceder permisos no contedor.</li><li>**Papel 2** : Delegador de datos de Blob de almacenamento.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>|
+|Director do servizo de información do cliente - <br>Usando Azure Data Lake Storage como saída ou destino</br>|Opción 1<ul><li>**Papel** : Colaborador de datos de Storage Blob ou propietario de Storage Blob.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>Opción 2 *(sen compartir o acceso principal do servizo á conta de almacenamento)*<ul><li>**Papel** : Colaborador de datos de Storage Blob ou propietario de Storage Blob.</li><li>**Nivel** : Débense conceder permisos no contedor.</li><li>**Papel 2** : Delegador de Blob de almacenamento.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>|
 
 1. Vaia ao [Portal de administración de Azure](https://portal.azure.com) e inicie sesión na súa organización.
 
@@ -62,7 +68,7 @@ Vaia ao portal de Azure para conceder permisos ao principal do servizo para a co
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captura de pantalla que mostra o portal de Azure mentres se engade unha atribución de roles.":::
 
 1. No panel **Engadir atribución de roles**, estableza as seguintes propiedades:
-   - Función: **Colaborador de datos do BLOB de almacenamento**
+   - Función: lector de datos de blob de almacenamento, colaborador de blob de almacenamento ou propietario de blob de almacenamento segundo as credenciais indicadas anteriormente.
    - Asignar acceso a: **Usuario, grupo ou entidade de seguranza do servizo**
    - Seleccionar membros: **Dynamics 365 AI para Customer Insights** (o [principal do servizo](#create-a-new-service-principal) buscaches anteriormente neste procedemento)
 
