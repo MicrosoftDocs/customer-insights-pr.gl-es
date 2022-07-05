@@ -1,6 +1,6 @@
 ---
-title: Ver perfís de clientes
-description: Obteña unha vista combinada dos seus datos de clientes unificados.
+title: Perfís de clientes
+description: Consulta os datos unificados dos teus clientes, incluíndo a busca e o filtro
 ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,18 +14,18 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 279c8e1291c6449005d593244f1979e871610a77
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947044"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052187"
 ---
 # <a name="customer-profiles"></a>Perfís de clientes
 
 A páxina **Clientes** mostra unha vista combinada dos perfís de clientes unificados. Os perfís dos clientes están dispoñibles unha vez que vostede [creou a entidade de cliente unificado](data-unification.md). A páxina permítelle buscar clientes e definir o índice para esa busca.
 
-Os clientes poden ser persoas ou organizacións. Cada perfil de cliente está representado por un mosaico. Use os controis de paxinación para obter máis rexistros. A tarxeta mostra campos da entidade *Cliente* definida no **Índice de busca e filtro**. A orde dos campos dentro de cada tarxeta é escollida polo sistema.
+Os clientes poden ser persoas ou organizacións. Cada perfil de cliente está representado por un mosaico. Use os controis de paxinación para obter máis rexistros. A tarxeta mostra campos da entidade *Cliente* definida no **Índice de busca e filtro**. O sistema elixe a orde dos campos dentro de cada tarxeta.
 
 Seleccione un mosaico para ver os datos do cliente seleccionado nunha páxina dedicada chamada [Páxina de detalles do cliente](customer-profiles.md#customer-details-page).
 

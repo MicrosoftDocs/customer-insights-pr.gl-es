@@ -1,5 +1,5 @@
 ---
-title: Entidades e conxuntos de datos
+title: Entidades en Customer Insights
 description: Vexa os datos na páxina de entidades.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: c1094bc2f6d137087b317ed20d0615289d6f1187
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4abb7704710ac269a4f3c9463fe905fa6eec3234
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642696"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082720"
 ---
 # <a name="entities-in-customer-insights"></a>Entidades en Customer Insights
 
@@ -59,7 +59,7 @@ Para saber máis sobre os datos inxeridos na entidade, a columna **Resumo** ofr�
 
   - **Nome do informe** : Nome do informe.
   - **Creado por** : Nome da persoa que creou a entidade.
-  - **Creado** : Data e hora de creación da entidade.
+  - **Creada** : Data e hora de creación da entidade.
   - **Editado por** : Nome da persoa que modificou a entidade.
   - **Editado** : Data e hora da modificación da entidade. 
 

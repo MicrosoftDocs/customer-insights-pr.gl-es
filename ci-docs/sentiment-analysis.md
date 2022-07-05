@@ -1,5 +1,5 @@
 ---
-title: Análise de sentimentos para comentarios dos clientes
+title: Analizar o sentimento dos comentarios dos clientes (vista previa)
 description: Aprende a usar un modelo de análise de sentimentos nos comentarios dos clientes en Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e51225bbfcd445180b12661cba12256c3f042045
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642750"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055534"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analiza o sentimento nos comentarios dos clientes (vista previa)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analizar o sentimento nos comentarios dos clientes (vista previa)
 
 Os clientes esperan produtos, servizos e experiencias de alta calidade nestes días. Especialmente os clientes que comparten os seus comentarios. É moi difícil para as organizacións analizar un volume crecente de datos sen reducir a precisión e un custo laboral máis elevado. Dynamics 365 Customer Insights ofrece un modelo de análise de sentimentos para os comentarios dos clientes que permite ás organizacións analizar os seus datos con máis precisión e a un custo menor.
 
@@ -31,9 +31,9 @@ Esta información pode axudarche a conseguir os seguintes resultados:
 - Identificar aspectos comerciais con problemas sinalados polos clientes  
 - Segmenta os clientes en función do seu sentimento para realizar campañas personalizadas con vendas, mercadotecnia e esforzos de apoio dirixidos
 - Optimice as operacións comerciais abordando áreas de preocupación ou oportunidades que foron mencionadas polos clientes
-- Recoñece os aspectos comerciais que o están facendo ben e premia aos clientes satisfeitos mediante programas de fidelización e promoción
+- Recoñece os aspectos comerciais que lles vai ben e premia aos clientes satisfeitos mediante programas de fidelización e promoción
 
-Para garantir que pode confiar nos resultados dos modelos, fornecemos información transparente sobre como toman decisións os modelos. Recibirás unha lista de palabras que afectaron á decisión dos modelos de asignar unha puntuación de sentimento ou un aspecto empresarial particular aos comentarios de comentarios.  
+Para garantir que pode confiar nos resultados dos modelos, fornecemos información transparente sobre como toman decisións os modelos. Recibirás unha lista de palabras que afectaron á decisión dos modelos de asignar unha puntuación de sentimento ou un aspecto empresarial en particular aos comentarios de comentarios.  
 
 Usamos dous **Modelos de procesamento da linguaxe natural (PNL).** : A primeira asigna a cada comentario de comentarios unha puntuación de sentimento. O segundo modelo asocia cada feedback con todos os aspectos comerciais aplicables. Os modelos están adestrados en datos públicos de fontes en redes sociais, venda polo miúdo, restaurantes, produtos de consumo e industrias do automóbil.    
   

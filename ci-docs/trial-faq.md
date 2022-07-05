@@ -1,5 +1,5 @@
 ---
-title: Preguntas frecuentes sobre a proba - Dynamics 365 Customer Insights
+title: Preguntas máis frecuentes sobre as probas de Dynamics 365 Customer Insights
 description: Solucións a preguntas comúns relacionadas coa configuración e a xestión de probas de Customer Insights. Aprenda a resolver problemas específicos da plataforma e das aplicacións.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 41f112466d54c9923d0daf7c55d343f9b5c81d98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011885"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051497"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntas máis frecuentes sobre as probas de Dynamics 365 Customer Insights
 

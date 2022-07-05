@@ -1,5 +1,5 @@
 ---
-title: Configuración do sistema en Customer Insights
+title: Configuración do sistema
 description: Obteña información acerca da configuración do sistema en Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,12 +15,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653614"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050669"
 ---
 # <a name="system-configuration"></a>Configuración do sistema
 
@@ -39,9 +39,9 @@ A páxina **Sistema** inclúe as seguintes pestanas:
 
 O **Ficha de estado** permítelle seguir o progreso das tarefas, a inxestión de datos, as exportacións de datos e outros procesos importantes do produto. Revisa a información desta pestana para garantir a integridade das túas tarefas e procesos activos.
 
-Esta pestana inclúe táboas con información de estado e procesamento de varios procesos. Cada táboa rastrexa o **Nome** da tarefa e a súa entidade correspondente, o **Estado** da súa execución máis recente e cando foi a **Última actualización**. Podes ver os detalles das últimas execucións seleccionando o nome da tarefa ou do proceso. 
+Esta pestana inclúe táboas con información de estado e procesamento de varios procesos. Cada táboa rastrexa o **Nome** da tarefa e a súa entidade correspondente, o **Estado** da súa execución máis recente e cando foi a **Última actualización**. Podes ver os detalles das últimas execucións seleccionando a tarefa ou o nome do proceso. 
 
-Seleccione o estado ao lado da tarefa ou do proceso **Estado** columna para abrir **Detalles do progreso** panel.
+Seleccione o estado a carón da tarefa ou proceso no ficheiro **Estado** columna para abrir **Detalles do progreso** panel.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Panel de detalles do progreso do sistema":::
 
@@ -85,7 +85,7 @@ A actualización de tarefas e procesos execútase segundo o [horario configurado
 |Sistema   |Depende da finalización do proceso de coincidencia. Os segmentos, medidas, enriquecemento, busca, actividades, predicións e preparación de datos dependen da correcta finalización deste proceso.   |
 |User  |Funciona manualmente (actualización única). Depende das entidades.  |
 
-Seleccione o estado dun proceso para ver os detalles do progreso de todo o traballo no que se atopaba. Os procesos de actualización anteriores poden axudar a comprender o que podes facer para abordar a **Omitido** ou **En cola** tarefa ou proceso.
+Seleccione o estado dun proceso para ver os detalles do progreso de todo o traballo no que estaba. Os procesos de actualización anteriores poden axudar a comprender o que podes facer para abordar a **Omitido** ou **En cola** tarefa ou proceso.
 
 ## <a name="schedule-tab"></a>Separador de programación
 

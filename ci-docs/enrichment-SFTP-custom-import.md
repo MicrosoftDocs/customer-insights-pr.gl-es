@@ -1,5 +1,5 @@
 ---
-title: Enriquecemento con importación personalizada de SFTP
+title: Enriquece os perfís de clientes coa importación personalizada SFTP (vista previa)
 description: Información xeral sobre o enriquecemento con importación personalizada de SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953717"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082321"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer perfís de clientes con datos personalizados (vista previa)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enriquece os perfís de clientes coa importación personalizada SFTP (vista previa)
 
 A importación personalizada co protocolo seguro de transferencia de ficheiros (SFTP) permítelle importar datos que non teñen que pasar polo proceso de unificación de datos. É un xeito flexible, seguro e sinxelo de incorporar os seus datos. A importación personalizada de SFTP pode usarse en combinación coa [exportación de SFTP](export-sftp.md) que lle permite exportar os datos do perfil do cliente necesarios para o enriquecemento. Despois pódense procesar e enriquecer os datos e utilizar a importación personalizada SFTP para devolver os datos enriquecidos a Dynamics 365 Customer Insights.
 
@@ -27,7 +27,7 @@ A importación personalizada co protocolo seguro de transferencia de ficheiros (
 
 - Un SFTP [conexión](connections.md) é [configurado](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="file-schema-example"></a>Exemplo de esquema de ficheiros
+## <a name="file-schema-example"></a>Exemplo de esquema de ficheiro
 
 O directorio que contén o ficheiro que se vai importar no servidor SFTP tamén debe conter un ficheiro *model.json*. Este ficheiro define o esquema que se vai usar para importar os datos. O esquema ten que empregar o [modelo de datos común](/common-data-model/) para especificar a asignación de campos. Un exemplo sinxelo de ficheiro model.json ten este aspecto:
 
@@ -91,7 +91,7 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten as
 
 ### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 
-Cando habilitas Dynamics 365 Customer Insights para transmitir datos mediante Importación personalizada, permite a transferencia de datos fóra do límite de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de asegurarse de que os datos cumpran coas obrigas de privacidade ou de seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Cando habilitas Dynamics 365 Customer Insights para transmitir datos mediante Importación personalizada, permite a transferencia de datos fóra dos límites de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de garantir que os datos cumpran coas obrigas de privacidade ou de seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="configure-the-import"></a>Configurar a importación
@@ -120,7 +120,7 @@ O administrador de Dynamics 365 Customer Insights pode eliminar este enriqueceme
 
 1. Seleccione **Corre** para iniciar o proceso de enriquecemento ou pechar para volver ao **Enriquecementos** páxina.
 
-## <a name="enrichment-results"></a>Resultados de enriquecemento
+## <a name="view-enrichment-results"></a>Ver resultados de enriquecemento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

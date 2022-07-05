@@ -1,6 +1,6 @@
 ---
-title: Traia a súa propia key vault de Azure para xestionar segredos
-description: Aprenda a configurar Customer Insights para usar a súa propia key vault de Azure.
+title: Traia a súa propia key vault de Azure (versión preliminar)
+description: Aprende a configurar Customer Insights para utilizar a túa propia bóveda de claves de Azure para xestionar os segredos.
 ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
-ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
+ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "8763577"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082636"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Traia a súa propia key vault de Azure (versión preliminar)
 
@@ -97,7 +97,7 @@ Os valores anteriores son o mínimo para enumerar e ler durante a execución.
 
 ### <a name="azure-role-based-access-control"></a>Control de acceso baseado en funcións de Azure
 
-Engadiranse os roles de usuario Key Vault Reader e Key Vault Secrets para Customer Insights. Para obter máis detalles sobre estes roles, vaia a [Funcións integradas de Azure para operacións de plano de datos de Key Vault](/azure/key-vault/general/rbac-guide?tabs=azure-cli).
+Engadiranse os roles de usuario de Key Vault Reader e Key Vault Secrets para Customer Insights. Para obter máis detalles sobre estes roles, vaia a [Funcións integradas de Azure para operacións de plano de datos de Key Vault](/azure/key-vault/general/rbac-guide?tabs=azure-cli).
 
 ## <a name="recommendations"></a>Recomendacións
 

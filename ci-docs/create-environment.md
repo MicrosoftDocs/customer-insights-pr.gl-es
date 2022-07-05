@@ -1,6 +1,6 @@
 ---
-title: Como - Crear un novo ambiente
-description: Pasos para crear ambientes con for Dynamics 365 Customer Insights.
+title: 'Como: Crear un novo ambiente'
+description: Pasos para crear ambientes en Dynamics 365 Customer Insights.
 ms.date: 05/31/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 62969527ceed906ff06fb9be90b972496323ce0a
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011609"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052743"
 ---
 # <a name="how-to-create-a-new-environment"></a>Como: Crear un novo ambiente
 
@@ -59,7 +59,7 @@ No **Almacenamento de datos** paso, escolla onde almacenar os datos de Customer 
 
 Hai dúas opcións nas que podes escoller:
 
-- **Almacenamento de datos de clientes** : O equipo de Customer Insights xestiona o almacenamento de datos. É a opción predeterminada e, a menos que existan requisitos específicos para almacenar datos na túa propia conta de almacenamento, recomendámosche usar esta opción.
+- **Almacenamento de datos de clientes** : O equipo de Customer Insights xestiona o almacenamento de datos. É a opción predeterminada e, a menos que existan requisitos específicos para almacenar datos na túa propia conta de almacenamento, recomendámosche que utilices esta opción.
 - **Azure Data Lake Storage**: Especifique o seu Azure Data Lake Storage para almacenar os datos para que teña control total onde se almacenan os datos. Para obter máis información, consulte [Usa o teu propio Azure Data Lake Storage conta](own-data-lake-storage.md).
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Escolla a opción preferida para almacenar os seus datos.":::
@@ -73,7 +73,7 @@ Deixa este campo baleiro se non tes o teu Dataverse ambiente e crearemos un para
 
 Para obter máis información, consulte [Traballa cos datos de Customer Insights en Microsoft Dataverse](customer-insights-dataverse.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="compartición de datos con Microsoft Dataverse habilitado automaticamente para novos entornos nets.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="compartición de datos con Microsoft Dataverse activado automaticamente para novos entornos nets.":::
 
 ### <a name="step-4-finalize-the-settings"></a>Paso 4: Finalizar a configuración
 
@@ -121,7 +121,7 @@ Cando copies a configuración do ambiente, tes que seguir algúns pasos adiciona
 - Perfís de clientes. En primeiro lugar, autentica e inxerir as túas fontes de datos e executa a unificación de datos para recrear os perfís de clientes.
 - Credenciais da orixe de datos. Ten que proporcionar as credenciais para cada orixe de datos para autenticar e actualizar as fontes de datos manualmente.
 - Fontes de datos do cartafol Common Data Model e Dataverse. Ten que crear esas fontes de datos manualmente co mesmo nome que no contorno de orixe.
-- Segredos de conexión que se utilizan para exportacións e enriquecementos. Ten que reautenticar as conexións e despois reactivar os enriquecementos e as exportacións.
+- Segredos de conexión que se utilizan para exportacións e enriquecementos. Ten que volver autenticar as conexións e despois reactivar os enriquecementos e as exportacións.
 
 Verá unha mensaxe de confirmación cando se crea o ambiente copiado. Seleccione **Ir a orixes de datos** para ver a lista de orixes de datos.
 

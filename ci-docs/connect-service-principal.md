@@ -1,5 +1,5 @@
 ---
-title: Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo
+title: Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure
 description: Use unha entidade de servizo de Azure para conectar co seu propio lago de datos.
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011839"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082237"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar cunha conta de Azure Data Lake Storage empregando unha entidade de servizo de Azure
 
@@ -56,8 +56,8 @@ Vaia ao portal de Azure para conceder permisos ao principal do servizo para a co
 |Credencial|Requirimentos|
 |----------|------------|
 |Usuario conectado actualmente|**Papel** : Storage Blob Data Reader, Storage Blob Contributor ou Storage Blob Owner.<br>**Nivel** : Os permisos pódense conceder na conta de almacenamento ou no contedor.</br>|
-|Director do servizo de información do cliente -<br>Usando Azure Data Lake Storage como orixe de datos</br>|Opción 1<ul><li>**Papel** : Storage Blob Data Reader, Storage Blob Data Contributor ou Storage Blob Data Owner.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>Opción 2 *(sen compartir o acceso principal do servizo á conta de almacenamento)*<ul><li>**Papel 1** : Storage Blob Data Reader, Storage Blob Data Contributor ou Storage Blob Data Owner.</li><li>**Nivel** : Débense conceder permisos no contedor.</li><li>**Papel 2** : Delegador de datos de Blob de almacenamento.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>|
-|Director do servizo de información do cliente - <br>Usando Azure Data Lake Storage como saída ou destino</br>|Opción 1<ul><li>**Papel** : Colaborador de datos de Storage Blob ou propietario de Storage Blob.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>Opción 2 *(sen compartir o acceso principal do servizo á conta de almacenamento)*<ul><li>**Papel** : Colaborador de datos de Storage Blob ou propietario de Storage Blob.</li><li>**Nivel** : Débense conceder permisos no contedor.</li><li>**Papel 2** : Delegador de Blob de almacenamento.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>|
+|Director do servizo de Customer Insights -<br>Usando Azure Data Lake Storage como orixe de datos</br>|Opción 1<ul><li>**Papel** : Storage Blob Data Reader, Storage Blob Data Contributor ou Storage Blob Data Owner.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>Opción 2 *(sen compartir o acceso principal do servizo á conta de almacenamento)*<ul><li>**Papel 1** : Storage Blob Data Reader, Storage Blob Data Contributor ou Storage Blob Data Owner.</li><li>**Nivel** : Débense conceder permisos no contedor.</li><li>**Papel 2** : Delegador de datos de Blob de almacenamento.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>|
+|Director do servizo de Customer Insights - <br>Usando Azure Data Lake Storage como saída ou destino</br>|Opción 1<ul><li>**Papel** : Colaborador de datos de Storage Blob ou propietario de Storage Blob.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>Opción 2 *(sen compartir o acceso principal do servizo á conta de almacenamento)*<ul><li>**Papel** : Colaborador de datos de Storage Blob ou propietario de Storage Blob.</li><li>**Nivel** : Débense conceder permisos no contedor.</li><li>**Papel 2** : Delegador de Blob de almacenamento.</li><li>**Nivel** : Débense conceder permisos na conta de almacenamento.</li></ul>|
 
 1. Vaia ao [Portal de administración de Azure](https://portal.azure.com) e inicie sesión na súa organización.
 

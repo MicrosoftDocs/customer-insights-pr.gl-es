@@ -1,34 +1,35 @@
 ---
-title: Exporta datos de Customer Insights a Braze
+title: Exportar segmentos a Braze (vista previa)
 description: Obtén información sobre como configurar a conexión e exportar a Braze.
-ms.date: 03/29/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bfc9b34506dc3385b5edf12b31e74d05f2d20655
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642546"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082678"
 ---
-# <a name="export-segment-lists-to-braze-preview"></a>Exportar listas de segmentos a Braze (vista previa)
+# <a name="export-segments-to-braze-preview"></a>Exportar segmentos a Braze (vista previa)
 
 Exporta segmentos de perfís de clientes unificados a Braze e utilízaos para actividades de mercadotecnia.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   Tes un [Conta Braze](https://www.braze.com/) e as correspondentes credenciais de administrador.
--   Tes [segmentos configurados](segments.md) en Customer Insights.
--   Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico e un ID de cliente Braze. 
+- A [Conta Braze](https://www.braze.com/) e as correspondentes credenciais de administrador.
+- Existente [segmentos en Braze](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+- [Segmentos configurados](segments.md) en Customer Insights.
+- Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico e un ID de cliente Braze.
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
 - A exportación a Braze está limitada a segmentos.
-- A exportación de ata 1 millón de perfís de clientes a Braze pode levar ata 40 minutos. 
+- A exportación de ata 1 millón de perfís de clientes a Braze pode levar ata 40 minutos.
 - O número de perfís de clientes que podes exportar a Braze depende e limitado do teu contrato con Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Configura a conexión con Braze
@@ -41,7 +42,7 @@ Exporta segmentos de perfís de clientes unificados a Braze e utilízaos para ac
 
 1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Proporciona o teu [Chave API Braze](https://www.braze.com/docs/api/basics/) para continuar iniciando sesión. 
+1. Proporciona o teu [Chave API Braze](https://www.braze.com/docs/api/basics/) para continuar iniciando sesión.
 
 1. Seleccione **Estou de acordo** para confirmar a **Privacidade e cumprimento dos datos**.
 
@@ -59,9 +60,13 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Seleccione **Engadir destino** para crear unha nova exportación.
 
-1. No **Conexión para exportación** campo, escolla unha conexión na sección Braze. Se non ve o nome desta sección, non hai conexións deste tipo dispoñibles para vostede.  
+1. No **Conexión para exportación** campo, escolla unha conexión na sección Braze. Se non ves esta sección, non hai conexións deste tipo dispoñibles.  
 
-3. No **Correspondencia de datos** sección, na **Correo electrónico** campo, seleccione o campo que representa o enderezo de correo electrónico dun cliente, no campo "ID de cliente", seleccione o campo que representa o ID de Braze do cliente. É necesario exportar segmentos a Braze. Os segmentos en Braze crearanse co mesmo nome do segmento que en Dynamics 365 Customer Insights. Pode escoller campos adicionais e opcionais para os datos coincidentes. 
+1. Engadir a **Nome para mostrar** para a súa exportación.
+
+1. Engade o identificador da API do segmento Braze ao que queres exportar **Identificador de API de segmento Braze** campo. Podes atopar o identificador nos detalles do segmento na plataforma Braze.
+
+1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. No **ID de cliente** campo, seleccione o campo que representa o ID de Braze do cliente. É necesario exportar segmentos a Braze. Podes escoller máis campos opcionalmente.
 
 1. Seleccione **Gardar**.
 

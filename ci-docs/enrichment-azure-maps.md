@@ -1,5 +1,5 @@
 ---
-title: Enriquecer os perfís de clientes con datos de localización de Azure Maps
+title: Enriquece os perfís de clientes con datos de localización de Azure Maps (vista previa)
 description: Información xeral sobre o enriquecemento propio de Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953626"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052605"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enriquecemento de perfís de clientes con Azure Maps (vista previa)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Enriquece os perfís de clientes con datos de localización de Azure Maps (vista previa)
 
 Azure Maps ofrece datos e servizos centrados na localización para ofrecer experiencias baseadas en datos xeoespaciais con intelixencia de localización integrada. Os servizos de enriquecemento de datos de Azure Maps melloran a precisión da información de localización dos seus clientes. Trae capacidades como a normalización de enderezos e a extracción de latitude e lonxitude a Dynamics 365 Customer Insights.
 
@@ -82,7 +82,7 @@ O administrador de Dynamics 365 Customer Insights pode eliminar este enriqueceme
 
 1. Seleccione **Corre** para iniciar o proceso de enriquecemento ou pechar para volver ao **Enriquecementos** páxina.
 
-## <a name="enrichment-results"></a>Resultados de enriquecemento
+## <a name="view-enrichment-results"></a>Ver resultados de enriquecemento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,21 +1,21 @@
 ---
-title: Exportar datos de Customer Insights a Azure Synapse Analytics
+title: Exportar datos a Azure Synapse Analytics (vista previa)
 description: Aprende a configurar a conexión a Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741501"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082867"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar datos a Azure Synapse Analytics (Vista previa)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar datos a Azure Synapse Analytics (vista previa)
 
 Azure Synapse é un servizo de análise que acelera o tempo para obter información en almacéns e grandes sistemas de datos. Pode inxerir e usar os seus datos de Customer Insights en [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -34,7 +34,7 @@ En Azure:
 
 - Unha subscrición de Azure activa.
 
-- Se utiliza un novo Azure Data Lake Storage Conta Gen2, o *principal de servizo para Customer Insights* necesidades **Colaborador de datos de Blob de almacenamento** permisos. Máis información sobre [conectando a un Azure Data Lake Storage Conta Gen2 co servizo principal de Azure para Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
+- Se utiliza un novo Azure Data Lake Storage Conta Gen2, o *principal de servizo para Customer Insights* necesidades **Colaborador de datos de Blob de almacenamento** permisos. Máis información sobre [conectando a un Azure Data Lake Storage Conta Gen2 co principal de servizo de Azure para Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
 
 - No grupo de recursos onde se atopa Azure Synapse o espazo de traballo está situado, o *principal do servizo* e o *Azure AD usuario con permisos de administrador en Customer Insights* deben ser asignados polo menos **Lector** permisos. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 
@@ -72,13 +72,13 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. No **Conexión para exportación** campo, escolla unha conexión entre **Azure Synapse Analytics** sección. Se non ve o nome desta sección, non hai [conexións](connections.md) deste tipo dispoñibles para vostede.
 
-1. Proporcione un **Nome para mostrar** recoñecible para a exportación e un **Nome da base de datos**.
+1. Proporcione un **Nome para mostrar** recoñecible para a exportación e un **Nome da base de datos**. A exportación creará unha nova [Azure Synapse base de datos do lago](/azure/synapse-analytics/database-designer/concepts-lake-database) no espazo de traballo definido na conexión.
 
 1. Seleccione as entidades ás que desexa exportar Azure Synapse Analytics.
    > [!NOTE]
    > As orixes de datos baseadas nun [cartafol de Common Data Model](connect-common-data-model.md) non son compatibles.
 
-2. Seleccione **Gardar**.
+1. Seleccione **Gardar**.
 
 Ao gardar unha exportación non se executa a exportación inmediatamente.
 

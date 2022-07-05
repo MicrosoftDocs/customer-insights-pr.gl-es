@@ -1,5 +1,5 @@
 ---
-title: Exportar datos de Customer Insights a Dynamics 365 Sales
+title: Exportar segmentos a Dynamics 365 Sales (vista previa)
 description: Aprenda a configurar a conexión e exportar a Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642636"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082384"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Usar segmentos en Dynamics 365 Sales (versión preliminar)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Exportar segmentos a Dynamics 365 Sales (vista previa)
 
 Use os datos dos clientes para crear listas de márketing, realizar o seguimento de fluxos de traballo e enviar promocións con Dynamics 365 Sales.
 
@@ -31,7 +29,7 @@ Use os datos dos clientes para crear listas de márketing, realizar o seguimento
 
 ## <a name="prerequisite-for-connection"></a>Requisito previo para a conexión
 
-1. Os rexistros de contacto deben estar presentes en Dynamics 365 Sales antes de poder exportar un segmento de Customer Insights a Sales. Lea máis información sobre como inxerir contactos desde [Dynamics 365 Sales usando Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Os rexistros de contacto deben estar presentes en Dynamics 365 Sales antes de poder exportar un segmento de Customer Insights a Sales. Lea máis sobre como inxerir contactos desde [Dynamics 365 Sales usando Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > A exportación de segmentos de Customer Insights a Sales non creará novos rexistros de contactos nas instancias de Sales. Os rexistros de contacto de Sales deben inxerirse en Customer Insights e utilizarse como orixe de datos. Tamén deben incluírse na entidade de cliente unificada para asignar os ID de clientes a ID de contacto antes de que os segmentos poidan ser exportados.

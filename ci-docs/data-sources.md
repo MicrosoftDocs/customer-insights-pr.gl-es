@@ -1,7 +1,7 @@
 ---
-title: Usar fontes de datos para inxerir datos
-description: Aprenda a importar datos de varias orixes.
-ms.date: 05/31/2022
+title: Visión xeral de orixes de datos
+description: Aprende a importar ou inxerir datos de varias fontes.
+ms.date: 05/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011747"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051451"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
@@ -48,7 +48,7 @@ Se o teu ambiente estaba configurado para usar o almacenamento de Customer Insig
 > [!NOTE]
 > Todas as entidades poden ser vistas e usadas por outros usuarios. Aínda que as fontes de datos son propiedade do usuario que as creou, as entidades resultantes da inxestión de datos poden ser utilizadas por todos os usuarios de Customer Insights.
 
-Se o teu ambiente non utiliza Power Platform fluxos de datos, o **Fontes de datos** páxina contén só unha lista de todas as fontes de datos. Non se mostran seccións.
+Se o teu ambiente non usa Power Platform fluxos de datos, o **Fontes de datos** páxina contén só unha lista de todas as fontes de datos. Non se mostran seccións.
 
 Ir a **Datos** > **Fontes de datos** para ver o nome de cada orixe de datos inxerido, o seu estado e a última vez que se actualizaron os datos desa fonte. Pode ordenar a lista de fontes de datos por cada columna.
 
@@ -74,7 +74,7 @@ Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
 
 ## <a name="delete-a-data-source"></a>Eliminar unha orixe de datos
 
-Un orixe de datos só se pode eliminar se os datos non se usan en ningún procesamento como a unificación, a información, as activacións ou as exportacións.
+Un orixe de datos só se pode eliminar se os datos non se utilizan en ningún procesamento, como unificación, información, activacións ou exportacións.
 
 1. Vaia a **Datos** > **Orixes de datos**.
 

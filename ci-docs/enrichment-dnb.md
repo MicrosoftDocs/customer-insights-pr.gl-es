@@ -1,5 +1,5 @@
 ---
-title: Enriquecemento dos perfís de empresas con Dun & Bradstreet
+title: Enriquece os perfís da empresa con Dun & Bradstreet (versión previa)
 description: Información xeral sobre o enriquecemento de terceiros de Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953889"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082552"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Enriquecemento dos perfís da empresa con Dun & Bradstreet (Vista previa)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Enriquece os perfís da empresa con Dun & Bradstreet (versión previa)
 
 Dun & Bradstreet ofrece datos comerciais, análises e información para empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
 
@@ -33,7 +33,7 @@ Como usuario con licenza de Dun & Bradstreet, podes configurar un proxecto en [D
 
 1. Iniciar sesión en [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights). Para recuperar as credenciais, [restaura o teu contrasinal](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights).
 
-1. Descargar [o noso ficheiro de modelo csv](https://c360devenrichment.blob.core.windows.net/mapping/DnBCIdatamapping.csv) que se utilizará para asignar os campos de Customer Insights aos campos correspondentes de Dun & Bradstreet.
+1. Descargar [o noso ficheiro de modelo csv](https://c360devenrichment.blob.core.windows.net/mapping/DnBCIdatamapping.csv) que se utilizará para mapear os campos de Customer Insights cos campos correspondentes de Dun & Bradstreet.
 
 1. Cargue o ficheiro no **Cargar datos** paso da experiencia de creación de proxectos Dun & Bradstreet.
 
@@ -102,7 +102,7 @@ Actualmente admitimos as seguintes opcións de país/rexión: Canadá (inglés) 
 
 1. Seleccione **Corre** para iniciar o proceso de enriquecemento ou pechar para volver ao **Enriquecementos** páxina.
 
-## <a name="enrichment-results"></a>Resultados de enriquecemento
+## <a name="view-enrichment-results"></a>Ver resultados de enriquecemento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

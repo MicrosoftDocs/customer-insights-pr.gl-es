@@ -1,5 +1,5 @@
 ---
-title: Enriquece os perfís de clientes con datos de Microsoft Office 365
+title: Enriquece os perfís de clientes con datos de Microsoft Office 365 (vista previa)
 description: Usa datos propietarios de Microsoft Office para enriquecer os seus perfís de clientes con datos de compromiso.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954131"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055672"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enriquece os perfís de clientes con datos de compromiso (vista previa)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Enriquece os perfís de clientes con datos de Microsoft Office 365 (vista previa)
 
 Usa datos de Microsoft Office 365 para enriquecer os perfís da túa conta de cliente con información sobre compromisos mediante Office 365 aplicacións. Os datos de participación consisten en correo electrónico e actividade de reunións, que se agregan a nivel de conta. Por exemplo, o número de correos electrónicos dunha conta empresarial ou o número de reunións coa conta. Non se facilitan datos sobre usuarios individuais.
 
@@ -65,23 +65,23 @@ Consentimento dun Office 365 O administrador do inquilino é necesario para acti
 
 ## <a name="running-the-enrichment-for-the-first-time"></a>Realizando o enriquecemento por primeira vez
 
-Cando se inicia o enriquecemento por primeira vez, despois do Office 365 O administrador do inquilino deu o seu consentimento para descargar os datos de Office 365 comeza. Este proceso leva algún tempo. A primeira carreira de enriquecemento programarase cun atraso de seis horas. Podes ver o número de días que cobren os datos na páxina de descrición xeral da participación na conta despois de que remate o enriquecemento. Cun gran volume de datos, volve executar o enriquecemento despois duns días. Asegura que os datos estean completos durante toda a xanela de tempo, que é dun ano.
+Cando se inicia o enriquecemento por primeira vez, despois do Office 365 O administrador do inquilino deu o seu consentimento para descargar os datos de Office 365 comeza. Este proceso leva algún tempo. A primeira carreira de enriquecemento programarase cun atraso de seis horas. Podes ver o número de días que cobren os datos na páxina de descrición xeral do compromiso da conta despois de que remate o enriquecemento. Cun gran volume de datos, volve executar o enriquecemento despois duns días. Asegura que os datos estean completos durante toda a xanela de tempo, que é dun ano.
 
 Dependendo do tamaño dos teus datos de Office, pode tardar varias horas en completarse.
 
-Cando executa un enriquecemento, Microsoft procesará os datos dentro do Office 365 límite de cumprimento para crear coñecementos agregados, que despois se engaden ao seu contorno de Customer Insights. Non hai datos a nivel individual (por exemplo, o corpo de ningún correo electrónico ou invitación do calendario) que están dispoñibles para os usuarios de Customer Insights.
+Cando executa un enriquecemento, Microsoft procesará os datos dentro do Office 365 límite de cumprimento para crear información agregada, que despois se engaden ao seu contorno de Customer Insights. Non hai datos a nivel individual (por exemplo, o corpo de ningún correo electrónico ou invitación do calendario) que están dispoñibles para os usuarios de Customer Insights.
 
 Seleccione **Corre** para iniciar o proceso de enriquecemento.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Resultados de enriquecemento
+## <a name="view-enrichment-results"></a>Ver resultados de enriquecemento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Este é o *Oficina* entidade. O *Office_UserEntity* contén os ID de Active Directory para os enderezos de correo electrónico que se escolleron durante a configuración do enriquecemento.
 
 :::image type="content" source="media/enrichment-office-results-overview.png" alt-text="Versión preliminar dos resultados despois de executar o proceso de enriquecemento.":::
 
-Todos os datos son agregados ata o nivel de conta. O sistema calcula unha puntuación de compromiso, que varía de 0 a 100, para cada conta. A puntuación do compromiso proporciona unha medida composta do compromiso da conta entre correos electrónicos e reunións en relación coas outras contas. A seguinte lista contén os datos agregados que proporciona o enriquecemento da conta:
+Todos os datos son agregados ata o nivel de conta. O sistema calcula unha puntuación de compromiso, que varía de 0 a 100, para cada conta. A puntuación do compromiso proporciona unha medida composta do compromiso da conta entre correos electrónicos e reunións en relación ás túas outras contas. A seguinte lista contén os datos agregados que proporciona o enriquecemento da conta:
 
 | Datos                                                                              | Nome da columna                              |
 | :-------------------------------------------------------------------------------- |:---------------------------------------- |

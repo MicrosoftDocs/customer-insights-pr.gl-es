@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642753"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083140"
 ---
 # <a name="semantic-mappings-preview"></a>Asignacións semánticas (versión preliminar)
 
@@ -98,7 +98,7 @@ En **Datos** > **Asignacións semánticas (vista previa)**, pode ver todas as as
 Despois de crear un *Perfil de contacto* mapeo de entidades semánticas, pode capturar actividades dos contactos. Permítelle ver na cronoloxía da actividade dunha conta que contacto foi o responsable de cada actividade. A maioría dos pasos seguen a configuración típica de mapeo de actividade.
 
    > [!NOTE]
-   > Para que funcionen as actividades de nivel de contacto, debes ter as dúas **ID da conta** e **ContactID** atributos para cada rexistro dentro dos seus datos de actividade.
+   > Para que as actividades de contacto funcionen, debes ter as dúas **ID da conta** e **ContactID** atributos para cada rexistro dentro dos seus datos de actividade.
 
 1. [Definir a *Perfil de contacto* mapeamento de entidades semánticas.](#define-a-contactprofile-semantic-entity-mapping) E executa o mapeo semántico.
 

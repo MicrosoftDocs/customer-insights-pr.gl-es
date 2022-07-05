@@ -1,7 +1,7 @@
 ---
-title: Inxerir datos a través de a Power Query conector (contén vídeo)
-description: Conectores para fontes de datos baseados en Power Query.
-ms.date: 05/09/2022
+title: Conectar a a Power Query orixe de datos (contén vídeo)
+description: Inxerir datos a través de a Power Query conector (contén vídeo).
+ms.date: 06/13/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: b99c3b446e580f455f9678d54d9db414aea9b331
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011655"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082174"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar a a Power Query orixe de datos
 
@@ -73,7 +73,7 @@ Fontes de datos que se crean despois de asociar a Dataverse ambiente co uso de C
 As pasarelas de datos dun xa existente contorno de Power BI ou Power Apps serán visibles e pode reutilizalas en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Microsoft Power Platform onde pode ver e configurar pasarelas de datos locais.
 
 > [!IMPORTANT]
-> Asegúrate de que as túas pasarelas estean actualizadas á versión máis recente. Pode instalar unha actualización e reconfigurar unha pasarela a partir dunha solicitude que aparece na pantalla da pasarela directamente ou [descarga a última versión](https://powerapps.microsoft.com/downloads/). Se non utilizas a última versión da pasarela, a actualización do fluxo de datos falla con mensaxes de erro como **Non se admite a palabra clave: propiedades de configuración. Nome do parámetro: palabra clave**.
+> Asegúrate de que as túas pasarelas estean actualizadas á versión máis recente. Pode instalar unha actualización e reconfigurar unha pasarela desde unha solicitude que se mostra na pantalla da pasarela directamente ou [descarga a última versión](https://powerapps.microsoft.com/downloads/). Se non utilizas a última versión da pasarela, a actualización do fluxo de datos falla con mensaxes de erro como **Non se admite a palabra clave: propiedades de configuración. Nome do parámetro: palabra clave**.
 
 ## <a name="edit-power-query-data-sources"></a>Editar Power Query fontes de datos
 

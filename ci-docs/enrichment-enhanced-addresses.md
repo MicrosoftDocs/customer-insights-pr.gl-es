@@ -1,5 +1,5 @@
 ---
-title: Enriquecemento de mellora de enderezos (contén vídeo)
+title: Enriquece os perfís de clientes con enderezos mellorados (contén vídeo)
 description: Enriqueza e normalice a información dos enderezos dos perfís de clientes cos modelos de Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953809"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082069"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecemento dos perfís de clientes con enderezos mellorados
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Enriquece os perfís de clientes con enderezos mellorados
 
 Os enderezos dos seus datos poden estar sen estruturar, incompletos ou ser incorrectos. Use os modelos de Microsoft para normalizar e enriquecer os seus enderezos en [formato Common Data Model](/common-data-model/schema/core/applicationcommon/address) para unha mellor precisión e información.
 
@@ -101,7 +101,7 @@ Actualmente admitimos enderezos enriquecidos nestes países ou rexións:
 
 1. Seleccione **Gardar enriquecemento** despois de revisar as súas opcións.
 
-## <a name="enrichment-results"></a>Resultados de enriquecemento
+## <a name="view-enrichment-results"></a>Ver resultados de enriquecemento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
@@ -112,8 +112,8 @@ O **Número de clientes enriquecidos por campo** proporciona un detalle da cober
 O **Os clientes cambian a visión xeral** A tarxeta mostra detalles sobre a cobertura do enriquecemento:
 
 - **Enderezos procesados e modificados** : O número de perfís de clientes con enderezos que se enriqueceron con éxito.
-- **Enderezos procesados e non modificados** : O número de perfís de clientes con enderezos recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
-- **Enderezos non procesados e non modificados** : número de perfís con enderezos que non foron recoñecidos. Normalmente para datos de entrada que non son válidos ou non admitidos polo enriquecemento.
+- **Enderezos procesados e non modificados** : O número de perfís de clientes con enderezos que foron recoñecidos pero non modificados. Normalmente ocorre cando os datos de entrada son válidos e non se poden mellorar co enriquecemento.
+- **Enderezos non procesados e non modificados** : número de perfís con enderezos que non foron recoñecidos. Normalmente para datos de entrada non válidos ou non admitidos polo enriquecemento.
 
 ## <a name="next-steps"></a>Pasos seguintes
 

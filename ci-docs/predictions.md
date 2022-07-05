@@ -1,5 +1,5 @@
 ---
-title: Completar datos parciais mediante predicións
+title: Complete os seus datos parciais con predicións
 description: Utilice predicións para cubrir datos de clientes incompletos.
 ms.date: 11/01/2021
 ms.subservice: audience-insights
@@ -12,17 +12,17 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 7e93670007db27d13b84d7516f56830988da083e
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800648"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082510"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa os teus datos parciais con predicións (obsoleto)
 
 > [!IMPORTANT]
-> Esta característica será **obsoleto** a partir de **5 de novembro de 2021**. As implementacións actuais seguirán funcionando ata que se elimine a función, pero non poderás crear novas integracións usando as instrucións que aparecen a continuación.
+> Esta característica será **obsoleto** a partir de **5 de novembro de 2021**. As implementacións actuais seguirán funcionando ata que se elimine a función, pero non poderás crear novas integracións utilizando as instrucións que aparecen a continuación.
 
 As predicións permiten crear valores previstos facilmente que poden mellorar a comprensión dun cliente. Na páxina **Intelixencia** > **Predicións**, pode seleccionar **As miñas predicións** para ver as predicións que configurou noutras partes de Customer Insights e permitirlle seguir personalizándoas.
 

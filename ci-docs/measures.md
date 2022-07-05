@@ -1,5 +1,5 @@
 ---
-title: Comprender e xestionar as medidas
+title: Visión xeral das medidas
 description: Aprende como as medidas axudan a analizar e reflectir o rendemento da túa empresa.
 ms.date: 03/24/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 84a3a10a2517258c1f895800882b9c67391ec3de
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642633"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083119"
 ---
 # <a name="measures-overview"></a>Visión xeral das medidas
 

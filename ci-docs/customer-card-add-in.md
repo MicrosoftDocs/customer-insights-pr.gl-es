@@ -1,5 +1,5 @@
 ---
-title: Complemento da tarxeta de cliente para as aplicacións de Dynamics 365 (contén vídeo)
+title: Complemento da tarxeta de cliente para as aplicacións de Dynamics 365 (vista previa) (contén vídeo)
 description: Mostra os datos do perfil do cliente de Customer Insights nas aplicacións de Dynamics 365 con este complemento.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755634"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082132"
 ---
-# <a name="customer-card-add-in-preview"></a>Complemento do cartón do cliente (vista previa)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complemento da tarxeta de cliente para as aplicacións de Dynamics 365 (vista previa)
 
 Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións de Dynamics 365. Co complemento de tarxeta de cliente instalado nunha aplicación de Dynamics 365 compatible, pode escoller amosar campos de perfil de cliente, estatísticas e cronoloxía da actividade. O suplemento recuperará datos de Customer Insights sen afectar aos datos da aplicación de Dynamics 365 conectada.
 
@@ -130,15 +130,15 @@ Mesmo con campos de identificación configurados correctamente, os controis non 
 
 **Resolución:**
 
-1. Asegúrate de configurar o complemento de tarxeta segundo as instrucións: [Configure o complemento da tarxeta de cliente](#configure-the-customer-card-add-in)
+1. Asegúrate de configurar o complemento da tarxeta segundo as instrucións: [Configure o complemento da tarxeta de cliente](#configure-the-customer-card-add-in)
 
-1. Revisa a configuración da inxestión de datos. Edite o orixe de datos para o sistema Dynamics 365 que contén o GUID do ID de contacto. Se o GUID de ID de contacto aparece con caracteres en maiúsculas Power Query editor, proba os seguintes pasos:
+1. Revisa a configuración da inxestión de datos. Edite o orixe de datos para o sistema Dynamics 365 que contén o GUID do ID de contacto. Se o GUID de ID de contacto aparece con caracteres en maiúscula Power Query editor, proba os seguintes pasos:
     1. Edita o orixe de datos para abrir o orixe de datos en Power Query Editor.
     1. Seleccione a columna ID de contacto.
     1. Seleccione **Transformar** na barra de cabeceira para ver as accións dispoñibles.
     1. Seleccione **minúscula**. Valida se os GUID da táboa están agora en minúscula.
     1. Garde a orixe de datos.
-    1. Executar procesos de inxestión, unificación e posterior de datos para propagar os cambios no GUID.
+    1. Executa procesos de inxestión, unificación e posterior de datos para propagar os cambios no GUID.
 
 Despois de que o sistema complete a actualización completa, os controis do complemento da tarxeta de cliente deberían mostrar os datos esperados.
 

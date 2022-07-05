@@ -1,5 +1,5 @@
 ---
-title: Exportar datos de Customer Insights a Dynamics 365 Marketing
+title: Exportar segmentos a Dynamics 365 Marketing (vista previa)
 description: Aprenda a configurar a conexión e exportar a Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
@@ -11,20 +11,18 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 7227f3f9e7699a9b5ad546789de5e568b56da579
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: fed4ae1b017cca2b6060c4dda155859cd77e0daf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642446"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054614"
 ---
-# <a name="use-segments-in-dynamics-365-marketing-preview"></a>Usar segmentos en Dynamics 365 Marketing (versión preliminar)
-
-
+# <a name="export-segments-to-dynamics-365-marketing-preview"></a>Exportar segmentos a Dynamics 365 Marketing (vista previa)
 
 Use os [segmentos](segments.md) para xerar campañas e contactar con grupos específicos de clientes con Dynamics 365 Marketing. Para obter máis información, consulte [Usar segmentos de Dynamics 365 Customer Insights con Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 
-Se está a empregar as novas capacidades de Dynamics 365 Marketing para a orquestración de viaxes dos clientes en tempo real nunha organización de Dataverse, non precisa crear unha exportación estándar a Dynamics 365 Marketing. Os contactos e os segmentos de Customer Insights están dispoñibles directamente en Dynamics 365 Marketing despois de conectar Marketing e Customer Insights. Antes de eliminar as exportacións existentes, revise a documentación sobre [como conectar a orquestración de Customer Insights e Dynamics 365 Marketing viaxe do cliente](/dynamics365/marketing/real-time-marketing-ci-profile).
+Se está a empregar as novas capacidades de Dynamics 365 Marketing para a orquestración de viaxes dos clientes en tempo real nunha organización de Dataverse, non precisa crear unha exportación estándar a Dynamics 365 Marketing. Os contactos e os segmentos de Customer Insights están dispoñibles directamente en Dynamics 365 Marketing despois de conectar Marketing e Customer Insights. Antes de eliminar as exportacións existentes, revise a documentación sobre [como conectar Customer Insights e a orquestración de Dynamics 365 Marketing viaxe do cliente](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Requisito previo para unha conexión
 

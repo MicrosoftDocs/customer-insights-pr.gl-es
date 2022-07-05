@@ -1,5 +1,5 @@
 ---
-title: Exportar datos de Customer Insights a Salesforce Marketing Cloud
+title: Exportar datos a Salesforce Marketing Cloud (vista previa)
 description: Aprenda a configurar a conexión e exportar a Salesforce Marketing Cloud.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: aaf5c2607099bbfccf7ed75330267da8c3c5fe1b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c3a6a40d9b9f08c8ebca8cb4a9196a1a79f03afa
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642903"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082615"
 ---
-# <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Exportar segmentos e outros datos a Salesforce Marketing Cloud (versión preliminar)
+# <a name="export-data-to-salesforce-marketing-cloud-preview"></a>Exportar datos a Salesforce Marketing Cloud (vista previa)
 
 Use os datos dos seus clientes en Salesforce Marketing Cloud exportándoos a través dunha localización de protocolo de transferencia de ficheiros seguro (SFTP).
 

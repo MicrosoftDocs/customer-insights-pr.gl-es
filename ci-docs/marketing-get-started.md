@@ -6,22 +6,22 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 99ec463299a24ea81cfe26bb785e36bdefdcd080
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833306"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054430"
 ---
-# <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Traballe con perfís de cliente unificados en Dynamics 365 Marketing
+# <a name="use-unified-customer-profiles-in-dynamics-365-marketing"></a>Use perfís de cliente unificados en Dynamics 365 Marketing
 
-[Dynamics 365 Marketing](/dynamics365/marketing/overview) eleva as experiencias dos clientes, o que che permite organizar viaxes personalizadas en todos os puntos de contacto para fortalecer as relacións e gañar a fidelidade. A aplicación Dynamics 365 Marketing funciona perfectamente con Dynamics 365 Sales,Dynamics 365 Customer Insights,Microsoft Teams, e outros produtos e permítelle tomar decisións máis rápidas e mellores utilizando o poder dos datos e a IA.
+[Dynamics 365 Marketing](/dynamics365/marketing/overview) eleva as experiencias dos clientes, o que che permite organizar viaxes personalizadas en todos os puntos de contacto para fortalecer as relacións e gañar a fidelidade. A aplicación Dynamics 365 Marketing funciona perfectamente con Dynamics 365 Sales,Dynamics 365 Customer Insights,Microsoft Teams, e outros produtos e permíteche tomar decisións máis rápidas e mellores utilizando o poder dos datos e a IA.
 
 Ao conectar os datos de Customer Insights con Marketing, podes:
 
 - Diríxese a perfís e segmentos de clientes unificados. Isto permítelle involucrar a todos os clientes, independentemente da localización dos datos do cliente.
 - Basea contido dinámico (como tokens personalizados) en correos electrónicos, SMS e notificacións push en medidas como o estado de fidelidade, a data de renovación da subscrición, conta primaria ou calquera outra medida que capturases no perfil unificado de Customer Insights.
-- Carga os datos de Marketing en Customer Insights e combínaos con datos de clientes doutras fontes.
+- Carga datos de Marketing en Customer Insights e combínaos con datos de clientes doutras fontes.
 - Aplica ferramentas de limpeza, enriquecemento e coincidencia difusa de datos de Customer Insights.
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Use perfís de clientes ricos en mercadotecnia en tempo real

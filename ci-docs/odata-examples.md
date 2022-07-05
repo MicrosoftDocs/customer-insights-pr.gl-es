@@ -1,5 +1,5 @@
 ---
-title: Exemplos de OData para o Dynamics 365 Customer Insights APIs
+title: Exemplos de consulta de OData para as API de Customer Insights
 description: Exemplos de uso habitual do protocolo de datos abertos (OData) para consultar as API de Customer Insights para revisar datos.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808459"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083161"
 ---
-# <a name="odata-query-examples"></a>Exemplos de consulta OData
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Exemplos de consulta de OData para as API de Customer Insights
 
 O protocolo de datos abertos (OData) é un protocolo de acceso a datos construído en protocolos básicos como HTTP. Utiliza metodoloxías comúnmente aceptadas como REST para a web. Existen varios tipos de bibliotecas e ferramentas que se poden usar para consumir servizos de OData.
 
@@ -23,7 +23,7 @@ Este artigo enumera algunhas consultas de exemplo que se solicitan con frecuenci
 
 Ten que modificar as mostras de consulta para que funcionen nos ambientes de destino: 
 
-- {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` onde{instanceId} é o GUID do entorno de Customer Insights que quere consultar. O [Operación ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) permíteche atopar o{InstanceId} tes acceso.
+- {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` onde{instanceId} é o GUID do contorno de Customer Insights que quere consultar. O [Operación ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) permíteche atopar o{InstanceId} tes acceso.
 - {CID}: GUID dun rexistro de cliente unificado. Exemplo:`ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: identificador da clave primaria dun rexistro de cliente nun orixe de datos. Exemplo: `CNTID_1002`
 - {DSname}: Cadea co nome de entidade dun orixe de datos que se inxire en Customer Insights. Exemplo:`Website_contacts`.

@@ -1,5 +1,5 @@
 ---
-title: Segmentos suxeridos con tecnoloxía de aprendizaxe automática
+title: Segmentos suxeridos (versión preliminar)
 description: Permita que a aprendizaxe automática lle axude a atopar segmentos novos e interesantes baseados nos atributos do cliente.
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 5c7c6cc8231f758713b989bbe782aa03a4b78fa9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642742"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082741"
 ---
 # <a name="suggested-segments-preview"></a>Segmentos suxeridos (versión preliminar)
 

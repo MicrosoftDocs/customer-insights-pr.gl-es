@@ -1,5 +1,5 @@
 ---
-title: Funcionalidades novas e actualizadas
+title: Novidades de Dynamics 365 Customer Insights
 description: Información sobre novas funcións, melloras e corrección de erros.
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843345"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054016"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
@@ -60,7 +60,7 @@ Para obter máis información, consulte [Como: Crear un novo ambiente](create-en
 
 As actualizacións de abril de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
 
-### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (versión previa)
+### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (Previsualización)
 
 Dun & Bradstreet ofrece datos comerciais, análises e información para empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
 
@@ -112,7 +112,7 @@ Para obter máis información, consulte [Exportar segmentos a Iterable (vista pr
 O cambio de API nos servizos conectados leva a actualizacións para que os conectores funcionen de forma fiable e sen problemas. Publicamos algunhas actualizacións para as exportacións aos servizos de Marketo e Google Ads:
 
 - Google Ads: a nova versión do conector de exportación de Google Ads simplifica a experiencia de autenticación e agora permíteche crear novas audiencias de Google Ads automaticamente. 
-- Marketo: a nova versión do conector de exportación de Marketo ofrece compatibilidade co ID de Marketo, o que lle permite evitar a duplicación de datos, actualizar os rexistros existentes e crear novos rexistros en Marketo. 
+- Marketo: a nova versión do conector de exportación de Marketo ofrece soporte para o ID de Marketo, o que lle permite evitar a duplicación de datos, actualizar os rexistros existentes e crear novos rexistros en Marketo. 
 
 ## <a name="february-2022-updates"></a>Actualizacións de febreiro de 2022
 

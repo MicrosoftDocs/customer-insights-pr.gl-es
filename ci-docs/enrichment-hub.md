@@ -1,6 +1,6 @@
 ---
-title: Enriquecer perfís de clientes unificados
-description: Use capacidades para enriquecer os datos dos seus clientes.
+title: Visión xeral do enriquecemento de datos (vista previa).
+description: Use as capacidades de Microsoft e outros servizos de terceiros para enriquecer os datos dos seus clientes.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954039"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053866"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Enriquecemento dos perfís de clientes (vista previa)
+# <a name="data-enrichment-preview-overview"></a>Visión xeral do enriquecemento de datos (vista previa).
 
-Use datos de fontes como Microsoft e outros socios para enriquecer os seus datos de clientes.
+Use datos de fontes como Microsoft e outros socios para enriquecer os seus datos de clientes. Os enriquecementos de terceiros configúranse usando [conexións](connections.md), que un administrador configura con credenciais e proporciona o consentimento para as transferencias de datos. Tanto os administradores como os colaboradores poden usar as conexións para configurar os enriquecementos.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Enriquecementos múltiples do mesmo tipo
+
+A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueceza datos só para un segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver en cada ficha do **Descubrir** ficha da **Enriquecemento** páxina.
+
+## <a name="enrich-data-sources-before-unification"></a>Enriquece as fontes de datos antes da unificación
+
+Podes enriquecer os datos dos teus clientes antes da unificación de datos para axudar a aumentar a calidade dunha coincidencia de datos. Para obter máis información, consulte [orixe de datos enriquecemento](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Crear un enriquecemento
+
+Necesitas ter Colaborador ou Administrador [permisos](permissions.md) para crear ou editar enriquecementos.
+
+Vaia a **Datos** > **Enriquecemento**. O **Descubrir** mostra todas as opcións de enriquecemento compatibles.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Páxina da plataforma común de enriquecemento.":::
-
-Ir a **Datos** > **Enriquecemento** para traballar con opcións de enriquecemento.  
-
-Debe ter permisos de colaborador ou administrador para crear ou editar enriquecementos. Para obter máis información, consulte [Permisos](permissions.md).
-
-No separador **Descubrir**, atopará todas as opcións de enriquecemento compatibles.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
@@ -57,45 +65,33 @@ No separador **Descubrir**, atopará todas as opcións de enriquecemento compati
 
 ---
 
-No separador **Os meus enriquecementos**, pode ver os enriquecementos que configurou e editar as súas propiedades. Tamén podes crear [segmentos](segments.md) ou [medidas](measures.md) de enriquecementos.
-
 ## <a name="manage-existing-enrichments"></a>Xestionar os enriquecementos existentes
 
-Vaia ao separador **Os meus enriquecementos** para ver todos os enriquecementos configurados. Cada enriquecemento represéntase como unha liña que inclúe información adicional sobre o enriquecemento.
+Vaia a **Datos** > **Enriquecemento**. No **Os meus enriquecementos** pestana, ver os enriquecementos configurados, o seu estado, o número de clientes enriquecidos e a última vez que se actualizaron os datos. Podes ordenar a lista de enriquecementos por calquera columna ou utilizar a caixa de busca para atopar o enriquecemento que queres xestionar.
 
-Seleccione o enriquecemento para ver as opcións dispoñibles. Tamén pode seleccionar os puntos suspensivos verticais (&vellip;) nun elemento da lista para ver as opcións. Se configurou varios enriquecementos, pode usar a caixa de busca para atopalo rapidamente.
+Seleccione o enriquecemento para ver as accións dispoñibles.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcións para xestionar os enriquecementos na lista de enriquecementos.":::
 
 - **Ver** detalles do enriquecemento co número de perfís de clientes enriquecidos.
 - **Editar** a configuración do enriquecemento.
-- **Execute** o enriquecemento para actualizar os perfís dos clientes cos últimos datos.
-- **Desactivar** un enriquecemento existente para evitar que se actualice automaticamente con cada actualización programada. Os datos da última actualización exitosa seguirán dispoñibles. **Activar** un enriquecemento inactivo para reiniciar a actualización automática con cada actualización programada.
+- [**Corre**](#run-or-refresh-enrichments) o enriquecemento para actualizar os perfís dos clientes cos datos máis recentes. Executa varios enriquecementos á vez seleccionándoos na lista.
+- **Activar** ou **Desactivar** un enriquecemento. Os enriquecementos inactivos non se actualizarán durante a [actualización programada](system.md#schedule-tab).
 - **Eliminar** o enriquecemento.
 
-Execute ou desactive varios enriquecementos á vez seleccionándoos na lista. As opcións de visualización e edición non están dispoñibles como accións en masa. Só funcionan para un enriquecemento á vez.
-
-## <a name="enrichments-and-connections"></a>Enriquecementos e conexións
-
-Os enriquecementos de terceiros configúranse usando [conexións](connections.md), que un administrador configura con credenciais e proporciona o consentimento para as transferencias de datos. Tanto os administradores como os colaboradores poden usar as conexións para configurar os enriquecementos.  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>Enriquecementos múltiples do mesmo tipo
-
-A entidade que se vai enriquecer especifícase durante a configuración de enriquecemento, que lle permite enriquecer só un subconxunto dos seus perfís. Por exemplo, enriqueceza datos só para un segmento específico. Pode configurar varios enriquecementos do mesmo tipo e reutilizar a mesma conexión. Algúns enriquecementos terán límites do número de enriquecementos do mesmo tipo que se poden crear. Os límites e o uso actual pódense ver en cada ficha do **Descubrir** ficha da **Enriquecemento** páxina.
-
-## <a name="enrich-data-sources-before-unification"></a>Enriquece as fontes de datos antes da unificación
-
-Podes enriquecer os datos dos teus clientes antes da unificación de datos para axudar a aumentar a calidade dunha coincidencia de datos. Para obter máis información, consulte [orixe de datos enriquecemento](data-sources-enrichment.md).
+Tamén podes crear [segmentos](segments.md) ou [medidas](measures.md) de enriquecementos.
 
 ## <a name="run-or-refresh-enrichments"></a>Executar ou actualizar enriquecementos
 
-1. Para iniciar o proceso de enriquecemento, seleccione **Corre**. Ou, deixe que o sistema execute o enriquecemento automaticamente como parte dun [actualización programada](system.md#schedule-tab). O tempo de procesamento depende do tamaño dos datos dos clientes.
+Unha vez executados, os enriquecementos pódense actualizar nunha programación automática ou actualizar manualmente baixo demanda.
+
+1. Para actualizar manualmente un ou máis enriquecementos, selecciónaos e escolla **Corre**. Para [programar unha actualización automática](system.md#schedule-tab), Ir a **Admin** > **Sistema** > **Horario**. O tempo de procesamento depende do tamaño dos datos dos clientes.
 
 1. Opcionalmente, [ver o progreso do proceso de enriquecemento](#see-the-progress-of-the-enrichment-process).
 
 1. Despois de completar o proceso de enriquecemento, vai a **Os meus enriquecementos** para revisar os datos dos perfís de clientes recentemente enriquecidos, a hora da última actualización e o número de perfís enriquecidos.
 
-1. Seleccione o enriquecemento para ver [resultados de enriquecemento](#enrichment-results).
+1. Seleccione o enriquecemento para ver [resultados de enriquecemento](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Vexa o progreso do proceso de enriquecemento
 
@@ -107,12 +103,12 @@ Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado
 1. No enriquecemento no que desexa ver o progreso, seleccione **Ver detalles**.
 1. No panel **Detalles da tarefa**, seleccione **Amosar detalles** para ver os procesos implicados na actualización do enriquecemento e o seu estado.
 
-## <a name="enrichment-results"></a>Resultados de enriquecemento
+## <a name="view-enrichment-results"></a>Ver resultados de enriquecemento
 
 Despois dunha carreira de enriquecemento completada, revise os resultados do enriquecemento.
 
 1. Vaia a **Datos** > **Enriquecemento**.
-1. No **Os meus enriquecementos** ficha, seleccione o enriquecemento sobre o que quere información.
+1. No **Os meus enriquecementos** ficha, seleccione o enriquecemento que desexa ver.
 
 Todos os enriquecementos mostran información básica como o número de perfís enriquecidos e o número de perfís enriquecidos ao longo do tempo. O **Vista previa de clientes enriquecidos** o mosaico mostra unha mostra da entidade de enriquecemento xerada. Para ver unha vista detallada, seleccione **Ver máis** e selecciona o **Datos** ficha.
 

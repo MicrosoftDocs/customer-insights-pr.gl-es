@@ -1,5 +1,5 @@
 ---
-title: Orixe de datos enriquecemento
+title: Enriquecemento das fontes de datos (vista previa)
 description: Enriquece as fontes de datos antes de pasar polo proceso de unificación de datos.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -8,16 +8,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011471"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082111"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecemento das fontes de datos (vista previa)
 
-Use datos de fontes como Microsoft e outros socios para enriquecer os datos dos seus clientes antes da unificación de datos. Os enriquecementos orixe de datos axudan a producir datos máis completos e de calidade que poden axudar a conseguir mellores resultados unha vez que unifiques os teus datos. Por exemplo, o uso dun formato normalizado e estandarizado para os enderezos aumenta a calidade dos resultados da coincidencia. Para obter unha lista de enriquecementos admitidos, consulte [opcións de enriquecemento orixe de datos compatibles](#supported-data-source-enrichments).
+Use datos de fontes como Microsoft e outros socios para enriquecer os datos dos seus clientes antes da unificación de datos. Os enriquecementos orixe de datos axudan a producir datos máis completos e de calidade que poden axudar a conseguir mellores resultados unha vez que unifiques os teus datos. Por exemplo, usar un formato normalizado e estandarizado para os enderezos aumenta a calidade dos resultados da coincidencia. Para obter unha lista de enriquecementos admitidos, consulte [opcións de enriquecemento orixe de datos compatibles](#supported-data-source-enrichments).
 
 ## <a name="enrich-a-data-source"></a>Enriquece un orixe de datos
 

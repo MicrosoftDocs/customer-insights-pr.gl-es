@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642880"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055212"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predición do valor de duración do cliente (VDC)
 
-Prediga o valor potencial (ingresos) que os clientes activos individuais aportarán á súa empresa a través dun período de tempo futuro definido. Esta función pode axudarlle a acadar varios obxectivos: 
+Prediga o valor potencial (ingresos) que os clientes activos individuais aportarán á súa empresa a través dun período de tempo futuro definido. Esta función pode axudarlle a acadar varios obxectivos:
 - Identificar clientes de alto valor e procesar esta información
 - Crear segmentos de clientes estratéxicos en función do seu valor potencial para realizar campañas personalizadas con vendas, mercadotecnia e esforzos de asistencia dirixidos
 - Guiar o desenvolvemento de produtos centrándose en funcións que aumentan o valor do cliente
@@ -69,7 +69,7 @@ Os seguintes datos son necesarios e, cando están marcados como opcionais, recom
     - Integridade dos datos: menos do 20 % dos valores que faltan nos campos obrigatorios nos datos de entrada   
 
 > [!NOTE]
-> - O modelo require o historial de transaccións dos seus clientes. Actualmente só se pode configurar unha entidade do historial de transaccións. Se hai varias entidades de compra/transacción, podes unilalas Power Query antes da inxestión de datos.
+> - O modelo require o historial de transaccións dos seus clientes. Actualmente só se pode configurar unha entidade do historial de transaccións. Se hai varias entidades de compra/transacción, podes unila Power Query antes da inxestión de datos.
 > - Non obstante, para obter datos de actividade do cliente adicionais (opcionais), pode engadir tantas entidades de actividade do cliente como queira para que o modelo as teña en conta.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Crear unha predición do valor de duración do cliente

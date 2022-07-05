@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642870"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082573"
 ---
-# <a name="relationships-between-entities"></a>Relacións entre entidades
+# <a name="relationships-between-entities-and-entity-paths"></a>Relacións entre entidades e camiños das entidades
 
 As relacións conectan entidades e definen un gráfico dos seus datos cando as entidades comparten un identificador común, unha clave externa. A esta clave externa pódese facer referencia desde unha entidade a outra. As entidades conectadas permiten a definición de segmentos e medidas en función de varias orixes de datos.
 

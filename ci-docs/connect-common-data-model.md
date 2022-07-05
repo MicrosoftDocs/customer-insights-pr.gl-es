@@ -1,5 +1,5 @@
 ---
-title: Conectar os datos de Common Data Model a unha conta de Azure Data Lake
+title: Conectar cun cartafol de Common Data Model cunha conta de Azure Data Lake
 description: Traballe con datos de Common Data Model usando Azure Data Lake Storage.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011555"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082258"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarse con datos en Azure Data Lake Storage
 
@@ -35,7 +35,7 @@ Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Sto
 
 - Os datos almacenados nos servizos en liña poden almacenarse nun lugar diferente do que se procesan ou almacenan os datos Dynamics 365 Customer Insights.Ao importar ou conectarse a datos almacenados nos servizos en liña, acepta que os datos se poidan transferir e almacenar con Dynamics 365 Customer Insights . [Máis información no Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
-- O principal do servizo de Customer Insights debe estar nun dos seguintes roles para acceder á conta de almacenamento. Para obter máis información, consulte [Concede permisos ao principal do servizo para acceder á conta de almacenamento](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+- O principal do servizo de Customer Insights debe estar nun dos seguintes roles para acceder á conta de almacenamento. Para obter máis información, consulte [Conceda permisos ao principal do servizo para acceder á conta de almacenamento](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
   - Lector de datos do BLOB de almacenamento
   - Propietario dos datos do BLOB de almacenamento
   - Colaborador de datos do BLOB de almacenamento

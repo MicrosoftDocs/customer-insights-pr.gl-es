@@ -1,5 +1,5 @@
 ---
-title: Auditoría Dynamics 365 Customer Insights con Azure Monitor
+title: Reenvío de sesión Dynamics 365 Customer Insights con Azure Monitor (vista previa)
 description: Aprende a enviar rexistros a Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807579"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052651"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Reenvío de sesión Dynamics 365 Customer Insights con Azure Monitor (vista previa)
 
@@ -51,7 +51,7 @@ Para configurar diagnósticos en Customer Insights, débense cumprir os seguinte
    > [!div class="mx-imgBorder"]
    > ![Conexión de diagnóstico](media/diagnostics-pane.png "Conexión de diagnóstico")
 
-1. Proporcione un nome no **Nome do destino de diagnóstico** campo.
+1. Proporcione un nome no **Nome do destino do diagnóstico** campo.
 
 1. Escolle o **Inquilino** da subscrición de Azure co recurso de destino e seleccione **Iniciar sesión**.
 
@@ -230,7 +230,7 @@ Os eventos de fluxo de traballo teñen as seguintes propiedades.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Si      | Si  | Sempre`WorkflowEvent`, marcando o evento como evento de fluxo de traballo.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Si      | Si  | Identificador do fluxo de traballo executado. Todos os eventos de fluxo de traballo e tarefa dentro da execución do fluxo de traballo teñen o mesmo `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Si      | Si  | Identificador da operación, véx [Tipos de operación](#operation-types).                                                                                                                                                                               |
+| `properties.operationType`                   | Si      | Si  | Identificador da operación, véx [Tipos de operacións](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Si      | No   | Só fluxo de traballo. Número de tarefas que desencadea o fluxo de traballo.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Si      | No   | Opcional. Só eventos de fluxo de traballo. O Azure Active Directory [objectId do usuario](/azure/marketplace/find-tenant-object-id#find-user-object-id) quen desencadeou o fluxo de traballo, consulte tamén `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Si      | No   | `full` ou`incremental` refrescar.                                                                                                                                                                                                                            |
