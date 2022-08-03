@@ -13,16 +13,14 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
-ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
+ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8844038"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139578"
 ---
 # <a name="update-the-unification-settings"></a>Actualiza a configuración de unificación
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Para revisar ou cambiar calquera configuración de unificación unha vez que se crea un perfil unificado, siga os seguintes pasos.
 
@@ -55,7 +53,7 @@ Non podes eliminar un atributo ou unha entidade se xa se unificaron.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Captura de pantalla da páxina de campos de orixe que mostra o número de claves primarias, campos asignados e non asignados":::
 
-   Mostra o número de campos asignados e non asignados.
+   Mostra o número de campos asignados e sen asignar.
 
 1. Seleccione **Seleccione entidades e campos** para engadir outros atributos ou entidades. Use a busca ou o desprazamento para atopar e seleccionar os seus atributos e entidades de interese. Seleccione **Aplicar**.
 
@@ -77,7 +75,7 @@ Non podes eliminar un atributo ou unha entidade se xa se unificaron.
    - **Crea unha nova regra** : Seleccionar **Engadir regra** baixo a entidade correspondente. Para obter máis información, consulte [Definir regras de deduplicación](remove-duplicates.md#define-deduplication-rules).
    - **Cambiar as condicións das regras** : Seleccione a regra e despois **Editar**. Cambiar campos, engadir ou eliminar condicións ou engadir ou eliminar excepcións.
    - **Vista previa** : Seleccione a regra e despois **Vista previa** para ver os resultados da última execución desta regra.
-   - **Desactivar unha regra** : Seleccione a regra e despois **Desactivar** para conservar unha regra de deduplicación ao tempo que a exclúe do proceso de coincidencia.
+   - **Desactivar unha regra** : Seleccione a regra e despois **Desactivar** para manter unha regra de deduplicación ao tempo que a exclúe do proceso de coincidencia.
    - **Duplicar unha regra** : Seleccione a regra e despois **Duplicar** para crear unha regra similar con modificacións.
    - **Eliminar unha regra** : Seleccione a regra e despois **Eliminar**.
 
@@ -89,7 +87,7 @@ Non podes eliminar un atributo ou unha entidade se xa se unificaron.
 
    1. Seleccione **Feito**.
 
-1. Seleccione **A continuación** para facer cambios nas condicións coincidentes ou seleccione **Garda e pecha** e volver a [Actualiza a configuración de unificación](#update-the-unification-settings).
+1. Seleccione **A continuación** para facer cambios nas condicións de coincidencia ou seleccione **Garda e pecha** e volver a [Actualiza a configuración de unificación](#update-the-unification-settings).
 
 ## <a name="manage-match-rules"></a>Xestionar regras de coincidencia
 
@@ -97,7 +95,7 @@ Pode reconfigurar e axustar a maioría dos parámetros de coincidencia. Non pode
 
 1. Seleccione **Editar** no **Condicións de coincidencia** tella.
 
-   :::image type="content" source="media/m3_match_edit.png" alt-text="Captura de pantalla da páxina Regras e condicións do partido con estatísticas." lightbox="media/m3_match_edit.png":::
+   :::image type="content" source="media/m3_match_edit.png" alt-text="Captura de pantalla da páxina Regras e condicións de xogo con estatísticas." lightbox="media/m3_match_edit.png":::
 
    A páxina mostra a orde de coincidencia e as regras definidas e as seguintes estatísticas:
    - **Rexistros de orixe únicos** mostra o número de rexistros de orixes individuais que se procesaron na última execución da busca de coincidencias.
@@ -136,7 +134,7 @@ Pode reconfigurar e axustar a maioría dos parámetros de coincidencia. Non pode
 
 ## <a name="run-matching-conditions"></a>Executar condicións coincidentes
 
-Executar condicións de coincidencia executa só a deduplicación e as regras de coincidencia e actualiza o *Deduplicación_* e *ConflationMatchPair* entidades.
+Executar condicións de coincidencia executa só a deduplicación e as regras de coincidencia e actualiza o *Deduplicación_* * e *ConflationMatchPair* entidades.
 
 1. Dende **Datos** > **Unificar** páxina, seleccione **Executar só condicións coincidentes**.
 
@@ -144,7 +142,7 @@ Executar condicións de coincidencia executa só a deduplicación e as regras de
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-1. Cando remate o proceso de coincidencia, seleccione **Editar** no **Condicións de coincidencia** tella.
+1. Cando finalice o proceso de coincidencia, seleccione **Editar** no **Condicións de coincidencia** tella.
 
    :::image type="content" source="media/match-KPIs.png" alt-text="Captura de pantalla recortada das métricas clave da páxina de coincidencias con números e detalles.":::
 

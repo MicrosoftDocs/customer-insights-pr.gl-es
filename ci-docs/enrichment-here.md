@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052049"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196254"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Enriquece os perfís de clientes con HERE Technologies (vista previa)
 
@@ -54,13 +54,13 @@ O administrador de Dynamics 365 Customer Insights pode eliminar este enriqueceme
 
 1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
 
-1. Seleccione a conexión. Póñase en contacto cun administrador se non está dispoñible.
+1. Seleccione a conexión. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
 1. Seleccione **Seguinte**.
 
 1. Seleccione o **Conxunto de datos do cliente** e escolle o perfil ou segmento que queres enriquecer con datos de HERE Technologies. O *Cliente* a entidade enriquece todos os seus perfís de clientes mentres que un segmento enriquece só os perfís de clientes contidos nese segmento.
 
-1. Define que tipo de campos dos teus perfís unificados queres usar para a correspondencia: o enderezo principal e/ou secundario. Pode especificar unha asignación de campos para ambos os enderezos e enriquecer os perfís de ambos os enderezos por separado. Por exemplo, para un enderezo de casa e un enderezo de empresa. Seleccione **Seguinte**.
+1. Define que tipo de campos dos teus perfís unificados usar para a correspondencia: o enderezo principal e/ou secundario. Pode especificar unha asignación de campos para ambos os enderezos e enriquecer os perfís de ambos os enderezos por separado. Por exemplo, para un enderezo de casa e un enderezo de empresa. Seleccione **Seguinte**.
 
 1. Asigne os seus campos aos datos de HERE Technologies. Os campos **Rúa 1** e **Código postal** son obrigatorios para o enderezo primario e/ou secundario seleccionado. Para unha maior precisión de coincidencia, engade máis campos.
 

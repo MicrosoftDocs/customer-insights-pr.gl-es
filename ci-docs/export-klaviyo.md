@@ -1,19 +1,19 @@
 ---
 title: Exportar segmentos a Klaviyo (vista previa)
 description: Aprenda a configurar a conexión e exportar a Klaviyo.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e2b60d9818a753e81e69f2bee6b1663e1840cb10
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051313"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196760"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Exportar segmentos a Klaviyo (vista previa)
 
@@ -21,32 +21,34 @@ Exporte segmentos de perfís de clientes unificados a Klaviyo e utilíceos para 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   Ten unha [conta de Klaviyo](https://www.klaviyo.com/) e as correspondentes credenciais de administrador.
--   Tes [segmentos configurados](segments.md) en Customer Insights.
--   Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico.
+- A [Conta Klaviyo](https://www.klaviyo.com/) e as correspondentes credenciais de administrador.
+- A [Clave API de Klaviyo](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys).
+- A [ID de lista de Klaviyo](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).
+- [Segmentos configurados](segments.md) en Customer Insights.
+- Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico.
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Pode exportar ata 100.000 perfís de clientes por exportación a Klaviyo.
-- A exportación a Klaviyo está limitada a segmentos.
-- A exportación de ata 1 millón de perfís de clientes a Klaviyo pode levar ata 20 minutos en completarse. 
-- O número de perfís de clientes que pode exportar a Klaviyo depende e está limitado ao seu contrato con Klaviyo.
+- Ata 1 millón de perfís de clientes por exportación a Klaviyo, que pode tardar ata 20 minutos en completarse. O número de perfís de clientes que podes exportar a Klaviyo depende do teu contrato con Klaviyo.
+- Só segmentos.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Configurar conexión a Klaviyo
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Vaia a **Administrar** > **Conexións**.
 
-1. Seleccione **Engadir conexión** e elixa **Klaviyo** para configurar a conexión.
+1. Seleccione **Engadir conexión** e escolle **Klaviyo**.
 
 1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
 
-1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolla quen pode usar esta conexión. Por defecto, só son os administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Proporcione a súa [clave da API de Klaviyo](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys) para continuar co inicio de sesión. 
+1. Proporcione a súa clave da API de Klaviyo para continuar co inicio de sesión.
 
-1. Seleccione **Estou de acordo** para confirmar a **Privacidade e cumprimento dos datos**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
-1. Seleccione **Conectar** para iniciar a conexión a Klaviyo.
+1. Seleccione **Conectar** para inicializar a conexión.
 
 1. Seleccione **Autenticar con Klaviyo** e proporcione as súas credenciais de administrador de Klaviyo.
 
@@ -56,27 +58,24 @@ Exporte segmentos de perfís de clientes unificados a Klaviyo e utilíceos para 
 
 ## <a name="configure-an-export"></a>Configurar unha exportación
 
-Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Para obter máis información, consulte [Permisos necesarios para configurar unha exportación](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vaia a **Datos** > **Exportacións**.
 
-1. Seleccione **Engadir destino** para crear unha nova exportación.
+1. Seleccione **Engadir exportación**.
 
-1. No campo **Conexión para a exportación**, escolla unha conexión na sección de Klaviyo. Se non ve o nome desta sección, non hai conexións deste tipo dispoñibles para vostede.
+1. No campo **Conexión para a exportación**, escolla unha conexión na sección de Klaviyo. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
-1. Introduza o seu [**ID de lista de Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
+1. Introduza un nome para a exportación.
 
-3. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. É necesario para exportar segmentos a Klaviyo.
+1. Introduce o teu **ID de lista de Klaviyo**.
+
+1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente.
+
+1. Seleccione os segmentos que desexa exportar.
 
 1. Seleccione **Gardar**.
 
-Ao gardar unha exportación non se executa a exportación inmediatamente.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando permite a Dynamics 365 Customer Insights transmitir datos a Klaviyo, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de asegurarse de que Klaviyo cumpre coas obrigacións de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-O administrador de Dynamics 365 Customer Insights pode eliminar este destino de exportación en calquera momento para interromper o uso desta funcionalidade.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

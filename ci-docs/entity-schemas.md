@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cc65314f1b083694b60ac0a2625bea906be7272b
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054752"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183491"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidades no Common Data Model
 
@@ -39,9 +39,8 @@ Para obter máis información, consulte a documentación sobre [Esquemas de enti
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Ver as entidades que utilizan o navegador de entidades de Common Data Model
 
-Pode ver entidades no [Navegador de entidades de Common Data Model](https://microsoft.github.io/CDM/). Seleccione unha entidade na sección de aplicacións de Insights para obter a lista de entidades de Customer Insights e as súas definicións.
-> [!div class="mx-imgBorder"]
-> ![Navegador de entidades CDM que mostra a entidade CustomerActivity.](media/CDM-entity-navigator.png "Navegador de entidades CDM que mostra a entidade CustomerActivity")
+Ver entidades no [Navegador de entidades de modelos de datos comúns](https://microsoft.github.io/CDM/). Seleccione unha entidade na sección de aplicacións de Insights para obter a lista de entidades de Customer Insights e as súas definicións.
 
+:::image type="content" source="media/CDM-entity-navigator.png" alt-text="Navegador de entidades CDM que mostra a entidade CustomerActivity.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

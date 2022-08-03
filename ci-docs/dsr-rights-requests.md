@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947366"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146693"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitudes de dereitos do titular dos datos (DSR) baixo RXPD
 
@@ -31,18 +31,22 @@ O "dereito á eliminación" de datos persoais dos datos de clientes dunha organi
 
 Customer Insights ofrece as seguintes experiencias dentro do produto para eliminar datos persoais dun cliente ou usuario específico:
 
-- **Xestionar solicitudes de eliminación de datos de clientes**: os datos do cliente de Customer Insights son inxeridos de fontes de datos orixinais externas a Customer Insights. Todas as solicitudes de eliminación de RXPD deben realizarse na orixe de datos orixinal.
+- **Xestionar solicitudes de eliminación de datos de clientes**: os datos do cliente de Customer Insights son inxeridos de fontes de datos orixinais externas a Customer Insights. Realiza primeiro solicitudes de eliminación do GDPR no orixe de datos orixinal.
 - **Xestionar solicitudes de eliminación de datos de usuario de Customer Insights**: Os datos dos usuarios son creados por Customer Insights. Todas as solicitudes de eliminación de RXPD deben realizarse en Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Xestionar solicitudes de eliminación de datos de clientes
 
-Un administrador de Customer Insights pode seguir estes pasos para eliminar os datos de clientes que se eliminaron na orixe de datos:
+Un administrador de Customer Insights pode seguir estes pasos para eliminar os datos de clientes que se eliminaron no orixe de datos. Asegúrate de que a solicitude de eliminación se realizou no teu orixe de datos antes de continuar cos pasos que se indican a continuación. 
 
 1. Inicie sesión en Dynamics 365 Customer Insights.
-2. Ir a **Datos** > **Fontes de datos**
-3. Para cada orixe de datos da lista que contén datos de clientes eliminados:
+1. Ir a **Datos** > **Fontes de datos**
+1. Para cada orixe de datos da lista que contén datos de clientes eliminados:
    1. Seleccione os puntos suspensivos verticais (&vellip;) e, a continuación, seleccione **Actualizar**.
-   2. Consulte o estado da orixe de datos en **Estado**. A aparición dunha marca de verificación significa que a actualización tivo éxito. Un triángulo de aviso significa que algo saíu mal. Se aparece un triángulo de aviso, póñase en contacto con D365CI@microsoft.com.
+   1. Consulte o estado da orixe de datos en **Estado**. A aparición dunha marca de verificación significa que a actualización tivo éxito. Un triángulo de aviso significa que algo saíu mal. Se aparece un triángulo de aviso, póñase en contacto con D365CI@microsoft.com.
+1. Despois dunha actualización correcta das fontes de datos, executa tamén as actualizacións posteriores. Especialmente, se non tes programada unha actualización completa periódica de Customer Insights. 
+
+> [!IMPORTANT]
+> Os segmentos estáticos non se inclúen nunha actualización completa nin se executan actualizacións posteriores despois dunha solicitude de eliminación. Para asegurarse de que tamén se eliminan os datos dos clientes dos segmentos estáticos, recree os segmentos estáticos cos datos de orixe actualizados.
 
 > [!div class="mx-imgBorder"]
 > ![Manipulación de solicitudes de eliminación de RXPD para datos de clientes.](media/gdpr-data-sources.png "Manipulación de solicitudes de eliminación de RXPD para datos de clientes")
@@ -77,5 +81,10 @@ Un administrador de arrendatarios pode seguir estes pasos para exportar datos:
 1. Envíe un correo electrónico a D365CI@microsoft.com especificando o enderezo de correo electrónico do usuario na solicitude. O equipo de Customer Insights enviará un correo electrónico ao enderezo de correo electrónico do administrador do arrendatario rexistrado e pedirá confirmación para exportar datos.
 2. Recoñeza a confirmación para exportar os datos do usuario solicitado.
 3. Reciba os datos exportados a través do enderezo de correo electrónico do administrador do arrendatario.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Tratamento da eliminación de datos Dynamics 365 Customer Insights
+
+1. Os datos eliminaranse (particións de datos e instantáneas de datos) se as particións de datos e as instantáneas de datos están inactivas durante máis de 30 días, o que significa que foron substituídas por unha nova partición e instantánea de datos mediante unha actualización das fontes de datos.
+2. Non se eliminan todos os datos e as instantáneas. A partición de datos e a instantánea de datos máis recentes están activas por definición porque se usan en Customer Insights. Para os datos máis recentes, non importa se as fontes de datos non se actualizaron nos últimos 30 días.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

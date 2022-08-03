@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 766e688cb80c50a0d620943f87b76eb84a2fb89a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082216"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139486"
 ---
 # <a name="data-unification-overview"></a>Descrición xeral da unificación de datos
 
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
-
-Despois de [configurar as fontes de datos](data-sources.md), pode unificar os datos. A unificación de datos permíteche unificar fontes de datos distintas nun único conxunto de datos mestre que ofrece unha vista unificada deses datos. Para os consumidores individuais (B-to-C) nos que os datos se centran en persoas, a unificación ofrece unha visión unificada dos seus clientes. Para as contas empresariais (B-to-B) onde os datos se centran en contas, a unificación ofrece unha vista unificada das túas contas.
+Despois de [configurar as fontes de datos](data-sources.md), pode unificar os datos. A unificación de datos permíteche unificar fontes de datos distintas nun único conxunto de datos mestre que ofrece unha vista unificada deses datos. Para os consumidores individuais (B-to-C) nos que os datos se centran en individuos, a unificación ofrece unha visión unificada dos seus clientes. Para as contas empresariais (B-to-B) nas que os datos se centran en contas, a unificación ofrece unha vista unificada das túas contas.
 
 Os datos pódense unificar nunha única entidade ou en varias entidades. A unificación realízase na seguinte orde:
 

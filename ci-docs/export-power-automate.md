@@ -1,19 +1,19 @@
 ---
 title: Power Automate conector (vista previa) | Microsoft Docs
 description: Crear fluxos en Microsoft Power Automate a partir de Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082447"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196116"
 ---
 # <a name="power-automate-connector-preview"></a>Conector de Power Automate (vista previa)
 
@@ -21,18 +21,18 @@ Desencadee eventos específicos para que se produzan automaticamente cando se mo
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Podes facer un máximo de 100 chamadas por 60 segundos. Podes chamar ao punto final da API varias veces usando o parámetro $skip. [Obtén máis información sobre o parámetro $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Un máximo de 100 chamadas por 60 segundos. Usa o [$skip parámetro](/connectors/customerinsights/#get-items-from-an-entity) para chamar ao punto final da API varias veces.
 
 ## <a name="power-automate-triggers"></a>Desencadeadores de Power Automate
 
-Use desencadeadores para crear fluxos na nube e automatizar tarefas repetitivas, como notificacións ou accións máis avanzadas.
+Use desencadeadores para crear fluxos na nube e automatizar tarefas repetitivas, como notificacións ou accións máis avanzadas. Use disparadores cando:
 
-- Desencadeador cando falla unha actualización dunha orixe de datos.
-- Desencadeador cando se fai unha actualización dunha orixe de datos correctamente.
-- Desencadear cando se cruza un limiar nun segmento. O desencadeador está limitado a cruzar por enriba do limiar.
-- Desencadear cando se cruza un limiar nunha medición de empresa. Só se admiten as medicións de empresa sen ningunha dimensión. O desencadeador está limitado a cruzar por enriba do limiar.
-- Activar cando se complete unha actualización completa de (fontes de datos, segmentos, medidas...).
-- Activar cando se complete unha actualización do proceso de unificación.
+- Falla unha actualización de orixe de datos.
+- Unha actualización de orixe de datos ten éxito.
+- Crúzase un limiar nun segmento. O desencadeador está limitado a cruzar por enriba do limiar.
+- Crúzase un limiar nunha medida empresarial. Só se admiten as medicións de empresa sen ningunha dimensión. O desencadeador está limitado a cruzar por enriba do limiar.
+- Completouse unha actualización completa programada. Este activador non funciona para as actualizacións iniciadas manualmente.
+- Completouse unha actualización do proceso de unificación.
 
 [Configure os desencadeadores en Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ O conector de Power Automate ofrece outras accións que os desencadeadores dispo
 
 ## <a name="create-a-power-automate-flow"></a>Crear un fluxo de Power Automate
 
-1. Vaia a **Administrador** > **Exportar destinos**.
+1. Vaia a **Administrar** > **Conexións**.
 
 1. No mosaico **Power Automate**, seleccione **Configurar**.
 
@@ -53,7 +53,5 @@ O conector de Power Automate ofrece outras accións que os desencadeadores dispo
 Exemplos de como usar os fluxos: 
 - Enviar unha mensaxe á canle de Microsoft Teams se falla unha actualización da orixe de datos. 
 - Enviar un correo electrónico aos propietarios dos datos cando se cruza un limiar nun segmento.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

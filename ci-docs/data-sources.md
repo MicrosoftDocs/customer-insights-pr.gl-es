@@ -1,7 +1,7 @@
 ---
 title: Visión xeral de orixes de datos
 description: Aprende a importar ou inxerir datos de varias fontes.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051451"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207089"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
 Dynamics 365 Customer Insights proporciona conexións para traer datos dun amplo conxunto de fontes. Conectarse a unha orixe de datos a miúdo chámase proceso de *inxestión de datos*. Despois de inxerir os datos, pode [unificar](data-unification.md), xera información e activa os datos para crear experiencias personalizadas.
 
-## <a name="add-data-sources"></a>Engadir orixes de datos
+## <a name="add-or-edit-data-sources"></a>Engadir ou editar fontes de datos
 
-Podes anexar ou importar fontes de datos a Customer Insights. As ligazóns seguintes ofrecen instrucións para engadir fontes de datos.
+Podes anexar ou importar fontes de datos a Customer Insights. As ligazóns seguintes ofrecen instrucións sobre como engadir e editar fontes de datos.
 
 **Adxunta un orixe de datos**
 
@@ -44,19 +44,24 @@ Se utiliza fontes de datos locais, Microsoft ou datos de terceiros, importe e tr
 Se o teu ambiente estaba configurado para usar o almacenamento de Customer Insights e utilizas fontes de datos locais, utilizas Power Platform fluxos de datos. Con Power Platform fluxos de datos, pode ver fontes de datos compartidas e fontes de datos xestionadas por outros. O **Fontes de datos** A páxina enumera as fontes de datos en tres seccións:
 - **Compartido** : fontes de datos que poden xestionar todos os administradores de Customer Insights. Power Platform fluxos de datos, a súa propia conta de almacenamento e anexo a un Dataverse -Managed Data Lake son exemplos de fontes de datos compartidas.
 - **Xestionado por min** :Power Platform fluxos de datos creados e xestionados só por ti. Outros administradores de Customer Insights só poden ver estes fluxos de datos pero non editalos, actualizalos nin eliminalos.
-- **Xestionado por outros** :Power Platform fluxos de datos creados por outros administradores. Só podes velos. Enumera o propietario do fluxo de datos co que contactar para obter axuda.
+- **Xestionado por outros** :Power Platform fluxos de datos creados por outros administradores. Só podes velos. Enumera o propietario do fluxo de datos co que contactar para obter asistencia.
 > [!NOTE]
 > Todas as entidades poden ser vistas e usadas por outros usuarios. Aínda que as fontes de datos son propiedade do usuario que as creou, as entidades resultantes da inxestión de datos poden ser utilizadas por todos os usuarios de Customer Insights.
 
 Se o teu ambiente non usa Power Platform fluxos de datos, o **Fontes de datos** páxina contén só unha lista de todas as fontes de datos. Non se mostran seccións.
 
-Ir a **Datos** > **Fontes de datos** para ver o nome de cada orixe de datos inxerido, o seu estado e a última vez que se actualizaron os datos desa fonte. Pode ordenar a lista de fontes de datos por cada columna.
+## <a name="manage-existing-data-sources"></a>Xestionar fontes de datos existentes
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Orixe de datos engadida.":::
+Ir a **Datos** > **Fontes de datos** para ver o nome de cada orixe de datos inxerido, o seu estado e a última vez que se actualizaron os datos desa fonte. Podes ordenar a lista de fontes de datos por calquera columna ou usar a caixa de busca para atopar o orixe de datos que queres xestionar.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Seleccione un orixe de datos para ver as accións dispoñibles.
 
-A carga de datos pode levar moito tempo. Despois dunha actualización con éxito, os datos inxeridos poden revisarse desde a páxina **Entidades**. Para obter máis información, consulte [Entidades](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Orixe de datos engadida.":::
+
+- [**Editar**](#add-or-edit-data-sources) o orixe de datos para cambiar as súas propiedades.
+- [**Actualizar**](#refresh-data-sources) o orixe de datos para incluír os datos máis recentes.
+- [**Enriquecer**](data-sources-enrichment.md) o orixe de datos antes da unificación.
+- **Eliminar** o orixe de datos. Un orixe de datos só se pode eliminar se os datos non se usan en ningún procesamento, como a unificación, a información, as activacións ou as exportacións.
 
 ## <a name="refresh-data-sources"></a>Actualizar orixes de datos
 
@@ -64,23 +69,12 @@ As fontes de datos pódense actualizar de xeito automático ou actualizarse manu
 
 Ir a **Admin** > **Sistema** > [**Horario**](system.md#schedule-tab) para configurar as actualizacións programadas polo sistema das fontes de datos inxeridas.
 
-Para actualizar unha orixe de datos baixo demanda, siga estes pasos:
+Para actualizar un orixe de datos baixo demanda:
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
-1. Seleccione os puntos suspensivos verticais (&vellip;) xunto ao orixe de datos que quere actualizar e seleccionar **Actualizar** da lista despregable. A orixe de datos agora está activada para unha actualización manual. Actualizar unha orixe de datos actualizá tanto o esquema de entidade como os datos de todas as entidades especificadas na orixe de datos.
+1. Seleccione o orixe de datos que quere actualizar e seleccione **Actualizar**. A orixe de datos agora está activada para unha actualización manual. Actualizar unha orixe de datos actualizá tanto o esquema de entidade como os datos de todas as entidades especificadas na orixe de datos.
 
-1. Seleccione **Deixar de actualizar** se quere cancelar unha actualización existente e a orixe de datos volverá ao seu último estado de actualización.
-
-## <a name="delete-a-data-source"></a>Eliminar unha orixe de datos
-
-Un orixe de datos só se pode eliminar se os datos non se utilizan en ningún procesamento, como unificación, información, activacións ou exportacións.
-
-1. Vaia a **Datos** > **Orixes de datos**.
-
-2. Seleccione os puntos suspensivos verticais (&vellip;) xunto ao orixe de datos que quere eliminar e seleccionar **Eliminar** desde o menú despregable.
-
-3. Confirme a eliminación.
-
+1. Seleccione o estado para abrir **Detalles do progreso** panel e ver o progreso. Para cancelar o traballo, seleccione **Cancelar traballo** na parte inferior do panel.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

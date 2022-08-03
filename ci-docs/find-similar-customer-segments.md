@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054799"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170725"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Buscar clientes similares con IA (vista previa)
 
-Esta característica permítelle atopar clientes similares na súa base de clientes mediante intelixencia artificial. Debe ter polo menos un segmento creado para usar esta función. A expansión dos criterios dun segmento existente axuda a atopar clientes similares a ese segmento.
+Busque clientes similares na súa base de clientes mediante intelixencia artificial. Necesitas polo menos un segmento creado para usar esta función. Ampliar os criterios dun segmento existente axuda a atopar clientes que sexan similares a ese segmento.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Buscar clientes similares* usa medios automatizados para avaliar datos e facer predicións a partir deses datos e, polo tanto, ten a capacidade de ser utilizado como método de avaliación de perfís, xa que ese termo é definido polo Regulamento xeral de protección de datos ("RXPD"). O uso desta función para o procesamento de datos por parte do cliente pode estar suxeito a RXPD ou a outras leis ou regulamentos. Vostede é responsable de garantir que o seu uso de Dynamics 365 Customer Insights, incluíndo as predicións, cumpre con todas as leis e regulamentos aplicables, incluídas as leis relacionadas coa privacidade, os datos persoais, os datos biométricos, a protección de datos e a confidencialidade das comunicacións.
+> *Atopar clientes similares* utiliza medios automatizados para avaliar datos e facer predicións baseándose neses datos. Polo tanto, ten a capacidade de ser utilizado como método de elaboración de perfiles, tal e como o define o Regulamento Xeral de Protección de Datos ("GDPR"). O uso desta función para o procesamento de datos por parte do cliente pode estar suxeito a RXPD ou a outras leis ou regulamentos. Vostede é responsable de garantir que o seu uso de Dynamics 365 Customer Insights, incluíndo as predicións, cumpre con todas as leis e regulamentos aplicables, incluídas as leis relacionadas coa privacidade, os datos persoais, os datos biométricos, a protección de datos e a confidencialidade das comunicacións.
 
-## <a name="finding-similar-customers"></a>Busca de clientes similares
+## <a name="find-similar-customers"></a>Buscar clientes semellantes
 
 1. Ir a **Segmentos** e selecciona o segmento no que queres basear o teu novo segmento. Ese é o seu *segmento de orixe*.
 
-1. Na barra de acción, seleccione **Buscar clientes similares**.
+1. Seleccione **Atopar clientes similares**.
 
 1. Revise o nome suxerido para o seu novo segmento e cámbieo se é necesario.
 
 1. Opcionalmente, engadir [etiquetas](work-with-tags-columns.md#manage-tags) ao novo segmento.
 
-1. Revise os campos que definen o seu novo segmento. Estes campos definen a base sobre a que o sistema tratará de atopar clientes similares ao seu segmento de orixe. O sistema seleccionará de xeito predeterminado os campos recomendados.
+1. Revise os campos que definen o seu novo segmento. Estes campos definen a base sobre a que o sistema tratará de atopar clientes similares ao seu segmento de orixe. O sistema selecciona os campos recomendados por defecto. Se é necesario, engade máis campos.
   Os campos que poden reducir significativamente o rendemento do modelo quedan automaticamente excluídos:
   
    - Campos cos seguintes tipos de datos: StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Campos cunha cardinalidade (o número de elementos dun campo) de menos de 2 ou máis de 30
 
-1. Elixa se quere incluír **Todos os clientes** ou só clientes nun **Segmento existente específico** no seu novo segmento.
+1. Escolle se queres incluír **Todos os clientes** excepto o segmento de orixe ou só os clientes en a **segmento diferente** no teu novo segmento.
 
 1. De xeito predeterminado, o sistema suxire incluír só o 20 % do tamaño do público obxectivo nos seus resultados. Edite este limiar segundo sexa necesario. Aumentar o limiar reducirá a precisión.
 
 1. Inclúa clientes no seu segmento de orixe seleccionando o **Inclúe membros do segmento de orixe ademais de clientes con atributos similares** caixa de verificación.
 
-1. Seleccione **Executar** ao final da páxina para iniciar unha tarefa de clasificación binaria (un método de aprendizaxe automática) que analiza o conxunto de datos.
+1. Seleccione **Corre** na parte inferior da páxina para comezar a [tarefa de clasificación binaria](#about-similarity-scores) (un método de Aprendizaxe automático) que analiza o conxunto de datos.
 
 ## <a name="view-the-similar-segment"></a>Ver o segmento similar
 
-Despois de procesar o segmento similar, atopará o novo segmento listado na páxina **Segmentos**.
+Despois de procesar o segmento similar, atoparás o novo segmento que aparece na lista **Segmentos** páxina co tipo **Expansión**.
 
-> [!div class="mx-imgBorder"]
-> ![Segmento de clientes similar.](media/expanded-segment.png "Segmento de clientes similar")
+Seleccione **Ver** para ver a distribución dos resultados [puntuacións de semellanza](#about-similarity-scores) e valores de puntuación de semellanza baixo **Vista previa dos membros do segmento**.
 
-Seleccione **Ver** na barra de accións para abrir o detalle do segmento. Esta vista contén información sobre a distribución dos resultados en [puntuacións de semellanza](#about-similarity-scores). Tamén atopará os valores de puntuación de semellanza na **Vista previa dos membros do segmento**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Segmento de clientes similar.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Usar os resultados dun segmento similar
+## <a name="manage-a-similar-segment"></a>Xestionar un segmento similar
 
-Pode [traballar cos resultados dun segmento similar](segments.md) como fai con outros segmentos. Por exemplo, exporte o segmento ou cree unha medida.
+[Traballar e xestionar un segmento similar](segments.md#manage-existing-segments) como fai con outros segmentos. Por exemplo, exporte o segmento ou cree unha medida.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Actualizar e editar un segmento similar
-
-Para actualizar un segmento similar, seleccióneo na páxina **Segmentos** e seleccione **Actualizar** na barra de accións.
-
-A edición dun segmento similar reprocesará os seus datos. O segmento creado anteriormente actualízase con datos actualizados.
-Para editar un segmento similar, seleccióneo na páxina **Segmentos** e seleccione **Editar** na barra de accións. Aplique os cambios e seleccione **Executar** para iniciar a tramitación.
-
-## <a name="delete-a-similar-segment"></a>Eliminar un segmento similar
-
-Seleccione o segmento na páxina **Segmentos** e seleccione **Eliminar** na barra de accións. Logo confirme a eliminación.
+Edita, actualiza, renomea, descarga e elimina un segmento similar. Ao editar un segmento similar reprocesa os teus datos. O segmento creado anteriormente actualízase con datos actualizados.
 
 ## <a name="about-similarity-scores"></a>Acerca das puntuacións de semellanza
 

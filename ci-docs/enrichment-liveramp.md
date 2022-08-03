@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082195"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196346"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enriquece os perfís de clientes con datos de identidade de LiveRamp (vista previa)
 
@@ -47,7 +47,7 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten un
 
 ### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 
-Cando habilitas Dynamics 365 Customer Insights para transmitir datos a LiveRamp, permite a transferencia de datos fóra dos límites de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de asegurarse de que LiveRamp cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, revise [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
+Cando habilitas Dynamics 365 Customer Insights para transmitir datos a LiveRamp, permite a transferencia de datos fóra dos límites de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de asegurarse de que LiveRamp cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, revise o [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 
@@ -59,7 +59,7 @@ Cando habilitas Dynamics 365 Customer Insights para transmitir datos a LiveRamp,
 
 1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
 
-1. Seleccione a conexión. Póñase en contacto cun administrador se non está dispoñible.
+1. Seleccione a conexión. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
 1. Seleccione **Seguinte**.
 

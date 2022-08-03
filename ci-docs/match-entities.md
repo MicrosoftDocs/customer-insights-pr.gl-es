@@ -14,16 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082405"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139701"
 ---
 # <a name="match-conditions-for-data-unification"></a>Coincidir as condicións para a unificación de datos
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Este paso na unificación define a orde de coincidencia e as regras para a correspondencia entre entidades. Este paso require polo menos dúas entidades.
 
@@ -32,7 +30,7 @@ Este paso na unificación define a orde de coincidencia e as regras para a corre
 
 ## <a name="include-enriched-entities-preview"></a>Incluír entidades enriquecidas (vista previa)
 
-Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os resultados da túa unificación, selecciónaas. Para obter máis información, consulte [Enriquecemento das fontes de datos](data-sources-enrichment.md). Se seleccionaches entidades enriquecidas no **Rexistros duplicados** páxina, non é necesario seleccionalos de novo.
+Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os teus resultados de unificación, selecciónaas. Para obter máis información, consulte [Enriquecemento das fontes de datos](data-sources-enrichment.md). Se seleccionaches entidades enriquecidas no **Rexistros duplicados** páxina, non é necesario seleccionalos de novo.
 
 1. No **Condicións de coincidencia** páxina, seleccione **Usa entidades enriquecidas** na parte superior da páxina.
 
@@ -45,7 +43,7 @@ Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os 
 Cada coincidencia unifica dúas ou máis entidades nunha única entidade consolidada. Ao mesmo tempo, garda os rexistros exclusivos dos clientes. A orde de coincidencia indica a orde na que o sistema tenta facer coincidir os rexistros.
 
 > [!IMPORTANT]
-> A primeira entidade da lista chámase entidade principal. A entidade principal serve como base para o conxunto de datos de perfís unificados. As entidades adicionais seleccionadas engadiranse a esta entidade.
+> A primeira entidade da lista chámase entidade principal. A entidade principal serve de base para o conxunto de datos de perfís unificados. As entidades adicionais seleccionadas engadiranse a esta entidade.
 >
 > Consideracións importantes:
 >
@@ -85,7 +83,7 @@ A advertencia ao carón dun nome de entidade significa que non se define ningunh
      - **Espazo en branco** : Elimina todos os espazos. *Ola Mundo* convértese en *HelloWorld*.
 
    - **Precisión**: define o nivel de precisión para aplicar a esta condición.
-     - **Básico** : Escolle entre *Baixo (30%)*, *(60%)*, *(80%)*, e *Exacto (100%)*. Seleccione **Exacto** para coincidir só con rexistros que coincidan ao 100 por cento.
+     - **Básico** : Escolle entre *Baixo (30%)*, *(60%)*, *(80%)*, e *Exacto (100%)*. Seleccione **Exacto** para coincidir só con rexistros que coincidan co 100 por cento.
      - **Personalizado**: defina unha porcentaxe coa que deben coincidir os rexistros. O sistema só atopará a coincidencia cos rexistros que superen este limiar.
 
    - **Nome** : Nome da regra.
@@ -112,7 +110,7 @@ As regras de coincidencia representan conxuntos de condicións. Para facer coinc
 1. Siga os pasos indicados en [Definir regras para parellas de coincidencias](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> A orde das regras importa. O algoritmo de coincidencia tenta facer coincidir un determinado rexistro de cliente en base á súa primeira regra e continúa coa segunda regra só se non se identificou ningunha coincidencia coa primeira regra.
+> A orde das regras importa. O algoritmo de coincidencia tenta facer coincidir un determinado rexistro de cliente baseándose na súa primeira regra e continúa coa segunda regra só se non se identificou ningunha coincidencia coa primeira regra.
 
 ## <a name="advanced-options"></a>Opcións avanzadas
 
@@ -120,7 +118,7 @@ As regras de coincidencia representan conxuntos de condicións. Para facer coinc
 
 Na maioría dos casos, a coincidencia de entidades leva a perfís de clientes únicos con datos consolidados. Para tratar de forma dinámica casos raros de falsos positivos e falsos negativos, pode definir excepcións para unha regra de coincidencia. As excepcións aplícanse despois de procesar as regras de coincidencia e evitar a coincidencia de todos os rexistros, que cumpren os criterios de excepción.
 
-Por exemplo, se a túa regra de coincidencia combina apelidos, cidade e data de nacemento, o sistema identificaría aos xemelgos co mesmo apelidos que vivan na mesma cidade e co mesmo perfil. Podes especificar unha excepción que non coincida cos perfís se os nome das entidades que combinas non son os mesmos.
+Por exemplo, se a túa regra de coincidencia combina apelidos, cidade e data de nacemento, o sistema identificaría os xemelgos co mesmo apelidos que viven na mesma cidade e co mesmo perfil. Podes especificar unha excepción que non coincida cos perfís se os nome das entidades que combinas non son os mesmos.
 
 1. No **Editar regra** panel, seleccione **Engadir** > **Engadir excepción**.
 

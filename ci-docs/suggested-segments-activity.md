@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: df4f5f4b5c9a3ad66d57a6b349e18a0d714aff62
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054338"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170587"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Segmentos suxeridos baseados nos datos de actividade (visión preliminar)
+# <a name="suggested-segments-based-on-activity-preview"></a>Segmentos suxeridos en función da actividade (vista previa)
 
 Descubra segmentos interesantes dos seus clientes baseados nos datos da súa actividade que se inxiren en Customer Insights. Exemplos de datos de actividade son as transaccións, a duración das chamadas de asistencia técnica, as compras ou as devolucións. Para suxerir segmentos, os datos de actividade analízanse por actualidade, frecuencia e valor monetario (ou duración). Como alternativa, pode xerar [segmentos suxeridos para mellorar unha medida ou comprender mellor o que inflúe nun atributo](suggested-segments.md).
 
@@ -35,33 +35,31 @@ Cos [datos de actividade](activities.md) dispoñibles en Customer Insights, pode
 - clientes que interactúan frecuentemente coa súa empresa  
 
 Se ten unha empresa minorista, pode descubrir cales son os clientes que máis ingresos xeran e recompensalos cun cupón. Tamén pode identificar os clientes ocasionais e ofrecerlles unirse a un programa de recompensas para que visiten a súa empresa con máis frecuencia.
-Traballa no sector sanitario, ofrece asistencia sanitaria pública e o seu obxectivo é minimizar os gastos dos pacientes individuais. Un xeito de facelo podería ser mediante a redución das visitas periódicas, proporcionando a mellor atención posible no menor número de visitas posible. Neste caso, o seu obxectivo é manter baixa a frecuencia de visita e minimizar os custos periódicos para os pacientes. Tamén pode identificar segmentos de pacientes que teñen compromisos frecuentes e elevados custos periódicos e analizar eses casos para mellorar o seu tratamento. 
+Se prestas asistencia sanitaria pública e o teu obxectivo é minimizar os gastos dos pacientes individuais, podes intentar reducir as visitas recorrentes proporcionando a mellor atención posible no menor número de visitas posible. Neste caso, o seu obxectivo é manter baixa a frecuencia de visita e minimizar os custos periódicos para os pacientes. Tamén pode identificar segmentos de pacientes que teñen compromisos frecuentes e elevados custos periódicos e analizar eses casos para mellorar o seu tratamento.
 
 ## <a name="required-data"></a>Datos necesarios
 
-As suxestións xéranse en función dos datos de entrada seleccionados. 
+As suxestións xéranse en función dos datos de entrada seleccionados.
 
-- Perfís de clientes: todos os clientes ou membros dun segmento específico. 
+- Perfís de clientes: todos os clientes ou membros dun segmento específico.
 
 - Período de tempo: o mes pasado, o ano pasado ou calquera intervalo temporal personalizado.
 
 - Tipo de actividade: compras, transaccións minoristas, transaccións en liña, casos de asistencia técnica, subscricións etc.  
 
-- A entidade de Customer Insights que contén os datos da actividade: a entidade UnifiedActivity ou a entidade para unha actividade específica. 
+- A entidade de Customer Insights que contén os datos da actividade: a entidade UnifiedActivity ou a entidade para unha actividade específica.
 
 - Dimensións que se inclúen: actualidade, frecuencia ou dimensión monetaria, dependendo das necesidades da súa empresa.
 
 ## <a name="generate-suggested-segments"></a>Xerar segmentos suxeridos
 
-1. Vaia a **Segmentos**.
+1. Ir a **Segmentos** e selecciona o **Suxestións (vista previa)** ficha.
 
-1. Seleccione o separador **Suxestións (versión preliminar)**.
-
-1. Seleccione **Buscar novas suxestións** e elixa **Ver ou anticipar o comportamento do cliente**. Seleccione **Iniciar** para executar a experiencia guiada.
+1. Seleccione **Buscar novas suxestións** e elixa **Ver ou anticipar o comportamento do cliente**. Seleccione **Comeza**.
 
    :::image type="content" source="media/suggested-segments-activity-wizard.png" alt-text="Primeiro paso do asistente de configuración para un segmento suxerido baseado na actividade.":::
 
-1. Proporcione os datos de entrada necesarios e seleccione **Seguinte** para continuar.
+1. Proporcione os datos de entrada necesarios e seleccione **A continuación**.
 
    - Elección de clientes: inclúa todos os clientes ou un segmento específico.
    - Elección de actividade: seleccione o tipo de actividade e as entidades que a describen.
@@ -69,32 +67,17 @@ As suxestións xéranse en función dos datos de entrada seleccionados.
 
 1. Revise a entrada e seleccione **Executar** para executar o modelo e xerar suxestións.
 
-1. En función do número de perfís de clientes e das actividades seleccionadas, pode tardar uns minutos en completarse. 
+En función do número de perfís de clientes e das actividades seleccionadas, pode tardar uns minutos en completarse.
 
-Despois de xerar as suxestións, pode filtralas pola dimensión ou o valor que máis lle interese. 
+Despois de xerar as suxestións, pode filtralas pola dimensión ou o valor que máis lle interese.
 
-## <a name="view-details-of-a-suggested-segment"></a>Ver detalles dun segmento suxerido
+## <a name="manage-suggested-segments"></a>Xestionar segmentos suxeridos
 
-Unha vez que se xeran as suxestións, atoparaas na lista **Segmentos** > **Suxestións (versión preliminar)** na sección **Suxestións baseadas na actividade**.
+Ir a **Segmentos** e selecciona o **Suxestións (vista previa)** ficha. No **Suxestións baseadas en actividades** sección, seleccione un segmento suxerido para ver as accións dispoñibles.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Panel lateral expandido que mostra os datos detallados dun segmento suxerido.":::
-
-Seleccione **Visualizar suxestión** nun segmento suxerido para ver os detalles dese segmento. O panel lateral ofrece detalles como a extensión de cada dimensión en comparación co grupo de destino. Tamén destaca o número de membros potenciais no segmento e a porcentaxe correspondente do total de clientes. Se quere manter a suxestión como un segmento, seleccione **Crear segmento**.    
-
-## <a name="save-a-suggestion-as-a-segment"></a>Gardar unha suxestión como segmento
-
-1. Vaia a **Segmentos** > **Suxestións (versión preliminar)**.
-
-1. Seleccione o segmento que quere gardar. 
-
-1. No panel lateral, seleccione **Crear segmento**. 
-
-1. Despois de gardar o segmento, mostrarase na lista de segmentos do separador **Todos os segmentos**. Agora pode [actualizarse ou eliminarse como calquera outro segmento](segments.md). Non pode editar os detalles do segmento. Non obstante, pode modificar os criterios de entrada das suxestións e xerar diferentes suxestións.
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Actualizar ou editar un conxunto de suxestións
-
-1. Vaia a **Segmentos** > **Suxestións (versión preliminar)** e busque o segmento na sección **Suxestións baseadas na actividade**.
-
-1. Seleccione **Actualizar suxestións** para actualizar as suxestións mantendo os atributos configurados. Tamén pode seleccionar **Editar suxestións** para modificar os atributos configurados. O sistema volverá executar o proceso, xerará suxestións de segmentos baseadas nos últimos datos e substituirá as suxestións actuais.
+- **Ver suxestión** para ver os detalles dese segmento como a extensión de cada dimensión en comparación co grupo obxectivo. Tamén destaca o número de membros potenciais no segmento e a porcentaxe correspondente do total de clientes.
+- **Crear segmento** para gardar o suxerido como un segmento. Aparece no **Todos os segmentos** ficha e pode ser [actualizado ou eliminado](segments.md). Non pode editar os detalles do segmento. Non obstante, pode modificar os criterios de entrada das suxestións e xerar diferentes suxestións.
+- **Editar suxestións** para modificar os atributos configurados que substituirán as suxestións actuais.
+- **Actualizar suxestións** para actualizar as suxestións mantendo os atributos configurados.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

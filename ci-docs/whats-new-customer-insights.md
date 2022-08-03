@@ -1,28 +1,56 @@
 ---
 title: Novidades de Dynamics 365 Customer Insights
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054016"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114244"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
 Comprácenos anunciar as nosas últimas actualizacións! Este artigo resume as funcionalidades de previsualización pública, as melloras de dispoñibilidade xeral e as actualizacións de funcións. Para ver os plans de funcionalidades a longo prazo, vexa os [plans de versións de Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
-Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver as funcionalidades antes que outras. A menos que se especifique o contrario, non é necesario que realice ningunha acción e actualizaremos a aplicación automaticamente sen tempo de inactividade.
+Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver as funcionalidades antes que outras. A non ser que se especifique doutro xeito, non necesitas realizar ningunha acción; actualizaremos a aplicación automaticamente sen tempo de inactividade.
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Actualizacións de xuño de 2022
+
+As actualizacións de xuño de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Experiencia de usuario actualizada para fontes de datos e inxestión de datos
+
+Importar datos dunha ampla gama de fontes de datos é a base para consolidar os datos dos seus clientes en Dynamics 365 Customer Insights. Repasamos a experiencia do usuario para a importación e conexión de fontes de datos. Esta actualización ten como obxectivo facilitarche a inxestión de datos en Customer Insights.
+
+Para obter máis información, consulte [Visión xeral das fontes de datos](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Exportar a InMobi
+
+InMobi axuda ás marcas a comprender, identificar, involucrar e adquirir consumidores. Pode exportar segmentos e outros datos ao servizo InMobi mediante contas de Azure Blob Storage.
+
+Para obter máis información, consulte [Exportar a InMobi (vista previa)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Compatibilidade con Lockbox en Customer Insights
+
+Customer Lockbox ofrece unha interface para revisar e aprobar (ou rexeitar) solicitudes de acceso a datos. Estas solicitudes prodúcense cando se precisa o acceso aos datos dos clientes para resolver un caso de asistencia.
+
+Para obter máis información, consulte [Acceda de forma segura aos datos do cliente con Customer Lockbox (vista previa)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Conéctese aos seus datos mediante Azure Private Link
+
+Azure Private Link permite que Customer Insights se conecte ao teu Azure Data Lake Storage conta a través dun punto final privado na súa rede virtual. Para os datos dunha conta de almacenamento, que non está exposta á Internet pública, Private Link habilita a conexión a esa rede restrinxida.
+
+Para obter máis información, consulte [Usa a ligazón privada en Customer Insights](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Actualizacións de maio de 2022
 
@@ -42,7 +70,7 @@ Para obter máis información, consulte [Explore os datos do cliente](home.md).
 
 ### <a name="track-usage-of-a-segment"></a>Rastrexa o uso dun segmento
 
-Agora podes [rastrexar o uso dun segmento](segments.md#track-usage-of-a-segment) en aplicacións, que están baseadas no Dataverse organización que está conectada con Customer Insights. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), o sistema infórmache sobre o uso dese segmento.
+Agora podes [rastrexar o uso dun segmento](segments.md#track-usage-of-a-segment) nas aplicacións, que están baseadas no Dataverse organización que está conectada con Customer Insights. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), o sistema infórmache sobre o uso dese segmento.
 
 ### <a name="export-to-criteo"></a>Exportar a Criteo
 
@@ -60,21 +88,21 @@ Para obter máis información, consulte [Como: Crear un novo ambiente](create-en
 
 As actualizacións de abril de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
 
-### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (Previsualización)
+### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (vista previa)
 
-Dun & Bradstreet ofrece datos comerciais, análises e información para empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
+Dun & Bradstreet ofrece datos comerciais, análises e información para as empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
 
-Para obter máis información, consulte [Enriquecemento dos perfís da empresa con Dun & Bradstreet (Vista previa)](enrichment-dnb.md).
+Para obter máis información, consulte [Enriquecemento dos perfís da empresa con Dun & Bradstreet (versión previa)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Defina o tipo de medida ao crear unha nova medida
 
-Agora podes distinguir entre medidas para perfís individuais e medidas de toda a túa empresa. Aínda que as medidas comerciais aparecen na páxina de inicio de Customer Insights, as medidas dos clientes están expostas nas vistas detalladas dos clientes.
+Agora podes distinguir entre medidas para perfís individuais e medidas de toda a túa empresa. Mentres que as medidas comerciais aparecen na páxina de inicio de Customer Insights, as medidas dos clientes están expostas nas vistas detalladas dos clientes.
 
 Para obter máis información, consulte [Usa o creador de medidas para crear medidas desde cero](measure-builder.md).
 
 ### <a name="consolidation-of-customer-insights-documentation"></a>Consolidación da documentación de Customer Insights
 
-Revisamos os nosos artigos de documentación e eliminamos as mencións ás estatísticas de compromiso e as capacidades de información sobre o público. No futuro, faremos referencia coherentemente ao nome do produto Customer Insights cando escribamos sobre as funcións principais da aplicación. Este cambio tamén leva a unha reestruturación significativa da táboa de contidos, a estrutura do URL e as rutas dos ficheiros no repositorio de documentación subxacente. Todos os teus marcadores ou ligazóns existentes seguen funcionando e redirixindo aos URL actualizados.
+Revisamos os nosos artigos de documentación e eliminamos as mencións ás estatísticas de compromiso e ás capacidades de información sobre o público. No futuro, faremos referencia coherentemente ao nome do produto Customer Insights cando escribamos sobre as funcións principais da aplicación. Este cambio tamén leva a unha reestruturación significativa da táboa de contidos, a estrutura do URL e as rutas dos ficheiros no repositorio de documentación subxacente. Todos os teus marcadores ou ligazóns existentes seguen funcionando e redirixindo aos URL actualizados.
 
 Se queres informarnos como percibes ese cambio ou detectar que algo non funciona como esperaba, infórmanos por [enviando comentarios para esta páxina](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
@@ -82,7 +110,7 @@ Se queres informarnos como percibes ese cambio ou detectar que algo non funciona
 
 As actualizacións de marzo de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
 
-### <a name="liveramp-abilitec-enrichment-preview"></a>Enriquecemento LiveRamp AbiliTec (vista previa)
+### <a name="liveramp-abilitec-enrichment-preview"></a>Enriquecemento LiveRamp AbiliTec (Vista previa)
 
 LiveRamp ofrece resolución de identidade e consolidación de datos dos clientes. Podes asignar os identificadores persoais dos teus datos de cliente ao gráfico de identidade de AbiliTec e recibir ID de AbiliTec. Despois podes usar estes ID para unificar mellor os datos dos teus clientes.
 
@@ -132,7 +160,7 @@ Organizacións que xa usan Azure Synapse Analytics pode inxerir eses datos a Cus
 
 Para obter máis información, consulte [Conectar un Azure Synapse orixe de datos (vista previa)](connect-synapse.md).
 
-### <a name="liveramp-enrichment-preview"></a>Enriquecemento LiveRamp (Previsualización)
+### <a name="liveramp-enrichment-preview"></a>Enriquecemento LiveRamp (vista previa)
 
 LiveRamp ofrece resolución de identidade e consolidación de datos dos clientes. Podes asignar os identificadores persoais dos teus datos de cliente ao gráfico de identidade de AbiliTec e recibir ID de AbiliTec. Despois podes usar estes ID para unificar mellor os datos dos teus clientes.
 
@@ -158,10 +186,10 @@ Para obter máis información, consulte [Fontes de datos danadas](entities.md#co
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Fin da vista previa para as funcións de informes na capacidade de información de compromiso
 
-O Dynamics 365 Customer Insights A vista previa da capacidade de datos de compromiso finalizou o 15 de febreiro de 2022.  
+O Dynamics 365 Customer Insights A vista previa da capacidade de información de compromiso finalizou o 15 de febreiro de 2022.  
 Este cambio significa que a experiencia de proba de Customer Insights xa non inclúe a posibilidade de crear funis nin outras funcións de informes.
 
-Convidámoste a explorar e avaliar outras moitas características de [Información do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
+Convidámoste a explorar e avaliar outras moitas características de [Insights do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
  
 Durante un período de transición, os participantes existentes de vista previa aínda teñen acceso a algunhas capacidades e funcións de vista previa:
 
@@ -170,7 +198,7 @@ Durante un período de transición, os participantes existentes de vista previa 
 - Mellora os perfís unificados con eventos inxeridos e refinados para beneficiarse do valor total dos datos dos seus clientes
   
 Durante o período de transición, os eventos capturados aínda se transmiten ao Data Lake conectado. Unha vez desactivada esta función, o uso compartido de datos deterase e non se enviarán novos eventos ao almacenamento conectado.
-Póñase en contacto directamente co equipo da súa conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache informado dos próximos lanzamentos. 
+Póñase en contacto directamente co equipo da súa conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache ao tanto dos próximos lanzamentos. 
 
 ## <a name="january-2022-updates"></a>Actualizacións de xaneiro de 2022
 
@@ -178,7 +206,7 @@ As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rend
 
 ### <a name="sentiment-analysis-of-your-customers-feedback"></a>Análise de sentimentos dos comentarios dos teus clientes
 
-Customer Insights ofrece unha nova función impulsada pola intelixencia artificial para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
+Customer Insights ofrece unha nova función impulsada pola IA para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
 
 Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (vista previa)](sentiment-analysis.md).
 

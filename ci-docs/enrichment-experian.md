@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053019"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195934"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriqueza os perfís de clientes con datos demográficos de Experian (versión preliminar)
 
@@ -39,7 +39,7 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten un
 
    :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian panel de configuración da conexión.":::
 
-1. Introduza un nome para a conexión e un ID de usuario, ID de partido e número de modelo válidos para a túa Experian Conta de transporte seguro.
+1. Introduza un nome para a conexión e un ID de usuario, ID de partido e número de modelo válidos para o seu Experian Conta de transporte seguro.
 
 1. Revise e proporcione o seu consentimento para a [Privacidade e cumprimento de datos](#data-privacy-and-compliance) seleccionando **Estou de acordo**.
 
@@ -59,7 +59,7 @@ Cando permite a Dynamics 365 Customer Insights transmitir datos a Experian, perm
 
 1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
 
-1. Seleccione a conexión. Póñase en contacto cun administrador se non está dispoñible.
+1. Seleccione a conexión. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
 1. Seleccione **Seguinte**.
 

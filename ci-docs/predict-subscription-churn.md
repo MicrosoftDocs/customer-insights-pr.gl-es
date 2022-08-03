@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642873"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171047"
 ---
 # <a name="subscription-churn-prediction"></a>Predición de abandono de subscricións
 
@@ -121,7 +121,7 @@ A predición da renovación da subscrición axuda a prever se un cliente está e
    - **Nome da predición:** o nome da predición indicado ao creala.
    - **Tipo de predición:** o tipo de modelo empregado para a predición
    - **Entidade de saída:** nome da entidade para almacenar a saída da predición. Pode atopar unha entidade con este nome en **Datos** > **Entidades**.    
-     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é unha etiqueta binaria baseada en *ChurnScore* cun limiar de 0,5. É posible que o limiar predeterminado non funcione no seu escenario. [Cree un novo segmento](segments.md#create-a-new-segment) co seu limiar preferido.
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é unha etiqueta binaria baseada en *ChurnScore* cun limiar de 0,5. É posible que o limiar predeterminado non funcione no seu escenario. [Cree un novo segmento](segments.md#create-a-segment) co seu limiar preferido.
    - **Campo previsto:** este campo está completado só para algúns tipos de predicións e non se usa na predición da renovación de subscricións.
    - **Estado:** o estado actual da execución da predición.
         - **En cola:** a predición está actualmente á espera de que se executen outros procesos.

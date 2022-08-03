@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082552"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196024"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Enriquece os perfís da empresa con Dun & Bradstreet (versión previa)
 
-Dun & Bradstreet ofrece datos comerciais, análises e información para empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
+Dun & Bradstreet ofrece datos comerciais, análises e información para as empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -76,11 +76,11 @@ Actualmente admitimos as seguintes opcións de país/rexión: Canadá (inglés) 
 
 1. Seleccione **Enriquece os meus datos** no **Datos da empresa** para azulexos Dun & Bradstreet.
 
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Captura de pantalla da tella de Dun & Bradstreet.":::
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Captura de pantalla do azulexo de Dun & Bradstreet.":::
 
 1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
 
-1. Seleccione a conexión e confirme. Póñase en contacto cun administrador se non está dispoñible.
+1. Seleccione a conexión e confirme. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
 1. Seleccione **Seguinte**.
 

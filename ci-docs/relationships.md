@@ -21,21 +21,21 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082573"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183556"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Relacións entre entidades e camiños das entidades
 
 As relacións conectan entidades e definen un gráfico dos seus datos cando as entidades comparten un identificador común, unha clave externa. A esta clave externa pódese facer referencia desde unha entidade a outra. As entidades conectadas permiten a definición de segmentos e medidas en función de varias orixes de datos.
 
 Hai tres tipos de relacións: 
-- Relacións do sistema non editables, creadas polo sistema como parte do proceso de unificación de datos
-- Relacións herdadas non editables, que se crean automaticamente a partir da inxestión de orixes de datos 
-- Relacións personalizadas editables, creadas e configuradas polos usuarios
+- As relacións do sistema non editables son creadas polo sistema como parte do proceso de unificación de datos
+- As relacións herdadas non editables créanse automaticamente a partir de fontes de datos inxeridas
+- As relacións personalizadas editables son creadas e configuradas polos usuarios
 
 ## <a name="non-editable-system-relationships"></a>Relacións do sistema non editables
 
@@ -67,69 +67,66 @@ Unha relación consiste nunha *entidade de orixe* que contén a clave externa e 
    - **Descrición**: descrición da relación.
    - **Entidade de orixe**: entidade que se usa como orixe na relación. Exemplo: SupportCase.
    - **Entidade de destino**: entidade que se usa como destino na relación. Exemplo: Cliente.
-   - **Cardinalidade de orixe**: especifique a cardinalidade da entidade de orixe. A cardinalidade describe o número de elementos posibles nun conxunto. Sempre se relaciona coa cardinalidade de destino. Pode escoller entre **Un** e **Moitos**. Só se admiten relacións de moitos a un e dun a un.  
+   - **Cardinalidade de orixe** : Cardinalidade da entidade fonte. A cardinalidade describe o número de elementos posibles nun conxunto. Sempre se relaciona coa cardinalidade de destino. Pode escoller entre **Un** e **Moitos**. Só se admiten relacións de moitos a un e dun a un.  
      - Moitos a un: varios rexistros de orixe poden relacionarse cun rexistro de destino. Exemplo: varios casos de asistencia técnica dun único cliente.
      - Un a un: un único rexistro de orixe relaciónase cun rexistro de destino. Exemplo: un ID de fidelidade para un único cliente.
 
      > [!NOTE]
      > Pódense crear relacións de moitos a moitos usando dúas relacións de moitos a un e unha entidade de ligazón, que conecta a entidade de orixe e a entidade de destino.
 
-   - **Cardinalidade obxectivo**: seleccione a cardinalidade dos rexistros de entidades de destino. 
-   - **Campo da clave de orixe**: o campo de clave externa na entidade de orixe. Exemplo: SupportCase podería usar CaseID como campo de clave externa.
-   - **Campo da clave obxectivo**: o campo da clave da entidade de destino. Exemplo: o cliente podería usar o campo da clave **CustomerID**.
+   - **Cardinalidade obxectivo** : Cardinalidade dos rexistros da entidade de destino.
+   - **Campo da clave de orixe** : campo de chave estranxeira na entidade fonte. Exemplo: usa SupportCase **ID de caso** como campo de clave externa.
+   - **Campo clave de destino** : campo clave da entidade de destino. Exemplo: usos do cliente **ID de cliente** como campo clave.
 
 4. Seleccione **Gardar** para crear a relación personalizada.
 
 ## <a name="set-up-account-hierarchies"></a>Configurar xerarquías de conta
 
-Os contornos configurados para utilizar as contas empresariais como público obxectivo principal poden configurar xerarquías de contas para contas comerciais relacionadas. Por exemplo, unha empresa que ten unidades de negocio separadas. 
+Os ambientes que están configurados para usar contas empresariais como público obxectivo principal poden configurar xerarquías de contas para contas empresariais relacionadas. Por exemplo, unha empresa que ten unidades de negocio separadas.
 
 As organizacións crean xerarquías de contas para xestionar mellor as contas e as súas relacións entre si. Customer Insights admite xerarquías de contas de pais e fillos que xa existen nos datos de clientes inxeridos. Por exemplo, contas de Dynamics 365 Sales. Estas xerarquías pódense configurar no **Relacións** páxina.
 
 1. Vaia a **Datos** > **Relacións**.
 1. Seleccione a pestana **Xerarquía de contas**.
-1. Seleccione **Nova xerarquía de contas**. 
-1. No panel **Xerarquía de contas**, proporcione un nome para a xerarquía. O sistema crea un nome para a entidade de saída. Pode cambiar o nome da entidade de nome de saída.
+1. Seleccione **Nova xerarquía de contas**.
+1. No panel **Xerarquía de contas**, proporcione un nome para a xerarquía. O sistema crea un nome para a entidade de saída, pero pode cambialo.
 1. Seleccione a entidade que contén a xerarquía da súa conta. Normalmente está na mesma entidade que contén as contas.
-1. Seleccione a **ID de conta** e a **ID principal da conta** da entidade seleccionada 
-1. Seleccione **Gardar** para aplicar a configuración e finalizar a xerarquía da conta.
+1. Seleccione o **UID da conta** e **UID dos pais** da entidade seleccionada.
+1. Seleccione **Gardar** para finalizar a xerarquía da conta.
 
-## <a name="view-relationships"></a>Ver relacións
+## <a name="manage-existing-relationships"></a>Xestionar relacións existentes
 
-A páxina Relacións enumera todas as relacións que se crearon. Cada fila representa unha relación, que tamén inclúe detalles sobre a entidade de orixe, a entidade de destino e a cardinalidade. 
+Vaia ao **Relacións** páxina para ver todas as relacións que se crearon, a súa entidade de orixe, a entidade de destino e a cardinalidade.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Lista de relacións e opcións na barra de acción da páxina Relacións.":::
 
-Esta páxina ofrece un conxunto de opcións para as relacións novas e existentes: 
-- **Nova relación**: [cree unha relación personalizada](#create-a-custom-relationship).
-- **Visualizador**: [explore o visualizador de relacións](#explore-the-relationship-visualizer) para ver un diagrama de rede das relacións existentes e a súa cardinalidade.
-- **Filtrar por**: elixa o tipo de relacións que se amosarán na lista.
-- **Buscar relacións**: use unha busca baseada en texto sobre as propiedades das relacións.
+Usa o **Filtrar por** ou **Busca de relacións** opcións para localizar unha determinada relación. Para ver un diagrama de rede das relacións existentes e a súa cardinalidade, seleccione [**Visualizador**](#explore-the-relationship-visualizer).
+
+Selecciona unha relación para ver as accións dispoñibles:
+- **Editar**: actualice as propiedades das relacións personalizadas no panel de edición e garde os cambios.
+- **Eliminar**: elimine relacións personalizadas.
+- **Ver**: vexa as relacións creadas polo sistema e herdadas.
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorar o visualizador de relacións
 
 O visualizador de relacións mostra un diagrama de rede das relacións existentes entre as entidades conectadas e a súa cardinalidade. Tamén visualiza o camiño da relación.
 
-Para personalizar a vista, pode cambiar a posición das caixas arrastrándoas sobre o lenzo.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Captura de pantalla do diagrama de rede do visualizador de relacións con conexións entre entidades relacionadas.":::
 
-Opcións dispoñibles: 
+Para personalizar a vista, pode cambiar a posición das caixas arrastrándoas sobre o lenzo. Outras opcións inclúen: 
 - **Exportar como imaxe**: garde a vista actual como un ficheiro de imaxe.
 - **Cambiar a deseño horizontal ou vertical**: cambie o aliñamento das entidades e das relacións.
 - **Editar**: actualice as propiedades das relacións personalizadas no panel de edición e garde os cambios.
 
 ## <a name="relationship-paths"></a>Camiños da relación
 
-Un camiño de relación describe as entidades que están conectadas con relacións entre unha entidade de orixe e unha entidade de destino. Úsase cando se crea un segmento ou unha medida que inclúe outras entidades distintas da entidade do perfil unificado e hai varias opcións para chegar á entidade do perfil unificado. 
-
-Un camiño de relación informa ao sistema sobre cales son as relacións para acceder á entidade de perfil unificado. Diferentes camiños de relación poden dar resultados diferentes.
+Un camiño de relación describe as entidades que están conectadas con relacións entre unha entidade de orixe e unha entidade de destino. Utilízase cando se crea un segmento ou unha medida que inclúe entidades distintas da entidade do perfil unificado e hai varias opcións para chegar á entidade do perfil unificado. Diferentes camiños de relación poden dar resultados diferentes.
 
 Por exemplo, a entidade *eCommerce_eCommercePurchases* ten as seguintes relacións coa entidade *Cliente* do perfil unificado:
 
 - eCommerce_eCommercePurchases > Cliente
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente
 
 Un camiño de relación determina que entidades pode usar ao crear regras para medidas ou segmentos. Escoller a opción co camiño de relación máis longo probablemente dea menos resultados, porque os rexistros coincidentes deben formar parte de todas as entidades. Neste exemplo, un cliente ten que mercar bens a través dun comercio electrónico (eCommerce_eCommercePurchases), nun punto de venda (POS_posPurchases) e participar no noso programa de fidelidade (loyaltyScheme_loyCustomers). Se escolle a primeira opción, é probable que obteña máis resultados porque os clientes só precisan existir nunha entidade adicional.
 
@@ -155,7 +152,7 @@ Unha relación clasifícase como **relación indirecta** cando unha entidade de 
 
 #### <a name="multi-hop-relationship"></a>Relación de varios saltos
 
-Unha *relación de varios saltos* é unha *relación indirecta* que lle permite conectar unha entidade de orixe a unha entidade de destino a través dunha ou máis entidades intermediarias adicionais.
+Unha **relación de varios saltos** é unha *relación indirecta* que lle permite conectar unha entidade de orixe a unha entidade de destino a través dunha ou máis entidades intermediarias adicionais.
 
 Por exemplo, se unha entidade de actividade chamada *eCommerce_eCommercePurchasesWest* se conecta a unha entidade intermedia chamada *eCommerce_eCommercePurchasesEast* e logo conéctase a unha entidade de destino chamada *eCommerce_eCommerceContacts*, é unha relación de varios saltos.
 
@@ -168,16 +165,6 @@ As relacións de varios saltos e varios camiños pódense usar xuntas para crear
 Por exemplo, se unha entidade de actividade chamada *eCommerce_eCommercePurchasesWest* se conecta a unha entidade intermedia chamada *eCommerce_eCommercePurchasesEast* e logo conéctase a dúas entidades de destino chamadas *eCommerce_eCommerceContacts* e *loyaltyScheme_loyCustomers*, é unha relación de varios saltos e varios camiños.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="A entidade de orixe conéctase directamente a unha entidade de destino e conéctase a outra entidade de destino a través dunha entidade intermedia.":::
-
-## <a name="manage-existing-relationships"></a>Xestionar relacións existentes 
-
-Na páxina Relacións, cada relación está representada por unha fila. 
-
-Seleccione unha relación e elixa unha das seguintes opcións: 
- 
-- **Editar**: actualice as propiedades das relacións personalizadas no panel de edición e garde os cambios.
-- **Eliminar**: elimine relacións personalizadas.
-- **Ver**: vexa as relacións creadas polo sistema e herdadas. 
 
 ## <a name="next-step"></a>Seguinte paso
 

@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012023"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207135"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Actualización incremental para Power Query e fontes de datos de Azure Data Lake
 
-Este artigo explica como configurar a actualización incremental para fontes de datos en función de Power Query ou Azure Data Lake.
-
-A actualización incremental para as orixes de datos ofrece as seguintes vantaxes:
+Actualización incremental para fontes de datos baseada en Power Query ou Azure Data Lake ofrece as seguintes vantaxes:
 
 - **Actualizacións máis rápidas** - Só se actualizan os datos que cambiaron. Por exemplo, pode actualizar só os últimos cinco días dun conxunto de datos histórico.
 - **Fiabilidade aumentada** - Con actualizacións máis frecuentes, non necesita manter conexións a sistemas de orixes volátiles durante tanto tempo, reducindo o risco de problemas de conexión.
@@ -61,11 +59,11 @@ Customer Insights permite a actualización incremental das fontes de datos impor
 Customer Insights permite a actualización incremental das fontes de datos conectadas Azure Data Lake Storage. Para utilizar a inxestión incremental e a actualización dunha entidade, configure esa entidade ao engadir o Azure Data Lake orixe de datos ou posteriormente ao editar o orixe de datos. O cartafol de datos da entidade debe conter os seguintes cartafoles:
 
 - **Datos completos** : Cartafol con ficheiros de datos que conteñen rexistros iniciais
-- **Datos incrementais** : Cartafol cos cartafoles da xerarquía de data/hora **aaaa/mm/dd/hh** formato que contén as actualizacións incrementais. **hh** representa a hora UTC das actualizacións e contén o **Upsers** e **Elimina** cartafoles. **Upsers** contén ficheiros de datos con actualizacións de rexistros existentes ou novos rexistros. **Elimina** contén ficheiros de datos con rexistros que se deben eliminar.
+- **Datos incrementais** : Cartafol con cartafoles de xerarquía de data/hora **aaaa/mm/dd/hh** formato que contén as actualizacións incrementais. **hh** representa a hora UTC das actualizacións e contén o **Upsers** e **Elimina** cartafoles. **Upsers** contén ficheiros de datos con actualizacións de rexistros existentes ou rexistros novos. **Elimina** contén ficheiros de datos con rexistros que se deben eliminar.
 
 1. Ao engadir ou editar un orixe de datos, desprácese ata o **Atributos** panel para a entidade.
 
-1. Revisa os atributos. Asegúrate de que un atributo de data de creación ou de última actualización estea configurado con a *dataHora* **Formato de datos** e a *Calendario.Data* **Tipo semántico**. Edita o atributo se é necesario e selecciona **Feito**.
+1. Revisa os atributos. Asegúrate de que un atributo de data de creación ou de última actualización está configurado con a *dataHora* **Formato de datos** e a *Calendario.Data* **Tipo semántico**. Edita o atributo se é necesario e selecciona **Feito**.
 
 1. Dende **Seleccione Entidades** panel, edita a entidade. O **Inxestión incremental** a caixa de verificación está seleccionada.
 
@@ -73,6 +71,7 @@ Customer Insights permite a actualización incremental das fontes de datos conec
 
    1. Navega ata o cartafol raíz que contén os ficheiros .csv ou .parquet para obter datos completos, subidas de datos incrementais e eliminacións de datos incrementais.
    1. Introduza a extensión para os datos completos e os dous ficheiros incrementais (\. csv ou\. parqué).
+   1. Para ficheiros .csv, seleccione o delimitador de columna e, se quere, a primeira fila do ficheiro como cabeceira de columna.
    1. Seleccione **Gardar**.
 
 1. Para **Última actualización**, seleccione o atributo de marca de data e hora.

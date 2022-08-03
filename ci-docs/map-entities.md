@@ -13,16 +13,14 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: a75218c996b277e00924f2b7b38ea686a1f4dc38
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740993"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139780"
 ---
 # <a name="select-source-fields-for-data-unification"></a>Seleccione os campos de orixe para a unificación de datos
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 O primeiro paso na unificación é seleccionar as entidades e os campos dos teus conxuntos de datos que queres unificar. Seleccione entidades que conteñan detalles relacionados co cliente, como nome, enderezo, número de teléfono e correo electrónico. Pode seleccionar unha ou varias entidades.
 
@@ -69,7 +67,7 @@ Para cada entidade, realice os seguintes pasos.
 
    1. Para un atributo de nome de conta, introduza "Organization.Name" no campo **Tipo** campo.
 
-1. Revisa os atributos onde se identifica automaticamente un tipo semántico. Estes atributos están listados en **Revisa os campos mapeados**. Só os atributos co mesmo tipo poden combinarse no **Campos de clientes unificados** paso. Os tipos semánticos utilízanse para suxerir insights automaticamente. Asegúrate de que os tipos que escolleches sexan consistentes en todas as entidades seleccionadas.
+1. Revisa os atributos nos que se identifica automaticamente un tipo semántico. Estes atributos están listados en **Revisa os campos mapeados**. Só os atributos co mesmo tipo poden combinarse no **Campos de clientes unificados** paso. Os tipos semánticos utilízanse para suxerir insights automaticamente. Asegúrate de que os tipos que escolleches sexan consistentes en todas as entidades seleccionadas.
 
 1. Para os atributos que non se asignan automaticamente a un tipo semántico, seleccione un campo de tipo semántico, introduza o seu nome de tipo de atributo personalizado ou déixaos sen asignar. Estes atributos están listados en **Defina os datos nos campos non asignados**.
 

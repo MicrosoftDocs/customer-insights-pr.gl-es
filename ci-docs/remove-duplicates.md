@@ -13,22 +13,20 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 27dff3551ab411a12c273536d7431d651c48573e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: MT
+ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8742943"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139427"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Elimina os duplicados antes de unificar os datos
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Este paso na unificación permítelle opcionalmente configurar regras para xestionar rexistros duplicados dentro dunha entidade. *Deduplicación* identifica rexistros duplicados e fusionaos nun só rexistro. Os rexistros de orixe vincúlanse co rexistro combinado con ID alternativos. Se as regras non están configuradas, aplícanse as regras definidas polo sistema.
 
 ## <a name="include-enriched-entities-preview"></a>Incluír entidades enriquecidas (vista previa)
 
-Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os resultados da túa unificación, selecciónaas. Para obter máis información, consulte [Enriquecemento das fontes de datos](data-sources-enrichment.md).
+Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os teus resultados de unificación, selecciónaas. Para obter máis información, consulte [Enriquecemento das fontes de datos](data-sources-enrichment.md).
 
 1. No **Rexistros duplicados** páxina, seleccione **Usa entidades enriquecidas** na parte superior da páxina.
 
@@ -52,7 +50,7 @@ Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os 
         - **Unicode a ASCII** : converte a notación Unicode en caracteres ASCII. */u00B2* convértese en *2*.
         - **Espazo en branco** : Elimina todos os espazos. *Ola Mundo* convértese en *HelloWorld*.
       - **Precisión**: define o nivel de precisión para aplicar a esta condición.
-        - **Básico** : Escolle entre *Baixo (30%)*, *(60%)*, *(80%)*, e *Exacto (100%)*. Seleccione **Exacto** para coincidir só con rexistros que coincidan ao 100 por cento.
+        - **Básico** : Escolle entre *Baixo (30%)*, *(60%)*, *(80%)*, e *Exacto (100%)*. Seleccione **Exacto** para coincidir só con rexistros que coincidan co 100 por cento.
         - **Personalizado**: defina unha porcentaxe coa que deben coincidir os rexistros. O sistema só atopará a coincidencia cos rexistros que superen este limiar.
       - **Nome** : Nome da regra.
 
@@ -69,7 +67,7 @@ Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os 
 1. Seleccione unha entidade e despois **Edita as preferencias de combinación**.
 
 1. No **Combina preferencias** panel:
-   1. Escolla unha das tres opcións para determinar que rexistro manter se se atopa un duplicado:
+   1. Escolla unha das tres opcións para determinar que rexistro gardar se se atopa un duplicado:
       - **Máis cheo**: identifica o rexistro con máis campos de atributos cubertos como o rexistro gañador. É a opción de combinación predefinida.
       - **Máis recente**: Identifica o rexistro gañador en función da data máis recente. Require unha data ou un campo numérico para definir a actualidade.
       - **Menos recente**: Identifica o rexistro gañador en función da data menos recente. Require unha data ou un campo numérico para definir a actualidade.
@@ -78,7 +76,7 @@ Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os 
       
    1. Opcionalmente, para definir preferencias de combinación en atributos individuais dunha entidade, seleccione **Avanzado** na parte inferior do panel. Por exemplo, pode escoller manter o correo electrónico máis recente E o enderezo máis completo de diferentes rexistros. Amplíe a entidade para ver todos os seus atributos e defina que opción usar para atributos individuais. Se escolle unha opción baseada na recensión, tamén debe especificar un campo de data/hora que defina a recente.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="Panel de preferencias de combinación avanzadas que mostra o correo electrónico recente e o enderezo completo":::
+      :::image type="content" source="media/m3_adv_merge.png" alt-text="Panel de preferencias de combinación avanzada que mostra o correo electrónico recente e o enderezo completo":::
 
    1. Seleccione **Feito** para aplicar as súas preferencias de combinación.
 
@@ -88,7 +86,7 @@ Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os 
 > [Seguinte paso para unha única entidade: unificar campos](merge-entities.md)
 
 > [!div class="nextstepaction"]
-> [Seguinte paso para varias entidades: Condicións coincidentes](match-entities.md)
+> [Seguinte paso para varias entidades: Condicións de coincidencia](match-entities.md)
 
 ## <a name="deduplication-output-as-an-entity"></a>Saída de desduplicación como entidade
 
@@ -97,7 +95,7 @@ O proceso de deduplicación crea unha nova entidade deduplicada para cada unha d
 Unha entidade de saída de desduplicación contén a seguinte información:
 
 - Identificadores ou claves
-  - Campos de clave primaria e ID alternativo. O campo de ID alternativo está formado por todos os ID alternativos identificados para un rexistro.
+  - Campos de clave primaria e ID alternativo. O campo de ID alternativo consta de todos os ID alternativos identificados para un rexistro.
   - O campo Deduplication_GroupId mostra o grupo ou clúster identificado dentro dunha entidade que agrupa todos os rexistros similares en función dos campos de desduplicación especificados. Úsase con fins de procesamento do sistema. Se non hai regras de desduplicación manual especificadas e se aplican regras de desduplicación definidas polo sistema, é posible que non atope este campo na entidade de saída da desduplicación.
   - Deduplication_WinnerId: este campo contén o ID gañador dos grupos ou clústeres identificados. Se o Deduplication_WinnerId é o mesmo que o valor da clave primaria para un rexistro, significa que o rexistro é o rexistro gañador.
 - Campos empregados para definir as regras de desduplicación.

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642953"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171093"
 ---
 # <a name="transaction-churn-prediction"></a>Predición do abandono de transaccións
 
@@ -116,7 +116,7 @@ Para contornos baseados en contas empresariais, podemos predicir o cambio transa
 
 ### <a name="define-customer-churn"></a>Definir renovación do cliente
 
-1. Establece o **predición ventá**. Por exemplo, predicir o risco de abandono dos seus clientes durante os próximos 90 días para alinearse cos seus esforzos de retención de mercadotecnia. A predición do risco de abandono por un período de tempo máis longo ou máis curto pode facer máis difícil abordar os factores do seu perfil de risco de abandono, pero depende das necesidades específicas do seu negocio.
+1. Establece o **predición xanela**. Por exemplo, predicir o risco de abandono dos seus clientes durante os próximos 90 días para alinearse cos seus esforzos de retención de mercadotecnia. A predición do risco de abandono por un período de tempo máis longo ou máis curto pode facer máis difícil abordar os factores do seu perfil de risco de abandono, pero depende das necesidades específicas do seu negocio.
    >[!TIP]
    > Podes seleccionar **Garda o borrador** en calquera momento para gardar o predición como borrador. Atopará o borrador de predición no separador **As miñas previsións** para continuar.
 
@@ -240,7 +240,7 @@ Engada unha lista de clientes e contas da súa empresa que queira usar como punt
    - **Nome da predición**: Nome da predición proporcionado ao creala.
    - **Tipo de predición**: Tipo de modelo usado para a predición
    - **Entidade de saída**: nome da entidade para almacenar os resultados da predición. Pode atopar unha entidade con este nome en **Datos** > **Entidades**.
-     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é unha etiqueta binaria baseada en *ChurnScore* cun limiar de 0,5. É posible que o limiar predeterminado non funcione no seu escenario. [Cree un novo segmento](segments.md#create-a-new-segment) co seu limiar preferido.
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é unha etiqueta binaria baseada en *ChurnScore* cun limiar de 0,5. É posible que o limiar predeterminado non funcione no seu escenario. [Cree un novo segmento](segments.md#create-a-segment) co seu limiar preferido.
      Non todos os clientes son necesariamente clientes activos. É posible que algúns deles non tivesen ningunha actividade durante moito tempo e xa se consideran perdidos, segundo a definición de abandono. Non é útil predicir o risco de abandono para os clientes que xa abandonaron porque non son o público de interese.
    - **Campo previsto**: Este campo só se completa con algúns tipos de predicións e non se usa na predición do abandono.
    - **Estado**: Estado da execución da predición.

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083182"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195656"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Inxestión de datos en tempo real (vista previa)
 
@@ -28,7 +28,7 @@ A funcionalidade en tempo real proporciona datos inmediatamente para o consumo, 
 
 As actualizacións en tempo real teñen unha hora de caducidade despois da cal xa non anularán o valor da orixe de datos:
 
-- As actualizacións do perfil manteranse durante 4 horas
+- As actualizacións do perfil conservaranse durante catro horas
 - As actividades manteranse durante 30 días
 
 Estes valores son parámetros de chamada de API que pode cambiar. Pretenden garantir que os seus datos de orixes sexan a súa fonte de verdade. Se quere que se inclúan actualizacións en tempo real durante máis tempo, debe engadilas a unha orixe de datos para que se poidan extraer durante a próxima actualización programada.

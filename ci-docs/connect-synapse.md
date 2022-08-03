@@ -1,7 +1,7 @@
 ---
 title: Conectar un Azure Synapse orixe de datos (vista previa)
 description: Usa unha base de datos en Azure Synapse como orixe de datos en Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052697"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206905"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Conectar un Azure Synapse Analytics orixe de datos (vista previa)
 
@@ -37,7 +37,7 @@ Para obter máis información, consulte [Azure Synapse visión xeral](/azure/syn
 
 - Se utiliza un novo Azure Data Lake Storage Conta Gen2, o *principal de servizo para Customer Insights* necesidades **Colaborador de datos de Blob de almacenamento** permisos. Máis información sobre [conectando a un Azure Data Lake Storage cun principal de servizo para Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
 
-- No grupo de recursos o Azure Synapse o espazo de traballo está situado, o *principal do servizo* e o *usuario de Customer Insights* debe ser asignado polo menos **Lector** permisos. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
+- No grupo de recursos o Azure Synapse o espazo de traballo está situado, o *principal do servizo* e o *usuario para Customer Insights* debe ser asignado polo menos **Lector** permisos. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 
 - O *usuario* precisa permisos de **colaborador de datos de BLOB de almacenamento** na conta de Azure Data Lake Storage Gen2 na que se atopan os datos ligados á área de traballo de Azure Synapse. Obteña máis información acerca do [uso do portal de Azure para atribuír un rol de Azure para o acceso aos datos de BLOB e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e dos [permisos do colaborador de datos de BLOB de almacenamento](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
@@ -66,3 +66,9 @@ Para obter máis información, consulte [Azure Synapse visión xeral](/azure/syn
 1. Opcionalmente, escolla as entidades de datos para permitir o perfil de datos.
 
 1. Seleccione **Gardar** para aplicar a túa selección e iniciar a inxestión dos datos do teu recén creado orixe de datos ligado ás táboas da base de datos de Lake en Azure Synapse Analytics. O **Fontes de datos** ábrese a páxina mostrando o novo orixe de datos en **Refrescante** estado.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+A carga de datos pode levar moito tempo. Despois dunha actualización exitosa, os datos inxeridos pódense revisar desde o [**Entidades**](entities.md) páxina.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051681"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170771"
 ---
 # <a name="create-measures-from-templates"></a>Crea medidas a partir de modelos
 
-Podes usar modelos predefinidos de uso habitual [medidas](measures.md) para crealos. As descricións detalladas dos modelos e unha experiencia guiada axúdanlle a crear medidas eficientes. Os modelos baséanse en datos asignados da entidade *Actividade unificada*. Asegúrese de que configurou [actividades do cliente](activities.md) antes de crear unha medida a partir dun modelo.
+Use modelos predefinidos de uso habitual [medidas](measures.md) para crealos. Os modelos baséanse en datos asignados da entidade *Actividade unificada*. Asegúrese de que configurou [actividades do cliente](activities.md) antes de crear unha medida a partir dun modelo.
 
-Para crear medidas personalizadas, consulte [Usa o creador de medidas para crear medidas desde cero](measure-builder.md).
+Os modelos de medida só se admiten en ambientes para **clientes individuais**. Para crear medidas personalizadas ou crear medidas para B-to-B, consulte [Use o creador de medidas](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
-
-Modelos de medidas dispoñibles: 
+Modelos de medidas dispoñibles:
 - Valor medio da transacción
 - Valor total das transaccións
 - Ingresos medios diarios
+- Ingresos medios mensuais
 - Ingresos medios anuais
 - Número de transaccións
 - Puntos de fidelidade obtidos
@@ -57,21 +56,22 @@ Modelos de medidas dispoñibles:
 
 1. Seleccione **Feito**.
 
-1. Na sección **Establecer o período de tempo**, defina o período de tempo dos datos que se van usar. Escolla se desexa que a nova medida abranga todo o conxunto de datos seleccionando **Todo o tempo** ou se desexa que a medida se centre nun **Período de tempo específico**.
+1. No **Establecer período de tempo** sección, defina o período de tempo dos datos. Escolla se desexa que a nova medida abranga todo o conxunto de datos seleccionando **Todo o tempo** ou se desexa que a medida se centre nun **Período de tempo específico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de pantalla que mostra a sección do período de tempo ao configurar unha medida a partir dun modelo.":::
 
 1. Na seguinte sección, seleccione **Engadir datos** para escoller as actividades e asignar os datos correspondentes da súa entidade *Actividade unificada*.
 
-    1. Paso 1 de 2: en **Tipo de actividade**, escolla o tipo de entidade que desexa empregar. Para **Actividades**, seleccione as entidades que desexa asignar.
-    1. Paso 2 de 2: escolla o atributo da entidade *Actividade unificada* para o compoñente requirido pola fórmula. Por exemplo, para o valor medio da transacción, é o atributo que representa o valor da transacción. Para **Marca de tempo da actividade**, escolla o atributo da entidade de actividade unificada que representa a data e hora da actividade.
-   
-1. Unha vez que a asignación de datos teña éxito, pode ver o estado como **Completo** e o nome das actividades e atributos asignados.
+    1. Paso 1 de 2: en **Tipo de actividade**, escolla o tipo de entidade que desexa empregar. Para **Actividades**, seleccione as entidades que desexa mapear e, a continuación, seleccione **A continuación**.
+    1. Paso 2 de 2: escolla o atributo da entidade *Actividade unificada* para o compoñente requirido pola fórmula. Por exemplo, para o valor medio da transacción, é o atributo que representa o valor da transacción. Para **Marca de tempo da actividade**, escolla o atributo de *Actividade unificada* entidade que representa a data e a hora da actividade.
+    1. Seleccione **Gardar**.
 
-1. Agora pode seleccionar **Executar** para calcular os resultados da medida. Para refinalo máis tarde, selecciona **Gardar borrador**.
+    Cando a asignación de datos é exitosa, móstrase o estado **Completa** e aparece o nome das actividades e atributos mapeados.
 
-# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
+1. Seleccione **Corre** para calcular os resultados da medida. Seleccione **Garda o borrador** se quere manter a configuración actual e executar a medida máis tarde. O **Medidas** visualización da páxina.
 
-Esta función só está dispoñible para medidas creadas en contornos con clientes individuais como público obxectivo principal.
+## <a name="next-step"></a>Seguinte paso
 
----
+Use as medidas existentes para crear [un segmento de clientes](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

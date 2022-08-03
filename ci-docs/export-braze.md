@@ -1,19 +1,19 @@
 ---
 title: Exportar segmentos a Braze (vista previa)
 description: Obtén información sobre como configurar a conexión e exportar a Braze.
-ms.date: 06/29/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082678"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195105"
 ---
 # <a name="export-segments-to-braze-preview"></a>Exportar segmentos a Braze (vista previa)
 
@@ -22,31 +22,32 @@ Exporta segmentos de perfís de clientes unificados a Braze e utilízaos para ac
 ## <a name="prerequisites"></a>Requisitos previos
 
 - A [Conta Braze](https://www.braze.com/) e as correspondentes credenciais de administrador.
-- Existente [segmentos en Braze](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+- A [Chave API Braze](https://www.braze.com/docs/api/basics/)
 - [Segmentos configurados](segments.md) en Customer Insights.
 - Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico e un ID de cliente Braze.
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- A exportación a Braze está limitada a segmentos.
-- A exportación de ata 1 millón de perfís de clientes a Braze pode levar ata 40 minutos.
-- O número de perfís de clientes que podes exportar a Braze depende e limitado do teu contrato con Braze.
+- Ata 1 millón de perfís de clientes para Braze, o que pode tardar ata 40 minutos en completarse. O número de perfís de clientes que podes exportar a Braze depende do teu contrato con Braze.
+- Só segmentos.
 
 ## <a name="set-up-connection-to-braze"></a>Configura a conexión con Braze
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Vaia a **Administrar** > **Conexións**.
 
-1. Seleccione **Engadir conexión** e escolle **Braze** para configurar a conexión.
+1. Seleccione **Engadir conexión** e escolle **Braze**.
 
 1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
 
-1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolla quen pode usar esta conexión. Por defecto, só son os administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Proporciona o teu [Chave API Braze](https://www.braze.com/docs/api/basics/) para continuar iniciando sesión.
+1. Proporciona a túa chave da API de Braze para continuar iniciando sesión.
 
-1. Seleccione **Estou de acordo** para confirmar a **Privacidade e cumprimento dos datos**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
-1. Seleccione **Conectar** para inicializar a conexión con Braze.
+1. Seleccione **Conectar** para inicializar a conexión.
 
 1. Seleccione **Autoengadirse como usuario de exportación** e proporcione as súas credenciais de Customer Insights.
 
@@ -54,29 +55,22 @@ Exporta segmentos de perfís de clientes unificados a Braze e utilízaos para ac
 
 ## <a name="configure-an-export"></a>Configurar unha exportación
 
-Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Para obter máis información, consulte [Permisos necesarios para configurar unha exportación](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vaia a **Datos** > **Exportacións**.
 
-1. Seleccione **Engadir destino** para crear unha nova exportación.
+1. Seleccione **Engadir exportación**.
 
-1. No **Conexión para exportación** campo, escolla unha conexión na sección Braze. Se non ves esta sección, non hai conexións deste tipo dispoñibles.  
+1. No **Conexión para exportación** campo, escolla unha conexión na sección Braze. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
-1. Engadir a **Nome para mostrar** para a súa exportación.
+1. Introduza un nome para a exportación.
 
-1. Engade o identificador da API do segmento Braze ao que queres exportar **Identificador de API de segmento Braze** campo. Podes atopar o identificador nos detalles do segmento na plataforma Braze.
+1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. No **ID de cliente** campo, seleccione o campo que representa o ID de Braze do cliente. Os segmentos en Braze crearanse co mesmo nome do segmento que en Dynamics 365 Customer Insights. Pode escoller máis campos opcionais para os datos coincidentes.
 
-1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. No **ID de cliente** campo, seleccione o campo que representa o ID de Braze do cliente. É necesario exportar segmentos a Braze. Podes escoller máis campos opcionalmente.
+1. Seleccione as entidades ou segmentos que quere exportar.
 
 1. Seleccione **Gardar**.
 
-Ao gardar unha exportación non se executa a exportación inmediatamente.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando habilitas Dynamics 365 Customer Insights para transmitir datos a Braze, permite a transferencia de datos fóra do límite de conformidade para Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de asegurarse de que Braze cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-O administrador de Dynamics 365 Customer Insights pode eliminar este destino de exportación en calquera momento para interromper o uso desta funcionalidade.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

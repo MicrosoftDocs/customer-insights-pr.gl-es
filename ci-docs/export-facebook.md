@@ -1,19 +1,19 @@
 ---
 title: Exportar segmentos a Facebook Xestor de anuncios (vista previa) (contén vídeo)
 description: Aprenda a configurar a conexión e exportar ao Xestor de anuncios de Facebook.
-ms.date: 04/15/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082972"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195012"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segmentos a Facebook Xestor de anuncios (vista previa)
 
@@ -21,31 +21,32 @@ Exporte segmentos de perfís de clientes unificados ao Xestor de anuncios de Fac
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-## <a name="prerequisites-for-connection"></a>Requisitos previos para a conexión
+## <a name="prerequisites"></a>Requisitos previos
 
-- Debe ter unha [**conta publicitaria de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclúa unha [**conta empresarial de Facebook**](https://business.facebook.com/).
-- Debe ser administrador da [**Conta de anuncios de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- A [Facebook Conta de anuncios](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclúe a [Facebook Conta comercial](https://business.facebook.com/).
+- Privilexios de administrador no [Facebook Conta de anuncios](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Ata 10 millóns de perfís de clientes por exportación ao Xestor de anuncios de Facebook.
-- A exportación ao Xestor de anuncios de Facebook está limitada a segmentos.
-- Cree ou actualice audiencias personalizadas en Facebook de tipo *lista de clientes* só.
-- A exportación de segmentos cun total de 10 millón de perfís de clientes pode levar ata 90 minutos en completarse.
+- Ata 10 millóns de perfís de clientes por exportación a Facebook Xestor de anuncios, que pode levar ata 90 minutos.
+- Só segmentos.
+- Facebook *lista de clientes* escriba [audiencias personalizadas](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) só.
+  > [!NOTE]
+  > Nalgúns casos, podes ver públicos personalizados de diferentes tipos na lista despregable. Se selecciona un tipo diferente que non sexa *lista de clientes*, a exportación falla.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurar conexión ao xestor de anuncios de Facebook
 
-Antes de que os usuarios poidan crear unha exportación, un administrador debe configurar a conexión ao servizo e permitir aos colaboradores que utilicen a conexión.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Vaia a **Administrar** > **Conexións**.
 
-1. Seleccione **Engadir conexión** e elixa **Xestor de anuncios de Facebook** para configurar a conexión.
+1. Seleccione **Engadir conexión** e escolle **Facebook Xestor de anuncios**.
 
 1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
 
-1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. [Permitir que os colaboradores utilicen a conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Autenticar con anuncios de Facebook: 
+1. Autenticar con anuncios de Facebook:
 
    1. Seleccione **Continuar con Facebook** para iniciar sesión na súa Conta de anuncios de Facebook.
 
@@ -53,27 +54,25 @@ Antes de que os usuarios poidan crear unha exportación, un administrador debe c
 
    1. Seleccione a **conta publicitaria de Facebook** coa que desexa traballar.
 
-   1. Seleccione un **Público personalizado existente** na lista despregable ou cree un **Novo público personalizado**. Para obter máis información, consulte [**Públicos no Xestor de anuncios de Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
-      > [!NOTE]
-      > Só pode crear ou actualizar públicos personalizados eb Facebook do tipo *lista de clientes* con esta exportación. Nalgúns casos, ve audiencias personalizadas de diferentes tipos na lista despregable. Seleccionar un tipo diferente á *lista de clientes* producirá un fallo na exportación. 
+   1. Seleccione un **Público personalizado existente** na lista despregable ou cree un **Novo público personalizado**.
 
-1. Revise a **Privacidade dos datos e cumprimento** e seleccione **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
 1. Seleccione **Gardar** para completar a conexión.
 
 ## <a name="configure-an-export"></a>Configurar unha exportación
 
-Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Para obter máis información, consulte [Permisos necesarios para configurar unha exportación](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vaia a **Datos** > **Exportacións**.
 
-1. Seleccione **Engadir destino** para crear unha nova exportación. 
+1. Seleccione **Engadir exportación**.
 
-1. En **Conexión da exportación** escolla unha conexión da sección **Xestor de anuncios de Facebook**. Se non ve o nome desta sección, non ten ningunha conexión deste tipo dispoñible.
+1. No **Conexión para exportación** campo, escolla unha conexión entre Facebook Sección Xestor de anuncios. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
-1. No **campo Escoller o identificador clave**, seleccione **Correo electrónico**, **Nome e enderezo** ou **Teléfono** para enviar ao Xestor de anuncios de Facebook. 
+1. Introduza un nome para a exportación.
 
-1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**.
+1. No **Conectar datos** campo, seleccione **Correo electrónico**, **e enderezo**, ou **Teléfono** enviar a Facebook Xestor de anuncios.
 
 1. Asigne os atributos correspondentes desde a súa entidade de cliente unificada para o identificador de clave seleccionado.
    > [!TIP]
@@ -85,16 +84,6 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Seleccione **Gardar**.
 
-Ao gardar unha exportación non se executa a exportación inmediatamente.
-
-A exportación execútase con cada [actualización programada](system.md#schedule-tab). 
-
-Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando habilita Dynamics 365 Customer Insights para transmitir datos ao xestor de anuncios de Facebook, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de garantir que Anuncios de Facebook cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O administrador de Dynamics 365 Customer Insights pode eliminar este destino de exportación en calquera momento para interromper o uso desta funcionalidade.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

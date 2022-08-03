@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082111"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207181"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecemento das fontes de datos (vista previa)
 
@@ -21,9 +21,9 @@ Use datos de fontes como Microsoft e outros socios para enriquecer os datos dos 
 
 ## <a name="enrich-a-data-source"></a>Enriquece un orixe de datos
 
-Debes ter permisos de Colaborador ou Administrador para crear ou editar enriquecementos. Para obter máis información, consulte [Permisos](permissions.md).  
+Debes ter Colaborador ou Administrador [permisos](permissions.md) para crear ou editar enriquecementos.  
 
-1. Ir a **Datos** > **Unificar**. Seleccione a entidade que quere enriquecer e seleccione un atributo como clave principal para a entidade. Para obter máis información, consulte [Seleccione a chave primaria](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Ir a **Datos** > **Unificar**. Seleccione a entidade que quere enriquecer e seleccione un atributo como a [chave primaria](map-entities.md#select-primary-key-and-semantic-type-for-attributes) para a entidade.
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
@@ -39,7 +39,7 @@ Debes ter permisos de Colaborador ou Administrador para crear ou editar enriquec
 
 ## <a name="supported-data-source-enrichments"></a>Enriquecementos orixe de datos admitidos
 
-Actualmente están dispoñibles os seguintes enriquecementos para as fontes de datos. Revisa os pasos detallados para o enriquecemento para aprender a configuralo.
+Actualmente están dispoñibles os seguintes enriquecementos para as fontes de datos. Revisa os pasos detallados para o enriquecemento para saber como configuralo.
 
 - [Enderezos mellorados](enrichment-enhanced-addresses.md)
 - [Información da empresa enriquecida](enrichment-enhanced-company-data.md)
@@ -47,8 +47,8 @@ Actualmente están dispoñibles os seguintes enriquecementos para as fontes de d
 
 ## <a name="manage-existing-data-source-enrichments"></a>Xestiona os enriquecementos orixe de datos existentes
 
-Vaia ao separador **Os meus enriquecementos** para ver todos os enriquecementos configurados.
+Vaia a **Datos** > **Enriquecemento**. No **Os meus enriquecementos** pestana, ver os enriquecementos configurados, o seu estado, o número de clientes enriquecidos e a última vez que se actualizaron os datos. Podes ordenar a lista de enriquecementos por calquera columna ou utilizar a caixa de busca para atopar o enriquecemento que queres xestionar.
 
-Seleccione o enriquecemento para ver as opcións dispoñibles. Tamén pode seleccionar os puntos suspensivos verticais (&vellip;) nun elemento da lista para ver as opcións. Se configurou varios enriquecementos, pode usar a caixa de busca para atopalo rapidamente.
+Seleccione o enriquecemento para ver as opcións dispoñibles. Tamén pode seleccionar os puntos suspensivos verticais (&vellip;) nun elemento da lista para ver as opcións.
 
-Podes ver, editar, executar ou eliminar un enriquecemento orixe de datos. Para obter máis información, consulte [Xestionar os enriquecementos existentes](enrichment-hub.md).
+Podes ver, editar, executar ou eliminar un enriquecemento orixe de datos. Para obter máis información, consulte [Xestionar os enriquecementos existentes](enrichment-hub.md#manage-existing-enrichments).

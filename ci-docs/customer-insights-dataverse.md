@@ -1,7 +1,7 @@
 ---
 title: Traballar con datos de Customer Insights en Microsoft Dataverse
 description: Aprende a conectar Customer Insights e Microsoft Dataverse e comprender as entidades de saída que se exportan a Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,33 +11,45 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011518"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153402"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Traballar con datos de Customer Insights en Microsoft Dataverse
 
-Customer Insights ofrece a opción de facer as entidades de saída dispoñibles como [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Esta integración permite compartir datos sinxelos e desenvolvemento personalizado a través dun enfoque de código baixo/sen código. O [entidades de saída](#output-entities) están dispoñibles como táboas en a Dataverse ambiente. Podes usar os datos para calquera outra aplicación baseada en Dataverse táboas. Estas táboas permiten escenarios como fluxos de traballo automatizados Power Automate ou crear aplicacións con Power Apps.
+Customer Insights ofrece a opción de facer as entidades de saída dispoñibles como [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Esta integración permite compartir datos sinxelos e desenvolvemento personalizado mediante un enfoque de código baixo/sen código. O [entidades de saída](#output-entities) están dispoñibles como táboas en a Dataverse ambiente. Podes usar os datos para calquera outra aplicación baseada en Dataverse táboas. Estas táboas permiten escenarios como fluxos de traballo automatizados Power Automate ou crear aplicacións con Power Apps.
 
 Conectando ao teu Dataverse ambiente tamén che permite [inxerir datos de fontes de datos local usando Power Platform fluxos de datos e pasarelas](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Información do cliente e Dataverse os ambientes deben estar aloxados na mesma rexión.
+- Insights de clientes e Dataverse os ambientes deben estar aloxados na mesma rexión.
 - Debes ter un rol de administrador global no Dataverse ambiente. Comproba se isto [Dataverse ambiente está asociado](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) a determinados grupos de seguranza e asegúrate de que estás engadido a eses grupos de seguranza.
 - Ningún outro ambiente de Customer Insights xa está asociado co Dataverse ambiente que quere conectar. Aprende como [eliminar unha conexión existente a a Dataverse ambiente](#remove-an-existing-connection-to-a-dataverse-environment).
 - A Microsoft Dataverse O ambiente só pode conectarse a unha única conta de almacenamento. Aplícase só se configura o ambiente para [usa o teu Azure Data Lake Storage](own-data-lake-storage.md).
+
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse dereito á capacidade de almacenamento
+
+Unha subscrición a Customer Insights dálle dereito a unha capacidade adicional para a existente da túa organización [Dataverse capacidade de almacenamento](/power-platform/admin/capacity-storage). A capacidade engadida depende do número de perfís que utilice a súa subscrición.
+
+**Exemplo:**
+
+Asumindo que obtén 15 GB de almacenamento de base de datos e 20 GB de almacenamento de ficheiros por cada 100.000 perfís de clientes. Se a túa subscrición inclúe 300.000 perfís de clientes, a túa capacidade de almacenamento total sería de 45 GB (3 x 15 GB) de almacenamento de bases de datos e 60 GB de almacenamento de ficheiros (3 x 20 GB). Do mesmo xeito, se tes unha subscrición B2B con contas 30K, a túa capacidade de almacenamento total sería de 45 GB (3 x 15 GB) de almacenamento de bases de datos e 60 GB de almacenamento de ficheiros (3 x 20 GB).
+
+A capacidade de rexistro non é incremental e fixa para a túa organización.
+
+Para obter máis información sobre os dereitos de capacidade detallados, consulte [Guía de licenzas de Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Conectar a Dataverse ambiente para Customer Insights
 
 O **Microsoft Dataverse** paso permíteche conectar Customer Insights co teu Dataverse ambiente mentres [creando un ambiente de Customer Insights](create-environment.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="compartición de datos con Microsoft Dataverse habilitado automaticamente para novos entornos nets.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="compartición de datos con Microsoft Dataverse activado automaticamente para novos entornos nets.":::
 
-Os administradores poden configurar Customer Insights para conectar un existente Dataverse ambiente. Ao proporcionar o URL ao Dataverse ambiente, está unido ao seu novo ambiente de Customer Insights.
+Os administradores poden configurar Customer Insights para conectar un existente Dataverse ambiente. Ao proporcionar o URL ao Dataverse ambiente, conéctase ao seu novo ambiente de Customer Insights. Despois de establecer a conexión entre Customer Insights e Dataverse, non cambies o nome da organización para o Dataverse ambiente. O nome da organización utilízase no Dataverse O URL e un nome modificado rompen a conexión con Customer Insights.
 
 Se non queres utilizar un existente Dataverse ambiente, o sistema crea un novo ambiente para os datos de Customer Insights no seu inquilino. [Power Platform os administradores poden controlar quen pode crear ambientes](/power-platform/admin/control-environment-creation). Cando está a configurar un novo ambiente de Customer Insights e o administrador desactivou a creación de Dataverse ambientes para todos, excepto os administradores, é posible que non poidas crear un novo ambiente.
 
@@ -47,7 +59,7 @@ Se estás a usar a túa propia conta de Data Lake Storage, tamén necesitas o **
 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Activa o uso compartido de datos con Dataverse do teu propio Azure Data Lake Storage (Vista previa)
 
-Activando o uso compartido de datos con Microsoft Dataverse cando o teu ambiente [utiliza o seu propio Azure Data Lake Storage conta](own-data-lake-storage.md) precisa algunha configuración adicional. O usuario que configura o ambiente de Customer Insights debe ter polo menos **Lector de datos de Blob de almacenamento** permisos no *CustomerInsights* recipiente no Azure Data Lake Storage conta.
+Activando o uso compartido de datos con Microsoft Dataverse cando o teu ambiente [usa o teu propio Azure Data Lake Storage conta](own-data-lake-storage.md) precisa algunha configuración adicional. O usuario que configura o ambiente de Customer Insights debe ter polo menos **Lector de datos de Blob de almacenamento** permisos sobre *CustomerInsights* recipiente no Azure Data Lake Storage conta.
 
 1. Crea dous grupos de seguranza na túa subscrición de Azure: un **Lector** grupo de seguridade e un **Colaborador** grupo de seguridade e configure o Microsoft Dataverse servizo como propietario de ambos os grupos de seguridade.
 2. Xestiona a Lista de control de acceso (ACL) no contedor CustomerInsights da túa conta de almacenamento a través destes grupos de seguranza. Engade o Microsoft Dataverse servizo e calquera Dataverse aplicacións empresariais baseadas en Dynamics 365 Marketing to the **Lector** grupo de seguridade con **só lectura** permisos. Engadir *só* a aplicación Customers Insights ao **Colaborador** grupo de seguridade para conceder ambos **Ler e escribir** permisos para escribir perfís e información.
@@ -56,7 +68,7 @@ Activando o uso compartido de datos con Microsoft Dataverse cando o teu ambiente
 
 Hai dúas limitacións ao usar Dataverse co teu propio Azure Data Lake Storage conta:
 
-- Hai un mapeo un a un entre a Dataverse organización e an Azure Data Lake Storage conta. Unha vez a Dataverse organización está conectada a unha conta de almacenamento, non pode conectarse a outra conta de almacenamento. Esta limitación impide que a Dataverse non enche varias contas de almacenamento.
+- Hai un mapeamento un a un entre a Dataverse organización e an Azure Data Lake Storage conta. Unha vez a Dataverse organización está conectada a unha conta de almacenamento, non pode conectarse a outra conta de almacenamento. Esta limitación impide que a Dataverse non enche varias contas de almacenamento.
 - O uso compartido de datos non funcionará se se necesita unha configuración de Azure Private Link para acceder ao teu Azure Data Lake Storage conta porque está detrás dun firewall. Dataverse actualmente non admite a conexión a puntos finais privados mediante Private Link.
 
 ### <a name="set-up-powershell"></a>Configura PowerShell
@@ -66,7 +78,7 @@ Para executar os scripts de PowerShell, primeiro debes configurar PowerShell en 
 1. Instala a última versión de [Azure Active Directory PowerShell para Graph](/powershell/azure/active-directory/install-adv2).
    1. No seu PC, seleccione a tecla Windows do teclado e busque **Windows PowerShell** e seleccione **Executar como administrador**.
    1. Na xanela de PowerShell que se abre, introduza `Install-Module AzureAD`.
-2. Importar tres módulos.
+2. Importa tres módulos.
     1. Na xanela de PowerShell, introduza`Install-Module -Name Az.Accounts` e segue os pasos.
     1. Repita para`Install-Module -Name Az.Resources` e `Install-Module -Name Az.Storage`.
 
@@ -84,9 +96,9 @@ Para executar os scripts de PowerShell, primeiro debes configurar PowerShell en 
 
     2. `ByolSetup.ps1`
         - Precisas *Propietario de datos do blob de almacenamento* permisos a nivel de conta de almacenamento/contedor para executar este script ou este script creará un para ti. A túa asignación de funcións pódese eliminar manualmente despois de executar correctamente o script.
-        - Este script de PowerShell engade o control de acceso baseado en tole (RBAC) necesario para o Microsoft Dataverse servizo e calquera Dataverse aplicacións empresariais baseadas. Tamén actualiza a Lista de control de acceso (ACL) no contedor CustomerInsights para os grupos de seguranza creados co`CreateSecurityGroups.ps1` guión. O grupo Colaborador terá *rwx* permiso e o grupo Lectores terá *rx* só permiso.
+        - Este script de PowerShell engade o control de acceso baseado en roles necesario para o Microsoft Dataverse servizo e calquera Dataverse aplicacións empresariais baseadas. Tamén actualiza a Lista de control de acceso (ACL) no contedor CustomerInsights para os grupos de seguranza creados co`CreateSecurityGroups.ps1` guión. O grupo Colaborador terá *rwx* permiso e o grupo Lectores terá *rx* só permiso.
         - Executa este script de PowerShell en Windows PowerShell proporcionando o ID de subscrición de Azure que contén o teu Azure Data Lake Storage, o nome da conta de almacenamento, o nome do grupo de recursos e os valores de ID do grupo de seguranza do lector e do colaborador. Abra o script de PowerShell nun editor para revisar información adicional e a lóxica implementada.
-        - Copia a cadea de saída despois de executar correctamente o script. A cadea de saída ten o seguinte aspecto:`https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+        - Copie a cadea de saída despois de executar correctamente o script. A cadea de saída ten o seguinte aspecto:`https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
 2. Introduza a cadea de saída copiada desde arriba no ficheiro **Identificador de permisos** campo do paso de configuración do entorno para Microsoft Dataverse.
 
@@ -105,7 +117,7 @@ ou
 
 1. Abre o teu Dataverse ambiente.
 1. Ir a **Configuración avanzada** > **Solucións**.
-1. Desinstale o **CustomerInsightsCustomerCard** solución.
+1. Desinstalar o **CustomerInsightsCustomerCard** solución.
 
 Se a eliminación da conexión falla debido a dependencias, tamén debes eliminar as dependencias. Para obter máis información, consulte [Eliminación de dependencias](/power-platform/alm/removing-dependencies).
 

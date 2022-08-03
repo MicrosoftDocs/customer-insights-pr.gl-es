@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082363"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196208"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Enriquece os perfís da empresa con Leadspace (vista previa)
 
@@ -54,7 +54,7 @@ O administrador de Dynamics 365 Customer Insights pode eliminar este enriqueceme
 
 1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
 
-1. Seleccione a conexión. Póñase en contacto cun administrador se non está dispoñible.
+1. Seleccione a conexión. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
 1. Seleccione **Seguinte**.
 
@@ -62,7 +62,7 @@ O administrador de Dynamics 365 Customer Insights pode eliminar este enriqueceme
 
     :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Captura de pantalla ao escoller o conxunto de datos do cliente.":::
 
-1. Define que tipo de campos dos teus perfís unificados queres usar para a correspondencia: o enderezo principal e/ou secundario. Pode especificar unha asignación de campos para ambos os enderezos e enriquecer os perfís de ambos os enderezos por separado. Por exemplo, para un enderezo de casa e un enderezo de empresa. Seleccione **Seguinte**.
+1. Define que tipo de campos dos teus perfís unificados usar para a correspondencia: o enderezo principal e/ou secundario. Pode especificar unha asignación de campos para ambos os enderezos e enriquecer os perfís de ambos os enderezos por separado. Por exemplo, para un enderezo de casa e un enderezo de empresa. Seleccione **Seguinte**.
 
 1. Asigne os seus campos aos datos da empresa de Leadspace. O campo **Nome da empresa** é obrigatorio. Para unha maior precisión de coincidencia, ata outros dous campos, **Páxina web da empresa** e **Localización da empresa**, pódense engadir.
 

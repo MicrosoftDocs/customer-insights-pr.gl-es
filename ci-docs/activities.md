@@ -1,7 +1,7 @@
 ---
 title: Actividades do cliente
 description: Defina as actividades dos clientes e visualíceas nunha liña de tempo nos perfís dos clientes.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
@@ -17,51 +17,51 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755496"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188137"
 ---
 # <a name="customer-activities"></a>Actividades do cliente
 
-Combine as actividades dos clientes desde [diversas orixes de datos](data-sources.md) en Dynamics 365 Customer Insights. Elabora unha liña de tempo que enumere as actividades cronolóxicamente. Inclúa a liña de tempo nas aplicacións de Dynamics 365 co [Complemento da tarxeta de cliente](customer-card-add-in.md) solución.
+As actividades dos clientes son accións ou eventos realizados polos clientes. Por exemplo, transaccións, duración da chamada de asistencia, revisións de sitios web, compras ou devolucións. Estas actividades están contidas nunha ou máis fontes de datos. Con Customers Insights, consolide as actividades dos seus clientes a partir destes [fontes de datos](data-sources.md) e asocialos con perfís de clientes. Estas actividades aparecen cronoloxicamente nunha liña de tempo no perfil do cliente. Inclúa a liña de tempo nas aplicacións de Dynamics 365 co [Complemento da tarxeta de cliente](customer-card-add-in.md) solución.
 
 ## <a name="define-an-activity"></a>Definir unha actividade
 
-As súas fontes de datos poden incluír entidades con datos de transaccións e actividades de varias fontes de datos. Identifique estas entidades e seleccione as actividades que desexa ver na liña de tempo do cliente. Escolla a entidade que inclúe a súa actividade ou actividades de destino.
-
-Unha entidade debe ter polo menos un atributo de tipo **Data** para incluír nunha liña de tempo de cliente e non pode engadir entidades sen campos **Data**. O control **Engadir actividade** está desactivado se non se atopa tal entidade.
+Unha entidade debe ter polo menos un atributo de tipo **Data** para ser incluído nun cronograma do cliente. O control **Engadir actividade** está desactivado se non se atopa tal entidade.
 
 1. Ir a **Datos** > **Actividades**.
 
-1. Seleccione **Engadir actividade** para iniciar a experiencia guiada para o proceso de configuración da actividade.
+1. Seleccione **Engadir actividade** para comezar a experiencia guiada.
 
-1. No paso **Datos de actividade**, configure os valores para os seguintes campos:
+1. No **Datos da actividade** paso, introduza a seguinte información:
 
-   - **Nome da actividade**: Seleccione un nome para a súa actividade.
-   - **Entidade**: seleccione unha entidade que inclúa datos transaccionais ou de actividade.
-   - **Clave principal**: seleccione o campo que identifica un rexistro de cliente de forma única. Non debe conter ningún valor duplicado, valores baleiros ou valores non atopados.
+   - **Nome da actividade** : Nome da súa actividade.
+   - **Entidade da actividade** : Entidade que inclúe datos de transacción ou actividade.
+   - **Chave primaria** : campo que identifica de forma única un rexistro. Non debe conter ningún valor duplicado, valores baleiros ou valores non atopados.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configure os datos da actividade co nome, a entidade e a clave primaria.":::
 
-1. Seleccione **Seguinte** para ir ao seguinte paso.
+1. Seleccione **Seguinte**.
 
-1. No paso **Relación**, configure os detalles para conectar os datos da súa actividade co rexistro de cliente correspondente. Este paso visualiza a conexión entre entidades.  
+1. No **Relación** paso, seleccione **Engadir relación** para conectar os datos da túa actividade ao rexistro de clientes correspondente. Este paso visualiza a conexión entre entidades.  
 
-   - **Primeiro**: Campo estranxeiro da súa entidade de actividade que se usará para establecer unha relación con outra entidade.
-   - **Segundo**: Entidade cliente fonte correspondente coa que estará relacionada a súa entidade de actividade. Só pode relacionar con entidades de cliente de orixe que se usan no proceso de unificación de datos.
-   - **Terceiro**: Se xa existe unha relación entre esta entidade de actividade e a entidade de cliente fonte seleccionada, o nome da relación estará en modo de só lectura. Se non existe tal relación, crearase unha nova relación co nome que proporcione nesta caixa.
+   - **Chave estranxeira da entidade** : Campo da túa entidade de actividade que se utilizará para establecer unha relación con outra entidade.
+   - **Ao nome da entidade** : Entidade cliente fonte correspondente coa que estará en relación a súa entidade de actividade. Só pode relacionar con entidades de cliente de orixe que se usan no proceso de unificación de datos.
+   - **Nome da relación** : Nome que identifica a relación entre entidades. Se xa existe unha relación entre esta entidade de actividade e a entidade cliente de orixe seleccionada, o nome da relación é de só lectura.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Defina a relación da entidade.":::
 
    > [!TIP]
    > En contornos B-a-B, pode seleccionar entre entidades de conta e outras entidades. Se selecciona unha entidade de conta, o camiño da relación establécese automaticamente. Para outras entidades, ten que definir o camiño de relación entre unha ou varias entidades intermedias ata chegar a unha entidade de conta.
 
-1. Seleccione **Seguinte** para ir ao seguinte paso. 
+1. Seleccione **Solicitar** para crear a relación.
 
-1. No paso **Unificación da actividade**, elixa o evento da actividade e a hora de inicio da súa actividade. 
+1. Seleccione **Seguinte**.
+
+1. No paso **Unificación da actividade**, elixa o evento da actividade e a hora de inicio da súa actividade.
    - **Campos obrigatorios**
       - **Actividade do evento**: Campo que é o evento desta actividade.
       - **Marca de tempo**: Campo que representa a hora de inicio da súa actividade.
@@ -76,61 +76,49 @@ Unha entidade debe ter polo menos un atributo de tipo **Data** para incluír nun
 
       :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique os datos de actividade do cliente nunha entidade de actividade unificada.":::
 
-1. Seleccione **Seguinte** para ir ao seguinte paso. Pode seleccionar **Rematar e revisar** para gardar a actividade agora co tipo de actividade configurado en **Outro**. 
+1. Seleccione **A continuación** para escoller o tipo de actividade ou seleccionar **Remata e repasa** para gardar a actividade co tipo de actividade definido como **Outra**.
 
-1. No paso **Tipo de actividade**, elixa o tipo de actividade e opcionalmente seleccione se quere asignar semanticamente algúns dos tipos de actividade para usalos noutras áreas de Customer Insights. Actualmente, *Comentarios*, *·*, *de Venda*, *de pedido de vendas*, e *Subscrición* os tipos de actividade admiten a semántica despois de aceptar mapear os campos. Se un tipo de actividade non é relevante para a nova actividade, pode escoller *Outro* ou *Crear novo* para un tipo de actividade personalizada.
+1. No paso **Tipo de actividade**, elixa o tipo de actividade e opcionalmente seleccione se quere asignar semanticamente algúns dos tipos de actividade para usalos noutras áreas de Customer Insights. Actualmente, *Comentarios*, *·*, *de venda*, *de pedidos de vendas*, e *Subscrición* os tipos de actividade admiten a semántica despois de aceptar mapear os campos. Se un tipo de actividade non é relevante para a nova actividade, pode escoller *Outro* ou *Crear novo* para un tipo de actividade personalizada.
 
-1. Seleccione **Seguinte** para ir ao seguinte paso. 
+1. Seleccione **Seguinte**.
 
 1. No paso **Revisión**, verifique as súas seleccións. Volva a calquera dos pasos anteriores e actualice a información se é necesario.
 
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Revise os campos especificados para unha actividade.":::
-   
-1. Seleccione **Gardar actividade** para aplicar os seus cambios e seleccione **Feito** para volver a **Datos** > **Actividades**. Aquí verá que actividades están configuradas para mostrarse na liña do tempo. 
+1. Seleccione **Gardar actividade** para aplicar os seus cambios e seleccione **Feito** para volver a **Datos** > **Actividades**. Móstrase a actividade creada.
 
-1. Na páxina **Actividades**, seleccione **Executar** para procesar a actividade. 
+1. Despois de crear todas as túas actividades, selecciona **Corre** para procesalas.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Xestionar actividades existentes
 
-En **Datos** > **Actividades**, pode ver todas as actividades gardadas e xestionalas. Cada actividade está representada por unha fila que tamén inclúe detalles sobre a fonte, a entidade e o tipo de actividade.
+Ir a **Datos** > **Actividades** para ver as súas actividades gardadas, a súa entidade de orixe, o tipo de actividade e se están incluídas na cronoloxía do cliente. Podes ordenar a lista de actividades por calquera columna ou utilizar a caixa de busca para atopar a actividade que queres xestionar.
 
-As seguintes accións están dispoñibles cando selecciona unha actividade. 
+Seleccione unha actividade para ver as accións dispoñibles.
 
-- **Editar**: Abre a configuración da actividade no paso de revisión. Pode cambiar calquera ou toda a configuración actual desde este paso. Despois de cambiar a configuración, seleccione **Gardar actividade** e logo seleccione **Executar** para procesar os cambios.
-
-- **Cambiar o nome**: Abre un diálogo onde pode introducir un nome diferente para a actividade seleccionada. Seleccione **Gardar** para aplicar as modificacións.
-
-- **Eliminar**: Abre un diálogo para confirmar a eliminación da actividade seleccionada. Tamén pode eliminar máis dunha actividade á vez seleccionando as actividades e logo seleccionando a icona de eliminación. Para confirmar a eliminación, seleccione **Eliminar**.
+- **Editar** a actividade para cambiar a súa configuración. A configuración ábrese no paso de revisión. Despois de cambiar a configuración, seleccione **Gardar actividade** e logo seleccione **Executar** para procesar os cambios.
+- **Cambiar o nome** a actividade. Seleccione **Gardar** para aplicar as modificacións.
+- **Eliminar** a actividade. Para eliminar máis dunha actividade á vez, seleccione as actividades e despois **Eliminar**. Confirme a eliminación.
 
 ## <a name="view-activity-timelines-on-customer-profiles"></a>Ver cronoloxías de actividade nos perfís de clientes
 
-Despois de configurar as actividades do cliente, seleccione **Mostrar na cronoloxía da actividade** na configuración da actividade para atopar todas as actividades dos seus clientes no seu perfil de cliente.
+1. Se seleccionaches **Mostrar na cronoloxía da actividade** na configuración da actividade, vaia a **Clientes** e seleccione un perfil de cliente para ver as actividades do cliente no **Cronograma da actividade** sección.
 
-Para abrir a cronoloxía dun cliente, vaia a **Clientes** e escolla o perfil de cliente que desexa ver.
+   :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Consulte actividades configuradas en Perfís de clientes.":::
 
-Se un cliente participou nunha actividade configurada, atoparao na páxina **Cronograma da actividade** sección.
+1. Para filtrar actividades na cronoloxía das actividades:
 
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Consulte actividades configuradas en Perfís de clientes.":::
+   - Seleccione unha ou máis das iconas de actividade para refinar os seus resultados e incluír só os tipos seleccionados.
 
-Hai varias formas de filtrar actividades na liña de tempo da actividade:
+     :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtre as actividades por tipo usando as iconas.":::
 
-- Pode seleccionar unha ou varias das iconas de actividade para refinar os resultados para incluír só os tipos seleccionados.
+   - Seleccione **Filtro** para abrir un panel de filtros para configurar os filtros da liña de tempo. Filtrar por *Tipo de actividade* e/ou *Data*. Seleccione **Aplicar**.
 
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtre as actividades por tipo usando as iconas.":::
+     :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Use o panel de filtros para configurar as condicións do filtro.":::
 
-- Pode seleccionar **Filtrar** para abrir un panel de filtros para configurar os filtros da súa liña de tempo.
-
-   1. Pode filtrar por *ActivityType* e *Data*
-   1. Seleccione **Aplicar** para usar os filtros na cronoloxía da actividade.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Use o panel de filtros para configurar as condicións do filtro.":::
-
-Para eliminar filtros, seleccione **x** xunto a cada filtro aplicado á liña do tempo ou seleccione **Borrar filtros**.
-
+1. Para eliminar filtros, seleccione **Borrar filtros** ou seleccione **Filtro** e desmarque a caixa de verificación do filtro.
 
 > [!NOTE]
-> Os filtros de actividade elimínanse cando sae dun perfil de cliente. Ten que aplicalos cada vez que abra un perfil de cliente.
+> Os filtros de actividade elimínanse cando sae dun perfil de cliente. Tes que aplicalos cada vez que abras un perfil de cliente.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

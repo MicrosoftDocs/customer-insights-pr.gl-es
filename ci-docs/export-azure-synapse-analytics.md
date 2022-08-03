@@ -1,19 +1,19 @@
 ---
 title: Exportar datos a Azure Synapse Analytics (vista previa)
 description: Aprende a configurar a conexión a Azure Synapse Analytics.
-ms.date: 06/29/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082867"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196392"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar datos a Azure Synapse Analytics (vista previa)
 
@@ -21,56 +21,52 @@ Azure Synapse é un servizo de análise que acelera o tempo para obter informaci
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Os seguintes requisitos previos deben cumprirse para configurar a conexión de Customer Insights a Azure Synapse.
-
 > [!NOTE]
-> Asegúrese de configurar todas as **atribucións de roles** segundo se describe.  
+> Asegúrese de configurar todas as **atribucións de roles** segundo se describe.
 
-## <a name="prerequisites-in-customer-insights"></a>Requisitos previos en Customer Insights
+- En Customer Insights, o teu Azure Active Directory A conta de usuario (AD) debe ter un [Función de administrador](permissions.md#assign-roles-and-permissions).
 
-* O teu Azure Active Directory (AD) conta de usuario ten un **Administrador** papel en Customer Insights. Máis información sobre [establecer permisos de usuario](permissions.md#assign-roles-and-permissions).
-
-En Azure: 
+En Azure:
 
 - Unha subscrición de Azure activa.
 
-- Se utiliza un novo Azure Data Lake Storage Conta Gen2, o *principal de servizo para Customer Insights* necesidades **Colaborador de datos de Blob de almacenamento** permisos. Máis información sobre [conectando a un Azure Data Lake Storage Conta Gen2 co principal de servizo de Azure para Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
+- Se utiliza un novo Azure Data Lake Storage Conta Gen2, o [principal de servizo para Customer Insights](connect-service-principal.md) ten **Colaborador de datos de Blob de almacenamento** permisos. Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
 
-- No grupo de recursos onde se atopa Azure Synapse o espazo de traballo está situado, o *principal do servizo* e o *Azure AD usuario con permisos de administrador en Customer Insights* deben ser asignados polo menos **Lector** permisos. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
+- No grupo de recursos onde se atopa Azure Synapse o espazo de traballo está situado, o *principal do servizo* e o *Azure AD usuario con permisos de administrador en Customer Insights* debe ser asignado polo menos **Lector**[permisos](/azure/role-based-access-control/role-assignments-portal).
 
-- O *Azure AD usuario con permisos de administrador en Customer Insights* necesidades **Colaborador de datos de Blob de almacenamento** permisos no Azure Data Lake Storage Conta Gen2 onde se atopan os datos e están ligados ao Azure Synapse espazo de traballo. Obteña máis información acerca do [uso do portal de Azure para atribuír un rol de Azure para o acceso aos datos de BLOB e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e dos [permisos do colaborador de datos de BLOB de almacenamento](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- O *Azure AD usuario con permisos de administrador en Customer Insights* ten **Colaborador de datos de Blob de almacenamento** permisos sobre Azure Data Lake Storage Conta Gen2 onde se atopan os datos e están ligados ao Azure Synapse espazo de traballo. Obteña máis información acerca do [uso do portal de Azure para atribuír un rol de Azure para o acceso aos datos de BLOB e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e dos [permisos do colaborador de datos de BLOB de almacenamento](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- A *[identidade xestionada da área de traballo de Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* precisa permisos de **colaborador de datos de BLOB de almacenamento** na conta de Azure Data Lake Storage Gen2 na que se atopan os datos ligados á área de traballo de Azure Synapse. Obteña máis información acerca do [uso do portal de Azure para atribuír un rol de Azure para o acceso aos datos de BLOB e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e dos [permisos do colaborador de datos de BLOB de almacenamento](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- O *[Azure Synapse Identidade xestionada do espazo de traballo](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* ten **Colaborador de datos de Blob de almacenamento** permisos sobre Azure Data Lake Storage Conta Gen2 onde se atopan os datos e están ligados ao Azure Synapse espazo de traballo. Obteña máis información acerca do [uso do portal de Azure para atribuír un rol de Azure para o acceso aos datos de BLOB e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e dos [permisos do colaborador de datos de BLOB de almacenamento](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- No Azure Synapse espazo de traballo, o *principal de servizo para Customer Insights* necesidades **Administrador de Synapse** rol asignado. Para obter máis información, consulte [Como configurar o control de acceso para a súa área de traballo de Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- No Azure Synapse espazo de traballo, o *principal de servizo para Customer Insights* ten **Administrador de Synapse**[papel asignado](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Configurar a conexión e exportar a Azure Synapse
+## <a name="set-up-connection-to-azure-synapse"></a>Configura a conexión a Azure Synapse
 
-### <a name="configure-a-connection"></a>Configurar unha conexión
-
-Para crear unha conexión, necesitan o principal do servizo e a conta de usuario en Customer Insights **Lector** permisos no *grupo de recursos* onde se atopa o espazo de traballo de Synapse Analytics. Ademais, o principal do servizo e o usuario do espazo de traballo Synapse Analytics precisan **Administrador de Synapse** permisos. 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Vaia a **Administrar** > **Conexións**.
 
-1. Seleccione **Engadir conexión** e escolle **Azure Synapse Analytics** ou selecciona o **Montar** no **Azure Synapse Analytics** mosaico para configurar a conexión.
+1. Seleccione **Engadir conexión** e escolle **Azure Synapse Analytics**.
 
-1. Déalle á conexión un nome recoñecible no campo Nome para mostrar. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
+1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
 
-1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolla quen pode usar esta conexión. Por defecto, só son os administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Seleccione ou busque a subscrición na que quere empregar os datos de Customer Insights. Cando seleccione unha subscrición, tamén pode seleccionar **Área de traballo**, **Conta de almacenamento** e **Contedor**.
 
-1. Seleccione **Gardar** para gardar a conexión.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
-### <a name="configure-an-export"></a>Configurar unha exportación
+1. Seleccione **Gardar** para completar a conexión.
 
-Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Para configurar a exportación cunha conexión compartida, necesitas polo menos **Colaborador** permisos en Customer Insights. Para obter máis información, consulte os [permisos necesarios para configurar unha exportación](export-destinations.md#set-up-a-new-export).
+## <a name="configure-an-export"></a>Configurar unha exportación
+
+[!INCLUDE [export-permission-include](includes/export-permission.md)] Para configurar a exportación cunha conexión compartida, necesita polo menos **Colaborador** permisos en Customer Insights.
 
 1. Vaia a **Datos** > **Exportacións**.
 
-1. Seleccione **Engadir exportación** para crear unha nova exportación.
+1. Seleccione **Engadir exportación**.
 
-1. No **Conexión para exportación** campo, escolla unha conexión entre **Azure Synapse Analytics** sección. Se non ve o nome desta sección, non hai [conexións](connections.md) deste tipo dispoñibles para vostede.
+1. No **Conexión para exportación** campo, escolla unha conexión entre Azure Synapse Analytics sección. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
 1. Proporcione un **Nome para mostrar** recoñecible para a exportación e un **Nome da base de datos**. A exportación creará unha nova [Azure Synapse base de datos do lago](/azure/synapse-analytics/database-designer/concepts-lake-database) no espazo de traballo definido na conexión.
 
@@ -80,13 +76,11 @@ Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Par
 
 1. Seleccione **Gardar**.
 
-Ao gardar unha exportación non se executa a exportación inmediatamente.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand).
+Para consultar os datos que se exportaron a Synapse Analytics, necesitas **Lector de datos de Blob de almacenamento** acceso ao almacenamento de destino no espazo de traballo das exportacións.
 
-Para consultar os datos que se exportaron a Synapse Analytics, necesitas **Lector de datos de Blob de almacenamento** acceso ao almacenamento de destino no espazo de traballo das exportacións. 
-
-### <a name="update-an-export"></a>Actualizar unha exportación
+## <a name="update-an-export"></a>Actualizar unha exportación
 
 1. Vaia a **Datos** > **Exportacións**.
 
@@ -95,3 +89,5 @@ Para consultar os datos que se exportaron a Synapse Analytics, necesitas **Lecto
    - **Engadir** ou **Eliminar** entidades da selección. Se se eliminan entidades da selección, non se eliminarán da base de datos de Synapse Analytics. Non obstante, as futuras actualizacións de datos non actualizarán as entidades eliminadas desa base de datos.
 
    - **Cambiar o nome da base de datos** crea unha nova base de datos de Synapse Analytics. A base de datos co nome configurado anteriormente non se actualizará en futuras actualizacións.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

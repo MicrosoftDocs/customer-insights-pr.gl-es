@@ -1,7 +1,7 @@
 ---
-title: 'Perfís de clientes: índice de busca e filtro'
+title: Xestiona o índice de busca e filtro para perfís de clientes
 description: Busque rapidamente información sobre perfís de clientes unificados e filtre por atributos especificados.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050807"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187907"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Perfís de clientes: índice de busca e filtro
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Xestiona o índice de busca e filtro para perfís de clientes
 
-O resultado de unificar os seus datos de clientes é unha entidade de perfil de cliente que fornece unha vista unificada na súa base de clientes total. Para [buscar información rapidamente sobre un cliente ou grupo de clientes específicos](customer-profiles.md), pode configurar as capacidades **Buscar** e **Filtrar** na páxina **Clientes**. Continúe lendo para aprender como poden os administradores editar os atributos na páxina **Índice de busca e filtro**, que están dispoñibles para os usuarios para buscar e filtrar.
+O resultado de unificar os datos dos seus clientes é a *Cliente* entidade que ofrece unha visión unificada da súa base total de clientes. Para que os usuarios o fagan rapidamente [buscar información sobre un cliente específico ou grupo de clientes](customer-profiles.md), un administrador debe configurar o **Busca** e **Filtro** capacidades para o **Clientes** páxina.
 
    :::image type="content" source="media/search-filter.png" alt-text="Buscar filtro":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Defina atributos de busca e campos indexados
 
-## <a name="add-fields-and-specify-attributes"></a>Engadir campos e especificar atributos
+Se é a primeira vez que define atributos que se poden buscar como administrador, defina primeiro os campos indexados. Suxerímoslle que escolla todos os atributos cos que os usuarios poidan buscar e filtrar clientes na páxina **Clientes**. Só os atributos que existen no *Cliente* pódese especificar a entidade creada durante o proceso de unificación de datos.
 
-Se é a primeira vez que define atributos que se poden buscar como administrador, primeiro deberá definir os campos indexados. Suxerímoslle que escolla todos os atributos cos que os usuarios poidan buscar e filtrar clientes na páxina **Clientes**. Só pode especificar atributos que existen na entidade de Perfil de cliente que creou durante o proceso de unificación de datos.
+1. Ir a **Clientes** e selecciona **Índice de busca e filtro**.
 
-1. Abra a páxina **Clientes** e seleccione **Índice de busca e filtro**.
+1. Seleccione **+ Engadir**.
 
-2. Seleccione **+ Engadir** para especificar os campos indexados.
+1. Seleccione os atributos da lista que quere engadir como campos indexados e prema **Solicitar**.
 
-3. Seleccione os atributos da lista que desexa engadir como campos indexados. Sempre pode engadir máis atributos seleccionando **Engadir**. Tamén pode eliminar todos os atributos seleccionados seleccionando o símbolo **Quitar**.
+1. Para engadir máis atributos, selecciona **Engadir**. Para eliminar un atributo seleccionado, seleccione o atributo e despois **Eliminar**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Explorar a táboa de campos de clientes indexados
+   :::image type="content" source="media/search-filter-index.png" alt-text="Busca e filtra páxina de índice.":::
 
-A seguinte información preséntase na táboa.
+1. Seleccione **Corre** unha vez que estea preparado para aplicar a súa configuración de busca e filtro. Despois de procesar os cambios, visualízaos na páxina [tarxetas de cliente na páxina Cliente](customer-profiles.md).
 
-- **Nome**: representa o nome do atributo tal e como aparece na entidade de Perfil do cliente.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Defina opcións de filtrado para un atributo dado
+
+Configure os campos que se poden usar para filtrar os clientes no **Clientes** páxina.
+
+1. Ir a **Clientes** e selecciona **Índice de busca e filtro**.
+
+1. Seleccione un atributo e **Engadir filtro**. Define o número de resultados e a orde na que se organizarán. Dependendo do tipo de datos do atributo, aparece un dos seguintes paneis.
+
+   - Atributos de tipo cadea: especifique o número de resultados desexados no ficheiro **Filtro de cadea** panel e a política de orde pola que se organizarán.
+
+   - Atributos de tipo numérico: especifique os intervalos incluídos no **Filtro de número** panel e a política de orde pola que se organizarán.
+
+   - Atributos de tipo de data: especifique os intervalos incluídos no **Filtro de data** panel e a política de orde pola que se organizarán.
+
+1. Seleccione **Aceptar**. Repita para todos os atributos polos que quere filtrar.
+
+1. Seleccione **Corre** unha vez que estea preparado para aplicar a súa configuración de busca e filtro. Despois de procesar os cambios, visualízaos na páxina [tarxetas de cliente na páxina Cliente](customer-profiles.md).
+
+## <a name="view-indexed-customer-fields"></a>Ver campos de clientes indexados
+
+O **Índice de busca e filtrado** páxina mostra a seguinte información:
+
+- **Nome** : Representa o nome do atributo tal e como aparece no ficheiro *Cliente* entidade.
 - **Tipo de datos**: especifica se o tipo de datos é unha cadea, un número ou unha data.
 - **Incluído na busca**: especifica se este atributo se pode usar para buscar clientes na páxina **Clientes** usando o campo **Buscar**.
 - **Engadir filtro**: controle a definición de como se pode usar este atributo para filtrar na páxina **Clientes**.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Edición de opcións de filtrado dun atributo dado
-
-O menú **Filtro** da páxina **Clientes** pode incluír un número variable de niveis de atributos (por exemplo, diferentes grupos de idade polos que filtrar os clientes).
-
-1. Seleccione **Engadir filtro** para un atributo determinado na páxina **Índice de busca e filtro**. Pode definir o número de resultados e a orde en que se organizarán. Dependendo do tipo de datos do atributo, aparecerá un dos seguintes paneis.
-
-- Atributos do tipo de cadea: especifique o número de resultados desexados no panel **Opcións de filtro de cadeas** e a política de pedidos pola que se organizarán.
-
-- Atributos do tipo numérico: especifique os intervalos incluídos no panel **Opcións de filtro de números** e a política de pedidos pola que se organizarán.
-
-- Atributos do tipo de data: especifique os intervalos incluídos no panel **Opcións de filtro de datas** e a política de pedidos pola que se organizarán.
-
-2. Seleccione **Gardar** para aplicar as modificacións.
-
-3. Seleccione **Executar** unha vez estea listo para aplicar a súa configuración. Despois de procesar os cambios, atoparalos nas [tarxetas de cliente da páxina de Cliente](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Pasos seguintes
 
 Revise a [páxina de perfís unificados](customer-profiles.md) para buscar perfís ou usar os campos indexados para ver un subconxunto de todos os perfís unificados.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

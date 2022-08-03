@@ -1,85 +1,80 @@
 ---
 title: Exportar segmentos a Mailchimp (versión preliminar)
 description: Aprenda a configurar a conexión e exportar a Mailchimp.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3a19c517eeca71a19649e3d07cf47e5d25df6a68
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082468"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196852"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos a Mailchimp (versión preliminar)
 
 Exporte segmentos de perfís de clientes unificados a Mailchimp para crear boletíns e campañas de correo electrónico.
 
-## <a name="prerequisites-for-connection"></a>Requisitos previos para a conexión
+## <a name="prerequisites"></a>Requisitos previos
 
--   Ten unha [Conta de Mailchimp](https://mailchimp.com/) e as correspondentes credenciais de administrador.
--   Existen públicos en Mailchimp e os ID correspondentes. Para obter máis información, consulte [públicos de Mailchimp](https://mailchimp.com/help/create-audience/).
--   Ten [segmentos configurados](segments.md)
--   Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico.
+- A [Conta Mailchimp](https://mailchimp.com/) e as correspondentes credenciais de administrador.
+- [Públicos existentes en Mailchimp](https://mailchimp.com/help/create-audience/) e correspondente [ID de audiencia](https://mailchimp.com/help/find-audience-id/).
+- [Segmentos configurados](segments.md).
+- Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico.
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Ata 1 millón de perfís de clientes por exportación a Mailchimp.
-- A exportación a Mailchimp está limitada a segmentos.
-- A exportación de segmentos con 1 millón de perfís de clientes pode levar ata tres horas. 
-- O número de perfís de clientes que pode exportar a Mailchimp depende e está limitado ao seu contrato con Mailchimp.
+- Ata 1 millón de perfís de clientes por exportación a Mailchimp, o que pode levar ata tres horas. O número de perfís de clientes que podes exportar a Mailchimp depende do teu contrato con Mailchimp.
+- Só segmentos.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Configurar conexión a Mailchimp
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Vaia a **Administrar** > **Conexións**.
 
-1. Seleccione **Engadir conexión** e elixa **Mailchimp** para configurar a conexión.
+1. Seleccione **Engadir conexión** e escolle **Mailchimp**.
 
 1. Déalle á conexión un nome recoñecible no campo **Nome para mostrar**. O nome e o tipo de conexión describen esta conexión. Recomendamos escoller un nome que explique o propósito e o destino da conexión.
 
-1. Escolla quen pode usar esta conexión. Se non realiza ningunha acción, o valor predeterminado será Administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolla quen pode usar esta conexión. Por defecto, só son os administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Seleccione **Estou de acordo** para confirmar a **Privacidade e cumprimento dos datos**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
-1. Seleccione **Conectar** para iniciar a conexión a Mailchimp.
+1. Seleccione **Conectar** para inicializar a conexión.
 
 1. Seleccione **Autenticarse con Mailchimp** e proporcione as súas credenciais de Mailchimp.
 
 1. Seleccione **Autoengadirse como usuario de exportación** e proporcione as súas credenciais de Customer Insights.
 
-1. Seleccione **Gardar** para completar a conexión. 
+1. Seleccione **Gardar** para completar a conexión.
 
-## <a name="configure-the-connector"></a>Configurar o conector
+## <a name="configure-an-export"></a>Configurar unha exportación
 
-Pode configurar esta exportación se ten acceso a unha conexión deste tipo. Para obter máis información, consulte [Permisos necesarios para configurar unha exportación](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
-1. Vaia a **Datos**> **Exportacións**.
+1. Vaia a **Datos** > **Exportacións**.
 
-1. Seleccione **Engadir destino** para crear unha nova exportación.
+1. Seleccione **Engadir exportación**.
 
-1. No campo **Conexión da exportación** escolla unha conexión da sección Mailchimp. Se non ve o nome desta sección, non hai conexións deste tipo dispoñibles para vostede.
+1. No campo **Conexión da exportación** escolla unha conexión da sección Mailchimp. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
-1. Insira o seu **[ID de público de MailChimp](https://mailchimp.com/help/find-audience-id/)**
+1. Introduza un nome para a exportación.
 
-1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente. 
+1. Introduce o teu **ID de audiencia de Mailchimp**.
 
-1. Opcionalmente, pode exportar o **nome** e **apelidos** para crear correos electrónicos máis personalizados. Seleccione **Engadir atributo** para asignar estes campos.
+1. Na sección **Coincidencia de datos** do campo **Correo electrónico**, seleccione o campo que representa o enderezo de correo electrónico dun cliente.
 
-1. Seleccione os segmentos que desexa exportar. Pode exportar ata 1 millón de perfís de clientes en total a Mailchimp.
+1. Opcionalmente, exportar **nome** e **apelidos** para crear correos electrónicos máis personalizados. Seleccione **Engadir atributo** para asignar estes campos.
+
+1. Seleccione os segmentos que desexa exportar.
 
 1. Seleccione **Gardar**.
 
-Ao gardar unha exportación non se executa a exportación inmediatamente.
-
-A exportación execútase con cada [actualización programada](system.md#schedule-tab). Tamén pode [exportar datos baixo demanda](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando habilita Dynamics 365 Customer Insights para transmitir datos a Mailchimp, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de garantir que Mailchimp cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O administrador de Dynamics 365 Customer Insights pode eliminar este destino de exportación en calquera momento para interromper o uso desta funcionalidade.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

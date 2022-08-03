@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082321"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195794"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enriquece os perfís de clientes coa importación personalizada SFTP (vista previa)
 
@@ -91,7 +91,7 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten as
 
 ### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
 
-Cando habilitas Dynamics 365 Customer Insights para transmitir datos mediante Importación personalizada, permite a transferencia de datos fóra dos límites de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de garantir que os datos cumpran coas obrigas de privacidade ou de seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Cando habilitas Dynamics 365 Customer Insights para transmitir datos mediante Importación personalizada, permite a transferencia de datos fóra do límite de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de asegurarse de que os datos cumpran coas obrigas de privacidade ou de seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="configure-the-import"></a>Configurar a importación
@@ -104,7 +104,7 @@ O administrador de Dynamics 365 Customer Insights pode eliminar este enriqueceme
 
 1. Revisa a vista xeral e, a continuación, selecciona **A continuación**.
 
-1. Seleccione a conexión. Póñase en contacto cun administrador se non está dispoñible.
+1. Seleccione a conexión. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
 1. Seleccione o **Conxunto de datos do cliente** e escolle o perfil ou segmento que queres enriquecer. O *Cliente* a entidade enriquece todos os seus perfís de clientes mentres que un segmento enriquece só os perfís de clientes contidos nese segmento.
 
