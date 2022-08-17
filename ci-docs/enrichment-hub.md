@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
-ms.translationtype: MT
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053866"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245877"
 ---
 # <a name="data-enrichment-preview-overview"></a>Visión xeral do enriquecemento de datos (vista previa).
 
@@ -76,7 +76,7 @@ Seleccione o enriquecemento para ver as accións dispoñibles.
 - **Ver** detalles do enriquecemento co número de perfís de clientes enriquecidos.
 - **Editar** a configuración do enriquecemento.
 - [**Corre**](#run-or-refresh-enrichments) o enriquecemento para actualizar os perfís dos clientes cos datos máis recentes. Executa varios enriquecementos á vez seleccionándoos na lista.
-- **Activar** ou **Desactivar** un enriquecemento. Os enriquecementos inactivos non se actualizarán durante a [actualización programada](system.md#schedule-tab).
+- **Activar** ou **Desactivar** un enriquecemento. Os enriquecementos inactivos non se actualizarán durante a [actualización programada](schedule-refresh.md).
 - **Eliminar** o enriquecemento.
 
 Tamén podes crear [segmentos](segments.md) ou [medidas](measures.md) de enriquecementos.
@@ -85,7 +85,7 @@ Tamén podes crear [segmentos](segments.md) ou [medidas](measures.md) de enrique
 
 Unha vez executados, os enriquecementos pódense actualizar nunha programación automática ou actualizar manualmente baixo demanda.
 
-1. Para actualizar manualmente un ou máis enriquecementos, selecciónaos e escolla **Corre**. Para [programar unha actualización automática](system.md#schedule-tab), Ir a **Admin** > **Sistema** > **Horario**. O tempo de procesamento depende do tamaño dos datos dos clientes.
+1. Para actualizar manualmente un ou máis enriquecementos, selecciónaos e escólleos **Corre**. Para [programar unha actualización automática](schedule-refresh.md), Ir a **Admin** > **Sistema** > **Horario**. O tempo de procesamento depende do tamaño dos datos dos clientes.
 
 1. Opcionalmente, [ver o progreso do proceso de enriquecemento](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado
 1. No panel **Detalles do progreso**, expanda a sección **Enriquecementos**.
 1. No enriquecemento no que desexa ver o progreso, seleccione **Ver detalles**.
 1. No panel **Detalles da tarefa**, seleccione **Amosar detalles** para ver os procesos implicados na actualización do enriquecemento e o seu estado.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Ver resultados de enriquecemento
 

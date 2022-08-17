@@ -1,7 +1,7 @@
 ---
 title: Enriquece os perfís da empresa con Dun & Bradstreet (versión previa)
 description: Información xeral sobre o enriquecemento de terceiros de Dun & Bradstreet.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196024"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237902"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Enriquece os perfís da empresa con Dun & Bradstreet (versión previa)
 
@@ -55,16 +55,11 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten as
 
 1. Proporcione credenciais válidas de Dun & Bradstreet e detalles do proxecto Dun & Bradstreet *Rexión, ruta do cartafol de soltar e nome do cartafol de soltar*. Ti [obtén esta información](#set-up-your-dun--bradstreet-project) do proxecto Dun & Bradstreet.
 
-1. Revise e proporcione o seu consentimento para a [Privacidade e cumprimento de datos](#data-privacy-and-compliance) seleccionando **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
 1. Seleccione **Verificar** para validar a configuración e, a continuación, seleccione **Gardar**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Páxina de configuración de conexión Dun & Bradstreet.":::
-
-### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando habilitas Dynamics 365 Customer Insights para transmitir datos a Dun & Bradstreet, permite a transferencia de datos fóra dos límites de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de asegurarse de que Dun & Bradstreet cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="supported-countries-or-regions"></a>Países ou rexións admitidos
 

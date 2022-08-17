@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139578"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245592"
 ---
 # <a name="update-the-unification-settings"></a>Actualiza a configuración de unificación
 
@@ -42,8 +42,8 @@ Para revisar ou cambiar calquera configuración de unificación unha vez que se 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Captura de pantalla da páxina de Unificación de datos coas opcións de Unificación destacadas.":::
 
    - [Executar condicións coincidentes](#run-matching-conditions) para avaliar rapidamente a calidade das súas condicións de coincidencia (desduplicación e regras de coincidencia) sen actualizar o perfil unificado. O **Executar só condicións coincidentes** a opción non se mostra para unha única entidade.
-   - [Unificar os perfís de clientes](#run-updates-to-the-unified-customer-profile) para executar condicións coincidentes e actualizar a entidade unificada do perfil do cliente sen afectar as dependencias (como enriquecementos, segmentos ou medidas). Os procesos dependentes non se executan, pero actualizaranse como [definido no programa de actualización](system.md#schedule-tab).
-   - [Unifica os perfís de clientes e as dependencias](#run-updates-to-the-unified-customer-profile) para executar condicións coincidentes e actualizar a entidade unificada do perfil do cliente e todas as dependencias (como enriquecementos, segmentos ou medidas). Todos os procesos reexecútanse automaticamente.
+   - [Unificar os perfís de clientes](#run-updates-to-the-unified-customer-profile) para executar condicións coincidentes e actualizar a entidade unificada do perfil do cliente sen afectar as dependencias (como enriquecementos, segmentos ou medidas). Os procesos dependentes non se executan, pero actualizaranse como [definido no programa de actualización](schedule-refresh.md).
+   - [Unifica os perfís e as dependencias dos clientes](#run-updates-to-the-unified-customer-profile) para executar condicións coincidentes e actualizar a entidade unificada do perfil do cliente e todas as dependencias (como enriquecementos, segmentos ou medidas). Todos os procesos reexecútanse automaticamente.
 
 ## <a name="edit-source-fields"></a>Editar campos de orixe
 
@@ -53,7 +53,7 @@ Non podes eliminar un atributo ou unha entidade se xa se unificaron.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Captura de pantalla da páxina de campos de orixe que mostra o número de claves primarias, campos asignados e non asignados":::
 
-   Mostra o número de campos asignados e sen asignar.
+   Mostra o número de campos asignados e non asignados.
 
 1. Seleccione **Seleccione entidades e campos** para engadir outros atributos ou entidades. Use a busca ou o desprazamento para atopar e seleccionar os seus atributos e entidades de interese. Seleccione **Aplicar**.
 
@@ -87,7 +87,7 @@ Non podes eliminar un atributo ou unha entidade se xa se unificaron.
 
    1. Seleccione **Feito**.
 
-1. Seleccione **A continuación** para facer cambios nas condicións de coincidencia ou seleccione **Garda e pecha** e volver a [Actualiza a configuración de unificación](#update-the-unification-settings).
+1. Seleccione **A continuación** para facer cambios nas condicións coincidentes ou seleccione **Garda e pecha** e volver a [Actualiza a configuración de unificación](#update-the-unification-settings).
 
 ## <a name="manage-match-rules"></a>Xestionar regras de coincidencia
 
@@ -95,7 +95,7 @@ Pode reconfigurar e axustar a maioría dos parámetros de coincidencia. Non pode
 
 1. Seleccione **Editar** no **Condicións de coincidencia** tella.
 
-   :::image type="content" source="media/m3_match_edit.png" alt-text="Captura de pantalla da páxina Regras e condicións de xogo con estatísticas." lightbox="media/m3_match_edit.png":::
+   :::image type="content" source="media/m3_match_edit.png" alt-text="Captura de pantalla da páxina Regras e condicións do partido con estatísticas." lightbox="media/m3_match_edit.png":::
 
    A páxina mostra a orde de coincidencia e as regras definidas e as seguintes estatísticas:
    - **Rexistros de orixe únicos** mostra o número de rexistros de orixes individuais que se procesaron na última execución da busca de coincidencias.
@@ -154,9 +154,9 @@ Executar condicións de coincidencia executa só a deduplicación e as regras de
 
 1. Dende **Datos** > **Unificar** páxina, seleccione:
 
-   - **Unificar os perfís de clientes** : executa condicións coincidentes e actualiza a entidade unificada do perfil do cliente sen afectar as dependencias (como enriquecementos, segmentos ou medidas). Os procesos dependentes non se executan, pero actualizaranse como [definido no programa de actualización](system.md#schedule-tab).
+   - **Unificar os perfís de clientes** : executa condicións coincidentes e actualiza a entidade unificada do perfil do cliente sen afectar ás dependencias (como enriquecementos, segmentos ou medidas). Os procesos dependentes non se executan, pero actualizaranse como [definido no programa de actualización](schedule-refresh.md).
 
-   - **Unifica os perfís de clientes e as dependencias** : executa as condicións coincidentes e actualiza o perfil unificado e todas as dependencias. Todos os procesos reexecútanse automaticamente. Despois de que se completaron todos os procesos posteriores, o perfil do cliente reflicte os datos actualizados.
+   - **Unifica os perfís e as dependencias dos clientes** : executa as condicións coincidentes e actualiza o perfil unificado e todas as dependencias. Todos os procesos reexecútanse automaticamente. Despois de que se completaron todos os procesos posteriores, o perfil do cliente reflicte os datos actualizados.
 
    O **Rexistros duplicados**, **de coincidencia**, e **Campos de clientes unificados** mostra de azulexos **En cola** ou **Refrescante** estado.
 

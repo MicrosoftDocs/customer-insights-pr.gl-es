@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082846"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245463"
 ---
 # <a name="manage-predictions"></a>Xestionar predicións
 
@@ -52,13 +52,13 @@ As seguintes columnas do informe conteñen información útil para mellorar os d
 - **Nome:** Nome descritivo do erro, aviso ou recomendación.
 - **Paso:** Fase do modelo, tren ou puntuación, a que fai referencia a información.
 - **Estado:** Gravidade da información (erro, aviso, recomendación).
-- **Nome da columna:** Columna dunha entidade que se debe modificar para mellorar o rendemento do modelo.
+- **Nome da columna:** Columna nunha entidade que se debe modificar para mellorar o rendemento do modelo.
 - **Nome da entidade:** Nome da entidade que se debe modificar para mellorar o rendemento do modelo.
 - **Detalles:** Detalles sobre o erro, aviso ou recomendación.
 
 ## <a name="refresh-a-prediction"></a>Actualizar unha predición
 
-As predicións actualizaranse automaticamente no mesmo [programa que actualiza os seus datos](system.md#schedule-tab) tal e como se configura nos axustes. Tamén pode actualizalos manualmente.
+As predicións actualizaranse automaticamente no mesmo [programa que actualiza os seus datos](schedule-refresh.md) tal e como se configura nos axustes. Tamén pode actualizalos manualmente.
 
 1. Vaia a **Intelixencia** > **Predicións** e seleccione o separador **As miñas predicións**.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207089"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245647"
 ---
 # <a name="data-sources-overview"></a>Visión xeral de orixes de datos
 
@@ -44,11 +44,11 @@ Se utiliza fontes de datos locais, Microsoft ou datos de terceiros, importe e tr
 Se o teu ambiente estaba configurado para usar o almacenamento de Customer Insights e utilizas fontes de datos locais, utilizas Power Platform fluxos de datos. Con Power Platform fluxos de datos, pode ver fontes de datos compartidas e fontes de datos xestionadas por outros. O **Fontes de datos** A páxina enumera as fontes de datos en tres seccións:
 - **Compartido** : fontes de datos que poden xestionar todos os administradores de Customer Insights. Power Platform fluxos de datos, a súa propia conta de almacenamento e anexo a un Dataverse -Managed Data Lake son exemplos de fontes de datos compartidas.
 - **Xestionado por min** :Power Platform fluxos de datos creados e xestionados só por ti. Outros administradores de Customer Insights só poden ver estes fluxos de datos pero non editalos, actualizalos nin eliminalos.
-- **Xestionado por outros** :Power Platform fluxos de datos creados por outros administradores. Só podes velos. Enumera o propietario do fluxo de datos co que contactar para obter asistencia.
+- **Xestionado por outros** :Power Platform fluxos de datos creados por outros administradores. Só podes velos. Enumera o propietario do fluxo de datos co que contactar para obter axuda.
 > [!NOTE]
 > Todas as entidades poden ser vistas e usadas por outros usuarios. Aínda que as fontes de datos son propiedade do usuario que as creou, as entidades resultantes da inxestión de datos poden ser utilizadas por todos os usuarios de Customer Insights.
 
-Se o teu ambiente non usa Power Platform fluxos de datos, o **Fontes de datos** páxina contén só unha lista de todas as fontes de datos. Non se mostran seccións.
+Se o teu ambiente non utiliza Power Platform fluxos de datos, o **Fontes de datos** páxina contén só unha lista de todas as fontes de datos. Non se mostran seccións.
 
 ## <a name="manage-existing-data-sources"></a>Xestionar fontes de datos existentes
 
@@ -61,13 +61,13 @@ Seleccione un orixe de datos para ver as accións dispoñibles.
 - [**Editar**](#add-or-edit-data-sources) o orixe de datos para cambiar as súas propiedades.
 - [**Actualizar**](#refresh-data-sources) o orixe de datos para incluír os datos máis recentes.
 - [**Enriquecer**](data-sources-enrichment.md) o orixe de datos antes da unificación.
-- **Eliminar** o orixe de datos. Un orixe de datos só se pode eliminar se os datos non se usan en ningún procesamento, como a unificación, a información, as activacións ou as exportacións.
+- **Eliminar** o orixe de datos. Un orixe de datos só se pode eliminar se os datos non se usan en ningún procesamento, como unificación, información, activacións ou exportacións.
 
 ## <a name="refresh-data-sources"></a>Actualizar orixes de datos
 
 As fontes de datos pódense actualizar de xeito automático ou actualizarse manualmente a demanda. [Fontes de datos locais](connect-power-query.md#add-data-from-on-premises-data-sources) actualizar os seus propios horarios que se configuran durante a inxestión de datos. Para as fontes de datos adxuntas, a inxestión de datos consome os últimos datos dispoñibles desa orixe de datos.
 
-Ir a **Admin** > **Sistema** > [**Horario**](system.md#schedule-tab) para configurar as actualizacións programadas polo sistema das fontes de datos inxeridas.
+Ir a **Admin** > **Sistema** > [**Horario**](schedule-refresh.md) para configurar as actualizacións programadas polo sistema das fontes de datos inxeridas.
 
 Para actualizar un orixe de datos baixo demanda:
 

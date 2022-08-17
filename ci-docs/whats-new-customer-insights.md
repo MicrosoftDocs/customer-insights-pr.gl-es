@@ -1,19 +1,19 @@
 ---
 title: Novidades de Dynamics 365 Customer Insights
 description: Información sobre novas funcións, melloras e corrección de erros.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114244"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246009"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
@@ -24,13 +24,35 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="july-2022-updates"></a>Actualizacións de xullo de 2022
+
+As actualizacións de xullo de 2022 inclúen novas funcións, melloras de rendemento e correccións de erros.
+
+### <a name="export-to-moengage"></a>Exportar a MoEngage
+
+Exporta segmentos de perfís de clientes unificados a MoEngage e utilízaos para marketing por correo electrónico en MoEngage.
+
+Para obter máis información, consulte [Exportar segmentos a MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>Soporte SSH para exportacións baseadas en SFTP
+
+Escolla se desexa autenticarse mediante SSH ou nome de usuario/contrasinal para as conexións a destinos de exportación SFTP.
+
+Para obter máis información, consulte [Exportar datos a hosts SFTP](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personaliza as experiencias con datos sobre usuarios coñecidos e descoñecidos
+
+Xestionar os datos dos clientes non é un reto novo, pero é cada vez máis difícil a medida que os usuarios navegan polas distintas canles dixitais que ofrecen as marcas. Un usuario que é coñecido (autenticado) nunha canle pasa a ser descoñecido (non autenticado) noutra se non inicia sesión. O problema a miúdo é que os usuarios non autenticados (descoñecidos) non teñen un ID común. Podería usarse para asociar atributos de perfís significativos e xerar perfís de clientes unificados. Customer Insights axuda a resolver este problema inxerindo datos dos métodos de seguimento dos teus sistemas fonte.
+
+Para obter máis información, consulte [Personaliza as túas experiencias con datos sobre usuarios coñecidos e descoñecidos](unknown-to-known.md).
+
 ## <a name="june-2022-updates"></a>Actualizacións de xuño de 2022
 
 As actualizacións de xuño de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
 
 ### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Experiencia de usuario actualizada para fontes de datos e inxestión de datos
 
-Importar datos dunha ampla gama de fontes de datos é a base para consolidar os datos dos seus clientes en Dynamics 365 Customer Insights. Repasamos a experiencia do usuario para a importación e conexión de fontes de datos. Esta actualización ten como obxectivo facilitarche a inxestión de datos en Customer Insights.
+Importar datos dunha gran variedade de fontes de datos é a base para consolidar os datos dos seus clientes en Dynamics 365 Customer Insights. Repasamos a experiencia do usuario para a importación e conexión de fontes de datos. Esta actualización ten como obxectivo facilitarche a inxestión de datos en Customer Insights.
 
 Para obter máis información, consulte [Visión xeral das fontes de datos](data-sources.md).
 
@@ -50,7 +72,7 @@ Para obter máis información, consulte [Acceda de forma segura aos datos do cli
 
 Azure Private Link permite que Customer Insights se conecte ao teu Azure Data Lake Storage conta a través dun punto final privado na súa rede virtual. Para os datos dunha conta de almacenamento, que non está exposta á Internet pública, Private Link habilita a conexión a esa rede restrinxida.
 
-Para obter máis información, consulte [Usa a ligazón privada en Customer Insights](security-overview.md#private-links-tab).
+Para obter máis información, consulte [Usa a ligazón privada en Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Actualizacións de maio de 2022
 
@@ -68,9 +90,9 @@ Para obter máis información, consulte [Visión xeral da unificación de datos]
 
 Para obter máis información, consulte [Explore os datos do cliente](home.md).
 
-### <a name="track-usage-of-a-segment"></a>Rastrexa o uso dun segmento
+### <a name="track-usage-of-a-segment"></a>Rastrexar o uso dun segmento
 
-Agora podes [rastrexar o uso dun segmento](segments.md#track-usage-of-a-segment) nas aplicacións, que están baseadas no Dataverse organización que está conectada con Customer Insights. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), o sistema infórmache sobre o uso dese segmento.
+Agora podes [rastrexar o uso dun segmento](segments.md#track-usage-of-a-segment) en aplicacións, que están baseadas no Dataverse organización que está conectada con Customer Insights. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), o sistema infórmache sobre o uso dese segmento.
 
 ### <a name="export-to-criteo"></a>Exportar a Criteo
 
@@ -88,11 +110,11 @@ Para obter máis información, consulte [Como: Crear un novo ambiente](create-en
 
 As actualizacións de abril de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
 
-### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (vista previa)
+### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (versión previa)
 
 Dun & Bradstreet ofrece datos comerciais, análises e información para as empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
 
-Para obter máis información, consulte [Enriquecemento dos perfís da empresa con Dun & Bradstreet (versión previa)](enrichment-dnb.md).
+Para obter máis información, consulte [Enriquecemento dos perfís da empresa con Dun & Bradstreet (Vista previa)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Defina o tipo de medida ao crear unha nova medida
 
@@ -104,13 +126,13 @@ Para obter máis información, consulte [Usa o creador de medidas para crear med
 
 Revisamos os nosos artigos de documentación e eliminamos as mencións ás estatísticas de compromiso e ás capacidades de información sobre o público. No futuro, faremos referencia coherentemente ao nome do produto Customer Insights cando escribamos sobre as funcións principais da aplicación. Este cambio tamén leva a unha reestruturación significativa da táboa de contidos, a estrutura do URL e as rutas dos ficheiros no repositorio de documentación subxacente. Todos os teus marcadores ou ligazóns existentes seguen funcionando e redirixindo aos URL actualizados.
 
-Se queres informarnos como percibes ese cambio ou detectar que algo non funciona como esperaba, infórmanos por [enviando comentarios para esta páxina](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Se queres informarnos como percibes ese cambio ou detectar que algo non funciona como se esperaba, infórmanos por [enviando comentarios para esta páxina](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Actualizacións de marzo de 2022
 
 As actualizacións de marzo de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
 
-### <a name="liveramp-abilitec-enrichment-preview"></a>Enriquecemento LiveRamp AbiliTec (Vista previa)
+### <a name="liveramp-abilitec-enrichment-preview"></a>Enriquecemento LiveRamp AbiliTec (vista previa)
 
 LiveRamp ofrece resolución de identidade e consolidación de datos dos clientes. Podes asignar os identificadores persoais dos teus datos de cliente ao gráfico de identidade de AbiliTec e recibir ID de AbiliTec. Despois podes usar estes ID para unificar mellor os datos dos teus clientes.
 
@@ -166,7 +188,7 @@ LiveRamp ofrece resolución de identidade e consolidación de datos dos clientes
 
 Para obter máis información, consulte [Enriquece os perfís de clientes con datos de identidade de LiveRamp (vista previa)](enrichment-liveramp.md).
 
-### <a name="enrichment-for-data-sources-preview"></a>Enriquecemento para fontes de datos (vista previa)
+### <a name="enrichment-for-data-sources-preview"></a>Enriquecemento das fontes de datos (Previsualización)
 
 Use datos de fontes como Microsoft e outros socios para enriquecer os datos dos seus clientes antes da unificación de datos. Os enriquecementos orixe de datos axudan a producir datos máis completos e de calidade que poden axudar a conseguir mellores resultados unha vez que unifiques os teus datos.
 
@@ -198,7 +220,7 @@ Durante un período de transición, os participantes existentes de vista previa 
 - Mellora os perfís unificados con eventos inxeridos e refinados para beneficiarse do valor total dos datos dos seus clientes
   
 Durante o período de transición, os eventos capturados aínda se transmiten ao Data Lake conectado. Unha vez desactivada esta función, o uso compartido de datos deterase e non se enviarán novos eventos ao almacenamento conectado.
-Póñase en contacto directamente co equipo da súa conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache ao tanto dos próximos lanzamentos. 
+Póñase en contacto directamente co seu equipo da conta de Microsoft se tes preguntas sobre o final da vista previa da capacidade. O equipo da túa conta manterache ao tanto dos próximos lanzamentos. 
 
 ## <a name="january-2022-updates"></a>Actualizacións de xaneiro de 2022
 

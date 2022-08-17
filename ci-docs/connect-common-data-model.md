@@ -12,22 +12,22 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206997"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245785"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarse con datos en Azure Data Lake Storage
 
-Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Storage Conta Gen2. A inxestión de datos pode ser total ou incremental.
+Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Storage Conta Gen2. A inxestión de datos pode ser completa ou incremental.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Admite a inxestión de datos Azure Data Lake Storage *Xeración 2* contas exclusivamente. Non podes usar contas de Data Lake Storage Gen1 para inxerir datos.
 
-- O Azure Data Lake Storage conta debe ter [espazo de nomes xerárquico activado](/azure/storage/blobs/data-lake-storage-namespace). Os datos deben almacenarse nun formato de cartafol xerárquico que defina o cartafol raíz e teña subcartafoles para cada entidade. Os subcartafoles poden ter datos completos ou cartafoles de datos incrementais.
+- O Azure Data Lake Storage conta debe ter [espazo de nomes xerárquico habilitado](/azure/storage/blobs/data-lake-storage-namespace). Os datos deben almacenarse nun formato de cartafol xerárquico que defina o cartafol raíz e teña subcartafoles para cada entidade. Os subcartafoles poden ter datos completos ou cartafoles de datos incrementais.
 
 - Para autenticarse cunha entidade de seguranza do servizo de Azure, asegúrese de que está configurada no seu inquilino. Para obter máis información, consulte [Conectar a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md).
 
@@ -52,12 +52,12 @@ Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Sto
 
    :::image type="content" source="media/data_sources_ADLS.png" alt-text="Cadro de diálogo para introducir detalles de conexión para Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Introduza a **Nome** para o orixe de datos e un opcional **Descrición**. O nome identifica de forma exclusiva o orixe de datos e faise referencia nos procesos posteriores e non se pode cambiar.
+1. Introduza a **Nome** para o orixe de datos e un opcional **Descrición**. O nome identifica de forma única o orixe de datos e faise referencia nos procesos posteriores e non se pode cambiar.
 
-1. Escolla unha das seguintes opcións para **Conecta o teu almacenamento usando**. Para obter máis información, consulte [Conecte Customer Insights a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md).
+1. Escolla unha das seguintes opcións para **Conecta o teu almacenamento usando**. Para obter máis información, consulte [Conectar Customer Insights a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md).
 
-   - **recurso Azure** : Introduza o **ID do recurso** . Opcionalmente, se quere inxerir datos dunha conta de almacenamento a través dunha ligazón privada de Azure, seleccione **Activa a ligazón privada**. Para obter máis información, consulte [Ligazóns privadas](security-overview.md#private-links-tab).
-   - **Subscrición de Azure** : Seleccione o **Subscrición** e despois o **Grupo de recursos** e **Conta de almacenamento**. Opcionalmente, se quere inxerir datos dunha conta de almacenamento a través dunha ligazón privada de Azure, seleccione **Activa a ligazón privada**. Para obter máis información, consulte [Ligazóns privadas](security-overview.md#private-links-tab).
+   - **recurso Azure** : Introduza o **ID do recurso** . Opcionalmente, se quere inxerir datos dunha conta de almacenamento a través dunha ligazón privada de Azure, seleccione **Activa a ligazón privada**. Para obter máis información, consulte [Ligazóns privadas](security-overview.md#set-up-an-azure-private-link).
+   - **Subscrición de Azure** : Seleccione o **Subscrición** e despois o **Grupo de recursos** e **Conta de almacenamento**. Opcionalmente, se quere inxerir datos dunha conta de almacenamento a través dunha ligazón privada de Azure, seleccione **Activa a ligazón privada**. Para obter máis información, consulte [Ligazóns privadas](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Necesitas un dos seguintes roles no contedor ou na conta de almacenamento para crear o orixe de datos:
@@ -65,13 +65,13 @@ Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Sto
    >  - Storage Blob Data Reader é suficiente para ler desde unha conta de almacenamento e inxerir os datos a Customer Insights. 
    >  - Se queres editar os ficheiros de manifesto directamente en Customer Insights, é necesario un Colaborador ou propietario de datos de Blob de almacenamento.  
   
-1. Escolla o nome do **Envase** que contén os datos e o esquema (ficheiro model.json ou manifest.json) dos que importar os datos e seleccione **A continuación**.
+1. Escolla o nome do **Envase** que contén os datos e o esquema (ficheiro model.json ou manifest.json) desde os que importar os datos e seleccione **A continuación**.
    > [!NOTE]
    > Calquera ficheiro model.json ou manifest.json asociado a outra orixe de datos do contorno non aparecerá na lista. Non obstante, o mesmo ficheiro model.json ou manifest.json pode usarse para fontes de datos en múltiples contornos.
 
 1. Para crear un novo esquema, vai a [Crea un novo ficheiro de esquema](#create-a-new-schema-file).
 
-1. Para utilizar un esquema existente, desprácese ata o cartafol que contén o ficheiro model.json ou manifest.cdm.json. Podes buscar dentro dun directorio para atopar o ficheiro.
+1. Para utilizar un esquema existente, desprácese ata o cartafol que contén o ficheiro model.json ou manifest.cdm.json. Pode buscar dentro dun directorio para atopar o ficheiro.
 
 1. Seleccione o ficheiro json e seleccione **A continuación**. Móstrase unha lista de entidades dispoñibles.
 
@@ -115,7 +115,7 @@ A carga de datos pode levar moito tempo. Despois dunha actualización exitosa, o
 1. Seleccione **Nova entidade**. O **Nova Entidade** pantallas de paneis.
 
 1. Introduza o nome da entidade e escolla **Localización dos ficheiros de datos**.
-   - **Varios ficheiros .csv ou .parquet** : navegue ata o cartafol raíz, seleccione o tipo de patrón e introduza a expresión.
+   - **Varios ficheiros .csv ou .parquet** : busque o cartafol raíz, seleccione o tipo de patrón e introduza a expresión.
    - **Ficheiros únicos .csv ou .parquet** : busque o ficheiro .csv ou .parquet e seleccióneo.
 
    :::image type="content" source="media/ADLS_new_entity_location.png" alt-text="Cadro de diálogo para crear unha nova entidade coa localización dos ficheiros de datos resaltada.":::
@@ -158,7 +158,7 @@ A carga de datos pode levar moito tempo. Despois dunha actualización exitosa, o
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Editar un Azure Data Lake Storage orixe de datos
 
-Podes actualizar o *Conéctate á conta de almacenamento usando* opción. Para obter máis información, consulte [Conecte Customer Insights a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md). Para conectarse a un contedor diferente da súa conta de almacenamento ou cambiar o nome da conta, [cree unha nova conexión de orixe de datos](#connect-to-azure-data-lake-storage).
+Podes actualizar o *Conéctate á conta de almacenamento usando* opción. Para obter máis información, consulte [Conectar Customer Insights a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md). Para conectarse a un contedor diferente da súa conta de almacenamento ou cambiar o nome da conta, [cree unha nova conexión de orixe de datos](#connect-to-azure-data-lake-storage).
 
 1. Vaia a **Datos** > **Orixes de datos**.
 
@@ -176,7 +176,7 @@ Podes actualizar o *Conéctate á conta de almacenamento usando* opción. Para o
         > - Propietario dos datos do BLOB de almacenamento
         > - Colaborador de datos do BLOB de almacenamento
 
-   - **Activa a ligazón privada** se quere inxerir datos dunha conta de almacenamento a través dunha ligazón privada de Azure. Para obter máis información, consulte [Ligazóns privadas](security-overview.md#private-links-tab).
+   - **Activa a ligazón privada** se quere inxerir datos dunha conta de almacenamento a través dunha ligazón privada de Azure. Para obter máis información, consulte [Ligazóns privadas](security-overview.md#set-up-an-azure-private-link).
 
 1. Seleccione **Seguinte**.
 1. Cambia calquera das seguintes opcións:

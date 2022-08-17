@@ -1,7 +1,7 @@
 ---
-title: Xestionar permisos de usuario
+title: Atribuír permisos de usuario
 description: Máis información acerca de permisos e roles de usuario.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054860"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245417"
 ---
-# <a name="manage-user-permissions"></a>Xestionar permisos de usuario
+# <a name="assign-user-permissions"></a>Atribuír permisos de usuario
 
-O **Permisos** páxina é onde configurarás roles e permisos para usar Customer Insights.
-
-Debe ter permisos de administrador para ver a páxina. Para acceder á páxina de permisos, vai a **Admin** > **Seguridade** > **Usuarios**.
-
-Existen tres tipos de roles:
+O acceso a Customer Insights está restrinxido aos usuarios da túa organización que un administrador engade á aplicación. Un administrador pode engadir, editar ou eliminar usuarios. Un usuario pode ser un único usuario, grupo ou aplicación. Hai tres tipos de roles que pode ter un usuario:
 
 ## <a name="viewer"></a>Espectador
 
@@ -41,18 +37,18 @@ Existen tres tipos de roles:
 
 - Todos os permisos dispoñibles para o espectador.
 - Cargue e transforme datos usando a páxina **Orixes de datos**.
-- Completa ***Unificación de datos** que dan como resultado a entidade de perfil de cliente unificada.
+- Completa **Unificación de datos** que dan como resultado a entidade de perfil de cliente unificada.
 - Defina **Relacións** e **Actividades**.
 - Cree segmentos usando a páxina **Segmentos**.
 - Crear medidas empregando a páxina **Medidas**.
 - Xestione a configuración e enriqueza os perfís de clientes desde a páxina **Enriquecemento** (só para enriquecementos de primeiras partes).
-- Xestione e cree exportacións baseadas en conexións compartidas cos colaboradores. [Máis información sobre como os administradores permiten aos colaboradores usar unha conexión para exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Xestionar e crear exportacións en base a [conexións compartidas cos colaboradores](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Administración
 
 - Todos os permisos dispoñibles para o colaborador.
-- Cambie a configuración na páxina **Sistema**, incluído o idioma de traballo e as programacións de actualización dos procesos do sistema.
-- Visualice e engada permisos usando a páxina **Permisos**.
+- Cambiar a configuración en **Sistema** páxina, incluíndo o idioma de traballo, os programas de actualización dos procesos do seu sistema e a exportación de rexistros de diagnóstico.
+- Cambiar a configuración en **Seguridade** páxina, incluíndo usuarios, claves API, ligazóns privadas e bóveda de claves.
 - Estableza as definicións de busca e filtro para a páxina de clientes mediante a páxina **Índice de busca e filtro** (accesible a través da páxina **Clientes**).
 - Xestione as conexións e permítaas para outras funcións de usuario na páxina **Conexións**.
 - Xestione a configuración e enriqueza os perfís de clientes desde a páxina **Enriquecemento** (para todos os enriquecementos).
@@ -67,24 +63,27 @@ Existen tres tipos de roles:
 - Todos os permisos dispoñibles para o administrador.
 - [Restablecer e eliminar](manage-environments.md#reset-an-existing-environment-preview) o medioambiente.
 
-## <a name="assign-roles-and-permissions"></a>Atribuír roles e permisos
+## <a name="add-users"></a>Engadir usuarios
 
-1. Ir a **Admin** > **Seguridade** > **Usuarios***.
+1. Ir a **Admin** > **Seguridade** e selecciona o **Usuarios** ficha.
 
 1. Seleccione **Engadir usuarios** para abrir o panel **Engadir/editar permisos**.
 
-1. Use o campo **Buscar** para atopar o usuario ou o grupo de Azure Active Directory cuxos permisos desexa axustar. Seleccione un **Papel** para asignar a ese usuario ou grupo.
+1. Usa o **Busca** campo para atopar o Azure Active Directory usuario ou grupo que quere engadir. Seleccione un **Papel** para asignar a ese usuario ou grupo.
 
-1. Seleccione **Gardar**. O contorno actual compartirase automaticamente co usuario ou os membros do grupo cuxos permisos cambiou. Os usuarios poden acceder á aplicación Customer Insights e traballar de acordo co seu papel especificado.
+1. Seleccione **Gardar**. O entorno actual compártese automaticamente co usuario ou os membros do grupo. Os usuarios poden acceder á aplicación Customer Insights e traballar de acordo co seu papel especificado.
 
 ## <a name="view-current-permissions"></a>Ver permisos actuais
 
-Ir a **Admin** > **Seguridade** > **Usuarios** para ver que funcións están activas actualmente.
+Ir a **Admin** > **Seguridade** e selecciona o **Usuarios** para ver a lista de usuarios activos e as súas funcións asignadas. Pode ordenar a lista de usuarios por calquera columna ou utilizar a caixa de busca para atopar un usuario concreto.
 
-- A columna **Tipo** especifica un único usuario, grupo ou aplicación. O sistema admite usuarios e grupos individuais.
-- Os roles especifícanse na columna **Papel**.
-- Seleccione calquera título de columna para ordenar os resultados segundo o valor desa columna.
-- Use o campo **Buscar** na parte superior da páxina para localizar usuarios específicos.
+## <a name="manage-current-users"></a>Xestionar usuarios actuais
 
+Ir a **Admin** > **Seguridade** e selecciona o **Usuarios** ficha. Podes ordenar a lista de usuarios por calquera columna ou usar a caixa de busca para atopar o usuario que queres xestionar.
+
+Seleccione un usuario para ver as accións dispoñibles.
+
+- **Editar** para editar a función do usuario en Customer Insights. Seleccione **Gardar** para confirmar o cambio.
+- **Quitar** para eliminar que o usuario teña acceso a Customer Insights. Para confirmar a eliminación, seleccione **Eliminar**.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

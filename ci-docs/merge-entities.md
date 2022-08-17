@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139655"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213580"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Unifica os campos de clientes para a unificación de datos
 
@@ -29,7 +29,7 @@ Neste paso do proceso de unificación, escolle e exclúe os atributos para combi
 
 ## <a name="review-and-update-the-customer-fields"></a>Revisa e actualiza os campos do cliente
 
-1. Revisa a lista de campos que se unificarán baixo a **Campos de clientes** ficha da táboa. Realice os cambios se procede.
+1. Revisa a lista de campos que se unificarán baixo a **Campos de clientes** ficha da táboa. Realice calquera modificación se procede.
 
    1. Para calquera campo combinado, pode:
       - [Editar](#edit-a-merged-field)
@@ -58,6 +58,9 @@ Neste paso do proceso de unificación, escolle e exclúe os atributos para combi
 
 1. Especifique como combinar ou fusionar os campos dunha das tres opcións:
     - **Importancia**: identifica o valor do gañador en función do rango de importancia especificado para os campos participantes. É a opción de combinación predefinida. Seleccione **Subir/baixar** para establecer a clasificación de importancia.
+
+      > [!NOTE]
+      > Customer Insights usa o primeiro valor non nulo. Por exemplo, dadas as entidades A, B e C clasificadas nesa orde, se A.Name e B.Name son nulas, entón utilízase o valor de C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Opción de importancia no diálogo de combinación de campos.":::
 
@@ -141,7 +144,7 @@ Trata un grupo de campos como unha única unidade. Por exemplo, se os nosos rexi
 
 ## <a name="configure-customer-id-generation"></a>Configura a xeración de ID de cliente
 
-Defina como xerar valores de ID de cliente, os identificadores únicos do perfil do cliente. O paso unificar campos no proceso de unificación de datos xera o identificador único do perfil do cliente. O identificador é o *ID de cliente* no *Cliente* entidade que resulta do proceso de unificación de datos.
+Define como xerar valores de ID de cliente, os identificadores únicos do perfil do cliente. O paso unificar campos no proceso de unificación de datos xera o identificador único do perfil do cliente. O identificador é o *ID de cliente* no *Cliente* entidade que resulta do proceso de unificación de datos.
 
 O *ID de cliente*  baséase nun hash do primeiro valor das claves primarias gañadoras non nulas. Estas claves proveñen das entidades utilizadas na unificación de datos e están influenciadas pola orde de coincidencia.Polo tanto, o ID de cliente xerado pode cambiar cando cambia un valor de chave principal na entidade principal da orde de coincidencia. É posible que o valor da chave principal non represente sempre o mesmo cliente.
 

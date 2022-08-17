@@ -1,19 +1,19 @@
 ---
 title: Enriquece os perfís de clientes con datos de identidade de LiveRamp (vista previa)
 description: Enriquece os perfís de clientes con datos de LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196346"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237810"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enriquece os perfís de clientes con datos de identidade de LiveRamp (vista previa)
 
@@ -25,7 +25,7 @@ Actualmente admitimos o enriquecemento dos perfís de clientes con datos de Live
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Unha subscrición activa a LiveRamp. Para obter unha subscrición, póñase en contacto co seu equipo de contas LiveRamp ou a [dynamics@liveramp.com](mailto:dynamics@liveramp.com) para máis información.
+- Unha subscrición activa a LiveRamp. Para obter unha subscrición, póñase en contacto co seu equipo de conta LiveRamp ou a [dynamics@liveramp.com](mailto:dynamics@liveramp.com) para máis información.
 
 - Unha subscrición activa a AbiliTec cun ID de cliente e un segredo para acceder á API. Para obter máis información, consulte [Centro de desenvolvedores de API AbiliTec](https://developers.liveramp.com/abilitec-api/).
 
@@ -37,17 +37,13 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten un
 
 1. Seleccione **Engadir conexión** ao configurar un enriquecemento ou vaia a **Admin** > **Conexións** e selecciona **Montar** no mosaico LiveRamp.
 
-   :::image type="content" source="media/liveramp-connection.png" alt-text="Panel de configuración para configurar a conexión co servizo LiveRamp AbiliTec.":::
+   :::image type="content" source="media/liveramp-connection.png" alt-text="Panel de configuración para configurar a conexión ao servizo LiveRamp AbiliTec.":::
 
 1. Introduza un nome para a conexión e un ID de cliente LiveRamp válido e un segredo.
 
-1. Revise e proporcione o seu consentimento para a [Privacidade e cumprimento de datos](#data-privacy-and-compliance) seleccionando **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
 1. Seleccione **Verificar** para validar a configuración e, a continuación, seleccione **Gardar**.
-
-### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando habilitas Dynamics 365 Customer Insights para transmitir datos a LiveRamp, permite a transferencia de datos fóra dos límites de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de asegurarse de que LiveRamp cumpra as obrigas de privacidade ou seguridade que poida ter. Para obter máis información, revise o [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 

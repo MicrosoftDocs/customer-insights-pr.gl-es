@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170679"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246291"
 ---
 # <a name="segments-overview"></a>Visión xeral dos segmentos
 
@@ -36,7 +36,7 @@ Escolle como crear un segmento en función do teu público obxectivo.
 - Segmentos complexos con creador de segmentos: [Constrúe o teu propio](segment-builder.md)
 - Segmentos simples cun operador: [segmento rápido](segment-quick.md)
 - Forma impulsada por IA de atopar clientes similares: [Clientes semellantes](find-similar-customer-segments.md)
-- Suxestións con IA baseadas en medidas ou atributos: [Segmentos suxeridos en función de medidas](suggested-segments.md)
+- Suxestións con IA baseadas en medidas ou atributos: [Segmentos suxeridos en función das medidas](suggested-segments.md)
 - Suxestións baseadas en actividades: [segmentos suxeridos baseados na actividade dos clientes](suggested-segments-activity.md)
 
 # <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
@@ -47,7 +47,7 @@ Escolle como crear un segmento en función do teu público obxectivo.
 
 ## <a name="manage-existing-segments"></a>Xestionar os segmentos existentes
 
-Vaia ao **Segmentos** páxina para ver os segmentos que creou, o seu estado e estado, o número de membros e a última vez que se actualizaron os datos. Podes ordenar a lista de segmentos por calquera columna ou utilizar a caixa de busca para atopar o segmento que queres xestionar.
+Vaia ao **Segmentos** páxina para ver os segmentos que creou, o seu estado e estado, o número de membros e a última vez que se actualizaron os datos. Podes ordenar a lista de segmentos por calquera columna ou usar a caixa de busca para atopar o segmento que queres xestionar.
 
 Seleccione un segmento para ver as accións dispoñibles.
 
@@ -58,7 +58,7 @@ Seleccione un segmento para ver as accións dispoñibles.
 - **Edite** o segmento para cambiar as súas propiedades.
 - **Crear duplicado** dun segmento. Podes optar por editar as súas propiedades de inmediato ou gardar o duplicado.
 - [**Actualizar**](#refresh-segments) o segmento para incluír os datos máis recentes.
-- **Active** ou **desactive** o segmento. Os segmentos inactivos non se actualizarán durante a [actualización programada](system.md#schedule-tab) e ter o **Estado** listado como **Omitido**, o que indica que nin sequera se intentou unha actualización. Os segmentos activos actualízanse segundo o seu tipo: estático ou dinámico.
+- **Active** ou **desactive** o segmento. Os segmentos inactivos non se actualizarán durante a [actualización programada](schedule-refresh.md) e ter o **Estado** listado como **Omitido**, o que indica que nin sequera se intentou unha actualización. Os segmentos activos actualízanse segundo o seu tipo: estático ou dinámico.
 - **Fai estática** ou **Dinámico** o tipo de segmento. Os segmentos estáticos deben actualizarse manualmente. Os segmentos dinámicos actualízanse automaticamente durante a actualización do sistema.
 - [**Atopar clientes similares**](find-similar-customer-segments.md) do segmento.
 - **Renomee** o segmento.
@@ -86,9 +86,9 @@ A parte inferior contén unha lista dos membros do segmento.
 
 ## <a name="refresh-segments"></a>Actualizar os segmentos
 
-Os segmentos pódense actualizar nunha programación automática ou manualmente baixo demanda. Para actualizar manualmente un ou máis segmentos, selecciónaos e escolla **Actualizar**.
+Os segmentos pódense actualizar nunha programación automática ou manualmente baixo demanda. Para actualizar manualmente un ou máis segmentos, selecciónaos e escólleos **Actualizar**.
 
-Para [programar unha actualización automática](system.md#schedule-tab), Ir a **Admin** > **Sistema** > **Horario**. Aplícanse as seguintes regras:
+Para [programar unha actualización automática](schedule-refresh.md), Ir a **Admin** > **Sistema** > **Horario**. Aplícanse as seguintes regras:
 
 - Todos os segmentos co tipo **Dinámico** ou **Expansión** actualizarase automaticamente na cadencia establecida. Unha vez completada a actualización, o **Estado** indica se houbo algún problema ao actualizar o segmento. O **Última actualización** mostra unha marca de tempo da última actualización exitosa. Se se produce un erro, seleccione o erro para ver detalles sobre o que pasou.
 - Segmentos co tipo **Estática** *non* actualizarse automaticamente. O **Última actualización** mostra unha marca de tempo da última vez que o segmento estático foi executado ou actualizado manualmente.
@@ -109,7 +109,7 @@ Exporta segmentos a outras aplicacións para seguir utilizando os datos. Exporta
 
 1. Seleccione **Atrás** para volver á páxina principal dos segmentos.
 
-## <a name="track-usage-of-a-segment"></a>Rastrexa o uso dun segmento
+## <a name="track-usage-of-a-segment"></a>Rastrexar o uso dun segmento
 
 Se usas segmentos en aplicacións que se basean no mesmo Microsoft Dataverse organización que está conectada con Customer Insights, pode rastrexar o uso dun segmento. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), o sistema infórmache sobre o uso dese segmento.
 

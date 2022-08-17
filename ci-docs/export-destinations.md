@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
-ms.translationtype: MT
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194966"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245325"
 ---
 # <a name="exports-preview-overview"></a>Visión xeral das exportacións (versión preliminar)
 
@@ -74,12 +74,12 @@ Seleccione unha exportación para ver as accións dispoñibles.
 - **Corre** a exportación para exportar os datos máis recentes.
 - **Crear duplicado** dunha exportación.
 - **[Horario](#schedule-and-run-exports)** a exportación.
-- **Separar a conexión** para eliminar a conexión para esta exportación. Desconectar non elimina a conexión, pero desactiva a exportación. O **Conexión utilizada** a columna mostra Sen conexión.
+- **Desconectar a conexión** para eliminar a conexión para esta exportación. Desconectar non elimina a conexión, pero desactiva a exportación. O **Conexión utilizada** a columna mostra Sen conexión.
 - **Quitar** a exportación.
 
 ## <a name="schedule-and-run-exports"></a>Programar e executar exportacións
 
-Cada exportación que configura ten unha programación de actualización. Durante unha actualización, o sistema busca datos novos ou actualizados para incluír nunha exportación. Por defecto, as exportacións execútanse como parte de todas as [actualización do sistema programadas](system.md#schedule-tab). Pode personalizar a programación de actualización ou desactivala para executar as exportacións manualmente.
+Cada exportación que configura ten unha programación de actualización. Durante unha actualización, o sistema busca datos novos ou actualizados para incluír nunha exportación. Por defecto, as exportacións execútanse como parte de todas as [actualización do sistema programadas](schedule-refresh.md). Pode personalizar a programación de actualización ou desactivala para executar as exportacións manualmente.
 
 As programacións de exportación dependen do estado do seu ambiente. Se hai actualizacións en curso nas [dependencias](system.md#refresh-processes) cando debería iniciarse unha exportación programada, o sistema primeiro completará as actualizacións e logo executará a exportación. O **Actualizado** a columna mostra a última vez que se actualizou unha exportación.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800418"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245801"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizaxe automática personalizados
 
@@ -60,7 +60,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 
 1. Seleccione os **espazos de traballo** asociados ao seu servizo web. 
 
-1. Escolla a canalización de Azure Aprendizaxe automático no ficheiro **Servizo web que contén o teu modelo** Despregar menú. despois, seleccione **Seguinte**.    
+1. Escolla a canalización de Azure Aprendizaxe automático no **Servizo web que contén o teu modelo** Despregar menú. despois, seleccione **Seguinte**.    
    Máis información sobre a [Publicación dunha canle en Azure Machine Learning usando o deseñador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). A canle debe publicarse nun [extremo de canle](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Para cada **Entrada do servizo web**, seleccione a **Entidade** coincidente de Customer Insights e seleccione **Seguinte**.
@@ -92,7 +92,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 
 ## <a name="edit-a-workflow"></a>Editar un fluxo de traballo
 
-1. No **Modelos personalizados** páxina, seleccione os puntos suspensivos verticais (&vellip;) no **Accións** columna xunto a un fluxo de traballo que creaches e seleccionaches previamente **Editar**.
+1. No **Modelos personalizados** páxina, seleccione os puntos suspensivos verticais (&vellip;) no **Accións** columna xunto a un fluxo de traballo que creaches e seleccionaches anteriormente **Editar**.
 
 1. Pode actualizar o nome recoñecible do seu fluxo de traballo no campo **Nome de visualización**, pero non pode cambiar o servizo web ou a canle configurados. Seleccione **Seguinte**.
 
@@ -112,7 +112,7 @@ As predicións ofrecen capacidades para crear mellores experiencias de cliente, 
 
 1. Seleccione **Executar**.
 
-O seu fluxo de traballo tamén se executa automaticamente con todas as actualizacións programadas. Obteña máis información acerca de como [configurar actualizacións programadas](system.md#schedule-tab).
+O seu fluxo de traballo tamén se executa automaticamente con todas as actualizacións programadas. Obteña máis información acerca de como [configurar actualizacións programadas](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Eliminar un fluxo de traballo
 

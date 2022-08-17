@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188045"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245693"
 ---
 # <a name="use-customer-consent"></a>Use o consentimento do cliente
 
@@ -54,9 +54,9 @@ Importa os datos de consentimento do mesmo xeito que inxerías outras fontes de 
 
 Para obter máis información sobre como unificar as fontes de datos, consulte [Visión xeral da unificación de datos](data-unification.md).
 
-## <a name="use-consent-data"></a>Use os datos de consentimento
+## <a name="use-consent-data"></a>Usa os datos de consentimento
 
-Unha vez que os teus datos de consentimento formen parte dos teus perfís de clientes unificados, podes utilizalos en Customer Insights. Por exemplo, crea un segmento cunha regra para garantir que respectas as preferencias de privacidade e protección de datos dos teus clientes. As regras que admiten as preferencias de consentimento utilízanse para excluír usuarios dun segmento en función dos atributos do perfil. Engade unha regra a un segmento que exclúa os perfís de clientes que non proporcionaron o consentimento para contactar.
+Unha vez que os teus datos de consentimento formen parte dos teus perfís de clientes unificados, podes utilizalos en Customer Insights. Por exemplo, crea un segmento cunha regra para garantir que respectas as preferencias de privacidade e protección de datos dos teus clientes. As regras que admiten as preferencias de consentimento utilízanse para excluír usuarios dun segmento en función dos atributos do perfil. Engade unha regra a un segmento que exclúa os perfís de clientes que non proporcionaron consentimento para contactar.
 
 Facendo referencia á táboa de exemplo anterior, un segmento podería conter esta regra:`Consent option=Newsletter & Consent value=True`. Esta configuración dá lugar a un segmento que respecta as preferencias de contacto para enviar un boletín.
 
@@ -70,6 +70,6 @@ Unha vez creado o segmento, podes usar un dos moitos [opcións de exportación](
 
 Noutras palabras, asegúrate de que os datos de orixe que se importan a Customer Insights sempre teñan a información máis recente.
 
-Para obter máis información, consulte [Actualiza segmentos manualmente](segments.md#refresh-segments) ou [configurar unha actualización programada](system.md#schedule-tab).
+Para obter máis información, consulte [Actualizar segmentos manualmente](segments.md#refresh-segments) ou [configurar unha actualización programada](schedule-refresh.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206905"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259796"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Conectar un Azure Synapse Analytics orixe de datos (vista previa)
 
@@ -24,26 +24,30 @@ Para obter máis información, consulte [Azure Synapse visión xeral](/azure/syn
 
 ## <a name="prerequisites"></a>Requisitos previos
 
+> [!NOTE]
+> Synapse espazos de traballo que teñen [firewall activado](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) actualmente non son compatibles.
 > [!IMPORTANT]
 > Asegúrese de configurar todas as **atribucións de roles** segundo se describe.  
 
 **En Customer Insights**:
 
-* Tes un **Administrador** papel en Customer Insights. Máis información sobre [permisos de usuario en Customer Insights](permissions.md#assign-roles-and-permissions).
+* Tes un **Administrador** papel en Customer Insights. Máis información sobre [permisos de usuario en Customer Insights](permissions.md#add-users).
 
 **En Azure**:
 
 - Unha subscrición de Azure activa.
 
-- Se utiliza un novo Azure Data Lake Storage Conta Gen2, o *principal de servizo para Customer Insights* necesidades **Colaborador de datos de Blob de almacenamento** permisos. Máis información sobre [conectando a un Azure Data Lake Storage cun principal de servizo para Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
+- Se utiliza un novo Azure Data Lake Storage Conta Gen2, o *principal de servizo para Customer Insights* que é as necesidades de "Dynamics 365 AI for Customer Insights".**Colaborador de datos de Blob de almacenamento** permisos. Máis información sobre [conectando a un Azure Data Lake Storage cun principal de servizo para Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **debe ter o** [espazo de nomes xerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
 
-- No grupo de recursos o Azure Synapse o espazo de traballo está situado, o *principal do servizo* e o *usuario para Customer Insights* debe ser asignado polo menos **Lector** permisos. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
+- No grupo de recursos o Azure Synapse o espazo de traballo está situado, o *principal do servizo* que é "Dynamics 365 AI for Customer Insights" e o *usuario para Customer Insights* debe ser asignado polo menos **Lector** permisos. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 
 - O *usuario* precisa permisos de **colaborador de datos de BLOB de almacenamento** na conta de Azure Data Lake Storage Gen2 na que se atopan os datos ligados á área de traballo de Azure Synapse. Obteña máis información acerca do [uso do portal de Azure para atribuír un rol de Azure para o acceso aos datos de BLOB e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e dos [permisos do colaborador de datos de BLOB de almacenamento](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - A *[identidade xestionada da área de traballo de Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* precisa permisos de **colaborador de datos de BLOB de almacenamento** na conta de Azure Data Lake Storage Gen2 na que se atopan os datos ligados á área de traballo de Azure Synapse. Obteña máis información acerca do [uso do portal de Azure para atribuír un rol de Azure para o acceso aos datos de BLOB e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e dos [permisos do colaborador de datos de BLOB de almacenamento](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- No Azure Synapse espazo de traballo, o *principal de servizo para Customer Insights* necesidades **Administrador de Synapse** rol asignado. Para obter máis información, consulte [Como configurar o control de acceso para a súa área de traballo de Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- No Azure Synapse espazo de traballo, o *principal de servizo para Customer Insights* que é as necesidades de "Dynamics 365 AI for Customer Insights".**Administrador de Synapse** rol asignado. Para obter máis información, consulte [Como configurar o control de acceso para a súa área de traballo de Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Se o teu ambiente de Customer Insights almacena datos no teu [propio Azure Data Lake Storage](own-data-lake-storage.md), o usuario que establece a conexión Azure Synapse Analytics precisa polo menos o incorporado **Lector** función na conta de Data Lake Storage. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Conéctese á base de datos do lago de datos en Azure Synapse Analytics
 
@@ -57,7 +61,7 @@ Para obter máis información, consulte [Azure Synapse visión xeral](/azure/syn
   
 1. Introduza a **Nome** para o orixe de datos e un opcional **Descrición**.
 
-1. Escolle un [conexión dispoñible](connections.md) a Azure Synapse Analytics ou crear un novo.
+1. Escolle un [conexión dispoñible](connections.md) a Azure Synapse Analytics ou [crear un novo](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse).
 
 1. Escolle a **Base de datos** desde o espazo de traballo conectado no seleccionado Azure Synapse Analytics conexión e seleccione **A continuación**. Actualmente, só admitimos o tipo de base de datos *Base de datos do lago*.
 

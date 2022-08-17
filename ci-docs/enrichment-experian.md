@@ -1,19 +1,19 @@
 ---
 title: Enriqueza os perfís de clientes con datos demográficos de Experian (versión preliminar)
 description: Información xeral sobre o enriquecemento de terceiros Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195934"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237994"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriqueza os perfís de clientes con datos demográficos de Experian (versión preliminar)
 
@@ -39,15 +39,11 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten un
 
    :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian panel de configuración da conexión.":::
 
-1. Introduza un nome para a conexión e un ID de usuario, ID de partido e número de modelo válidos para o seu Experian Conta de transporte seguro.
+1. Introduza un nome para a conexión e un ID de usuario, ID de partido e número de modelo válidos para a túa Experian Conta de transporte seguro.
 
-1. Revise e proporcione o seu consentimento para a [Privacidade e cumprimento de datos](#data-privacy-and-compliance) seleccionando **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
 1. Seleccione **Verificar** para validar a configuración e, a continuación, seleccione **Gardar**.
-
-### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando permite a Dynamics 365 Customer Insights transmitir datos a Experian, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá estes datos segundo a súa instrución, pero vostede é responsable de asegurarse de que Experian cumpre coas obrigacións de privacidade ou seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 

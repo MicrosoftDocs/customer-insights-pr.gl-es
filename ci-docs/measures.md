@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170818"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245371"
 ---
 # <a name="measures-overview"></a>Visión xeral das medidas
 
@@ -34,7 +34,7 @@ Escolle como crear unha medida en función do teu público obxectivo.
 # <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
 - Desde cero co constructor de medidas: [Constrúe o teu propio](measure-builder.md).
-- Das medidas de uso común: [Use modelos predefinidos](measure-templates.md).
+- De medidas de uso común: [Use modelos predefinidos](measure-templates.md).
 
 # <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
@@ -51,9 +51,9 @@ Seleccione xunto a unha medida para ver as accións dispoñibles. Seleccione o n
 :::image type="content" source="media/measures-actions.png" alt-text="Accións para xestionar medidas individuais."lightbox="media/measures-actions.png":::
 
 - **Editar** a medida para cambiar as súas propiedades.
-- **Actualizar** a medida para incluír os últimos datos.
+- **Actualizar** a medida para incluír os datos máis recentes.
 - **Cambiar o nome** da medida.
-- **Activar** ou **Desactivar** a medida. As medidas inactivas non se actualizarán durante a [actualización programada](system.md#schedule-tab) e ter o **Estado** listado como **Omitido**, o que indica que nin sequera se intentou unha actualización.
+- **Activar** ou **Desactivar** a medida. As medidas inactivas non se actualizarán durante a [actualización programada](schedule-refresh.md) e ter o **Estado** listado como **Omitido**, o que indica que nin sequera se intentou unha actualización.
 - **Etiquetar** a [xestionar as etiquetas](work-with-tags-columns.md#manage-tags) para a medida.
 - **Eliminar** a medida.
 - **Columnas** a [personalizar as columnas](work-with-tags-columns.md#customize-columns) esa visualización.
@@ -62,7 +62,7 @@ Seleccione xunto a unha medida para ver as accións dispoñibles. Seleccione o n
 
 ## <a name="refresh-measures"></a>Medidas de actualización
 
-As medidas pódense actualizar nunha programación automática ou actualizar manualmente baixo demanda. Para actualizar manualmente unha ou máis medidas, selecciónaas e escolla **Actualizar**. Para [programar unha actualización automática](system.md#schedule-tab), Ir a **Admin** > **Sistema** > **Horario**.
+As medidas pódense actualizar nunha programación automática ou actualizar manualmente baixo demanda. Para actualizar manualmente unha ou máis medidas, selecciónaas e escolla **Actualizar**. Para [programar unha actualización automática](schedule-refresh.md), Ir a **Admin** > **Sistema** > **Horario**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

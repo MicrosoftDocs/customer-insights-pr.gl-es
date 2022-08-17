@@ -1,7 +1,7 @@
 ---
 title: Traia a súa propia key vault de Azure (versión preliminar)
 description: Aprende a configurar Customer Insights para utilizar a túa propia bóveda de claves de Azure para xestionar os segredos.
-ms.date: 10/06/2021
+ms.date: 08/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,58 +11,63 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 229fb5698a02d1d73c30442f61c7b1b5fce918bf
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082636"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246153"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Traia a súa propia key vault de Azure (versión preliminar)
 
-Vincular un dedicado [Bóveda de chaves Azure](/azure/key-vault/general/basic-concepts) a un ambiente de Customer Insights axuda ás organizacións a cumprir os requisitos de cumprimento.
-A key vault específica pódese usar para probar e usar segredos no límite de cumprimento dunha organización. Customer Insights pode usar os segredos de Azure Key Vault para [establecer conexións](connections.md) a sistemas de terceiros.
+Vinculando un dedicado [Bóveda de chaves Azure](/azure/key-vault/general/basic-concepts) a un ambiente de Customer Insights axuda ás organizacións a cumprir os requisitos de cumprimento.
 
 ## <a name="link-the-key-vault-to-the-customer-insights-environment"></a>Vincula a bóveda de claves ao contorno de Customer Insights
 
+Configura a bóveda de claves dedicada para organizar e utilizar segredos nos límites de cumprimento dunha organización.
+
 ### <a name="prerequisites"></a>Requisitos previos
 
-Para configurar a bóveda de claves en Customer Insights, débense cumprir os seguintes requisitos previos:
+- Unha subscrición de Azure activa.
 
-- Ten unha subscrición a Azure activa.
+- An [Administrador](permissions.md#admin) papel [asignado](permissions.md#add-users) en Customer Insights.
 
-- Tes un [Administrador](permissions.md#admin) papel en Customer Insights. Máis información sobre [permisos de usuario en Customer Insights](permissions.md#assign-roles-and-permissions).
+- [Colaborador](/azure/role-based-access-control/built-in-roles#contributor) e [Administrador de acceso de usuarios](/azure/role-based-access-control/built-in-roles#user-access-administrator) roles na bóveda de claves ou no grupo de recursos ao que pertence a bóveda de claves. Para obter máis información, vaia a [Engadir ou eliminar as asignacións de funcións de Azure usando o portal de Azure](/azure/role-based-access-control/role-assignments-portal). Se non ten o rol de administrador de acceso de usuario na bóveda de claves, configure os permisos de control de acceso baseados en funcións para o principal do servizo Azure para Dynamics 365 Customer Insights por separado. Siga os pasos para [usar un principal de servizo de Azure](connect-service-principal.md) para a key vault que debería estar ligada.
 
-- Ten os roles de [Colaborador](/azure/role-based-access-control/built-in-roles#contributor) e [Administrador de acceso de usuario](/azure/role-based-access-control/built-in-roles#user-access-administrator) na key vault ou no grupo de recursos ao que pertence a key vault. Para obter máis información, vaia a [Engadir ou eliminar as asignacións de funcións de Azure usando o portal de Azure](/azure/role-based-access-control/role-assignments-portal). Se non ten a función de administrador de acceso de usuario no key vault, debe configurar os permisos de control de acceso baseados en funcións para o principal do servizo de Azure para Dynamics 365 Customer Insights por separado. Siga os pasos para [usar un principal de servizo de Azure](connect-service-principal.md) para a key vault que debería estar ligada.
+- A bóveda de claves debe ter un firewall de Key Vault **desactivado**.
 
-- A key vault debe ter a devasa de Key Vault **desactivada**.
+- A bóveda de chaves está na mesma [Localización Azure](https://azure.microsoft.com/global-infrastructure/geographies/#overview) como o entorno de Customer Insights. En Customer Insights, vai a **Admin** > **Sistema** e o **Sobre** ficha para ver a rexión do entorno.
 
-- A bóveda de chaves está na mesma [Localización Azure](https://azure.microsoft.com/global-infrastructure/geographies/#overview) como o entorno de Customer Insights. A rexión do entorno en Customer Insights aparece en **Admin** > **Sistema** > **Sobre** > **Rexión**.
+### <a name="recommendations"></a>Recomendacións
+
+- [Use unha bóveda de chaves separada ou dedicada](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults) que contén só os segredos necesarios para Customer Insights.
+
+- Siga as [prácticas recomendadas para usar Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) para o acceso de control, a copia de seguridade, a auditoría e as opcións de recuperación.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Vincular unha key vault ao ambiente
 
 1. Ir a **Admin** > **Seguridade** e, a continuación, seleccione **Bóveda de chaves** ficha.
 1. No mosaico **Key Vault**, seleccione **Configurar**.
 1. Escolla unha **Subscrición**.
-1. Escolla unha key vault da lista despregable **Key Vault**. Se aparecen demasiadas key vault, seleccione un grupo de recursos para limitar os resultados da busca.
-1. Acepte a declaración de **Privacidade e cumprimento dos datos**.
+1. Escolla unha key vault da lista despregable **Key Vault**. Se hai demasiadas bóvedas de claves dispoñibles, seleccione un grupo de recursos para limitar os resultados da busca.
+1. Revise a [Privacidade dos datos e cumprimento](connections.md#data-privacy-and-compliance) e seleccione **Estou de acordo**.
 1. Seleccione **Gardar**.
 
-:::image type="content" source="media/set-up-azure-key-vault.png" alt-text="Pasos para configurar unha bóveda de claves vinculadas en Customer Insights.":::
-
-O mosaico **Key Vault** agora amosa o nome do key vault ligado, o grupo de recursos e a subscrición. Está listo para usarse na configuración da conexión.
-Para obter máis información sobre os permisos da bóveda de claves que se conceden a Customer Insights, vai a [Permisos concedidos na bóveda de chaves](#permissions-granted-on-the-key-vault), máis adiante neste artigo.
+O **Bóveda de chaves** O mosaico mostra o nome da bóveda de claves ligada, a subscrición e o grupo de recursos. Está listo para usarse na configuración da conexión.
+Para obter máis información sobre os permisos da bóveda de claves que se conceden a Customer Insights, vai a [Permisos concedidos na bóveda de chaves](#permissions-granted-on-the-key-vault).
 
 ## <a name="use-the-key-vault-in-the-connection-setup"></a>Utilice a key vault na configuración da conexión
 
-Ao [configurar conexións](connections.md) para sistemas de terceiros, pódense usar os segredos da Key Vault ligada para configurar as conexións.
+Cando [establecer conexións](connections.md) a [terceiros compatibles](#supported-connection-types) sistemas, use os segredos do Key Vault ligado para configurar as conexións.
 
 1. Vaia a **Administrar** > **Conexións**.
 1. Seleccione **Engadir conexión**.
 1. Para os tipos de conexión admitidos, hai dispoñible un conmutador de **Usar Key Vault** se ligou unha key vault.
-1. En lugar de introducir o segredo manualmente, pode escoller o nome secreto que apunta ao valor secreto na key vault.
+1. En lugar de introducir o segredo manualmente, escolla o nome do segredo que apunte ao valor do segredo na bóveda de claves.
 
-:::image type="content" source="media/use-key-vault-secret.png" alt-text="Panel de conexión cunha conexión SFTP que usa un segredo de Key Vault.":::
+   :::image type="content" source="media/use-key-vault-secret.png" alt-text="Panel de conexión cunha conexión SFTP que usa un segredo de Key Vault.":::
+
+1. Seleccione **Gardar** para crear a conexión.
 
 ## <a name="supported-connection-types"></a>Tipos de conexión admitidos
 
@@ -97,19 +102,13 @@ Os valores anteriores son o mínimo para enumerar e ler durante a execución.
 
 ### <a name="azure-role-based-access-control"></a>Control de acceso baseado en funcións de Azure
 
-Engadiranse os roles de usuario de Key Vault Reader e Key Vault Secrets para Customer Insights. Para obter máis detalles sobre estes roles, vaia a [Funcións integradas de Azure para operacións de plano de datos de Key Vault](/azure/key-vault/general/rbac-guide?tabs=azure-cli).
-
-## <a name="recommendations"></a>Recomendacións
-
-- Use unha bóveda de claves separada ou dedicada que conteña só os segredos necesarios para Customer Insights. Obteña máis información sobre por que [se recomendan key vaults separadas](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
-
-- Siga as [prácticas recomendadas para usar Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) para o acceso de control, a copia de seguridade, a auditoría e as opcións de recuperación.
+O [Roles de usuario de Key Vault Reader e Key Vault Secrets](/azure/key-vault/general/rbac-guide?tabs=azure-cli) engadirase a Customer Insights.
 
 ## <a name="frequently-asked-questions"></a>Preguntas máis frecuentes
 
 ### <a name="can-customer-insights-write-secrets-or-overwrite-secrets-into-the-key-vault"></a>Pode Customer Insights escribir segredos ou sobrescribir segredos na bóveda de claves?
 
-Non. Só os permisos de lectura e lista indicados no [permisos concedidos](#permissions-granted-on-the-key-vault) sección anterior deste artigo concédense a Customer Insights. O sistema non pode engadir, eliminar nin sobrescribir segredos na key vault. Esa é tamén a razón pola que non pode introducir credenciais cando unha conexión usa Key Vault.
+Non. Só os permisos de lectura e lista indicados en [permisos concedidos](#permissions-granted-on-the-key-vault) concédense a Customer Insights. O sistema non pode engadir, eliminar nin sobrescribir segredos na key vault. Esa é tamén a razón pola que non pode introducir credenciais cando unha conexión usa Key Vault.
 
 ### <a name="can-i-change-a-connection-from-using-key-vault-secrets-to-default-authentication"></a>Podo cambiar unha conexión que use segredos de Key Vault pola autenticación predeterminada?
 
@@ -117,7 +116,7 @@ Non. Non pode volver a unha conexión predeterminada despois de configurala usan
 
 ### <a name="how-can-i-revoke-access-to-a-key-vault-for-customer-insights"></a>Como podo revogar o acceso a unha bóveda de claves para Customer Insights?
 
-Dependendo de se a [Política de acceso a Key Vault](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) ou o [Control de acceso baseado en funcións de Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) está activado, ten que eliminar os permisos para o principal do servizo `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` co nome `Dynamics 365 AI for Customer Insights`. Todas as conexións que usan a key vault deixarán de funcionar.
+Se o [Política de acceso a Key Vault](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) ou [Control de acceso baseado en roles de Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) está activado, elimine os permisos para o principal do servizo`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` co nome `Dynamics 365 AI for Customer Insights`. Todas as conexións que usan a key vault deixarán de funcionar.
 
 ### <a name="a-secret-thats-used-in-a-connection-got-removed-from-the-key-vault-what-can-i-do"></a>Un segredo que se usa nunha conexión foi eliminado da key vault. Que podo facer?
 
@@ -127,6 +126,6 @@ Aparece unha notificación en Customer Insights cando xa non se pode acceder a u
 
 Aparece unha notificación en Customer Insights cando non pode acceder á bóveda de claves. A causa pode ser:
 
-- Elimináronse os permisos do principal do servizo de Customer Insights. Deben ser restaurados manualmente.
+- Elimináronse os permisos para o principal do servizo de Customer Insights. Deben ser restaurados manualmente.
 
 - A devasa da key vault está activada. O firewall debe estar desactivado para que a bóveda de claves sexa accesible de novo para Customer Insights.

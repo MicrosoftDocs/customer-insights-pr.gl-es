@@ -2,7 +2,7 @@
 title: Elimina os duplicados antes de unificar os datos
 description: O segundo paso do proceso de unificación é seleccionar que rexistro manter cando se atopen duplicados.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139427"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213625"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Elimina os duplicados antes de unificar os datos
 
-Este paso na unificación permítelle opcionalmente configurar regras para xestionar rexistros duplicados dentro dunha entidade. *Deduplicación* identifica rexistros duplicados e fusionaos nun só rexistro. Os rexistros de orixe vincúlanse co rexistro combinado con ID alternativos. Se as regras non están configuradas, aplícanse as regras definidas polo sistema.
+Este paso opcional na unificación permítelle configurar regras para eliminar rexistros duplicados **dentro** unha entidade. A deduplicación identifica varios rexistros para un cliente e selecciona o mellor rexistro para manter (en función das preferencias básicas de fusión) ou fusiona os rexistros nun só (en base ás preferencias de fusión avanzadas). Os rexistros de orixe vincúlanse co rexistro combinado con ID alternativos. Se as regras non están configuradas, aplícanse as regras definidas polo sistema.
+
+## <a name="default-deduplication"></a>Desduplicación predeterminada
+
+As regras definidas polo sistema aplícanse se non se engaden regras de deduplicación.
+
+- A chave primaria está desduplicada.
+  Para calquera rexistro coa mesma clave principal, o rexistro **Máis cheo** (o que ten menos valores nulos) é o gañador.
+- Calquera regra de coincidencia entre entidades aplícase á entidade.
+  Por exemplo: no paso de coincidencia, se a entidade A coincide coa entidade B activada *Nome completo* e *Data de nacemento*, entón a entidade A tamén é deduplicada por *Nome completo* e *Data de nacemento*. Porque *Nome completo* e *Data de nacemento* son claves válidas para identificar un cliente na entidade A, estas claves tamén son válidas para identificar clientes duplicados na entidade A.
 
 ## <a name="include-enriched-entities-preview"></a>Incluír entidades enriquecidas (vista previa)
 
@@ -45,7 +54,7 @@ Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os 
       - **Normalizar**: seleccione unha das seguintes opcións de normalización para os atributos seleccionados.
         - **Os números** : converte outros sistemas numéricos, como números romanos, en números arábigos. *VIII* pasa a ser *8*.
         - **Símbolos** : Elimina todos os símbolos e caracteres especiais. *Head&Shoulder* convértese en *HeadShoulder*.
-        - **Texto en minúscula: converte todos os caracteres en minúsculas**. *MAIÚSCULAS e maiúscula inicial de palabra* convértese en *maiúsculas e maiúscula inicial de palabra*.
+        - **Texto en minúsculas: converte todos os caracteres en minúsculas**. *MAIÚSCULAS e maiúscula inicial de palabra* convértese en *maiúsculas e maiúscula inicial de palabra*.
         - **Tipo (teléfono, nome, enderezo, organización)** : Normaliza nomes, títulos, números de teléfono, enderezos, etc.
         - **Unicode a ASCII** : converte a notación Unicode en caracteres ASCII. */u00B2* convértese en *2*.
         - **Espazo en branco** : Elimina todos os espazos. *Ola Mundo* convértese en *HelloWorld*.
@@ -86,7 +95,7 @@ Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os 
 > [Seguinte paso para unha única entidade: unificar campos](merge-entities.md)
 
 > [!div class="nextstepaction"]
-> [Seguinte paso para varias entidades: Condicións de coincidencia](match-entities.md)
+> [Seguinte paso para varias entidades: Condicións coincidentes](match-entities.md)
 
 ## <a name="deduplication-output-as-an-entity"></a>Saída de desduplicación como entidade
 

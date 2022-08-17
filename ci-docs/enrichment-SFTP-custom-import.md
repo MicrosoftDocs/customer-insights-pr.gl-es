@@ -1,19 +1,19 @@
 ---
 title: Enriquece os perfís de clientes coa importación personalizada SFTP (vista previa)
 description: Información xeral sobre o enriquecemento con importación personalizada de SFTP.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195794"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237764"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enriquece os perfís de clientes coa importación personalizada SFTP (vista previa)
 
@@ -85,14 +85,9 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten as
 
 1. Introduza un nome de usuario, contrasinal e URL de servidor válidos para o servidor SFTP no que residen os datos que se van importar.
 
-1. Revise e proporcione o seu consentimento para a [Privacidade e cumprimento de datos](#data-privacy-and-compliance) seleccionando **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
 1. Seleccione **Verificar** para validar a configuración e, a continuación, seleccione **Gardar**.
-
-### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando habilitas Dynamics 365 Customer Insights para transmitir datos mediante Importación personalizada, permite a transferencia de datos fóra do límite de conformidade Dynamics 365 Customer Insights, incluíndo datos potencialmente sensibles, como os datos persoais. Microsoft transferirá eses datos segundo as súas instrucións, pero vostede é responsable de asegurarse de que os datos cumpran coas obrigas de privacidade ou de seguridade que poida ter. Para obter máis información, consulte a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="configure-the-import"></a>Configurar a importación
 

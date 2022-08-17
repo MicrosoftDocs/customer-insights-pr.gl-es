@@ -1,19 +1,19 @@
 ---
 title: Enriquece os perfís de clientes con datos de localización de Azure Maps (vista previa)
 description: Información xeral sobre o enriquecemento propio de Azure Maps.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052605"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238040"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Enriquece os perfís de clientes con datos de localización de Azure Maps (vista previa)
 
@@ -35,14 +35,9 @@ Debes ser un [administrador](permissions.md#admin) en Customer Insights e ten un
 
 1. Introduza un nome para a conexión e unha clave de API de Azure Maps válida.
 
-1. Revise e proporcione o seu consentimento para a [Privacidade e cumprimento de datos](#data-privacy-and-compliance) seleccionando **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
 
 1. Seleccione **Verificar** para validar a configuración e, a continuación, seleccione **Gardar**.
-
-### <a name="data-privacy-and-compliance"></a>Cumprimento e privacidade dos datos
-
-Cando permite a Dynamics 365 Customer Insights transmitir datos a Azure Maps, permite a transferencia de datos fóra do límite de cumprimento de Dynamics 365 Customer Insights, incluíndo datos potencialmente confidenciais como os datos persoais. Microsoft transferirá eses datos segundo as túas instrucións, pero ti es responsable de garantir que Azure Maps cumpra as obrigas de privacidade ou seguridade que poidas ter. Para obter máis información, vaia a [Declaración de privacidade de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O administrador de Dynamics 365 Customer Insights pode eliminar este enriquecemento en calquera momento para interromper o uso desta funcionalidade.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecemento
 
@@ -60,7 +55,7 @@ O administrador de Dynamics 365 Customer Insights pode eliminar este enriqueceme
 
 1. Seleccione o **Conxunto de datos do cliente** e escolle o perfil ou segmento que queres enriquecer con datos de Microsoft. O *Cliente* a entidade enriquece todos os seus perfís de clientes mentres que un segmento enriquece só os perfís de clientes contidos nese segmento.
 
-1. Define que tipo de campos dos teus perfís unificados queres usar para a correspondencia: o enderezo principal e/ou secundario. Pode especificar unha asignación de campos para ambos os enderezos e enriquecer os perfís de ambos os enderezos por separado. Por exemplo, para un enderezo de casa e un enderezo de empresa. Seleccione **Seguinte**.
+1. Define que tipo de campos dos teus perfís unificados usar para a correspondencia: o enderezo principal e/ou secundario. Pode especificar unha asignación de campos para ambos os enderezos e enriquecer os perfís de ambos os enderezos por separado. Por exemplo, para un enderezo de casa e un enderezo de empresa. Seleccione **Seguinte**.
 
 1. Asigne os seus campos aos datos de localización de Azure Maps. Os campos **Rúa 1** e **Código postal** son obrigatorios para o enderezo primario e/ou secundario seleccionado. Para unha maior precisión de coincidencia, engade máis campos.
 
