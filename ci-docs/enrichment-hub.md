@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245877"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304517"
 ---
 # <a name="data-enrichment-preview-overview"></a>Visión xeral do enriquecemento de datos (vista previa).
 
@@ -85,7 +85,7 @@ Tamén podes crear [segmentos](segments.md) ou [medidas](measures.md) de enrique
 
 Unha vez executados, os enriquecementos pódense actualizar nunha programación automática ou actualizar manualmente baixo demanda.
 
-1. Para actualizar manualmente un ou máis enriquecementos, selecciónaos e escólleos **Corre**. Para [programar unha actualización automática](schedule-refresh.md), Ir a **Admin** > **Sistema** > **Horario**. O tempo de procesamento depende do tamaño dos datos dos clientes.
+1. Para actualizar manualmente un ou máis enriquecementos, selecciónaos e escolle **Corre**. Para [programar unha actualización automática](schedule-refresh.md), Ir a **Admin** > **Sistema** > **Horario**. O tempo de procesamento depende do tamaño dos datos dos clientes.
 
 1. Opcionalmente, [ver o progreso do proceso de enriquecemento](#see-the-progress-of-the-enrichment-process).
 
@@ -95,7 +95,7 @@ Unha vez executados, os enriquecementos pódense actualizar nunha programación 
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Vexa o progreso do proceso de enriquecemento
 
-Pode atopar detalles sobre o procesamento dun enriquecemento, incluído o estado e os problemas potenciais mentres se actualiza ou despois de completar a actualización. Comprenda que procesos están implicados para actualizar un enriquecemento e canto tardou en executalos. Admítese o estado de enriquecemento para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
+Podes atopar detalles sobre o procesamento dun enriquecemento, incluído o seu estado e os posibles problemas mentres se actualiza ou despois de que se complete. Comprenda que procesos están implicados para actualizar un enriquecemento e canto tardou en executalos. Admítese o estado de enriquecemento para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
 
 1. Vaia a **Datos** > **Enriquecemento**.
 1. No **Os meus enriquecementos** ficha, seleccione o estado do enriquecemento para abrir un panel lateral.

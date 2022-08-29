@@ -76,7 +76,9 @@
       href: merge-entities.md
     - name: Revisar a unificación de datos
       href: review-unification.md
-    - name: Actualiza a configuración de unificación
+    - name: Crea un perfil de contacto unificado
+      href: data-unification-contacts.md
+    - name: Actualizar a configuración de unificación
       href: data-unification-update.md
 - name: Enriquecemento de información
   items:

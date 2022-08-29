@@ -2,7 +2,7 @@
 title: Coincidir as condicións para a unificación de datos
 description: Busque coincidencias de entidades para crear perfís de clientes unificados.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139701"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304655"
 ---
 # <a name="match-conditions-for-data-unification"></a>Coincidir as condicións para a unificación de datos
 
@@ -27,6 +27,8 @@ Este paso na unificación define a orde de coincidencia e as regras para a corre
 
 > [!NOTE]
 > Unha vez que crees as condicións de xogo e seleccionas **A continuación**, non pode eliminar unha entidade ou atributo seleccionado. Se é necesario, seleccione **De volta** para revisar as entidades e atributos seleccionados antes de continuar.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Incluír entidades enriquecidas (vista previa)
 
@@ -43,16 +45,16 @@ Se enriqueceches as entidades no nivel orixe de datos para axudar a mellorar os 
 Cada coincidencia unifica dúas ou máis entidades nunha única entidade consolidada. Ao mesmo tempo, garda os rexistros exclusivos dos clientes. A orde de coincidencia indica a orde na que o sistema tenta facer coincidir os rexistros.
 
 > [!IMPORTANT]
-> A primeira entidade da lista chámase entidade principal. A entidade principal serve de base para o conxunto de datos de perfís unificados. As entidades adicionais seleccionadas engadiranse a esta entidade.
+> A primeira entidade chámase entidade principal, que serve de base para os teus perfís unificados. As entidades adicionais seleccionadas engadiranse a esta entidade.
 >
 > Consideracións importantes:
 >
 > - Escolla a entidade que teña os datos de perfil máis completos e fiables sobre os seus clientes como entidade principal.
 > - Escolla a entidade que teña varios atributos en común con outras entidades (por exemplo, nome, número de teléfono ou enderezo de correo electrónico) como entidade principal.
 
-1. No **Condicións de coincidencia** páxina, use as frechas cara arriba e cara abaixo para mover as entidades na orde que desexe ou arrástreas e soltaas. Por exemplo, seleccione **Contactos: eCommerce** como entidade primaria e **Fidelidade do cliente: fidelidade** como segunda entidade.
+1. No **Condicións de coincidencia** páxina, use as frechas cara arriba e cara abaixo para mover as entidades na orde que desexe ou arrástreas e soltaas. Por exemplo, seleccione **eCommerceClientes** como entidade primaria e **Clientes loy** como segunda entidade.
 
-1. Para ter todos os rexistros da entidade como un cliente único independentemente de que se atope unha coincidencia, seleccione **Inclúe todos os rexistros**. Todos os rexistros desta entidade que non coincidan cos rexistros doutras entidades inclúense no perfil unificado. Os rexistros que non teñen coincidencia chámanse singletons.
+1. Para ter todos os rexistros da entidade como un cliente único independentemente de que se atope unha coincidencia, seleccione **Inclúe todos os rexistros**. Todos os rexistros desta entidade que non coincidan cos rexistros de ningunha outra entidade inclúense no perfil unificado. Os rexistros que non teñen coincidencia chámanse singletons.
   
 A entidade primaria *Contactos: eCommerce* coincide coa seguinte entidade *Fidelidade do cliente: fidelidade*. O conxunto de datos que resulta do primeiro paso de coincidencia coincide coa seguinte entidade se tes máis de dúas entidades.
 
@@ -70,7 +72,7 @@ A advertencia ao carón dun nome de entidade significa que non se define ningunh
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Captura de pantalla do panel Engadir regra.":::
 
-   - **Seleccione Entidade/Campo (primeira fila)** : Escolla unha entidade relacionada e un atributo para especificar unha propiedade de rexistro que probablemente sexa exclusiva dun cliente. Por exemplo, un número de teléfono ou enderezo de correo electrónico. Evite a coincidencia por atributos de tipo de actividade. Por exemplo, un ID de compra probablemente non atopará coincidencias noutros tipos de rexistros.
+   - **Seleccione Entidade/Campo (primeira fila)** : Escolle unha entidade e un atributo que probablemente sexa exclusivo dun cliente. Por exemplo, un número de teléfono ou enderezo de correo electrónico. Evite a coincidencia por atributos de tipo de actividade. Por exemplo, un ID de compra probablemente non atopará coincidencias noutros tipos de rexistros.
 
    - **Seleccione Entidade/Campo (segunda fila)** : Escolla un atributo que se relaciona co atributo da entidade especificado na primeira fila.
 
@@ -116,7 +118,7 @@ As regras de coincidencia representan conxuntos de condicións. Para facer coinc
 
 ### <a name="add-exceptions-to-a-rule"></a>Engade excepcións a unha regra
 
-Na maioría dos casos, a coincidencia de entidades leva a perfís de clientes únicos con datos consolidados. Para tratar de forma dinámica casos raros de falsos positivos e falsos negativos, pode definir excepcións para unha regra de coincidencia. As excepcións aplícanse despois de procesar as regras de coincidencia e evitar a coincidencia de todos os rexistros, que cumpren os criterios de excepción.
+Na maioría dos casos, a coincidencia de entidades leva a perfís de clientes únicos con datos consolidados. Para tratar casos raros de falsos positivos e falsos negativos, define excepcións para unha regra de coincidencia. As excepcións aplícanse despois de procesar as regras de coincidencia e evitar a coincidencia de todos os rexistros, que cumpren os criterios de excepción.
 
 Por exemplo, se a túa regra de coincidencia combina apelidos, cidade e data de nacemento, o sistema identificaría os xemelgos co mesmo apelidos que viven na mesma cidade e co mesmo perfil. Podes especificar unha excepción que non coincida cos perfís se os nome das entidades que combinas non son os mesmos.
 
@@ -134,7 +136,7 @@ Podes especificar condicións que anulan a lóxica de coincidencia predeterminad
 |---------|---------|---------|
 |Coincidir sempre     | Define valores que sempre coinciden.         |  Sempre coincidir *Mike* e *Mike R*.       |
 |Non coincidir nunca     | Define valores que nunca coinciden.        | Nunca coincidir *Xoán* e *Jonathan*.        |
-|Omisión personalizada     | Define valores que o sistema debería ignorar sempre na fase de coincidencia. |  Ignorar os valores *11111* e *Descoñecido* durante o partido.        |
+|Omitir            | Define valores que o sistema debería ignorar sempre na fase de coincidencia. |  Ignorar os valores *11111* e *Descoñecido* durante o partido.        |
 |Asignación de alias    | Definición de valores que o sistema debería considerar como o mesmo valor.         | Considera *Joe* ser igual a *Xosé*.        |
 
 1. Seleccione **Personalizado**.

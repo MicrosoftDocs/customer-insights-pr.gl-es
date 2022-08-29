@@ -1,7 +1,7 @@
 ---
 title: Visión xeral dos segmentos
 description: Visión xeral dos segmentos e da forma de crealos e xestionalos.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246291"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304793"
 ---
 # <a name="segments-overview"></a>Visión xeral dos segmentos
 
 Os segmentos permiten agrupar aos seus clientes en función de atributos demográficos, transaccionais ou de comportamento. Pode usar segmentos para ter como obxectivo campañas promocionais, actividades de venda e accións de asistencia ao cliente para alcanzar os obxectivos da súa empresa.
 
-Denomínase perfís de cliente que coinciden cos filtros dunha definición de segmento *membros* dun segmento. Algúns [límites de servizo](/dynamics365/customer-insights/service-limits) aplican.
+Denomínase perfís de cliente ou de contacto que coincidan cos filtros dunha definición de segmento *membros* dun segmento. Algúns [límites de servizo](/dynamics365/customer-insights/service-limits) aplican.
 
 ## <a name="create-a-segment"></a>Crear un segmento
 
@@ -36,18 +36,24 @@ Escolle como crear un segmento en función do teu público obxectivo.
 - Segmentos complexos con creador de segmentos: [Constrúe o teu propio](segment-builder.md)
 - Segmentos simples cun operador: [segmento rápido](segment-quick.md)
 - Forma impulsada por IA de atopar clientes similares: [Clientes semellantes](find-similar-customer-segments.md)
-- Suxestións con IA baseadas en medidas ou atributos: [Segmentos suxeridos en función das medidas](suggested-segments.md)
+- Suxestións con IA baseadas en medidas ou atributos: [Segmentos suxeridos en función de medidas](suggested-segments.md)
 - Suxestións baseadas en actividades: [segmentos suxeridos baseados na actividade dos clientes](suggested-segments-activity.md)
 
 # <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
-- Segmentos simples ou complexos co creador de segmentos: [Constrúe o teu propio](segment-builder.md)
+Segmento de contas ou segmento de contactos (vista previa) co creador de segmentos: [Constrúe o teu propio](segment-builder.md)
+
+> [!NOTE]
+> A maioría dos destinos de exportación requiren información de contacto para fins de mercadotecnia. Polo tanto, cree segmentos de contactos para usar para esas exportacións.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Xestionar os segmentos existentes
 
-Vaia ao **Segmentos** páxina para ver os segmentos que creou, o seu estado e estado, o número de membros e a última vez que se actualizaron os datos. Podes ordenar a lista de segmentos por calquera columna ou usar a caixa de busca para atopar o segmento que queres xestionar.
+Vaia ao **Segmentos** páxina para ver os segmentos que creou, o seu estado e estado e a última vez que se actualizaron os datos. Podes ordenar a lista de segmentos por calquera columna ou usar a caixa de busca para atopar o segmento que queres xestionar.
+
+> [!TIP]
+> En ambientes B-to-B, o **Tipo de público** a columna identifica se un segmento está baseado en contas ou contactos.
 
 Seleccione un segmento para ver as accións dispoñibles.
 
@@ -82,11 +88,11 @@ A parte inferior contén unha lista dos membros do segmento.
 > [!NOTE]
 > Os campos que aparecen nesta lista baséanse nos atributos das entidades do seu segmento.
 >
->A lista é unha vista previa dos membros do segmento correspondentes e mostra os primeiros 100 rexistros do seu segmento para que poida avalialo rapidamente e revisar as súas definicións se é necesario. Para ver todos os rexistros coincidentes, [exportar o segmento](export-destinations.md).
+> A lista é unha vista previa dos membros do segmento correspondentes e mostra os primeiros 100 rexistros do seu segmento para que poida avalialo rapidamente e revisar as súas definicións se é necesario. Para ver todos os rexistros coincidentes, selecciona **Ver máis** que abre o [**Entidades**](entities.md) páxina ou [exportar o segmento](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Actualizar os segmentos
 
-Os segmentos pódense actualizar nunha programación automática ou manualmente baixo demanda. Para actualizar manualmente un ou máis segmentos, selecciónaos e escólleos **Actualizar**.
+Os segmentos pódense actualizar nunha programación automática ou manualmente baixo demanda. Para actualizar manualmente un ou máis segmentos, selecciónaos e escolla **Actualizar**.
 
 Para [programar unha actualización automática](schedule-refresh.md), Ir a **Admin** > **Sistema** > **Horario**. Aplícanse as seguintes regras:
 
@@ -109,17 +115,17 @@ Exporta segmentos a outras aplicacións para seguir utilizando os datos. Exporta
 
 1. Seleccione **Atrás** para volver á páxina principal dos segmentos.
 
-## <a name="track-usage-of-a-segment"></a>Rastrexar o uso dun segmento
+## <a name="track-usage-of-a-segment"></a>Rastrexa o uso dun segmento
 
 Se usas segmentos en aplicacións que se basean no mesmo Microsoft Dataverse organización que está conectada con Customer Insights, pode rastrexar o uso dun segmento. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), o sistema infórmache sobre o uso dese segmento.
 
-Ao editar un segmento que se está a utilizar no contorno de Customer Insights ou nun viaxe do cliente en Marketing, aparecerá un banner no [constructor de segmentos](segment-builder.md) infórmache sobre as dependencias. Inspecciona os detalles da dependencia directamente desde o banner ou seleccionando **Uso** no constructor de segmentos.
+Ao editar un segmento que se está a usar no contorno de Customer Insights ou nun viaxe do cliente en Marketing, aparecerá un banner no [constructor de segmentos](segment-builder.md) infórmache sobre as dependencias. Inspecciona os detalles da dependencia directamente desde o banner ou seleccionando **Uso** no constructor de segmentos.
 
 O **Uso de segmentos** o panel mostra os detalles sobre o uso deste segmento en Dataverse aplicacións baseadas en -. Para os segmentos utilizados nas viaxes dos clientes, atoparás unha ligazón para inspeccionar a viaxe en Marketing onde se utiliza este segmento. Se tes permisos para acceder á aplicación Marketing, consulta máis detalles alí.
 
 :::image type="content" source="media/segment-usage-pane.png" alt-text="Panel lateral con detalles do uso do segmento no creador de segmentos.":::
 
-O sistema infórmache sobre o uso dun segmento rastrexado cando intentas eliminalo. Se o segmento que está a piques de eliminar se usa nun viaxe do cliente en Marketing, esa viaxe deterase para todos os usuarios do segmento. Se a viaxe forma parte dunha campaña de mercadotecnia, a eliminación afectará a esa campaña en si. Non obstante, aínda podes eliminar o segmento a pesar das advertencias.
+O sistema infórmache sobre o uso dun segmento rastrexado cando intentas eliminalo. Se o segmento que estás a piques de eliminar se usa nun viaxe do cliente en Marketing, esa viaxe deterase para todos os usuarios do segmento. Se a viaxe forma parte dunha campaña de mercadotecnia, a eliminación afectará a esa campaña en si. Non obstante, aínda pode eliminar o segmento a pesar das advertencias.
 
 :::image type="content" source="media/segment-usage-delete.png" alt-text="Cadro de diálogo para confirmar a eliminación do segmento cando se usa un segmento nun Dataverse aplicación.":::
 

@@ -1,9 +1,9 @@
 ---
 title: Asignacións semánticas (versión preliminar)
 description: Visión xeral das asignacións semánticas e como usalas.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183629"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303874"
 ---
 # <a name="semantic-mappings-preview"></a>Asignacións semánticas (versión preliminar)
 
-As asignacións semánticas permítenlle asignar os seus datos sen actividade a esquemas predefinidos. Estes esquemas axudan a Customer Insights a comprender mellor os atributos dos teus datos. As cartografías semánticas e os datos proporcionados permiten obter novos coñecementos e funcións en Customer Insights. Para asignar os datos da súa actividade aos esquemas, revise a documentación [actividades](activities.md).
+> [!NOTE]
+> O **Mapeos semánticos** a páxina só está dispoñible para contornas empresariais (B-to-B) onde xa se crearon perfís de contactos usando esta páxina. Podes seguir creando e xestionando os perfís de contacto individuais usando o **Mapeos semánticos** páxina. Ou, [unificar os seus datos de contacto](data-unification-contacts.md) para eliminar duplicados, identificar coincidencias entre entidades e crear un perfil de contacto unificado. Despois podes usar o perfil de contacto unificado para crear actividades a nivel de contacto.
 
-**As asignacións semánticas están actualmente habilitadas para contornos baseados en contas empresariais**. *Perfil de contacto* é o único tipo de mapeo semántico dispoñible actualmente en Customer Insights.
+As asignacións semánticas permítenlle asignar os seus datos sen actividade a esquemas predefinidos. Estes esquemas axudan a Customer Insights a comprender mellor os atributos dos teus datos. As cartografías semánticas e os datos proporcionados permiten obter novos coñecementos e funcións en Customer Insights. Para asignar os datos da súa actividade aos esquemas, revise a documentación [actividades](activities.md).
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definir unha asignación de entidades semánticas ContactProfile
 
@@ -87,41 +88,5 @@ Seleccione a asignación semántica para ver as accións dispoñibles.
 - **Actualizar** o mapeo semántico para incluír os datos máis recentes. Actualizar calquera asignación semántica actualizará todas as asignacións semánticas do mesmo tipo.
 - **Cambiar o nome** a cartografía semántica. Seleccione **Gardar**.
 - **Eliminar** a cartografía semántica. Para eliminar máis dunha asignación semántica á vez, seleccione as asignacións semánticas e a icona de eliminación. Para confirmar a eliminación, seleccione **Eliminar**.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Use unha asignación de entidades semánticas ContactProfile para crear actividades a nivel de contacto
-
-Despois de crear un *Perfil de contacto* cartografía de entidades semánticas, pode capturar actividades dos contactos. Permítelle ver na cronoloxía da actividade dunha conta que contacto foi o responsable de cada actividade. A maioría dos pasos seguen a configuración típica de mapeo de actividade.
-
-   > [!NOTE]
-   > Para que funcionen as actividades de nivel de contacto, debes ter as dúas **ID de conta** e **ContactID** atributos para cada rexistro dentro dos seus datos de actividade.
-
-1. [Definir a *Perfil de contacto* mapeamento de entidades semánticas](#define-a-contactprofile-semantic-entity-mapping) e executa o mapeo semántico.
-
-1. Ir a **Datos** > **Actividades**.
-
-1. Seleccione **Engadir actividade** para crear unha nova actividade.
-
-1. Nomee a actividade, seleccione a entidade de actividade de orixe e seleccione a chave principal da entidade de actividade.
-
-1. No **Relacións** paso, cree unha relación indirecta entre os datos da fonte da actividade e as contas, utilizando os seus datos de contacto como entidade intermediaria. Para obter máis información, consulte [vías de relación directa e indirecta](relationships.md#relationship-paths).
-   - Relación de exemplo para unha actividade chamada *Compras*:
-      - **Datos da actividade fonte de compras** > **Datos de contacto** sobre o atributo **ContactID**
-      - **Datos de contacto** > **Datos da conta** sobre o atributo **ID de conta**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Exemplo de configuración de relación.":::
-
-1. Despois de configurar as relacións, seleccione **A continuación** e complete a configuración do mapa de actividade. Para ver os pasos detallados sobre a creación de actividades, consulte [definir unha actividade](activities.md).
-
-1. Executa os teus mapas de actividade.
-
-1. Despois de executar un mapeo de actividade a nivel de contacto, seleccione **Clientes**. As actividades a nivel de contacto móstranse na cronoloxía do teu cliente.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final despois de configurar as actividades de contacto":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtrado da cronoloxía da actividade a nivel de contacto
-
-A cronoloxía da actividade dos teus clientes inclúe os seus ID ou nomes, dependendo do teu *Perfil de contacto* configuración, para as actividades nas que actuaron. Filtra as actividades por contactos na liña de tempo para ver os contactos específicos que che interesen. Para ver todas as actividades que non están asignadas a un contacto específico, seleccione **Actividades non asignadas a un contacto**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Opcións de filtrado dispoñibles para actividades a nivel de contacto.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

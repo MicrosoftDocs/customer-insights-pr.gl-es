@@ -1,9 +1,9 @@
 ---
-title: Actividades do cliente
-description: Defina as actividades dos clientes e visualíceas nunha liña de tempo nos perfís dos clientes.
-ms.date: 07/22/2022
+title: Actividades de contacto con clientes ou empresas
+description: Define as actividades de contacto de clientes ou empresas e visualízaas nunha liña de tempo nos perfís de clientes.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188137"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304103"
 ---
-# <a name="customer-activities"></a>Actividades do cliente
+# <a name="customer-or-business-contact-activities"></a>Actividades de contacto con clientes ou empresas
 
-As actividades dos clientes son accións ou eventos realizados polos clientes. Por exemplo, transaccións, duración da chamada de asistencia, revisións de sitios web, compras ou devolucións. Estas actividades están contidas nunha ou máis fontes de datos. Con Customers Insights, consolide as actividades dos seus clientes a partir destes [fontes de datos](data-sources.md) e asocialos con perfís de clientes. Estas actividades aparecen cronoloxicamente nunha liña de tempo no perfil do cliente. Inclúa a liña de tempo nas aplicacións de Dynamics 365 co [Complemento da tarxeta de cliente](customer-card-add-in.md) solución.
+As actividades dos clientes son accións ou eventos realizados por clientes ou contactos comerciais. Por exemplo, transaccións, duración da chamada de asistencia, revisións de sitios web, compras ou devolucións. Estas actividades están contidas nunha ou máis fontes de datos. Con Customers Insights, consolide as actividades dos seus clientes a partir destes [fontes de datos](data-sources.md) e asocialos con perfís de clientes. Estas actividades aparecen cronoloxicamente nunha liña de tempo no perfil do cliente. Inclúa a liña de tempo nas aplicacións de Dynamics 365 co [Complemento da tarxeta de cliente](customer-card-add-in.md) solución.
 
-## <a name="define-an-activity"></a>Definir unha actividade
+## <a name="define-a-customer-activity"></a>Definir unha actividade do cliente
 
 Unha entidade debe ter polo menos un atributo de tipo **Data** para ser incluído nun cronograma do cliente. O control **Engadir actividade** está desactivado se non se atopa tal entidade.
 
@@ -38,9 +38,9 @@ Unha entidade debe ter polo menos un atributo de tipo **Data** para ser incluíd
 
 1. No **Datos da actividade** paso, introduza a seguinte información:
 
-   - **Nome da actividade** : Nome da súa actividade.
-   - **Entidade da actividade** : Entidade que inclúe datos de transacción ou actividade.
-   - **Chave primaria** : campo que identifica de forma única un rexistro. Non debe conter ningún valor duplicado, valores baleiros ou valores non atopados.
+   - **Nome da actividade**: Seleccione un nome para a súa actividade.
+   - **Entidade da actividade** : seleccione unha entidade que inclúa datos de transacción ou actividade.
+   - **Clave principal**: seleccione o campo que identifica un rexistro de cliente de forma única. Non debe conter ningún valor duplicado, valores baleiros ou valores non atopados.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configure os datos da actividade co nome, a entidade e a clave primaria.":::
 
@@ -48,9 +48,9 @@ Unha entidade debe ter polo menos un atributo de tipo **Data** para ser incluíd
 
 1. No **Relación** paso, seleccione **Engadir relación** para conectar os datos da túa actividade ao rexistro de clientes correspondente. Este paso visualiza a conexión entre entidades.  
 
-   - **Chave estranxeira da entidade** : Campo da túa entidade de actividade que se utilizará para establecer unha relación con outra entidade.
+   - **Chave estranxeira** : Campo estranxeiro na súa entidade de actividade que se utilizará para establecer unha relación con outra entidade.
    - **Ao nome da entidade** : Entidade cliente fonte correspondente coa que estará en relación a súa entidade de actividade. Só pode relacionar con entidades de cliente de orixe que se usan no proceso de unificación de datos.
-   - **Nome da relación** : Nome que identifica a relación entre entidades. Se xa existe unha relación entre esta entidade de actividade e a entidade cliente de orixe seleccionada, o nome da relación é de só lectura.
+   - **Nome da relación** : Se xa existe unha relación entre esta entidade de actividade e a entidade cliente de orixe seleccionada, o nome da relación estará en modo de só lectura. Se non existe tal relación, crearase unha nova relación co nome que proporcione nesta caixa.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Defina a relación da entidade.":::
 
@@ -90,7 +90,7 @@ Unha entidade debe ter polo menos un atributo de tipo **Data** para ser incluíd
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Xestionar actividades existentes
+## <a name="manage-existing-customer-activities"></a>Xestionar as actividades existentes dos clientes
 
 Ir a **Datos** > **Actividades** para ver as súas actividades gardadas, a súa entidade de orixe, o tipo de actividade e se están incluídas na cronoloxía do cliente. Podes ordenar a lista de actividades por calquera columna ou utilizar a caixa de busca para atopar a actividade que queres xestionar.
 
@@ -116,9 +116,43 @@ Seleccione unha actividade para ver as accións dispoñibles.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Use o panel de filtros para configurar as condicións do filtro.":::
 
-1. Para eliminar filtros, seleccione **Borrar filtros** ou seleccione **Filtro** e desmarque a caixa de verificación do filtro.
-
 > [!NOTE]
 > Os filtros de actividade elimínanse cando sae dun perfil de cliente. Tes que aplicalos cada vez que abras un perfil de cliente.
+
+## <a name="define-a-contact-activity"></a>Definir unha actividade de contacto
+
+Para contas empresariais (B-to-B), use a *Perfil de contacto* entidade para capturar actividades dos contactos. Podes ver na cronoloxía da actividade dunha conta que contacto foi o responsable de cada actividade. A maioría dos pasos seguen a configuración do mapeo da actividade do cliente.
+
+   > [!NOTE]
+   > Para definir unha actividade a nivel de contacto, a *Perfil de contacto* debe crearse a entidade, ben como a [perfil de contacto unificado](data-unification-contacts.md) ou a través [mapeo semántico](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Debes ter os dous **ID de conta** e **ContactID** atributos para cada rexistro dentro dos seus datos de actividade.
+  
+1. Ir a **Datos** > **Actividades**.
+
+1. Seleccione **Engadir actividade**.
+
+1. Nomee a actividade, seleccione a entidade de actividade de orixe e seleccione a chave principal da entidade de actividade.
+
+1. No **Relacións** paso, cree unha relación indirecta entre os datos da fonte da actividade e as contas, utilizando os seus datos de contacto como entidade intermediaria. Para obter máis información, consulte [vías de relación directa e indirecta](relationships.md#relationship-paths).
+   - Relación de exemplo para unha actividade chamada *Compras*:
+      - **Datos da actividade fonte de compras** > **Datos de contacto** sobre o atributo **ContactID**
+      - **Datos de contacto** > **Datos da conta** sobre o atributo **ID de conta**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Exemplo de configuración de relación.":::
+
+1. Despois de configurar as relacións, seleccione **A continuación** e complete a configuración do mapa de actividade. Para ver os pasos detallados sobre a creación de actividades, consulte [definir unha actividade do cliente](#define-a-customer-activity).
+
+1. Executa os teus mapas de actividade.
+
+1. As túas actividades a nivel de contacto agora estarán visibles na cronoloxía do teu cliente.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final despois de configurar as actividades de contacto":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtrado da cronoloxía da actividade a nivel de contacto
+
+Despois de configurar un mapeo de actividade a nivel de contacto e executalo, o cronograma de actividade dos teus clientes actualizarase. Inclúe os seus ID ou nomes, dependendo do teu *Perfil de contacto* configuración, para as actividades nas que actuaron. Podes filtrar actividades por contactos na liña de tempo para ver os contactos específicos que che interesen. Ademais, podes ver todas as actividades que non están asignadas a un contacto específico seleccionando **Actividades non asignadas a un contacto**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opcións de filtrado dispoñibles para actividades a nivel de contacto.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

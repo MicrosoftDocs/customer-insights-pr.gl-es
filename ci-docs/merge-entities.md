@@ -2,7 +2,7 @@
 title: Unifica os campos de clientes para a unificación de datos
 description: Combine entidades para crear perfís de clientes unificados.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,22 +14,22 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213580"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304011"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Unifica os campos de clientes para a unificación de datos
+# <a name="unify-customer-fields"></a>Unificar campos de clientes
 
-Neste paso do proceso de unificación, escolle e exclúe os atributos para combinar na túa entidade de perfil unificado. Por exemplo, se tres entidades tiñan datos de correo electrónico, pode querer manter os tres campos de correo electrónico separados ou combinalos nun único campo de correo electrónico para o perfil unificado. Algúns atributos son combinados automaticamente polo sistema. Podes crear ID de cliente estables e únicos e agrupar perfís relacionados nun clúster.
+Neste paso do proceso de unificación, escolle e exclúe os atributos para combinar na túa entidade de perfil unificado. Por exemplo, se tres entidades tiñan datos de correo electrónico, pode querer manter os tres campos de correo electrónico separados ou combinalos nun único campo de correo electrónico para o perfil unificado. Algúns atributos son combinados automaticamente polo sistema. Podes crear ID de cliente estables e únicos. Para clientes individuais, pode agrupar perfís relacionados nun clúster.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Páxina Combinar no proceso de unificación de datos que mostra a táboa cos campos combinados que definen o perfil de cliente unificado.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Páxina de unificación de campos de clientes no proceso de unificación de datos que mostra unha táboa con campos combinados que definen o perfil de cliente unificado.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Revisa e actualiza os campos do cliente
 
-1. Revisa a lista de campos que se unificarán baixo a **Campos de clientes** ficha da táboa. Realice calquera modificación se procede.
+1. Revisa a lista de campos que se unificarán baixo a **Campos de clientes** ficha da táboa. Realice os cambios se procede.
 
    1. Para calquera campo combinado, pode:
       - [Editar](#edit-a-merged-field)
@@ -47,7 +47,7 @@ Neste paso do proceso de unificación, escolle e exclúe os atributos para combi
 
 1. Opcionalmente, [xerar a configuración do ID do cliente](#configure-customer-id-generation).
 
-1. Opcionalmente, [agrupar os perfís en fogares ou clusters](#group-profiles-into-households-or-clusters).
+1. Opcionalmente para B-to-C, [agrupar os perfís en fogares ou clusters](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Seguinte paso: revisar a unificación](review-unification.md)
@@ -144,7 +144,7 @@ Trata un grupo de campos como unha única unidade. Por exemplo, se os nosos rexi
 
 ## <a name="configure-customer-id-generation"></a>Configura a xeración de ID de cliente
 
-Define como xerar valores de ID de cliente, os identificadores únicos do perfil do cliente. O paso unificar campos no proceso de unificación de datos xera o identificador único do perfil do cliente. O identificador é o *ID de cliente* no *Cliente* entidade que resulta do proceso de unificación de datos.
+Defina como xerar valores de ID de cliente, os identificadores únicos do perfil do cliente. O paso unificar campos no proceso de unificación de datos xera o identificador único do perfil do cliente. O identificador é o *ID de cliente* no *Cliente* entidade que resulta do proceso de unificación de datos.
 
 O *ID de cliente*  baséase nun hash do primeiro valor das claves primarias gañadoras non nulas. Estas claves proveñen das entidades utilizadas na unificación de datos e están influenciadas pola orde de coincidencia.Polo tanto, o ID de cliente xerado pode cambiar cando cambia un valor de chave principal na entidade principal da orde de coincidencia. É posible que o valor da chave principal non represente sempre o mesmo cliente.
 
@@ -161,7 +161,7 @@ A configuración dunha ID de cliente estable permítelle evitar ese comportament
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Agrupar perfís en fogares ou grupos
 
-Pode definir regras para agrupar perfís relacionados nun clúster. Actualmente hai dous tipos de clústers dispoñibles: domésticos e personalizados. O sistema escolle automaticamente un fogar con regras predefinidas se a entidade *Cliente* contén os campos semánticos *Person.LastName* e *Location.Address*. Tamén pode crear un clúster coas súas propias regras e condicións, semellante a [regras de coincidencia](match-entities.md#define-rules-for-match-pairs).
+Para clientes individuais, pode definir regras para agrupar perfís relacionados nun clúster. Actualmente hai dous tipos de clústers dispoñibles: domésticos e personalizados. O sistema escolle automaticamente un fogar con regras predefinidas se a entidade *Cliente* contén os campos semánticos *Person.LastName* e *Location.Address*. Tamén pode crear un clúster coas súas propias regras e condicións, semellante a [regras de coincidencia](match-entities.md#define-rules-for-match-pairs).
 
 1. Seleccione **Avanzado** > **Crear clúster**.
 

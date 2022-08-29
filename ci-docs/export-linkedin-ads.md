@@ -1,19 +1,19 @@
 ---
 title: Exportar segmentos a LinkedIn Ads (versión preliminar)
 description: Aprenda a configurar a conexión e exportar a LinkedIn Ads.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196806"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304701"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportar segmentos a LinkedIn Ads (versión preliminar)
 
@@ -24,7 +24,7 @@ Exporte segmentos de perfís de clientes unificados a LinkedIn Ads para crear p�
 - A [LinkedIn Campaign Manager conta](https://business.linkedin.com/marketing-solutions/ads) e as correspondentes credenciais de administrador.
 - A [LinkedIn Campaign Manager ID da conta](https://www.linkedin.com/help/lms/answer/a424270).
 - [Segmentos configurados](segments.md) en Customer Insights.
-- Os perfís de clientes unificados nos segmentos exportados conteñen un campo que representa un enderezo de correo electrónico.
+- Os segmentos exportados necesitan polo menos un campo específico dependendo de se escolla [orientación de contactos](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ou [orientación da empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) en LinkedIn. Os campos posibles están listados no **Correspondencia de datos** paso cando [configurando a exportación](#configure-an-export).
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
