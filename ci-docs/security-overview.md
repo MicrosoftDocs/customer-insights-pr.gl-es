@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246060"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387247"
 ---
 # <a name="configure-security-settings"></a>Configurar a configuración de seguranza
 
@@ -23,9 +23,9 @@ Xestione as claves da API, acceda aos datos dos clientes e configure unha ligaz�
 
 Consulta e xestiona as claves para usar o [API de Customer Insights](apis.md) cos datos do seu entorno.
 
-1. Ir a **Sistema** > **Seguridade** e selecciona o **APIs** ficha.
+1. Ir a **Admin** > **Seguridade** e selecciona o **APIs** ficha.
 
-1. Se non se configurou o acceso da API ao contorno, seleccione **Activar**. Ou, para bloquear o acceso da API ao contorno, seleccione **Desactivar** e confirmar.
+1. Se non se configurou o acceso da API ao contorno, seleccione **Activar** . Ou, para bloquear o acceso da API ao contorno, seleccione **Desactivar** e confirmar.
 
 1. Xestiona as claves da API primaria e secundaria:
 
@@ -33,7 +33,7 @@ Consulta e xestiona as claves para usar o [API de Customer Insights](apis.md) co
 
    1. Para copiar a clave de API principal ou secundaria, seleccione a **Copiar** símbolo.
 
-   1. Para crear novas claves de API primarias ou secundarias, selecciona **Rexenerar primaria** ou **Rexenerar secundaria**.
+   1. Para crear novas claves de API primarias ou secundarias, selecciona **Rexenerar primaria** ou **Rexenerar secundaria** .
 
 ## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Acceda de forma segura aos datos do cliente con Customer Lockbox (vista previa)
 
@@ -46,7 +46,7 @@ Para obter máis información sobre Customer Lockbox, consulte [resumo](/power-p
 
 ## <a name="set-up-an-azure-private-link"></a>Configura unha ligazón privada de Azure
 
-[Ligazón privada Azure](/azure/private-link/private-link-overview) imos conectar Customer Insights ao teu Azure Data Lake Storage conta a través dun punto final privado na súa rede virtual. Para os datos dunha conta de almacenamento, que non está exposta á Internet pública, Private Link habilita a conexión a esa rede restrinxida.
+[Ligazón privada Azure](/azure/private-link/private-link-overview) permite que Customer Insights se conecte ao teu Azure Data Lake Storage conta a través dun punto final privado na súa rede virtual. Para os datos dunha conta de almacenamento, que non está exposta á Internet pública, Private Link habilita a conexión a esa rede restrinxida.
 
 > [!IMPORTANT]
 > Requisito mínimo de función para configurar unha conexión Private Link:
@@ -57,13 +57,13 @@ Para obter máis información sobre Customer Lockbox, consulte [resumo](/power-p
 
 1. En Customer Insights, vai a **Admin** > **Seguridade** e selecciona o **Ligazóns privadas** ficha.
 
-1. Seleccione **Engadir ligazón privada**.
+1. Seleccione **Engadir ligazón privada** .
 
    O **Engadir ligazón privada** o panel enumera as contas de almacenamento do teu inquilino que tes permisos para ver.
 
 1. Seleccione a subscrición, o grupo de recursos e a conta de almacenamento.
 
-1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo** .
 
 1. Seleccione **Gardar**.
 

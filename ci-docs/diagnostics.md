@@ -11,40 +11,40 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245923"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352799"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Exportar rexistros de diagnóstico (vista previa)
 
-Reenviar rexistros de Customer Insights mediante Azure Monitor. Os rexistros de recursos de Azure Monitor permítenlle supervisar e enviar rexistros [Almacenamento Azure](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ou transmitilos en streaming [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
+Reenviar rexistros de Customer Insights mediante Azure Monitor. Os rexistros de recursos de Azure Monitor permítenche supervisar e enviar rexistros [Almacenamento Azure](https://azure.microsoft.com/services/storage/) ,[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) , ou transmitilos en streaming [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights envía os seguintes rexistros de eventos:
 
 - **Auditoría de eventos**
   - **Evento APIE** - permite o seguimento de cambios a través de Dynamics 365 Customer Insights IU.
 - **Eventos Operativos**
-  - **Evento de fluxo de traballo** - permíteche configurar [fontes de datos](data-sources.md),[unificar](data-unification.md),[enriquecer](enrichment-hub.md), e [exportar](export-destinations.md) datos noutros sistemas. Estes pasos pódense facer individualmente (por exemplo, activar unha única exportación). Tamén poden executarse orquestrados (por exemplo, a actualización de datos a partir de fontes de datos que desencadean o proceso de unificación, que incorporará enriquecementos e exportará os datos a outro sistema). Para obter máis información, consulte o [Esquema WorkflowEvent](#workflow-event-schema).
-  - **Evento APIE** - envía todas as chamadas API da instancia dos clientes Dynamics 365 Customer Insights. Para obter máis información, consulte o [Esquema APIEvent](#api-event-schema).
+  - **Evento de fluxo de traballo** - permíteche configurar [fontes de datos](data-sources.md) ,[unificar](data-unification.md) ,[enriquecer](enrichment-hub.md) , e [exportar](export-destinations.md) datos noutros sistemas. Estes pasos pódense realizar individualmente (por exemplo, activar unha única exportación). Tamén poden executarse orquestrados (por exemplo, a actualización de datos a partir de fontes de datos que desencadean o proceso de unificación, que incorporará enriquecementos e exportará os datos a outro sistema). Para obter máis información, consulte o [Esquema WorkflowEvent](#workflow-event-schema) .
+  - **Evento APIE** - envía todas as chamadas API da instancia dos clientes Dynamics 365 Customer Insights . Para obter máis información, consulte o [Esquema APIEvent](#api-event-schema) .
 
-## <a name="set-up-the-diagnostic-settings"></a>Configura a configuración de diagnóstico
+## <a name="set-up-the-diagnostic-settings"></a>Configurar a configuración de diagnóstico
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-- Un activo [Subscrición Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- Un activo [Subscrición Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) .
 - [Administrador](permissions.md#admin) permisos en Customer Insights.
+- Un recurso válido en Azure que segue a [requisitos de destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Azure Event Hub ou Azure Log Analytics.
 - [Rol de colaborador e administrador de acceso de usuarios](/azure/role-based-access-control/role-assignments-portal) no recurso de destino en Azure. O recurso pode ser un Azure Data Lake Storage conta, un Azure Event Hub ou un espazo de traballo de Azure Log Analytics. Este permiso é necesario ao configurar os axustes de diagnóstico en Customer Insights, pero pódese cambiar despois da configuración correcta.
-- [Requisitos do destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Azure Event Hub ou Azure Log Analytics se cumpren.
 - Polo menos o **Lector** papel no grupo de recursos ao que pertence o recurso.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Configura diagnósticos con Azure Monitor
 
 1. En Customer Insights, vai a **Admin** > **Sistema** e selecciona o **Diagnóstico** ficha.
 
-1. Seleccione **Engadir destino**.
+1. Seleccione **Engadir destino** .
 
    :::image type="content" source="media/diagnostics-pane.png" alt-text="Conexión de diagnóstico.":::
 
@@ -52,9 +52,9 @@ Customer Insights envía os seguintes rexistros de eventos:
 
 1. Seleccione o **Tipo de recurso** (Conta de almacenamento, Centro de eventos ou Log Analytics).
 
-1. Seleccione o **Subscrición**, **de recursos**, e **Recurso** para o recurso de destino. Ver [Configuración no recurso de destino](#configuration-on-the-destination-resource) para obter permisos e información de rexistro.
+1. Seleccione o **Subscrición**, **de recursos**, e **Recurso** para o recurso de destino. Ver [Configuración no recurso de destino](#configuration-on-the-destination-resource) para obter permiso e información de rexistro.
 
-1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo** .
 
 1. Seleccione **Conectar ao sistema** para conectarse ao recurso de destino. Os rexistros comezan a aparecer no destino despois de 15 minutos, se a API está en uso e xera eventos.
 
@@ -78,7 +78,7 @@ O principal do servizo de Customer Insights obtén o **Propietario de datos de A
 
 ### <a name="log-analytics"></a>Log Analytics
 
-O principal do servizo de Customer Insights obtén o **Colaborador de Log Analytics** permiso sobre o recurso. Os rexistros están dispoñibles en **Rexistros** > **Táboas** > **Xestión de rexistros** no espazo de traballo de Log Analytics seleccionado. Amplía o **Xestión de rexistros** solución e localizar o`CIEventsAudit` e`CIEventsOperational` táboas.
+O principal do servizo de Customer Insights obtén o **Colaborador de Log Analytics** permiso sobre o recurso. Os rexistros están dispoñibles en **Rexistros** > **Táboas** > **Xestión de rexistros** no espazo de traballo de Log Analytics seleccionado. Amplía o **Xestión de rexistros** solución e localiza o`CIEventsAudit` e`CIEventsOperational` táboas.
 
 - `CIEventsAudit` que contén **eventos de auditoría**
 - `CIEventsOperational` que contén **eventos operativos**
@@ -92,7 +92,7 @@ Baixo a **Consultas** fiestra, expanda o **Auditoría** solución e localice as 
 1. Seleccione o destino de diagnóstico na lista.
 
    > [!TIP]
-   > Ao eliminar o destino detén o reenvío de rexistro, pero non elimina o recurso na subscrición de Azure. Para eliminar o recurso en Azure, seleccione a ligazón no ficheiro **Accións** columna para abrir o portal de Azure para o recurso seleccionado e elimínao alí. A continuación, elimine o destino do diagnóstico.
+   > Ao eliminar o destino detén o reenvío de rexistro, pero non elimina o recurso na subscrición de Azure. Para eliminar o recurso en Azure, seleccione a ligazón no ficheiro **Accións** columna para abrir o portal de Azure para o recurso seleccionado e elimínao alí. A continuación, elimine o destino de diagnóstico.
 
 1. No **Accións** columna, seleccione a **Eliminar** ícona.
 

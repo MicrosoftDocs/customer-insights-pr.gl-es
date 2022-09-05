@@ -1,27 +1,27 @@
 ---
 title: Exemplos de consulta de OData para as API de Customer Insights
 description: Exemplos de uso habitual do protocolo de datos abertos (OData) para consultar as API de Customer Insights para revisar datos.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121560"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387200"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Exemplos de consulta de OData para as API de Customer Insights
 
 O protocolo de datos abertos (OData) é un protocolo de acceso a datos construído en protocolos básicos como HTTP. Utiliza metodoloxías comúnmente aceptadas como REST para a web. Existen varios tipos de bibliotecas e ferramentas que se poden usar para consumir servizos de OData.
 
-Este artigo enumera algunhas consultas de exemplo solicitadas con frecuencia para axudarche a crear as túas propias implementacións baseadas no [API de Customer Insights](apis.md).
+Para axudarche a crear as túas propias implementacións baseadas no [API de Customer Insights](apis.md) , revise algunhas consultas de exemplo solicitadas con frecuencia.
 
-Ten que modificar as mostras de consulta para que funcionen nos ambientes de destino: 
+Modifique as mostras de consulta para que funcionen nos ambientes de destino:
 
 - {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` onde{instanceId} é o GUID do contorno de Customer Insights que quere consultar. O [Operación ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) permíteche atopar o{InstanceId} tes acceso.
 - {CID}: GUID dun rexistro de cliente unificado. Exemplo:`ce759201f786d590bf2134bff576c369`.
@@ -31,22 +31,22 @@ Ten que modificar as mostras de consulta para que funcionen nos ambientes de des
 
 ## <a name="customer"></a>cliente/a
 
-A seguinte táboa contén un conxunto de consultas de exemplo para o *Cliente* entidade.
+Consultas de exemplo para o *Cliente* entidade.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
 |ID de cliente único     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Clave alternativa    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  As claves alternativas persisten na entidade cliente unificada       |
+|clave alternativa    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  As claves alternativas persisten na entidade cliente unificada       |
 |Seleccionar   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |En    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Clave alternativa + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|clave alternativa + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Buscar  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Devolve os 10 principais resultados dunha cadea de busca      |
 |Segmento de pertenza  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Devolve un número predefinido de filas da entidade de segmentación.      |
 |Segmento de pertenza para un cliente | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Devolve o perfil do cliente se é membro do segmento indicado     |
 
 ## <a name="unified-activity"></a>Actividade unificada
 
-A seguinte táboa contén un conxunto de consultas de exemplo para o *Actividade unificada* entidade.
+Consultas de exemplo para o *Actividade unificada* entidade.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ A seguinte táboa contén un conxunto de consultas de exemplo para o *Actividade
 
 ## <a name="other-examples"></a>Outros exemplos
 
-A seguinte táboa contén un conxunto de consultas de exemplo para outras entidades.
+Consultas de exemplo para outras entidades.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
