@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246245"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395999"
 ---
 # <a name="view-system-configuration"></a>Ver a configuración do sistema
 
@@ -27,7 +27,7 @@ Consulta a información do sistema, o estado do sistema e o uso da API.
 
 ## <a name="view-api-usage"></a>Ver o uso da API
 
-Consulta os detalles sobre o uso da API en tempo real e consulta que eventos sucederon nun período de tempo determinado.
+Consulta detalles sobre o uso da API en tempo real e consulta que eventos sucederon nun período de tempo determinado.
 
 1. Ir a **Admin** > **Sistema** e selecciona o **Uso da API** ficha.
 
@@ -38,12 +38,6 @@ Consulta os detalles sobre o uso da API en tempo real e consulta que eventos suc
    - **Chamadas API**: un gráfico que visualiza o número agregado de chamadas á API no período de tempo seleccionado.
    - **Transferencia de datos**: un gráfico que mostra a cantidade de datos que se transferiron a través da API no período de tempo seleccionado.
    - **Operacións**: unha táboa con filas para cada operación da API dispoñible e detalles sobre o uso das operacións. Seleccione un nome de operación ao que ir [a referencia da API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operacións que usan [inxestión de datos en tempo real](real-time-data-ingestion.md) contén un símbolo binocular para ver o uso da API en tempo real.
-
-   1. Seleccione os prismáticos para abrir **Uso da API en tempo real** panel que contén detalles de uso para a operación.
-   1. **Seleccione un período de tempo** para ver.
-   1. Usa o **Agrupar por** para escoller como presentar mellor as súas interaccións en tempo real. Agrupe os datos por API **Método**, **cualificado da entidade** (entidade inxerida), **Creado por** (fonte do evento), **Resultado** (éxito ou fracaso) ou **Códigos de erro**. Os datos están dispoñibles como gráfico de historial e como táboa.
 
 ## <a name="view-system-information"></a>Ver información do sistema
 
@@ -73,7 +67,7 @@ Rastrexa o progreso das tarefas, a inxestión de datos, as exportacións de dato
 
 1. Ir a **Admin** > **Sistema** e selecciona o **Estado** ficha.
 
-   Visualización de información de estado e procesamento de varios procesos. Ver o **Nome** da tarefa, o **Estado** da súa carreira máis recente, e cando foi **Última actualización**.
+   Visualización de estado e información de procesamento para varios procesos. Ver o **Nome** da tarefa, o **Estado** da súa carreira máis recente, e cando foi **Última actualización**.
 
 1. Para ver os detalles das últimas execucións, seleccione a tarefa ou o nome do proceso.
 
@@ -94,7 +88,7 @@ O sistema utiliza os seguintes estados para tarefas e procesos:
 |Erro  |Produciuse un erro na tarefa ou proceso.  |
 |Sen iniciar   |Orixe de datos aínda non ten datos inxeridos ou a tarefa aínda está en modo borrador.         |
 |Procesando  |A tarefa ou proceso está en curso.  |
-|Actualizando    |A tarefa ou proceso está en curso. Para cancelar esta operación, seleccione **Refrescante** e **Cancelar traballo**. Deter a actualización dunha tarefa ou proceso volverá ao seu último estado de actualización.       |
+|Actualizando    |A tarefa ou proceso está en curso. Para cancelar esta operación, seleccione **Refrescante** e **Cancelar traballo**. Ao deter a actualización dunha tarefa ou proceso volverá ao seu último estado de actualización.       |
 |Omitido  |Saltouse a tarefa ou o proceso. Un ou máis dos procesos descendentes dos que depende esta tarefa están fallando ou se omitiron.|
 |Correcto  |Tarefa ou proceso completouse correctamente. Para as fontes de datos, indica que os datos se inxeriron correctamente se se menciona un momento no **Actualizado** columna.|
 |Na fila | O procesamento está en cola e comezará unha vez que se completen todas as tarefas e procesos anteriores. Para obter máis información, consulte [Procesos de actualización](#refresh-processes).|

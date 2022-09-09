@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387292"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409355"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
@@ -42,6 +42,14 @@ Grazas á nova unificación de contactos, podes crear segmentos de contactos uti
 
 Para obter máis información, consulte [Visión xeral das exportacións](export-destinations.md).
 
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Rexións de implantación aliñadas Microsoft Dataverse
+
+Ao crear un novo ambiente de Customer Insights, pode seleccionar a rexión onde desexa que se implemente e aloxe o servizo. Actualizamos a selección de rexións para aliñala Microsoft Dataverse e o Power Platform.
+
+Agora podes seleccionar facilmente a mesma rexión que a actual Microsoft Dataverse ambiente ou a súa conta de almacenamento de Azure Data Lake (se escolle esa opción), suxeito á dispoñibilidade de Customer Insights nesa rexión.
+
+Para obter máis información, consulte [Crea un novo ambiente](create-environment.md) e [Dispoñibilidade do produto por xeografía](https://dynamics.microsoft.com/availability-reports/).
+
 ## <a name="july-2022-updates"></a>Actualizacións de xullo de 2022
 
 As actualizacións de xullo de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
@@ -62,7 +70,7 @@ Para obter máis información, consulte [Exportar datos a hosts SFTP](export-sft
 
 Xestionar os datos dos clientes non é un reto novo, pero é cada vez máis difícil a medida que os usuarios navegan polas distintas canles dixitais que ofrecen as marcas. Un usuario que é coñecido (autenticado) nunha canle pasa a ser descoñecido (non autenticado) noutra se non inicia sesión. O problema a miúdo é que os usuarios non autenticados (descoñecidos) non teñen un ID común. Podería usarse para asociar atributos de perfís significativos e xerar perfís de clientes unificados. Customer Insights axuda a resolver este problema inxerindo datos dos métodos de seguimento dos teus sistemas fonte.
 
-Para obter máis información, consulte [Personaliza as túas experiencias con datos sobre usuarios coñecidos e descoñecidos](unknown-to-known.md) .
+Para obter máis información, consulte [Personaliza as túas experiencias con datos sobre usuarios coñecidos e descoñecidos](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Actualizacións de xuño de 2022
 
@@ -70,9 +78,9 @@ As actualizacións de xuño de 2022 inclúen novas funcións, melloras de rendem
 
 ### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Experiencia de usuario actualizada para fontes de datos e inxestión de datos
 
-Importar datos dunha gran variedade de fontes de datos é a base para consolidar os datos dos seus clientes Dynamics 365 Customer Insights . Repasamos a experiencia do usuario para a importación e conexión de fontes de datos. Esta actualización ten como obxectivo facilitarche a inxestión de datos en Customer Insights.
+Importar datos dunha gran variedade de fontes de datos é a base para consolidar os datos dos seus clientes Dynamics 365 Customer Insights. Repasamos a experiencia do usuario para a importación e conexión de fontes de datos. Esta actualización ten como obxectivo facilitarche a inxestión de datos en Customer Insights.
 
-Para obter máis información, consulte [Visión xeral das fontes de datos](data-sources.md) .
+Para obter máis información, consulte [Visión xeral das fontes de datos](data-sources.md).
 
 ### <a name="export-to-inmobi"></a>Exportar a InMobi
 
@@ -84,13 +92,13 @@ Para obter máis información, consulte [Exportar a InMobi (vista previa)](expor
 
 Customer Lockbox ofrece unha interface para revisar e aprobar (ou rexeitar) solicitudes de acceso a datos. Estas solicitudes prodúcense cando se precisa o acceso aos datos dos clientes para resolver un caso de asistencia.
 
-Para obter máis información, consulte [Acceda de forma segura aos datos do cliente con Customer Lockbox (vista previa)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview) .
+Para obter máis información, consulte [Acceda de forma segura aos datos do cliente con Customer Lockbox (vista previa)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Conéctese aos seus datos mediante Azure Private Link
 
 Azure Private Link permite que Customer Insights se conecte ao teu Azure Data Lake Storage conta a través dun punto final privado na súa rede virtual. Para os datos dunha conta de almacenamento, que non está exposta á Internet pública, Private Link habilita a conexión a esa rede restrinxida.
 
-Para obter máis información, consulte [Usa a ligazón privada en Customer Insights](security-overview.md#set-up-an-azure-private-link) .
+Para obter máis información, consulte [Usa a ligazón privada en Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Actualizacións de maio de 2022
 
@@ -98,47 +106,47 @@ As actualizacións de maio de 2022 inclúen novas funcións, melloras de rendeme
 
 ### <a name="updated-data-unification-experience"></a>Experiencia de unificación de datos actualizada
 
- A unificación de datos permíteche unificar fontes de datos distintas nun único conxunto de datos mestre que ofrece unha vista unificada deses datos. Os datos pódense unificar nunha única entidade ou en varias entidades. Primeiro, ti [seleccionar entidades e campos de orixe](map-entities.md) ,[eliminar rexistros duplicados](remove-duplicates.md) , especifique as regras para [condicións de coincidencia](match-entities.md) , e definir cales [campos para incluír nos perfís de clientes unificados](merge-entities.md) .
+ A unificación de datos permíteche unificar fontes de datos distintas nun único conxunto de datos mestre que ofrece unha vista unificada deses datos. Os datos pódense unificar nunha única entidade ou en varias entidades. Primeiro, ti [seleccionar entidades e campos de orixe](map-entities.md),[eliminar rexistros duplicados](remove-duplicates.md), especifique as regras para [condicións de coincidencia](match-entities.md), e definir cales [campos para incluír nos perfís de clientes unificados](merge-entities.md).
 
-Para obter máis información, consulte [Visión xeral da unificación de datos](data-unification.md) .
+Para obter máis información, consulte [Visión xeral da unificación de datos](data-unification.md).
 
 ### <a name="refreshed-home-page-in-customer-insights"></a>Páxina de inicio actualizada en Customer Insights
 
 **Casa** guíache a través do proceso de configuración das funcións clave e ofrece unha visión xeral dos segmentos, medidas e datos de enriquecemento. Actualizamos a experiencia para ofrecer información máis relevante dunha ollada.
 
-Para obter máis información, consulte [Explore os datos do cliente](home.md) .
+Para obter máis información, consulte [Explore os datos do cliente](home.md).
 
 ### <a name="track-usage-of-a-segment"></a>Rastrexa o uso dun segmento
 
-Agora podes [rastrexar o uso dun segmento](segments.md#track-usage-of-a-segment) en aplicacións, que están baseadas no Dataverse organización que está conectada con Customer Insights. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile) , o sistema infórmache sobre o uso dese segmento.
+Agora podes [rastrexar o uso dun segmento](segments.md#track-usage-of-a-segment) nas aplicacións, que están baseadas no Dataverse organización que está conectada con Customer Insights. Para [Segmentos de Customer Insights utilizados nas viaxes dos clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), o sistema infórmache sobre o uso dese segmento.
 
 ### <a name="export-to-criteo"></a>Exportar a Criteo
 
 Criteo é unha plataforma en liña que axuda aos usuarios a xestionar a publicidade dixital. Agora podes exportar segmentos de perfís de clientes unificados para xerar campañas, ofrecer marketing por correo electrónico e utilizar grupos específicos de clientes con Criteo.
 
-Para obter máis información, consulte [Exportar segmentos a Criteo (vista previa)](export-criteo.md) .
+Para obter máis información, consulte [Exportar segmentos a Criteo (vista previa)](export-criteo.md).
 
 ### <a name="refined-documentation-structure-for-environment-creation"></a>Estrutura de documentación refinada para a creación de ambientes
 
 Revisamos os documentos de axuda relacionados coa creación e xestión de ambientes en Customer Insights. Os artigos agrúpanse agora no nó Entornos da táboa de contidos. Os artigos reestruturados ofrecen máis orientación sobre as diferentes formas de configurar ambientes e teñen unha estrutura máis clara. Se tes comentarios que compartir, avísanos a través dos controis ao final dos artigos de axuda.
 
-Para obter máis información, consulte [Como: Crear un novo ambiente](create-environment.md) .
+Para obter máis información, consulte [Como: Crear un novo ambiente](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Actualizacións de abril de 2022
 
 As actualizacións de abril de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
 
-### <a name="dun--bradstreet-enrichment-preview"></a>Dun & Bradstreet enrichment (Preview)
+### <a name="dun--bradstreet-enrichment-preview"></a>Enriquecemento de Dun & Bradstreet (versión previa)
 
-Dun & Bradstreet provides commercial data, analytics, and insights for businesses. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
+Dun & Bradstreet ofrece datos comerciais, análises e información para as empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
 
-For more information, see [Enrichment of company profiles with Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Para obter máis información, consulte [Enriquecemento dos perfís da empresa con Dun & Bradstreet (Previsualización)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Defina o tipo de medida ao crear unha nova medida
 
 Agora podes distinguir entre medidas para perfís individuais e medidas de toda a túa empresa. Mentres as medidas comerciais aparecen na páxina de inicio de Customer Insights, as medidas dos clientes están expostas nas vistas detalladas dos clientes.
 
-Para obter máis información, consulte [Usa o creador de medidas para crear medidas desde cero](measure-builder.md) .
+Para obter máis información, consulte [Usa o creador de medidas para crear medidas desde cero](measure-builder.md).
 
 ### <a name="consolidation-of-customer-insights-documentation"></a>Consolidación da documentación de Customer Insights
 
@@ -198,7 +206,7 @@ Azure Synapse Analytics é un servizo de análise empresarial que acelera o temp
 
 Organizacións que xa usan Azure Synapse Analytics pode inxerir eses datos a Customer Insights. 
 
-Para obter máis información, consulte [Conectar un Azure Synapse orixe de datos (vista previa)](connect-synapse.md).
+Para obter máis información, consulte [Conectar un Azure Synapse orixe de datos (Vista previa)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>Enriquecemento LiveRamp (vista previa)
 
@@ -210,7 +218,7 @@ Para obter máis información, consulte [Enriquece os perfís de clientes con da
 
 Use datos de fontes como Microsoft e outros socios para enriquecer os datos dos seus clientes antes da unificación de datos. Os enriquecementos orixe de datos axudan a producir datos máis completos e de calidade que poden axudar a conseguir mellores resultados unha vez que unifiques os teus datos.
 
-Para obter máis información, consulte [Enriquecemento para fontes de datos (vista previa)](data-sources-enrichment.md).
+Para obter máis información, consulte [Enriquecemento de fontes de datos (Previsualización)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Modificar propietario do ambiente
 
@@ -248,7 +256,7 @@ As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rend
 
 Customer Insights ofrece unha nova función impulsada pola IA para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
 
-Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (Vista previa)](sentiment-analysis.md).
+Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (vista previa)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

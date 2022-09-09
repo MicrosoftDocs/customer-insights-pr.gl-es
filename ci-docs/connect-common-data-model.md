@@ -12,22 +12,22 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245785"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396044"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarse con datos en Azure Data Lake Storage
 
-Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Storage Conta Gen2. A inxestión de datos pode ser completa ou incremental.
+Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Storage Conta Gen2. A inxestión de datos pode ser total ou incremental.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Admite a inxestión de datos Azure Data Lake Storage *Xeración 2* contas exclusivamente. Non podes usar contas de Data Lake Storage Gen1 para inxerir datos.
 
-- O Azure Data Lake Storage conta debe ter [espazo de nomes xerárquico habilitado](/azure/storage/blobs/data-lake-storage-namespace). Os datos deben almacenarse nun formato de cartafol xerárquico que defina o cartafol raíz e teña subcartafoles para cada entidade. Os subcartafoles poden ter datos completos ou cartafoles de datos incrementais.
+- O Azure Data Lake Storage conta debe ter [espazo de nomes xerárquico activado](/azure/storage/blobs/data-lake-storage-namespace). Os datos deben almacenarse nun formato de cartafol xerárquico que defina o cartafol raíz e teña subcartafoles para cada entidade. Os subcartafoles poden ter datos completos ou cartafoles de datos incrementais.
 
 - Para autenticarse cunha entidade de seguranza do servizo de Azure, asegúrese de que está configurada no seu inquilino. Para obter máis información, consulte [Conectar a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md).
 
@@ -39,6 +39,8 @@ Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Sto
   - Lector de datos do BLOB de almacenamento
   - Propietario dos datos do BLOB de almacenamento
   - Colaborador de datos do BLOB de almacenamento
+
+- O usuario que configura a conexión orixe de datos necesita os permisos mínimos de Storage Blob Data Contributor na conta de almacenamento.
 
 - Os datos do almacenamento de Data Lake deben seguir o estándar do modelo de datos común para o almacenamento dos seus datos e ter o manifesto do modelo de datos común para representar o esquema dos ficheiros de datos (*.csv ou *.parquet). O manifesto debe proporcionar os detalles das entidades, como as columnas de entidades e os tipos de datos, así como a localización do ficheiro de datos e o tipo de ficheiro. Para obter máis información, consulte [Manifesto do modelo común de datos](/common-data-model/sdk/manifest). Se o manifesto non está presente, os usuarios administradores con acceso de propietario de datos de blob de almacenamento ou de colaborador de datos de blob de almacenamento poden definir o esquema ao inxerir os datos.
 
@@ -52,7 +54,7 @@ Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Sto
 
    :::image type="content" source="media/data_sources_ADLS.png" alt-text="Cadro de diálogo para introducir detalles de conexión para Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Introduza a **Nome** para o orixe de datos e un opcional **Descrición**. O nome identifica de forma única o orixe de datos e faise referencia nos procesos posteriores e non se pode cambiar.
+1. Introduza a **Nome** para o orixe de datos e un opcional **Descrición**. O nome identifica de forma exclusiva o orixe de datos e faise referencia nos procesos posteriores e non se pode cambiar.
 
 1. Escolla unha das seguintes opcións para **Conecta o teu almacenamento usando**. Para obter máis información, consulte [Conectar Customer Insights a un Azure Data Lake Storage Conta Gen2 cun principal de servizo de Azure](connect-service-principal.md).
 
@@ -62,16 +64,16 @@ Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Sto
    > [!NOTE]
    > Necesitas un dos seguintes roles no contedor ou na conta de almacenamento para crear o orixe de datos:
    >
-   >  - Storage Blob Data Reader é suficiente para ler desde unha conta de almacenamento e inxerir os datos a Customer Insights. 
+   >  - Storage Blob Data Reader é suficiente para ler desde unha conta de almacenamento e inxerir os datos a Customer Insights.
    >  - Se queres editar os ficheiros de manifesto directamente en Customer Insights, é necesario un Colaborador ou propietario de datos de Blob de almacenamento.  
   
-1. Escolla o nome do **Envase** que contén os datos e o esquema (ficheiro model.json ou manifest.json) desde os que importar os datos e seleccione **A continuación**.
+1. Escolla o nome do **Envase** que contén os datos e o esquema (ficheiro model.json ou manifest.json) dos que importar os datos e seleccione **A continuación**.
    > [!NOTE]
    > Calquera ficheiro model.json ou manifest.json asociado a outra orixe de datos do contorno non aparecerá na lista. Non obstante, o mesmo ficheiro model.json ou manifest.json pode usarse para fontes de datos en múltiples contornos.
 
 1. Para crear un novo esquema, vai a [Crea un novo ficheiro de esquema](#create-a-new-schema-file).
 
-1. Para utilizar un esquema existente, desprácese ata o cartafol que contén o ficheiro model.json ou manifest.cdm.json. Pode buscar dentro dun directorio para atopar o ficheiro.
+1. Para utilizar un esquema existente, desprácese ata o cartafol que contén o ficheiro model.json ou manifest.cdm.json. Podes buscar dentro dun directorio para atopar o ficheiro.
 
 1. Seleccione o ficheiro json e seleccione **A continuación**. Móstrase unha lista de entidades dispoñibles.
 
@@ -115,7 +117,7 @@ A carga de datos pode levar moito tempo. Despois dunha actualización exitosa, o
 1. Seleccione **Nova entidade**. O **Nova Entidade** pantallas de paneis.
 
 1. Introduza o nome da entidade e escolla **Localización dos ficheiros de datos**.
-   - **Varios ficheiros .csv ou .parquet** : busque o cartafol raíz, seleccione o tipo de patrón e introduza a expresión.
+   - **Varios ficheiros .csv ou .parquet** : navegue ata o cartafol raíz, seleccione o tipo de patrón e introduza a expresión.
    - **Ficheiros únicos .csv ou .parquet** : busque o ficheiro .csv ou .parquet e seleccióneo.
 
    :::image type="content" source="media/ADLS_new_entity_location.png" alt-text="Cadro de diálogo para crear unha nova entidade coa localización dos ficheiros de datos resaltada.":::
@@ -180,21 +182,21 @@ Podes actualizar o *Conéctate á conta de almacenamento usando* opción. Para o
 
 1. Seleccione **Seguinte**.
 1. Cambia calquera das seguintes opcións:
-   - Desprácese ata un ficheiro model.json ou manifest.json diferente cun conxunto diferente de entidades do contedor.
+   - Navega a un ficheiro model.json ou manifest.json diferente cun conxunto diferente de entidades do contedor.
    - Para engadir entidades adicionais para inxerir, seleccione **Nova entidade**.
    - Para eliminar as entidades xa seleccionadas se non hai dependencias, seleccione a entidade e **Eliminar**.
       > [!IMPORTANT]
       > Se hai dependencias no ficheiro model.json ou manifest.json existente e no conxunto de entidades, verá unha mensaxe de erro e non poderá seleccionar un ficheiro model.json ou manifest.json diferente. Elimine esas dependencias antes de cambiar o ficheiro model.json ou manifest.json ou cree unha nova orixe de datos co ficheiro model.json ou manifest.json que desexe usar para evitar eliminar as dependencias.
-   - Para cambiar a localización do ficheiro de datos ou a clave principal, seleccione **Editar**.
-   - Para cambiar os datos de inxestión incremental, consulte [Configure unha actualización incremental para fontes de datos de Azure Data Lake](incremental-refresh-data-sources.md).
-   - Cambia só o nome da entidade para que coincida co nome da entidade no ficheiro .json.
+   - Para cambiar a localización do ficheiro de datos ou a clave primaria, seleccione **Editar**.
+   - Para cambiar os datos de inxestión incremental, consulte [Configure un refresco incremental para as fontes de datos de Azure Data Lake](incremental-refresh-data-sources.md).
+   - Só cambia o nome da entidade para coincidir co nome da entidade no ficheiro .json.
 
      > [!NOTE]
-     > Mantén sempre o nome da entidade en Customer Insights igual que o nome da entidade dentro do ficheiro model.json ou manifest.json despois da inxestión. Customer Insights valida todos os nomes de entidades co model.json ou manifest.json durante cada actualización do sistema. Se se cambia o nome dunha entidade dentro de Customer Insights ou fóra, prodúcese un erro porque Customer Insights non pode atopar o novo nome de entidade no ficheiro .json. Se se cambiou accidentalmente o nome dunha entidade inxerida, edite o nome da entidade en Customer Insights para que coincida co nome do ficheiro .json.
+     > Manteña sempre o nome da entidade en Insights do cliente do mesmo xeito que o nome da entidade dentro do modelo.json ou manifesto.json ficheiro despois da inxestión. Customer Insights valida todos os nomes de entidades co modelo.json ou manifest.json durante cada refresco do sistema. Se se cambia un nome de entidade dentro de Insights de Cliente ou fóra, prodúcese un erro porque a percepción do cliente non pode atopar o novo nome da entidade no ficheiro .json. Se se cambiou accidentalmente un nome de entidade inxerido, edite o nome da entidade en Customer Insights para que coincida co nome do ficheiro .json.
 
 1. Seleccione **Atributos** para engadir ou cambiar atributos, ou para activar o perfil de datos. Seleccione **Feito**.
 
-1. Fai clic **Gardar** para aplicar os seus cambios e volver ao **Fontes de datos** páxina.
+1. Prema Gardar **para** aplicar os cambios e volver á **páxina de Fontes de** datos.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

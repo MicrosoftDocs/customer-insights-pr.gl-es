@@ -1,7 +1,7 @@
 ---
 title: Actualiza a configuración de unificación de clientes, contas ou contactos
 description: Actualiza regras duplicadas, regras de coincidencia ou campos unificados na configuración de unificación de clientes ou contas.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304333"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392469"
 ---
 # <a name="update-unification-settings"></a>Actualizar a configuración de unificación
 
@@ -38,7 +38,7 @@ Para revisar ou cambiar calquera configuración de unificación unha vez que se 
    > O **Condicións de coincidencia** O mosaico só se mostra se se seleccionaron varias entidades.
 
 1. Escolle o que queres actualizar:
-   - [Campos de orixe](#edit-source-fields) para engadir entidades ou atributos ou cambiar os tipos de atributos.
+   - [Campos de orixe](#edit-source-fields) para engadir atributos ou entidades ou cambiar os tipos de atributos. Para eliminar un atributo, consulte [Eliminar un campo unificado](#remove-a-unified-field). Para eliminar unha entidade, consulte [Eliminar unha entidade unificada](#remove-a-unified-entity).
    - [Rexistros duplicados](#manage-deduplication-rules) para xestionar regras de deduplicación ou combinar preferencias.
    - [Condicións de coincidencia](#manage-match-rules) para actualizar as regras de coincidencia en dúas ou máis entidades.
    - [Campos de clientes unificados](#manage-unified-fields) para combinar ou excluír campos. Tamén pode agrupar perfís relacionados en clústeres.
@@ -53,8 +53,6 @@ Para revisar ou cambiar calquera configuración de unificación unha vez que se 
 
 ## <a name="edit-source-fields"></a>Editar campos de orixe
 
-Non podes eliminar un atributo ou unha entidade se xa se unificaron.
-
 1. Seleccione **Editar** no **Campos de orixe** tella.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Captura de pantalla da páxina de campos de orixe que mostra o número de claves primarias, campos asignados e non asignados":::
@@ -66,6 +64,80 @@ Non podes eliminar un atributo ou unha entidade se xa se unificaron.
 1. Opcionalmente, pode cambiar a clave principal dunha entidade, os tipos de atributos e alternar **Cartografía intelixente** on ou off. Para obter máis información, consulte [Seleccione os campos de orixe](map-entities.md).
 
 1. Seleccione **A continuación** para facer cambios nas regras de deduplicación ou seleccionar **Garda e pecha** e volver a [Actualizar a configuración de unificación](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Eliminar un campo unificado
+
+Para eliminar un campo que foi unificado, o campo debe eliminarse de calquera dependencia como segmentos, medidas, enriquecementos ou relacións.
+
+1. Unha vez eliminadas todas as dependencias do campo, vai a **Datos** > **Unificar**.
+
+1. Seleccione **Editar** no **Campos de clientes unificados** tella.
+
+1. Seleccione todas as ocorrencias do campo e, a continuación, seleccione **Excluír**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Captura de pantalla da páxina de campos unificados que mostra os campos seleccionados e o botón Excluír":::
+
+1. Seleccione **Feito** para confirmar e, a continuación, seleccione **Garda e pecha**.
+
+   > [!TIP]
+   > Se ves a mensaxe "Non se puido gardar unify. O recurso especificado non se pode modificar ou eliminar debido a dependencias posteriores", entón o campo aínda se usa nunha dependencia posterior.
+
+1. Se o campo se usa nunha regra para rexistros duplicados ou condicións de coincidencia, siga os seguintes pasos. En caso contrario, vai ao seguinte paso.
+   1. Seleccione **Editar** no **Rexistros duplicados** tella.
+   1. Elimina o campo de todas as regras nas que se usa, se as hai, e despois selecciona **A continuación**.
+   1. No **Condicións de coincidencia** páxina, elimine o campo de todas as regras nas que se utiliza, se as hai, e despois seleccione **Garda e pecha**.
+   1. Seleccione **Unificar** > **Unifica os perfís e dependencias dos clientes**. Agarda a que se complete a unificación antes de pasar ao seguinte paso.
+
+1. Seleccione **Editar** no **Campos de orixe** tella.
+
+1. Seleccione **Seleccione entidades e campos** e desmarque a caixa de verificación situada xunto a cada aparición do campo.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Captura de pantalla do cadro de diálogo Seleccionar entidades e campos que mostra as caixas de verificación desactivadas":::
+
+1. Seleccione **Aplicar**.
+
+1. Seleccione **Gardar e pechar**.
+
+1. Seleccione **Unificar** > **Unifica os perfís e dependencias dos clientes** para actualizar o perfil unificado.
+
+### <a name="remove-a-unified-entity"></a>Eliminar unha entidade unificada
+
+Para eliminar unha entidade que foi unificada, a entidade debe eliminarse de calquera dependencia como segmentos, medidas, enriquecementos ou relacións.
+
+1. Unha vez eliminadas todas as dependencias da entidade, vai a **Datos** > **Unificar**.
+
+1. Seleccione **Editar** no **Campos de clientes unificados** tella.
+
+1. Seleccione todos os campos para a entidade e, a continuación, seleccione **Excluír**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Captura de pantalla dos campos unificados con todos os campos dunha entidade seleccionados e o botón Excluír":::
+
+1. Seleccione **Feito** para confirmar e, a continuación, seleccione **Garda e pecha**.
+
+   > [!TIP]
+   > Se ves a mensaxe "Non se puido gardar unify. O recurso especificado non se pode modificar ou eliminar debido a dependencias posteriores", entón a entidade aínda se usa nunha dependencia posterior.
+
+1. Seleccione **Editar** no **Rexistros duplicados** tella.
+
+1. Elimina todas as regras da entidade, se as hai, e selecciona **A continuación**.
+
+1. No **Condicións de coincidencia** páxina, seleccione a entidade e, a continuación, seleccione **Eliminar**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Captura de pantalla de Condicións de coincidencia coa entidade seleccionada e o botón Eliminar":::
+
+1. Seleccione **Gardar e pechar**.
+
+1. Seleccione **Editar** no **Campos de orixe** tella.
+
+1. Seleccione **Seleccione entidades e campos** e desmarque a caixa de verificación situada a carón da entidade.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Captura de pantalla do cadro de diálogo Seleccionar entidades e campos coa caixa de verificación de entidades desactivada":::
+
+1. Seleccione **Aplicar**.
+
+1. Seleccione **Gardar e pechar**.
+
+1. Seleccione **Unificar** > **Unifica os perfís e dependencias dos clientes** para actualizar o perfil unificado.
 
 ## <a name="manage-deduplication-rules"></a>Xestionar regras de deduplicación
 
@@ -163,25 +235,25 @@ Executar condicións de coincidencia executa só a deduplicación e as regras de
 
 1. Dende **Datos** > **Unificar** páxina, seleccione **Executar só condicións coincidentes**.
 
-   O **Rexistros duplicados** e **Condicións de coincidencia** mostra de azulexos **En cola** ou **Refrescante** estado.
+   Os **rexistros duplicados** e **as condicións** correspondentes mostran **o estado queued** ou **refrescante**.
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-1. Cando finalice o proceso de coincidencia, seleccione **Editar** no **Condicións de coincidencia** tella.
+1. Cando o proceso de correspondencia se complete, seleccione **Editar** nas **condicións** correspondentes.
 
    :::image type="content" source="media/match-KPIs.png" alt-text="Captura de pantalla recortada das métricas clave da páxina de coincidencias con números e detalles.":::
 
-1. Para facer cambios, consulte [Xestionar regras de deduplicación](#manage-deduplication-rules) ou [Xestionar as regras de xogo](#manage-match-rules).
+1. Para facer cambios, consulte [As regras](#manage-deduplication-rules) de deducplicación de xestión ou [xestione as regras](#manage-match-rules) do xogo.
 
-1. Executa o proceso de coincidencia de novo ou [executar actualizacións do perfil](#run-updates-to-the-unified-profile).
+1. Executar o proceso de xogo de novo ou [executar actualizacións para o perfil](#run-updates-to-the-unified-profile).
 
-## <a name="run-updates-to-the-unified-profile"></a>Executa actualizacións do perfil unificado
+## <a name="run-updates-to-the-unified-profile"></a>Actualizar o perfil unificado
 
-- Para executar condicións coincidentes e actualizar a entidade do perfil unificado *sen* dependencias que afectan (como tarxetas de clientes, enriquecementos, segmentos ou medidas), seleccione **Unificar os perfís de clientes**. Para as contas, seleccione **Unificar contas** > **Unificar perfís**. Para os contactos, seleccione **Unificar contactos (vista previa)** > **Unificar perfís**. Os procesos dependentes non se executan, pero actualizaranse como [definido no programa de actualización](schedule-refresh.md).
-- Para executar condicións coincidentes, actualizar o perfil unificado e executar todas as dependencias, seleccione **Unifica os perfís de clientes e as dependencias**. Todos os procesos reexecútanse automaticamente. Para contas e contactos, seleccione **Unificar contas** > **Unificar perfís e dependencias**. As condicións coincidentes execútanse tanto para as contas como para os contactos, actualizando os perfís unificados e execútanse todas as demais dependencias.
+- Para executar as condicións correspondentes e actualizar a entidade *de perfil unificado sen* afectar a dependencias (como tarxetas de cliente, enriquecementos, segmentos ou medidas), seleccione **Unificar os perfís** de cliente. Para as contas, seleccione **Unify contas** > **Unify perfís**. Para contactos, seleccione **Contactos Unify (preview)** > **Unificar perfís**. Os procesos dependentes non se executan, pero actualizaranse como [definido no programa de actualización](schedule-refresh.md).
+- Para executar as condicións correspondentes, actualizar o perfil unificado e executar todas as dependencias, seleccione **Unificar perfís de clientes e dependencias**. Todos os procesos reexecútanse automaticamente. Para contas e contactos, seleccione **Unificar contas** > **Unificar perfís e dependencias**. As condicións de correspondencia exetóranse tanto para contas como para contactos que actualizan tanto perfís unificados como todas as demais dependencias.
 
-Todas as tellas excepto **Campos de orixe** mostrar **En cola** ou **Refrescante**.
+Todos, excepto **os campos** de orixe, mostran **queued** ou **refrescante**.
 
 [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-Os resultados dunha execución exitosa móstranse no **Unificar** páxina que mostra o número de perfís unificados.
+Os resultados dunha exhibición exitosa na **páxina Unify** que mostra o número de perfís unificados.

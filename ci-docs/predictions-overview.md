@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083098"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411829"
 ---
 # <a name="predictions-overview"></a>Visión xeral de predicións
 
@@ -38,15 +38,12 @@ O xeito máis sinxelo de comezar coa predición de datos é cos modelos predefin
 ---
 
 > [!TIP]
-> Recomendamos que actualices regularmente os modelos prefabricados con datos actualizados para asegurarte de que informen con precisión o caso de uso empresarial. Os datos actualízanse ad hoc cando o sistema inxire fontes de datos novas ou actualizadas. Non obstante, os modelos só repuntarán neste caso e seguirán utilizando os datos de adestramento existentes.
-> 
+> Recomendámosche que actualices regularmente os modelos prefabricados con datos actualizados para asegurarte de que informen con precisión o teu caso de uso empresarial. Os datos actualízanse ad hoc cando o sistema inxire fontes de datos novas ou actualizadas. Non obstante, os modelos só repuntarán neste caso e seguirán utilizando os datos de adestramento existentes.
+>
 > Podes configurar un **Actualizar horario** configurando o programa de reciclaxe do modelo na experiencia de configuración. O modelo volverá adestrar e recalificarase nesta programación, que podes cambiar en calquera momento.
-
 
 ## <a name="azure-machine-learning-integration"></a>Integración da Aprendizaxe automática de Azure
 
 Se unha organización xa usa escenarios de aprendizaxe automática baseados en experimentos da Aprendizaxe automática de Azure, a función de modelos personalizados en Customer Insights axuda a conectar os puntos. Cree fluxos de traballo que lle axuden a escoller os datos dos que quere xerar información e asigne os resultados aos perfís de clientes unificados. Para obter máis información, consulte [Modelos de aprendizaxe automática personalizados](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder predición
-
-Ás veces, os conxuntos de datos están incompletos e faltan algúns valores. Customer Insights pode axudar a predicir os valores que faltan para os segmentos e a entidade de cliente. Para obter máis información, consulte [Completar os datos parciais con predicións](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Usar os modelos personalizados da Aprendizaxe automática de Azure
           href: custom-models.md
-        - name: Completar os datos que faltan parcialmente
-          href: predictions.md
     - name: Guías de mostra
       items:
         - name: Guía de mostra para predicir o VDC
