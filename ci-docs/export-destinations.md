@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304057"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460188"
 ---
 # <a name="exports-preview-overview"></a>Visión xeral das exportacións (versión preliminar)
 
@@ -41,7 +41,7 @@ A maioría das opcións de exportación admiten ambos tipos de ambientes. A expo
 **Segmenta as exportacións en contornos para contas empresariais (B-to-B)**  
 - Os segmentos no contexto de ambientes para contas empresariais están construídos sobre o *conta* entidade ou o *contacto* entidade. Para exportar os segmentos de conta tal cal, o sistema de destino debe soportar segmentos de conta puros. Este é o caso de [LinkedIn](export-linkedin-ads.md) cando escolla a opción **empresa** mentres se define a exportación.
 - O resto de sistemas de destino requiren campos da entidade de contacto.
-- Con dous tipos de segmentos (contactos e contas), Customer Insights identifica automaticamente que tipo de segmentos son aptos para exportar en función do sistema de destino. Por exemplo, para un sistema de destino centrado nos contactos como Mailchimp, Customer Insights só che permite escoller segmentos de contacto para exportar.
+- Con dous tipos de segmentos (contactos e contas), Customer Insights identifica automaticamente que tipo de segmentos son aptos para exportar en función do sistema de destino. Por exemplo, para un sistema de destino centrado en contactos como Mailchimp, Customer Insights só che permite escoller segmentos de contactos para exportar.
 
 **Límites das exportacións de segmentos**  
 - Os sistemas de destino de terceiros poden limitar o número de perfís de clientes que pode exportar. 
@@ -81,6 +81,11 @@ Seleccione unha exportación para ver as accións dispoñibles.
 ## <a name="schedule-and-run-exports"></a>Programar e executar exportacións
 
 Cada exportación que configura ten unha programación de actualización. Durante unha actualización, o sistema busca datos novos ou actualizados para incluír nunha exportación. Por defecto, as exportacións execútanse como parte de todas as [actualización do sistema programadas](schedule-refresh.md). Pode personalizar a programación de actualización ou desactivala para executar as exportacións manualmente.
+
+> [!TIP]
+> Minimiza o tempo de procesamento das exportacións de segmentos coas seguintes prácticas recomendadas:
+> - Distribuír as entidades do segmento en varias exportacións.
+> - Evite programar todas as exportacións ao mesmo tempo. Deixa 30 minutos ou unha hora entre a hora programada de cada exportación.
 
 As programacións de exportación dependen do estado do seu ambiente. Se hai actualizacións en curso nas [dependencias](system.md#refresh-processes) cando debería iniciarse unha exportación programada, o sistema primeiro completará as actualizacións e logo executará a exportación. O **Actualizado** a columna mostra a última vez que se actualizou unha exportación.
 

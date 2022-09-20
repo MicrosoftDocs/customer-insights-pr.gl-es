@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194921"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473640"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complemento da tarxeta de cliente para as aplicacións de Dynamics 365 (vista previa)
 
@@ -32,7 +32,8 @@ Obteña unha vista de 360 graos dos seus clientes directamente nas aplicacións
 - Para que os seus datos de Dynamics 365 se asignen aos perfís de clientes de Customer Insights, recomendamos que [inxerido desde a aplicación Dynamics 365 usando o Microsoft Dataverse conector](connect-power-query.md). Se utilizas un método diferente para inxerir contactos (ou contas) de Dynamics 365, asegúrate de que`contactid` (ou`accountid`) defínese como o campo [chave primaria para ese orixe de datos durante o proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Todos os usuarios de Dynamics 365 do complemento da tarxeta de cliente deben ser [engadidos como usuarios](permissions.md) en Customer Insights para ver os datos.
 - [Funcións de busca e filtro configuradas](search-filter-index.md) en Customer Insights.
-- Cada control de complemento depende de datos específicos de Customer Insights. Algúns datos e controis só están dispoñibles en contornos de tipos específicos. A configuración do complemento informarache se un control non está dispoñible debido ao tipo de ambiente seleccionado. Obteña máis información acerca de [casos de uso de contornos](work-with-business-accounts.md).
+- Algúns datos e controis só están dispoñibles en contornos de tipos específicos. A configuración do complemento informarache se un control non está dispoñible debido ao tipo de ambiente seleccionado. Este erro mostrarase no control ao renderizalo. Obteña máis información acerca de [casos de uso de contornos](work-with-business-accounts.md).
+- Cada control de complemento depende de datos específicos de Customer Insights.
   - **Control de medidas** require [medidas de atributos de cliente configuradas](measures.md).
   - **Control de intelixencia** require datos xerados usando [predicións ou modelos personalizados](predictions-overview.md).
   - **Control de detalles do cliente** mostra todos os campos do perfil dispoñibles no perfil de cliente unificado.

@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207043"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463263"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar a a Power Query orixe de datos
 
@@ -47,7 +47,7 @@ Engadir fontes de datos baseadas en Power Query conectores xeralmente segue os p
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Editar diálogo de consultas":::
 
-1. Tamén pode transformar os seus datos. Seleccione unha entidade para editar ou transformar. Use as opcións do Power Query xanela para aplicar transformacións. Cada transformación está listada en **Pasos aplicados**. Power Query ofrece numerosos [transformación preconstruída](/power-query/power-query-what-is-power-query#transformations) opcións.
+1. Tamén pode transformar os seus datos. Seleccione unha entidade para editar ou transformar. Use as opcións do Power Query xanela para aplicar transformacións. Cada transformación está listada debaixo **Pasos aplicados**. Power Query ofrece numerosos [transformación preconstruída](/power-query/power-query-what-is-power-query#transformations) opcións.
 
    Recomendamos que use as seguintes transformacións:
 
@@ -63,7 +63,9 @@ Engadir fontes de datos baseadas en Power Query conectores xeralmente segue os p
 A carga de datos pode levar moito tempo. Despois dunha actualización exitosa, os datos inxeridos pódense revisar desde o [**Entidades**](entities.md) páxina.
 
 > [!CAUTION]
-> Un orixe de datos baseado en Power Query crea a [fluxo de datos en Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Non cambies o nome dun fluxo de datos no ficheiro Power Platform centro de administración que se usa en Customer Insights. Cambiar o nome dun fluxo de datos provoca problemas coas referencias entre o Customer Insights orixe de datos e o Dataverse fluxo de datos.
+>
+> - Un orixe de datos baseado en Power Query crea a [fluxo de datos en Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Non cambies o nome dun fluxo de datos no ficheiro Power Platform centro de administración que se usa en Customer Insights. Cambiar o nome dun fluxo de datos provoca problemas coas referencias entre Customer Insights orixe de datos e Dataverse fluxo de datos.
+> - Avaliacións concorrentes para Power Query as fontes de datos en Customer Insights teñen o mesmo [límites de actualización como Dataflows en PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Se unha actualización de datos falla porque alcanzou o límite de avaliación, recomendámosche que axustes a programación de actualización para cada fluxo de datos para garantir que as fontes de datos non se procesen ao mesmo tempo.
 
 ### <a name="available-power-query-data-sources"></a>Dispoñible Power Query fontes de datos
 
@@ -77,7 +79,7 @@ Admítese a inxestión de datos das fontes de datos local en función de Microso
 
 Fontes de datos que se crean despois de asociar a Dataverse ambiente co uso de Customer Insights [Power Platform fluxos de datos](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Os fluxos de datos admiten conectividade local mediante a pasarela de datos. Pode eliminar e recrear fontes de datos que existían antes de a Dataverse ambiente estaba asociado [usando pasarelas de datos local](/data-integration/gateway/service-gateway-app).
 
-Pasarelas de datos dun existente Power BI ou Power Apps o ambiente estará visible e poderás reutilizalos en Customer Insights. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Microsoft Power Platform onde pode ver e configurar pasarelas de datos locais.
+Pasarelas de datos dun existente Power BI ou Power Apps o ambiente estará visible e poderás reutilizalos en Customer Insights se a pasarela de datos e o ambiente Customer Insights están na mesma rexión de Azure. A páxina de fontes de datos mostra ligazóns para ir ao ambiente de Microsoft Power Platform onde pode ver e configurar pasarelas de datos locais.
 
 > [!IMPORTANT]
 > Asegúrate de que as túas pasarelas estean actualizadas á última versión. Pode instalar unha actualización e reconfigurar unha pasarela desde unha solicitude que se mostra na pantalla da pasarela directamente ou [descarga a última versión](https://powerapps.microsoft.com/downloads/). Se non utilizas a última versión da pasarela, a actualización do fluxo de datos falla con mensaxes de erro como **Non se admite a palabra clave: propiedades de configuración. Nome do parámetro: palabra clave**.
