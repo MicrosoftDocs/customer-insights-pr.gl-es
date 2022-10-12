@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
-ms.translationtype: MT
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.translationtype: HT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409355"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609590"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
@@ -218,7 +218,7 @@ Para obter máis información, consulte [Enriquece os perfís de clientes con da
 
 Use datos de fontes como Microsoft e outros socios para enriquecer os datos dos seus clientes antes da unificación de datos. Os enriquecementos orixe de datos axudan a producir datos máis completos e de calidade que poden axudar a conseguir mellores resultados unha vez que unifiques os teus datos.
 
-Para obter máis información, consulte [Enriquecemento de fontes de datos (Previsualización)](data-sources-enrichment.md).
+Para obter máis información, consulte [Enriquecemento das fontes de datos (Previsualización)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Modificar propietario do ambiente
 
@@ -228,16 +228,16 @@ Para obter máis información, consulte [Cambiar o propietario dun ambiente](man
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>O proceso de preparación de datos enumera os motivos da corrupción dos rexistros danados
 
-A preparación de datos agora mostra o motivo da corrupción de todos os campos con datos danados. A información ofrécese a nivel de rexistro individual para facilitar a identificación. 
+A preparación de datos agora mostra o motivo da corrupción de todos os campos con datos danados. A información ofrécese a nivel de rexistro individual para facilitar a identificación.
 
-Para obter máis información, consulte [Fontes de datos danadas](entities.md#corrupted-data-sources).
+Para obter máis información, consulte [Fontes de datos corruptas](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Fin da vista previa para as funcións de informes na capacidade de información de compromiso
 
 O Dynamics 365 Customer Insights A vista previa da capacidade de información de compromiso finalizou o 15 de febreiro de 2022.  
 Este cambio significa que a experiencia de proba de Customer Insights xa non inclúe a posibilidade de crear funis nin outras funcións de informes.
 
-Convidámoste a explorar e avaliar outras moitas características de [Insights do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
+Convidámoste a explorar e avaliar outras moitas características de [Información do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
  
 Durante un período de transición, os participantes existentes de vista previa aínda teñen acceso a algunhas capacidades e funcións de vista previa:
 
@@ -256,7 +256,7 @@ As actualizacións de xaneiro de 2022 inclúen novas funcións, melloras de rend
 
 Customer Insights ofrece unha nova función impulsada pola IA para sintetizar o sentimento dos clientes e identificar aspectos comerciais específicos como oportunidades de melloras específicas. Ao analizar os comentarios escritos dos teus clientes, podes obter información precisa a baixo custo. Análise de sentimentos impulsada por modelos de procesamento da linguaxe natural (NLP) que xeran dous coñecementos derivados para cada ID de cliente. Unha puntuación de sentimento (de –5 a 5) e unha lista de aspectos comerciais aplicables. 
 
-Para obter máis información, consulte [Analiza o sentimento nos comentarios dos clientes (vista previa)](sentiment-analysis.md).
+Para obter máis información, consulte [Analizar o sentimento nos comentarios dos clientes (vista previa)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Conectar a a Power Query orixe de datos (contén vídeo)
 description: Inxerir datos a través de a Power Query conector (contén vídeo).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463263"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609888"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar a a Power Query orixe de datos
 
@@ -43,16 +43,17 @@ Engadir fontes de datos baseadas en Power Query conectores xeralmente segue os p
 
 1. Seleccione **Transformar datos**.
 
-1. O **Power Query - Editar consultas** diálogo permítelle revisar e refinar os datos. As entidades que os sistemas identificaron na orixe de datos seleccionada aparecen no panel esquerdo.
+1. Revisa e perfecciona os teus datos na páxina **Power Query - Editar consultas** páxina. As entidades que os sistemas identificaron na orixe de datos seleccionada aparecen no panel esquerdo.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Editar diálogo de consultas":::
 
-1. Tamén pode transformar os seus datos. Seleccione unha entidade para editar ou transformar. Use as opcións do Power Query xanela para aplicar transformacións. Cada transformación está listada debaixo **Pasos aplicados**. Power Query ofrece numerosos [transformación preconstruída](/power-query/power-query-what-is-power-query#transformations) opcións.
+1. Transforma os teus datos. Seleccione unha entidade para editar ou transformar. Use as opcións do Power Query xanela para aplicar transformacións. Cada transformación está listada en **Pasos aplicados**. Power Query ofrece numerosos [transformación preconstruída](/power-query/power-query-what-is-power-query#transformations) opcións.
 
-   Recomendamos que use as seguintes transformacións:
-
-   - Se está inxerindo datos dun ficheiro CSV, a primeira fila a miúdo contén cabeceiras. Ir a **Transformar** e selecciona **Use a primeira fila como cabeceiras**.
-   - Asegúrese de que o tipo de datos está configurado correctamente. Por exemplo, para os campos de data, seleccione un tipo de data.
+   > [!IMPORTANT]
+   > Recomendamos que use as seguintes transformacións:
+   >
+   > - Se está inxerindo datos dun ficheiro CSV, a primeira fila a miúdo contén cabeceiras. Ir a **Transformar** e selecciona **Use a primeira fila como cabeceiras**.
+   > - Asegúrese de que o tipo de datos estea configurado correctamente e coincida cos datos. Por exemplo, para os campos de data, seleccione un tipo de data.
 
 1. Para engadir entidades adicionais ao teu orixe de datos no **Editar consultas** diálogo, vai a **Casa** e selecciona **Obter datos**. Repita os pasos 5-10 ata engadir todas as entidades para este orixe de datos. Se ten unha base de datos que inclúe varios conxuntos de datos, cada conxunto de datos é a súa propia entidade.
 
@@ -102,5 +103,51 @@ Pasarelas de datos dun existente Power BI ou Power Apps o ambiente estará visib
 1. Seleccione **Gardar** para aplicar os seus cambios e volver ao **Fontes de datos** páxina.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Motivos comúns para erros de inxestión ou datos corruptos
+
+### <a name="data-type-does-not-match-data"></a>O tipo de datos non coincide cos datos
+
+A discrepancia de tipos de datos máis común ocorre cando un campo de data non está configurado co formato de data correcto.
+
+Os datos pódense fixar na orixe e reinxerirse. Ou corrixa a transformación en Customer Insights. Para corrixir a transformación:
+
+1. Vaia a **Datos** > **Orixes de datos**.
+
+1. A carón do orixe de datos cos datos danados, selecciona **Editar**.
+
+1. Seleccione **Seguinte**.
+
+1. Seleccione cada unha das consultas e busque as transformacións aplicadas dentro de "Pasos aplicados" que sexan incorrectas ou as columnas de data que non se transformaron cun formato de data.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Editar que mostra un formato de data incorrecto":::
+
+1. Cambia o tipo de datos para que coincidan correctamente cos datos.
+
+1. Seleccione **Gardar**. Ese orixe de datos actualízase.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Solucionar problemas de PPDF Power Query problemas de actualización baseados en orixe de datos
+
+Se os datos están obsoletos ou recibe erros despois dunha actualización orixe de datos, siga os seguintes pasos:
+
+1. Navegue a [Power Platform](https://make.powerapps.com).
+
+1. Seleccione o **Medio ambiente** para a súa instancia de Customer Insights.
+
+1. Navega ata **Fluxos de datos**.
+
+1. Para o fluxo de datos que corresponde ao orixe de datos en Customer Insights, seleccione os puntos suspensivos verticais (&vellip;) e, a continuación, seleccione **Mostrar o historial de actualización**.
+
+1. Se o **Estado** do fluxo de datos é **Éxito**, a propiedade do Power Query -based orixe de datos podería ter cambiado:
+
+   1. Revisa a programación de actualización a partir do historial de actualización.
+   1. Establece a programación do novo propietario e garda a configuración.
+
+1. Se o **Estado** do fluxo de datos é **Fallou**:
+
+   1. Descarga o ficheiro do historial de actualización.
+   1. Revisa o ficheiro descargado para coñecer o motivo do fallo.
+   1. Se o erro non se pode resolver, seleccione **?** Para abrir un ticket de soporte. Inclúe o ficheiro do historial de actualización descargado.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

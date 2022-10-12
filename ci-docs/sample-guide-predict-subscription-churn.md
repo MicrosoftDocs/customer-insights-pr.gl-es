@@ -1,7 +1,7 @@
 ---
 title: Guía de mostra da predición do abandono da subscrición
 description: Utilice esta guía de mostra para probar o modelo de predición do abandono da subscrición listo para usar.
-ms.date: 03/31/2022
+ms.date: 09/19/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,77 +11,73 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 7e754be9a2cb9450949c6b3667bbd37aa39cf0bf
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741409"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610004"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Guía de mostra da predición do abandono da subscrición
 
-Guiarémolo a través dun exemplo integral de predición do abandono da subscrición empregando os datos de exemplo fornecidos a continuación. 
+Esta guía explicarache un exemplo de extremo a extremo de eliminación de subscricións predición usando datos de mostra. Recomendámosche que probes este predición [nun novo ambiente](manage-environments.md).
 
 ## <a name="scenario"></a>Escenario
 
-Contoso é unha empresa que produce cafés e máquinas de café de alta calidade, que venden a través do seu sitio web Contoso Coffee. Recentemente iniciaron un negocio de subscrición para que os seus clientes tomasen café de xeito habitual. O seu obxectivo é comprender que clientes subscritos poden cancelar a súa subscrición nos próximos meses. Sabendo cal dos seus clientes é **susceptible de abandonar**, pode axudalos a aforrar esforzos de marketing centrándose en mantelos.
+Contoso é unha empresa que produce café e máquinas de café de alta calidade. Venden os produtos a través do seu sitio web Contoso Coffee. Recentemente iniciaron un negocio de subscrición para que os seus clientes tomasen café de xeito habitual. O seu obxectivo é comprender que clientes subscritos poden cancelar a súa subscrición nos próximos meses. Saber cal dos seus clientes é **susceptible de revolverse** pode axudarlles a aforrar esforzos de mercadotecnia centrándose en mantelos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Polo menos [Permisos de colaborador](permissions.md) en Customer Insights.
-- Recomendámoslle que implemente os seguintes pasos [nun novo ambiente](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1: inxerir datos
 
-Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando fontes de datos usando Power Query conectores](connect-power-query.md) concretamente. A seguinte información supón que está familiarizado coa inxestión de datos en xeral. 
+Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [conectando a a Power Query orixe de datos](connect-power-query.md). A seguinte información supón que estás familiarizado coa inxestión de datos en xeral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inxerir datos de clientes desde a plataforma de comercio electrónico
 
-1. Cree unha orixe de datos denominada **eCommerce**, escolla a opción de importación e seleccione o conector **Texto/CSV**.
+1. Crea un Power Query orixe de datos chamado **comercio electrónico** e selecciona o **Texto/CSV** conector.
 
 1. Insira o URL dos contactos de comercio electrónico https://aka.ms/ciadclasscontacts.
 
-1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
+1. Mentres editas os datos, selecciona **Transformar** e despois **Use a primeira fila como cabeceiras**.
 
 1. Actualice o tipo de datos para as columnas listadas a continuación:
-
    - **DateOfBirth**: data
    - **CreatedOn**: data/hora/fuso
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transforme a data de nacemento en data.":::
 
-1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
+1. No **Nome** no panel da dereita, cambie o nome do seu orixe de datos a **eCommerceContactos**
 
 1. Garde a orixe de datos.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Inxerir datos de clientes desde o esquema de fidelización
 
-1. Cree unha orixe de datos denominada **LoyaltyScheme**, escolla a opción de importación e seleccione o conector **Texto/CSV**.
+1. Crea un orixe de datos chamado **Esquema de fidelidade** e selecciona o **Texto/CSV** conector.
 
-1. Insira o URL dos contactos de comercio electrónico https://aka.ms/ciadclasscustomerloyalty.
+1. Introduza o URL para os clientes de fidelidade https://aka.ms/ciadclasscustomerloyalty.
 
-1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
+1. Mentres editas os datos, selecciona **Transformar** e despois **Use a primeira fila como cabeceiras**.
 
 1. Actualice o tipo de datos para as columnas listadas a continuación:
-
    - **DateOfBirth**: data
    - **RewardsPoints**: número enteiro
    - **CreatedOn**: data/hora
 
-1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **loyCustomers**.
+1. No **Nome** no panel da dereita, cambie o nome do seu orixe de datos a **Clientes loy**.
 
 1. Garde a orixe de datos.
 
 ### <a name="ingest-subscription-information"></a>Inxerir información da subscrición
 
-1. Cree unha orixe de datos denominada **SubscriptionHistory**, escolla a opción de importación e seleccione o conector **Texto/CSV**.
+1. Crea un orixe de datos chamado **Historial de subscricións** e selecciona o **Texto/CSV** conector.
 
-1. Insira o URL dos contactos de comercio electrónico https://aka.ms/ciadchurnsubscriptionhistory.
+1. Introduza o URL para as subscricións https://aka.ms/ciadchurnsubscriptionhistory.
 
-1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
+1. Mentres editas os datos, selecciona **Transformar** e despois **Use a primeira fila como cabeceiras**.
 
 1. Actualice o tipo de datos para as columnas listadas a continuación:
-
    - **SubscriptioID**: número enteiro
    - **SubscriptionAmount**: moeda
    - **SubscriptionEndDate**: data/hora
@@ -91,92 +87,107 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando f
    - **Is_auto_renew**: verdadeiro/falso
    - **RecurringFrequencyInMonths**: número enteiro
 
-1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **SubscriptionHistory**.
+1. No **Nome** no panel da dereita, cambie o nome do seu orixe de datos a **Historial de subscricións**.
 
 1. Garde a orixe de datos.
 
 ### <a name="ingest-customer-data-from-website-reviews"></a>Inxerir datos de clientes a partir de comentarios de sitios web
 
-1. Cree unha orixe de datos denominada **Website**, escolla a opción de importación e seleccione o conector **Texto/CSV**.
+1. Crea un orixe de datos chamado **Sitio web** e selecciona o **Texto/CSV** conector.
 
-1. Insira o URL dos contactos de comercio electrónico https://aka.ms/ciadclasswebsite.
+1. Introduza o URL para as revisións do sitio web https://aka.ms/ciadclasswebsite.
 
-1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
+1. Mentres editas os datos, selecciona **Transformar** e despois **Use a primeira fila como cabeceiras**.
 
 1. Actualice o tipo de datos para as columnas listadas a continuación:
-
    - **ReviewRating**: número enteiro
    - **ReviewDate**: data
 
-1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **webReviews**.
+1. No **Nome** no panel da dereita, cambie o nome do seu orixe de datos a **Reseñas web**.
 
 ## <a name="task-2---data-unification"></a>Tarefa 2: unificación de datos
 
+Revisa o artigo [sobre a unificación de datos](data-unification.md). A seguinte información supón que está familiarizado coa unificación de datos en xeral.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tarefa 3: configurar a predición de abandono da subscrición
+## <a name="task-3---create-transaction-history-activity"></a>Tarefa 3: crear actividade de historial de transaccións
 
-Cos perfís de clientes unificados no seu lugar, agora podemos executar a predición de abandono de subscricións. Para ver os pasos detallados, consulte [Churn de subscricións predición](predict-subscription-churn.md) artigo. 
+Revisa o artigo [sobre as actividades dos clientes](activities.md). A seguinte información supón que está familiarizado coa creación de actividades en xeral.
 
-1. Vaia a **Intelixencia** > **Descubrir** e seleccione para usar o **Modelo de abandono do cliente**.
+1. Crea unha actividade chamada **Historial de subscricións** co *Subscrición* entidade e a súa clave primaria, **ID de cliente**.
 
-1. Seleccione a opción **Subscrición** e seleccione **Comezar**.
+1. Crea unha relación entre *Historial de subscricións:Subscrición* e *eCommerceContactos: eCommerce* con **ID de cliente** como clave externa para conectar as dúas entidades.
+
+1. Seleccione **Tipo de subscrición** para o **EventActivity** e **SubscriciónEndDate** para o **Selo de tempo**.
+
+1. Seleccione **Subscrición** para o **Tipo de actividade** e mapear semanticamente os datos da actividade.
+
+1. Executar a actividade.
+
+1. Engade outra actividade e asigna os nomes dos seus campos aos campos correspondentes:
+   - Entidade de actividade do cliente: Reviews:Website
+   - Clave principal: Website.Reviews.ReviewId
+   - Marca de tempo: Website.Reviews.ReviewDate
+   - Evento (nome da actividade): Website.Reviews.ActivityTypeDisplay
+   - Detalles (importe ou valor): Website.Reviews.ReviewRating
+
+1. Executar a actividade.
+
+## <a name="task-4---configure-the-subscription-churn-prediction"></a>Tarefa 4: configurar a predición de abandono da subscrición
+
+Cos perfís de clientes unificados existentes e a actividade creada, executa a eliminación de subscricións predición. Para os pasos detallados, consulte [Churn de subscricións predición](predict-subscription-churn.md).
+
+1. Ir a **Intelixencia** > **Predicións**.
+
+1. No **Crear** ficha, seleccione **Usa modelo** no **Modelo de abandono de clientes** tella.
+
+1. Seleccione **Subscrición** para o tipo de churn e despois **Comezar**.
 
 1. Nomee o modelo **Predición do abandono da subscrición de OOB** e a entidade de saída **OOBSubscriptionChurnPrediction**.
 
-1. Defina dúas condicións para o modelo de abandono:
+1. Definir as preferencias do modelo:
+   - **Días desde que finalizou a subscrición** :**60** días para indicar que un cliente se considera despedido se non renova a subscrición neste período despois de que finalice a súa subscrición.
+   - **Días para investigar o futuro para prever o abandono** :**93** días, que é a duración que o modelo prevé que clientes poden abandonar. Canto máis se mira no futuro, menos precisos serán os resultados.
 
-   * **Días desde que finalizou a subscrición**: **polo menos 60** días. Se un cliente non renova a subscrición neste período despois de que finalizase a súa subscrición, considérase perdido. 
+   :::image type="content" source="media/model-subs-levers.PNG" alt-text="Seleccione as preferencias do modelo e a definición do churn.":::
 
-   * **Definición de abandono**: **polo menos 93** días. A duración do modelo predí que clientes poderían abandonar. Canto máis se mira no futuro, menos precisos serán os resultados.
+1. Seleccione **Seguinte**.
 
-     :::image type="content" source="media/model-subs-levers.PNG" alt-text="Seleccione as opcións do modelo Ventá de predición e Definición de abandono.":::
+1. No **Datos requiridos** paso, seleccione **Engadir datos** para proporcionar o historial de subscricións.
 
-1. Seleccione **Engadir datos requiridos** e seleccione **Engadir datos** para o historial de subscricións.
+1. Seleccione **Subscrición** e a entidade SubscriptionHistory e seleccione **A continuación**. Os datos necesarios enchéranse automaticamente desde a actividade. Seleccione **Gardar**.
 
-1. Engada a entidade **Subscription : SubscriptionHistory** e asigne os campos de comercio electrónico aos campos correspondentes requiridos polo modelo.
+1. En Actividades do cliente, seleccione **Engadir datos**.
 
-1. Una a entidade **Subscription : SubscriptionHistory** con **eCommerceContacts : eCommerce**, nomee a relación **eCommerceSubscription**.
+1. Para este exemplo, engade a actividade de revisión web.
 
-   :::image type="content" source="media/model-subscription-join.PNG" alt-text="Unir entidades de comercio electrónico.":::
+1. Seleccione **Seguinte**.
 
-1. En Actividades do cliente, engada a entidade **webReviews : Website** e asigne os campos de webReviews aos campos correspondentes requiridos polo modelo. 
-   - Clave principal: ReviewId
-   - Marca de tempo: ReviewDate
-   - Evento: ReviewRating
-
-1. Configure unha actividade para as opinións de sitios web. Seleccione a actividade **Opinión** e una a entidade **webReviews : Website** con **eCommerceContacts : eCommerce**.
-
-1. Seleccione **Seguinte** para establecer a programación do modelo.
-
-   O modelo necesita adestrarse regularmente para aprender novos padróns cando se inxiren novos datos. Para este exemplo, seleccione **Mensual**.
+1. No **Actualizacións de datos** paso, seleccione **Mensuais** para o modelo de horario.
 
 1. Despois de revisar todos os detalles, seleccione **Gardar e executar**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>Tarefa 4: revisar resultados e explicacións do modelo
+## <a name="task-5---review-model-results-and-explanations"></a>Tarefa 5: revisar resultados e explicacións do modelo
 
-Deixe que o modelo complete o adestramento e a puntuación dos datos. Agora pode revisar as explicacións do modelo de abandono de subscricións. Para obter máis información, consulte [Revisar o estado e os resultados dunha predición](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Deixe que o modelo complete o adestramento e a puntuación dos datos. Revisa as explicacións do modelo de abandono da subscrición. Para obter máis información, consulte [Ver os resultados de predición](predict-subscription-churn.md#view-prediction-results).
 
-## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Tarefa 5: crear un segmento de clientes con alto risco de abandono
+## <a name="task-6---create-a-segment-of-high-churn-risk-customers"></a>Tarefa 6: crear un segmento de clientes con alto risco de abandono
 
-Executar o modelo de produción crea unha nova entidade na que pode ver en **Datos** > **Entidades**.   
+Ao executar o modelo créase unha nova entidade, que aparece na lista **Datos** > **Entidades**. Pode crear un novo segmento baseado na entidade creada polo modelo.
 
-Pode crear un novo segmento baseado na entidade creada polo modelo.
+1. Na páxina de resultados, seleccione **Crear segmento**.
 
-1.  Vaia a **Segmentos**. Seleccione **Novo** e elixa **Crear a partir de** > **Intelixencia**. 
+1. Crea unha regra usando o **OOBsubscriptionChurnPrediction** entidade e define o segmento:
+   - **Campo** : ChurnScore
+   - **Operador** : máis grande cá
+   - **Valor** : 0,6
 
-   :::image type="content" source="media/segment-intelligence.PNG" alt-text="Creación dun segmento coa saída do modelo.":::
+1. Seleccione **Gardar** e **Corre** o segmento.
 
-1. Seleccione o extremo **OOBSubscriptionChurnPrediction** e defina o segmento: 
-   - Campo: ChurnScore
-   - Operador: maior que
-   - Valor: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Configurar o segmento de abandono de subscricións.":::
+Agora ten un segmento que se actualiza dinámicamente para identificar clientes con alto risco de abandono para este negocio da subscrición. Para ver máis información, consulte: [Creación e xestión de segmentos](segments.md).
 
-Agora ten un segmento que se actualiza dinámicamente para identificar clientes con alto risco de abandono para este negocio da subscrición.
-
-Para ver máis información, consulte: [Creación e xestión de segmentos](segments.md).
-
+> [!TIP]
+> Tamén podes crear un segmento para un modelo predición a partir de **Segmentos** páxina seleccionando **Novo** e escollendo **Crear dende** > **Intelixencia**. Para obter máis información, consulte [Crea un novo segmento con segmentos rápidos](segment-quick.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Entidades en Customer Insights
 description: Vexa os datos na páxina de entidades.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183550"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610096"
 ---
 # <a name="entities-in-customer-insights"></a>Entidades en Customer Insights
 
@@ -61,27 +61,5 @@ Ir a **Datos** > **Entidades** para ver unha lista de entidades. A seguinte info
   - **Creada** : Data e hora de creación da entidade.
   - **Editado por** : Nome da persoa que modificou a entidade.
   - **Editado** : Data e hora da modificación da entidade.
-
-## <a name="entity-specific-information"></a>Información específica da entidade
-
-A seguinte sección ofrece información sobre algunhas entidades creadas polo sistema.
-
-### <a name="corrupted-data-sources"></a>Orixes de datos danadas
-
-Os campos dunha orixe de datos inxerida poden conter datos danados. Os rexistros con campos danados expóñense en entidades creadas polo sistema. Coñecer os rexistros danados axuda a identificar que datos hai que revisar e actualizar no sistema de orixe. Despois da seguinte actualización da orixe de datos, os rexistros corrixidos inxírense en Customer Insights e transmítense aos procesos descendentes. 
-
-Por exemplo, unha columna "aniversario" ten o tipo de datos definido como "data". Un rexistro de cliente introduciu o seu aniversario como "01/01/19777". O sistema marcará este rexistro como danado. Agora outra persoa pode cambiar o aniversario no sistema de orixe a "1977". Despois dunha actualización automatizada das orixes de datos, o campo ten un formato válido e o rexistro eliminarase da entidade danada.
-
-Vaia a **Datos** > **Entidades** e busque as entidades danadas na sección **Sistema**. Esquema de nomeamento de entidades danadas: "DataSourceName_EntityName_corrupt". Seleccione unha entidade corrupta para identificar os campos danados e o motivo a nivel de rexistro individual.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Motivo de corrupción.":::
-
-Customer Insights aínda procesa rexistros danados. Non obstante, poden causar problemas ao traballar cos datos unificados.
-
-As seguintes comprobacións execútanse nos datos inxeridos para expoñer rexistros danados:
-
-- O valor dun campo non coincide co tipo de datos da súa columna.
-- Os campos conteñen caracteres que fan que as columnas non coincidan co esquema esperado. Por exemplo: comiñas con formato incorrecto, comiñas sen escape ou caracteres de nova liña.
-- Se hai columnas datatime/date/datetimeoffset, o seu formato debe especificarse no modelo se non segue o formato ISO estándar.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

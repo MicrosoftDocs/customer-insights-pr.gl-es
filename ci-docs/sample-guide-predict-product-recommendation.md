@@ -1,7 +1,7 @@
 ---
 title: Guía de mostra de predición de recomendacións de produtos
 description: Utilice esta guía de mostra para probar o modelo de predición de recomendacións de produtos.
-ms.date: 05/16/2022
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,37 +12,36 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
-ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
+ms.openlocfilehash: 2b42a89e3f4ec8cf4f0769128b8536973365f1cb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 05/16/2022
-ms.locfileid: "8762684"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610142"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Guía de mostra de predición de recomendacións de produtos
 
-Guiarémolo a través dun exemplo integral de predición de recomendacións de produtos empregando os datos de exemplo fornecidos a continuación.
+Esta guía guíache por un exemplo completo de recomendación de produtos predición utilizando datos de mostra. Recomendámosche que probes este predición [nun novo ambiente](manage-environments.md).
 
 ## <a name="scenario"></a>Escenario
 
-Contoso é unha empresa que produce cafés e máquinas de café de alta calidade, que venden a través do seu sitio web Contoso Coffee. O seu obxectivo é comprender que produtos deben recomendar aos seus clientes recorrentes. Sabendo que clientes son máis **susceptibles a comprar**, pode axudalos a aforrar esforzos de marketing centrándose en elementos específicos.
+Contoso é unha empresa que produce café e máquinas de café de alta calidade. Venden os produtos a través do seu sitio web Contoso Coffee. O seu obxectivo é comprender que produtos deben recomendar aos seus clientes recorrentes. Coñecer cales son máis os clientes **susceptible de comprar** pode axudarlles a aforrar esforzos de mercadotecnia centrándose en elementos específicos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Polo menos [Permisos de colaborador](permissions.md) en Customer Insights.
-- Recomendámoslle que implemente os seguintes pasos [nun novo ambiente](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1: inxerir datos
 
-Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando fontes de datos usando Power Query conectores](connect-power-query.md) concretamente. A seguinte información supón que está familiarizado coa inxestión de datos en xeral.
+Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [conectando a a Power Query orixe de datos](connect-power-query.md). A seguinte información supón que estás familiarizado coa inxestión de datos en xeral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inxerir datos de clientes desde a plataforma de comercio electrónico
 
-1. Cree unha orixe de datos denominada **eCommerce**, escolla a opción de importación e seleccione o conector **Texto/CSV**.
+1. Crea un Power Query orixe de datos chamado **comercio electrónico** e selecciona o **Texto/CSV** conector.
 
-1. Introduza o URL dos contactos de comercio electrónico: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
+1. Introduza o URL dos contactos de comercio electrónico:https://aka.ms/ciadclasscontacts.
 
-1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
+1. Mentres editas os datos, selecciona **Transformar** e despois **Use a primeira fila como cabeceiras**.
 
 1. Actualice o tipo de datos para as columnas listadas a continuación:
    - **DateOfBirth**: data
@@ -50,7 +49,7 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando f
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transforme a data de nacemento en data.":::
 
-1. No campo "Nome" no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **eCommerceContacts**
+1. No **Nome** no panel da dereita, cambie o nome do seu orixe de datos a **eCommerceContactos**.
 
 1. **Garde** a orixe de datos.
 
@@ -58,106 +57,109 @@ Revisa os artigos [sobre a inxestión de datos](data-sources.md) e [importando f
 
 1. Engada outro conxunto de datos á mesma orixe de datos de **comercio electrónico**. Escolla o conector **Texto/CSV** de novo.
 
-1. Introduza o URL para **Compras en liña** datos [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
+1. Introduza o URL dos datos de compras en liña https://aka.ms/ciadclassonline.
 
-1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
+1. Mentres editas os datos, selecciona **Transformar** e despois **Use a primeira fila como cabeceiras**.
 
 1. Actualice o tipo de datos para as columnas listadas a continuación:
    - **PurchasedOn**: data/hora
    - **TotalPrice**: moeda
 
-1. No campo **Nome** do panel lateral, cambie o nome da súa orixe de datos de **Consulta** a **eCommercePurchases**.
+1. No **Nome** no panel lateral, cambie o nome do seu orixe de datos a **eCommerceCompras**.
 
 1. **Garde** a orixe de datos.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Inxerir datos de clientes desde o esquema de fidelización
 
-1. Cree unha orixe de datos denominada **LoyaltyScheme**, escolla a opción de importación e seleccione o conector **Texto/CSV**.
+1. Crea un orixe de datos chamado **Esquema de fidelidade** e selecciona o **Texto/CSV** conector.
 
-1. Introduza o URL dos contactos de comercio electrónico [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
+1. Introduza o URL dos clientes fieis https://aka.ms/ciadclasscustomerloyalty.
 
-1. Mentres edita os datos, seleccione **Transformar** e logo **Usar a primeira fila como cabeceiras**.
+1. Mentres editas os datos, selecciona **Transformar** e despois **Use a primeira fila como cabeceiras**.
 
 1. Actualice o tipo de datos para as columnas listadas a continuación:
    - **DateOfBirth**: data
    - **RewardsPoints**: número enteiro
    - **CreatedOn**: data/hora
 
-1. No campo **Nome** no panel da dereita, cambie o nome da súa orixe de datos de **Consulta** a **loyCustomers**.
+1. No **Nome** no panel da dereita, cambie o nome do seu orixe de datos a **Clientes loy**.
 
 1. **Garde** a orixe de datos.
 
 ## <a name="task-2---data-unification"></a>Tarefa 2: unificación de datos
 
+Revisa o artigo [sobre a unificación de datos](data-unification.md). A seguinte información supón que está familiarizado coa unificación de datos en xeral.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-product-recommendation-prediction"></a>Tarefa 3: configurar a predición de recomendacións de produtos
+## <a name="task-3---create-transaction-history-activity"></a>Tarefa 3: crear actividade de historial de transaccións
 
-Cos perfís de clientes unificados, agora podemos executar a recomendación de produtos predición.
+Revisa o artigo [sobre as actividades dos clientes](activities.md). A seguinte información supón que está familiarizado coa creación de actividades en xeral.
 
-1. Vaia a **Intelixencia** > **Predición** e escolla **Recomendación de produtos**.
+1. Crea unha actividade chamada **eCommerceCompras** co *eCommerceCompras: eCommerce* entidade e a súa clave primaria, **Id de compra**.
+
+1. Crea unha relación entre *eCommercePurchases: eCommerce* e *eCommerceContactos: eCommerce* con **ContactID** como clave externa para conectar as dúas entidades.
+
+1. Seleccione **Prezo total** para o **EventActivity** e **CompradoOn** para o **Selo de tempo**.
+
+1. Seleccione **Liña de pedidos de vendas** para o **Tipo de actividade** e mapear semanticamente os datos da actividade.
+
+1. Executar a actividade.
+
+## <a name="task-4---configure-product-recommendation-prediction"></a>Tarefa 4: configurar a predición de recomendacións de produtos
+
+Cos perfís de clientes unificados e a actividade creada, executa a recomendación de produto predición.
+
+1. Ir a **Intelixencia** > **Predicións**.
+
+1. No **Crear** ficha, seleccione **Usa modelo** no **Recomendacións de produtos (vista previa)** tella.
 
 1. Seleccione **Comezar**.
 
 1. Dea nome ao modelo **Predición do modelo de recomendación de produtos de OOB** e a entidade de saída **OOBProductRecommendationModelPrediction**.
 
-1. Defina tres condicións para o modelo:
+1. Seleccione **Seguinte**.
 
-   - **Número de produtos**: Configure este valor en **5**. Esta configuración define cantos produtos desexa recomendar aos seus clientes.
-
-   - **Compras repetidas esperadas**: seleccione **Si** para indicar que quere incluír produtos na recomendación que os seus clientes compraron con anterioridade.
-
-   - **Ventá para ver días pasados:** Seleccione polo menos **365 días**. Esta configuración define o número de días pasados que o modelo mira na actividade do cliente que se van usar como entrada para as súas recomendacións.
+1. Definir as preferencias do modelo:
+   - **Número de produtos** :**5** para definir cantos produtos queres recomendar aos teus clientes.
+   - **Se esperan compras repetidas** :**Si** para incluír produtos adquiridos previamente na recomendación.
+   - **Mirar cara atrás fiestra:** **365 días** para definir ata onde mirará o modelo antes de recomendar un produto de novo.
 
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Preferencias do modelo de recomendación de produtos.":::
 
-1. No **Engade os datos necesarios** paso, seleccione **Engadir datos**.
+1. Seleccione **Seguinte**.
 
-1. No **Engadir datos** panel, escolla o **Liña de pedido de vendas** como a entidade do historial de compras. Neste momento, é probable que aínda non estea configurado. Abre a ligazón no panel para crear a actividade cos seguintes pasos:
-   1. Introduza un **Nome da actividade** e escolle *eCommerceCompras: eCommerce* como **Entidade actividade**. O **Chave primaria** é *Id de compra*.
-   1. Define e nomea a relación co *eCommerceContacts: entidade de comercio electrónico* e escolle **ContactId** como clave externa.
-   1. Para a unificación de actividade, establece **Actividade do evento** como *Prezo total* e marca de tempo para *CompradoOn*. Podes especificar máis campos como se indica en [Actividades do cliente](activities.md).
-   1. Para **Tipo de actividade**, escolle *Liña de pedido de vendas*. Mapea os seguintes campos de actividade:
-      - ID da liña de pedido: PurchaseId
-      - ID do pedido: PurchaseId
-      - Datos do pedido: PurchasedOn
-      - ID do produto: ID do produto
-      - Importe: Prezo total
-   1. Revisa e remata a actividade antes de volver á configuración do modelo.
+1. No **Engadir historial de compras** paso, seleccione **Engadir datos**.
 
-1. De volta no **Selecciona actividades** paso, escolla a actividade recentemente creada no **Actividades** sección. Seleccione **A continuación** e a asignación de atributos xa está cuberta. Seleccione **Gardar**.
+1. Seleccione **Liña de pedidos de vendas** e a entidade eCommercePurchases e seleccione **A continuación**. Os datos necesarios enchéranse automaticamente desde a actividade. Seleccione **Gardar** e despois **A continuación**.
 
-1. Nesta guía de exemplo, omitimos o **Engade información do produto** e **Filtros de produtos** definido porque non temos datos de información do produto.
+1. Saltar o **Engade información do produto** e **Filtros de produtos** pasos porque non temos datos de información do produto.
 
-1. No **Actualizacións de datos** paso, configure o horario do modelo.
+1. No **Actualizacións de datos** paso, seleccione **Mensuais** para o modelo de horario.
 
-   O modelo necesita adestrarse regularmente para aprender novos padróns cando se inxiren novos datos. Para este exemplo, seleccione **Mensual**.
+1. Seleccione **Seguinte**.
 
-1. Despois de revisar todos os detalles, seleccione **Gardar e executar**. Levará uns minutos executar o modelo a primeira vez.
+1. Despois de revisar todos os detalles, seleccione **Gardar e executar**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>Tarefa 4: revisar resultados e explicacións do modelo
+## <a name="task-5---review-model-results-and-explanations"></a>Tarefa 5: revisar resultados e explicacións do modelo
 
-Deixe que o modelo complete o adestramento e a puntuación dos datos. Agora pode revisar as explicacións do modelo de recomendación de produtos. Para obter máis información, consulte [Revisar o estado e os resultados dunha predición](predict-transactional-churn.md#review-a-prediction-status-and-results).
+Deixe que o modelo complete o adestramento e a puntuación dos datos. Revisa o [explicacións do modelo de recomendación de produtos](predict-transactional-churn.md#view-prediction-results).
 
-## <a name="task-5---create-a-segment-of-high-purchased-products"></a>Tarefa 5: crear un segmento de produtos moi comprados
+## <a name="task-6---create-a-segment-of-high-purchased-products"></a>Tarefa 6: crear un segmento de produtos moi comprados
 
-Executar o modelo de produción crea unha nova entidade na que pode ver en **Datos** > **Entidades**.
+Ao executar o modelo créase unha nova entidade, que aparece na lista **Datos** > **Entidades**. Pode crear un novo segmento baseado na entidade creada polo modelo.
 
-Pode crear un novo segmento baseado na entidade creada polo modelo.
+1. Na páxina de resultados, seleccione **Crear segmento**.
 
-1. Vaia a **Segmentos**. Seleccione **Novo** e escolle **Crear a partir da intelixencia**.
+1. Crea unha regra usando o **OOBProductRecommendationModelPrediction** entidade e define o segmento:
+   - **Campo** : ID de produto
+   - **Valor** : selecciona os tres principais ID de produto
 
-   ![Creación dun segmento coa saída do modelo.](media/segment-intelligence.png)
+1. Seleccione **Gardar** e **Corre** o segmento.
 
-1. Seleccione o extremo **OOBProductRecommendationModelPrediction** e defina o segmento:
+Agora tes un segmento que se actualiza de forma dinámica no que se identifican os clientes que poden estar interesados en adquirir os cinco produtos máis recomendados. Para ver máis información, consulte: [Creación e xestión de segmentos](segments.md).
 
-   - Campo: ProductID
-   - Valor: seleccione os tres identificadores de produto principais
-
-   :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Cree un segmento a partir dos resultados do modelo.":::
-
-Agora tes un segmento que se actualiza de forma dinámica que identifica os clientes que poden estar interesados en comprar os tres produtos máis recomendados.
-
-Para ver máis información, consulte: [Creación e xestión de segmentos](segments.md).
+> [!TIP]
+> Tamén podes crear un segmento para un modelo predición a partir de **Segmentos** páxina seleccionando **Novo** e escollendo **Crear dende** > **Intelixencia**. Para obter máis información, consulte [Crea un novo segmento con segmentos rápidos](segment-quick.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

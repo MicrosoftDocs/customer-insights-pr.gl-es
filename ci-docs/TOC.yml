@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Usar os modelos personalizados da Aprendizaxe automática de Azure
           href: custom-models.md
+        - name: Crear segmentos baseados en predicións
+          href: prediction-based-segment.md
     - name: Guías de mostra
       items:
         - name: Guía de mostra para predicir o VDC
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Experimentos con Aprendizaxe automática de Azure
           href: azure-machine-learning-experiments.md
-    - name: Xestionar predicións
-      href: manage-predictions.md
-    - name: Crear segmentos baseados en predicións
-      href: prediction-based-segment.md
 - name: Exportar opcións
   items:
     - name: Exportacións

@@ -1,7 +1,7 @@
 ---
 title: Conectar cun cartafol de Common Data Model cunha conta de Azure Data Lake
 description: Traballe con datos de Common Data Model usando Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396044"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609940"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarse con datos en Azure Data Lake Storage
 
@@ -42,7 +42,11 @@ Inxerir datos en Dynamics 365 Customer Insights usando o teu Azure Data Lake Sto
 
 - O usuario que configura a conexión orixe de datos necesita os permisos mínimos de Storage Blob Data Contributor na conta de almacenamento.
 
-- Os datos do almacenamento de Data Lake deben seguir o estándar do modelo de datos común para o almacenamento dos seus datos e ter o manifesto do modelo de datos común para representar o esquema dos ficheiros de datos (*.csv ou *.parquet). O manifesto debe proporcionar os detalles das entidades, como as columnas de entidades e os tipos de datos, así como a localización do ficheiro de datos e o tipo de ficheiro. Para obter máis información, consulte [Manifesto do modelo común de datos](/common-data-model/sdk/manifest). Se o manifesto non está presente, os usuarios administradores con acceso de propietario de datos de blob de almacenamento ou de colaborador de datos de blob de almacenamento poden definir o esquema ao inxerir os datos.
+- Os datos do almacenamento de Data Lake deberían seguir o estándar do modelo de datos común para o almacenamento dos seus datos e ter o manifesto do modelo de datos común para representar o esquema dos ficheiros de datos (*.csv ou *.parquet). O manifesto debe proporcionar os detalles das entidades, como as columnas de entidades e os tipos de datos, así como a localización do ficheiro de datos e o tipo de ficheiro. Para obter máis información, consulte [Manifesto do modelo común de datos](/common-data-model/sdk/manifest). Se o manifesto non está presente, os usuarios administradores con acceso de propietario de datos de blob de almacenamento ou de colaborador de datos de blob de almacenamento poden definir o esquema ao inxerir os datos.
+
+## <a name="recommendations"></a>Recomendacións
+
+Para un rendemento óptimo, Customer Insights recomenda que o tamaño dunha partición sexa de 1 GB ou menos e que o número de ficheiros de partición nun cartafol non supere os 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Conectar con Azure Data Lake Storage
 
@@ -187,17 +191,113 @@ Podes actualizar o *Conéctate á conta de almacenamento usando* opción. Para o
    - Para eliminar as entidades xa seleccionadas se non hai dependencias, seleccione a entidade e **Eliminar**.
       > [!IMPORTANT]
       > Se hai dependencias no ficheiro model.json ou manifest.json existente e no conxunto de entidades, verá unha mensaxe de erro e non poderá seleccionar un ficheiro model.json ou manifest.json diferente. Elimine esas dependencias antes de cambiar o ficheiro model.json ou manifest.json ou cree unha nova orixe de datos co ficheiro model.json ou manifest.json que desexe usar para evitar eliminar as dependencias.
-   - Para cambiar a localización do ficheiro de datos ou a clave primaria, seleccione **Editar**.
-   - Para cambiar os datos de inxestión incremental, consulte [Configure un refresco incremental para as fontes de datos de Azure Data Lake](incremental-refresh-data-sources.md).
-   - Só cambia o nome da entidade para coincidir co nome da entidade no ficheiro .json.
+   - Para cambiar a localización do ficheiro de datos ou a clave principal, seleccione **Editar**.
+   - Para cambiar os datos de inxestión incremental, consulte [Configure unha actualización incremental para fontes de datos de Azure Data Lake](incremental-refresh-data-sources.md).
+   - Cambia só o nome da entidade para que coincida co nome da entidade no ficheiro .json.
 
      > [!NOTE]
-     > Manteña sempre o nome da entidade en Insights do cliente do mesmo xeito que o nome da entidade dentro do modelo.json ou manifesto.json ficheiro despois da inxestión. Customer Insights valida todos os nomes de entidades co modelo.json ou manifest.json durante cada refresco do sistema. Se se cambia un nome de entidade dentro de Insights de Cliente ou fóra, prodúcese un erro porque a percepción do cliente non pode atopar o novo nome da entidade no ficheiro .json. Se se cambiou accidentalmente un nome de entidade inxerido, edite o nome da entidade en Customer Insights para que coincida co nome do ficheiro .json.
+     > Mantén sempre o nome da entidade en Customer Insights igual que o nome da entidade dentro do ficheiro model.json ou manifest.json despois da inxestión. Customer Insights valida todos os nomes de entidades co model.json ou manifest.json durante cada actualización do sistema. Se se cambia o nome dunha entidade dentro de Customer Insights ou fóra, prodúcese un erro porque Customer Insights non pode atopar o novo nome de entidade no ficheiro .json. Se se cambiou accidentalmente o nome dunha entidade inxerida, edite o nome da entidade en Customer Insights para que coincida co nome do ficheiro .json.
 
 1. Seleccione **Atributos** para engadir ou cambiar atributos, ou para activar o perfil de datos. Seleccione **Feito**.
 
-1. Prema Gardar **para** aplicar os cambios e volver á **páxina de Fontes de** datos.
+1. Fai clic **Gardar** para aplicar os seus cambios e volver ao **Fontes de datos** páxina.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Motivos comúns para erros de inxestión ou datos corruptos
+
+Durante a inxestión de datos, algúns dos motivos máis comúns polos que un rexistro pode considerarse corrupto inclúen:
+
+- Os tipos de datos e os valores de campo non coinciden entre o ficheiro fonte e o esquema
+- O número de columnas do ficheiro fonte non coincide co esquema
+- Os campos conteñen caracteres que fan que as columnas se inclúan en comparación co esquema esperado. Por exemplo: comiñas con formato incorrecto, comiñas sen escape, caracteres de nova liña ou caracteres con tabulacións.
+- Faltan ficheiros de partición
+- Se hai columnas datatime/date/datetimeoffset, o seu formato debe especificarse no esquema se non segue o formato estándar.
+
+### <a name="schema-or-data-type-mismatch"></a>Incompatibilidade de esquema ou tipo de datos
+
+Se os datos non se axustan ao esquema, o proceso de inxestión completase con erros. Corrixe os datos de orixe ou o esquema e volva inxerir os datos.
+
+### <a name="partition-files-are-missing"></a>Faltan ficheiros de partición
+
+- Se a inxestión tivo éxito sen rexistros corruptos, pero non podes ver ningún dato, edita o teu ficheiro model.json ou manifest.json para asegurarte de que se especifican as particións. Entón, [actualice o orixe de datos](data-sources.md#refresh-data-sources).
+
+- Se a inxestión de datos se produce ao mesmo tempo que se actualizan as fontes de datos durante unha actualización automática da programación, os ficheiros de partición poden estar baleiros ou non dispoñibles para que os procese Customer Insights. Para axustarse á programación de actualización ascendente, cambie [programa de actualización do sistema](schedule-refresh.md) ou o programa de actualización para o orixe de datos. Aliña o tempo para que non se produzan todas as actualizacións á vez e proporcione os datos máis recentes para procesar en Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Campos de data e hora nun formato incorrecto
+
+Os campos de data e hora da entidade non están en formato ISO 8601 nin en-US. O formato de data e hora predeterminado en Customer Insights é o formato en-EU. Todos os campos de data e hora dunha entidade deben estar no mesmo formato. Customer Insights admite outros formatos sempre que as anotacións ou os trazos se fagan a nivel de orixe ou de entidade no modelo ou manifest.json. Por exemplo:
+
+**Modelo.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Nun manifest.json, o formato de data e hora pódese especificar a nivel de entidade ou a nivel de atributo. A nivel de entidade, use "exhibitsTraits" na entidade en *.manifest.cdm.json para definir o formato de data e hora. No nivel de atributo, use "appliedTraits" no atributo de entityname.cdm.json.
+
+**Manifest.json a nivel de entidade**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json a nivel de atributo**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

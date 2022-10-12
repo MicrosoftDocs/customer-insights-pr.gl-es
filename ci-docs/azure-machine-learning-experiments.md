@@ -1,19 +1,19 @@
 ---
 title: Usar modelos baseados en Azure Machine Learning
 description: Use modelos baseados en Azure Machine Learning en Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082279"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609823"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Usar modelos baseados en Azure Machine Learning
 
@@ -35,7 +35,7 @@ Os datos unificados en Dynamics 365 Customer Insights son unha fonte para constr
 ## <a name="work-with-azure-machine-learning-designer"></a>Traballar co deseñador de Azure Machine Learning
 
 O deseñador de Azure Aprendizaxe automático ofrece un lenzo visual onde podes arrastrar e soltar conxuntos de datos e módulos. Unha canle por lotes creada a partir do deseñador pódese integrar en Customer Insights se se configura de acordo. 
-   
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Traballar co SDK de Azure Machine Learning
 
 Os científicos de datos e os desenvolvedores de IA usan o [SDK de Azure Machine Learning](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) para crear fluxos de traballo de aprendizaxe automática. Actualmente, os modelos adestrados usando o SDK non se poden integrar directamente con Customer Insights. Para integrarse con Customer Insights é necesaria unha canle de inferencia por lotes que consuma ese modelo.
@@ -44,17 +44,16 @@ Os científicos de datos e os desenvolvedores de IA usan o [SDK de Azure Machine
 
 ### <a name="dataset-configuration"></a>Configuración do conxunto de datos
 
-Debe crear conxuntos de datos para usar os datos da entidade de Customer Insights na súa canle de inferencia por lotes. Estes conxuntos de datos deben rexistrarse no espazo de traballo. Actualmente, só admitimos [conxuntos de datos tabulares](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) en formato .csv. Os conxuntos de datos que corresponden aos datos da entidade deben ser parametrizados como parámetro de canle.
-   
-* Parámetros do conxunto de datos no deseñador
-   
-     No deseñador, abra **Seleccionar columnas no conxunto de datos** e seleccione **Establecer como parámetro de canle** onde vostede fornece un nome para o parámetro.
+Cree conxuntos de datos para usar os datos de entidades de Customer Insights para a súa canalización de inferencias por lotes. Rexistra estes conxuntos de datos no espazo de traballo. Actualmente, só admitimos [conxuntos de datos tabulares](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) en formato .csv. Parametriza os conxuntos de datos que corresponden aos datos da entidade como parámetro de canalización.
 
-     > [!div class="mx-imgBorder"]
-     > ![Parametrización do conxunto de datos no deseñador.](media/intelligence-designer-dataset-parameters.png "Parametrización do conxunto de datos no deseñador")
-   
-* Parámetro do conxunto de datos no SDK (Python)
-   
+- Parámetros do conxunto de datos no deseñador
+
+  No deseñador, abra **Seleccionar columnas no conxunto de datos** e seleccione **Establecer como parámetro de canle** onde vostede fornece un nome para o parámetro.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Parametrización do conxunto de datos no deseñador.":::
+
+- Parámetro do conxunto de datos no SDK (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Debe crear conxuntos de datos para usar os datos da entidade de Customer Insight
 
 ### <a name="batch-inference-pipeline"></a>Canle de inferencia por lotes
   
-* No deseñador pódese usar unha canle de adestramento para crear ou actualizar unha canle de inferencia. Actualmente só se admiten canles de inferencia por lotes.
+- No deseñador, use unha canalización de adestramento para crear ou actualizar unha canalización de inferencia. Actualmente só se admiten canles de inferencia por lotes.
 
-* Usando o SDK, pode publicar a canle nun punto extremo. Actualmente, Customer Insights intégrase coa canle predeterminada nun extremo de canle por lotes no espazo de traballo de aprendizaxe automática.
-   
+- Usando o SDK, publica a canalización nun punto final. Actualmente, Customer Insights intégrase coa canle predeterminada nun extremo de canle por lotes no espazo de traballo de aprendizaxe automática.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Debe crear conxuntos de datos para usar os datos da entidade de Customer Insight
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importar datos da canle a Customer Insights
 
-* O deseñador proporciona o [módulo Exportar datos](/azure/machine-learning/algorithm-module-reference/export-data) que permite exportar a saída dunha canle ao almacenamento de Azure. Actualmente, o módulo debe usar o tipo de almacén de datos **Azure Blob Storage** e parametrizar o **Almacén de datos** e o **Camiño** relativo. Customer Insights anula estes dous parámetros durante a execución da canle cun almacén de datos e unha ruta que é accesible ao produto.
-   > [!div class="mx-imgBorder"]
-   > ![Exportar configuración do módulo de datos.](media/intelligence-designer-importdata.png "Exportar configuración do módulo de datos")
-   
-* Ao escribir a saída de inferencia usando código, pode cargar a saída no camiño a dentro dun *almacén de datos rexistrado* no espazo de traballo. Se a ruta e o almacén de datos están parametrizados na canle, Customer Insights poderá ler e importar a saída de inferencia. Actualmente, admítese unha única saída tabular en formato CSV. A ruta debe incluír o directorio e o nome do ficheiro.
+- O deseñador proporciona o [módulo Exportar datos](/azure/machine-learning/algorithm-module-reference/export-data) que permite exportar a saída dunha canle ao almacenamento de Azure. Actualmente, o módulo debe usar o tipo de almacén de datos **Azure Blob Storage** e parametrizar o **Almacén de datos** e o **Camiño** relativo. Customer Insights anula estes dous parámetros durante a execución da canle cun almacén de datos e unha ruta que é accesible ao produto.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Exportar configuración do módulo de datos.":::
+
+- Ao escribir a saída da inferencia usando código, cargue a saída a unha ruta dentro de a *almacén de datos rexistrado* no espazo de traballo. Se a ruta e o almacén de datos están parametrizados na canle, Customer Insights poderá ler e importar a saída de inferencia. Actualmente, admítese unha única saída tabular en formato CSV. A ruta debe incluír o directorio e o nome do ficheiro.
 
    ```python
    # In Pipeline setup script
