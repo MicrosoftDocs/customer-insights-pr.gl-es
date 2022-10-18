@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
-ms.translationtype: HT
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
+ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609590"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638349"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades de Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Lanzamos as actualizacións rexión por rexión. Así, certas rexións poden ver
 
 > [!TIP]
 > Para enviar e votar solicitudes de funcionalidades e suxestións de produtos, vaia ao [Portal de ideas da aplicación Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Actualizacións de setembro de 2022
+
+As actualizacións de setembro de 2022 inclúen novas funcións, melloras de rendemento e corrección de erros.
+
+### <a name="export-data-to-hubspot"></a>Exportar datos a HubSpot
+
+Exporta segmentos de perfís de clientes unificados a HubSpot e utilízaos para marketing por correo electrónico.
+
+Para obter máis información, consulte [Exportar segmentos a HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Eliminar un campo ou entidade unificado da unificación de datos
+
+Pode eliminar campos e entidades do proceso de unificación de datos.
+
+Para obter máis información, consulte [Eliminar un campo unificado](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Xestiona perfís de clientes descoñecidos
+
+A personalización memorable depende da riqueza e integridade dos datos dos teus clientes e Customer Insights axúdache a acadar estes obxectivos. Podes xestionar os perfís de clientes dos usuarios dos que non tes ningunha información que non sexa unha identificación.
+
+Para obter máis información, consulte [Xestiona perfís descoñecidos con Customer Insights](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Actualizacións de agosto de 2022
 
@@ -140,7 +162,7 @@ As actualizacións de abril de 2022 inclúen novas funcións, melloras de rendem
 
 Dun & Bradstreet ofrece datos comerciais, análises e información para as empresas. Permite aos clientes con perfís de clientes unificados para empresas enriquecer os seus datos. Os enriquecementos inclúen atributos como número DUNS, tamaño da empresa, localización, industria e moito máis.
 
-Para obter máis información, consulte [Enriquecemento dos perfís da empresa con Dun & Bradstreet (Previsualización)](enrichment-dnb.md).
+Para obter máis información, consulte [Enriquecemento dos perfís da empresa con Dun & Bradstreet (versión previa)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Defina o tipo de medida ao crear unha nova medida
 
@@ -214,11 +236,11 @@ LiveRamp ofrece resolución de identidade e consolidación de datos dos clientes
 
 Para obter máis información, consulte [Enriquece os perfís de clientes con datos de identidade de LiveRamp (vista previa)](enrichment-liveramp.md).
 
-### <a name="enrichment-for-data-sources-preview"></a>Enriquecemento para fontes de datos (vista previa)
+### <a name="enrichment-for-data-sources-preview"></a>Enriquecemento das fontes de datos (Previsualización)
 
 Use datos de fontes como Microsoft e outros socios para enriquecer os datos dos seus clientes antes da unificación de datos. Os enriquecementos orixe de datos axudan a producir datos máis completos e de calidade que poden axudar a conseguir mellores resultados unha vez que unifiques os teus datos.
 
-Para obter máis información, consulte [Enriquecemento das fontes de datos (Previsualización)](data-sources-enrichment.md).
+Para obter máis información, consulte [Enriquecemento para fontes de datos (vista previa)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Modificar propietario do ambiente
 
@@ -237,7 +259,7 @@ Para obter máis información, consulte [Fontes de datos corruptas](data-sources
 O Dynamics 365 Customer Insights A vista previa da capacidade de información de compromiso finalizou o 15 de febreiro de 2022.  
 Este cambio significa que a experiencia de proba de Customer Insights xa non inclúe a posibilidade de crear funis nin outras funcións de informes.
 
-Convidámoste a explorar e avaliar outras moitas características de [Información do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
+Convidámoste a explorar e avaliar outras moitas características de [Insights do cliente](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de datos de clientes de Microsoft (CDP).    
  
 Durante un período de transición, os participantes existentes de vista previa aínda teñen acceso a algunhas capacidades e funcións de vista previa:
 
