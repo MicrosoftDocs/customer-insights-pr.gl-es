@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424307"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671249"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Traballar con datos de Customer Insights en Microsoft Dataverse
 
@@ -63,6 +63,9 @@ O **Microsoft Dataverse** paso permíteche conectar Customer Insights co teu Dat
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Activa o uso compartido de datos con Dataverse do teu propio Azure Data Lake Storage (vista previa)
 
 En [ti mesmo Azure Data Lake Storage conta](own-data-lake-storage.md), verifique que o usuario que configure o ambiente de Customer Insights teña polo menos **Lector de datos de Blob de almacenamento** permisos sobre`customerinsights` contedor na conta de almacenamento.
+
+> [!NOTE]
+> A compartición de datos só é aplicable se usas o teu Azure Data Lake Storage conta. Esta configuración non está dispoñible se o ambiente de Customer Insights utiliza a predeterminada Dataverse almacenamento.
 
 ### <a name="limitations"></a>Limitacións
 
@@ -114,7 +117,7 @@ Configura PowerShell para executar scripts de PowerShell.
 
    :::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Opcións de configuración para activar a compartición de datos dende o teu Azure Data Lake Storage con Microsoft Dataverse .":::
 
-## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Eliminar unha conexión existente a un Dataverse ambiente
+## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Eliminar unha conexión existente a a Dataverse ambiente
 
 Ao conectarse a un Dataverse ambiente, a mensaxe de erro **Esta organización de CDS xa está asociada a outra instancia de Customer Insights** significa que o Dataverse o ambiente xa se usa nun ambiente de Customer Insights. Pode eliminar a conexión existente como administrador global no Dataverse ambiente. Pode tardar un par de horas en completar os cambios.
 
