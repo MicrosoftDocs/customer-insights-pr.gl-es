@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195427"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724480"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Exportar segmentos a Iterable (vista previa)
 
@@ -28,6 +28,7 @@ Exporta segmentos de perfís de clientes unificados a Iterable e utilízaos para
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
+- A ligazón privada en combinación con Trae o teu propio almacenamento (BYOS) non é compatible.
 - Ata 1 millón de perfís de clientes para Iterable, o que pode tardar ata 30 minutos en completarse. O número de perfís de clientes que pode exportar a Iterable depende do seu contrato con Iterable.
 - Só segmentos.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655295"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725214"
 ---
 # <a name="export-segments-to-braze-preview"></a>Exportar segmentos a Braze (vista previa)
 
@@ -29,6 +29,7 @@ Exporta segmentos de perfís de clientes unificados a Braze e utilízaos para ac
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
+- A ligazón privada en combinación con Trae o teu propio almacenamento (BYOS) non é compatible.
 - Ata 1 millón de perfís de clientes para Braze, o que pode tardar ata 40 minutos en completarse. O número de perfís de clientes que podes exportar a Braze depende do teu contrato con Braze.
 - Só segmentos.
 - Azure Private Link non é compatible coa exportación Braze.

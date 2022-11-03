@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196576"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725076"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos a Google Ads (versión preliminar)
 
@@ -30,6 +30,7 @@ Exporte segmentos de perfís de clientes unificados a unha lista de público de 
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
+- A ligazón privada en combinación con Trae o teu propio almacenamento (BYOS) non é compatible.
 - Exporta ata 1 millón de perfís de clientes por exportación a Google Ads, o que pode tardar ata 30 minutos en completarse debido ás limitacións do provedor.
 - Só segmentos.
 - A coincidencia en Google Ads pode tardar ata 48 horas.
@@ -72,7 +73,7 @@ Exporte segmentos de perfís de clientes unificados a unha lista de público de 
    - Para actualizar unha audiencia de Google Ads existente, introduce o teu [ID de público de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns).
    - Para crear unha nova audiencia, deixa o campo de ID de público de Google en branco. Customer Insights creará automaticamente unha nova audiencia na túa conta de Google Ads e utilizará o nome do segmento exportado.
 
-1. No **Correspondencia de datos** sección, seleccione un ou máis campos de datos para exportar e seleccione o campo que representa os campos de datos correspondentes en Customer Insights.
+1. No **Correspondencia de datos** sección, seleccione un ou máis campos de datos para exportar e seleccione o campo que represente os campos de datos correspondentes en Customer Insights.
 
 1. Seleccione os segmentos que desexa exportar.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 075e6758f2c6992a1185756f9beecf852fdd0a96
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196760"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724586"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Exportar segmentos a Klaviyo (vista previa)
 
@@ -29,6 +29,7 @@ Exporte segmentos de perfís de clientes unificados a Klaviyo e utilíceos para 
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
+- A ligazón privada en combinación con Trae o teu propio almacenamento (BYOS) non é compatible.
 - Ata 1 millón de perfís de clientes por exportación a Klaviyo, que pode tardar ata 20 minutos en completarse. O número de perfís de clientes que podes exportar a Klaviyo depende do teu contrato con Klaviyo.
 - Só segmentos.
 

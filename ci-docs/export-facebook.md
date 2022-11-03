@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195012"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724590"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segmentos a Facebook Xestor de anuncios (vista previa)
 
@@ -25,11 +25,13 @@ Exporte segmentos de perfís de clientes unificados ao Xestor de anuncios de Fac
 
 - A [Facebook Conta de anuncios](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclúe a [Facebook Conta comercial](https://business.facebook.com/).
 - Privilexios de administrador no [Facebook Conta de anuncios](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- O usuario que configura a conexión en Customer Insights debe aceptar as Condicións do público personalizado.
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
 - Ata 10 millóns de perfís de clientes por exportación a Facebook Xestor de anuncios, que pode levar ata 90 minutos.
 - Só segmentos.
+- Facebook A integración de anuncios non admite usuarios con máis de 25 contas publicitarias.
 - Facebook *lista de clientes* escriba [audiencias personalizadas](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) só.
   > [!NOTE]
   > Nalgúns casos, podes ver públicos personalizados de diferentes tipos na lista despregable. Se selecciona un tipo diferente que non sexa *lista de clientes*, a exportación falla.
@@ -68,7 +70,7 @@ Exporte segmentos de perfís de clientes unificados ao Xestor de anuncios de Fac
 
 1. Seleccione **Engadir exportación**.
 
-1. No **Conexión para exportación** campo, escolla unha conexión entre Facebook Sección Xestor de anuncios. Póñase en contacto cun administrador se non hai conexión dispoñible.
+1. No **Conexión para exportación** campo, escolla unha conexión do campo Facebook Sección Xestor de anuncios. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
 1. Introduza un nome para a exportación.
 

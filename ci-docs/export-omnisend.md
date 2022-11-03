@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196162"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725168"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exportar segmentos a Omnisend (versión preliminar)
 
@@ -28,7 +28,8 @@ Exporte segmentos de perfís de clientes unificados a Omnisend e utilíceos para
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- Ata 1 millón de perfís de clientes por exportación a Omnisend, o que pode tardar ata catro horas en completarse. O número de perfís de clientes que pode exportar a Omnisend depende do seu contrato con Omnisend.
+- A ligazón privada en combinación con Trae o teu propio almacenamento (BYOS) non é compatible.
+- Ata 1 millón de perfís de clientes por exportación a Omnisend, que pode tardar ata catro horas en completarse. O número de perfís de clientes que pode exportar a Omnisend depende do seu contrato con Omnisend.
 - Só segmentos.
 
 ## <a name="set-up-connection-to-omnisend"></a>Configurar conexión a Omnisend

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f2990ad410dda0cbf952f82f3fc30b3a53a7bcd4
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 855e77055eeb24a2c6cff0d45cd23edf93cc0581
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196990"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724846"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Exportar segmentos a SendGrid (versión preliminar)
 
@@ -29,6 +29,7 @@ Exporte segmentos de perfís de clientes unificados a listas de contactos de Sen
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
+- A ligazón privada en combinación con Trae o teu propio almacenamento (BYOS) non é compatible.
 - Ata 100.000 perfís de clientes en total para SendGrid, o que pode tardar ata unhas horas en completarse. O número de perfís de clientes que pode exportar a SendGrid depende do seu contrato con SendGrid.
 - Só segmentos.
 
