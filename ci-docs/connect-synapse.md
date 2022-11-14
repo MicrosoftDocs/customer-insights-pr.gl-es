@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
-ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
+ms.openlocfilehash: 675fd03c44a7a7a492b111895d79c2e77f93a5b5
+ms.sourcegitcommit: 4ba74816ebfa46412c64c40a61e1f31c4ccc40f2
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "9259796"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "9738154"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Conectar un Azure Synapse Analytics orixe de datos (vista previa)
 
@@ -25,7 +25,7 @@ Para obter máis información, consulte [Azure Synapse visión xeral](/azure/syn
 ## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
-> Synapse espazos de traballo que teñen [firewall activado](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) actualmente non son compatibles.
+> Espazos de traballo Synapse que teñen [firewall activado](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) actualmente non son compatibles.
 > [!IMPORTANT]
 > Asegúrese de configurar todas as **atribucións de roles** segundo se describe.  
 
@@ -45,9 +45,9 @@ Para obter máis información, consulte [Azure Synapse visión xeral](/azure/syn
 
 - A *[identidade xestionada da área de traballo de Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* precisa permisos de **colaborador de datos de BLOB de almacenamento** na conta de Azure Data Lake Storage Gen2 na que se atopan os datos ligados á área de traballo de Azure Synapse. Obteña máis información acerca do [uso do portal de Azure para atribuír un rol de Azure para o acceso aos datos de BLOB e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e dos [permisos do colaborador de datos de BLOB de almacenamento](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- No Azure Synapse espazo de traballo, o *principal de servizo para Customer Insights* que é as necesidades de "Dynamics 365 AI for Customer Insights".**Administrador de Synapse** rol asignado. Para obter máis información, consulte [Como configurar o control de acceso para a súa área de traballo de Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- No Azure Synapse espazo de traballo, o *principal de servizo para Customer Insights* que é as necesidades de "Dynamics 365 AI for Customer Insights".**Administrador de Synapse** rol asignado. O **usuario** precisa polo menos un **Colaborador de Synapse** función asignada ao espazo de traballo. Para obter máis información, consulte [Como configurar o control de acceso para a súa área de traballo de Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-- Se o teu ambiente de Customer Insights almacena datos no teu [propio Azure Data Lake Storage](own-data-lake-storage.md), o usuario que establece a conexión Azure Synapse Analytics precisa polo menos o incorporado **Lector** función na conta de Data Lake Storage. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
+- Se o teu ambiente de Customer Insights almacena datos no teu [propio Azure Data Lake Storage](own-data-lake-storage.md), o usuario que establece a conexión Azure Synapse Analytics precisa polo menos o incorporado **Lector** rol na conta de Data Lake Storage. Para obter máis información, consulte [Atribuír roles de Azure no portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Conéctese á base de datos do lago de datos en Azure Synapse Analytics
 
