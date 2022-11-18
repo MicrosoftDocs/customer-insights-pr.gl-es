@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: MT
 ms.contentlocale: gl-ES
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724787"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760024"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Exportar segmentos a Criteo (vista previa)
 
@@ -27,7 +27,6 @@ Exporta segmentos de perfís de clientes unificados para xerar campañas, ofrece
 
 ## <a name="known-limitations"></a>Limitacións coñecidas
 
-- A ligazón privada en combinación con Trae o teu propio almacenamento (BYOS) non é compatible.
 - Ata 1 millón de perfís de clientes por exportación a Criteo, que pode tardar ata 30 minutos en completarse. O número de perfís de clientes que pode exportar a Criteo depende do seu contrato con Criteo.
 - Só segmentos.
 
@@ -43,7 +42,7 @@ Exporta segmentos de perfís de clientes unificados para xerar campañas, ofrece
 
 1. Escolla quen pode usar esta conexión. Por defecto, só son os administradores. Para obter máis información, consulte [Permitir aos colaboradores usar unha conexión para as exportacións](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo**.
+1. Revisa o [privacidade e cumprimento dos datos](connections.md#data-privacy-and-compliance) e selecciona **Estou de acordo** .
 
 1. Seleccione **Conectar** para inicializar a conexión.
 
@@ -59,7 +58,7 @@ Exporta segmentos de perfís de clientes unificados para xerar campañas, ofrece
 
 1. Vaia a **Datos** > **Exportacións**.
 
-1. Seleccione **Engadir exportación**.
+1. Seleccione **Engadir exportación** .
 
 1. No **Conexión para exportación** campo, escolla unha conexión na sección de Criteo. Póñase en contacto cun administrador se non hai conexión dispoñible.
 
